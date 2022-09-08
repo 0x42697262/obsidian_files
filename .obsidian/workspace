@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2022-09-07 1662560653.md",
+            "file": "Arch/System Updates/2022-09-07 1662560653.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022-09-07 1662560653.md",
+                "file": "Arch/System Updates/2022-09-07 1662560653.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022-09-07 1662560653.md",
+                "file": "Arch/System Updates/2022-09-07 1662560653.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022-09-07 1662560653.md"
+                "file": "Arch/System Updates/2022-09-07 1662560653.md"
               }
             }
           }
@@ -128,6 +128,6 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f0ed8e7ac440b9cf",
+  "active": "cef6f232d564ca5a",
   "lastOpenFiles": []
 }
