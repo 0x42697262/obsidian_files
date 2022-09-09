@@ -16,8 +16,13 @@ There is a need for technical writers... why? i don't know. altho tech writers a
 Tech writing is not only limited to texts, it can be anything from visual graphs, to presentations, and, but not limited to, videos since certain amount of people hates reading. i am one of them.
 </details>
 
+# Process vs Product
+- There is no final product in technical writing so it will always be a process until the document is "good enough"
+
 
 ----
 # Resources (heh)
 - https://digitalcommons.kennesaw.edu/cgi/viewcontent.cgi?article=1051&context=etd
 - https://uxwritinghub.com/what-is-technical-writing/
+- https://web.archive.org/web/20180708190227/http://sea.pcmag.com/networking-communications-software/2919/feature/what-is-cloud-computing
+- https://www.pcmag.com/how-to/what-is-cloud-computing
