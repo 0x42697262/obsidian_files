@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/User Changes/2022-09-09.md",
+            "file": "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/User Changes/2022-09-09.md",
+                "file": "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/User Changes/2022-09-09.md",
+                "file": "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/User Changes/2022-09-09.md"
+                "file": "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md"
               }
             }
           }
@@ -130,6 +130,8 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
+    "Arch/User Changes/2022-09-09.md",
     "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
     "Arch/System Changes by User/2022-09-08.md",
     "Arch/Package Updates/2022-09-07 1662560653.md"
