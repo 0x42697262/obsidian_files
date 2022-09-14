@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/Package Updates/2022-09-13.md",
+            "file": "Arch/Package Updates/2022-09-14.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/Package Updates/2022-09-13.md",
+                "file": "Arch/Package Updates/2022-09-14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/Package Updates/2022-09-13.md",
+                "file": "Arch/Package Updates/2022-09-14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/Package Updates/2022-09-13.md"
+                "file": "Arch/Package Updates/2022-09-14.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
+    "Arch/Package Updates/2022-09-13.md",
     "Untitled.md",
     "Arch/Package Updates/2022-09-07 1662560653.md",
     "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
