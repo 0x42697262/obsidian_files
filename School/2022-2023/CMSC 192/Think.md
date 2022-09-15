@@ -11,6 +11,7 @@ I should be educated enough because I have to uphold integrity as being a decent
 
 3. **What were two unexpected uses of social networking? Identify.**
 ```
+
 ```
 
 4. **What is the difference between negative and positive rights? Describe and give examples for each.**

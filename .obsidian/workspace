@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 192/Think.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 192/Think.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 192/Think.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 192/Think.md"
+                "file": "README.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
-    "README.md",
     "School/2022-2023/CMSC 192/Think.md",
+    "README.md",
     "Arch/User Changes/2022-09-15.md",
     "Arch/User Changes/2022-09-09.md",
     "Arch/System Changes by User/2022-09-08.md",

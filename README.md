@@ -1,3 +1,5 @@
+If you are seeing this and you know me irl, please contribute.
+
 # What is this repo for?
 Taking notes.
 
