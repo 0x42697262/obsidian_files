@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/Package Updates/2022-09-14.md",
+            "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/Package Updates/2022-09-14.md",
+                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/Package Updates/2022-09-14.md",
+                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/Package Updates/2022-09-14.md"
+                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
+    "Arch/Package Updates/2022-09-14.md",
     "Arch/Package Updates/2022-09-13.md",
     "Untitled.md",
     "Arch/Package Updates/2022-09-07 1662560653.md",
@@ -138,7 +139,6 @@
     "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
     "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
     "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "Arch/User Changes/2022-09-09.md",
-    "Arch/System Changes by User/2022-09-08.md"
+    "Arch/User Changes/2022-09-09.md"
   ]
 }
