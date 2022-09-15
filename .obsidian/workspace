@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
+            "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md"
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
+    "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
+    "School/2022-2023/LIT 4/Week 1/Introduction to Sugboanon Literature.md",
     "Arch/Package Updates/2022-09-14.md",
     "Arch/Package Updates/2022-09-13.md",
     "Untitled.md",
     "Arch/Package Updates/2022-09-07 1662560653.md",
     "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
-    "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
-    "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "Arch/User Changes/2022-09-09.md"
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md"
   ]
 }
