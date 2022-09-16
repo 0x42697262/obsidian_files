@@ -15,14 +15,22 @@
 # 3. Programming Language Paradigm  
 ### Classifications of Languages by Wegner
 1.  Imperative
-2. Declerative
+	- Explicit
+	- Computation is performed in sequences in the RAM
+	- **Types**
+		1. [Block-structured](../INFO_DUMP#Block-Structured)
+		2. [Object-based](../INFO_DUMP#Object-Based)
+		3. [Distributed Programming](../INFO_DUMP#Distributed%20Programming)
+
+2. Declarative
+
 
 - pattern or modeling and solving problems
 - basically the style or way of programming of how we think of problems and solve them
 
 ### Paradigms
 1. Imperative
-2. Declerative
+2. Declarative
 3. Structured
 4. Procedural
 5. Functional
