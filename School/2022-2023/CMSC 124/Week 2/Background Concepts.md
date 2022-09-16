@@ -15,6 +15,13 @@
 # 3. Programming Language Paradigm  
 ### Classifications of Languages by Wegner
 1.  Imperative
+2. Declarative
+
+- pattern or modeling and solving problems
+- basically the style or way of programming of how we think of problems and solve them
+
+### Paradigms
+1. Imperative
 	- Explicit
 	- Computation is performed in sequences in the RAM
 	- **Types**
@@ -23,19 +30,25 @@
 		3. [Distributed Programming](../INFO_DUMP.md#Distributed%20Programming)
 
 2. Declarative
+	- Implicit
+	- Computations must be specified
+	- Considered as higher level than imperative languages
+	- Requires the specification of a relation or function
+	- **Types**
+		1. [Logic Programming](../INFO_DUMP.md#Logic%20Programming)
+		2. [Functional Languages](../INFO_DUMP.md#Functional%20Languages)
+		3. [Database Languages](../INFO_DUMP.md#)
 
-
-- pattern or modeling and solving problems
-- basically the style or way of programming of how we think of problems and solve them
-
-### Paradigms
-1. Imperative
-2. Declarative
 3. Structured
 4. Procedural
 5. Functional
+	- Control flow is expressed by combining function calls, rather than by assigning values to variables
+
 6. Function-level
 7. Object-oriented
+	- Sending messages to objects
+	- Object responds to messages performing operations (methods)
+
 8. Event-driven
 9. Flow-driven
 10. Logic
@@ -46,9 +59,101 @@
 
 Note that programs can have multiple paradigms.
 
+### Applications of Programming Languages
+- **Scientific Computations**
+	- FORTRAN
+	- Algol-60
+	- Algol-68
+- **Data Processing**
+	- COBOL
+- **Artificial Intelligence**
+	- Lisp
+	- Prolog
+- **Text Processing**
+	- SNOBOL
+	- ICON
+- **System Programming**
+	- C
+	- ADA
+	- Modula
+- **General Purpose**
+	- PL/I
+	- Pascal
+
 # 4. Generations of Programming Language  
+## 1st Generation Languages
+- All low level languages (machine and assembly languages)
+
+## 2nd Generation Languages
+- Languages designed during the early 60's (Algol-60, BASIC, COBOL, FORTRAN)
+
+## 3rd Generation Languages
+- High-level languages perfected around the late 60's
+- Procedural (imperative paradigm)
+	- PL/I
+	- Pascal
+	- Modula-2
+	- C
+	- ADA
+- Functional
+	- Lisp
+	- APL
+	- ML
+- Logic
+	- Prolog
+- Object-oriented
+	- C++
+	- Objective-C
+	- Smalltalk
+	- Objective Pascal
+	- Eiffel
+	- ADA-95
+	- Java
+
+## 4th Generation Languages
+- [Domain Specific](../../../DEFINITIONS.md#Domain-specific%20language) 
+- **Visual Programming environment**
+	- VB
+	- Delphi
+	- Visual Age
+	- Visual C++
+- **Database**
+	- Natural
+	- SQL
+	- Acess
+	- FoxPro
+	- dBase
+	- AdaBase
+- **Expert System Shells**
+	- OPS5
+	- EMYCIN
+	- CLIPS
+	- EXSYS
+- **SPREADSHEET**
+	- Excel
+	- OpenOffice Calc
+	- Quattro Pro
+	- Lotus 1-2-3
+
+## 5th Generation Languages
+- Has visual tools to assist in coding (IDEs)
+- Example
+	- Mercury
+	- OPS5
+	- Prolog
+
+- Low Level
+	- 1st gen
+	- 2nd gen
+- High Level
+	- 3rd gen
+	- 4th gen
+	- 5th gen
+	- pokemon
+
 
 # 5. Language Evaluation Criteria  
+
 
 # 6. Levels of Programming Languages  
 

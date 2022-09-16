@@ -26,3 +26,24 @@
 
 # Distributed Programming
 - Languages for [loosely coupled systems](../../DEFINITIONS.md#Loose%20Coupling)
+- Does not need memory sharing
+- Can avoid some problems on resolving memory conflicts
+
+---
+# Logic Programming
+- Based on subset of predicate calculus
+- Composed of a series of axioms or facts, rules of inference, and a theorem or query to be proved
+
+### Examples
+- Prolog
+- (please add more examples here)
+
+---
+# Functional Languages
+- Operates only through functions which returns one value provided by a parameter
+- A program is a functional call with parameters which involve a call to a function to produce the value of a parameter
+- Functions can be considered as values that can be passed to another function
+
+### Examples
+- Lisp
+- (add more, onegai)
