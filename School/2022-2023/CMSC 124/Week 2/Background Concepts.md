@@ -153,6 +153,7 @@ Note that programs can have multiple paradigms.
 
 
 # 5. Language Evaluation Criteria  
+From a user's point of view: `Readability`, `Writability`, `Reliability`, `Cost`
 
 
 # 6. Levels of Programming Languages  
