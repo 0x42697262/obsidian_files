@@ -50,6 +50,10 @@
 
 ----
 # Compilation
+- method where a high-level language is translated into another implemented language (like assembly or machine language)
+- Produce the machine language equivalent of the high-level language, wherein machine language is the one that is ultimately executed
+`Compiler` - translator which is also a program running in the intended computer
 
 ----
 # Interpretation
+- Simulates through a program running on another host computer, a computer whose machine language is the high-level language

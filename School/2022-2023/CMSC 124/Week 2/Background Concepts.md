@@ -206,3 +206,11 @@ From lowest level to highest: `Machine language` -> `Assembly language` -> `High
 
 # 7. Methods of Implementation
 There are two methods: [Compilation](../INFO_DUMP.md#Compilation) and [Interpretation](../INFO_DUMP.md#Interpretation)
+
+## Syntax, Semantics, and Pragmatics
+`Syntax` - written form of a program
+`Semantics` - meaning given to the various syntactic constructs, i.e., how these constructs behave when executed by a computer.
+`Pragmatics` - history and some implementation methodology specific to that language
+
+----
+Get the [references](../../../../REFERENCES.md#Background%20and%20Preliminaries%20Lecture%20Slides) here.
