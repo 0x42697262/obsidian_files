@@ -4,7 +4,7 @@
 - No restrictions on duplicate items on the stack, thus recursions are allowed
 
 ### Examples
-- Alogl-60
+- Algol-60
 - Algol-68
 - Pascal
 - C
