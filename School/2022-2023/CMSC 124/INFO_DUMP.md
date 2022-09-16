@@ -25,4 +25,4 @@
 ----
 
 # Distributed Programming
-- Languages for [loosely coupled systems](../../DEFINITIONS#Loose%20Coupling)
+- Languages for [loosely coupled systems](../../DEFINITIONS.md#Loose%20Coupling)

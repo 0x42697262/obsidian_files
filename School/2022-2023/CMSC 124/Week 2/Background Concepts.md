@@ -18,9 +18,9 @@
 	- Explicit
 	- Computation is performed in sequences in the RAM
 	- **Types**
-		1. [Block-structured](../INFO_DUMP#Block-Structured)
-		2. [Object-based](../INFO_DUMP#Object-Based)
-		3. [Distributed Programming](../INFO_DUMP#Distributed%20Programming)
+		1. [Block-structured](../INFO_DUMP.md#Block-Structured)
+		2. [Object-based](../INFO_DUMP.md#Object-Based)
+		3. [Distributed Programming](../INFO_DUMP.md#Distributed%20Programming)
 
 2. Declarative
 
