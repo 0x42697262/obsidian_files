@@ -12,12 +12,8 @@
             "type": "leaf",
             "dimension": 26.687435098650052,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -27,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
+                "file": "School/2022-2023/CMSC 194.1/Workshop 1/random.md"
               }
             }
           }
@@ -147,19 +143,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
+    "Pasted image 20220916185255.png",
     "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
-    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/2022-2023/REFERENCES.md",
     "School/2022-2023/CMSC 124/INFO_DUMP.md",
+    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "2022-09-16.md",
     "School/DEFINITIONS.md",
     "README.md",
     "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md"
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md"
   ]
 }
