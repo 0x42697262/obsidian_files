@@ -188,10 +188,21 @@ From a user's point of view: `Readability`, `Writability`, `Reliability`, `Cost`
 - The ease which programs can be read and understood
 early programming languages were constructed for computers instead of users in mind
 
-**Characteristics**
-	- 
+- **Characteristics**
+	- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
+## Evaluation Criteria of Programming Languages
+- `Portability` - the ease with which programs can be moved from one implementation to another
+- `Generality` - the applicability to a wide range of application
+- `Well-definedness` - completeness and precision of the language's official definition
+- `Hierarchical decomposition`
+- `Modular decomposition`
+- `Sequencing`
+- `Data manipulation`
+- `Redundancy`
 
 # 6. Levels of Programming Languages  
+From lowest level to highest: `Machine language` -> `Assembly language` -> `High-level language`
 
 # 7. Methods of Implementation
+There are two methods: [Compilation](../INFO_DUMP.md#Compilation) and [Interpretation](../INFO_DUMP.md#Interpretation)

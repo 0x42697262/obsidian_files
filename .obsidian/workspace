@@ -10,7 +10,7 @@
           {
             "id": "5cf6b1664b90206f",
             "type": "leaf",
-            "dimension": 34.994807892004154,
+            "dimension": 26.687435098650052,
             "state": {
               "type": "markdown",
               "state": {
@@ -23,11 +23,11 @@
           {
             "id": "f0ed8e7ac440b9cf",
             "type": "leaf",
-            "dimension": 65.00519210799584,
+            "dimension": 73.31256490134996,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md"
               }
             }
           }
