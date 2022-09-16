@@ -24,6 +24,8 @@
 1. Imperative
 	- Explicit
 	- Computation is performed in sequences in the RAM
+	- Procedural Programming Paradigm
+	- Focuses more on the steps in acquiring results
 	- **Types**
 		1. [Block-structured](../INFO_DUMP.md#Block-Structured)
 		2. [Object-based](../INFO_DUMP.md#Object-Based)
@@ -32,8 +34,10 @@
 2. Declarative
 	- Implicit
 	- Computations must be specified
-	- Considered as higher level than imperative languages
+	- Considered as higher level concept than imperative languages
 	- Requires the specification of a relation or function
+	- Logical Programming Paradigm
+	- Focuses more on the end result rather than the steps
 	- **Types**
 		1. [Logic Programming](../INFO_DUMP.md#Logic%20Programming)
 		2. [Functional Languages](../INFO_DUMP.md#Functional%20Languages)
