@@ -155,6 +155,42 @@ Note that programs can have multiple paradigms.
 # 5. Language Evaluation Criteria  
 From a user's point of view: `Readability`, `Writability`, `Reliability`, `Cost`
 
+**What makes a good language?**
+- Clarity, simplicity, and unity
+- Naturalness for the application
+- Support of abstraction
+- Ease of program verification
+- Programming environment
+- Portability of programs
+- Cost of use
+
+**What makes a language successful?**
+- Expressive power
+- Ease of use for the novice
+- Ease of implementation
+- Open source (heh)
+- Excellent compilers
+- Economics, patronage, and inertia
+
+| CHARACTERISTIC          | READABILITY | WRITABILITY | RELIABILITY |
+|-------------------------|:-----------:|:-----------:|:-----------:|
+| Simplicity              |•            |•            |•            |
+| Orthogonality           |•            |•            |•            |
+| Data types              |•            |•            |•            |
+| Syntax design           |•            |•            |•            |
+| Support for abstraction |             |•            |•            |
+| Expressivity            |             |•            |•            |
+| Type checking           |             |             |•            |
+| Exception handling      |             |             |•            |
+| Restricted aliasing     |             |             |•            |
+
+## Readability
+- The ease which programs can be read and understood
+early programming languages were constructed for computers instead of users in mind
+
+**Characteristics**
+	- 
+
 
 # 6. Levels of Programming Languages  
 
