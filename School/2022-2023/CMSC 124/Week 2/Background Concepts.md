@@ -188,27 +188,48 @@ From a user's point of view: `Readability`, `Writability`, `Reliability`, `Cost`
 | Exception handling      |             |             |•            |
 | Restricted aliasing     |             |             |•            |
 
-Note that Readability affects Writability since of course developers needs to "reread" their code
+
 
 ## Readability
-- The ease which programs can be read and understood
-early programming languages were constructed for computers instead of users in mind
+- The ease which programs can be read and understood early programming languages were constructed for computers instead of users in mind
+- `One of the most important criteria for judging a programming language is the ease with which programs can be read and understood.`
+
+<details>
+<summary>A bit of history?</summary>
+<li>Before 1970, software development was largely thought of in terms of writing code.</li>
+<li>The primary positive characteristic of programming languages was efficiency.</li>
+<li>Language constructs were designed more from the point of view of the computer than of the computer users.</li>
+</details>
+- **Readability must be considered in the context of the `problem domain`**
 
 - **Characteristics**
-	- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	- `overall simplicity` of a programming language strongly affects its readability
+	- 
 
 
 ## Writability
 - Writability is a measure of how easily a language can be used to create programs for a chosen problem domain
 <details>
 	 <summary>Own Thoughts</summary>
-	 measuring criteria on how easy for a language to write programs for a given solution
+	 I think a measuring criteria on how easy for a language to write programs for a given solution
 </details> 
+- Characteristics that affects Readability also affects Writability because the developer needs to reread their code.
+
+_writability must be considered in the context of the target problem domain of a language._ 
+`It is simply not reasonable to compare the writability of two languages in the realm of a particular application when one was designed for that application and the other was not.`
 
 - **Characteristics**
 1. Simplicity & Orthogonality
 	- 
-2. Expressitivity
+
+2. Support for Abstraction
+- **Programming languages can support two distinct categories of abstraction**:
+	1. process
+	2. data
+
+3. Expressitivity
+
+
 
 ## Evaluation Criteria of Programming Languages
 - `Portability` - the ease with which programs can be moved from one implementation to another
