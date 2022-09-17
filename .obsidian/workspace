@@ -4,22 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f0ed8e7ac440b9cf",
-        "type": "leaf",
-        "dimension": 62.37373737373737,
-        "state": {
-          "type": "empty",
-          "state": {}
-        }
-      },
-      {
         "id": "99b677bafd71ae7e",
         "type": "leaf",
-        "dimension": 37.62626262626262,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
+            "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
             "mode": "source",
             "source": false
           }
@@ -87,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
+              }
             }
           }
         ],
@@ -135,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cef6f232d564ca5a",
+  "active": "99b677bafd71ae7e",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
+    "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
+    "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
+    "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
+    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/2022-2023/REFERENCES.md",
     "School/2022-2023/CMSC 124/INFO_DUMP.md",
     "Problem Set 1.md",
-    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/DEFINITIONS.md",
-    "Arch/Package Updates/2022-09-17.md",
-    "Arch/Package Updates/2022-09-13.md",
-    "Arch/Package Updates/2022-09-14.md",
-    "Arch/Package Updates/2022-09-15.md",
-    "School/2022-2023/CMSC 142/Week 1/Math Review?.md"
+    "Arch/Package Updates/2022-09-17.md"
   ]
 }

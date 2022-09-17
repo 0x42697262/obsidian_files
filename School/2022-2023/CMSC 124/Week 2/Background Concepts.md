@@ -188,12 +188,27 @@ From a user's point of view: `Readability`, `Writability`, `Reliability`, `Cost`
 | Exception handling      |             |             |•            |
 | Restricted aliasing     |             |             |•            |
 
+Note that Readability affects Writability since of course developers needs to "reread" their code
+
 ## Readability
 - The ease which programs can be read and understood
 early programming languages were constructed for computers instead of users in mind
 
 - **Characteristics**
 	- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+## Writability
+- Writability is a measure of how easily a language can be used to create programs for a chosen problem domain
+<details>
+	 <summary>Own Thoughts</summary>
+	 measuring criteria on how easy for a language to write programs for a given solution
+</details> 
+
+- **Characteristics**
+1. Simplicity & Orthogonality
+	- 
+2. Expressitivity
 
 ## Evaluation Criteria of Programming Languages
 - `Portability` - the ease with which programs can be moved from one implementation to another
