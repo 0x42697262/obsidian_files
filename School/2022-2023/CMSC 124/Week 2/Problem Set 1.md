@@ -1,4 +1,5 @@
-1. Imperative Language is an explicitly defined language where computations are performed as sequences in RAM that focuses more on the teps in acquiring a result hence why it is a procedural programming paradigm. Declarative Language is an explicity defined language which focuses more on the result. It is a type of logical programming paradigm that is considered as a higher level of concept.
+## 1. 
+Imperative Language is an explicitly defined language where computations are performed as sequences in RAM that focuses more on the teps in acquiring a result hence why it is a procedural programming paradigm. Declarative Language is an explicity defined language which focuses more on the result. It is a type of logical programming paradigm that is considered as a higher level of concept.
 
 | Language  |     Classification      |
 | --------- |:-----------------------:|
@@ -22,6 +23,9 @@
 | ADA       | Imperative<sup>8</sup>  |
 | C++       | Imperative<sup>8</sup>  |
 | Java      | Imperative<sup>8</sup>  |
+
+## 2.
+
 
 ----
 # References
