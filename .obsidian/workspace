@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
+            "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md"
+                "file": "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
               }
             }
           }
@@ -131,13 +131,13 @@
   },
   "active": "99b677bafd71ae7e",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 124/INFO_DUMP.md",
     "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/2022-2023/REFERENCES.md",
     "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
     "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
     "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
     "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "School/2022-2023/CMSC 124/INFO_DUMP.md",
     "Problem Set 1.md",
     "School/DEFINITIONS.md",
     "Arch/Package Updates/2022-09-17.md"
