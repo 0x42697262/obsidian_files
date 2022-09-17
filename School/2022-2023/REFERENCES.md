@@ -3,3 +3,6 @@
 ◦ Programming Language Paradigm: http://cs.lmu.edu/~ray/notes/paradigms/  
 ◦ Sebesta, R. Concepts of Programming Language Eleventh Edition, 2016.  
 ◦ https://www.geeksforgeeks.org/generation-programming-languages/
+
+# INFO_DUMP
+- https://arxiv.org/pdf/cs/9301109.pdf

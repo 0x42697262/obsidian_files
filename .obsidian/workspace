@@ -6,10 +6,24 @@
       {
         "id": "f0ed8e7ac440b9cf",
         "type": "leaf",
+        "dimension": 62.37373737373737,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/Package Updates/2022-09-17.md",
+            "file": "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "99b677bafd71ae7e",
+        "type": "leaf",
+        "dimension": 37.62626262626262,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/Package Updates/2022-09-17.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/Package Updates/2022-09-17.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/Package Updates/2022-09-17.md"
+                "file": "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md"
               }
             }
           }
@@ -131,15 +145,15 @@
   },
   "active": "f0ed8e7ac440b9cf",
   "lastOpenFiles": [
-    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
-    "School/2022-2023/CMSC 124/INFO_DUMP.md",
-    "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "School/2022-2023/CMSC 194.1/Workshop 1/random.md",
-    "Pasted image 20220916185255.png",
     "School/2022-2023/REFERENCES.md",
-    "2022-09-16.md",
+    "School/2022-2023/CMSC 124/INFO_DUMP.md",
+    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/DEFINITIONS.md",
-    "README.md"
+    "Arch/Package Updates/2022-09-17.md",
+    "Arch/Package Updates/2022-09-13.md",
+    "Arch/Package Updates/2022-09-14.md",
+    "Arch/Package Updates/2022-09-15.md",
+    "School/2022-2023/CMSC 142/Week 1/Math Review?.md"
   ]
 }
