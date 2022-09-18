@@ -20,6 +20,14 @@ Tech writing is not only limited to texts, it can be anything from visual graphs
 - There is no final product in technical writing so it will always be a process until the document is "good enough"
 
 
+
+##  Basic Concepts of Technical Writing
+- Writer-centred
+- Reader-centred
+
+
+
+
 ----
 # Resources (heh)
 - https://digitalcommons.kennesaw.edu/cgi/viewcontent.cgi?article=1051&context=etd

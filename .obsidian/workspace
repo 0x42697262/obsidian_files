@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "99b677bafd71ae7e",
+        "id": "d113c157f7c0e142",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/User Changes/2022-09-18.md",
+            "file": "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/User Changes/2022-09-18.md",
+                "file": "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/User Changes/2022-09-18.md",
+                "file": "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/User Changes/2022-09-18.md"
+                "file": "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md"
               }
             }
           }
@@ -129,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "99b677bafd71ae7e",
+  "active": "d113c157f7c0e142",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
+    "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
+    "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
+    "Arch/User Changes/2022-09-18.md",
     "Arch/Package Updates/2022-09-17.md",
     "Arch/User Changes/2022-09-15.md",
     "Arch/User Changes/2022-09-09.md",
     "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "School/2022-2023/CMSC 124/INFO_DUMP.md",
-    "School/2022-2023/REFERENCES.md",
-    "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md",
-    "School/2022-2023/CMSC 110/Technical Writing Essentials.md",
-    "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
-    "School/2022-2023/CMSC 142/Week 1/Math Review?.md"
+    "School/2022-2023/CMSC 124/INFO_DUMP.md"
   ]
 }
