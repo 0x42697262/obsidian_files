@@ -89,7 +89,7 @@ If the engineers had done System Engineering for Computer Systems (SpECS) implem
 
 - **What is the role of software engineering practice in this case?**
 ```
-
+The role is to prevent future disasters and better handling of potential errors in the code by providing a proper implementation of system design. With software engineering, proofs are made to handle expected or unexpected situations and a decent measurement would have been put in place, just like a fail-safe mechanism.
 ```
 
 ----
