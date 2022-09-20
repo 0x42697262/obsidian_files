@@ -63,5 +63,59 @@
 # Interpretation
 - Simulates through a program running on another host computer, a computer whose machine language is the high-level language
 - makes your life easier... *yay, scripting*!
+
+# Syntax and Semantics
+## Character Set
+- set of symbols used
+	- all characters that can be used in writing, inputs, and outputs (to the program)
+	- Example:
+		- Machine Language (0 and 1)
+		- Algol-60 (alphanumeric characters and 52 other special characters = 114)
+		- FORTRAN (47 characters)
+		- COBOL (51 characters)
+		- PL/I (60 characters)
+	- modern languages uses ASCII
+
+## Identifiers
+- strings used to name data objects, procedures, keywords
+	- has rules to consider
+	
+## Operator Symbols
+- represents primitive operations
+
+## Keywords and Reserved Words
+- `Keyword` - identifier used as a fixed part of the syntax
+- `Reserved Words` - a potentially restricted keyword in usage
+
+## Comments and Noise Words
+- `Comments` - ignored during translations
+- `Noise Words` - optional words included in a statement
+	- you can remove a word without affecting its syntax and the execution is still the same
+
+## Delimeters and Bracket
+- marks beginning and end of syntactic construct
+
+## Free-Field Format and Fix-Field Format
+- `Free-Field Format` - allows program statements to be written anywhere
+- `Fixed-Field Format` - have certain rules or position in writing program code
+
+## Expressions
+- basic syntactic element
+- indicate conditions
+- evaluate variable values
+- 3 forms:
+	- prefix
+	- postfix
+	- infix
+
+## Statements
+- Formats:
+	- Single Basic Statement
+	- Different syntax for each statement type
+
+## Overall Program-Subprogram Structure
+what? hello i need more info here, not examples ~~im just lazy~~
+
+
 ----
 Get all sources [here](../../../REFERENCES.md#INFO_DUMP)

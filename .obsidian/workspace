@@ -14,6 +14,18 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "7730de8d3d676d09",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
+            "mode": "source",
+            "source": false
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md"
+                "file": "School/2022-2023/CMSC 124/INFO_DUMP.md"
               }
             }
           }
@@ -129,16 +141,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d113c157f7c0e142",
+  "active": "7730de8d3d676d09",
   "lastOpenFiles": [
-    "School/2022-2023/CMSC 124/INFO_DUMP.md",
     "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
-    "School/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
-    "School/2022-2023/CMSC 128/CMSC128_DUMP.md",
-    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+    "School/2022-2023/CMSC 124/INFO_DUMP.md",
     "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
+    "School/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
+    "School/2022-2023/CMSC 128/CMSC128_DUMP.md",
     "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
     "School/2022-2023/CMSC 110/Unit I. What is Technical Writing?.md"
   ]
