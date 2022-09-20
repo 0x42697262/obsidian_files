@@ -41,9 +41,14 @@
 
 
 # Formula Syntax
+- **Types**
+	1. [Abstract](../INFO_DUMP.md##Abstract%20Syntax)
+	2. [Concrete](../INFO_DUMP.md##Concrete%20Syntax)
+
+Check `Backus-Naur Form` [here](./Backus-Naur%20Form.md).
 
 # Ambiguity
 
-# Eliminating Ambiguity from Grammar
+# Eliminating Ambiguity from Grammars
 
 # Formal Semantics

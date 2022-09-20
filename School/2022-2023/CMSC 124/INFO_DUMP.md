@@ -117,5 +117,22 @@
 what? hello i need more info here, not examples ~~im just lazy~~
 
 
+## Abstract Syntax
+- preferred by language designers who study the formal aspect of programming languages
+- simple listing of all possible forms for each of the syntactic classes in the language
+- gives the components of each language construct
+	- leaves out representation details
+- appropriate for normal manipulation of programs
+
+*pls check abstract syntax of pascal, thanks (not here, but on the internet)*
+
+## Concrete Syntax
+- preferred by language implementers
+- detects whether a string is a well-formed string in the language or not
+- **Expressing Concrete Syntax**
+	- [Backus-Naur Form](./Week%203-4/Backus-Naur%20Form.md)
+	- Syntax Diagrams
+	- Context-Free Grammars
+
 ----
 Get all sources [here](../../../REFERENCES.md#INFO_DUMP)
