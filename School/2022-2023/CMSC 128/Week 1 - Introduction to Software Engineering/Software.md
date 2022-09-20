@@ -17,9 +17,7 @@
 - Web-Mobile
 - Artificial Intelligence
 
-`System Software` - collection of programs written to service other programs
-`Application Software` - stand-alone programs that solve specific business needs
-`Engineering Software` - 
+More info [here](../CMSC128_DUMP.md#Types%20of%20Software)
 
 # References
 ~~Yes this is all based on our prof's ppt~~
