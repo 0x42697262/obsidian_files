@@ -76,10 +76,10 @@ object ::= overboard | over the fence
 <sentence> ::= <subject> <predicate>
            ::= <article> <noun> <predicate>
            ::= the <noun> <predicate>
-           ::= the man <predicate>
-           ::= the man <verb> <object>
-           ::= the man runs <object>
-           ::= the man runs overboard
+           ::= the horse <predicate>
+           ::= the horse <verb> <object>
+           ::= the horse jumps <object>
+           ::= the horse jumps overboard
 ```
 
 
