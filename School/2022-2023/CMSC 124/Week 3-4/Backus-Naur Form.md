@@ -72,6 +72,7 @@ verb ::= runs | jumps
 object ::= overboard | over the fence
 ```
 
+Solution:
 ```
 <sentence> ::= <subject> <predicate>
            ::= <article> <noun> <predicate>
@@ -80,6 +81,113 @@ object ::= overboard | over the fence
            ::= the horse <verb> <object>
            ::= the horse jumps <object>
            ::= the horse jumps overboard
+```
+
+2. Show the derivation of the following strings given  the grammar defined.
+```
+CSI3125
+MAT2743
+PHY1200
+EPI6581
+CSI9999
+```
+Rules:
+```
+<coursecode>    ::= <acadunit> <coursenumber>  
+<acadunit>      ::= <letter> <letter> <letter>  
+<coursenumber>  ::= <year> <semesters> <digit> <digit>  
+<year>          ::= <ugrad>|<grad>  
+<ugrad>         ::= 0 | 1 | 2 | 3 | 4  
+<grad>          ::= 5 | 6 | 7 | 9  
+<semesters>     ::= <onesemester>|<twosemesters>  
+<onesemester>   ::= <frenchone>|<englishone>| <bilingual>  
+<frenchone>     ::= 5 | 7  
+<englishone>    ::= 1 | 3  
+<bilingual>     ::= 9  
+<twosemesters>  ::= <frenchtwo> | <englishtwo>  
+<frenchtwo>     ::= 6 | 8  
+<englishtwo>    ::= 2 | 4  
+<digit>         ::= 0|1|2|3|4|5|6|7|8|9  
+<letter>        ::= A|B|...|Z
+```
+
+Solution:
+```
+CSI3125
+	<coursecode> ::= <acadunit> <coursenumber>
+				 ::= <letter> <letter> <letter> <coursenumber>
+				 ::= C <letter> <letter> <coursenumber>
+				 ::= CS <letter> <coursenumber>
+				 ::= CSI <coursenumber>
+				 ::= CSI <year> <semesters> <digit> <digit>
+				 ::= CSI <ugrad> <semesters> <digit> <digit>
+				 ::= CSI3 <semesters> <digit> <digit>
+				 ::= CSI3 <onesemester> <digit> <digit>
+				 ::= CSI3 <englishone> <digit> <digit>
+				 ::= CSI31 <digit> <digit>
+				 ::= CSI312 <digit>
+				 ::= CSI3125
+
+MAT2743
+	<coursecode> ::= <acadunit> <coursenumber>
+				 ::= <letter> <letter> <letter> <coursenumber>
+				 ::= M <letter> <letter> <coursenumber>
+				 ::= MA <letter> <coursenumber>
+				 ::= MAT <coursenumber>
+				 ::= MAT <year> <semesters> <digit> <digit>
+				 ::= MAT <ugrad> <semesters> <digit> <digit>
+				 ::= MAT2 <semesters> <digit> <digit>
+				 ::= MAT2 <onesemester> <digit> <digit>
+				 ::= MAT2 <frenchone> <digit> <digit>
+				 ::= MAT27 <digit> <digit>
+				 ::= MAT274 <digit>
+				 ::= MAT2743
+				 
+PHY1200
+	<coursecode> ::= <acadunit> <coursenumber>
+				 ::= <letter> <letter> <letter> <coursenumber>
+				 ::= P <letter> <letter> <coursenumber>
+				 ::= PH <letter> <coursenumber>
+				 ::= PHY <coursenumber>
+				 ::= PHY <year> <semesters> <digit> <digit>
+				 ::= PHY <year> <semesters> <digit> <digit>
+				 ::= PHY <ugrad> <semesters> <digit> <digit>
+				 ::= PHY1 <semesters> <digit> <digit>
+				 ::= PHY1 <twosemesters> <digit> <digit>
+				 ::= PHY1 <englishtwo> <digit> <digit>
+				 ::= PHY12 <digit> <digit>
+				 ::= PHY120 <digit>
+				 ::= PHY1200
+				 
+EPI6581
+	<coursecode> ::= <acadunit> <coursenumber>
+				 ::= <letter> <letter> <letter> <coursenumber>
+				 ::= E <letter> <letter> <coursenumber>
+				 ::= EP <letter> <coursenumber>
+				 ::= EPI <coursenumber>
+				 ::= EPI <year> <semesters> <digit> <digit>
+				 ::= EPI <grad> <semesters> <digit> <digit>
+				 ::= EPI6 <semesters> <digit> <digit>
+				 ::= EPI6 <onesemester> <digit> <digit>
+				 ::= EPI6 <frenchone> <digit> <digit>
+				 ::= EPI65 <digit> <digit>
+				 ::= EPI658 <digit>
+				 ::= EPI6581
+				 
+CSI9999
+	<coursecode> ::= <acadunit> <coursenumber>
+				 ::= <letter> <letter> <letter> <coursenumber>
+				 ::= C <letter> <letter> <coursenumber>
+				 ::= CS <letter> <coursenumber>
+				 ::= CSI <coursenumber>
+				 ::= CSI <year> <semesters> <digit> <digit>
+				 ::= CSI <grad> <semesters> <digit> <digit>
+				 ::= CSI9 <semesters> <digit> <digit>	
+				 ::= CSI9 <onesemester> <digit> <digit>	
+				 ::= CSI9 <bilingual> <digit> <digit>	
+				 ::= CSI99 <digit> <digit>
+				 ::= CSI999<digit>
+				 ::= CSI9999
 ```
 
 
