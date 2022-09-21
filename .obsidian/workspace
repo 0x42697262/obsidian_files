@@ -4,22 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "d113c157f7c0e142",
-        "type": "leaf",
-        "dimension": 37.092731829573935,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "7730de8d3d676d09",
         "type": "leaf",
-        "dimension": 62.907268170426065,
         "state": {
           "type": "markdown",
           "state": {

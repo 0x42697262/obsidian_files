@@ -36,7 +36,11 @@ where `left-side` is a *nonterminal symbol*, `right-side` is a string of nonterm
 - denoted by `::=` (the **productions**)
 `blanks` - are ignored or must be in some escaping scheme like quotes `""`
 `terminals` - unadored symbols
-
+`parse tree` - a tree based notation for describing the way a sentence could be built from a grammar
+`derivation` - ordered list of steps used in construction of a specific parse tree for a sentence from a grammar
+`left most derivation` - derivation in which the left most nonterminal is always replaced first
+`parse` - show how a sentence could be built from a grammar
+`metasymbols` - symbols outside the language to prevent circularity in talking about the grammar
 
 ## Writing BNF
 Rules
@@ -59,6 +63,8 @@ sentence ::= <subject> <predicate>
          ::= the man walks <object>
          ::= the man walks home
 ```
+
+
 
 # Activity
 1. Show the derivation of the sentence `The horse jumps overboard.` using the rules:
@@ -150,7 +156,6 @@ PHY1200
 				 ::= PH <letter> <coursenumber>
 				 ::= PHY <coursenumber>
 				 ::= PHY <year> <semesters> <digit> <digit>
-				 ::= PHY <year> <semesters> <digit> <digit>
 				 ::= PHY <ugrad> <semesters> <digit> <digit>
 				 ::= PHY1 <semesters> <digit> <digit>
 				 ::= PHY1 <twosemesters> <digit> <digit>
@@ -186,7 +191,7 @@ CSI9999
 				 ::= CSI9 <onesemester> <digit> <digit>	
 				 ::= CSI9 <bilingual> <digit> <digit>	
 				 ::= CSI99 <digit> <digit>
-				 ::= CSI999<digit>
+				 ::= CSI999 <digit>
 				 ::= CSI9999
 ```
 
