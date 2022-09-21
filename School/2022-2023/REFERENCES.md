@@ -7,5 +7,8 @@
 - Ngwes. (2019). “Programming Language Evaluation Criteria Part 1: readability.” Retrieved from:  https://medium.com/@thisisfordeveloper/programming-language-evaluation-criteria-part-1-readability-d0872ef5d266  
 - Ngwes. (2019). “Programming Language Evaluation Criteria Part 2: Writability, Reliability, Cost.”  Retrieved from: https://medium.com/@thisisfordeveloper/programming-language-evaluation-criteria-part-2-writability-reliability-cost-6c3029c9d957
 
+# Backus-Naur Form
+- http://marvin.cs.uidaho.edu/Teaching/CS445/grammar.pdf
+
 # INFO_DUMP
 - https://arxiv.org/pdf/cs/9301109.pdf
