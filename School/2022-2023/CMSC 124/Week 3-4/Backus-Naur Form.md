@@ -195,6 +195,108 @@ CSI9999
 				 ::= CSI9999
 ```
 
+3. Show the derivation and parse tree of the following expressions:
+```
+1) a/b+c-d*e  
+2) a+b+c+d+e  
+3) a+b*c*d-e
+```
+RULES
+```
+<expression>   ::= <term>|<expression> <addoperator> <term>
+<term>         ::= <factor>|<term> <multoperator> <factor> 
+<factor>       ::= <identifier>|<literal><expression>
+<literal>      ::= 0|1|2|3|...|9
+<identifier>   ::= a|b|c|...|z
+<addoperator>  ::= + | - | or 
+<multoperator> ::= * | / | div | mod | and
+```
 
----
+Solution:
+```
+a/b+c-d*e
+	<expression> ::= <expression> <addoperator> <term>
+				 ::= <expression>-<term>
+				 ::= <expression> <addoperator> <term>-<term>
+				 ::= <expression>+<term>-<term>
+				 ::= <expression>+<factor>-<term>
+				 ::= <expression>+<identifier>-<term>
+				 ::= <expression>+c-<term>
+				 ::= <term>+c-<term>
+				 ::= <term> <multoperator> <factor>+c-<term>
+				 ::= <term>/<factor>+c-<term>
+				 ::= <term>/<identifier>+c-<term>
+				 ::= <term>/b+c-<term>
+				 ::= <factor>/b+c-<term>
+				 ::= <identifier>/b+c-<term>
+				 ::= a/b+c-<term>
+				 ::= a/b+c-<term> <multoperator> <factor>
+				 ::= a/b+c-<term>*<factor>
+				 ::= a/b+c-<term>*<identifer>
+				 ::= a/b+c-<term>*e
+				 ::= a/b+c-<factor>*e
+				 ::= a/b+c-<identifier>*e
+				 ::= a/b+c-d*e
+```
+
+```
+a+b+c+d+e
+	<expression> ::= <expression> <addoperator> <term>
+				 ::= <expression>+<term>
+				 ::= <expression>+<factor>
+				 ::= <expression>+<identifier>
+				 ::= <expression>+e
+				 ::= <expression>+e
+				 ::= <expression> <addoperator> <term>+e
+				 ::= <expression>+<term>+e
+				 ::= <expression>+<factor>+e
+				 ::= <expression>+<identifier>+e
+				 ::= <expression>+d+e
+				 ::= <expression> <addoperator> <term>+d+e
+				 ::= <expression>+<term>+d+e
+				 ::= <expression>+<factor>+d+e
+				 ::= <expression>+<identifier>+d+e
+				 ::= <expression>+c+d+e
+				 ::= <expression> <addoperator> <term>+c+d+e
+				 ::= <expression>+<term>+c+d+e
+				 ::= <expression>+<factor>+c+d+e
+				 ::= <expression>+<identifier>+c+d+e
+				 ::= <expression>+b+c+d+e
+				 ::= <term>+b+c+d+e
+				 ::= <factor>+b+c+d+e
+				 ::= <identifier>+b+c+d+e
+				 ::= a+b+c+d+e
+```
+
+```
+a+b*c*d-e
+	<expression> ::= <expression> <addoperator> <term>
+				 ::= <expression>-<term>
+				 ::= <expression>-<factor>
+				 ::= <expression>-<identifier>
+				 ::= <expression>-e
+				 ::= <expression> <addoperator> <term>-e
+				 ::= <expression>+<term>-e
+				 ::= <expression>+<term>-e
+				 ::= <term>+<term>-e
+				 ::= <factor>+<term>-e
+				 ::= <identifier>+<term>-e
+				 ::= a+<term>-e
+				 ::= a+<term> <multoperator> <factor>-e
+				 ::= a+<term>*<factor>-e
+				 ::= a+<term>*<identifier>-e
+				 ::= a+<term>*d-e
+				 ::= a+<term> <multoperator> <factor>*d-e
+				 ::= a+<term>*<factor>*d-e
+				 ::= a+<term>*<identifier>*d-e
+				 ::= a+<term>*c*d-e
+				 ::= a+<factor>*c*d-e
+				 ::= a+<identifier>*c*d-e
+				 ::= a+b*c*d-e
+```
+pls add trees, lol
+
+
+
+----
 Get all sources [here](../../REFERENCES.md#Backus-Naur%20Form)
