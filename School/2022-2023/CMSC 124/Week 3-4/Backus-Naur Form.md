@@ -246,7 +246,6 @@ a+b+c+d+e
 				 ::= <expression>+<factor>
 				 ::= <expression>+<identifier>
 				 ::= <expression>+e
-				 ::= <expression>+e
 				 ::= <expression> <addoperator> <term>+e
 				 ::= <expression>+<term>+e
 				 ::= <expression>+<factor>+e
@@ -276,7 +275,6 @@ a+b*c*d-e
 				 ::= <expression>-<identifier>
 				 ::= <expression>-e
 				 ::= <expression> <addoperator> <term>-e
-				 ::= <expression>+<term>-e
 				 ::= <expression>+<term>-e
 				 ::= <term>+<term>-e
 				 ::= <factor>+<term>-e
