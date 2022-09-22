@@ -25,4 +25,14 @@ if __name__ == "__main__":
    main() 
 ```
 
+# aaiyaaa
+i noticed something, removing `includes = list()` from the `line_reader` function and adding a new line of code `includes = []` on the function would have different code outcome. 
+So it becomes like this:
+```python
+def line_reader(lines):
+	includes = []
+	...
+```
+huh, python anomalies. i don't understand my code.
+
 How do I document this code?
