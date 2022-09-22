@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+            "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md"
+                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md"
               }
             }
           }
@@ -131,8 +131,8 @@
   },
   "active": "7730de8d3d676d09",
   "lastOpenFiles": [
-    "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
     "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+    "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
     "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
     "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
     "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",

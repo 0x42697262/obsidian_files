@@ -1,7 +1,7 @@
 ```python
 import re
 
-def open_file(filename, includes = list()):
+def open_file(filename):
     with open(filename) as file:
         line_reader(file.readlines())
 
