@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
+            "file": "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "8afa2dd26ef8e687",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "School/2022-2023/CMSC 192/Think.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
+                "file": "School/2022-2023/CMSC 192/Think.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
+                "file": "School/2022-2023/CMSC 192/Think.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md"
+                "file": "School/2022-2023/CMSC 192/Think.md"
               }
             }
           }
@@ -129,17 +141,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7730de8d3d676d09",
+  "active": "8afa2dd26ef8e687",
   "lastOpenFiles": [
+    "School/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
+    "School/2022-2023/CMSC 192/Think.md",
     "School/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
-    "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
-    "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
-    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
-    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
     "School/2022-2023/CMSC 142/Week 1/Math Review?.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "Arch/Package Updates/2022-09-21.md",
-    "Arch/Package Updates/2022-09-17.md",
-    "School/2022-2023/CMSC 124/INFO_DUMP.md"
+    "School/2022-2023/REFERENCES.md",
+    "School/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
+    "School/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
+    "School/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md"
   ]
 }

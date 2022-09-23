@@ -1,4 +1,4 @@
-# Week 2
+	# Week 2
 1. **What is computer ethics? Define.**
 ```
 Computer ethics deals with a set of moral principles regarding the regulation of the use of computers by an individual or group of people. This concerns the decision making in computing professionals from a professional and social conduct. 
@@ -21,10 +21,11 @@ Negative rights refer to freedom from outside interference in certain activities
 
 5. **Distinguish between the negative and positive right to freedom of speech. Explain.**
 ```
-TBA
+Negative Rights allows people to exercise their freedom of speech without getting disturbed by outside influence like the government or individuals. This makes people "free" to present their speech however people are not free from the consequences of their speech. 
+Postive Rights to freedom of speech implies that 3rd parties like government should be involved to ensure that the public are provided with all the speech. This means that freedom of speech also involves democracy.
 ```
 
 ## References
 - https://ethics.csc.ncsu.edu/basics/principles/study.php
 - https://www.scu.edu/ethics/ethics-resources/ethical-decision-making/rights/
-
+- https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=4692&context=etd

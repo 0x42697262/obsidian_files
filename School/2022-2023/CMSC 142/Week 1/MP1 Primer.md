@@ -1,4 +1,4 @@
-```python
+ ```python
 import re
 
 def open_file(filename):
