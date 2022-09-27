@@ -129,9 +129,17 @@
                 "file": "School/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md"
               }
             }
+          },
+          {
+            "id": "0c87cba199260fb0",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -140,15 +148,15 @@
   },
   "active": "7730de8d3d676d09",
   "lastOpenFiles": [
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927105026.png",
     "School/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927091801.png",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927091726.png",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220919174207.png",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220919174305.png",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927084503.png",
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927084408.png",
     "School/2022-2023/REFERENCES.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
-    "School/2022-2023/CMSC 128/CMSC128_DUMP.md",
-    "Arch/Package Updates/2022-09-24.md",
-    "School/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
-    "Arch/Package Updates/2022-09-23.md",
-    "Arch/User Changes/2022-09-23.md"
+    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md"
   ]
 }

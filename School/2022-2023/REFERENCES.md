@@ -12,3 +12,8 @@
 
 # INFO_DUMP
 - https://arxiv.org/pdf/cs/9301109.pdf
+
+# Software Process Models
+- https://www.educative.io/blog/software-process-model-types
+- https://www.visual-paradigm.com/guide/software-development-process/what-is-a-software-process-model/
+- https://www.youtube.com/watch?v=x-jqSXYE4S4
