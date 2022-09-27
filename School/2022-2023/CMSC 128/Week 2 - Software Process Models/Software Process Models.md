@@ -43,6 +43,7 @@ Check generic process framework [here](../Week%201%20-%20Introduction%20to%20Sof
 - all requirements are gathered from the start and cannot be changed
 - for every phase in development cycle, there is an **associated testing phase**
 - depicts the relationship of quality asssurance actions
+- provides a way of visualizing how verification and validation actions are applied to earlier engineering work
 `The corresponding testing phase of the development phase is planned in parallel, as you can see above.`
 
 
@@ -60,9 +61,28 @@ Check generic process framework [here](../Week%201%20-%20Introduction%20to%20Sof
 
 # Incremental Process Model
 ![[Pasted image 20220927095214.png]]
+- divide the system's functionality into **small increments** that are delivered oen after the other in quick section
+- initial increments are implemented as the most important functionality
+	- 1st increment: `core product`
+- subsequent increments expand on the previous ones until everything has been updated and implemented
+	- process' activities are interwoven by feedback
+- method of software development where the model is designed, implemented and tested incrementally (a little more is added each time) until the product is finished
+- involves both in **development** and **maintenance**
+	- product is finished when all requirements are satisfied
+- this model combines the elements of [waterfall model](#Waterfall%20Model) with the iterative philosophy of [prototyping](#Prototyping) (combines linear and parallel process flows)
+
+```diff
++ useful to mitigate technical risks
++ applicable to projects who need to be delivered quickly and whose primary or core functionalities are know and can be articulated
++ applicable to well-staffed project teams 
+- d
+```
 
 
+
+*Evolutionary process flows begins here*
 # Prototyping
+
 
 # Spiral Model
 ![[Pasted image 20220927105124.png]]
