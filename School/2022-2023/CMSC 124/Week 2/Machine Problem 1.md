@@ -28,13 +28,48 @@ int main(){
 ![[Pasted image 20220927131408.png]]
 
 ```rust
+fn main(){
+  let mut input_text = String::new();
+  let mut temps_f: f32 = 0.0;
 
+  println!("Enter Fahrenheit Value: ");
+
+  std::io::stdin()
+            .read_line(&mut input_text)
+            .expect("No temperature entered.");
+  temps_f = input_text
+              .trim()
+              .parse()
+              .expect("Not a temperature.");
+  temps_f = (temps_f - 32.0)*(5.0/9.0);
+  println!("Equivalent Celcius: {temps_f}");
+}
 ```
+![[Pasted image 20220927145554.png]]
 
+```java
+import java.util.Scanner;
 
-```R
+class Main{
+  public static void main(String[] args){
+    Scanner input_scanner = new Scanner(System.in);
+    System.out.println("Enter Fahrenheit Value: ");
+    double temps_f = input_scanner.nextFloat();
+    temps_f = (temps_f - 32) * (5.0/9.0);
 
+    System.out.println("Equivalent Celcius: " + temps_f);
+  }
+}
 ```
-
+![[Pasted image 20220927165056.png]]
 
 # 3. Write a small program in your chosen PL that can store student information, such as the  following: Name, Age, GPA (float), Grade Level (“Freshman”, “Sophomore”, “Junior”,  “Senior”)
+
+
+# 4. Now, evaluate each PL according to the different language evaluation criteria discussed in  class.
+
+# 5. Determine the paradigm(s) of your chosen PL. Remember that there is no particular paradigm suited to a specific PL, so list down all applicable paradigm.
+
+# 6. Describe the method of implementation for every PL you have chosen. Explain in detail what happens to your source code upon compilation, down to execution.
+
+
