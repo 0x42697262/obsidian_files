@@ -64,7 +64,26 @@ class Main{
 ![[Pasted image 20220927165056.png]]
 
 # 3. Write a small program in your chosen PL that can store student information, such as the  following: Name, Age, GPA (float), Grade Level (“Freshman”, “Sophomore”, “Junior”,  “Senior”)
+```python
+class Student:
+    def __init__(self, name, age, gpa, grade_level) -> None:
+        self._name = name
+        self._age = age
+        self._gpa = gpa
+        self._grade_level = grade_level
 
+    def query(self) -> list:
+        return [self._name, self._age, self._gpa, self._grade_level]
+
+def main():
+    print("Student Information System")
+    s1 = Student("Wi", 69, 5, "Junior Level")
+    print(s1.query())
+
+
+if __name__ == "__main__":
+    main()
+```
 
 # 4. Now, evaluate each PL according to the different language evaluation criteria discussed in  class.
 
