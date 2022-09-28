@@ -83,24 +83,43 @@ class SIS_db:
                 """)
         self.commit()
 
-    def delete(self, name, age, gpa, grade_level) -> None:
-        self.db_cur.execute(f"""DELETE FROM StudentInformation WHERE 
-                                name="{name}" and 
-                                age={age} and 
-                                gpa={gpa} and 
-                                grade_level="{grade_level}"
-                """)
+    def delete(self, name) -> None:
+        self.db_cur.execute(f"DELETE FROM StudentInformation WHERE name='{name}'")
         self.commit()
 
     def query(self) -> list:
         query = self.db_cur.execute("SELECT * FROM StudentInformation")
         return query.fetchall()
 
+def message_header():
+    print("==== Student Information System ====")
+    print("""
+1) Insert Student
+2) Delete Student
+3) Show Students
+0) Quit
+""")
 
 def main():
     db = SIS_db()
-    print("==== Student Information System ====")
 
+    while True:
+        message_header()
+        u_in = input("> ")
+
+        if u_in == "1":
+            name = input("Name: ")
+            age = int(input("Age: "))
+            gpa = float(input("GPA: "))
+            grade_level = input("Grade Level: ")
+            db.insert(name, age, gpa, grade_level)
+        if u_in == "2":
+            name = input("Name: ") 
+            db.delete(name)
+        if u_in == "3":
+            print(db.query())
+        if u_in == "0":
+            break
 
    
 if __name__ == "__main__":
