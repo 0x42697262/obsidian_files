@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/User Changes/2022-09-28.md",
+            "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/User Changes/2022-09-28.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/User Changes/2022-09-28.md",
+                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/User Changes/2022-09-28.md"
+                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
               }
             }
           },
@@ -148,6 +148,7 @@
   },
   "active": "7730de8d3d676d09",
   "lastOpenFiles": [
+    "Arch/User Changes/2022-09-28.md",
     "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
     "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
     "Arch/Package Updates/2022-09-28.md",
@@ -156,7 +157,6 @@
     "Arch/Package Updates/2022-09-24.md",
     "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
     "School/ATTACHMENT_FOLDER/Pasted image 20220927105026.png",
-    "School/ATTACHMENT_FOLDER/Pasted image 20220927091801.png",
-    "School/ATTACHMENT_FOLDER/Pasted image 20220927091726.png"
+    "School/ATTACHMENT_FOLDER/Pasted image 20220927091801.png"
   ]
 }

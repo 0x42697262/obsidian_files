@@ -8,7 +8,7 @@
   "showFilesFromSubFoldersButton": true,
   "revealActiveFileButton": false,
   "excludedExtensions": "",
-  "folderIcon": "default",
+  "folderIcon": "typicon",
   "folderCount": true,
   "folderCountOption": "notes",
   "evernoteView": true,
