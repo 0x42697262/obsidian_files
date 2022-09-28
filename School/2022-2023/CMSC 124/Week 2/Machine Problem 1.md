@@ -125,6 +125,127 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+![[Pasted image 20220928163403.png]]
+![[Pasted image 20220928163426.png]]
+
+```cpp
+#include <iostream>
+#include <sqlite3.h>
+
+int callback(void *NotUsed, int argc, char **argv, char **azColName){
+  for(int i=0; i < argc; i++)
+    std::cout << azColName[i] << ": " << argv[i] << std::endl;
+  std::cout << std::endl;
+
+  return 0;
+ }
+class SIS_db {
+  int rc;
+  char *zErrMsg = 0;
+  sqlite3 *DB;
+
+public:
+  SIS_db(){
+    this->rc = sqlite3_open("SIS.db", &this->DB);
+    this->rc = sqlite3_exec(this->DB, "CREATE TABLE IF NOT EXISTS StudentInformation(name TEXT, age INTEGER, gpa REAL, grade_level TEXT)", NULL, 0, &this->zErrMsg);
+    if(this->rc != SQLITE_OK){
+      std::cerr << "Error loading the database." << std::endl;
+      sqlite3_free(this->zErrMsg);
+    }
+  };
+
+
+  void delete_entry(std::string name){
+    std::string sql = "DELETE FROM StudentInformation WHERE name='";
+    sql.append(name + "'");
+    this->rc = sqlite3_exec(this->DB, sql.c_str(), NULL, 0, &this->zErrMsg);
+  }
+
+  void insert(std::string name, int age, float gpa, std::string grade_level){
+    std::string sql = "INSERT INTO StudentInformation VALUES('";
+    sql.append(name + "', ");
+    sql.append(std::to_string(age) + ", ");
+    sql.append(std::to_string(gpa) + ", '");
+    sql.append(grade_level + "')");
+    this->rc = sqlite3_exec(this->DB, sql.c_str(), NULL, 0, &this->zErrMsg);
+  }
+
+  void close_connection(){
+    sqlite3_close(this->DB);
+  }
+
+  void query(){
+    std::string data("CALLBACK FUNCTION");
+    std::string sql = "SELECT * FROM StudentInformation";
+    this->rc = sqlite3_exec(this->DB, sql.c_str(), callback, (void*)data.c_str(), NULL);
+  }
+} db;
+
+
+void message_header(){
+  std::cout << "==== Student Information System ====" << std::endl;
+  std::cout << "1) Insert Student" << std::endl;
+  std::cout << "2) Delete Student" << std::endl;
+  std::cout << "3) Show Student" << std::endl;
+  std::cout << "0) Quit" << std::endl;
+}
+
+
+int main(){
+  int u_in = -1;
+
+  std::string name;
+  int age;
+  float gpa;
+  std::string grade_level;
+
+  while(u_in != 0){
+    message_header();
+    std::cout << "> ";
+    std::cin >> u_in;
+
+    switch(u_in){
+      case 1:
+        std::cout << "Name: ";
+        std::cin >> name;
+        std::cout << "Age: ";
+        std::cin >> age;
+        std::cout << "GPA: ";
+        std::cin >> gpa;
+        std::cout << "Grade Level: ";
+        std::cin >> grade_level;
+
+        db.insert(name, age, gpa, grade_level);
+        break;
+
+      case 2:
+        std::cout << "Name: ";
+        std::cin >> name;
+
+        db.delete_entry(name);
+        break;
+
+      case 3:
+        db.query();
+        break;
+
+      case 0:
+        break;
+    }
+  }
+
+  db.close_connection();
+  return 0;
+}
+```
+![[Pasted image 20220928212441.png]]
+
+![[Pasted image 20220928212453.png]]
+![[Pasted image 20220928212516.png]]
+
+
+
+
 
 # 4. Now, evaluate each PL according to the different language evaluation criteria discussed in  class.
 
