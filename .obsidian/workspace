@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Studies/DEFINITIONS.md",
-            "mode": "preview",
+            "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Studies/DEFINITIONS.md",
+                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Studies/DEFINITIONS.md",
+                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Studies/DEFINITIONS.md"
+                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
               }
             }
           },
@@ -146,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1728394db77b5ada",
+  "active": "cef6f232d564ca5a",
   "lastOpenFiles": [
-    "Studies/2022-2023/CMSC 124/INFO_DUMP.md",
-    "Studies/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "Arch/Commands.md",
+    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.svg",
+    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.png",
+    "Excalidraw/Drawing 2022-09-29 23.16.10.excalidraw.md",
+    "Excalidraw/Drawing 2022-09-29 23.16.07.excalidraw.md",
+    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.md",
+    "Excalidraw/Drawing 2022-09-29 23.16.10_0.excalidraw.md",
+    "Excalidraw/Drawing 2022-09-29 23.16.08.excalidraw.md",
     "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
-    "README.md",
-    "Studies/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
-    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "Arch/User Changes/2022-09-29.md",
-    "Arch/Package Updates/2022-09-29.md",
-    "Studies/2022-2023/CMSC 124/Week 2/Problem Set 1.md"
+    "School/ATTACHMENT_FOLDER/Pasted Image 20220929231239_177.png",
+    "Studies/ATTACHMENT_FOLDER/Pasted image 20220929220341.png"
   ]
 }
