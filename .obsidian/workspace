@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -145,8 +146,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cef6f232d564ca5a",
+  "active": "1728394db77b5ada",
   "lastOpenFiles": [
+    "Studies/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
+    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
     "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.svg",
     "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.png",
     "Excalidraw/Drawing 2022-09-29 23.16.10.excalidraw.md",
@@ -154,8 +157,6 @@
     "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.md",
     "Excalidraw/Drawing 2022-09-29 23.16.10_0.excalidraw.md",
     "Excalidraw/Drawing 2022-09-29 23.16.08.excalidraw.md",
-    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
-    "School/ATTACHMENT_FOLDER/Pasted Image 20220929231239_177.png",
-    "Studies/ATTACHMENT_FOLDER/Pasted image 20220929220341.png"
+    "School/ATTACHMENT_FOLDER/Pasted Image 20220929231239_177.png"
   ]
 }

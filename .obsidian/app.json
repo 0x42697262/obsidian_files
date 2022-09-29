@@ -6,5 +6,7 @@
     "downscalePercent": 100
   },
   "attachmentFolderPath": "Studies/ATTACHMENT_FOLDER",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "showFrontmatter": false
 }

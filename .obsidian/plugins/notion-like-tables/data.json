@@ -1,0 +1,37 @@
+{
+  "appData": {},
+  "state": {
+    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md": {
+      "tcDp9C": {
+        "data": {
+          "headers": [
+            {
+              "id": "44275a7d-d4a5-45b1-aa84-6fdfd242ec18",
+              "content": "New Column",
+              "sortDir": "default",
+              "width": "100px",
+              "shouldWrapOverflow": true,
+              "useAutoWidth": false,
+              "type": "text"
+            }
+          ],
+          "rows": [],
+          "cells": [],
+          "tags": []
+        },
+        "shouldUpdate": false,
+        "viewType": "reading",
+        "tableCacheVersion": 431
+      }
+    }
+  },
+  "sectionInfo": {
+    "lineStart": -1,
+    "lineEnd": -1
+  },
+  "focusedElement": {
+    "id": "-1",
+    "type": "unfocused"
+  },
+  "excludedFiles": []
+}
