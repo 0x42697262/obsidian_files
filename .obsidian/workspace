@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
-            "mode": "source",
+            "file": "Studies/DEFINITIONS.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Studies/DEFINITIONS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Studies/DEFINITIONS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
+                "file": "Studies/DEFINITIONS.md"
               }
             }
           },
@@ -148,15 +148,15 @@
   },
   "active": "1728394db77b5ada",
   "lastOpenFiles": [
-    "School/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
-    "School/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
-    "School/2022-2023/CMSC 124/INFO_DUMP.md",
-    "School/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "School/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
+    "Studies/2022-2023/CMSC 124/INFO_DUMP.md",
+    "Studies/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "Arch/Commands.md",
+    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+    "README.md",
+    "Studies/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
+    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
     "Arch/User Changes/2022-09-29.md",
     "Arch/Package Updates/2022-09-29.md",
-    "School/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
-    "Arch/User Changes/2022-09-28.md",
-    "Arch/Package Updates/2022-09-28.md"
+    "Studies/2022-2023/CMSC 124/Week 2/Problem Set 1.md"
   ]
 }

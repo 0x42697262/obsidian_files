@@ -17,3 +17,7 @@ No, we don't. You're hallucinating. This repo is just **notes**. *I do not save 
 
 # Why are your notes unorganized?
 I am still learning.
+
+----
+# How to use this vault?
+Do a `git clone https://github.com/KrulYuno/obsidian_files.git` then open the vault in Obsidian. I think plugins are already included.

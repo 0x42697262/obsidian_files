@@ -17,7 +17,7 @@
 - Web-Mobile
 - Artificial Intelligence
 
-More info [here](../CMSC128_DUMP.md#Types%20of%20Software)
+More info [here](CMSC128_DUMP.md#Types%20of%20Software)
 
 # References
 ~~Yes this is all based on our prof's ppt~~

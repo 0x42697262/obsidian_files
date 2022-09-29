@@ -49,6 +49,7 @@ class Main{
 ```
 
 ----
+Need of caution, all codes below here are highly vulnerable to sql injection. I didn't care but you should. Practice sanitizations please.
 
 ```python
 import sqlite3

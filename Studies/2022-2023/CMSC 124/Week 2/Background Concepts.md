@@ -27,9 +27,9 @@
 	- Procedural Programming Paradigm
 	- Focuses more on the steps in acquiring results
 	- **Types**
-		1. [Block-structured](../INFO_DUMP.md#Block-Structured)
-		2. [Object-based](../INFO_DUMP.md#Object-Based)
-		3. [Distributed Programming](../INFO_DUMP.md#Distributed%20Programming)
+		1. [Block-structured](INFO_DUMP.md#Block-Structured)
+		2. [Object-based](INFO_DUMP.md#Object-Based)
+		3. [Distributed Programming](INFO_DUMP.md#Distributed%20Programming)
 
 2. Declarative
 	- Implicit
@@ -39,9 +39,9 @@
 	- Logical Programming Paradigm
 	- Focuses more on the end result rather than the steps
 	- **Types**
-		1. [Logic Programming](../INFO_DUMP.md#Logic%20Programming)
-		2. [Functional Languages](../INFO_DUMP.md#Functional%20Languages)
-		3. [Database Languages](../INFO_DUMP.md#)
+		1. [Logic Programming](INFO_DUMP.md#Logic%20Programming)
+		2. [Functional Languages](INFO_DUMP.md#Functional%20Languages)
+		3. [Database Languages](INFO_DUMP.md#)
 
 3. Structured
 4. Procedural
@@ -115,7 +115,7 @@ Note that programs can have multiple paradigms.
 	- Java
 
 ## 4th Generation Languages
-- [Domain Specific](../../../DEFINITIONS.md#Domain-specific%20language) 
+- [Domain Specific](DEFINITIONS.md#Domain-specific%20language) 
 - **Visual Programming environment**
 	- VB
 	- Delphi
@@ -245,7 +245,7 @@ _writability must be considered in the context of the target problem domain of a
 From lowest level to highest: `Machine language` -> `Assembly language` -> `High-level language`
 
 # 7. Methods of Implementation
-There are two methods: [Compilation](../INFO_DUMP.md#Compilation) and [Interpretation](../INFO_DUMP.md#Interpretation)
+There are two methods: [Compilation](INFO_DUMP.md#Compilation) and [Interpretation](INFO_DUMP.md#Interpretation)
 
 ## Syntax, Semantics, and Pragmatics
 `Syntax` - written form of a program
@@ -253,4 +253,4 @@ There are two methods: [Compilation](../INFO_DUMP.md#Compilation) and [Interpret
 `Pragmatics` - history and some implementation methodology specific to that language
 
 ----
-Get the [references](../../../../REFERENCES.md#Background%20and%20Preliminaries%20Lecture%20Slides) here.
+Get the [references](REFERENCES.md#Background%20and%20Preliminaries%20Lecture%20Slides) here.

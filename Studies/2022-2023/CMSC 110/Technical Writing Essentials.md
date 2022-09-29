@@ -1,4 +1,4 @@
-Check [this](./Unit%20I.%20What%20is%20Technical%20Writing?.md) for intro?
+Check [this](Unit%20I.%20What%20is%20Technical%20Writing?.md) for intro?
 
 
 

@@ -1,5 +1,5 @@
 # Process Models
-Check generic process framework [here](../Week%201%20-%20Introduction%20to%20Software%20Engineering/Software%20Engineering%20and%20Processes.md#The%20Process%20Framework)
+Check generic process framework [here](Software%20Engineering%20and%20Processes.md#The%20Process%20Framework)
 
 
 ## Waterfall Model
@@ -90,4 +90,4 @@ Check generic process framework [here](../Week%201%20-%20Introduction%20to%20Sof
 
 
 ----
-Check references [here](../../REFERENCES.md#Software%20Process%20Models).
+Check references [here](REFERENCES.md#Software%20Process%20Models).

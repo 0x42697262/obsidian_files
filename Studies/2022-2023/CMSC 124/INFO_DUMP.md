@@ -27,7 +27,7 @@
 ----
 
 # Distributed Programming
-- Languages for [loosely coupled systems](../../DEFINITIONS.md#Loose%20Coupling)
+- Languages for [loosely coupled systems](DEFINITIONS.md#Loose%20Coupling)
 - Does not need memory sharing since they have their own memory and processors
 - Can avoid some problems on resolving memory conflicts
 
@@ -130,9 +130,9 @@ what? hello i need more info here, not examples ~~im just lazy~~
 - preferred by language implementers
 - detects whether a string is a well-formed string in the language or not
 - **Expressing Concrete Syntax**
-	- [Backus-Naur Form](./Week%203-4/Backus-Naur%20Form.md)
+	- [Backus-Naur Form](Backus-Naur%20Form.md)
 	- Syntax Diagrams
 	- Context-Free Grammars
 
 ----
-Get all sources [here](../../../REFERENCES.md#INFO_DUMP)
+Get all sources [here](REFERENCES.md#INFO_DUMP)

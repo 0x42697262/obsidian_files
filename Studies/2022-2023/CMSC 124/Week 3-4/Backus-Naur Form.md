@@ -297,4 +297,4 @@ pls add trees, lol
 4. 
 
 ----
-Get all sources [here](../../REFERENCES.md#Backus-Naur%20Form)
+Get all sources [here](REFERENCES.md#Backus-Naur%20Form)
