@@ -244,7 +244,94 @@ int main(){
 ![[Pasted image 20220928212516.png]]
 
 
+```rust
+use rusqlite::{params, Connection, Result};
 
+struct Student {
+    name: String,
+    age: u32,
+    gpa: f64,
+    grade_level: String,
+}
+
+fn message_header() {
+    println!("==== Student Information System ====");
+    println!(
+        "1) Insert Student
+2) Delete Student
+0) Quit"
+    );
+}
+
+fn input_handler() -> String {
+    let mut input = String::new();
+    std::io::stdin()
+        .read_line(&mut input)
+        .expect("Input Error.");
+
+    input
+}
+
+fn main() -> Result<()> {
+    let db_con = Connection::open("SIS.db")?;
+    db_con.execute(
+        "CREATE TABLE IF NOT EXISTS StudentInformation(
+            name TEXT, 
+            age INTEGER, 
+            gpa REAL, 
+            grade_level TEXT)",
+        params![],
+    )?;
+
+    let mut student = Student {
+        name: String::from("test"),
+        age: 4,
+        gpa: 2.1,
+        grade_level: String::from("Senior"),
+    };
+
+    let mut input = String::new();
+
+    while input != "0" {
+        message_header();
+        input = input_handler().trim().to_string();
+
+        if input == "1" {
+            println!("Name:");
+            student.name = input_handler().trim().to_string();
+            println!("Age:");
+            student.age = input_handler().trim().parse().expect("Not Integer.");
+            println!("GPA:");
+            student.gpa = input_handler().trim().parse().expect("Not Float.");
+            println!("Grade Level:");
+            student.grade_level = input_handler().trim().to_string();
+
+            db_con.execute(
+                "INSERT INTO StudentInformation (name, age, gpa, grade_level) VALUES(
+                ?1, ?2, ?3, ?4
+                )",
+                params![student.name, student.age, student.gpa, student.grade_level],
+            )?;
+        }
+
+        if input == "2"{
+            println!("Name:");
+            student.name = input_handler().trim().to_string();
+
+            db_con.execute(
+                "DELETE FROM StudentInformation WHERE name=?1",
+                params![student.name],
+                )?;
+        }
+    }
+
+    Ok(())
+}
+```
+![[Pasted image 20220929174443.png]]![[Pasted image 20220929174508.png]]
+```java
+
+```
 
 
 # 4. Now, evaluate each PL according to the different language evaluation criteria discussed in  class.
@@ -254,3 +341,10 @@ int main(){
 # 6. Describe the method of implementation for every PL you have chosen. Explain in detail what happens to your source code upon compilation, down to execution.
 
 
+---- 
+# References
+[1] _Data Types - The Rust Programming Language_. (n.d.). Retrieved September 27, 2022, from https://doc.rust-lang.org/book/ch03-02-data-types.html
+[2] _Programming a Guessing Game - The Rust Programming Language_. (n.d.). Retrieved September 27, 2022, from https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html
+[3] _SQLite In 5 Minutes Or Less_. (n.d.). Retrieved September 28, 2022, from https://www.sqlite.org/quickstart.html
+[4] _sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.10.7 documentation_. (n.d.). Retrieved September 28, 2022, from https://docs.python.org/3/library/sqlite3.html
+[5] _SQLite - Rust Cookbook_. (n.d.). Retrieved September 29, 2022, from https://rust-lang-nursery.github.io/rust-cookbook/database/sqlite.html
