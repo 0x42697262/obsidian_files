@@ -31,7 +31,7 @@
 - Does not need memory sharing since they have their own memory and processors
 - Can avoid some problems on resolving memory conflicts
 
----
+----
 # Logic Programming
 - Based on subset of predicate calculus
 - Composed of a series of axioms or facts, rules of inference, and a theorem or query to be proved
