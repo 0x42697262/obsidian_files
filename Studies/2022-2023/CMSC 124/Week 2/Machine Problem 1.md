@@ -61,3 +61,4 @@ Topic Coverage: Background and Preliminaries
 [7] _Code Style — The Hitchhiker’s Guide to Python_. (n.d.). Retrieved September 29, 2022, from https://docs.python-guide.org/writing/style/
 [8] _Basic Programming Constructs – Python 3 – Kaizen_. (n.d.). Retrieved September 30, 2022, from https://kaizen.itversity.com/courses/hdpcsd-hdp-certified-spark-developer-hdpcsd-python/lessons/hdpcsd-basics-of-programming-using-python/topic/hdpcsd-basic-programming-constructs-python-3-2/
 [9] Farooq, M. S., Khan, S. A., Ahmad, F., Islam, S., & Abid, A. (2014, February 24). An Evaluation Framework and Comparative Analysis of the Widely Used First Programming Languages. _PLoS ONE_, _9_(2), e88941. https://doi.org/10.1371/journal.pone.0088941
+[10] _Brian Buckley_. (n.d.). Retrieved September 29, 2022, from http://b.web.umkc.edu/buckleyb/cs_441.htm
