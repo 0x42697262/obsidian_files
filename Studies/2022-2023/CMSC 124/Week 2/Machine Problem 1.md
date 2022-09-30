@@ -54,9 +54,20 @@ Topic Coverage: Background and Preliminaries
 | Functional      | Functional      | Functional      | Functional      |
 | Imperative      | Imperative      | Imperative      | Imperative      |
 | Declarative     | Declarative     | Declarative     | Declarative     |
-| Structured      | Structured      |                 | Structured      | 
+| Structured      | Structured      |   Trait-Oriented              | Structured      | 
 
 # 6. Describe the method of implementation for every PL you have chosen. Explain in detail what happens to your source code upon compilation, down to execution.
+**Python**
+It is an interpreted language that is executed from top to bottom by the Python Interpreter. It first imports a library module `sqlite` needed to store our data. It has a class that handles the APIs for the storing of students to the library. When initiated, it first creates a database and executes a sql command to create a new table if it doesn't exists. The class has 3 main functions and 1 that simply handles commiting the data to the database. Those three functions are used for inserting, deleting, and querying. Aside from the class, there are two functions, the main and a console output function. The latter just prints text while the main function handles the user inputs and flow of the code. Before the code is ran, it checks if the code is imported or directly ran, if it's the latter then it proceeds to call the main function.
+
+**C++**
+C++ is a compiled language. The flow of execution of this code is similar to the Python code I have except this time the database connection has to be closed manually which can be found at the end of the main function. The student information this time however are strongly-typed unlike in Python. The callback function is used for printing the queried statement of the database.
+
+**Rust**
+Rust is similar to C++ which is a compiled language. Although this time it does not contain a class but instead a struct just like in C language. It first imports a crate `rusqlite` for sqlite. A struct is then created to store the students information. Then two sub-functions exists for printing texts or console outputs and a function for handling inputs. The main function is the base flow of the code, it creates a new database connection and then executes a sql command to check if a table does not exist then create it if it doesn't. The student struct is then created as a mutable (mutable in a way that we can modify the values later on). The control structure is then ran on a while loop checking for inputs from the user to either store a new student, delete a student, or exit the program. 
+
+**Java**
+Since Java is a simple language, you should have already understood the code. It is an interpreted language however it is compiled to a byte-code specifically for Java. The code execution is quite similar to the Rust code I have however with a slight difference of putting the entire code structure inside a main class `SIS`. This code however has extra dependency for connecting to a sqlite database, that is `sqlite-jdbc` which is a driver to read and write into a sqlite database file. This code first prepares sql statements unlike the other three source codes I have, making them easier to read.
 
 
 ---- 
