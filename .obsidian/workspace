@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+            "file": "Arch/Package Updates/2022-09-30.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Arch/Package Updates/2022-09-30.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Arch/Package Updates/2022-09-30.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
+                "file": "Arch/Package Updates/2022-09-30.md"
               }
             }
           },
@@ -148,15 +148,15 @@
   },
   "active": "82f0c304d67453b2",
   "lastOpenFiles": [
-    "Studies/2022-2023/REFERENCES.md",
+    "Arch/User Changes/2022-09-28.md",
+    "Arch/User Changes/2022-09-18.md",
+    "Arch/User Changes/2022-09-23.md",
+    "Arch/User Changes/2022-09-27.md",
     "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+    "Studies/2022-2023/CMSC 192/Think.md",
+    "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+    "Studies/2022-2023/REFERENCES.md",
     "Studies/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "Studies/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
-    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.svg",
-    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.png",
-    "Excalidraw/Drawing 2022-09-29 23.16.10.excalidraw.md",
-    "Excalidraw/Drawing 2022-09-29 23.16.07.excalidraw.md",
-    "Excalidraw/Drawing 2022-09-29 23.11.45.excalidraw.md",
-    "Excalidraw/Drawing 2022-09-29 23.16.10_0.excalidraw.md"
+    "Studies/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md"
   ]
 }
