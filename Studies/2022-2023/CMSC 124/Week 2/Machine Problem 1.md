@@ -47,6 +47,15 @@ Topic Coverage: Background and Preliminaries
 
 # 5. Determine the paradigm(s) of your chosen PL. Remember that there is no particular paradigm suited to a specific PL, so list down all applicable paradigm.
 
+| Python          | C++             | Rust            | Java            |
+| --------------- | --------------- | --------------- | --------------- |
+| Object-Oriented | Object-Oriented | Object-Oriented | Object-Oriented |
+| Procedural      | Procedural      | Procedural      | Procedural      |
+| Functional      | Functional      | Functional      | Functional      |
+| Imperative      | Imperative      | Imperative      | Imperative      |
+| Declarative     | Declarative     | Declarative     | Declarative     |
+| Structured      | Structured      |                 | Structured      | 
+
 # 6. Describe the method of implementation for every PL you have chosen. Explain in detail what happens to your source code upon compilation, down to execution.
 
 
