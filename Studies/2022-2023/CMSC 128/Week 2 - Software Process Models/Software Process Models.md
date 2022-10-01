@@ -82,12 +82,36 @@ Check generic process framework [here](Software%20Engineering%20and%20Processes.
 
 *Evolutionary process flows begins here*
 # Prototyping
-
-
+![[Pasted image 20221001190505.png]]
+- built to be throways
+- used for acquiring feedback
+- iterates across all processes quickly for feedback
+```diff
++ appropriate for projects when clients cannot fully specify the requirements of the software
++ can be used to build or clarify user requirements
+- stakeholders may think that the prototype is the final software
+- stakehoders may think that the software can be completed earlier than planned
+- prone to programming blunders
+```
 # Spiral Model
 ![[Pasted image 20220927105124.png]]
+- risk driven iterative software process model
+	- introduced for dealing the shortcomings of the waterfall model
+- steps are not activities 
+	- they are **phases** for addressing problem with greatest risk of causing failure
+- can be used for *unclear needs* or projects still in research and development
+
+Phases each cycle:
+1.  Address the highest-risk problem and determine the objective and alternate solutions
+2.  Evaluate the alternatives and identify the risks involved and possible solutions
+3.  Develop a solution and verify if it’s acceptable
+4.  Plan for the next cycle
 
 
+```diff
++ great for managing uncertainty
+- difficult to have stable documentation
+```
 
 ----
 Check references [here](REFERENCES.md#Software%20Process%20Models).

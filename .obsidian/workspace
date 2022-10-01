@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+            "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md"
               }
             }
           },
@@ -148,15 +148,15 @@
   },
   "active": "82f0c304d67453b2",
   "lastOpenFiles": [
-    "Studies/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md",
-    "Arch/Package Updates/2022-09-30.md",
-    "Arch/Package Updates/2022-09-29.md",
     "Arch/Neofetch.md",
-    "Arch/User Changes/2022-09-30.md",
+    "Arch/Package Updates/2022-10-01.md",
+    "Arch/User Changes/2022-10-01.md",
     "Arch/User Changes/2022-09-28.md",
-    "Arch/User Changes/2022-09-18.md",
-    "Arch/User Changes/2022-09-23.md",
-    "Arch/User Changes/2022-09-27.md"
+    "Arch/User Changes/2022-09-29.md",
+    "Arch/User Changes/2022-09-30.md",
+    "Studies/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+    "Studies/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+    "Studies/2022-2023/CMSC 124/INFO_DUMP.md",
+    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
   ]
 }
