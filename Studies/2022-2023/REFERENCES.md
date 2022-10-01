@@ -17,3 +17,8 @@
 - https://www.educative.io/blog/software-process-model-types
 - https://www.visual-paradigm.com/guide/software-development-process/what-is-a-software-process-model/
 - https://www.youtube.com/watch?v=x-jqSXYE4S4
+- http://tryqa.com/what-is-waterfall-model-advantages-disadvantages-and-when-to-use-it/
+- http://tryqa.com/what-is-v-model-advantages-disadvantages-and-when-to-use-it/
+- http://tryqa.com/what-is-incremental-model-advantages-disadvantages-and-when-to-use-it/
+- http://tryqa.com/what-is-spiral-model-advantages-disadvantages-and-when-to-use-it/
+- http://tryqa.com/what-is-prototype-model-advantages-disadvantages-and-when-to-use-it/

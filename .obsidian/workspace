@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+            "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md"
+                "file": "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md"
               }
             }
           },
@@ -148,15 +148,15 @@
   },
   "active": "82f0c304d67453b2",
   "lastOpenFiles": [
+    "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
+    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
+    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
+    "Studies/2022-2023/CMSC 128/CMSC128_DUMP.md",
+    "Studies/2022-2023/REFERENCES.md",
     "Arch/Neofetch.md",
     "Arch/Package Updates/2022-10-01.md",
     "Arch/User Changes/2022-10-01.md",
-    "Arch/User Changes/2022-09-28.md",
-    "Arch/User Changes/2022-09-29.md",
-    "Arch/User Changes/2022-09-30.md",
-    "Studies/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
-    "Studies/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
-    "Studies/2022-2023/CMSC 124/INFO_DUMP.md",
-    "Studies/2022-2023/CMSC 124/Week 2/Machine Problem 1.md"
+    "Arch/User Changes/2022-09-28.md"
   ]
 }

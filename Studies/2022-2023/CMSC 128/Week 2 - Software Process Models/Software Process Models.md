@@ -75,7 +75,7 @@ Check generic process framework [here](Software%20Engineering%20and%20Processes.
 + useful to mitigate technical risks
 + applicable to projects who need to be delivered quickly and whose primary or core functionalities are know and can be articulated
 + applicable to well-staffed project teams 
-- d
+- 
 ```
 
 
