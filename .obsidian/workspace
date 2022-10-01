@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -149,6 +150,7 @@
   "active": "82f0c304d67453b2",
   "lastOpenFiles": [
     "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+    "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
     "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
     "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
     "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
@@ -156,7 +158,6 @@
     "Studies/2022-2023/REFERENCES.md",
     "Arch/Neofetch.md",
     "Arch/Package Updates/2022-10-01.md",
-    "Arch/User Changes/2022-10-01.md",
-    "Arch/User Changes/2022-09-28.md"
+    "Arch/User Changes/2022-10-01.md"
   ]
 }
