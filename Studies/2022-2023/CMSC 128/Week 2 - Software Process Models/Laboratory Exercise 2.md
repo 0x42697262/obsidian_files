@@ -93,3 +93,4 @@
 - Stable Development
 
 # 2. What personal lesson about software development did  you learn?
+I noticed that there are different types of models each having their own advantages and disadvantages. Since project development is broad, different stategies are used to develop software projects. One model may work on one kind of project but that model may not work efficiently on the another. Having a process model is better than not having any, and this is why both client and developers needs to understand their requirements and there must be strong/good communication. Once they know what they needed to do, developers can choose the appropriate process model and they can work efficiently.
