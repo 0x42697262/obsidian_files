@@ -8,5 +8,6 @@
   "attachmentFolderPath": "Studies/ATTACHMENT_FOLDER",
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
-  "showFrontmatter": false
+  "showFrontmatter": false,
+  "vimMode": true
 }

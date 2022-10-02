@@ -59,9 +59,15 @@
 
 ## Prototyping
 ### a. Types or kinds of software projects applicable  
-- 
+- Desired systems with a lot of interactions like websites
 ### b. Advantages  
+- Appropriate for projects when clients cannot fully specify the requirements of the software
+- Can be used to build or clarify user requirements
+- Users are actively involved in the development thus errors are detected much earlier
 ### c. Disadvantages  
+- Stakeholders may think that the prototype is the final software
+- Stakehoders may think that the software can be completed earlier than planned
+- Prone to programming blunders
 ### d. Mode of project delivery (processes, outputs)  
 - Evolutionary process -> Prototype
 ### e. Unique Characteristics (what differs the model from the others)
@@ -69,10 +75,21 @@
 
 ## Spiral Model
 ### a. Types or kinds of software projects applicable  
+- When cost and risk evaluation is important
+- Can be used for unclear needs or projects still in research and development
 ### b. Advantages  
+- Great for managing uncertainty
+- Easily avoids risks
+- Good for large and critical projects
+- Has good documentation
 ### c. Disadvantages  
+- Difficult to have stable documentation
+- Very costly
+- Not suitable for small projects
+- Requires high expertise
 ### d. Mode of project delivery (processes, outputs)  
+- Iterative Process -> Early Software Development
 ### e. Unique Characteristics (what differs the model from the others)
+- Stable Development
 
-
-# 2.
+# 2. What personal lesson about software development did  you learn?

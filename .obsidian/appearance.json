@@ -1,5 +1,6 @@
 {
   "baseFontSize": 15,
   "cssTheme": "Pink Topaz",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "translucency": false
 }
