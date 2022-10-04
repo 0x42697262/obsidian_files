@@ -137,6 +137,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "69c0c862bb356ffa",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
         ],
         "currentTab": 4
@@ -146,7 +154,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "82f0c304d67453b2",
+  "active": "49296c1dd7c4de6e",
   "lastOpenFiles": [
     "Arch/Package Updates/2022-10-03.md",
     "Arch/Package Updates/2022-09-30.md",
