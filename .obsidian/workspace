@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/Package Updates/2022-10-04.md",
-            "mode": "source",
+            "file": "Notes/__index/000 Index.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,8 +40,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": false,
+                "query": "tag:#arch_system_changes",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/Package Updates/2022-10-04.md",
+                "file": "Notes/__index/000 Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/Package Updates/2022-10-04.md",
+                "file": "Notes/__index/000 Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/Package Updates/2022-10-04.md"
+                "file": "Notes/__index/000 Index.md"
               }
             }
           },
@@ -154,17 +154,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "49296c1dd7c4de6e",
+  "active": "82f0c304d67453b2",
   "lastOpenFiles": [
-    "Arch/Package Updates/2022-10-03.md",
-    "Arch/Package Updates/2022-09-30.md",
-    "Arch/Package Updates/2022-09-28.md",
-    "Arch/Package Updates/2022-09-29.md",
-    "Arch/Package Updates/2022-10-02.md",
-    "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
-    "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
-    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md"
+    "Notes/__index/002 Statuses.md",
+    "Notes/__index/000 Index.md",
+    "Notes/__index/001 Tags.md",
+    "Notes/010 My Arch Journey/010 My Arch Journey.md",
+    "Notes/010 My Arch Journey/013 System Changes.md",
+    "Notes/010 My Arch Journey/012 Package Installs.md",
+    "Arch/User Changes/2022-09-09.md",
+    "Arch/User Changes/2022-09-15.md",
+    "Arch/System Changes by User/2022-09-08.md",
+    "Notes/010 My Arch Journey/011 Pacman Updates.md"
   ]
 }

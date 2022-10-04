@@ -1,5 +1,18 @@
-# XORG DAEMON
+> [!INFO]
+> Status:
+> Tags:  #arch #arch_system_changes
+> Links: [[010 My Arch Journey]]
+
+----
+# 013 System Changes
+## 2022-09-09 
 ```sh
+sudo usermod -aG kvm birb 
+```
+
+## 2022-09-08
+### XORG DAEMON
+```conf
 Section "InputClass"
     Identifier "touchpad"
     Driver "libinput"
