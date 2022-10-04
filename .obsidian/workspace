@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch/Package Updates/2022-10-03.md",
+            "file": "Arch/Package Updates/2022-10-04.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch/Package Updates/2022-10-03.md",
+                "file": "Arch/Package Updates/2022-10-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arch/Package Updates/2022-10-03.md",
+                "file": "Arch/Package Updates/2022-10-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arch/Package Updates/2022-10-03.md"
+                "file": "Arch/Package Updates/2022-10-04.md"
               }
             }
           },
@@ -148,6 +148,7 @@
   },
   "active": "82f0c304d67453b2",
   "lastOpenFiles": [
+    "Arch/Package Updates/2022-10-03.md",
     "Arch/Package Updates/2022-09-30.md",
     "Arch/Package Updates/2022-09-28.md",
     "Arch/Package Updates/2022-09-29.md",
@@ -156,7 +157,6 @@
     "Studies/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
     "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
     "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
-    "Studies/2022-2023/CMSC 128/CMSC128_DUMP.md"
+    "Studies/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md"
   ]
 }
