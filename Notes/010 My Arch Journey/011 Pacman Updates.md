@@ -1,7 +1,6 @@
 > [!INFO]
 > Status:
 > Tags: #arch #arch_updates
-> Links: [[010 My Arch Journey]]
 
 ----
 # 011 Pacman Updates

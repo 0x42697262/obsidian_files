@@ -1,7 +1,6 @@
 > [!INFO]
 > Status:
 > Tags: #arch #arch_user_changes 
-> Links: [[010 My Arch Journey]]
 
 ----
 # 014 User Changes

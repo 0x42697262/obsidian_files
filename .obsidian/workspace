@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "2582267e55c28e21",
+        "id": "7b4146fe8db838eb",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/010 My Arch Journey/014 User Changes.md",
-            "mode": "source",
+            "file": "Notes/__orphans/111.md",
+            "mode": "preview",
+            "backlinks": true,
             "source": false
           }
         }
@@ -40,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#arch_system_changes",
+                "query": "tag:#arch_user_changes",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,14 +87,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/010 My Arch Journey/014 User Changes.md",
+                "file": "Notes/__orphans/111.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -103,9 +104,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/010 My Arch Journey/014 User Changes.md",
+                "file": "Notes/__orphans/111.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -126,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/010 My Arch Journey/014 User Changes.md"
+                "file": "Notes/__orphans/111.md"
               }
             }
           },
@@ -147,24 +148,23 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "2582267e55c28e21",
+  "active": "7b4146fe8db838eb",
   "lastOpenFiles": [
-    "Arch/User Changes/2022-10-01.md",
+    "Notes/__orphans/020 Studies.md",
+    "Notes/010 My Arch Journey/011 Pacman Updates.md",
     "Notes/010 My Arch Journey/014 User Changes.md",
-    "Arch/User Changes/2022-09-30.md",
-    "Arch/User Changes/2022-09-29.md",
-    "Arch/User Changes/2022-09-28.md",
-    "Arch/User Changes/2022-09-27.md",
-    "Arch/User Changes/2022-09-23.md",
-    "Arch/User Changes/2022-09-18.md",
-    "Arch/User Changes/2022-09-15.md",
-    "Notes/010 My Arch Journey/010 My Arch Journey.md"
+    "Notes/010 My Arch Journey/013 System Changes.md",
+    "Notes/010 My Arch Journey/012 Package Installs.md",
+    "Notes/010 My Arch Journey/010 My Arch Journey.md",
+    "Notes/__index/002 Statuses.md",
+    "Notes/__index/001 Tags.md",
+    "Notes/__index/000 Index.md",
+    "Templates/Header.md"
   ]
 }

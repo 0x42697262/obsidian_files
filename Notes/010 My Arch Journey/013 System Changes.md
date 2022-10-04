@@ -1,7 +1,6 @@
 > [!INFO]
 > Status:
 > Tags:  #arch #arch_system_changes
-> Links: [[010 My Arch Journey]]
 
 ----
 # 013 System Changes
