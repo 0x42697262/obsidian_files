@@ -16,3 +16,4 @@
 - #arch
 - #arch_updates | Used for Pacman Updates
 - #arch_system_changes | Used when I change something through `root`
+- #arch_user_changes | Used for changes in user space

@@ -6,3 +6,4 @@
 	- [[002 Statuses]]
 - 010s | [[010 My Arch Journey]]
 - 020s | [[020 Studies]]
+- 030s | [[030 Learning]]
