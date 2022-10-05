@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/__orphans/111.md",
-            "mode": "preview",
+            "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
+            "mode": "source",
             "backlinks": true,
             "source": false
           }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/__orphans/111.md",
+                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/__orphans/111.md",
+                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/__orphans/111.md"
+                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md"
               }
             }
           },
@@ -147,24 +147,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "7b4146fe8db838eb",
   "lastOpenFiles": [
-    "Notes/__orphans/020 Studies.md",
-    "Notes/010 My Arch Journey/011 Pacman Updates.md",
-    "Notes/010 My Arch Journey/014 User Changes.md",
-    "Notes/010 My Arch Journey/013 System Changes.md",
-    "Notes/010 My Arch Journey/012 Package Installs.md",
-    "Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "Notes/__index/002 Statuses.md",
-    "Notes/__index/001 Tags.md",
-    "Notes/__index/000 Index.md",
-    "Templates/Header.md"
+    "unorganized fuck/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+    "Notes/__orphans/CMSC 124 Problem Set 2.md",
+    "Notes/__orphans/Data Objects.md",
+    "Notes/__orphans/111.md",
+    "unorganized fuck/2022-2023/CMSC 124/INFO_DUMP.md",
+    "unorganized fuck/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "unorganized fuck/2022-2023/REFERENCES.md",
+    "unorganized fuck/2022-2023/CMSC 124/Week 2/Problem Set 1.md",
+    "unorganized fuck/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
+    "unorganized fuck/2022-2023/CMSC 142/Week 1/MP1 Primer.md"
   ]
 }
