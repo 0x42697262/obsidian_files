@@ -27,6 +27,31 @@ d. ([x,y])
 e. [x,(y)]  
 f. [[x,y],[y,z]]
 ```
+```
+a. Cannot be derived (Z not in grammar)
+b. Cannot be derived (parenthesis not in grammar)
+c. Cannot be derived (brackets must contain 2 C definitions)
+d. Cannot be derived (parenthesis not in grammar)
+e. Cannot be derived (parenthesis not in grammar)
+f. Can be derived (solution below)
+```
+```
+f.
+S       ::= [A,S] | A
+		::= [A,S]
+		::= [S,S]
+		::= [[A,S],S]
+		::= [[C,S],S]
+		::= [[x,S],S]
+		::= [[x,A],S]
+		::= [[x,C],S]
+		::= [[x,y],S]
+		::= [[x,y],S]
+		::= [[x,y],[A,S]]
+		::= [[x,y],[C,A]]
+		::= [[x,y],[y,C]]
+		::= [[x,y],[y,z]]
+```
 
 # 5. Consider the following grammar:
 ```
