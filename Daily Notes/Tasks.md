@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Machine Problem 2]]
 - [ ] [[Problem Set 3]]
 - [ ] [[Learning Log  Weeks 6-7]]
 - [ ] [[Problem Set 4]]
@@ -24,14 +23,14 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]]
-- [ ] [[Assignment 1 - Applying Ethical Theories]]
 - [ ] [[Learning Log  Week 5]]
+- [ ] [[Machine Problem 2]]
 
 
 ## DOING
 
-- [ ] [[Problem Set 2]]
+- [ ] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]]
+- [ ] [[Assignment 1 - Applying Ethical Theories]]
 
 
 ## Postponed
@@ -41,6 +40,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Problem Set 2]]
 
 
 ## Archive

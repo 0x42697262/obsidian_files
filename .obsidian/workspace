@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
+            "file": "Notes/__orphans/Think.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
+                "file": "Notes/__orphans/Think.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md",
+                "file": "Notes/__orphans/Think.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/__orphans/CMSC 124 Problem Set 2.md"
+                "file": "Notes/__orphans/Think.md"
               }
             }
           },
@@ -147,24 +147,24 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "5488648607e0e60c",
+  "active": "cef6f232d564ca5a",
   "lastOpenFiles": [
-    "Kanban/Problem Set 2.md",
+    "Notes/__orphans/Think.md",
     "Daily Notes/Tasks.md",
     "Notes/__orphans/CMSC 124 Problem Set 2.md",
+    "Kanban/Problem Set 2.md",
     "Kanban/Machine Problem 2.md",
     "Kanban/Machine Problem 4.md",
     "Kanban/Learning Log  Week 13.md",
     "Kanban/Learning Log  Weeks 14-15.md",
     "Kanban/Learning Log  Weeks 11-12.md",
-    "Kanban/Machine Problem 3.md",
-    "Kanban/Monday Assignment.md"
+    "Kanban/Machine Problem 3.md"
   ]
 }
