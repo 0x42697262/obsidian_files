@@ -94,6 +94,7 @@ P = S → aSb
 	  → Sb
 	  → b
 ```
+
 # 7. Prove that the following grammar is ambiguous:
 ```
 <S>  → <A>  
