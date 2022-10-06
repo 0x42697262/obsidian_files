@@ -101,3 +101,30 @@ P = S → aSb
 <A>  → <A> + <A> | <id>  
 <id> → a | b | c
 ```
+```
+a + b + c
+
+
+Derivation 1:
+<S>  → <A>  
+<S>  → <A> + <A>  
+<S>  → <A> + <A>
+<S>  → <id> + <A>
+<S>  → a + <A>
+<S>  → a + <A> + <A>
+<S>  → a + <id> + <A>
+<S>  → a + b + <A>
+<S>  → a + b + <id>
+<S>  → a + b + c
+
+Derivation 2:
+<S>  → <A>
+<S>  → <A> + <A>
+<S>  → <A> + <A> + <A>
+<S>  → <id> + <A> + <A>
+<S>  → a + <A> + <A>
+<S>  → a + <id> + <A>
+<S>  → a + b + <A>
+<S>  → a + b + <id>
+<S>  → a + b + c
+```
