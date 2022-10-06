@@ -88,6 +88,10 @@ d. cannot be derived
 ```
 
 # 6. Write a grammar for the language consisting of strings that have n copies of the letter a followed by one or more number of copies of the letter b, where *n>0*. For example, the strings `abb`, `aaaabbbbb` and `aaaaaaaabbbbbbbbb` are in the language, but `a`, `ab`, `ba` and `aaabb` are not.
+```
+G = ({S}, {a,b}, P, S) where
+P = {P → aS | Sb | ab}
+```
 
 # 7. Prove that the following grammar is ambiguous:
 ```
