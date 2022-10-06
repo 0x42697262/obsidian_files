@@ -128,3 +128,4 @@ Derivation 2:
 <S>  → a + b + <id>
 <S>  → a + b + c
 ```
+We can see that there are two derivations of this grammar or even more, hence we have proved that this grammar is ambiguous.
