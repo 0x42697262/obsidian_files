@@ -23,14 +23,13 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Learning Log  Week 5]]
 - [ ] [[Machine Problem 2]]
 
 
 ## DOING
 
-- [ ] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]]
-- [ ] [[Assignment 1 - Applying Ethical Theories]]
+- [ ] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]] @[[2022-10-07]]
+- [ ] [[Learning Log  Week 5]]
 
 
 ## Postponed
@@ -40,6 +39,8 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Assignment 1 - Applying Ethical Theories]]
+- [x] [[Competition and cooperation of Science and Technology]]
 - [x] [[Problem Set 2]]
 
 
