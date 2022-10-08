@@ -5,6 +5,133 @@
 ----
 # 011 Pacman Updates
 
+## 2022-10-08
+```sh
+warning: dependency cycle detected:
+warning: rubygems will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-abbrev will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-base64 will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-benchmark will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-bigdecimal will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-bundler will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-cgi will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-csv will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-date will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-delegate will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-did_you_mean will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-digest will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-drb will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-drb will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-english will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-erb will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-etc will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-fcntl will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-fiddle will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-fileutils will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-find will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-forwardable will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-getoptlong will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-io-console will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-io-nonblock will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-io-wait will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-ipaddr will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-irb will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-reline will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-json will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-logger will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-mutex_m will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-net-http will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-uri will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-open-uri will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-stringio will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-time will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-psych will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-racc will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-rdoc will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-tmpdir will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-test-unit will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-test-unit will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-bundledgems will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-bundledgems will be installed before its ruby dependency
+warning: dependency cycle detected:
+warning: ruby-bundledgems will be installed before its ruby dependency
+
+Packages (167) acpi_call-1.2.2-76  alsa-card-profiles-1:0.3.59-1  blender-17:3.3.1-2  btop-1.2.10-1  calibre-6.6.1-1  code-1.72.0-1  f2fs-tools-1.15.0-2  firefox-105.0.3-1  git-2.38.0-1
+               glibc-2.36-6  grub-2:2.06.r334.g340377470-1  hwdata-0.363-1  iproute2-6.0.0-1  lib32-glibc-2.36-6  lib32-librsvg-2:2.55.1-1  libbpf-1.0.1-1  libcdio-2.1.0-3
+               libimagequant-4.0.4-1  librsvg-2:2.55.1-1  libupnp-1.14.14-1  libvirt-1:8.8.0-1  libvirt-python-1:8.8.0-1  linux-5.19.13.arch1-1  linux-headers-5.19.13.arch1-1
+               mbedtls-2.28.1-1  numactl-2.0.16-1  nvidia-515.76-4  obs-studio-28.0.3-1  openimageio-2.3.19.0-4  openshadinglanguage-1.12.6.2-2  pipewire-1:0.3.59-1
+               pipewire-alsa-1:0.3.59-1  pipewire-audio-1:0.3.59-1  pipewire-jack-1:0.3.59-1  pipewire-pulse-1:0.3.59-1  python-aiohttp-3.8.3-1  python-h11-0.14.0-1
+               python-matrix-nio-0.20.0-1  python-regex-2022.9.13-1  python-setuptools-1:63.2.0-1  python-termcolor-2.0.1-1  qemu-audio-alsa-7.1.0-8  qemu-audio-dbus-7.1.0-8
+               qemu-audio-jack-7.1.0-8  qemu-audio-oss-7.1.0-8  qemu-audio-pa-7.1.0-8  qemu-audio-sdl-7.1.0-8  qemu-audio-spice-7.1.0-8  qemu-block-curl-7.1.0-8  qemu-block-dmg-7.1.0-8
+               qemu-block-gluster-7.1.0-8  qemu-block-iscsi-7.1.0-8  qemu-block-nfs-7.1.0-8  qemu-block-ssh-7.1.0-8  qemu-chardev-baum-7.1.0-8  qemu-chardev-spice-7.1.0-8
+               qemu-common-7.1.0-8  qemu-docs-7.1.0-8  qemu-full-7.1.0-8  qemu-hw-display-qxl-7.1.0-8  qemu-hw-display-virtio-gpu-7.1.0-8  qemu-hw-display-virtio-gpu-gl-7.1.0-8
+               qemu-hw-display-virtio-gpu-pci-7.1.0-8  qemu-hw-display-virtio-gpu-pci-gl-7.1.0-8  qemu-hw-display-virtio-vga-7.1.0-8  qemu-hw-display-virtio-vga-gl-7.1.0-8
+               qemu-hw-s390x-virtio-gpu-ccw-7.1.0-8  qemu-hw-usb-host-7.1.0-8  qemu-hw-usb-redirect-7.1.0-8  qemu-hw-usb-smartcard-7.1.0-8  qemu-img-7.1.0-8  qemu-pr-helper-7.1.0-8
+               qemu-system-aarch64-7.1.0-8  qemu-system-alpha-7.1.0-8  qemu-system-alpha-firmware-7.1.0-8  qemu-system-arm-7.1.0-8  qemu-system-arm-firmware-7.1.0-8
+               qemu-system-avr-7.1.0-8  qemu-system-cris-7.1.0-8  qemu-system-hppa-7.1.0-8  qemu-system-hppa-firmware-7.1.0-8  qemu-system-loongarch64-7.1.0-8  qemu-system-m68k-7.1.0-8
+               qemu-system-microblaze-7.1.0-8  qemu-system-microblaze-firmware-7.1.0-8  qemu-system-mips-7.1.0-8  qemu-system-nios2-7.1.0-8  qemu-system-or1k-7.1.0-8
+               qemu-system-ppc-7.1.0-8  qemu-system-ppc-firmware-7.1.0-8  qemu-system-riscv-7.1.0-8  qemu-system-riscv-firmware-7.1.0-8  qemu-system-rx-7.1.0-8  qemu-system-s390x-7.1.0-8
+               qemu-system-s390x-firmware-7.1.0-8  qemu-system-sh4-7.1.0-8  qemu-system-sparc-7.1.0-8  qemu-system-sparc-firmware-7.1.0-8  qemu-system-tricore-7.1.0-8
+               qemu-system-x86-7.1.0-8  qemu-system-x86-firmware-7.1.0-8  qemu-system-xtensa-7.1.0-8  qemu-tests-7.1.0-8  qemu-tools-7.1.0-8  qemu-ui-curses-7.1.0-8  qemu-ui-dbus-7.1.0-8
+               qemu-ui-egl-headless-7.1.0-8  qemu-ui-gtk-7.1.0-8  qemu-ui-opengl-7.1.0-8  qemu-ui-sdl-7.1.0-8  qemu-ui-spice-app-7.1.0-8  qemu-ui-spice-core-7.1.0-8  qemu-user-7.1.0-8
+               qemu-vhost-user-gpu-7.1.0-8  qemu-virtiofsd-7.1.0-8  qt6-webengine-6.4.0-3  ruby-3.0.4-18  ruby-abbrev-0.1.0-3  ruby-base64-0.1.1-3  ruby-benchmark-0.2.0-3
+               ruby-bigdecimal-3.1.2-3  ruby-bundledgems-3.0.4-18  ruby-bundler-2.3.22-2  ruby-cgi-0.3.2-9  ruby-csv-3.2.5-3  ruby-date-3.2.2-3  ruby-delegate-0.2.0-3
+               ruby-did_you_mean-1.6.1-3  ruby-digest-3.1.0-5  ruby-drb-2.1.0-4  ruby-english-0.7.1-3  ruby-erb-2.2.3-4  ruby-etc-1.3.0-5  ruby-fcntl-1.0.1-3  ruby-fiddle-1.1.0-3
+               ruby-fileutils-1.6.0-3  ruby-find-0.1.1-3  ruby-forwardable-1.3.2-5  ruby-getoptlong-0.1.1-2  ruby-io-console-0.5.11-2  ruby-io-nonblock-0.1.0-2  ruby-io-wait-0.2.3-3
+               ruby-ipaddr-1.2.4-2  ruby-irb-1.4.1-2  ruby-json-2.6.2-2  ruby-logger-1.5.1-2  ruby-mutex_m-0.1.1-2  ruby-net-http-0.2.2-2  ruby-open-uri-0.2.0-3  ruby-psych-4.0.4-4
+               ruby-racc-1.6.0-3  ruby-rdoc-6.4.0-4  ruby-reline-0.3.1-2  ruby-stdlib-3.0.4-18  ruby-stringio-3.0.2-4  ruby-test-unit-3.5.4-1  ruby-time-0.2.0-4  ruby-tmpdir-0.1.2-3
+               ruby-uri-0.11.0-5  rubygems-3.3.21-2  semver-7.3.8-1  vlc-3.0.17.4-9  wireplumber-0.4.12-1  wireshark-cli-4.0.0-1  wireshark-qt-4.0.0-1  xkeyboard-config-2.37-1
+               yt-dlp-2022.10.04-1
+
+Total Download Size:    693.71 MiB
+Total Installed Size:  2421.82 MiB
+Net Upgrade Size:         9.72 MiB
+```
+
 ## 2022-10-04
 ```sh
 Packages (13) cairomm-1.14.4-1  gspell-1.12.0-1  lib32-pango-1:1.50.11-1  lib32-systemd-251.5-1  lib32-xz-5.2.7-1  pango-1:1.50.11-1  pangomm-2.46.3-1  python-pyqt6-6.4.0-1

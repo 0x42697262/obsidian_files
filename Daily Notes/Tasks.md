@@ -6,7 +6,7 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Problem Set 3]]
+- [ ] [[Problem Set 3]] @[[2022-10-14]]
 - [ ] [[Learning Log  Weeks 6-7]]
 - [ ] [[Problem Set 4]]
 - [ ] [[Machine Problem 3]]
@@ -28,8 +28,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]] @[[2022-10-07]]
-- [ ] [[Learning Log  Week 5]]
 
 
 ## Postponed
@@ -42,6 +40,8 @@ kanban-plugin: basic
 - [x] [[Assignment 1 - Applying Ethical Theories]]
 - [x] [[Competition and cooperation of Science and Technology]]
 - [x] [[Problem Set 2]]
+- [x] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]] @[[2022-10-07]]
+- [x] [[Learning Log  Week 5]]
 
 
 ## Archive

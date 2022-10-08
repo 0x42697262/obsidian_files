@@ -7,8 +7,13 @@
         "id": "5488648607e0e60c",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -82,6 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -119,7 +126,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md"
+              }
             }
           },
           {
@@ -146,17 +155,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "49296c1dd7c4de6e",
+  "active": "5488648607e0e60c",
   "lastOpenFiles": [
+    "Notes/010 My Arch Journey/012 Package Installs.md",
+    "Notes/010 My Arch Journey/010 My Arch Journey.md",
     "Daily Notes/Tasks.md",
+    "Kanban/Learning Log  Weeks 6-7.md",
+    "Kanban/Problem Set 3.md",
+    "Daily Notes/2022-10-07.md",
     "Notes/__orphans/Categorical Imperative.md",
     "Notes/__orphans/Think.md",
     "Notes/__orphans/Intellectual Property.md",
-    "Daily Notes/2022-10-07.md",
-    "Kanban/Competition and cooperation of Science and Technology.md",
-    "Notes/__orphans/Data Objects.md",
-    "Notes/__index/002 Statuses.md",
-    "Notes/__index/000 Index.md",
-    "Notes/__index/001 Tags.md"
+    "Kanban/Competition and cooperation of Science and Technology.md"
   ]
 }
