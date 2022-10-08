@@ -1,6 +1,7 @@
 > [!INFO]
 > Status: #WIP 
-> Tags: 
+> Tags: #CMSC124 
+
 
 ----
 # Categorical Imperative

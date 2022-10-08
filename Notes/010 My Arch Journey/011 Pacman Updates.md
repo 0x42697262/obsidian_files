@@ -131,6 +131,13 @@ Total Download Size:    693.71 MiB
 Total Installed Size:  2421.82 MiB
 Net Upgrade Size:         9.72 MiB
 ```
+>[!INFO]
+>:: To use the new features provided in this GRUB update, it is recommended
+   to install it to the MBR or UEFI. Due to potential configuration
+   incompatibilities, it is advised to run both, installation and generation
+   of configuration:
+     $ grub-install ...
+     $ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 2022-10-04
 ```sh
