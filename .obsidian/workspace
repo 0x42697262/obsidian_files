@@ -4,17 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "5488648607e0e60c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
+        "id": "a5aa7dda32a843fc",
+        "type": "split",
+        "children": [
+          {
+            "id": "648a389e0fde891e",
+            "type": "leaf",
+            "dimension": 60.53997923156802,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/__orphans/Machine Problem 2.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5488648607e0e60c",
+            "type": "leaf",
+            "dimension": 39.46002076843199,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Daily Notes/Tasks.md"
+              }
+            }
           }
-        }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -41,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#2022-10-07",
+                "query": "tag:#2022-10-14",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -87,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+                "file": "Notes/__orphans/Machine Problem 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+                "file": "Notes/__orphans/Machine Problem 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -127,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md"
+                "file": "Notes/__orphans/Machine Problem 2.md"
               }
             }
           },
@@ -155,17 +174,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5488648607e0e60c",
+  "active": "648a389e0fde891e",
   "lastOpenFiles": [
+    "unorganized fuck/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
     "Daily Notes/Tasks.md",
-    "Notes/__orphans/Think.md",
-    "Notes/__orphans/Intellectual Property.md",
-    "Notes/__orphans/Data Objects.md",
-    "Notes/__orphans/CMSC 124 Problem Set 2.md",
-    "Notes/__orphans/Categorical Imperative.md",
+    "Kanban/Monday Assignment.md",
+    "Kanban/May the for be with you - version 1.md",
+    "Kanban/Machine Problem 3.md",
+    "Kanban/Problem Set 4.md",
+    "Kanban/Annotated Bibliography (BRIG).md",
+    "Kanban/Machine Problem 2.md",
     "Notes/010 My Arch Journey/011 Pacman Updates.md",
-    "Notes/010 My Arch Journey/012 Package Installs.md",
-    "Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "Kanban/Learning Log  Weeks 6-7.md"
+    "Notes/__orphans/Think.md"
   ]
 }

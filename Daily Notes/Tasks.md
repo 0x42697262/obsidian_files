@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Problem Set 3]] @[[2022-10-14]]
 - [ ] [[Learning Log  Weeks 6-7]]
 - [ ] [[Problem Set 4]]
 - [ ] [[Machine Problem 3]]
@@ -14,8 +13,6 @@ kanban-plugin: basic
 - [ ] [[Learning Log  Weeks 11-12]]
 - [ ] [[May the for be with you - version 1]]
 - [ ] [[Mastery Quiz  Process Models]]
-- [ ] [[Annotated Bibliography (BRIG)]]
-- [ ] [[Monday Assignment]]
 - [ ] [[Machine Problem 4]]
 - [ ] [[Learning Log  Week 13]]
 - [ ] [[Learning Log  Weeks 14-15]]
@@ -23,11 +20,14 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Machine Problem 2]]
+- [ ] [[Problem Set 3]] @[[2022-10-14]]
+- [ ] [[Monday Assignment]] @[[2022-10-09]]
+- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
 ## DOING
 
+- [ ] [[Machine Problem 2]] @[[2022-10-14]]
 
 
 ## Postponed
