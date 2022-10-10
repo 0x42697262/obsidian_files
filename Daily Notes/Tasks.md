@@ -21,7 +21,8 @@ kanban-plugin: basic
 ## Will Do
 
 - [ ] [[Problem Set 3]] @[[2022-10-14]]
-- [ ] [[Monday Assignment]] @[[2022-10-09]]
+- [ ] Score/Grade for the three groups @[[2022-10-12]]
+- [ ] Discussion Forum - Do you think hiring former hackers to enhance security is a good idea or a bad one? @[[2022-10-14]]
 - [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
@@ -41,6 +42,7 @@ kanban-plugin: basic
 - [x] [[Competition and cooperation of Science and Technology]]
 - [x] [[Problem Set 2]]
 - [x] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]] @[[2022-10-07]]
+- [x] [[Monday Assignment]] @[[2022-10-09]]
 - [x] [[Learning Log  Week 5]]
 
 

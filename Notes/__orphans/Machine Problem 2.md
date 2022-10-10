@@ -21,47 +21,10 @@ z(x+y)
 -----------------
 
 BNF:
-    <expression> ::= <term> 
-    <term>       ::= <factor> 
-					| <term><operator><term>
-					| ~(<term><operator><term>)
-					| (<term><operator><term>)
-    <factor>     ::= <identifier> | ~<identifier>
-    <operator>   ::= + | - 
-    <identifier> ::= x | y | za
-
-	<expression> ::= <term> | <negate>
-	<negate>     ::= ~<expression> | ~<identifier>
+	<expression> ::= <term> | <expression><operator><term>
+	<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>
+	<sign>       ::= <identifier> | ~<identifier>
 	<operator>   ::= + | - 
     <identifier> ::= x | y | z
 
-------------------
-
-Tests:
-
-<factor><operator><term>
-<negation><operator><term>
-~<identifier><operator><term>
-~x<operator><term>
-~x+<term>
-~x+<factor>
-~x+<negation>
-~x+~<identifier>
-~x+~y
-
-<factor><operator><term>
-<negation><operator><term>
-~<identifier><operator><term>
-~x<operator><term>
-~x+<term>
-~x+<term><operator><factor>
-~x+<factor><operator><factor>
-~x+<identifier><operator><factor>
-~x+y<operator><factor>
-~x+y-<factor>
-~x+y-<negation>
-~x+y-~<identifier>
-~x+y-~z
-
-I need to make a test case for parenthesis.
 ```
