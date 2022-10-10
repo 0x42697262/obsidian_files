@@ -1,10 +1,10 @@
-> [!INFO]
+>z [!INFO]
 > Status: #WIP 
 > Tags: #CMSC124 #Machine_Problem
 
 ----
 # Machine Problem 2
-
+No need to make an interpreter ros this MP, however I think that's much better?
 ```
 Valid strings:
 ~x+~y
@@ -53,4 +53,6 @@ Tests:
 ~x+y-<negation>
 ~x+y-~<identifier>
 ~x+y-~z
+
+I need to make a test case for parenthesis.
 ```
