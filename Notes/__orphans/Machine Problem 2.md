@@ -1,4 +1,4 @@
->z [!INFO]
+>[!INFO]
 > Status: #WIP 
 > Tags: #CMSC124 #Machine_Problem
 
@@ -27,4 +27,11 @@ BNF:
 	<operator>   ::= + | - 
     <identifier> ::= x | y | z
 
+```
+
+```
+Make a BNF for palindrome (without spaces)
+
+BNF:
+	<expression> ::= 
 ```
