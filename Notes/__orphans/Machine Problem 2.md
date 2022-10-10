@@ -5,6 +5,8 @@
 ----
 # Machine Problem 2
 No need to make an interpreter ros this MP, however I think that's much better?
+More info on BNF [[Backus-Naur Form|here]].
+
 ```
 Valid strings:
 ~x+~y
@@ -19,12 +21,19 @@ z(x+y)
 -----------------
 
 BNF:
-    <expression>      ::= <term> | <expression><operator><term>
-    <term>            ::= <factor> | <term><operator><factor> 
-    <factor>          ::= <identifier> | <negation>
-    <negation>        ::= ~<identifier> | <expression>
-    <operator>        ::= + | -
-    <identifier>      ::= x | y | z
+    <expression> ::= <term> 
+    <term>       ::= <factor> 
+					| <term><operator><term>
+					| ~(<term><operator><term>)
+					| (<term><operator><term>)
+    <factor>     ::= <identifier> | ~<identifier>
+    <operator>   ::= + | - 
+    <identifier> ::= x | y | za
+
+	<expression> ::= <term> | <negate>
+	<negate>     ::= ~<expression> | ~<identifier>
+	<operator>   ::= + | - 
+    <identifier> ::= x | y | z
 
 ------------------
 
