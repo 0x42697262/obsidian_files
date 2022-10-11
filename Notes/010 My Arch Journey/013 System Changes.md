@@ -14,7 +14,7 @@ This didn't change anything after reboot.
 ```sh
 sudo pacman -Rcns optimus-manager-git
 ```
-Please refer to [[013 System Changes#2022-10-11|for updates and new package installs]]. 
+Please refer to [[011 Pacman Updates|for updates]]  and [[012 Package Installs|new package installs]]. 
 
 ## 2022-09-09 
 ```sh
