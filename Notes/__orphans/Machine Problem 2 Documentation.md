@@ -47,3 +47,7 @@ BNF:
 
 
 [[CMSC124 Machine Problem 2|Machine Problem 2]]
+
+---
+References:
+- https://stackoverflow.com/questions/30961700/bnf-grammar-for-a-palindrome
