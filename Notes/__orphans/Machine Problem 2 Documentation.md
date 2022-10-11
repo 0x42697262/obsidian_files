@@ -25,7 +25,7 @@ BNF:
 	<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>
 	<sign>       ::= <identifier> | ~<identifier>
 	<operator>   ::= + | - 
-    <identifier> ::= x | y | z
+    <identifier> ::= A | B | ... | Z | a | b | ... | z
 
 ```
 
@@ -41,5 +41,9 @@ BNF:
 						| <character><palidrome><character>
 						| <space>
 	<space>      ::= ε | ε<palindrome>
-	<character>  ::= A | B | ... | Z
+	<character>  ::= A | B | ... | Z | a | b | ... | z
 ```
+
+
+
+[[CMSC124 Machine Problem 2|Machine Problem 2]]
