@@ -74,10 +74,12 @@ For without spaces, just make it on the implementation part since this BNF does 
 ```python
 import re
 
+
 class Parser():
-    def __init__(self, bnf):
-        self._terms = dict()
+    def __init__(self, bnf: str, start_symbol: str):
+        self._start_symbol = start_symbol
         self._bnf = self.list_terms(bnf)
+        self._terms = dict()
         
 
     def list_terms(self, bnf) -> list:
@@ -87,6 +89,14 @@ class Parser():
         
         return lines
 
+    def prepare_production(self):
+        for non_term in self._bnf:
+            _ = non_term.split("::=")
+            self._terms[_[0]] = _[1].split("|")
+            
+        print(self._terms)
+
+
 def main():
     bnf = "<expression> ::= <term> | <expression><operator><term>\n"
     bnf += ("<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>\n")
@@ -94,14 +104,19 @@ def main():
     bnf += ("<operator>   ::= + | -\n")
     bnf += ("<identifier> ::= x | y | z\n")
 
-    parse = Parser(bnf)
+    parse = Parser(bnf, "<expression>")
+    parse.prepare_production()
 
 if __name__ == "__main__":
     main()
 ```
+
+### Explanations?
 `import re` - regex, my friend
 `def list_terms(self, bnf) -> list:` - strips spaces, splits by line into a new list, then iterates each items and removes spaces.
 
+#### Regex
+`<\w+>` - only used for the non-terminals
 
 [[CMSC124 Machine Problem 2|Machine Problem 2]]
 
