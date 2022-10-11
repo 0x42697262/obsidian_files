@@ -65,8 +65,8 @@ For without spaces, just make it on the implementation part since this BNF does 
 ### Main Flow for the Parser?
 - [x] Turn the grammar into a list
 - [x] Remove whitespaces
-- [ ] Acquire the non-terminals (thru `::=`) and together with its terminals
-- [ ] Turn the non-terminals and terminals into a dictionary as key-pair values
+- [x] Acquire the non-terminals (thru `::=`) and together with its terminals
+- [x] Turn the non-terminals and terminals into a dictionary as key-pair values
 - [x] Set the `start symbol
 - [ ] Start the production?
 
@@ -94,8 +94,6 @@ class Parser():
             _ = non_term.split("::=")
             self._terms[_[0]] = _[1].split("|")
             
-        print(self._terms)
-
 
 def main():
     bnf = "<expression> ::= <term> | <expression><operator><term>\n"
@@ -116,7 +114,6 @@ if __name__ == "__main__":
 `def list_terms(self, bnf) -> list:` - strips spaces, splits by line into a new list, then iterates each items and removes spaces.
 
 #### Regex
-`<\w+>` - only used for the non-terminals
 
 [[CMSC124 Machine Problem 2|Machine Problem 2]]
 
