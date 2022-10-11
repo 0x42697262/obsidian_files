@@ -36,15 +36,31 @@ Palindrome: pop, pop a pop, a but tuba
 Not a palindrome: hey, joe, the quick brown fox
 
 BNF:
-	<palidrome>  ::= <character>
-						| <character><character>
-						| <character><palidrome><character>
-						| <space>
-	<space>      ::= ε | ε<palindrome>
-	<character>  ::= A | B | ... | Z | a | b | ... | z
+	<palindrome>  ::= AA | BB | CC | ... | ZZ |
+				     aa | bb | cc | ... | zz |
+				     00 | 11 | 22 | ... | 99 |
+				     !! | @@ | ## | $$  | %% | ^^ | __ | {{ | }} | || | \\ | "" | << | ,, | ?? | \\ |
+					 && | ** | (( | ))  | -- | ++ | == | [[ | ]] | :: | ;; | '' | >> | .. | // | ~~ | ``
+					 A<palindrome>A | B<palindrome>B | C<palindrome>C | ... | Z<palindrome>Z |
+				     a<palindrome>a | b<palindrome>b | c<palindrome>c | ... | z<palindrome>z |
+				     !<palindrome>! | @<palindrome>@ | #<palindrome># | $<palindrome>$  | %<palindrome>% | 
+				     ^<palindrome>^ | _<palindrome>_ | {<palindrome>{ | }<palindrome>}  | |<palindrome>| | 
+				     \<palindrome>\ | "<palindrome>" | <<palindrome>< | ,<palindrome>,  | ?<palindrome>? | \<palindrome>\ |
+					 &<palidrome>&  | *<palidrome>*  | (<palidrome>(  | )<palidrome>)   | -<palidrome>-  | 
+					 +<palidrome>+  | =<palidrome>=  | [<palidrome>[  | ]<palidrome>]   | :<palidrome>:  | 
+					 ;<palidrome>;  | '<palidrome>'  | ><palidrome>>  | .<palidrome>.   | /<palidrome>/  | 
+					 ~<palidrome>~  | `<palidrome>`  |
+					 <character> | 
+
+
+	<character>  ::= A | B | ... | Z | 
+					 a | b | ... | z |
+					 0 | 1 | ... | 9 |
+					 ! | @ | # | $ | % | ^ | _ | { | } | | | \ | " | < | , | ? | \ |
+					 & | * | ( | ) | - | + | = | [ | ] | : | ; | ' | > | . | / | ~ | `
 ```
-
-
+I think making a full character palindrome like with symbols and such is better... However, just implement alphanumeric characters for the machine problem.
+For without spaces, just make it on the implementation part since this BNF does not ignore spaces.
 
 [[CMSC124 Machine Problem 2|Machine Problem 2]]
 
