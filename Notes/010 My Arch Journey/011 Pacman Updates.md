@@ -5,6 +5,20 @@
 ----
 # 011 Pacman Updates
 
+## 2022-10-11
+```sh
+Packages (42) alsa-card-profiles-1:0.3.59-2  btop-1.2.12-1  flac-1.4.1-2  graphicsmagick-1.3.38-5  imagemagick-7.1.0.50-1  inkscape-1.2.1-8  lib32-flac-1.4.1-2  lib32-sdl2-2.24.1-1
+              libebml-1.4.4-1  libgpg-error-1.46-1  libical-3.0.15-1  libksba-1.6.2-1  libmatroska-1.7.1-1  libreoffice-still-7.3.6-3  node-gyp-9.2.0-1  pipewire-1:0.3.59-2
+              pipewire-alsa-1:0.3.59-2  pipewire-audio-1:0.3.59-2  pipewire-jack-1:0.3.59-2  pipewire-pulse-1:0.3.59-2  poppler-22.10.0-1  poppler-glib-22.10.0-1
+              python-importlib-metadata-5.0.0-1  python-jsonschema-4.16.0-2  python-markdown-3.4.1-2  python-more-itertools-8.14.0-1  python-setuptools-1:63.3.0-1  python-zipp-3.9.0-1
+              qt6-declarative-6.4.0-2  qt6-webengine-6.4.0-4  ruby-bundler-2.3.23-1  ruby-cgi-0.3.3-1  ruby-irb-1.4.2-1  ruby-psych-4.0.6-1  ruby-test-unit-3.5.5-1  rubygems-3.3.23-1
+              samba-4.17.0-2  sdl2-2.24.1-1  smbclient-4.17.0-2  thunderbird-102.3.2-1  vlc-3.0.17.4-10  weechat-3.7-1
+
+Total Download Size:    334.19 MiB
+Total Installed Size:  1281.38 MiB
+Net Upgrade Size:         0.65 MiB
+```
+
 ## 2022-10-08
 ```sh
 warning: dependency cycle detected:

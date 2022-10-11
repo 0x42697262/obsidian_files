@@ -14,6 +14,8 @@ This didn't change anything after reboot.
 ```sh
 sudo pacman -Rcns optimus-manager-git
 ```
+Please refer to [[013 System Changes#2022-10-11|for updates and new package installs]]. 
+
 ## 2022-09-09 
 ```sh
 sudo usermod -aG kvm birb 
