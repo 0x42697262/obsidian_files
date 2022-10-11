@@ -32,6 +32,14 @@ BNF:
 ```
 Make a BNF for palindrome (without spaces)
 
+Palindrome: pop, pop a pop, a but tuba  
+Not a palindrome: hey, joe, the quick brown fox
+
 BNF:
-	<expression> ::= 
+	<palidrome>  ::= <character>
+						| <character><character>
+						| <character><palidrome><character>
+						| <space>
+	<space>      ::= ε | ε<palindrome>
+	<character>  ::= A | B | ... | Z
 ```
