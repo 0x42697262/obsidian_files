@@ -10,6 +10,7 @@ Removed `/etc/X11/xorg.conf.d/10-optimus-manager.conf`
 ```sh
 mv 10-optimus-manager.conf 10-optimus-manager.conf.bak
 ```
+This didn't change anything after reboot.
 
 ## 2022-09-09 
 ```sh
