@@ -4,6 +4,13 @@
 
 ----
 # 013 System Changes
+
+## 2022-10-11
+Removed `/etc/X11/xorg.conf.d/10-optimus-manager.conf`
+```sh
+mv 10-optimus-manager.conf 10-optimus-manager.conf.bak
+```
+
 ## 2022-09-09 
 ```sh
 sudo usermod -aG kvm birb 
