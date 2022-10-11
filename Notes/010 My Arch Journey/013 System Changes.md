@@ -11,7 +11,9 @@ Removed `/etc/X11/xorg.conf.d/10-optimus-manager.conf`
 mv 10-optimus-manager.conf 10-optimus-manager.conf.bak
 ```
 This didn't change anything after reboot.
-
+```sh
+sudo pacman -Rcns optimus-manager-git
+```
 ## 2022-09-09 
 ```sh
 sudo usermod -aG kvm birb 
