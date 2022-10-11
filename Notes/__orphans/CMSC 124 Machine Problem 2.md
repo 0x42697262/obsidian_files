@@ -1,7 +1,7 @@
 CMSC 124 Machine Problem 2  
 **Topic Coverage**: Syntax and Semantics
 
-### 1. Write a syntactic specification using Backus-Naur Form to describe the mini-language with the following description: Simple expressions limited to thevariable identifiers x, y, or z, that contain the operations of addition (+),subtraction (-), and unary negation (~) together with parentheses.
+### 1. Write a syntactic specification using Backus-Naur Form to describe the mini-language with the following description: Simple expressions limited to the variable identifiers x, y, or z, that contain the operations of addition (+), subtraction (-), and unary negation (~) together with parentheses.
 ```
 Valid strings:
 ~x+~y
@@ -15,9 +15,9 @@ z(x+y)
 ```python
 """
 BNF:
-    <expression> ::= <term> | <expression><operator><term>
-	<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>
-	<sign>       ::= <identifier> | ~<identifier>
+    <expression> ::= <term> | ~<term> | <expression><operator><term>
+	<term>       ::= <expression> | (<expression>) | <sign>
+	<sign>       ::= <identifier> | ~<identifier> 
 	<operator>   ::= + | - 
     <identifier> ::= x | y | z
 """

@@ -4,7 +4,7 @@
 
 ----
 # Machine Problem 2
-No need to make an interpreter ros this MP, however I think that's much better?
+No need to make an interpreter for this MP, however I think that's much better?
 More info on BNF [[Backus-Naur Form|here]].
 
 ```
@@ -21,8 +21,8 @@ z(x+y)
 -----------------
 
 BNF:
-	<expression> ::= <term> | <expression><operator><term>
-	<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>
+	<expression> ::= <term> | ~<term> | <expression><operator><term>
+	<term>       ::= <expression> | (<expression>) | <sign>
 	<sign>       ::= <identifier> | ~<identifier>
 	<operator>   ::= + | - 
     <identifier> ::= A | B | ... | Z | a | b | ... | z
@@ -68,54 +68,14 @@ For without spaces, just make it on the implementation part since this BNF does 
 - [x] Acquire the non-terminals (thru `::=`) and together with its terminals
 - [x] Turn the non-terminals and terminals into a dictionary as key-pair values
 - [x] Set the `start symbol
-- [ ] Start the production?
+- [ ] Start the production? How??
+- [ ] 
 
 
-```python
-import re
-
-
-class Parser():
-    def __init__(self, bnf: str, start_symbol: str):
-        self._start_symbol = start_symbol
-        self._bnf = self.list_terms(bnf)
-        self._terms = dict()
-        
-
-    def list_terms(self, bnf) -> list:
-        lines = bnf.strip().split('\n')
-        for l in range(len(lines)):
-            lines[l] = (lines[l].replace(' ', ''))
-        
-        return lines
-
-    def prepare_production(self):
-        for non_term in self._bnf:
-            _ = non_term.split("::=")
-            self._terms[_[0]] = _[1].split("|")
-            
-
-def main():
-    bnf = "<expression> ::= <term> | <expression><operator><term>\n"
-    bnf += ("<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>\n")
-    bnf += ("<sign>       ::= <identifier> | ~<identifier>\n")
-    bnf += ("<operator>   ::= + | -\n")
-    bnf += ("<identifier> ::= x | y | z\n")
-
-    parse = Parser(bnf, "<expression>")
-    parse.prepare_production()
-
-if __name__ == "__main__":
-    main()
-```
-
-### Explanations?
-`import re` - regex, my friend
-`def list_terms(self, bnf) -> list:` - strips spaces, splits by line into a new list, then iterates each items and removes spaces.
 
 #### Regex
-
-[[CMSC124 Machine Problem 2|Machine Problem 2]]
+none
+[[CMSC 124 Machine Problem 2|Machine Problem 2]]
 
 ---
 References:
