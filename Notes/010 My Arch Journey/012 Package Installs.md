@@ -17,3 +17,11 @@ Packages (20) libx86emu-3.5-2  perl-encode-locale-1.05-9  perl-file-listing-6.15
 Total Download Size:   1.76 MiB
 Total Installed Size:  5.46 MiB
 ```
+`paru -S hardinfo`
+```sh
+
+Packages (2) cmake-3.24.2-1  rhash-1.4.2-1
+
+Total Download Size:   10.56 MiB
+Total Installed Size:  67.07 MiB
+```
