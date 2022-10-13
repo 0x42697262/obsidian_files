@@ -28,7 +28,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Machine Problem 2]] @[[2022-10-14]]
 
 
 ## Postponed
@@ -41,6 +40,7 @@ kanban-plugin: basic
 **Complete**
 - [x] [[Assignment 1 - Applying Ethical Theories]]
 - [x] [[Competition and cooperation of Science and Technology]]
+- [x] [[Machine Problem 2]] @[[2022-10-14]]
 - [x] [[Problem Set 2]]
 - [x] [[Discussion Forum - Do you agree on the idea that someone can “own” intellectual property]] @[[2022-10-07]]
 - [x] [[Monday Assignment]] @[[2022-10-09]]
