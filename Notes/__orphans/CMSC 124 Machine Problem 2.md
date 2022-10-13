@@ -86,20 +86,24 @@ class BNF_Interpreter():
                         grammar += buffer.pop()
                         grammar += "(<>)"
                 if c == ")":
-                    grammar = grammar.replace("<>", buffer.pop(), 1)
+                    if "<>" in grammar:
+                        grammar = grammar.replace("<>", buffer.pop(), 1)
+                    else:
+                        is_valid = False
                 if c in self._bnf["<identifier>"]:
                     buffer[-1] += "<identifier>"
                 if c in self._bnf["<operator>"]:
                     buffer[-1] += "<operator>"
                 
-                # print(c)
-                # print(f"  {buffer}")
-                # print(f"    {grammar}\n")
+
                 state = next_state[c]               
 
             else:
                  is_valid = False
-        print(is_valid, grammar)
+        if len(buffer):
+            grammar += buffer.pop()
+
+        print(f"{expression} is valid: {is_valid} \n \"{grammar}\"")
 
 def main():
     bnf = "<expression> ::= <term> | ~<term> | <expression><operator><term>\n"
@@ -111,16 +115,21 @@ def main():
     parse = Parser(bnf, "<expression>")
     parse.start()
     validate = BNF_Interpreter(parse.return_bnf())
+
     validate.verify("~x+~y")
     validate.verify("~~(x+z-y)")
     validate.verify("z-(x+y)")
     validate.verify("a+b")
     validate.verify("xy-xz")
     validate.verify("z(x+y)")
+    ### EXTRAS
     validate.verify("z+(x+y))")
     validate.verify("~~((x+y)+~((x)+~y))")
     validate.verify("(~(x+~y))")
-    # validate.verify("((x)+y)")
+    validate.verify("~z+~x-~(~x+y-z)-(~((~x)))")
+    validate.verify("((((((((y))))))))")
+    validate.verify("(x+y+(x-z+(x-y-~(x-x+~(x+x+y))+z)+~x)+z+z+z+z+z)")
+
 
 
 if __name__ == "__main__":
