@@ -17,20 +17,17 @@ z(x+y)
 BNF:
     <expression> ::= <term> | ~<term> | <expression><operator><term>
 	<term>       ::= <expression> | (<expression>) | <sign>
-	<sign>       ::= <identifier> | ~<identifier> 
+	<sign>       ::= <identifier> | ~<identifier>
 	<operator>   ::= + | - 
     <identifier> ::= x | y | z
 """
-
 import re
-
 
 class Parser():
     def __init__(self, bnf: str, start_symbol: str):
-        self._start_symbol = start_symbol
-        self._bnf = self.list_terms(bnf)
+        self._bnf = bnf
         self._terms = dict()
-        
+        self._terms["START_SYMBOL"] = start_symbol
 
     def list_terms(self, bnf) -> list:
         lines = bnf.strip().split('\n')
@@ -43,20 +40,92 @@ class Parser():
         for non_term in self._bnf:
             _ = non_term.split("::=")
             self._terms[_[0]] = _[1].split("|")
+
+    def return_bnf(self) -> dict:
+        return self._terms
+
+    def start(self):
+        self._bnf = self.list_terms(self._bnf)
+        self.prepare_production()
             
 
+class BNF_Interpreter():
+    def __init__(self, bnf: list):
+        self._bnf = bnf
+
+    def verify(self, expression: str):
+        is_valid = True
+        str_expr = list(expression.replace(' ', ''))
+        grammar = ""
+        next_state = {
+                    "~": ['~', '(', 'x', 'y', 'z'],
+                    "(": ['~', '(', 'x', 'y', 'z'],
+                    "x": ['+', '-', ')'],
+                    "y": ['+', '-', ')'],
+                    "z": ['+', '-', ')'],
+                    "+": ['~', '(', 'x', 'y', 'z'],
+                    "-": ['~', '(', 'x', 'y', 'z'],
+                    ")": ['+', '-', ')']
+                        }
+        state = ['~', '(', 'x', 'y', 'z']
+        
+        buffer = [] 
+        while is_valid and len(str_expr):
+            if not len(buffer):
+                 buffer.append("")
+            c = str_expr.pop(0)
+            if c in state:
+                if c == '~':
+                    buffer[-1] += '~'
+                if c == "(":
+                    if "<>" in grammar:
+                        grammar = grammar.replace("<>", f"{buffer.pop()}<>", 1)
+                        buffer.append("")
+                        grammar = grammar.replace("<>", "(<>)<>", 1)
+                    else:
+                        grammar += buffer.pop()
+                        grammar += "(<>)"
+                if c == ")":
+                    grammar = grammar.replace("<>", buffer.pop(), 1)
+                if c in self._bnf["<identifier>"]:
+                    buffer[-1] += "<identifier>"
+                if c in self._bnf["<operator>"]:
+                    buffer[-1] += "<operator>"
+                
+                # print(c)
+                # print(f"  {buffer}")
+                # print(f"    {grammar}\n")
+                state = next_state[c]               
+
+            else:
+                 is_valid = False
+        print(is_valid, grammar)
+
 def main():
-    bnf = "<expression> ::= <term> | <expression><operator><term>\n"
-    bnf += ("<term>       ::= <expression> | (<expression>) | ~(<expression>) | <sign>\n")
+    bnf = "<expression> ::= <term> | ~<term> | <expression><operator><term>\n"
+    bnf += ("<term>       ::= <expression> | (<expression>) | <sign>\n")
     bnf += ("<sign>       ::= <identifier> | ~<identifier>\n")
     bnf += ("<operator>   ::= + | -\n")
     bnf += ("<identifier> ::= x | y | z\n")
 
     parse = Parser(bnf, "<expression>")
-    parse.prepare_production()
+    parse.start()
+    validate = BNF_Interpreter(parse.return_bnf())
+    validate.verify("~x+~y")
+    validate.verify("~~(x+z-y)")
+    validate.verify("z-(x+y)")
+    validate.verify("a+b")
+    validate.verify("xy-xz")
+    validate.verify("z(x+y)")
+    validate.verify("z+(x+y))")
+    validate.verify("~~((x+y)+~((x)+~y))")
+    validate.verify("(~(x+~y))")
+    # validate.verify("((x)+y)")
+
 
 if __name__ == "__main__":
     main()
+
 ```
 ### 2. Write a BNF grammar for the language of palindromes. Do not consider the spaces in evaluating the strings.
 ```
