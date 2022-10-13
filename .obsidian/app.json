@@ -7,7 +7,7 @@
   },
   "attachmentFolderPath": "ATTACHMENT_FOLDER",
   "alwaysUpdateLinks": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "showFrontmatter": false,
   "vimMode": true,
   "newFileLocation": "folder",

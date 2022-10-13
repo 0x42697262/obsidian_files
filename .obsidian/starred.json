@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "Tasks",
+      "path": "Daily Notes/Tasks.md"
+    },
+    {
+      "type": "file",
+      "title": "000 Index",
+      "path": "Notes/__index/000 Index.md"
+    },
+    {
+      "type": "file",
+      "title": "010 My Arch Journey",
+      "path": "Notes/010 My Arch Journey/010 My Arch Journey.md"
+    }
+  ]
+}

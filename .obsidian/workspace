@@ -4,36 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a5aa7dda32a843fc",
-        "type": "split",
-        "children": [
-          {
-            "id": "648a389e0fde891e",
-            "type": "leaf",
-            "dimension": 60.53997923156801,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/__orphans/Machine Problem 2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5488648607e0e60c",
-            "type": "leaf",
-            "dimension": 39.46002076843198,
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Daily Notes/Tasks.md"
-              }
-            }
+        "id": "648a389e0fde891e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
           }
-        ],
-        "direction": "horizontal"
+        }
       }
     ],
     "direction": "vertical"
@@ -60,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#2022-10-14",
+                "query": "tag:#CMSC124",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -106,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/__orphans/Machine Problem 2.md",
+                "file": "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/__orphans/Machine Problem 2.md",
+                "file": "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -146,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/__orphans/Machine Problem 2.md"
+                "file": "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md"
               }
             }
           },
@@ -176,15 +157,15 @@
   },
   "active": "648a389e0fde891e",
   "lastOpenFiles": [
-    "Daily Notes/Tasks.md",
-    "Notes/__orphans/Machine Problem 2.md",
-    "unorganized fuck/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
-    "Kanban/Monday Assignment.md",
-    "Kanban/May the for be with you - version 1.md",
-    "Kanban/Machine Problem 3.md",
-    "Kanban/Problem Set 4.md",
-    "Kanban/Annotated Bibliography (BRIG).md",
-    "Kanban/Machine Problem 2.md",
-    "Notes/010 My Arch Journey/011 Pacman Updates.md"
+    "Notes/__orphans/Imperative.md",
+    "Notes/__orphans/Hypothetical Imperative.md",
+    "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md",
+    "Notes/020 Studies/Think.md",
+    "Notes/__orphans/Data Objects.md",
+    "Notes/__orphans/111.md",
+    "Notes/__orphans/011.md",
+    "Notes/__orphans/Categorical Imperative.md",
+    "Notes/020 Studies/020 Studies.md",
+    "Notes/__index/000 Index.md"
   ]
 }
