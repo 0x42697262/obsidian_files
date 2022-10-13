@@ -4,3 +4,4 @@
 
 ----
 # Utilitarianism
+- greatest happiness to the greatest number of people
