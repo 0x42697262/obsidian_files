@@ -136,7 +136,7 @@ if __name__ == "__main__":
     main()
 
 ```
-Source code for \#1 can be found here: 
+Source code for \#1 can be found [here](https://github.com/KrulYuno/obsidian_files/blob/master/Codes/basic_bnf_op.py):  https://github.com/KrulYuno/obsidian_files/blob/master/Codes/basic_bnf_op.py
 
 ### 2. Write a BNF grammar for the language of palindromes. Do not consider the spaces in evaluating the strings.
 ```
