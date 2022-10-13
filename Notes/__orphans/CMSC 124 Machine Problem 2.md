@@ -215,3 +215,4 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+Source code for #2 can be found [here](https://github.com/KrulYuno/obsidian_files/blob/master/Codes/bnf_palidrome.py): https://github.com/KrulYuno/obsidian_files/blob/master/Codes/bnf_palidrome.py
