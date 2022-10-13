@@ -5,6 +5,33 @@
 ----
 # 011 Pacman Updates
 
+## 2022-10-14
+```sh
+Packages (127) acpi_call-1.2.2-78  bbswitch-0.8-544  blender-17:3.3.1-3  btrfs-progs-6.0-1  cuda-11.8.0-1  dbus-1.14.4-1  dotnet-host-6.0.10.sdk110-1  dotnet-runtime-6.0.10.sdk110-1  dotnet-sdk-6.0.10.sdk110-1
+               dotnet-targeting-pack-6.0.10.sdk110-1  freeglut-3.4.0-1  gettext-0.21.1-1  glusterfs-1:10.3-1  gst-libav-1.20.4-1  gst-plugins-bad-1.20.4-1  gst-plugins-bad-libs-1.20.4-1
+               gst-plugins-base-1.20.4-1  gst-plugins-base-libs-1.20.4-1  gst-plugins-good-1.20.4-1  gstreamer-1.20.4-1  harfbuzz-5.3.0-1  harfbuzz-icu-5.3.0-1  kcompletion-5.99.0-1  kconfig-5.99.0-1
+               kcoreaddons-5.99.0-1  kcrash-5.99.0-1  kguiaddons-5.99.0-1  ki18n-5.99.0-1  kitemmodels-5.99.0-1  kitemviews-5.99.0-1  kwidgetsaddons-5.99.0-1  kwindowsystem-5.99.0-1  lib32-dbus-1.14.4-1
+               lib32-harfbuzz-5.3.0-1  lib32-nvidia-utils-520.56.06-1  libxnvctrl-520.56.06-1  linux-6.0.1.arch1-1  linux-headers-6.0.1.arch1-1  netstandard-targeting-pack-6.0.10.sdk110-1  nvidia-520.56.06-2
+               nvidia-settings-520.56.06-1  nvidia-utils-520.56.06-1  obsidian-1.0.0-1  opencl-nvidia-520.56.06-1  openmpi-4.1.4-4  openssh-9.1p1-1  pahole-1:1.24-1  perl-uri-5.14-1  python-3.10.8-1
+               qemu-audio-alsa-7.1.0-9  qemu-audio-dbus-7.1.0-9  qemu-audio-jack-7.1.0-9  qemu-audio-oss-7.1.0-9  qemu-audio-pa-7.1.0-9  qemu-audio-sdl-7.1.0-9  qemu-audio-spice-7.1.0-9
+               qemu-block-curl-7.1.0-9  qemu-block-dmg-7.1.0-9  qemu-block-gluster-7.1.0-9  qemu-block-iscsi-7.1.0-9  qemu-block-nfs-7.1.0-9  qemu-block-ssh-7.1.0-9  qemu-chardev-baum-7.1.0-9
+               qemu-chardev-spice-7.1.0-9  qemu-common-7.1.0-9  qemu-docs-7.1.0-9  qemu-full-7.1.0-9  qemu-hw-display-qxl-7.1.0-9  qemu-hw-display-virtio-gpu-7.1.0-9  qemu-hw-display-virtio-gpu-gl-7.1.0-9
+               qemu-hw-display-virtio-gpu-pci-7.1.0-9  qemu-hw-display-virtio-gpu-pci-gl-7.1.0-9  qemu-hw-display-virtio-vga-7.1.0-9  qemu-hw-display-virtio-vga-gl-7.1.0-9  qemu-hw-s390x-virtio-gpu-ccw-7.1.0-9
+               qemu-hw-usb-host-7.1.0-9  qemu-hw-usb-redirect-7.1.0-9  qemu-hw-usb-smartcard-7.1.0-9  qemu-img-7.1.0-9  qemu-pr-helper-7.1.0-9  qemu-system-aarch64-7.1.0-9  qemu-system-alpha-7.1.0-9
+               qemu-system-alpha-firmware-7.1.0-9  qemu-system-arm-7.1.0-9  qemu-system-arm-firmware-7.1.0-9  qemu-system-avr-7.1.0-9  qemu-system-cris-7.1.0-9  qemu-system-hppa-7.1.0-9
+               qemu-system-hppa-firmware-7.1.0-9  qemu-system-loongarch64-7.1.0-9  qemu-system-m68k-7.1.0-9  qemu-system-microblaze-7.1.0-9  qemu-system-microblaze-firmware-7.1.0-9  qemu-system-mips-7.1.0-9
+               qemu-system-nios2-7.1.0-9  qemu-system-or1k-7.1.0-9  qemu-system-ppc-7.1.0-9  qemu-system-ppc-firmware-7.1.0-9  qemu-system-riscv-7.1.0-9  qemu-system-riscv-firmware-7.1.0-9
+               qemu-system-rx-7.1.0-9  qemu-system-s390x-7.1.0-9  qemu-system-s390x-firmware-7.1.0-9  qemu-system-sh4-7.1.0-9  qemu-system-sparc-7.1.0-9  qemu-system-sparc-firmware-7.1.0-9
+               qemu-system-tricore-7.1.0-9  qemu-system-x86-7.1.0-9  qemu-system-x86-firmware-7.1.0-9  qemu-system-xtensa-7.1.0-9  qemu-tests-7.1.0-9  qemu-tools-7.1.0-9  qemu-ui-curses-7.1.0-9
+               qemu-ui-dbus-7.1.0-9  qemu-ui-egl-headless-7.1.0-9  qemu-ui-gtk-7.1.0-9  qemu-ui-opengl-7.1.0-9  qemu-ui-sdl-7.1.0-9  qemu-ui-spice-app-7.1.0-9  qemu-ui-spice-core-7.1.0-9  qemu-user-7.1.0-9
+               qemu-vhost-user-gpu-7.1.0-9  qemu-virtiofsd-7.1.0-9  qt5-base-5.15.6+kde+r180-1  thunderbird-102.3.3-1  wayland-protocols-1.27-1  xterm-374-1
+
+Total Download Size:   2444.26 MiB
+Total Installed Size:  8171.74 MiB
+Net Upgrade Size:      1470.22 MiB
+```
+huh what the fuck? 8gb?? also nvidia :sus:
+
 ## 2022-10-11
 ```sh
 Packages (42) alsa-card-profiles-1:0.3.59-2  btop-1.2.12-1  flac-1.4.1-2  graphicsmagick-1.3.38-5  imagemagick-7.1.0.50-1  inkscape-1.2.1-8  lib32-flac-1.4.1-2  lib32-sdl2-2.24.1-1
