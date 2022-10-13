@@ -24,7 +24,6 @@ kanban-plugin: basic
 - [ ] [[Problem Set 3]] @[[2022-10-14]]
 - [ ] Score/Grade for the three groups @[[2022-10-12]]
 - [ ] Discussion Forum - Do you think hiring former hackers to enhance security is a good idea or a bad one? @[[2022-10-14]]
-- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
 ## DOING
@@ -34,6 +33,7 @@ kanban-plugin: basic
 
 ## Postponed
 
+- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
 ## DONE
