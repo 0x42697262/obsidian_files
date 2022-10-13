@@ -62,13 +62,7 @@ BNF:
 I think making a full character palindrome like with symbols and such is better... However, just implement alphanumeric characters for the machine problem.
 For without spaces, just make it on the implementation part since this BNF does not ignore spaces.
 
-### Main Flow for the Parser?
-- [x] Turn the grammar into a list
-- [x] Remove whitespaces
-- [x] Acquire the non-terminals (thru `::=`) and together with its terminals
-- [x] Turn the non-terminals and terminals into a dictionary as key-pair values
-- [x] Set the `start symbol
-- [x] Start the production? How?? ~~Hardcode it~~
+
 
 
 [[CMSC 124 Machine Problem 2|Machine Problem 2]]
