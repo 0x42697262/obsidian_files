@@ -1,18 +1,3 @@
-CMSC 124 Machine Problem 2  
-**Topic Coverage**: Syntax and Semantics
-
-### 1. Write a syntactic specification using Backus-Naur Form to describe the mini-language with the following description: Simple expressions limited to the variable identifiers x, y, or z, that contain the operations of addition (+), subtraction (-), and unary negation (~) together with parentheses.
-```
-Valid strings:
-~x+~y
-(x+z-y)
-z-(x+y)
-Invalid strings:
-a+b
-xy-xz
-z(x+y)
-```
-```python
 """
 BNF:
     <expression> ::= <term> | ~<term> | <expression><operator><term>
@@ -130,19 +115,8 @@ def main():
     validate.verify("((((((((y))))))))")
     validate.verify("(x+y+(x-z+(x-y-~(x-x+~(x+x+y))+z)+~x)+z+z+z+z+z)")
 
-	validate.verify(input("Enter Test Case: "))
+    validate.verify(input("Enter Test Case: "))
+
 
 if __name__ == "__main__":
     main()
-
-```
-Source code for \#1 can be found here: 
-
-### 2. Write a BNF grammar for the language of palindromes. Do not consider the spaces in evaluating the strings.
-```
-Palindrome: pop, pop a pop, a but tuba
-Not a palindrome: hey, joe, the quick brown fox
-```
-```python
-
-```
