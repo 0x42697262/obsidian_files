@@ -130,12 +130,14 @@ def main():
     validate.verify("((((((((y))))))))")
     validate.verify("(x+y+(x-z+(x-y-~(x-x+~(x+x+y))+z)+~x)+z+z+z+z+z)")
 
-
+	validate.verify(input("Enter Test Case: "))
 
 if __name__ == "__main__":
     main()
 
 ```
+
+
 ### 2. Write a BNF grammar for the language of palindromes. Do not consider the spaces in evaluating the strings.
 ```
 Palindrome: pop, pop a pop, a but tuba
