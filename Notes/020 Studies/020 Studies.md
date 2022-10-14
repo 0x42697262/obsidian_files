@@ -10,8 +10,7 @@
 - [[CMSC 124 Problem Set 1]]
 ### Weeks 3-4: Syntax and Semantics
 - [[CMSC 124 Machine Problem 2]]
-- [[CMSC 124 Problem Set 2]]
-- [[CMSC 124 Machine Problem 2 Documentation]]
+- [[CMSC 124 Problem Set 2]] ([[CMSC 124 Machine Problem 2 Documentation|Documentation]])
 ### Week 5: Primitive Data Types
 -  [[CMSC 124 Problem Set 3]]
 
