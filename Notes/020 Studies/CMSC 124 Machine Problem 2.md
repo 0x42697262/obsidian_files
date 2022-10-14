@@ -103,6 +103,9 @@ class BNF_Interpreter():
         if len(buffer):
             grammar += buffer.pop()
 
+		if "<>" in grammar:
+			is_valid = False
+
         print(f"{expression} is valid: {is_valid} \n \"{grammar}\"")
 
 def main():
