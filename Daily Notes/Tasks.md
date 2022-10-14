@@ -6,6 +6,7 @@ kanban-plugin: basic
 
 ## Deadlines
 
+- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [ ] [[Problem Set 4]] @[[2022-10-28]]
 - [ ] [[Learning Log  Weeks 9-10]]
 - [ ] [[Learning Log  Weeks 11-12]]
@@ -25,7 +26,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Problem Set 3]] @[[2022-10-14]]
 
 
 ## Postponed
@@ -36,6 +36,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Problem Set 3]] @[[2022-10-14]]
 - [x] Discussion Forum - Do you think hiring former hackers to enhance security is a good idea or a bad one? @[[2022-10-14]]
 - [x] 2022-10-13 19:50 [[Assignment 1 - Applying Ethical Theories]]
 - [x] 2022-10-13 19:50 [[Competition and cooperation of Science and Technology]]

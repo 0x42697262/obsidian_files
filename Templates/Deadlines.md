@@ -1,2 +1,2 @@
 Subject: #
-Due Date: #{{date:YYYY-MM-DD}} 11:59
+Due Date: #{{date:YYYY-MM-DD}} 23:59
