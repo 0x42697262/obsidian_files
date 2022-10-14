@@ -18,10 +18,10 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
-- [ ] [[Machine Problem 3]] @[[2022-11-04]]
 - [ ] [[Problem Set 1]] @[[2022-10-18]]
-- [ ] [[May the for be with you - version 1]]
+- [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
+- [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
+- [ ] [[Machine Problem 3]] @[[2022-11-04]]
 
 
 ## DOING

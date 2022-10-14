@@ -1,5 +1,5 @@
 Subject: #LIT4 
-Due Date: #2022-10-14 23:59
+Due Date: #2022-10-19 23:59
 
 ---
 Activity Proper: Write a 1-page reaction paper of the two poems. Aside from the the basics of reading poetry that you have read and practiced, consider the guide questions below before drafting your paper (remember they are guide questions and they need not to be answered in the following order):
