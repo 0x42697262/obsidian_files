@@ -26,11 +26,11 @@ kanban-plugin: basic
 
 ## DOING
 
+- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
 ## Postponed
 
-- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 
 
 ## DONE
