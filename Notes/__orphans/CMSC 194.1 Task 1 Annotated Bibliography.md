@@ -4,9 +4,9 @@ Lao et al., (2002). The presence of signal peptide significantly affects transme
 ---
 Ching, C. H., & Su, C. H. (2011). A Game-based learning system for improving student's learning effectiveness in system analysis course, *Procedia - Social Behavioral and Sciences*, vol. 31, pp. 669-675.
 
-In this article, Ching and Su developed a game-based learning system to show that research claiming that mapping the course content into a game can increase the learning interest and motivation of the students by acquiring more of their attention. This study is done through quasi-experimental design where the students are separated into two groups: experimental and control grouprs. The authors have pointed out that through repeated self-learning, and ongoing interaction and feedback, the students are learning much better through game-based learning system that students who uses traditional face-to-face class.
+In this article, Ching and Su developed a game-based learning system to show that research claiming that mapping the course content into a game can increase the learning interest and motivation of the students by acquiring more of their attention. This study is done through quasi-experimental design where the students are separated into two groups: experimental and control grouprs. The authors have pointed out that through repeated self-learning, and ongoing interaction and feedback, the students are learning much better through game-based learning system that students who uses traditional face-to-face class. Based on the conclusions, it may be possible to incorporate high level of interactivity and feedback without the need of a game-based learning system.
 
-<critique>
+However, the authors' study solely focuses on interactive portion of the learning process and the author may be implying that traditional face-to-face classes do not have the same interactive level of learning as game-based system. The process behind traditional face-to-face classes was not implied by the authors. 
 
 This articles is not related to my research and as such I would have no use for it however this can provide me insights on to my study in writing my thesis paper.
 
