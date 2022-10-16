@@ -18,7 +18,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Problem Set 1]] @[[2022-10-18]]
 - [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
@@ -26,7 +25,7 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
+- [ ] [[Problem Set 1]] @[[2022-10-18]]
 
 
 ## Postponed
@@ -36,6 +35,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 - [x] [[Problem Set 3]] @[[2022-10-14]]
 - [x] Discussion Forum - Do you think hiring former hackers to enhance security is a good idea or a bad one? @[[2022-10-14]]
 - [x] 2022-10-13 19:50 [[Assignment 1 - Applying Ethical Theories]]
