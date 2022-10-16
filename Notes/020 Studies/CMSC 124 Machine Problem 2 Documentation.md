@@ -62,6 +62,20 @@ BNF:
 I think making a full character palindrome like with symbols and such is better... However, just implement alphanumeric characters for the machine problem.
 For without spaces, just make it on the implementation part since this BNF does not ignore spaces.
 
+# basic_bnf_op.py
+This is our grammar:
+```
+BNF:
+<expression> ::= <term> | ~<term> | <expression><operator><term>
+<term> ::= <expression> | (<expression>) | <sign>
+<sign> ::= <identifier> | ~<identifier>
+<operator> ::= + | -
+<identifier> ::= x | y | z
+```
+This code is hard coded to only work for the specific grammar above.
+
+# bnf_palindrome.py
+
 
 
 
