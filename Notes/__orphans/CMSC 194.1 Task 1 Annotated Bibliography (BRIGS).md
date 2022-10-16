@@ -1,6 +1,10 @@
 Mondigo, L., & Lao, D. M. (2017, November 6). E-learning for introductory Computer Science concept on recursion applying two types of feedback methods in the learning assessment, *Asian Association of Open Universities Journal*, 12(2), 218–229.
 
+In this article, Mondigo and Lao proposed to develop a web-based interactive learning object (ILO) for introductory computer science concept on recursion by comparing two types of feedback methods which are the immediate and delayed feedback in the learning assessment part of the lesson. The authors have developed two models for each feedback method and both of the methods have positive learning outcome however immediate feedback is better than the delayed feedback in terms of higher learning retention of the viewer-learner.
 
+The authors focused the study on incorporating ILO on recursion and the effect shows that it is positive to the learners. I think this study would not only be limited to recursion concept but also to other computer science concepts as well. However, the authors have only focused on simple recursive calls to which it may not be needed unlike teaching recursive function calls in advanced manner, but this study can help diversify the available teaching methods for recursive concepts.
+
+This article is not related to my study thus I would not have any use for it. However, it may supplement my study regarding the feedback methods of learning.
 
 ---
 Ching, C. H., & Su, C. H. (2011). A Game-based learning system for improving student's learning effectiveness in system analysis course, *Procedia - Social Behavioral and Sciences*, vol. 31, pp. 669-675.

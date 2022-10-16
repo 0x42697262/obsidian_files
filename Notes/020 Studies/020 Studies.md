@@ -22,3 +22,6 @@
 - [[Natural Law Ethics]]
 ### Week 4
 - [[Intellectual Property]]
+
+## CMSC 194.1
+- [[CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)]]
