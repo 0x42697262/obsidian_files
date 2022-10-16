@@ -1,4 +1,5 @@
-Lao et al., (2002). The presence of signal peptide significantly affects transmembrane topology prediction, *Bioinformatics Discovery Note*, vol. 18, no. 12 2002, pp. 1562–1566.
+Mondigo, L., & Lao, D. M. (2017, November 6). E-learning for introductory Computer Science concept on recursion applying two types of feedback methods in the learning assessment, *Asian Association of Open Universities Journal*, 12(2), 218–229.
+
 
 
 ---
@@ -11,3 +12,10 @@ However, the authors' study solely focuses on interactive portion of the learnin
 This articles is not related to my research and as such I would have no use for it however this can provide me insights on to my study in writing my thesis paper.
 
 ---
+Ishizue et al. (2020, April). PVC.js: visualizing C programs on web browsers for novices. *Heliyon*, 6(4), e03806. 
+
+In this article, the authors proposed a visualization tool, PlayVisualizerC.js (PVC.js) for memory management that can help novice programmers in learning the C language because the existing tools available have problems that hinder their use mainly: capability, instability, and usability. This proposal solves the three issues based on the results of their two experiments that PVC.js is more effective for novice programmers in understanding the program than existing tools.
+
+However, the authors have pointed out in there limitations that PVC.js is made specifically for novice programmers thus advanced features included from other existing tools are not included as this proposed tool is a visualization tool. It would be much more helpful to the novice programmers that compilation errors are shown to the user.
+
+This article does not directly relates to my research study however it might help me in the future in supplementing as an additional info.
