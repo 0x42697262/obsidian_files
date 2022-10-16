@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [ ] [[Problem Set 4]] @[[2022-10-28]]
 - [ ] [[Learning Log  Weeks 9-10]]
 - [ ] [[Learning Log  Weeks 11-12]]
@@ -18,6 +17,7 @@ kanban-plugin: basic
 
 ## Will Do
 
+- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
