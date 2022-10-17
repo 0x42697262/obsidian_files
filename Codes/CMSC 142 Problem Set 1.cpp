@@ -50,27 +50,27 @@ int reverse_int(int n)
 {
   // source: https://www.programiz.com/c-programming/examples/reverse-number
   
-  int reversed = 0;
+  int reversed = 0; // T(n) = 1
 
-  while( n != 0 )
+  while( n != 0 ) // n+1
   {
-    reversed = reversed * 10 + (n % 10);
-    n /= 10;
+    reversed = reversed * 10 + (n % 10); // T(n) = 4
+    n /= 10; // n = n / 10; T(n) = 2
   }
   
-  return reversed; 
-}
+  return reversed; // T(n) = 1
+} // T(n) = 3 + 6n + 1 = 6n + 4
 
 void reverse_str(char st[])
 {
-  for ( int i=strlen(st); i>=0; i-- )
+  for ( int i=strlen(st); i>=0; i-- ) // 
   {
-    std::cout << st[i];
+    std::cout << st[i]; // 1
   }
-
-  std::cout << std::endl;
-
-}
+  // CONSTANTS: 1
+  // ITERATIONS: 3n
+  // FOR LOOP LAST CHECK: 1
+} // T(n) = 3n + 2 (not sure if 3n+2 or 3n+3)
 
 bool sorted(int A[], int n)
 {
@@ -80,7 +80,10 @@ bool sorted(int A[], int n)
       return false;
   }
   return true;
-}
+  // CONSTANTS: 2
+  // ITERATIONS: 4n - 1
+  // FOR LOOP LAST CHECK: 1
+} // T(n) = 4n + 2
 
 int remainder(int a, int b)
 {
@@ -88,4 +91,6 @@ int remainder(int a, int b)
   if ( a >= b )
     return remainder(a-b, b);
   return a;
+  // CONSTANTS: 3 + 1
+  // idk lol
 }
