@@ -25,7 +25,7 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Problem Set 1]] @[[2022-10-18]]
+- [ ] [[Problem Set 1 @2022-10-18]]
 
 
 ## Postponed
