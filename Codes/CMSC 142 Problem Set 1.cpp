@@ -1,5 +1,5 @@
 /*
- * Solve the following problems. And compute for the T(n) of your solutions.
+  Solve the following problems. And compute for the T(n) of your solutions.
 
     int reverse(int n) - returns the reverse of n. e.g. n = 103, return 301; n = 1496, return 6941. The use of any auxiliary function from some library is not allowed. The use of a string is also not allowed.
 
@@ -12,20 +12,49 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 
-int reverse(int n);
-void reverse(char st[]);
+int reverse_int(int n);
+void reverse_str(char st[]);
 bool sorted(int A[], int n);
 int remainder(int a, int b);
 
 
-int int main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
-  
+  char st[] = "HELP ME!";
+  reverse_str(st);
   return 0;
 }
 
-int reverse(int n)
+int reverse_int(int n)
 {
-  return n; 
+  // source: https://www.programiz.com/c-programming/examples/reverse-number
+  
+  int reversed = 0;
+
+  while( n != 0 )
+  {
+    reversed = reversed * 10 + (n % 10);
+    n /= 10;
+  }
+  
+  return reversed; 
+}
+
+void reverse_str(char st[])
+{
+  for ( int i=strlen(st); i>=0; i--)
+  {
+    std::cout << st[i];
+  }
+
+  std::cout << std::endl;
+
+}
+
+bool sorted(int A[], int n)
+{
+
+  return true;
 }
