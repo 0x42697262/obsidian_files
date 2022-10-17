@@ -3,3 +3,6 @@ Souce code for [[CMSC 124 Machine Problem 2]] and its documentation [[CMSC 124 M
 
 #### [bnf_palidrome.py](bnf_palidrome.py)
 Souce code for [[CMSC 124 Machine Problem 2]] and its documentation [[CMSC 124 Machine Problem 2 Documentation#bnf_palindrome.py|here]].
+
+#### [CMSC 142 Problem Set 1.cpp](CMSC%20142%20Problem%20Set%201.cpp)
+No documentation. Just need to calculate the T(n).
