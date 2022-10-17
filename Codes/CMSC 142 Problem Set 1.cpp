@@ -22,8 +22,27 @@ int remainder(int a, int b);
 
 int main (int argc, char *argv[])
 {
-  char st[] = "HELP ME!";
+  std::cout << reverse_int(42069) << std::endl;
+  std::cout << reverse_int(103) << std::endl;
+  std::cout << reverse_int(1496) << std::endl;
+  
+  char st[] = "dragrace";
   reverse_str(st);
+  char st1[] = "nodevillivedon";
+  reverse_str(st1);
+
+  int s[] = {10,8,7,7,2};
+  std::cout << sorted(s, 5) << std::endl;
+  int s1[] = {1, 17, 19, 43, 53, 53};
+  std::cout << sorted(s1, 6) << std::endl;
+  int s2[] = {3, 23, 10, 17, 15};
+  std::cout << sorted(s2, 5) << std::endl;
+  int s3[] = {4, 4, 4, 4, 4};
+  std::cout << sorted(s3, 5) << std::endl;
+  int s4[] = {10, 18, 71, 71, 224};
+  std::cout << sorted(s4, 5) << std::endl;
+
+  std::cout << remainder(49, -7) << std::endl;
   return 0;
 }
 
@@ -44,7 +63,7 @@ int reverse_int(int n)
 
 void reverse_str(char st[])
 {
-  for ( int i=strlen(st); i>=0; i--)
+  for ( int i=strlen(st); i>=0; i-- )
   {
     std::cout << st[i];
   }
@@ -55,6 +74,18 @@ void reverse_str(char st[])
 
 bool sorted(int A[], int n)
 {
-
+  for ( int i=0; i<=n-1; i++ )
+  {
+    if ( A[i+1] < A[i] ) 
+      return false;
+  }
   return true;
+}
+
+int remainder(int a, int b)
+{
+  b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
+  if ( a >= b )
+    return remainder(a-b, b);
+  return a;
 }
