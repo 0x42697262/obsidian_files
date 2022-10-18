@@ -12,7 +12,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
 
 int reverse_int(int n);
 void reverse_str(char st[]);
@@ -73,6 +72,8 @@ void reverse_str(char st[])
 
 bool sorted(int A[], int n)
 {
+  if ( n == 1 ) return true;
+
   int sign = 0;
 
   for ( int i=0; i<n-1; i++ )
