@@ -14,6 +14,10 @@
 ### Week 5: Primitive Data Types
 -  [[CMSC 124 Problem Set 3]]
 
+## CMSC 142 Design and Analysis of Algorithms
+### Week 5 (10 October - 16 October): Big O Notation
+- [[CMSC 142 Problem Set 1]]
+
 ## CMSC 192 Ethical and Professional Issues in Computing
 [[Think]]
 ### Week 3
