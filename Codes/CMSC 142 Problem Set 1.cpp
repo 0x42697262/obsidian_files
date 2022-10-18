@@ -138,6 +138,7 @@ bool sorted(int A[], int n)
    *    sign = A[i] - A[i+1];
    *      A[i] - A[i+1]
    *        i+1
+   *    i<n-1;
    *
    * T(n) = 14n + 9
   */
