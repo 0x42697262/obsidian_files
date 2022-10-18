@@ -158,12 +158,26 @@ bool sorted(int A[], int n)
 
 int remainder(int a, int b)
 {
+  /*
+   * CONSTANTS:
+   *    b == 0
+   *    b = b < 0 ?
+   *    -b | b
+   *    a >= b
+   *    a-b
+   *    remainder(<>)
+   *    return <>
+   *
+   * T(n) = 7n
+   *
+   */
+
   if ( b == 0 )
     exit(1);
 
   b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
-  return a;
+  return a; // This won't get executed but C++ gcc throws out a warning so I added this
 
 }
