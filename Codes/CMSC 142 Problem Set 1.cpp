@@ -44,8 +44,7 @@ int main (int argc, char *argv[])
   std::cout << "10, 18, 71, 71, 224: " << sorted(s4, 5) << std::endl;
 
   std::cout << remainder(41, -7) << std::endl;
-  std::cout << remainder(49, 0) << std::endl;
-  std::cout << remainder(-49, 10) << std::endl;
+  std::cout << remainder(-11, 7) << std::endl;
   return 0;
 }
 
@@ -101,6 +100,6 @@ int remainder(int a, int b)
   b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
-  return a;
+  // return a;
 
 }
