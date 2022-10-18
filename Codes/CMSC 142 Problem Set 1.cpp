@@ -78,23 +78,30 @@ void reverse_str(char st[])
     /*
      *
      * CONSTANTS:
-     *    int i=strlen(st)
+     *    int s_len = strlen(st);
+     *    int i=0;
      *
      * ITERATED:
-     *    i>=0
-     *    i--
-     *    std::cout << st[i];
+     *    i < s_len;
+     *    i++
+     *    std::cout << st[s_len - 1 - i];
+     *      s_len - 1
+     *      1 - i
      *
      * EXTRA:
-     *    for (i>=0) --- FOR LOOP LAST CHECK
-     *    i>=0       --- -1
+     *    for (i < s_len) --- FOR LOOP LAST CHECK
+     *    i < s_len       --- -1
      *
-     * T(n) = 1 + 3n - 1 + 1
-     * T(n) = 3n + 1
+     * T(n) = 2 + 5(n - 1 - 0 + 1)  + 1
+     * T(n) = 5n + 3
      *
     */
-  for ( int i=strlen(st); i>=0; i-- ) 
-    std::cout << st[i];
+
+      int s_len = strlen(st);
+      for ( int i=0; i < s_len; i++ )
+      {
+        std::cout << st[s_len - 1 - i];
+      }
 } 
 
 bool sorted(int A[], int n)
@@ -161,6 +168,8 @@ int remainder(int a, int b)
    * return remainder(a-b, b);
    *   remainder(a-b, b)
    *    a-b
+   *
+   * T(n) = 4n
    */
   // Assume only positive `int b`
 
