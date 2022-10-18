@@ -169,7 +169,12 @@ int remainder(int a, int b)
    *   remainder(a-b, b)
    *    a-b
    *
-   * T(n) = 4n
+   * T(n) = 4 + T(n - 1)
+   * T(n) = 4 + 4 + T(n - 2)
+   * T(n) = 4 + 4 + 4 + ... + T(1)
+   * T(n) = 4(n - 1) + 2
+   * T(n) = 4n - 4 + 2
+   * T(n) = 4n - 2
    */
   // Assume only positive `int b`
   // No negatives please otherwise segmentation fault (core dumped). basically overflow or something
