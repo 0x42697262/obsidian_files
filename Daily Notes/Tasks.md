@@ -25,7 +25,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Problem Set 1 @2022-10-18]]
 
 
 ## Postponed
@@ -35,6 +34,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Problem Set 1 @2022-10-18]]
 - [x] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 - [x] [[Problem Set 3]] @[[2022-10-14]]
 - [x] Discussion Forum - Do you think hiring former hackers to enhance security is a good idea or a bad one? @[[2022-10-14]]
