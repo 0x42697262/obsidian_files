@@ -68,6 +68,7 @@ int reverse_int(int n)
    *    while (n != 0) --- last check
    *
    * T(n) = 2 + 6n + 1
+   * T(n) = 6n + 3
    *
    */ 
   
@@ -84,10 +85,25 @@ int reverse_int(int n)
 
 void reverse_str(char st[])
 {
+    /*
+     *
+     * CONSTANTS:
+     *    int i=strlen(st)
+     *
+     * ITERATED:
+     *    i>=0
+     *    i--
+     *    std::cout << st[i];
+     *
+     * EXTRA:
+     *    for (i>=0) --- FOR LOOP LAST CHECK
+     *
+     * T(n) = 1 + 3n + 1
+     * T(n) = 3n + 2
+     *
+    */
   for ( int i=strlen(st); i>=0; i-- ) 
-  {
     std::cout << st[i];
-  }
 } 
 
 bool sorted(int A[], int n)
