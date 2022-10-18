@@ -19,7 +19,6 @@ void reverse_str(char st[]);
 bool sorted(int A[], int n);
 int remainder(int a, int b);
 
-
 int main (int argc, char *argv[])
 {
   std::cout << reverse_int(42069) << std::endl;
@@ -28,21 +27,24 @@ int main (int argc, char *argv[])
   
   char st[] = "dragrace";
   reverse_str(st);
+  std::cout << std::endl;
   char st1[] = "nodevillivedon";
   reverse_str(st1);
+  std::cout << std::endl;
 
   int s[] = {10,8,7,7,2};
-  std::cout << sorted(s, 5) << std::endl;
+  std::cout << "10,8,7,7,2: " << sorted(s, 5) << std::endl;
   int s1[] = {1, 17, 19, 43, 53, 53};
-  std::cout << sorted(s1, 6) << std::endl;
+  std::cout << "1, 17, 19, 43, 53, 53: " << sorted(s1, 6) << std::endl;
   int s2[] = {3, 23, 10, 17, 15};
-  std::cout << sorted(s2, 5) << std::endl;
+  std::cout << "3, 23, 10, 17, 15: " << sorted(s2, 5) << std::endl;
   int s3[] = {4, 4, 4, 4, 4};
-  std::cout << sorted(s3, 5) << std::endl;
+  std::cout << "4, 4, 4, 4, 4: " << sorted(s3, 5) << std::endl;
   int s4[] = {10, 18, 71, 71, 224};
-  std::cout << sorted(s4, 5) << std::endl;
+  std::cout << "10, 18, 71, 71, 224: " << sorted(s4, 5) << std::endl;
 
-  std::cout << remainder(49, -7) << std::endl;
+  std::cout << remainder(41, -7) << std::endl;
+  std::cout << remainder(49, 0) << std::endl;
   return 0;
 }
 
@@ -50,47 +52,52 @@ int reverse_int(int n)
 {
   // source: https://www.programiz.com/c-programming/examples/reverse-number
   
-  int reversed = 0; // T(n) = 1
+  int reversed = 0;
 
-  while( n != 0 ) // n+1
+  while( n != 0 ) 
   {
-    reversed = reversed * 10 + (n % 10); // T(n) = 4
-    n /= 10; // n = n / 10; T(n) = 2
+    reversed = reversed * 10 + (n % 10); 
+    n /= 10; 
   }
   
-  return reversed; // T(n) = 1
-} // T(n) = 3 + 6n + 1 = 6n + 4
+  return reversed; 
+}
 
 void reverse_str(char st[])
 {
-  for ( int i=strlen(st); i>=0; i-- ) // 
+  for ( int i=strlen(st); i>=0; i-- ) 
   {
-    std::cout << st[i]; // 1
+    std::cout << st[i];
   }
-  // CONSTANTS: 1
-  // ITERATIONS: 3n
-  // FOR LOOP LAST CHECK: 1
-} // T(n) = 3n + 2 (not sure if 3n+2 or 3n+3)
+} 
 
 bool sorted(int A[], int n)
 {
-  for ( int i=0; i<=n-1; i++ )
+  int sign = 0;
+
+  for ( int i=0; i<n-1; i++ )
   {
-    if ( A[i+1] < A[i] ) 
+    if ( sign == 0)
+      sign = A[i] - A[i+1];
+
+    if ( sign < 0 && A[i] > A[i+1] ) 
+      return false;
+    
+    if ( sign > 0 && A[i] < A[i+1] )
       return false;
   }
-  return true;
-  // CONSTANTS: 2
-  // ITERATIONS: 4n - 1
-  // FOR LOOP LAST CHECK: 1
-} // T(n) = 4n + 2
+  
+  return ( sign == 0 ) ? false : true; 
+ }
 
 int remainder(int a, int b)
 {
+  if ( b == 0 )
+    exit(1);
+
   b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
   return a;
-  // CONSTANTS: 3 + 1
-  // idk lol
+
 }
