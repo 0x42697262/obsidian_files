@@ -51,6 +51,25 @@ int main (int argc, char *argv[])
 int reverse_int(int n)
 {
   // source: https://www.programiz.com/c-programming/examples/reverse-number
+  /*
+   * CONSTANTS:
+   *    int reversed = 0;
+   *    return reversed;
+   *
+   * ITERATED:
+   *    n != 0
+   *    n % 10
+   *    10 + <>
+   *    reversed * <>
+   *    reversed = <>
+   *    n /= 10;
+   *
+   * EXTRA:
+   *    while (n != 0) --- last check
+   *
+   * T(n) = 2 + 6n + 1
+   *
+   */ 
   
   int reversed = 0;
 
@@ -100,6 +119,6 @@ int remainder(int a, int b)
   b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
-  // return a;
+  return a;
 
 }
