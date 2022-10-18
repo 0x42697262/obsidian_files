@@ -130,6 +130,7 @@ bool sorted(int A[], int n)
    *        i+1
    *    i<n-1;
    *
+   * T(n) = 9 + 14(n - 1 - 0 + 1)
    * T(n) = 14n + 9
   */
 
