@@ -112,30 +112,34 @@ bool sorted(int A[], int n)
   /*
    *
    * CONSTANTS:
-   *    n == 1
-   *    return true;
+   *    if ( n == 1 )
    *    int sign = 0;
-   *    int i = 0
-   *    sign == 0
-   *    return <true|false>
-   *    
-   * ITERATION:
-   *    i<n-1
+   *    int i=0;
+   *    return ( sign == 0 ) ? false : true;
+   *      sign == 0
+   *
+   * ITERATED:
+   *    i<n-1;
+   *      n-1
    *    i++
-   *    sign < 0 | sign > 0
-   *    A[i] > A[i+1] | A[i] < A[i+1]
-   *    [i+1]
-   *    <> && <>
-   *    return false;
-   * 
+   *    if ( sign == 0)
+   *    if ( sign < 0 && A[i] > A[i+1] )
+   *      sign < 0 && A[i] > A[i+1]
+   *        sign < 0
+   *        A[i] > A[i+1]
+   *          i+1
+   *    if ( sign > 0 && A[i] < A[i+1] )
+   *      sign > 0 && A[i] < A[i+1]
+   *        sign > 0
+   *        A[i] < A[i+1]
+   *          i+1
+   *
    * EXTRA:
-   *    for (i<n-1) --- 1 LAST CHECK
-   *    i<n-1       --- -1
+   *    sign = A[i] - A[i+1];
+   *      A[i] - A[i+1]
+   *        i+1
    *
-   * T(n) = 6 + 7((n - 1) - 1 - 0 + 1)
-   * T(n) = 6 + 7n - 7
-   * T(n) = 7n - 1
-   *
+   * T(n) = 14n + 9
   */
 
   if ( n == 1 ) return true;
