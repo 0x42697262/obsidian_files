@@ -185,6 +185,5 @@ int remainder(int a, int b)
   // b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
-  return a; // This won't get executed but C++ gcc throws out a warning so I added this (if worse case)
-
+  return a; 
 }
