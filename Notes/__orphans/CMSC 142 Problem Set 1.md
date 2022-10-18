@@ -14,8 +14,8 @@ int reverse_int(int n)
   return reversed; 
 }
 ```
-T(n) = 2 + 6n + 1
-T(n) = 6n + 3
+$$T(n) = \sum_{0}^{n}{6+3} = 6(n-1-0+1)+3$$
+$$T(n) = 6n+3$$
 
 
 ### void reverse(char st\[\]) - reverses the string st. e.g. st = "dragrace", reversed st = "ecargard"; st = "nodevillivedon", reversed st = "nodevillivedon".
@@ -26,8 +26,8 @@ void reverse_str(char st[])
     std::cout << st[i];
 } 
 ```
-T(n) = 1 + 3n + - 1 + 1
-T(n) = 3n + 1
+$$T(n) = \sum_{0}^{n-1}{5+3} = 5(n-1-0+1)+3$$
+$$T(n) = 5n+3$$
 
 
 ### bool sorted(int A\[\], int n) - returns true if the array A with size n is sorted in increasing fashion or in decreasing fashion. It returns false otherwise. e.g. A = {10, 8, 7, 7, 2}, return true; A = {1, 17, 19, 43, 53, 53}, return true; A = {3, 23, 10, 17, 15}, return false; A = {4, 4, 4, 4, 4}, return false.
@@ -60,7 +60,12 @@ int remainder(int a, int b)
   return a;
 }
 ```
-
+$$T(n) = 4 + T(n-1)$$
+$$T(n) = 4 + 4 + T(n-2)$$
+$$T(n) = 4 + 4 + \cdots + T(1)$$
+$$T(n) = 4(n-1)+2$$
+$$T(n) = 4n-4+2$$
+$$T(n) = 4n-2$$
 
 ---
 [Source code](https://github.com/KrulYuno/obsidian_files/blob/master/Codes/CMSC%20142%20Problem%20Set%201.cpp)
