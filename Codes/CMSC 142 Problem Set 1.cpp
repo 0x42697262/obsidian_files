@@ -97,9 +97,10 @@ void reverse_str(char st[])
      *
      * EXTRA:
      *    for (i>=0) --- FOR LOOP LAST CHECK
+     *    i>=0       --- -1
      *
-     * T(n) = 1 + 3n + 1
-     * T(n) = 3n + 2
+     * T(n) = 1 + 3n + - 1 + 1
+     * T(n) = 3n + 1
      *
     */
   for ( int i=strlen(st); i>=0; i-- ) 
