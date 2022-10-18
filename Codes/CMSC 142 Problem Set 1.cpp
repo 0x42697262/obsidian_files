@@ -108,6 +108,34 @@ void reverse_str(char st[])
 
 bool sorted(int A[], int n)
 {
+  /*
+   *
+   * CONSTANTS:
+   *    n == 1
+   *    return true;
+   *    int sign = 0;
+   *    int i = 0
+   *    sign == 0
+   *    return <true|false>
+   *    
+   * ITERATION:
+   *    i<n-1
+   *    i++
+   *    sign < 0 | sign > 0
+   *    A[i] > A[i+1] | A[i] < A[i+1]
+   *    <> && <>
+   *    return false;
+   * 
+   * EXTRA:
+   *    for (i<n-1) --- 1 LAST CHECK
+   *    i<n-1       --- -1
+   *
+   * T(n) = 6 + 6((n - 1) - 1 - 0 + 1)
+   * T(n) = 6 + 6n - 6
+   * T(n) = 6n
+   *
+  */
+
   if ( n == 1 ) return true;
 
   int sign = 0;
