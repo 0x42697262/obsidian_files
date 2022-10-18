@@ -124,6 +124,7 @@ bool sorted(int A[], int n)
    *    i++
    *    sign < 0 | sign > 0
    *    A[i] > A[i+1] | A[i] < A[i+1]
+   *    [i+1]
    *    <> && <>
    *    return false;
    * 
@@ -131,9 +132,9 @@ bool sorted(int A[], int n)
    *    for (i<n-1) --- 1 LAST CHECK
    *    i<n-1       --- -1
    *
-   * T(n) = 6 + 6((n - 1) - 1 - 0 + 1)
-   * T(n) = 6 + 6n - 6
-   * T(n) = 6n
+   * T(n) = 6 + 7((n - 1) - 1 - 0 + 1)
+   * T(n) = 6 + 7n - 7
+   * T(n) = 7n - 1
    *
   */
 
