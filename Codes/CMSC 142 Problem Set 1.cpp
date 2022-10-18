@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 
 int reverse_int(int n);
 void reverse_str(char st[]);
@@ -44,6 +45,7 @@ int main (int argc, char *argv[])
 
   std::cout << remainder(41, -7) << std::endl;
   std::cout << remainder(49, 0) << std::endl;
+  std::cout << remainder(-49, 10) << std::endl;
   return 0;
 }
 
