@@ -1,15 +1,3 @@
-/*
-  Solve the following problems. And compute for the T(n) of your solutions.
-
-    int reverse(int n) - returns the reverse of n. e.g. n = 103, return 301; n = 1496, return 6941. The use of any auxiliary function from some library is not allowed. The use of a string is also not allowed.
-
-    void reverse(char st[]) - reverses the string st. e.g. st = "dragrace", reversed st = "ecargard"; st = "nodevillivedon", reversed st = "nodevillivedon".
-
-    bool sorted(int A[], int n) - returns true if the array A with size n is sorted in increasing fashion or in decreasing fashion. It returns false otherwise. e.g. A = {10, 8, 7, 7, 2}, return true; A = {1, 17, 19, 43, 53, 53}, return true; A = {3, 23, 10, 17, 15}, return false; A = {4, 4, 4, 4, 4}, return false.
-
-    int remainder(int a, int b) - returns the remainder when a is divided by b without using the modulo, times, and divide operators. Use of any other function from some library is not allowed as well. Implement this RECURSIVELY.
-*/
-
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -42,6 +30,8 @@ int main (int argc, char *argv[])
   std::cout << "4, 4, 4, 4, 4: " << sorted(s3, 5) << std::endl;
   int s4[] = {10, 18, 71, 71, 224};
   std::cout << "10, 18, 71, 71, 224: " << sorted(s4, 5) << std::endl;
+  int s5[] = {0,0,0,1};
+  std::cout << "0,0,0,1: " << sorted(s5, 5) << std::endl;
 
   std::cout << remainder(41, -7) << std::endl;
   std::cout << remainder(-11, 7) << std::endl;
@@ -165,24 +155,18 @@ bool sorted(int A[], int n)
 int remainder(int a, int b)
 {
   /*
-   * CONSTANTS:
-   *    b == 0
-   *    b = <>
-   *    b < 0 ?
-   *    -b | b
-   *    a >= b
+   *
+   * if ( a >= b )
+   * return remainder(a-b, b);
+   *   remainder(a-b, b)
    *    a-b
-   *    remainder(<>)
-   *    return <>
-   *
-   * T(n) = 8n
-   *
    */
+  // Assume only positive `int b`
 
-  if ( b == 0 )
-    exit(1);
+  // if ( b == 0 )
+  //   exit(1);
 
-  b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
+  // b = b < 0 ? -b : b; // source: https://github.com/lattera/glibc/blob/master/stdlib/abs.c (for absolute values)
   if ( a >= b )
     return remainder(a-b, b);
   return a; // This won't get executed but C++ gcc throws out a warning so I added this (if worse case)
