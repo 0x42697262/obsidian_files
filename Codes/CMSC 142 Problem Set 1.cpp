@@ -33,8 +33,8 @@ int main (int argc, char *argv[])
   int s5[] = {0,0,0,1};
   std::cout << "0,0,0,1: " << sorted(s5, 5) << std::endl;
 
-  std::cout << remainder(41, -7) << std::endl;
-  std::cout << remainder(-11, 7) << std::endl;
+  std::cout << remainder(41, 7) << std::endl;
+  std::cout << remainder(11, 7) << std::endl;
   return 0;
 }
 
@@ -172,6 +172,7 @@ int remainder(int a, int b)
    * T(n) = 4n
    */
   // Assume only positive `int b`
+  // No negatives please otherwise segmentation fault (core dumped). basically overflow or something
 
   // if ( b == 0 )
   //   exit(1);
