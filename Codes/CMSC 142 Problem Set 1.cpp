@@ -79,6 +79,7 @@ void reverse_str(char st[])
      *
      * CONSTANTS:
      *    int s_len = strlen(st);
+     *      strlen(st)
      *    int i=0;
      *
      * ITERATED:
@@ -92,16 +93,14 @@ void reverse_str(char st[])
      *    for (i < s_len) --- FOR LOOP LAST CHECK
      *    i < s_len       --- -1
      *
-     * T(n) = 2 + 5(n - 1 - 0 + 1)  + 1
-     * T(n) = 5n + 3
+     * T(n) = 3 + 5(n - 1 - 0 + 1)  + 1
+     * T(n) = 5n + 4
      *
     */
 
       int s_len = strlen(st);
       for ( int i=0; i < s_len; i++ )
-      {
         std::cout << st[s_len - 1 - i];
-      }
 } 
 
 bool sorted(int A[], int n)

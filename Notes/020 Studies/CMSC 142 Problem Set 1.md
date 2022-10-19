@@ -22,12 +22,13 @@ $$T(n) = 6n+3$$
 ```c++
 void reverse_str(char st[])
 {
-  for ( int i=strlen(st); i>=0; i-- ) 
-    std::cout << st[i];
+  int s_len = strlen(st);
+  for ( int i=0; i < s_len; i++ )
+	std::cout << st[s_len - 1 - i];
 } 
 ```
-$$T(n) = \sum_{0}^{n-1}{5+3} = 5(n-1-0+1)+3$$
-$$T(n) = 5n+3$$
+$$T(n) = \sum_{0}^{n-1}{5+4} = 5(n-1-0+1)+4$$
+$$T(n) = 5n+4$$
 
 
 ### bool sorted(int A\[\], int n) - returns true if the array A with size n is sorted in increasing fashion or in decreasing fashion. It returns false otherwise. e.g. A = {10, 8, 7, 7, 2}, return true; A = {1, 17, 19, 43, 53, 53}, return true; A = {3, 23, 10, 17, 15}, return false; A = {4, 4, 4, 4, 4}, return false.
