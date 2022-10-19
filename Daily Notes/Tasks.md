@@ -13,18 +13,20 @@ kanban-plugin: basic
 - [ ] [[Machine Problem 4]]
 - [ ] [[Learning Log  Week 13]]
 - [ ] [[Learning Log  Weeks 14-15]]
+- [ ] Mastery Quiz: Agile Development
 
 
 ## Will Do
 
-- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
+- [ ] Grade/Score for the last three groups @[[2022-10-23]]
 
 
 ## DOING
 
+- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 
 
 ## Postponed
