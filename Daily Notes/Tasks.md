@@ -16,7 +16,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [ ] Grade/Score for the last three groups @[[2022-10-23]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
@@ -26,6 +25,7 @@ kanban-plugin: basic
 
 ## DOING
 
+- [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 
 
 ## Postponed
