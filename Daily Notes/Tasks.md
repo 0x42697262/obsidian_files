@@ -7,26 +7,25 @@ kanban-plugin: basic
 ## Deadlines
 
 - [ ] [[Problem Set 4]] @[[2022-10-28]]
-- [ ] [[Learning Log  Weeks 9-10]]
-- [ ] [[Learning Log  Weeks 11-12]]
-- [ ] [[Mastery Quiz  Process Models]]
-- [ ] [[Machine Problem 4]]
-- [ ] [[Learning Log  Week 13]]
-- [ ] [[Learning Log  Weeks 14-15]]
-- [ ] Mastery Quiz: Agile Development
+- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
+- [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
+- [ ] [[Machine Problem 4]] @[[2022-12-02]]
+- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
+- [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 
 
 ## Will Do
 
 - [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
+- [ ] Grade/Score for the last three groups @[[2022-10-23]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
-- [ ] Grade/Score for the last three groups @[[2022-10-23]]
+- [ ] [[Mastery Quiz  Process Models]]
+- [ ] Mastery Quiz: Agile Development
 
 
 ## DOING
 
-- [ ] [[Asynchronous Activity 3 @2022-10-19 1]]
 
 
 ## Postponed
@@ -36,6 +35,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [x] [[Problem Set 1 @2022-10-18]]
 - [x] [[Annotated Bibliography (BRIG)]] @[[2022-10-17]]
 - [x] [[Problem Set 3]] @[[2022-10-14]]
