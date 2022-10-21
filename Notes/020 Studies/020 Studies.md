@@ -14,7 +14,7 @@
 ### Week 5: Primitive Data Types
 -  [[CMSC 124 Problem Set 3]]
 ### Weeks 6-7: Lexical and Syntax Analysis
-- [[Syntax Analysis]]
+- [[Lexical & Syntax Analysis]]
 - [[CMSC 124 Problem Set 4]]
 - [[CMSC 124 Machine Problem 3]]
 
