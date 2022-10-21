@@ -21,20 +21,22 @@ kanban-plugin: basic
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[Problem Set 4]] @[[2022-10-28]]
+- [ ] [[First Long Exam @2022-11-04]]
 
 
 ## DOING
 
-- [ ] Discussion Forum - Can a student invoke the Data Privacy Act of 2012 if he/she refuses to give a copy of his/her hardbound thesis manuscript to the department as required?
 
 
 ## Postponed
 
+- [ ] ALL CMSC 128 TASKS
 
 
 ## DONE
 
 **Complete**
+- [x] Discussion Forum - Can a student invoke the Data Privacy Act of 2012 if he/she refuses to give a copy of his/her hardbound thesis manuscript to the department as required?
 - [x] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [x] [[Asynchronous Activity 3 @2022-10-19 1]]
 - [x] [[Problem Set 1 @2022-10-18]]
