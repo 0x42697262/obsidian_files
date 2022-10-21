@@ -26,6 +26,7 @@ kanban-plugin: basic
 ## DOING
 
 - [ ] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
+- [ ] Discussion Forum - Can a student invoke the Data Privacy Act of 2012 if he/she refuses to give a copy of his/her hardbound thesis manuscript to the department as required?
 
 
 ## Postponed
