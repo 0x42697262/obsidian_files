@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Problem Set 4]] @[[2022-10-28]]
 - [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
@@ -21,6 +20,7 @@ kanban-plugin: basic
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
+- [ ] [[Problem Set 4]] @[[2022-10-28]]
 
 
 ## DOING
