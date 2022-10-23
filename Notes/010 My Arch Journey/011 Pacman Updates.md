@@ -5,6 +5,41 @@
 ----
 # 011 Pacman Updates
 
+## 2022-10-23
+```sh
+Packages (204) acpi_call-1.2.2-80  bbswitch-0.8-546  boost-libs-1.80.0-3  brltty-6.5-3  ca-certificates-mozilla-3.84-1  calibre-6.7.1-2  code-1.72.2-1  cpupower-6.0-1  debootstrap-1.0.128-1
+               dmraid-1.0.0.rc16.3-14  electron18-18.3.9-3  electron19-19.0.13-3  enchant-2.3.3-2  ethtool-1:6.0-1  faad2-2.10.1-1  filesystem-2022.10.18-1  firefox-106.0.1-1  flac-1.4.2-1  git-2.38.1-1
+               gnupg-2.2.40-1  graphviz-6.0.2-1  gspell-1.12.0-2  harfbuzz-5.3.1-3  harfbuzz-icu-5.3.1-3  icu-72.1-1  imagemagick-7.1.0.51-1  jdk-openjdk-19.0.1.u10-2  jdk11-openjdk-11.0.17.u1-1
+               jre-openjdk-19.0.1.u10-2  jre-openjdk-headless-19.0.1.u10-2  jre11-openjdk-11.0.17.u1-1  jre11-openjdk-headless-11.0.17.u1-1  kguiaddons-5.99.0-2  kitty-0.26.4-1
+               kitty-shell-integration-0.26.4-1  kitty-terminfo-0.26.4-1  lib32-expat-2.4.9-2  lib32-flac-1.4.2-1  lib32-harfbuzz-5.3.1-3  lib32-icu-72.1-1  lib32-libsoup-2.74.3-1  lib32-libxml2-2.10.3-2
+               lib32-mesa-22.2.1-1  lib32-nss-3.84-1  lib32-systemd-251.6-1  libbsd-0.11.7-1  libcdr-0.1.7-5  libde265-1.0.9-1  libe-book-0.1.3-12  libharu-2.4.3-1  libical-3.0.16-2  libmspub-0.1.4-13
+               libnm-1.40.2-1  libpciaccess-0.17-1  libqalculate-4.4.0-2  libqxp-0.0.2-9  libreoffice-still-7.3.6-4  libsoup-2.74.3-1  libsoup3-3.2.1-1  libvisio-0.1.7-8  libwacom-2.5.0-1  libxkbfile-1.1.1-1
+               libxml2-2.10.3-2  libxmu-1.1.4-1  libxrender-0.9.11-1  libxshmfence-1.3.1-1  libzmf-0.0.2-13  linux-6.0.2.arch1-1  linux-headers-6.0.2.arch1-1  man-db-2.11.0-1  mesa-22.2.1-1  minizip-1:1.2.13-1
+               mtools-1:4.0.42-1  mujs-1.3.0-1  networkmanager-1.40.2-1  node-gyp-9.3.0-1  nodejs-19.0.0-2  nss-3.84-1  nvidia-520.56.06-4  nvidia-utils-520.56.06-2  obs-studio-28.0.3-2
+               opencl-nvidia-520.56.06-2  orc-0.4.32-2  pacman-mirrorlist-20221016-1  pambase-20221020-1  perl-html-parser-3.79-1  perl-uri-5.16-1  pixman-0.42.0-1  python-3.10.8-2  python-inflect-6.0.2-1
+               python-jaraco.text-3.10.0-1  python-more-itertools-9.0.0-1  python-numpy-1.23.4-1  python-pip-22.3-1  python-setuptools-1:63.4.3-1  python-trove-classifiers-2022.10.19-1
+               python-typing_extensions-4.4.0-1  qalculate-gtk-4.4.0-1  qemu-audio-alsa-7.1.0-10  qemu-audio-dbus-7.1.0-10  qemu-audio-jack-7.1.0-10  qemu-audio-oss-7.1.0-10  qemu-audio-pa-7.1.0-10
+               qemu-audio-sdl-7.1.0-10  qemu-audio-spice-7.1.0-10  qemu-block-curl-7.1.0-10  qemu-block-dmg-7.1.0-10  qemu-block-gluster-7.1.0-10  qemu-block-iscsi-7.1.0-10  qemu-block-nfs-7.1.0-10
+               qemu-block-ssh-7.1.0-10  qemu-chardev-baum-7.1.0-10  qemu-chardev-spice-7.1.0-10  qemu-common-7.1.0-10  qemu-docs-7.1.0-10  qemu-full-7.1.0-10  qemu-hw-display-qxl-7.1.0-10
+               qemu-hw-display-virtio-gpu-7.1.0-10  qemu-hw-display-virtio-gpu-gl-7.1.0-10  qemu-hw-display-virtio-gpu-pci-7.1.0-10  qemu-hw-display-virtio-gpu-pci-gl-7.1.0-10
+               qemu-hw-display-virtio-vga-7.1.0-10  qemu-hw-display-virtio-vga-gl-7.1.0-10  qemu-hw-s390x-virtio-gpu-ccw-7.1.0-10  qemu-hw-usb-host-7.1.0-10  qemu-hw-usb-redirect-7.1.0-10
+               qemu-hw-usb-smartcard-7.1.0-10  qemu-img-7.1.0-10  qemu-pr-helper-7.1.0-10  qemu-system-aarch64-7.1.0-10  qemu-system-alpha-7.1.0-10  qemu-system-alpha-firmware-7.1.0-10
+               qemu-system-arm-7.1.0-10  qemu-system-arm-firmware-7.1.0-10  qemu-system-avr-7.1.0-10  qemu-system-cris-7.1.0-10  qemu-system-hppa-7.1.0-10  qemu-system-hppa-firmware-7.1.0-10
+               qemu-system-loongarch64-7.1.0-10  qemu-system-m68k-7.1.0-10  qemu-system-microblaze-7.1.0-10  qemu-system-microblaze-firmware-7.1.0-10  qemu-system-mips-7.1.0-10  qemu-system-nios2-7.1.0-10
+               qemu-system-or1k-7.1.0-10  qemu-system-ppc-7.1.0-10  qemu-system-ppc-firmware-7.1.0-10  qemu-system-riscv-7.1.0-10  qemu-system-riscv-firmware-7.1.0-10  qemu-system-rx-7.1.0-10
+               qemu-system-s390x-7.1.0-10  qemu-system-s390x-firmware-7.1.0-10  qemu-system-sh4-7.1.0-10  qemu-system-sparc-7.1.0-10  qemu-system-sparc-firmware-7.1.0-10  qemu-system-tricore-7.1.0-10
+               qemu-system-x86-7.1.0-10  qemu-system-x86-firmware-7.1.0-10  qemu-system-xtensa-7.1.0-10  qemu-tests-7.1.0-10  qemu-tools-7.1.0-10  qemu-ui-curses-7.1.0-10  qemu-ui-dbus-7.1.0-10
+               qemu-ui-egl-headless-7.1.0-10  qemu-ui-gtk-7.1.0-10  qemu-ui-opengl-7.1.0-10  qemu-ui-sdl-7.1.0-10  qemu-ui-spice-app-7.1.0-10  qemu-ui-spice-core-7.1.0-10  qemu-user-7.1.0-10
+               qemu-vhost-user-gpu-7.1.0-10  qemu-virtiofsd-7.1.0-10  qt5-base-5.15.6+kde+r180-2  qt6-base-6.4.0-2  qt6-webengine-6.4.0-5  r-4.2.1-3  raptor-2.0.15-20  rsync-3.2.7-1  rubberband-3.1.1-1
+               samba-4.17.1-2  shadow-4.11.1-3  smbclient-4.17.1-2  systemd-251.6-2  systemd-libs-251.6-2  systemd-sysvcompat-251.6-2  thunderbird-102.4.0-2  tracker3-3.4.0-2  tzdata-2022e-1
+               vte-common-0.70.1-1  vte3-0.70.1-1  webkit2gtk-2.38.1-1  webkit2gtk-4.1-2.38.1-1  weechat-3.7.1-1  wine-staging-7.19-1  xcb-util-cursor-0.1.4-1  xcb-util-image-0.4.1-2  xcb-util-keysyms-0.4.1-4
+               xcb-util-renderutil-0.3.10-1  xcb-util-wm-0.4.2-1  xfsprogs-5.19.0-2  xorg-bdftopcf-1.1.1-1  xorg-smproxy-1.0.7-1  xorg-xwayland-22.1.4-1  zlib-1:1.2.13-1
+
+Total Download Size:   1676.89 MiB
+Total Installed Size:  5404.60 MiB
+Net Upgrade Size:       124.06 MiB
+```
+
 ## 2022-10-14
 ```sh
 Packages (127) acpi_call-1.2.2-78  bbswitch-0.8-544  blender-17:3.3.1-3  btrfs-progs-6.0-1  cuda-11.8.0-1  dbus-1.14.4-1  dotnet-host-6.0.10.sdk110-1  dotnet-runtime-6.0.10.sdk110-1  dotnet-sdk-6.0.10.sdk110-1
