@@ -15,7 +15,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] Grade/Score for the last three groups @[[2022-10-23]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
 - [ ] [[Mastery Quiz  Process Models]]
@@ -36,6 +35,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Grade/Score for the last three groups @[[2022-10-23]]
 - [x] Discussion Forum - Can a student invoke the Data Privacy Act of 2012 if he/she refuses to give a copy of his/her hardbound thesis manuscript to the department as required?
 - [x] [[Learning Log  Weeks 6-7]] @[[2022-10-21]]
 - [x] [[Asynchronous Activity 3 @2022-10-19 1]]
