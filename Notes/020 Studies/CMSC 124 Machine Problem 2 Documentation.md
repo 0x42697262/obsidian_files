@@ -76,7 +76,7 @@ This code is hard coded to only work for the specific grammar above.
 
 # bnf_palindrome.py
 
-
+no documentation, i wont write it. too lazy.
 
 
 [[CMSC 124 Machine Problem 2|Machine Problem 2]]
