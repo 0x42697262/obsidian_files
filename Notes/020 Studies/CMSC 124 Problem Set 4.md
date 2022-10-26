@@ -21,6 +21,7 @@ Parsing algorithm runs at O(n<sup>3</sup>) which is very slow since the parser t
 There are two kinds of parsing algorithms for LL(1), these are top-down algorithm and bottom-up algorithm. The former has problems with the leftmost derivation because the grammar can potentially create an infinite loop which will never stop. This can be fixed by converting the grammar without the looping nonterminal. The latter has problems with finding the proper RHS. If there are more than one derivation steps, then it would be complex to execute which is why we need to simplify the grammar.
 
 ### 4. What is a left recursion? Why is it not possible to have a grammar having a left recursion as a basis for a top-down parser, and how can this be corrected?
+In a grammar, left recursion is when the nonterminal LHS is the starting point of the RHS. Top-down parses cannot use left recursion because the parser would first call the subprogram that can lead into infinite loops. Thsi can be corrected by converting the left recursive grammar into a right recursive grammar through left factoring.
 
 ### 5. Describe the purpose of a parse stack in an LR parser.
 
