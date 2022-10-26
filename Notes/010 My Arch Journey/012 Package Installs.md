@@ -5,6 +5,15 @@
 ----
 # 012 Package Installs
 
+`paru -S nvidia-prime`
+## 2022-10-26
+```sh
+Packages (1) nvidia-prime-1.0-4
+
+Total Download Size:   0.00 MiB
+Total Installed Size:  0.00 MiB
+```
+
 ## 2022-10-11
 `paru -S optimus-manager`
 `paru -S bbswitch`
