@@ -5,6 +5,19 @@
 ----
 # 011 Pacman Updates
 
+## 2022-10-26
+```sh
+Packages (36) expat-2.5.0-1  fontconfig-2:2.14.1-2  gdk-pixbuf2-2.42.10-1  gtk-update-icon-cache-1:4.8.2-1  gtk4-1:4.8.2-1  lib32-expat-2.5.0-2  lib32-fontconfig-2:2.14.1-2  lib32-gdk-pixbuf2-2.42.10-1
+              lib32-systemd-251.7-1  lib32-zlib-1.2.13-1  libunrar-1:6.2.1-1  lsof-4.96.4-1  lutris-0.5.11-2  mkinitcpio-32-1  multipath-tools-0.9.1-2  ncdu-2.2.1-1  nvtop-3.0.0-1  perl-http-message-6.40-1
+              python-aiofiles-22.1.0-2  python-charset-normalizer-3.0.0-1  python-colorama-0.4.6-1  python-orjson-3.8.1-1  python-psutil-5.9.3-1  python-rich-12.6.0-2  python-zipp-3.10.0-1
+              qt5-base-5.15.6+kde+r181-1  ruby-power_assert-2.0.2-1  samba-4.17.2-1  sddm-0.19.0-9  smbclient-4.17.2-1  sudo-1.9.12-1  svt-av1-1.3.0-1  systemd-251.7-1  systemd-libs-251.7-1
+              systemd-sysvcompat-251.7-1  xorg-xwayland-22.1.4-2
+
+Total Download Size:    55.46 MiB
+Total Installed Size:  252.71 MiB
+Net Upgrade Size:        1.39 MiB
+```
+
 ## 2022-10-23
 ```sh
 Packages (204) acpi_call-1.2.2-80  bbswitch-0.8-546  boost-libs-1.80.0-3  brltty-6.5-3  ca-certificates-mozilla-3.84-1  calibre-6.7.1-2  code-1.72.2-1  cpupower-6.0-1  debootstrap-1.0.128-1
