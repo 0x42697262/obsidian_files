@@ -4,14 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "47e3a4a488f14c39",
-        "type": "leaf",
-        "state": {
-          "type": "kanban",
-          "state": {
-            "file": "Daily Notes/Tasks.md"
+        "id": "e4f3e78f1bc528a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "361ce46d17e14e9a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Daily Notes/Tasks.md"
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "264a82bb47cd35dd",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/020 Studies/020 Studies.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "59ca0275dc773067",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/__orphans/CMSC 124 Problem Set 4.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        }
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -29,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -38,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#CMSC124",
+                "query": "tag:#WIP",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -64,11 +103,12 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -84,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/__orphans/CMSC 124 Problem Set 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/__orphans/CMSC 124 Problem Set 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/Tasks.md"
+                "file": "Notes/__orphans/CMSC 124 Problem Set 4.md"
               }
             }
           },
@@ -145,24 +185,27 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "47e3a4a488f14c39",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "59ca0275dc773067",
   "lastOpenFiles": [
     "Daily Notes/Tasks.md",
-    "Notes/020 Studies/Think.md",
+    "Notes/__orphans/CMSC 124 Problem Set 4.md",
     "Notes/020 Studies/020 Studies.md",
-    "Notes/020 Studies/Immanuel Kant’s Categorical Imperative.md",
-    "Notes/__index/000 Index.md",
-    "Notes/020 Studies/Utilitarianism.md",
+    "Notes/020 Studies/CMSC 124 Problem Set 3.md",
+    "Notes/020 Studies/CMSC 142 Problem Set 1.md",
+    "Notes/020 Studies/CMSC 124 Machine Problem 2 Documentation.md",
+    "Notes/010 My Arch Journey/011 Pacman Updates.md",
     "Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "Notes/__orphans/Imperative.md",
-    "Notes/__orphans/Hypothetical Imperative.md",
-    "Notes/__orphans/Data Objects.md"
+    "Notes/020 Studies/CMSC 124 Machine Problem 2.md",
+    "Kanban/First Long Exam @2022-11-04.md"
   ]
 }
