@@ -15,7 +15,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Machine Problem 3]] @[[2022-11-04]]
 - [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
@@ -24,6 +23,7 @@ kanban-plugin: basic
 
 ## DOING
 
+- [ ] [[Machine Problem 3]] @[[2022-11-04]]
 
 
 ## Postponed
