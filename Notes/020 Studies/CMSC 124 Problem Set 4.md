@@ -24,7 +24,7 @@ There are two kinds of parsing algorithms for recursive-decent parsing, these ar
 In a grammar, left recursion is when the nonterminal LHS is the starting point of the RHS. Top-down parses cannot use left recursion because the parser would first call the subprogram that can lead into infinite loops. Thsi can be corrected by converting the left recursive grammar into a right recursive grammar through left factoring.
 
 ### 5. Describe the purpose of a parse stack in an LR parser.
-
+The stack is the combination of state symbols and current input symbols that the parser uses to take decisions in parsing through the parse table. The parse table contains an action table and a goto table. The former provides a grammar rule to implement the current state and current terminal in the input stream. The latter only specifies which state the parser should proceed.
 
 
 ## References
