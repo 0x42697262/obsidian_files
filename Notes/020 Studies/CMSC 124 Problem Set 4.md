@@ -17,8 +17,8 @@ When writing the rules for the lexical analyzer, we must consider the token patt
 The first approach is commonly used amongst the approaches that were mentioned because one can simply write their own tool in building the lexical analyzer or by using existing tools that can automate the process unlike the other two approaches where it is difficult to attain due to its complexity as state diagrams must transition from a state to another.
 
 ### 3. Describe the complexity of parsing algorithms. What is the parsing problem, and why is it considered a problem?
-
-
+Parsing algorithm runs at O(n<sup>3</sup>) which is very slow since the parser traverses recursively and there is a frequent amount of times that goes back and reparse the input once again. When it comes to parsing, there can be two kinds, one that works for any unambiguous grammars and one that works specifically for one unambiguous grammar. The former is complex and inefficient that is why it runs at O(n<sup>3</sup>) and the latter can run at O(n) or linear time which is not fast however it is within an acceptable speeds. The `n` refers to the length of the input.
+There are two kinds of parsing algorithms for LL(1), these are top-down algorithm and bottom-up algorithm. The former has problems with the leftmost derivation because the grammar can potentially create an infinite loop which will never stop. This can be fixed by converting the grammar without the looping nonterminal. The latter has problems with finding the proper RHS. If there are more than one derivation steps, then it would be complex to execute which is why we need to simplify the grammar.
 
 ### 4. What is a left recursion? Why is it not possible to have a grammar having a left recursion as a basis for a top-down parser, and how can this be corrected?
 
