@@ -17,6 +17,7 @@ Total Download Size:    55.46 MiB
 Total Installed Size:  252.71 MiB
 Net Upgrade Size:        1.39 MiB
 ```
+Removed `optimus-manager`
 
 ## 2022-10-23
 ```sh
