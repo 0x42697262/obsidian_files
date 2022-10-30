@@ -23,12 +23,12 @@ kanban-plugin: basic
 ## DOING
 
 - [ ] [[Machine Problem 3]] @[[2022-11-04]]
-- [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 
 
 ## Postponed
 
 - [ ] ALL CMSC 128 TASKS
+- [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 
 
 ## DONE
