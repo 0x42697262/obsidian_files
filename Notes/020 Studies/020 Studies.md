@@ -16,7 +16,7 @@
 ### Weeks 6-7: Lexical and Syntax Analysis
 - [[Lexical & Syntax Analysis]]
 - [[CMSC 124 Problem Set 4]]
-- [[CMSC 124 Machine Problem 3]]
+- [[CMSC 124 Machine Problem 3]] ([[CMSC 124 Machine Problem 3 Documentation|Documentation]])
 
 ## CMSC 142 Design and Analysis of Algorithms
 ### Week 5 (10 October - 16 October): Big O Notation
