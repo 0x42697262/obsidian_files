@@ -18,6 +18,7 @@ kanban-plugin: basic
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
+- [ ] Think [[Think]]
 
 
 ## DOING
