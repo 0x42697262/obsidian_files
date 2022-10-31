@@ -119,6 +119,7 @@ pub struct Lexer {
 `c` current read character.
 See [this](https://doc.rust-lang.org/book/ch03-02-data-types.html) for rust data types.
 
+Structs needs to be implemented just like in C if I remember correctly.
 ```rust
 impl Lexer {
     pub fn new(input: Vec<char>) -> Self {...}
@@ -141,15 +142,24 @@ impl Lexer {
             c: '0',
         }
     }
-    
     ...
-    
 }
 ```
 On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. See [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). Everything else inside the initialization starts at `0`.
 
+This method/function is run inside a loop that iterates the input string.
 ```rust
-
+...
+pub fn read_char(&mut self) {
+        if self.read_pos >= self.input.len() {
+            self.c = '0';
+        } else {
+            self.c = self.input[self.read_pos]
+        }
+        self.pos = self.read_pos;
+        self.read_pos = self.read_pos + 1;
+    }
+   ... 
 ```
 
 I strictly follow the grammar rules so whitespaces are not ignored but instead considered as an invalid input.
