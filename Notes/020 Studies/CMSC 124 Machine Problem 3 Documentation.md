@@ -42,3 +42,25 @@ Terminate every input string with `‘$’`.
 | 33.369$                      | -5.4.2$                        |
 
 ---
+
+### Rewriting the grammars
+The first grammar is left recursive and left factored, the non-terminals `<expr>` and `term` can be rewritten to:
+```
+<expr>   ::= <term><expr_>
+<expr_>  ::= +<term><expr_> | -<term><expr_> | ε
+
+<term>   ::= <factor><term_>
+<term_>  ::= *<factor><term_> | /<factor><term_> | ε
+```
+So, the new grammar for the first grammar is now:
+```
+<expr>   ::= <term><expr_>
+<expr_>  ::= +<term><expr_> | -<term><expr_> | ε
+<term>   ::= <factor><term_>
+<term_>  ::= *<factor><term_> | /<factor><term_> | ε
+<factor> ::= (<expr>) |<digit>  
+<digit>  ::= 0|1|2|3
+```
+
+
+
