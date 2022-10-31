@@ -90,7 +90,7 @@ Both grammars now satisfy:
 I started listing the token kinds or types for the first grammar. We need this for the lexer.
 ```rust
 pub enum TokenKind {
-    LITERALS(Vec<char>),
+    LITERALS(String),
     OPEN_PAREN(char),
     CLOSE_PAREN(char),
     MUL_OP(char),
