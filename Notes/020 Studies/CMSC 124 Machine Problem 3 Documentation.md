@@ -82,5 +82,9 @@ The new grammar would be:
 <digit>   ::= 0|1|2|3|4|5|6|7|8|9
 ```
 
+Both grammars now satisfy:
+1. Free from left recursion
+2. It is now left factored
+
 ### Coding
 
