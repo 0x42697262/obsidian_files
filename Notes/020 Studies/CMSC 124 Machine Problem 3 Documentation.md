@@ -52,7 +52,7 @@ The first grammar is left recursive and left factored, the non-terminals `<expr>
 <term>   ::= <factor><term_>
 <term_>  ::= *<factor><term_> | /<factor><term_> | ε
 ```
-So, the new grammar for the first grammar is now:
+So, the new grammar is now:
 ```
 <expr>   ::= <term><expr_>
 <expr_>  ::= +<term><expr_> | -<term><expr_> | ε
@@ -62,5 +62,23 @@ So, the new grammar for the first grammar is now:
 <digit>  ::= 0|1|2|3
 ```
 
-
+The second grammar needs to be written as it accepts the input `5.55.55` which should be an invalid string
+```
+<num><digits>
+<num><digits><digits>
+<num><digits><digits>
+<num><digit>.<digit><digits>
+<num><digit>.<digit><digits>
+<num><digits><digit>.<digit><digits>
+<digit>.<digit><digit>.<digit><digit>
+5.55.55
+```
+The new grammar would be:
+```
+<expr>    ::= +<num> | -<num> | <num>  
+<num>     ::= <int> | <int>.<int>
+<int>     ::= <digit> | <digit><digit>
+<digit>   ::= 0|1|2|3|4|5|6|7|8|9
+```
+### Coding
 
