@@ -77,7 +77,8 @@ The new grammar would be:
 ```
 <expr>    ::= +<num> | -<num> | <num>  
 <num>     ::= <int> | <int>.<int>
-<int>     ::= <digit> | <digit><int>
+<int>     ::= <digit><int_>
+<int_>    ::= <int> | ε
 <digit>   ::= 0|1|2|3|4|5|6|7|8|9
 ```
 
