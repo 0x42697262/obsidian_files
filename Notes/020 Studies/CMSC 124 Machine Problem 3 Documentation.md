@@ -86,5 +86,79 @@ Both grammars now satisfy:
 1. Free from left recursion
 2. It is now left factored
 
-### Coding
+### Coding the arithmetic expression grammar
+I started listing the token kinds or types for the first grammar. We need this for the lexer.
+```rust
+pub enum TokenKind {
+    LITERALS(Vec<char>),
+    OPEN_PAREN(char),
+    CLOSE_PAREN(char),
+    MUL_OP(char),
+    DIV_OP(char),
+    SUB_OP(char),
+    ADD_OP(char),
+    END_INPUT(char),
+}
+```
+`LITERALS` should contain only the digits. There is no need to set it as integer for now. So, a vector of characters is enough.
+`END_INPUT` is the last character input `$`.
+The rest of the token kinds should be self explanatory.
 
+Next is to create a struct for the lexer since rust does not have classes. See the reasons [here](https://doc.rust-lang.org/book/ch17-01-what-is-oo.html).
+```rust
+pub struct Lexer {
+    input: Vec<char>,
+    pub pos: usize,
+    pub read_pos: usize,
+    pub c: char,
+}
+```
+`input` is the input strings but taken as a vector of characters.
+`pos` reading position.
+`read_pos` current moving reading position.
+`c` current read character.
+See [this](https://doc.rust-lang.org/book/ch03-02-data-types.html) for rust data types.
+
+```rust
+impl Lexer {
+    pub fn new(input: Vec<char>) -> Self {...}
+    pub fn read_char(&mut self) {...}
+    pub fn next_token(&mut self) -> token::Token {...}
+}
+```
+`pub fn new(input: Vec<char>) -> Self` initializes new instance of the lexer
+`pub fn read_char(&mut self)` reads the next character `c` and increments the position `pos`
+`pub fn next_token(&mut self)`  match the read character `c` then assign type to the token
+
+This method returns itself with the inputs being initialized.
+```rust
+impl Lexer {
+	pub fn new(input: Vec<char>) -> Self {
+        Self {
+            input,
+            pos: 0,
+            read_pos: 0,
+            c: '0',
+        }
+    }
+    
+    ...
+    
+}
+```
+On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. See [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). Everything else inside the initialization starts at `0`.
+
+```rust
+
+```
+
+I strictly follow the grammar rules so whitespaces are not ignored but instead considered as an invalid input.
+
+### Coding the multi-digit decimal grammar
+
+I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
+
+---
+### Sources
+- https://mohitkarekar.com/posts/pl/lexer/
+- https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html
