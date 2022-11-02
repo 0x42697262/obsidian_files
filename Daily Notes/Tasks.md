@@ -11,6 +11,7 @@ kanban-plugin: basic
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
+- [ ] [[Class Project @2022-11-18]]
 
 
 ## Will Do
