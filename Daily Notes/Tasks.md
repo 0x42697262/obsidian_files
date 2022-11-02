@@ -20,6 +20,7 @@ kanban-plugin: basic
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] Think [[Think]]
+- [ ] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
 
 
 ## DOING
