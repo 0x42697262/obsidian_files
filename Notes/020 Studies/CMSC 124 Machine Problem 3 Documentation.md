@@ -90,20 +90,18 @@ Both grammars now satisfy:
 I started listing the token kinds or types for the first grammar. We need this for the lexer.
 ```rust
 pub enum TokenKind {
-    LITERALS(Vec<char>),
-    OPEN_PAREN(char),
-    CLOSE_PAREN(char),
-    MUL_OP(char),
-    DIV_OP(char),
-    SUB_OP(char),
-    ADD_OP(char),
+    DIGIT,
+    OPEN_PAREN,
+    CLOSE_PAREN,
+    MUL_OP,
+    DIV_OP,
+    SUB_OP,
+    ADD_OP,
     END_INPUT,
     ILLEGAL,
 }
 ```
-`LITERALS` should contain only the digits. There is no need to set it as integer for now. So, a vector of characters is enough.
-`END_INPUT` is the last character input `$`.
-The rest of the token kinds should be self explanatory.
+ There is no need to include the values of the tokens since we are only parsing if the input string is correct based on the grammar.
 
 Next is to create a struct for the lexer since rust does not have classes. See the reasons [here](https://doc.rust-lang.org/book/ch17-01-what-is-oo.html).
 ```rust
@@ -163,18 +161,6 @@ pub fn read_char(&mut self) {
    ... 
 ```
 
-This identifier reads the numbers as a seperate lexer. It takes value from a method through [closures](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
-```rust
-...
-let read_num = |lex: &mut Lexer| -> Vec<char> {
-            let pos = lex.pos;
-            while lex.pos < lex.input.len() && is_digit(lex.c) {
-                lex.read_char();
-            }
-            lex.input[pos..lex.pos].to_vec()
-        };
-...
-```
 
 Checks every character in the string then identifies the kind of token.
 ```rust
@@ -182,32 +168,31 @@ Checks every character in the string then identifies the kind of token.
 let token: TokenKind;
 match self.c {
 	'+' => {
-		token = TokenKind::ADD_OP(self.c);
+		token = TokenKind::ADD_OP;
 	}
 	'-' => {
-		token = TokenKind::SUB_OP(self.c);
+		token = TokenKind::SUB_OP;
 	}
 	'*' => {
-		token = TokenKind::MUL_OP(self.c);
+		token = TokenKind::MUL_OP;
 	}
 	'/' => {
-		token = TokenKind::DIV_OP(self.c);
+		token = TokenKind::DIV_OP;
 	}
 	'(' => {
-		token = TokenKind::OPEN_PAREN(self.c);
+		token = TokenKind::OPEN_PAREN;
 	}
 	')' => {
-		token = TokenKind::CLOSE_PAREN(self.c);
+		token = TokenKind::CLOSE_PAREN;
 	}
 	'$' => {
 		token = TokenKind::END_INPUT;
 	}
 	_ => {
 		if is_digit(self.c) {
-			let ident: Vec<char> = read_num(self);
-			return TokenKind::LITERALS(ident);
+			token = TokenKind::DIGIT;
 		} else {
-			return TokenKind::ILLEGAL;
+			token = TokenKind::ILLEGAL;
 		}
 	}
 }
@@ -227,6 +212,18 @@ pub fn next_token(&mut self) -> TokenKind {
 
 ### Coding the multi-digit decimal grammar
 
+This identifier reads the numbers as a seperate lexer. It takes value from a method through [closures](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
+```rust
+...
+let read_num = |lex: &mut Lexer| -> Vec<char> {
+            let pos = lex.pos;
+            while lex.pos < lex.input.len() && is_digit(lex.c) {
+                lex.read_char();
+            }
+            lex.input[pos..lex.pos].to_vec()
+        };
+...
+```
 I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
 
 ---
