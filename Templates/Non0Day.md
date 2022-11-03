@@ -6,4 +6,3 @@ Today's Daily Note: [[{{date:YYYY-MM-DD}}]]
 - [ ] Play some **CTFs**
 	- [ ] PicoCTF
 		- [ ] Primer 
-
