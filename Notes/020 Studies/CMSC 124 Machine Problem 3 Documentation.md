@@ -90,14 +90,15 @@ Both grammars now satisfy:
 I started listing the token kinds or types for the first grammar. We need this for the lexer.
 ```rust
 pub enum TokenKind {
-    LITERALS(String),
+    LITERALS(Vec<char>),
     OPEN_PAREN(char),
     CLOSE_PAREN(char),
     MUL_OP(char),
     DIV_OP(char),
     SUB_OP(char),
     ADD_OP(char),
-    END_INPUT(char),
+    END_INPUT,
+    ILLEGAL,
 }
 ```
 `LITERALS` should contain only the digits. There is no need to set it as integer for now. So, a vector of characters is enough.
@@ -113,7 +114,7 @@ pub struct Lexer {
     pub c: char,
 }
 ```
-`input` is the input strings but taken as a vector of characters.
+`input` is the input string that is used to iterate over.
 `pos` reading position.
 `read_pos` current moving reading position.
 `c` current read character.
@@ -139,22 +140,22 @@ impl Lexer {
             input,
             pos: 0,
             read_pos: 0,
-            c: '0',
+            c: '$',
         }
     }
     ...
 }
 ```
-On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. See [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). Everything else inside the initialization starts at `0`.
+On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. Check [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). `c` is the last character of the string input. Everything else inside the initialization starts at `0`.
 
-This method/function is run inside a loop that iterates the input string.
+This method/function reads the next character in the input string.
 ```rust
 ...
 pub fn read_char(&mut self) {
         if self.read_pos >= self.input.len() {
-            self.c = '0';
+            self.c = '$';
         } else {
-            self.c = self.input[self.read_pos]
+            self.c = self.input[self.read_pos];
         }
         self.pos = self.read_pos;
         self.read_pos = self.read_pos + 1;
@@ -162,7 +163,67 @@ pub fn read_char(&mut self) {
    ... 
 ```
 
+This identifier reads the numbers as a seperate lexer. It takes value from a method through [closures](https://doc.rust-lang.org/rust-by-example/fn/closures.html).
+```rust
+...
+let read_num = |lex: &mut Lexer| -> Vec<char> {
+            let pos = lex.pos;
+            while lex.pos < lex.input.len() && is_digit(lex.c) {
+                lex.read_char();
+            }
+            lex.input[pos..lex.pos].to_vec()
+        };
+...
+```
+
+Checks every character in the string then identifies the kind of token.
+```rust
+...
+let token: TokenKind;
+match self.c {
+	'+' => {
+		token = TokenKind::ADD_OP(self.c);
+	}
+	'-' => {
+		token = TokenKind::SUB_OP(self.c);
+	}
+	'*' => {
+		token = TokenKind::MUL_OP(self.c);
+	}
+	'/' => {
+		token = TokenKind::DIV_OP(self.c);
+	}
+	'(' => {
+		token = TokenKind::OPEN_PAREN(self.c);
+	}
+	')' => {
+		token = TokenKind::CLOSE_PAREN(self.c);
+	}
+	'$' => {
+		token = TokenKind::END_INPUT;
+	}
+	_ => {
+		if is_digit(self.c) {
+			let ident: Vec<char> = read_num(self);
+			return TokenKind::LITERALS(ident);
+		} else {
+			return TokenKind::ILLEGAL;
+		}
+	}
+}
+...
+```
 I strictly follow the grammar rules so whitespaces are not ignored but instead considered as an invalid input.
+
+This method then returns the token type of the character or literal.
+```rust
+pub fn next_token(&mut self) -> TokenKind {
+	...
+	self.read_char();
+	token
+}
+```
+
 
 ### Coding the multi-digit decimal grammar
 
