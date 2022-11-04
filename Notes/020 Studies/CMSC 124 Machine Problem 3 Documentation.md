@@ -87,7 +87,7 @@ Both grammars now satisfy:
 2. It is now left factored
 
 ### Coding the arithmetic expression grammar
-I started listing the token kinds or types for the first grammar. We need this for the lexer.
+In building the lexer, I started listing the token kinds or types for the grammar first. This is needed for the lexer to identify the type of tokens.
 ```rust
 pub enum TokenKind {
     DIGIT,
@@ -101,7 +101,7 @@ pub enum TokenKind {
     ILLEGAL,
 }
 ```
- There is no need to include the values of the tokens since we are only parsing if the input string is correct based on the grammar.
+There is no need to include the values of the tokens since we are only parsing if the input string is correct based on the grammar.
 
 Next is to create a struct for the lexer since rust does not have classes. See the reasons [here](https://doc.rust-lang.org/book/ch17-01-what-is-oo.html).
 ```rust
@@ -113,8 +113,8 @@ pub struct Lexer {
 }
 ```
 `input` is the input string that is used to iterate over.
-`pos` reading position.
-`read_pos` current moving reading position.
+`pos` position of the current read character.
+`read_pos` LL(1) read character.
 `c` current read character.
 See [this](https://doc.rust-lang.org/book/ch03-02-data-types.html) for rust data types.
 
@@ -144,15 +144,13 @@ impl Lexer {
     ...
 }
 ```
-On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. Check [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). `c` is the last character of the string input. Everything else inside the initialization starts at `0`.
+On the 4th line, `input,` does not need to be `input: input,` since rust can do shorthand struct initialization. Check [this](https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand). Everything else inside the initialization starts at `0`.
 
 This method/function reads the next character in the input string.
 ```rust
 ...
 pub fn read_char(&mut self) {
-        if self.read_pos >= self.input.len() {
-            self.c = '$';
-        } else {
+        if self.read_pos < self.input.len() {
             self.c = self.input[self.read_pos];
         }
         self.pos = self.read_pos;
@@ -162,52 +160,45 @@ pub fn read_char(&mut self) {
 ```
 
 
-Checks every character in the string then identifies the kind of token.
+This method returns the token type of the character or literal by checking the current character in the string then identifies the kind of token.
 ```rust
-...
-let token: TokenKind;
-match self.c {
-	'+' => {
-		token = TokenKind::ADD_OP;
-	}
-	'-' => {
-		token = TokenKind::SUB_OP;
-	}
-	'*' => {
-		token = TokenKind::MUL_OP;
-	}
-	'/' => {
-		token = TokenKind::DIV_OP;
-	}
-	'(' => {
-		token = TokenKind::OPEN_PAREN;
-	}
-	')' => {
-		token = TokenKind::CLOSE_PAREN;
-	}
-	'$' => {
-		token = TokenKind::END_INPUT;
-	}
-	_ => {
-		if is_digit(self.c) {
-			token = TokenKind::DIGIT;
-		} else {
-			token = TokenKind::ILLEGAL;
+pub fn next_token(&mut self) -> TokenKind {
+	let token: TokenKind;
+	match self.c {
+		'+' => {
+			token = TokenKind::ADD_OP;
+		}
+		'-' => {
+			token = TokenKind::SUB_OP;
+		}
+		'*' => {
+			token = TokenKind::MUL_OP;
+		}
+		'/' => {
+			token = TokenKind::DIV_OP;
+		}
+		'(' => {
+			token = TokenKind::OPEN_PAREN;
+		}
+		')' => {
+			token = TokenKind::CLOSE_PAREN;
+		}
+		'$' => {
+			token = TokenKind::END_INPUT;
+		}
+		_ => {
+			if is_digit(self.c) {
+				token = TokenKind::DIGIT;
+			} else {
+				token = TokenKind::ILLEGAL;
+			}
 		}
 	}
-}
-...
+	self.read_char();
+	token
 ```
 I strictly follow the grammar rules so whitespaces are not ignored but instead considered as an invalid input.
 
-This method then returns the token type of the character or literal.
-```rust
-pub fn next_token(&mut self) -> TokenKind {
-	...
-	self.read_char();
-	token
-}
-```
 
 
 ### Coding the multi-digit decimal grammar
