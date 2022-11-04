@@ -20,7 +20,6 @@ kanban-plugin: basic
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] Think [[Think]]
-- [ ] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
 
 
 ## DOING
@@ -37,6 +36,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
 - [x] [[Problem Set 4]] @[[2022-10-28]]
 - [x] Grade/Score for the last three groups @[[2022-10-23]]
 - [x] Discussion Forum - Can a student invoke the Data Privacy Act of 2012 if he/she refuses to give a copy of his/her hardbound thesis manuscript to the department as required?
