@@ -18,3 +18,4 @@ Total Download Size:   109.39 MiB
 Total Installed Size:  471.29 MiB
 Net Upgrade Size:        8.02 MiB
 ```
+See [[012 Package Installs#2022-11-04]] for new package installed.
