@@ -235,10 +235,9 @@ class Parser:
         ...
 ```
 `__init__()` function initializes the class parser.
-- 
-	- `self.input` input string expression
-	- `self.paren_count` used for checking parenthesis grammar. Tallies `(`.
-	- `self.tokens` list of token types based on characters of the expression.
+- `self.input` input string expression
+- `self.paren_count` used for checking parenthesis grammar. Tallies `(`.
+- `self.tokens` list of token types based on characters of the expression.
 `parse()` function takes input string expression then returns `True` or `False` if the given expression is correct.
 `build_tokens()` creates a class object for the lexer and scans each character expression into token types. Notice that `Lexer.next_token()` function is looped.
 `consume()` function pops the first index of the list of tokens `self.tokens` and returns a token type.
@@ -328,7 +327,7 @@ print(par.parse("1+2*3$"))
 ```
 Or use a [test unit](https://github.com/KrulYuno/obsidian_files/blob/master/Codes/test_mp3_recursive_descent_parser_1.py) for validating inputs.
 
-Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.py
+Source Code for \#1: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.py
 
 ---
 I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
