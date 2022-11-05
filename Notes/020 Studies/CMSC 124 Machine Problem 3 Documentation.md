@@ -43,7 +43,7 @@ Terminate every input string with `‘$’`.
 | +9.99$                       | ++22.20$                       |
 | 33.369$                      | -5.4.2$                        |
 
-Solution: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.rs or 
+Solution: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.rs or https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=5e543b5c2d5cfbcca992ed1dfff6a6ff
 
 ---
 
