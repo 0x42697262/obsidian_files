@@ -5,9 +5,6 @@
 ----
 # CMSC 124 Machine Problem 3 Documentation
 
-To run the codes, install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) on your PC or use [Rust Playground](https://play.rust-lang.org/) on your web browser. See [[CMSC 124 Machine Problem 3]].
-
----
 Implement a **recursive-descent parser** for the following grammar rules:
 
 ### 1. Grammar rules for an arithmetic expression:
@@ -329,6 +326,9 @@ Create a parser object then input the expression in the `parse()` function as th
 par = Parser()
 print(par.parse("1+2*3$"))
 ```
+Or use a [test unit](https://github.com/KrulYuno/obsidian_files/blob/master/Codes/test_mp3_recursive_descent_parser_1.py) for validating inputs.
+
+Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.py
 
 ---
 I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
