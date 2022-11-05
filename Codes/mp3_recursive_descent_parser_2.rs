@@ -1,11 +1,12 @@
-// #[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq)]
 /*
  * GRAMMAR:
- *      <expr>    ::= +<num> | -<num> | <num>
- *      <num>     ::= <int> | <int>.<int> | .<int>
- *      <int>     ::= <digit><int_>
- *      <int_>    ::= <int> | ε
- *      <digit>   ::= 0|1|2|3|4|5|6|7|8|9
+ *  <expr>   ::= <term><expr_>
+ *  <expr_>  ::= +<term><expr_> | -<term><expr_> | ε
+ *  <term>   ::= <factor><term_>
+ *  <term_>  ::= *<factor><term_> | /<factor><term_> | ε
+ *  <factor> ::= (<expr>) |<digit>
+ *  <digit>  ::= 0|1|2|3
  *
  */
 
@@ -13,7 +14,7 @@
  * ====TOKENS====
  */
 pub enum TokenKind {
-    DIGITS(Vec<char>),
+    DIGITS(char),
     DECIMAL(char),
     POSITIVE(char),
     NEGATIVE(char),
@@ -51,9 +52,7 @@ impl Lexer {
     }
 
     pub fn read_char(&mut self) {
-        if self.read_pos >= self.input.len() {
-            self.c = '$';
-        } else {
+        if self.read_pos < self.input.len() {
             self.c = self.input[self.read_pos];
         }
         self.pos = self.read_pos;
@@ -61,14 +60,6 @@ impl Lexer {
     }
 
     pub fn next_token(&mut self) -> TokenKind {
-        let read_num = |lex: &mut Lexer| -> Vec<char> {
-            let pos = lex.pos;
-            while lex.pos < lex.input.len() && is_digit(lex.c) {
-                lex.read_char();
-            }
-            lex.input[pos..lex.pos].to_vec()
-        };
-
         let token: TokenKind;
         match self.c {
             '+' => {
@@ -85,8 +76,7 @@ impl Lexer {
             }
             _ => {
                 if is_digit(self.c) {
-                    let ident: Vec<char> = read_num(self);
-                    return TokenKind::DIGITS(ident);
+                    token = TokenKind::DIGITS(self.c);
                 } else {
                     token = TokenKind::ILLEGAL(self.c);
                 }
@@ -151,16 +141,14 @@ impl Parser {
     pub fn eof(&mut self) -> bool {
         true
     }
+
     pub fn illegal(&mut self) -> bool {
         false
     }
 
     pub fn expr(&mut self) -> bool {
         match self.tokens[self.token_pos] {
-            TokenKind::POSITIVE('+') => {
-                return self.operator();
-            }
-            TokenKind::NEGATIVE('-') => {
+            TokenKind::POSITIVE('+') | TokenKind::NEGATIVE('-') => {
                 return self.operator();
             }
             TokenKind::DIGITS(_) => {
@@ -190,6 +178,12 @@ impl Parser {
             TokenKind::DECIMAL('.') => {
                 return self.dot();
             }
+            TokenKind::END_INPUT('$') => {
+                return self.eof();
+            }
+            TokenKind::DIGITS(_) => {
+                return self.digits();
+            }
             _ => {
                 return self.illegal();
             }
@@ -214,6 +208,9 @@ impl Parser {
             TokenKind::END_INPUT('$') => {
                 return self.eof();
             }
+            TokenKind::DIGITS(_) => {
+                return self.decimals();
+            }
             _ => {
                 return self.illegal();
             }
@@ -224,9 +221,10 @@ impl Parser {
  * ====END PARSER====
  */
 fn main() {
+    // println!("{}", matches!(TokenKind::DIGITS(_), TokenKind::DIGITS('24')));
     let mut par = Parser::new();
 
-    println!("{}", par.parse(String::from("6$")));
+    println!("{}", par.parse(String::from("644$")));
     println!("{}", par.parse(String::from("-15.5$")));
     println!("{}", par.parse(String::from("+9.99$")));
     println!("{}", par.parse(String::from("33.369$")));
@@ -237,5 +235,6 @@ fn main() {
     println!("{}", par.parse(String::from("$")));
     println!("{}", par.parse(String::from("$2")));
     println!("{}", par.parse(String::from("4-$")));
+    println!("{}", par.parse(String::from("-$")));
     println!("{}", par.parse(String::from("4-+$")));
 }

@@ -25,6 +25,8 @@ Terminate every input string with `‘$’`.
 | (1-2)\*(3+1)$                | (4-1)\*3$                      |
 | 2/3$                         | 3/$                            |
 
+Solution: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.py
+
 ### 2. Grammar rules for a multi-digit decimal number
 ```
 <expr>   ::= +<num> | -<num> | <num>  
@@ -40,6 +42,8 @@ Terminate every input string with `‘$’`.
 | -15.5$                       | a33$                           |
 | +9.99$                       | ++22.20$                       |
 | 33.369$                      | -5.4.2$                        |
+
+Solution: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.rs or 
 
 ---
 
@@ -335,7 +339,7 @@ The same structure is used in writing the recursive-descent parser from the firs
 Create a token type or kind.
 ```rust
 pub enum TokenKind {
-    DIGITS(Vec<char>),
+    DIGITS(char),
     DECIMAL(char),
     POSITIVE(char),
     NEGATIVE(char),
@@ -380,9 +384,7 @@ impl Lexer {
     }
 
     pub fn read_char(&mut self) {
-        if self.read_pos >= self.input.len() {
-            self.c = '$';
-        } else {
+        if self.read_pos < self.input.len() {
             self.c = self.input[self.read_pos];
         }
         self.pos = self.read_pos;
@@ -390,14 +392,6 @@ impl Lexer {
     }
 
     pub fn next_token(&mut self) -> TokenKind {
-        let read_num = |lex: &mut Lexer| -> Vec<char> {
-            let pos = lex.pos;
-            while lex.pos < lex.input.len() && is_digit(lex.c) {
-                lex.read_char();
-            }
-            lex.input[pos..lex.pos].to_vec()
-        };
-
         let token: TokenKind;
         match self.c {
             '+' => {
@@ -414,8 +408,7 @@ impl Lexer {
             }
             _ => {
                 if is_digit(self.c) {
-                    let ident: Vec<char> = read_num(self);
-                    return TokenKind::DIGITS(ident);
+                    token = TokenKind::DIGITS(self.c);
                 } else {
                     token = TokenKind::ILLEGAL(self.c);
                 }
@@ -430,7 +423,6 @@ impl Lexer {
 `new()` takes the input expression and initializes the struct variables.
 `read_char()` method increments the token position and the next token to be read.
 `next_token()` method returns a token type `TokenKind` based on the current lexeme.
-- The `read_num` identifier is a [closure](https://doc.rust-lang.org/rust-by-example/fn/closures.html) for grouping digits into one token. 
 - Similarly in Python, I used [pattern matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html) as an alternative to switch cases.
 
 Next is to create a parser for the tokens. Similar method is used from the lexer by creating a stuct then implementing the struct.
@@ -487,16 +479,14 @@ impl Parser {
     pub fn eof(&mut self) -> bool {
         true
     }
+
     pub fn illegal(&mut self) -> bool {
         false
     }
 
     pub fn expr(&mut self) -> bool {
         match self.tokens[self.token_pos] {
-            TokenKind::POSITIVE('+') => {
-                return self.operator();
-            }
-            TokenKind::NEGATIVE('-') => {
+            TokenKind::POSITIVE('+') | TokenKind::NEGATIVE('-') => {
                 return self.operator();
             }
             TokenKind::DIGITS(_) => {
@@ -526,6 +516,12 @@ impl Parser {
             TokenKind::DECIMAL('.') => {
                 return self.dot();
             }
+            TokenKind::END_INPUT('$') => {
+                return self.eof();
+            }
+            TokenKind::DIGITS(_) => {
+                return self.digits();
+            }
             _ => {
                 return self.illegal();
             }
@@ -550,6 +546,9 @@ impl Parser {
             TokenKind::END_INPUT('$') => {
                 return self.eof();
             }
+            TokenKind::DIGITS(_) => {
+                return self.decimals();
+            }
             _ => {
                 return self.illegal();
             }
@@ -570,7 +569,7 @@ fn main() {
 }
 ```
 
-Source code for \#2: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.py
+Source code for \#2: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.rs
 
 ---
 I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
