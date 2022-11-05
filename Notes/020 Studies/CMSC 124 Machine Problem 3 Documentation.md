@@ -5,6 +5,9 @@
 ----
 # CMSC 124 Machine Problem 3 Documentation
 
+To run the code for item \#2, install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) or use [Rust Playground](https://play.rust-lang.org/) on your web browser.
+
+---
 Implement a **recursive-descent parser** for the following grammar rules:
 
 ### 1. Grammar rules for an arithmetic expression:
@@ -40,7 +43,7 @@ Terminate every input string with `‘$’`.
 
 ---
 
-### Rewriting the grammars
+## Rewriting the grammars
 The first grammar is left recursive and left factored, the non-terminals `<expr>` and `term` can be rewritten to:
 ```
 <expr>   ::= <term><expr_>
@@ -73,7 +76,7 @@ The second grammar needs to be written as it accepts the input `5.55.55` which s
 The new grammar would be:
 ```
 <expr>    ::= +<num> | -<num> | <num>  
-<num>     ::= <int> | <int>.<int>
+<num>     ::= <int> | <int>.<int> | .<int>
 <int>     ::= <digit><int_>
 <int_>    ::= <int> | ε
 <digit>   ::= 0|1|2|3|4|5|6|7|8|9
@@ -83,7 +86,7 @@ Both grammars now satisfy:
 1. Free from left recursion
 2. It is now left factored
 
-### Coding the arithmetic expression grammar
+## Coding the arithmetic expression grammar
 In building the lexer, I started listing the token kinds or types for the grammar first. This is needed for the lexer to identify the type of tokens.
 ```python
 TokenType = {
@@ -182,9 +185,6 @@ def next_token(self) -> str:
 ```
 I strictly follow the grammar rules so whitespaces are not ignored but instead considered as an invalid input.
 Python does not have switch statements but in Python 3.10, match exists which is similar to switch. See [PEP 636 – Structural Pattern Matching](https://peps.python.org/pep-0636/).
-
-
-### Coding the multi-digit decimal grammar
 
 A class `Parser` that checks if the expression is grammatically correct based on the tokens provided by the lexer `Lexer`.
 ```python
@@ -329,10 +329,253 @@ Or use a [test unit](https://github.com/KrulYuno/obsidian_files/blob/master/Code
 
 Source Code for \#1: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.py
 
+
+## Coding the multi-digit decimal number
+The same structure is used in writing the recursive-descent parser from the first grammar.
+Create a token type or kind.
+```rust
+pub enum TokenKind {
+    DIGITS(Vec<char>),
+    DECIMAL(char),
+    POSITIVE(char),
+    NEGATIVE(char),
+    END_INPUT(char),
+    ILLEGAL(char),
+}
+```
+In this case, the token types now accepts values unlike in Python.
+
+This method is used to check if a character is a digit.
+```rust
+fn is_digit(c: char) -> bool {
+    '0' <= c && c <= '9'
+}
+```
+
+Since Rust do not have classes, I use structs like in C language to create something similar to classes. See reason [here](https://doc.rust-lang.org/book/ch17-01-what-is-oo.html).
+```rust
+pub struct Lexer {
+    input: Vec<char>,
+    pub pos: usize,
+    pub read_pos: usize,
+    pub c: char,
+}
+```
+Similar structure to the Python code, `input` is the expression taken as vector of characters.
+`pos` current character position.
+`read_pos` next character position.
+`c` current character.
+See Rust [data types](https://doc.rust-lang.org/book/ch03-02-data-types.html) for more information about `usize` and `char`.
+
+This method implements the struct above that analyzes the tokens of each lexemes in the input expression.
+```rust
+impl Lexer {
+    pub fn new(input: Vec<char>) -> Self {
+        Self {
+            input,
+            pos: 0,
+            read_pos: 0,
+            c: '$',
+        }
+    }
+
+    pub fn read_char(&mut self) {
+        if self.read_pos >= self.input.len() {
+            self.c = '$';
+        } else {
+            self.c = self.input[self.read_pos];
+        }
+        self.pos = self.read_pos;
+        self.read_pos = self.read_pos + 1;
+    }
+
+    pub fn next_token(&mut self) -> TokenKind {
+        let read_num = |lex: &mut Lexer| -> Vec<char> {
+            let pos = lex.pos;
+            while lex.pos < lex.input.len() && is_digit(lex.c) {
+                lex.read_char();
+            }
+            lex.input[pos..lex.pos].to_vec()
+        };
+
+        let token: TokenKind;
+        match self.c {
+            '+' => {
+                token = TokenKind::POSITIVE('+');
+            }
+            '-' => {
+                token = TokenKind::NEGATIVE('-');
+            }
+            '.' => {
+                token = TokenKind::DECIMAL('.');
+            }
+            '$' => {
+                token = TokenKind::END_INPUT('$');
+            }
+            _ => {
+                if is_digit(self.c) {
+                    let ident: Vec<char> = read_num(self);
+                    return TokenKind::DIGITS(ident);
+                } else {
+                    token = TokenKind::ILLEGAL(self.c);
+                }
+            }
+        }
+
+        self.read_char();
+        token
+    }
+}
+```
+`new()` takes the input expression and initializes the struct variables.
+`read_char()` method increments the token position and the next token to be read.
+`next_token()` method returns a token type `TokenKind` based on the current lexeme.
+- The `read_num` identifier is a [closure](https://doc.rust-lang.org/rust-by-example/fn/closures.html) for grouping digits into one token. 
+- Similarly in Python, I used [pattern matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html) as an alternative to switch cases.
+
+Next is to create a parser for the tokens. Similar method is used from the lexer by creating a stuct then implementing the struct.
+```rust
+pub struct Parser {
+    input: String,
+    tokens: Vec<TokenKind>,
+    token_pos: usize,
+}
+```
+
+The parser does not take initialization inputs unlike the lexer, but it only initializes the needed variables.
+Similarly, `self.input` is the input expression taken as string.
+`self.tokens` is a vector of tokens acquired from the lexer `Lexer` through calling a self method `build_token()`.
+`self.token_pos` current token being read.
+```rust
+impl Parser {
+    pub fn new() -> Self {
+        Self {
+            input: String::new(),
+            tokens: Vec::new(),
+            token_pos: 0,
+        }
+    }
+
+    pub fn build_tokens(&mut self) {
+        let mut lex = Lexer::new(self.input.chars().collect());
+        lex.read_char();
+        loop {
+            let token: TokenKind = lex.next_token();
+            if lex.pos <= self.input.len() {
+                self.tokens.push(token);
+            } else {
+                break;
+            }
+        }
+    }
+
+    pub fn consume(&mut self) {
+        if self.token_pos < self.tokens.len() {
+            self.token_pos = self.token_pos + 1;
+        }
+    }
+
+    pub fn parse(&mut self, input: String) -> bool {
+        self.input = input;
+        self.tokens = Vec::new();
+        self.token_pos = 0;
+
+        self.build_tokens();
+        self.expr()
+    }
+
+    pub fn eof(&mut self) -> bool {
+        true
+    }
+    pub fn illegal(&mut self) -> bool {
+        false
+    }
+
+    pub fn expr(&mut self) -> bool {
+        match self.tokens[self.token_pos] {
+            TokenKind::POSITIVE('+') => {
+                return self.operator();
+            }
+            TokenKind::NEGATIVE('-') => {
+                return self.operator();
+            }
+            TokenKind::DIGITS(_) => {
+                return self.digits();
+            }
+            _ => {
+                return self.illegal();
+            }
+        }
+    }
+
+    pub fn operator(&mut self) -> bool {
+        self.consume();
+        match self.tokens[self.token_pos] {
+            TokenKind::DIGITS(_) => {
+                return self.digits();
+            }
+            _ => {
+                return self.illegal();
+            }
+        }
+    }
+
+    pub fn digits(&mut self) -> bool {
+        self.consume();
+        match self.tokens[self.token_pos] {
+            TokenKind::DECIMAL('.') => {
+                return self.dot();
+            }
+            _ => {
+                return self.illegal();
+            }
+        }
+    }
+
+    pub fn dot(&mut self) -> bool {
+        self.consume();
+        match self.tokens[self.token_pos] {
+            TokenKind::DIGITS(_) => {
+                return self.decimals();
+            }
+            _ => {
+                return self.illegal();
+            }
+        }
+    }
+
+    pub fn decimals(&mut self) -> bool {
+        self.consume();
+        match self.tokens[self.token_pos] {
+            TokenKind::END_INPUT('$') => {
+                return self.eof();
+            }
+            _ => {
+                return self.illegal();
+            }
+        }
+    }
+}
+
+```
+`self.consume()` method increments the current token from the vector `self.tokens`.
+`self.parse()` method takes an input string and starts the recursive-descent parsing that returns a boolean value based on the grammar.
+
+### How To Use?
+Create a parser then call `par.parse()` with string argument as the expression.
+```rust
+fn main() {
+    let mut par = Parser::new();
+    println!("{}", par.parse(String::from("6$")));
+}
+```
+
+Source code for \#2: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.py
+
 ---
 I was able to write the code for this machine problem thanks to [mohitk05's repository](https://github.com/mohitk05/monkey-rust) and a little reading of this [page](https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html) about writing static analyzer for rust.
 
 ---
-### Sources
+### References
 - https://mohitkarekar.com/posts/pl/lexer/
 - https://michael-f-bryan.github.io/static-analyser-in-rust/book/lex.html

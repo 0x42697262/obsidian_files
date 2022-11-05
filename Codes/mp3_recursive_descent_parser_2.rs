@@ -1,12 +1,11 @@
 // #[derive(Debug, PartialEq)]
 /*
  * GRAMMAR:
- *  <expr>   ::= <term><expr_>
- *  <expr_>  ::= +<term><expr_> | -<term><expr_> | ε
- *  <term>   ::= <factor><term_>
- *  <term_>  ::= *<factor><term_> | /<factor><term_> | ε
- *  <factor> ::= (<expr>) |<digit>
- *  <digit>  ::= 0|1|2|3
+ *      <expr>    ::= +<num> | -<num> | <num>
+ *      <num>     ::= <int> | <int>.<int> | .<int>
+ *      <int>     ::= <digit><int_>
+ *      <int_>    ::= <int> | ε
+ *      <digit>   ::= 0|1|2|3|4|5|6|7|8|9
  *
  */
 

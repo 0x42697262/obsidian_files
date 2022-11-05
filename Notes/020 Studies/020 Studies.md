@@ -33,4 +33,4 @@
 - [[Intellectual Property]]
 
 ## CMSC 194.1
-- [[CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)]]
+- [[CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)]][[CMSC 124 Machine Problem 3 Documentation]]

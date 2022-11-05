@@ -2,7 +2,10 @@ CMSC 124 Machine Problem 3
 **Topic Coverage**: Lexical and Syntax Analysis
 
 ---
- 
+
+To run the code for item \#2, install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) or use [Rust Playground](https://play.rust-lang.org/) on your web browser.
+
+---
 Implement a **recursive-descent parser** for the following grammar rules:
 
 ### 1. Grammar rules for an arithmetic expression:
@@ -72,7 +75,7 @@ The second grammar needs to be written as it accepts the input `5.55.55` which s
 The new grammar would be:
 ```
 <expr>    ::= +<num> | -<num> | <num>  
-<num>     ::= <int> | <int>.<int>
+<num>     ::= <int> | <int>.<int> | .<int>
 <int>     ::= <digit><int_>
 <int_>    ::= <int> | ε
 <digit>   ::= 0|1|2|3|4|5|6|7|8|9
