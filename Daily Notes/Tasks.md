@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
@@ -20,11 +19,11 @@ kanban-plugin: basic
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
+- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 
 
 ## DOING
 
-- [ ] [[Machine Problem 3]] @[[2022-11-04]]
 
 
 ## Postponed
@@ -36,6 +35,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Machine Problem 3]] @[[2022-11-04]]
 - [x] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
 - [x] [[Problem Set 4]] @[[2022-10-28]]
 - [x] Grade/Score for the last three groups @[[2022-10-23]]
