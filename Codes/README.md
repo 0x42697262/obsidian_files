@@ -7,9 +7,9 @@ Souce code for [[CMSC 124 Machine Problem 2]] and its documentation [[CMSC 124 M
 #### [CMSC 142 Problem Set 1.cpp](CMSC%20142%20Problem%20Set%201.cpp)
 No documentation. Just need to calculate the T(n).
 
-#### [mp3_recursive_descent_parser_1.py](mp3_recursive_descent_parser_1.py)
+#### [mp3_recursive_descent_parser_1.rs](mp3_recursive_descent_parser_1.rs)
 Source code for [[CMSC 124 Machine Problem 3#Coding the arithmetic expression grammar]] and [[CMSC 124 Machine Problem 3 Documentation|documentation]].
 
 #### [mp3_recursive_descent_parser_2.rs](mp3_recursive_descent_parser_2.rs)
-Source code for [[CMSC 124 Machine Problem 3]] and [[CMSC 124 Machine Problem 3 Documentation|documentation]].
+Source code for [[CMSC 124 Machine Problem 3#Coding the multi-digit decimal grammar]] and [[CMSC 124 Machine Problem 3 Documentation|documentation]].
 
