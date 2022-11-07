@@ -25,6 +25,7 @@ Terminate every input string with `‘$’`.
 | (1-2)\*(3+1)$                | (4-1)\*3$                      |
 | 2/3$                         | 3/$                            |
 
+Solution: https://replit.com/@KrulYuno/CMSC124-Machine-Problem-31#main.rs or https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_1.rs
 
 ### 2. Grammar rules for a multi-digit decimal number
 ```
@@ -90,6 +91,137 @@ Both grammars now satisfy:
 2. It is now left factored
 
 ## Implementing The Grammars
+### Coding the arithmetic expression grammar
+Create token types for the lexemes. Each token types takes one character input except `None` since it is not part of the grammar tokens.
+```rust
+pub enum TokenType {
+    Integer(char),
+    Operator(char),
+    Parenthesis(char),
+    Illegal(char),
+    End(char),
+    None,
+}
+```
+
+Create a method for tokenzing the lexemes based on the token type enum `TokenType`.
+```rust
+fn lex(lexeme: char) -> TokenType {
+    match lexeme {
+        '+' | '-' | '*' | '/' => return TokenType::Operator(lexeme),
+        '0'..='3' => return TokenType::Integer(lexeme),
+        '(' => return TokenType::Parenthesis('('),
+        ')' => return TokenType::Parenthesis(')'),
+        '$' => return TokenType::End('$'),
+        _ => return TokenType::Illegal(lexeme),
+    }
+}
+```
+Takes a character and matches the lexeme to its token type. 
+Rust's [Pattern Matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html) is similar to C++ switch statements.
+
+Define a parser [struct](https://doc.rust-lang.org/book/ch05-01-defining-structs.html.
+```rust
+pub struct Parser {
+    input: String,
+    pos: usize,
+    token: TokenType,
+}
+```
+`input` string expression input.
+`pos` index of the token type of the lexeme.
+`token` token type of the lexeme.
+
+Implement parser struct by instantiating it through `new()` method.
+`parse()` takes string expression as input argument and proceeds to execute recursive-descent parsing.
+`next()` increments `pos` index.
+```rust
+impl Parser {
+    pub fn new() -> Self {
+        Self {
+            input: String::new(),
+            pos: 0,
+            token: TokenType::None,
+        }
+    }
+
+    pub fn parse(&mut self, input: String) -> bool {
+        self.input = input;
+        self.pos = 0;
+        self.token = lex(self.input.chars().nth(self.pos).unwrap());
+
+        self.next();
+        self.expr();
+
+        if matches!(self.token, TokenType::End('$')) && self.pos - 1 == self.input.len() - 1 {
+            println!("VALID EXPRESSION: {}", self.input);
+            return true;
+        } else {
+            panic!("Expected '$'");
+        }
+    }
+
+    pub fn next(&mut self) {
+        if self.pos < self.input.len() {
+            self.token = lex(self.input.chars().nth(self.pos).unwrap());
+            self.pos = self.pos + 1;
+        }
+    }
+
+    pub fn expr(&mut self) {
+        self.term();
+        self.expr_();
+    }
+
+    pub fn expr_(&mut self) {
+        if matches!(self.token, TokenType::Operator('+'))
+            || matches!(self.token, TokenType::Operator('-'))
+        {
+            self.next();
+            self.term();
+            self.expr_();
+        }
+    }
+
+    pub fn term(&mut self) {
+        self.factor();
+        self.term_();
+    }
+
+    pub fn term_(&mut self) {
+        if matches!(self.token, TokenType::Operator('*'))
+            || matches!(self.token, TokenType::Operator('/'))
+        {
+            self.next();
+            self.factor();
+            self.term_();
+        }
+    }
+
+    pub fn factor(&mut self) {
+        if matches!(self.token, TokenType::Integer(_)) {
+            self.next();
+        } else if matches!(self.token, TokenType::Parenthesis('(')) {
+            self.next();
+            self.expr();
+
+            if matches!(self.token, TokenType::Parenthesis(')')) {
+                self.next();
+            } else {
+                self.illegal(String::from("Expected (<expr>)"));
+            }
+        } else {
+            self.illegal(String::from("Expected (<expr>) or <digit>"));
+        }
+    }
+
+    pub fn illegal(&mut self, error: String) {
+        panic!("Invalid expression: {}", error);
+    }
+}
+```
+
+### Coding the multi-digit decimal grammar
 
 ---
 ### References
