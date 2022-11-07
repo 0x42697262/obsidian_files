@@ -1,11 +1,11 @@
 > [!INFO]
-> Status: #WIP
+> Status: #DONE
 > Tags: #CMSC124 #Machine_Problem 
 
 ----
 # CMSC 124 Machine Problem 3 Documentation
 
-To run the code for item \#2, install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) or use [Rust Playground](https://play.rust-lang.org/) on your web browser.
+Install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) or use [Rust Playground](https://play.rust-lang.org/) on your web browser.
 
 ---
 Implement a **recursive-descent parser** for the following grammar rules:
@@ -43,7 +43,7 @@ Terminate every input string with `‘$’`.
 | +9.99$                       | ++22.20$                       |
 | 33.369$                      | -5.4.2$                        |
 
-
+Solution: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp3_recursive_descent_parser_2.rs or https://replit.com/@KrulYuno/CMSC124-Machine-Problem-32#src/main.rs
 
 ---
 
@@ -79,11 +79,10 @@ The second grammar needs to be written as it accepts the input `5.55.55` which s
 ```
 The new grammar would be:
 ```
-<expr>    ::= +<num> | -<num> | <num>  
-<num>     ::= <int> | <int>.<int> | .<int>
-<int>     ::= <digit><int_>
-<int_>    ::= <int> | ε
-<digit>   ::= 0|1|2|3|4|5|6|7|8|9
+<expr>   ::= +<num> | -<num> | <num>  
+<num>    ::= <digit><num> | .<int> | <digit>
+<int>    ::= <digit><int> | <digit>
+<digit>  ::= 0|1|2|3|4|5|6|7|8|9
 ```
 
 Both grammars now satisfy:
@@ -220,8 +219,134 @@ impl Parser {
     }
 }
 ```
+This implementation does not ignore whitespaces so they get treated as an illegal character.
 
 ### Coding the multi-digit decimal grammar
+Implementing the recursive-descent parser is similar to the previous grammar's implemention with minor changes.
+
+This parser uses different token types but some remains the same.
+```rust
+pub enum TokenType {
+    Digit(char),
+    Dot(char),
+    Sign(char),
+    Illegal(char),
+    End(char),
+    None,
+}
+```
+
+The lexer has similar structure but modified to follow the tokenization.
+```rust
+fn lex(lexeme: char) -> TokenType {
+    match lexeme {
+        '0'..='9' => {
+            return TokenType::Digit(lexeme);
+        }
+        '+' | '-' => {
+            return TokenType::Sign(lexeme);
+        }
+        '.' => {
+            return TokenType::Dot('.');
+        }
+        '$' => {
+            return TokenType::End('$');
+        }
+        _ => {
+            return TokenType::Illegal(lexeme);
+        }
+    }
+}
+```
+
+Same struct for the parser initializers
+```rust
+pub struct Parser {
+    input: String,
+    pos: usize,
+    token: TokenType,
+}
+```
+
+Then implement the struct parser.
+```rust
+impl Parser {
+    pub fn new() -> Self {
+        Self {
+            input: String::new(),
+            pos: 0,
+            token: TokenType::None,
+        }
+    }
+
+    pub fn parse(&mut self, input: String) -> bool {
+        self.input = input;
+        self.pos = 0;
+        self.token = lex(self.input.chars().nth(self.pos).unwrap());
+
+        self.next();
+        self.expr();
+
+        if matches!(self.token, TokenType::End('$')) && self.pos - 1 == self.input.len() - 1 {
+            println!("VALID EXPRESSION: {}", self.input);
+            return true;
+        } else {
+            println!("INVALID EXPRESSION: {}", self.input);
+            return false;
+        }
+    }
+
+    pub fn next(&mut self) {
+        if self.pos < self.input.len() {
+            self.token = lex(self.input.chars().nth(self.pos).unwrap());
+            self.pos = self.pos + 1;
+        } else {
+            self.token = TokenType::None;
+        }
+    }
+
+    pub fn expr(&mut self) {
+        if matches!(self.token, TokenType::Digit(_)) || matches!(self.token, TokenType::Dot('.')) {
+            self.num();
+        } else if matches!(self.token, TokenType::Sign(_)) {
+            self.next();
+            self.num();
+        } else {
+            self.illegal(String::from("Expected +<num>, -<num>, or <num>"));
+        }
+    }
+
+    pub fn num(&mut self) {
+        if matches!(self.token, TokenType::Digit(_)) {
+            self.next();
+            self.num();
+        } else if matches!(self.token, TokenType::Dot('.')) {
+            self.next();
+            if matches!(self.token, TokenType::End('$')) {
+                panic!("Expected <digit>, not $");
+            }
+            self.int();
+        } else if matches!(self.token, TokenType::End('$')) {
+        } else {
+            panic!("Expected <digit>");
+        }
+    }
+
+    pub fn int(&mut self) {
+        if matches!(self.token, TokenType::Digit(_)) {
+            self.next();
+            self.int();
+        } else if matches!(self.token, TokenType::End('$')) {
+        } else {
+            panic!("Expected <digit>");
+        }
+    }
+
+    pub fn illegal(&mut self, error: String) {
+        panic!("Invalid Expression: {}", error);
+    }
+}
+```
 
 ---
 ### References
