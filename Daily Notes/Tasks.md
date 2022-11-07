@@ -16,10 +16,10 @@ kanban-plugin: basic
 
 ## Will Do
 
+- [ ] Think [[Think]] @[[2022-11-09]]
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
-- [ ] Think [[Think]]
 
 
 ## DOING
