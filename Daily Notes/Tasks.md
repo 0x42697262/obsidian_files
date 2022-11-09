@@ -6,30 +6,31 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
+- [ ] [[Class Project @2022-11-18]]
+- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
-- [ ] [[Class Project @2022-11-18]]
 
 
 ## Will Do
 
-- [ ] Think [[Think]] @[[2022-11-09]]
-- [ ] [[Mastery Quiz  Process Models]]
-- [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
+- [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
+- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 
 
 ## DOING
 
+- [ ] ALL CMSC 128 TASKS
+- [ ] Mastery Quiz: Agile Development
+- [ ] [[Mastery Quiz  Process Models]]
+- [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
 
 ## Postponed
 
-- [ ] ALL CMSC 128 TASKS
-- [ ] [[May the for be with you - version 1]] @[[2022-10-26]]
 
 
 ## DONE
