@@ -70,7 +70,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily Notes/2022-10-29.md",
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#WIP",
+                "query": "tag:#2022-11-08",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -125,7 +125,7 @@
             }
           },
           {
-            "id": "49296c1dd7c4de6e",
+            "id": "c40d7ef376ccd36e",
             "type": "leaf",
             "state": {
               "type": "file-tree-view",
@@ -137,8 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -154,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/2022-10-29.md",
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/2022-10-29.md",
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -194,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/2022-10-29.md"
+                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md"
               }
             }
           },
@@ -224,15 +223,15 @@
   },
   "active": "3973d05ed7771632",
   "lastOpenFiles": [
-    "Daily Notes/Non Zero Day.md",
     "Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "Notes/010 My Arch Journey/014 User Changes.md",
-    "Notes/010 My Arch Journey/013 System Changes.md",
     "Notes/010 My Arch Journey/012 Package Installs.md",
     "Notes/010 My Arch Journey/011 Pacman Updates.md",
     "Notes/__index/000 Index.md",
-    "Daily Notes/Tasks.md",
-    "Daily Notes/2022-10-27.md",
-    "Notes/__orphans/PicoCTF - GET aHEAD.md"
+    "Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
+    "Notes/020 Studies/020 Studies.md",
+    "Notes/020 Studies/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
+    "Notes/010 My Arch Journey/etc - Touchpad.md",
+    "Notes/010 My Arch Journey/016 Notes.md",
+    "Notes/010 My Arch Journey/014 User Changes.md"
   ]
 }

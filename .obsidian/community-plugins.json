@@ -1,6 +1,5 @@
 [
   "quick-explorer",
-  "file-tree-alternative",
   "obsidian-enhancing-export",
   "obsidian-excalidraw-plugin",
   "oz-clear-unused-images",
@@ -9,5 +8,7 @@
   "calendar",
   "better-word-count",
   "obsidian-kanban",
-  "obsidian-outliner"
+  "obsidian-outliner",
+  "dataview",
+  "file-tree-alternative"
 ]

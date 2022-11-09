@@ -23,6 +23,76 @@
         "viewType": "reading",
         "tableCacheVersion": 431
       }
+    },
+    "Notes/020 Studies/CMSC 124 Machine Problem 3.md": {
+      "eJvgKw": {
+        "data": {
+          "headers": [
+            {
+              "id": "2de6884f-b5a4-45b2-9e75-d90d5c33b7e3",
+              "content": "Valid Input String Examples:",
+              "sortDir": "default",
+              "width": "100px",
+              "shouldWrapOverflow": true,
+              "useAutoWidth": false,
+              "type": "text"
+            },
+            {
+              "id": "b3e1cbe9-5b83-495d-83cd-5e6f6f397e14",
+              "content": "Invalid Input String Examples:",
+              "sortDir": "default",
+              "width": "100px",
+              "shouldWrapOverflow": true,
+              "useAutoWidth": false,
+              "type": "text"
+            }
+          ],
+          "rows": [
+            {
+              "id": "8515bb8b-8327-4801-9214-6ca6a760a917",
+              "creationTime": 1667171529599
+            },
+            {
+              "id": "3c585b39-55f4-4e0c-ba01-c5b83cad3415",
+              "creationTime": 1667171548055
+            }
+          ],
+          "cells": [
+            {
+              "id": "85e34c6f-1d6d-4b69-a47e-c48a21fc2e81",
+              "headerId": "2de6884f-b5a4-45b2-9e75-d90d5c33b7e3",
+              "rowId": "8515bb8b-8327-4801-9214-6ca6a760a917",
+              "type": "text",
+              "content": ""
+            },
+            {
+              "id": "6e0f2383-ab27-4ca7-998d-ee34773a0ac8",
+              "headerId": "b3e1cbe9-5b83-495d-83cd-5e6f6f397e14",
+              "rowId": "8515bb8b-8327-4801-9214-6ca6a760a917",
+              "type": "text",
+              "content": ""
+            },
+            {
+              "id": "a98fef7a-9c6c-4ccb-a760-9eb64b12ed3b",
+              "headerId": "2de6884f-b5a4-45b2-9e75-d90d5c33b7e3",
+              "rowId": "3c585b39-55f4-4e0c-ba01-c5b83cad3415",
+              "type": "text",
+              "content": ""
+            },
+            {
+              "id": "b2afab33-fd6b-43a7-8b28-294fcecd1a4e",
+              "headerId": "b3e1cbe9-5b83-495d-83cd-5e6f6f397e14",
+              "rowId": "3c585b39-55f4-4e0c-ba01-c5b83cad3415",
+              "type": "text",
+              "content": ""
+            }
+          ],
+          "tags": []
+        },
+        "viewType": "reading",
+        "shouldUpdate": true,
+        "tableCacheVersion": 431
+      }
     }
   },
   "sectionInfo": {
