@@ -1,5 +1,4 @@
 > [!INFO]
-> Status:
 > Tags: #index
 
 ----
