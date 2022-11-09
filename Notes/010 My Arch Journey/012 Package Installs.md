@@ -5,6 +5,15 @@
 ----
 # 012 Package Installs
 
+## 2022-11-09
+`pacman -S p7zip`
+```sh
+Packages (1) p7zip-1:17.04-3
+
+Total Download Size:    2.58 MiB
+Total Installed Size:  11.21 MiB
+```
+
 ## 2022-11-04
 `paru -S code`
 ```sh

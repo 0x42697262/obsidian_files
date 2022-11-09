@@ -5,6 +5,24 @@
 ----
 # 011 Pacman Updates
 
+## 2022-11-09
+```sh
+Packages (28) btop-1.2.13-1  cryptsetup-2.5.0-4  gettext-0.21.1-2  gnutls-3.7.8-2  guile-2.2.7-3
+              iso-codes-4.12.0-1  kitty-0.26.5-1  kitty-shell-integration-0.26.5-1
+              kitty-terminfo-0.26.5-1  lib32-libidn2-2.3.4-2  lib32-libpsl-0.21.1-3
+              lib32-libunistring-1.1-1  lib32-mesa-22.2.2-1  libappindicator-gtk3-12.10.0.r298-1
+              libidn2-2.3.4-3  libnma-1.10.4-1  libnma-common-1.10.4-1  libpsl-0.21.1-3
+              libunistring-1.1-2  mesa-22.2.2-1  mobile-broadband-provider-info-20221107-1
+              nodejs-nopt-7.0.0-1  nvtop-3.0.1-1  qt5-base-5.15.7+kde+r170-1
+              qt5-declarative-5.15.7+kde+r21-1  shadow-4.11.1-4  unicode-cldr-annotations-41.0-1
+              xdg-utils-1.1.3+25+g8ae0263-1
+
+Total Download Size:    64.25 MiB
+Total Installed Size:  370.64 MiB
+Net Upgrade Size:        0.19 MiB
+```
+Installed `p7zip`. Check [[012 Package Installs#2022-11-09]]
+
 ## 2022-11-06
 ```sh
 Packages (67) alsa-card-profiles-1:0.3.59-5  android-file-transfer-4.2-3  coreutils-9.1-3  cpupower-6.0-2  cryptsetup-2.5.0-3  curl-7.86.0-3  dotnet-host-6.0.10.sdk110-2  dotnet-runtime-6.0.10.sdk110-2
@@ -20,6 +38,7 @@ Total Download Size:   2125.23 MiB
 Total Installed Size:  7022.22 MiB
 Net Upgrade Size:      5442.88 MiB
 ```
+Installed `cuda`
 
 ## 2022-11-04
 ```sh
