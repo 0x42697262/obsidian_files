@@ -39,7 +39,7 @@ TOKEN_DEFINITION = {
         }
 
 TOKEN_KEYWORD = {
-        'syntax'     :  ["if", "else", "while", "for", "cout", "cin", "return"],
+        'strict'     :  ["if", "else", "while", "for", "cout", "cin", "return"],
         'brackets'   :  ['(', ')', '{', '}', '[', ']'],
         'data_types' :  ["int", "float", "char", "string", "bool", "void"],
         'arithmetic' :  ['+', '-', '/', '*'],
@@ -47,13 +47,18 @@ TOKEN_KEYWORD = {
         } 
 
 class Lexer:
-    def __init__(self, expression) -> None:
-        self.expression = expression
+    def __init__(self) -> None:
+        pass
 
 
 class Parser:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, expression: str) -> None:
+        self.expression = expression
+        print(self.expression)
+
+    def tokenize(self) -> None:
+        lex = Lexer()
+        
 
 
 def main():
@@ -64,7 +69,8 @@ def main():
     for _ in range(lines):
         expression += input()
 
-    print(expression)
+    p = Parser(expression)
+    p.tokenize()
 
 
 if __name__ == "__main__":
