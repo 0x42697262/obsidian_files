@@ -1,5 +1,4 @@
 > [!INFO]
-> Status:
 > Tags: #arch #arch_user_changes 
 
 ----
