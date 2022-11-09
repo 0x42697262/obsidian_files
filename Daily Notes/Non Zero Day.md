@@ -1,4 +1,12 @@
 
+## 2022-11-09
+Today's Daily Note: [[2022-11-09]]
+- [ ] Read **CompTIA Security+ SY0-031** book
+- [ ] Finish **DICT Python Course** (Certification)
+- [ ] Play some **CTFs**
+	- [ ] PicoCTF
+		- [ ] Primer 
+
 ## 2022-11-08
 Today's Daily Note: [[2022-11-08]]
 - [ ] Read **CompTIA Security+ SY0-031** book
