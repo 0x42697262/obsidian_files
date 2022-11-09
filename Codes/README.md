@@ -14,4 +14,4 @@ Source code for [[CMSC 124 Machine Problem 3#Coding the arithmetic expression gr
 Source code for [[CMSC 124 Machine Problem 3#Coding the multi-digit decimal grammar]] and [[CMSC 124 Machine Problem 3 Documentation|documentation]].
 
 ### [may_the_for_be_with_you_v1.py](may_the_for_be_with_you_v1.py)
-Collaboration source code for [[CMSC 142 May the for be with you - version 1]].
+Collaboration source code for [[CMSC 142 Machine Problem 1]].
