@@ -23,7 +23,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 - [ ] Annotated Bibliography (RioT)
 
@@ -38,6 +37,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [x] [[Machine Problem 3]] @[[2022-11-04]]
 - [x] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
 - [x] [[Problem Set 4]] @[[2022-10-28]]
