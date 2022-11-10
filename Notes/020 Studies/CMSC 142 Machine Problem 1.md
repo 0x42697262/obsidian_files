@@ -59,3 +59,13 @@ int x = 10, y = 8, z = -2;x = x + y;y = x - y;x = x - y;z = x + y;
 
 T(n) = 11
 
+As for the `for-loop`, maybe a different approach would be needed. Like, check the keyword `for`, then `statement`, then the scope `{}`, and even include if `else` if the `if-else` exist.
+
+```rust
+for(int i=0; i<n; i++){
+sum += i;
+}
+```
+If splitting it by `;`, then the result would be `['for(int i=0', ' i<n', ' i++){sum += i', '}']`.
+
+This looks annoying so parse it line by line instead. Just like how it's intended...
