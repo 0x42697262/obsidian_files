@@ -1,6 +1,9 @@
 """
 Reference:
     https://github.com/huzaifamaw/Lexical_Analyzer-Parser_Implemented-in-Python/blob/master/main.py
+
+Note:
+    https://github.com/KrulYuno/obsidian_files/blob/master/Notes/020%20Studies/CMSC%20142%20Machine%20Problem%201.md
 """
 
 import re
@@ -47,18 +50,19 @@ TOKEN_KEYWORD = {
         } 
 
 class Lexer:
-    def __init__(self) -> None:
+    def __init__(self, expression) -> None:
+        self._tokens = list()
+
+            
+    def tokenize(self) -> None:
         pass
 
 
 class Parser:
     def __init__(self, expression: str) -> None:
-        self.expression = expression
+        self.expression:str = expression
+        self.lex = Lexer(self.expression)
         print(self.expression)
-
-    def tokenize(self) -> None:
-        lex = Lexer()
-        
 
 
 def main():
@@ -70,7 +74,6 @@ def main():
         expression += input()
 
     p = Parser(expression)
-    p.tokenize()
 
 
 if __name__ == "__main__":
