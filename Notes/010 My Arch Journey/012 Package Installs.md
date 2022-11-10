@@ -23,6 +23,13 @@ Total Download Size:    35.91 MiB
 Total Installed Size:  172.65 MiB
 ```
 
+TimeShift scheduled backups require the cronie.service to be running.
+Try:
+  `systemctl enable --now cronie.service`
+Optional dependencies for timeshift
+    btrfs-progs: BTRFS support [installed]
+    grub-btrfs: BTRFS snapshots in grub
+
 ## 2022-11-09
 `pacman -S p7zip`
 ```sh
