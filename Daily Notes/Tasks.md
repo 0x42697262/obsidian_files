@@ -16,21 +16,21 @@ kanban-plugin: basic
 ## Will Do
 
 - [ ] [[First Long Exam @2022-11-04]]
-- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 
 
 ## DOING
 
-- [ ] ALL CMSC 128 TASKS
-- [ ] Mastery Quiz: Agile Development
-- [ ] [[Mastery Quiz  Process Models]]
+- [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
 
 ## Postponed
 
+- [ ] ALL CMSC 128 TASKS
+- [ ] [[Mastery Quiz  Process Models]]
+- [ ] Mastery Quiz: Agile Development
 
 
 ## DONE
