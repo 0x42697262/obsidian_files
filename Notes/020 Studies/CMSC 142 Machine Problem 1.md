@@ -32,6 +32,30 @@ We need to parse this.
 ```bnf
 <expression>  ::=  <type><variable>
 <variable>    ::=  <identifier><assignment><_next>
-<assignment>  ::=  <ASSIGN><value> | ε
+<assignment>  ::=  =<value> | ε
 <_next>       ::=  ; | ,<variable>
+<type>        ::=  int | float | char | string | bool | void
+<identifier>  ::=  [a-zA-Z] [a-zA-Z0-9_]*
+<value>       ::= <arithmetic_expression>
 ```
+Source for `<identifier>`: https://mc-stan.org/docs/2_22/reference-manual/bnf-grammars.html
+
+This should read simple statements like:
+```c++
+int x = 10, y = 8, z = -2;
+x = x + y; 
+```
+
+Do we really need to tokenize it properly? What if just take the string input up until `;`? Then count the T(n)'s? Since we assume that the input is correct.
+In this case take this expression and consume the first `;`:
+```c++
+int x = 10, y = 8, z = -2;x = x + y;y = x - y;x = x - y;z = x + y;
+```
+`int x = 10, y = 8, z = -2;` T(n) = 3
+`x = x + y;` T(n) = 2
+`y = x - y;` T(n) = 2
+`x = x - y;` T(n) = 2
+`z = x + y;` T(n) = 2
+
+T(n) = 11
+
