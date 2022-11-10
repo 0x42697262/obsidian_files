@@ -12,6 +12,15 @@ Repo Make (25) docbook-xml-4.5-9  docbook-xsl-1.79.2-7  glib2-docs-2.74.1-1  pyt
     libyuv-r2322+3aebf69d-1  libavif-0.11.1-1  libde265-1.0.9-1  libheif-1.13.0-2  gd-2.3.3-5  jbig2dec-0.19-1  libpaper-1.1.28-2  ijs-0.35-4  poppler-data-0.4.11-2  ghostscript-10.0.0-2  netpbm-10.73.37-2  
     gts-0.7.6.121130-2  gsfonts-20200910-2  graphviz-7.0.1-1  vala-0.56.3-1  gcab-1.5-1  appstream-glib-0.8.2-1
 Aur (1) timeshift-22.06.5+12+g92ad80c-2
+
+
+Packages (35) appstream-glib-0.8.2-1  cronie-1.6.1-1  docbook-xml-4.5-9  docbook-xsl-1.79.2-7  gcab-1.5-1  gd-2.3.3-5  ghostscript-10.0.0-2  glib2-docs-2.74.1-1  graphviz-7.0.1-1  gsfonts-20200910-2
+              gtk-doc-1.33.2-1  gts-0.7.6.121130-2  ijs-0.35-4  jbig2dec-0.19-1  libavif-0.11.1-1  libde265-1.0.9-1  libgee-0.20.6-1  libgnomekbd-1:3.28.1-1  libheif-1.13.0-2  libpaper-1.1.28-2
+              libsoup-2.74.3-1  libxklavier-5.4-3  libyuv-r2322+3aebf69d-1  netpbm-10.73.37-2  poppler-data-0.4.11-2  python-anytree-2.8.0-5  python-lxml-4.9.1-1  python-pygments-2.13.0-1  python-six-1.16.0-6
+              rsync-3.2.7-2  run-parts-5.5-1  vala-0.56.3-1  vte-common-0.70.1-1  vte3-0.70.1-1  xapp-2.2.15-1
+
+Total Download Size:    35.91 MiB
+Total Installed Size:  172.65 MiB
 ```
 
 ## 2022-11-09
