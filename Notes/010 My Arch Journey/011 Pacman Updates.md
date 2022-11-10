@@ -4,6 +4,17 @@
 ----
 # 011 Pacman Updates
 
+## 2022-11-10
+```sh
+Packages (11) btrfs-progs-6.0.1-1  hwdata-0.364-1  libnma-1.10.4-3  libnma-common-1.10.4-3  network-manager-applet-1.30.0-1  nm-connection-editor-1.30.0-1  popt-1.19-1  qt5-base-5.15.7+kde+r173-1
+              shadow-4.12.3-1  texinfo-7.0-1  wpa_supplicant-2:2.10-7
+
+Total Download Size:    21.07 MiB
+Total Installed Size:  102.71 MiB
+Net Upgrade Size:        0.90 MiB
+```
+I will install `timeshift`. Check [[012 Package Installs#2022-11-10]]
+
 ## 2022-11-09
 ```sh
 Packages (28) btop-1.2.13-1  cryptsetup-2.5.0-4  gettext-0.21.1-2  gnutls-3.7.8-2  guile-2.2.7-3
