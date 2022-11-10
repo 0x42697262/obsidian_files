@@ -6,24 +6,26 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Class Project @2022-11-18]]
 - [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
-- [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 
 
 ## Will Do
 
+- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
+- [ ] [[Class Project @2022-11-18]]
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
-- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
+- [ ] [[Machine Problem 4]] @[[2022-12-02]]
+- [ ] please check cmsc124 group reporting
 
 
 ## DOING
 
 - [ ] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
+- [ ] Annotated Bibliography (RioT)
 
 
 ## Postponed
