@@ -17,6 +17,16 @@ TOKEN_TYPE = {
         ')'     :  'CLOSE_PAREN',
         'if'    :  'KEYWORD',
         'else'  :  'KEYWORD',
+        'for'   :  'KEYWORD',
+        'int'   :  'DATA_TYPE',
+        'float' :  'DATA_TYPE',
+        'char'  :  'DATA_TYPE',
+        'void'  :  'DATA_TYPE',
+        'bool'  :  'DATA_TYPE',
+        'var'   :  'IDENTIFIER',
+        '='     :  'ASSIGN',
+        ';'     :  'EQUAL',
+        ','     :  'COMMA',
         }
 
 counts = ['+', '-', '*', '/', '%', '++', '--', '==', '!=',
@@ -59,20 +69,25 @@ class Lexer:
 
     def compound_stmt(self):
         if self.peek() == '{':
+            self.insert_token(TOKEN_TYPE['('])
             self.next()
             self.statement()
 
             if self.peek() == '}':
+                self.insert_token(TOKEN_TYPE[')'])
                 self.next()
        
     def conditional_statement(self):
         if self.peek() == 'i' and self.peek(2) == 'f':
+            self.insert_token(TOKEN_TYPE['if'])
             self.next(2)
             if self.peek() == '(':
+                self.insert_token(TOKEN_TYPE['('])
                 self.next()
                 self.expression()
 
                 if self.peek() == ')':
+                    self.insert_token(TOKEN_TYPE[')'])
                     self.next()
                     self.statement()
     
@@ -80,21 +95,46 @@ class Lexer:
         if self.peek() == 'f' \
             and self.peek(2) == 'o' \
             and self.peek(3) == 'r':
+                self.insert_token(TOKEN_TYPE['for'])
                 self.next(3)
 
                 if self.peek() == '(':
+                    self.insert_token(TOKEN_TYPE['('])
                     self.next()
                     self.expression()
 
                     if self.peek() == ')':
+                        self.insert_token(TOKEN_TYPE[')'])
                         self.next()
                         self.statement()
 
     def return_statement(self):
-        pass
+        pass 
 
     def var_definition(self):
-        pass
+        if self.peek() == 'i' \
+            and self.peek(2) == 'n' \
+            and self.peek(3) == 't':
+                self.insert_token(TOKEN_TYPE['int'])
+                self.next(3)
+                print(f"--- '{self.expr[self.cursor]}'" , self.peek())
+                self.read_identifier()
+                print(f"--- '{self.expr[self.cursor]}'" , self.peek())
+                match self.peek():
+                    case ';':
+                        self.insert_token(TOKEN_TYPE[';'])
+                        self.next()
+
+                    case '=':
+                        self.insert_token(TOKEN_TYPE['='])
+                        self.next()
+                        self.expression()
+
+                    case ',':
+                        self.insert_token(TOKEN_TYPE[','])
+                        self.next()
+
+                
 
     def expression_statement(self):
         pass
@@ -105,6 +145,17 @@ class Lexer:
     def expression(self):
         pass
 
+
+    def read_identifier(self):
+        # "int [abc ]= 2;"
+        # lol this accepts any character except space so assume all inputs are correct
+        while self.peek().isalnum():
+            self.cursor += 1
+        self.cursor += 1
+        self.insert_token(TOKEN_TYPE['var'])
+
+        
+        
 
 class Counter:
     def __init__(self, expr) -> None:
