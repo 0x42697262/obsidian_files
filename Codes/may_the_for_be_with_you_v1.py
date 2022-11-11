@@ -1,11 +1,10 @@
+"""
+Notes:
+        https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_the_for_be_with_you_v1.py
+"""
 
 import re
 
-# KEYWORDS = ['for', 'while', 'if', 'else', 'return', 
-#             'cin', 'cout', 'int', 'float', 'char', 
-#             'void', 'bool'
-#             ]
-#
 TOKEN_TYPE = {
         '{'     :  'OPEN_BRACE',
         '}'     :  'CLOSE_BRACE',
@@ -24,10 +23,6 @@ TOKEN_TYPE = {
         ';'     :  'SEMICOLON',
         ','     :  'COMMA',
         }
-
-counts = ['+', '-', '*', '/', '%', '++', '--', '==', '!=',
-          '>', '<', '>=','<=', '&&', '||', '//', '**',
-          '>>', '<<', '+=', '-=', '*=', '/=',] 
 
 var_name = ['_']
 for c in range(48, 58):
