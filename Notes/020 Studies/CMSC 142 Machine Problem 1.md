@@ -5,6 +5,30 @@
 ----
 # CMSC 142 May the for be with you - version 1
 
+### TODO:
+- [ ] Finish Lexer
+	- [x] Statement
+	- [x] Compound Statement
+	- [ ] Conditional Statement 
+		- [x] if
+		- [ ] else
+	- [ ] Loop Statement
+		- [ ] for (we only need this)
+		- [ ] while
+	- [ ] Return Statement (probably dont need it)
+	- [ ] Variable Definition (WIP right now)
+	- [ ] Expression Statement
+	- [ ] No-op Statement
+	- [ ] Expression
+- [ ] Finish Parser (do we need this? maybe we can skip it since there's no need to check for the correct grammar)
+- [ ] Finish Counter for T(n)
+	- [ ] Count the operators, loops, increments, etc
+	- [ ] sum them
+	- [ ] decision tree for if-else
+	- [ ] Total T(n)
+
+---
+
 regex, ofc ( i don't think this is ever used lol )
 ```python
 import re
@@ -81,7 +105,7 @@ I then based the recursive-descent parser ( i think? ) on: https://github.com/bi
 
 
 ---
-IGNORE WHAT'S BELOW HERE:
+IGNORE WHAT'S BELOW HERE (THIS IS OLD ASF):
 
 ~~what to put here soon for future notes... ofc the code~~
 
