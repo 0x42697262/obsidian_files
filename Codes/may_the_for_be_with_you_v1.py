@@ -1,7 +1,3 @@
-"""
-Reference:
-    https://github.com/huzaifamaw/Lexical_Analyzer-Parser_Implemented-in-Python/blob/master/main.py
-"""
 
 import re
 
@@ -25,13 +21,22 @@ TOKEN_TYPE = {
         'bool'  :  'DATA_TYPE',
         'var'   :  'IDENTIFIER',
         '='     :  'ASSIGN',
-        ';'     :  'EQUAL',
+        ';'     :  'SEMICOLON',
         ','     :  'COMMA',
         }
 
 counts = ['+', '-', '*', '/', '%', '++', '--', '==', '!=',
           '>', '<', '>=','<=', '&&', '||', '//', '**',
           '>>', '<<', '+=', '-=', '*=', '/=',] 
+
+var_name = ['_']
+for c in range(48, 58):
+        var_name.append(chr(c))
+for c in range(65, 91):
+        var_name.append(chr(c))
+for c in range(97, 123):
+        var_name.append(chr(c))
+
 
 class Lexer:
     def __init__(self, expr: str) -> None:
@@ -117,22 +122,7 @@ class Lexer:
             and self.peek(3) == 't':
                 self.insert_token(TOKEN_TYPE['int'])
                 self.next(3)
-                print(f"--- '{self.expr[self.cursor]}'" , self.peek())
                 self.read_identifier()
-                print(f"--- '{self.expr[self.cursor]}'" , self.peek())
-                match self.peek():
-                    case ';':
-                        self.insert_token(TOKEN_TYPE[';'])
-                        self.next()
-
-                    case '=':
-                        self.insert_token(TOKEN_TYPE['='])
-                        self.next()
-                        self.expression()
-
-                    case ',':
-                        self.insert_token(TOKEN_TYPE[','])
-                        self.next()
 
                 
 
@@ -149,10 +139,26 @@ class Lexer:
     def read_identifier(self):
         # "int [abc ]= 2;"
         # lol this accepts any character except space so assume all inputs are correct
-        while self.peek().isalnum():
+        while self.peek() in var_name:
             self.cursor += 1
-        self.cursor += 1
+
         self.insert_token(TOKEN_TYPE['var'])
+        self.next(0)
+        print(f"--- '{self.expr[self.cursor]}'" , self.peek())
+        match self.peek():
+            case ';':
+                self.insert_token(TOKEN_TYPE[';'])
+                self.next()
+
+            case '=':
+                self.insert_token(TOKEN_TYPE['='])
+                self.next()
+                self.expression()
+
+            case ',':
+                self.insert_token(TOKEN_TYPE[','])
+                self.next()
+                self.read_identifier()
 
         
         
