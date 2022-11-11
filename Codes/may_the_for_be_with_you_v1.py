@@ -77,7 +77,18 @@ class Lexer:
                     self.statement()
     
     def for_loop(self):
-        pass
+        if self.peek() == 'f' \
+            and self.peek(2) == 'o' \
+            and self.peek(3) == 'r':
+                self.next(3)
+
+                if self.peek() == '(':
+                    self.next()
+                    self.expression()
+
+                    if self.peek() == ')':
+                        self.next()
+                        self.statement()
 
     def return_statement(self):
         pass
