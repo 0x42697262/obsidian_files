@@ -30,46 +30,66 @@ class Lexer:
 
         self.cursor = -1
 
-    def next(self):
-        self.cursor += 1
-        while self.expr[self.cursor] == ' ':
+    def next(self, i=1):
+        self.cursor += i
+        self.skip_ws()
+
+    def skip_ws(self):
+        while self.peek() == ' ':
             self.cursor += 1
 
-    def peek(self):
+    def peek(self, i=1):
         if self.cursor + 1 < len(self.expr):
-            return self.expr[self.cursor + 1]
+            return self.expr[self.cursor + i]
+
 
     def insert_token(self, token):
         print(f"Token: {token}")
         self.tokens.insert(len(self.tokens), token)
 
     def statement(self):
+        self.skip_ws()
         self.compound_stmt()
         self.conditional_statement()
+        self.for_loop()
+        self.return_statement()
+        self.var_definition()
+        self.expression_statement()
+        self.no_op()
 
     def compound_stmt(self):
         if self.peek() == '{':
             self.next()
-            self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
             self.statement()
+
             if self.peek() == '}':
                 self.next()
-                self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
-
+       
     def conditional_statement(self):
-        if self.peek() == 'i':
-            self.next()
-            if self.peek() == 'f':
+        if self.peek() == 'i' and self.peek(2) == 'f':
+            self.next(2)
+            if self.peek() == '(':
                 self.next()
-                self.insert_token(TOKEN_TYPE['if'])
-                if self.peek() == '(':
+                self.expression()
+
+                if self.peek() == ')':
                     self.next()
-                    self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
-                    self.expression()
-                    if self.peek() == ')':
-                        self.next()
-                        self.insert_token(TOKEN_TYPE[')'])
-                        self.statement()
+                    self.statement()
+    
+    def for_loop(self):
+        pass
+
+    def return_statement(self):
+        pass
+
+    def var_definition(self):
+        pass
+
+    def expression_statement(self):
+        pass
+
+    def no_op(self):
+        pass
 
     def expression(self):
         pass
