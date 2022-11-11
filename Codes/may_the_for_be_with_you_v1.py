@@ -1,68 +1,115 @@
 """
 Reference:
     https://github.com/huzaifamaw/Lexical_Analyzer-Parser_Implemented-in-Python/blob/master/main.py
-
-Note:
-    https://github.com/KrulYuno/obsidian_files/blob/master/Notes/020%20Studies/CMSC%20142%20Machine%20Problem%201.md
 """
 
 import re
 
-TOKEN_DEFINITION = {
-        '='  : 'ASSIGN',
-        '<'  : 'LESS_THAN',
-        '>'  : 'GREATER_THAN',
-        '++' : 'SELF_PLUS',
-        '--' : 'SELF_MINUS',
-        '+'  : 'PLUS_OPERATOR',
-        '-'  : 'MINUS_OPERATOR',
-        '*'  : 'MULTIPLY_OPERATOR',
-        '/'  : 'DIVIDE_OPERATOR',
-        '<=' : 'LESS_THAN_EQUAL',
-        '>=' : 'GREATER_THAN_EQUAL',
-        '+=' : 'PLUS_EQUAL',
-        '-=' : 'MINUS_EQUAL',
-        '*=' : 'MULTIPLY_EQUAL',
-        '/=' : 'DIVIDE_EQUAL',
-        '('  : 'OPEN_PARENTHESIS',
-        ')'  : 'CLOSE_PARENTHESIS',
-        '['  : 'OPEN_BRACKET',
-        ']'  : 'CLOSE_BRACKET',
-        '{'  : 'OPEN_BRACE',
-        '}'  : 'CLOSE_BRACE',
-        ','  : 'COMMA',
-        '"'  : 'DOUBLE_QUOTE',
-        '\'' : 'SINGLE_QUOTE',
-        ';'  : 'SEMICOLON',
-        '&&' : 'AND',
-        '||' : 'OR',
-        '<<' : 'LEFT_BITWISE',
-        '>>' : 'RIGHT_BITWISE',
-        '==' : 'IF_EQUAL',
+# KEYWORDS = ['for', 'while', 'if', 'else', 'return', 
+#             'cin', 'cout', 'int', 'float', 'char', 
+#             'void', 'bool'
+#             ]
+#
+TOKEN_TYPE = {
+        '{'     :  'OPEN_BRACE',
+        '}'     :  'CLOSE_BRACE',
+        '('     :  'OPEN_PAREN',
+        ')'     :  'CLOSE_PAREN',
+        'if'    :  'KEYWORD',
+        'else'  :  'KEYWORD',
         }
 
-TOKEN_KEYWORD = {
-        'strict'     :  ["if", "else", "while", "for", "cout", "cin", "return"],
-        'brackets'   :  ['(', ')', '{', '}', '[', ']'],
-        'data_types' :  ["int", "float", "char", "string", "bool", "void"],
-        'arithmetic' :  ['+', '-', '/', '*'],
-        'logical'    :  ['||', '&&'],
-        } 
+counts = ['+', '-', '*', '/', '%', '++', '--', '==', '!=',
+          '>', '<', '>=','<=', '&&', '||', '//', '**',
+          '>>', '<<', '+=', '-=', '*=', '/=',] 
 
 class Lexer:
-    def __init__(self, expression) -> None:
-        self._tokens = list()
+    def __init__(self, expr: str) -> None:
+        self.expr = expr
+        self.tokens = list()
 
-            
-    def tokenize(self) -> None:
+        self.cursor = -1
+
+    def next(self):
+        self.cursor += 1
+        while self.expr[self.cursor] == ' ':
+            self.cursor += 1
+
+    def peek(self):
+        if self.cursor + 1 < len(self.expr):
+            return self.expr[self.cursor + 1]
+
+    def insert_token(self, token):
+        print(f"Token: {token}")
+        self.tokens.insert(len(self.tokens), token)
+
+    def statement(self):
+        self.compound_stmt()
+        self.conditional_statement()
+
+    def compound_stmt(self):
+        if self.peek() == '{':
+            self.next()
+            self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
+            self.statement()
+            if self.peek() == '}':
+                self.next()
+                self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
+
+    def conditional_statement(self):
+        if self.peek() == 'i':
+            self.next()
+            if self.peek() == 'f':
+                self.next()
+                self.insert_token(TOKEN_TYPE['if'])
+                if self.peek() == '(':
+                    self.next()
+                    self.insert_token(TOKEN_TYPE[self.expr[self.cursor]])
+                    self.expression()
+                    if self.peek() == ')':
+                        self.next()
+                        self.insert_token(TOKEN_TYPE[')'])
+                        self.statement()
+
+    def expression(self):
         pass
 
 
-class Parser:
-    def __init__(self, expression: str) -> None:
-        self.expression:str = expression
-        self.lex = Lexer(self.expression)
-        print(self.expression)
+class Counter:
+    def __init__(self, expr) -> None:
+        self.t_n = 0
+        self.input_expr = expr.split(';')
+
+        for statement in self.input_expr:
+            self.t_n += statement.count('=') + \
+                    statement.count('+') + \
+                    statement.count('-') + \
+                    statement.count('*') + \
+                    statement.count('/') + \
+                    statement.count('%') + \
+                    statement.count('++') + \
+                    statement.count('--') + \
+                    statement.count('==') + \
+                    statement.count('!=') + \
+                    statement.count('>') + \
+                    statement.count('<') + \
+                    statement.count('>=') + \
+                    statement.count('<=') + \
+                    statement.count('&&') + \
+                    statement.count('||') + \
+                    statement.count('//') + \
+                    statement.count('**') + \
+                    statement.count('>>') + \
+                    statement.count('<<') + \
+                    statement.count('+=') + \
+                    statement.count('-=') + \
+                    statement.count('*=') + \
+                    statement.count('/=')
+
+    def get_n(self) -> int:
+        return self.t_n
+
+
 
 
 def main():
@@ -73,8 +120,11 @@ def main():
     for _ in range(lines):
         expression += input()
 
-    p = Parser(expression)
-
+    c = Counter(expression)
+    print(    c.get_n())
+    l = Lexer(expression)
+    l.statement()
+    print(l.tokens)
 
 if __name__ == "__main__":
     main()
