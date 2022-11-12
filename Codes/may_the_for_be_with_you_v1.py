@@ -54,7 +54,7 @@ for c in range(65, 91):
 for c in range(97, 123):
         identifier_chars.append(chr(c))
 
-literal_chars = ['"', '\'', '-']
+literal_chars = ['"', '\'']
 
 class Lexer:
     def __init__(self, expr: str) -> None:
@@ -200,6 +200,9 @@ class Lexer:
         self.grouped_expression()
 
     def literal_expression(self):
+        if self.peek() == '-':
+            self.next()
+
         if self.peek() in identifier_chars  or self.peek() in literal_chars:
             while self.peek() in identifier_chars or self.peek() in literal_chars:
                 self.cursor += 1
