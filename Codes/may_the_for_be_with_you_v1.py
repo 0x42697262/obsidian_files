@@ -10,28 +10,51 @@ TOKEN_TYPE = {
         '}'     :  'CLOSE_BRACE',
         '('     :  'OPEN_PAREN',
         ')'     :  'CLOSE_PAREN',
+    #   KEYWORDS
         'if'    :  'KEYWORD',
         'else'  :  'KEYWORD',
         'for'   :  'KEYWORD',
+    #   DATA TYPES
         'int'   :  'DATA_TYPE',
         'float' :  'DATA_TYPE',
         'char'  :  'DATA_TYPE',
         'void'  :  'DATA_TYPE',
         'bool'  :  'DATA_TYPE',
         'var'   :  'IDENTIFIER',
-        '='     :  'ASSIGN',
         ';'     :  'SEMICOLON',
         ','     :  'COMMA',
+    #   something that costs T(n)
+        '-='    :  'ASSIGN',
+        '+='    :  'ASSIGN',
+        '*='    :  'ASSIGN',
+        '/='    :  'ASSIGN',
+        '='     :  'ASSIGN',
+        '>>'    :  'BITWISE',
+        '<<'    :  'BITWISE',
+    #   ARITHMETIC OPERATIONS
+        '+'     :  'OPERATION',
+        '-'     :  'OPERATION',
+        '/'     :  'OPERATION',
+        '*'     :  'OPERATION',
+    #   CONDITIONAL OPERATIONS
+        '<'     :  'OPERATION',
+        '>'     :  'OPERATION',
+        '<='    :  'OPERATION',
+        '>='    :  'OPERATION',
+        '=='    :  'OPERATION',
+    #   others
+        'lit'   :  'LITERAL',
         }
 
-var_name = ['_']
+identifier_chars = ['_']
 for c in range(48, 58):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 for c in range(65, 91):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 for c in range(97, 123):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 
+literal_chars = ['"', '\'', '-']
 
 class Lexer:
     def __init__(self, expr: str) -> None:
@@ -54,7 +77,6 @@ class Lexer:
 
 
     def insert_token(self, token):
-        print(f"Token: {token}")
         self.tokens.insert(len(self.tokens), token)
 
     def statement(self):
@@ -67,14 +89,16 @@ class Lexer:
         self.expression_statement()
         self.no_op()
 
+
+        
     def compound_stmt(self):
         if self.peek() == '{':
-            self.insert_token(TOKEN_TYPE['('])
+            self.insert_token(TOKEN_TYPE['{'])
             self.next()
             self.statement()
 
             if self.peek() == '}':
-                self.insert_token(TOKEN_TYPE[')'])
+                self.insert_token(TOKEN_TYPE['}'])
                 self.next()
        
     def conditional_statement(self):
@@ -92,9 +116,7 @@ class Lexer:
                     self.statement()
     
     def for_loop(self):
-        if self.peek() == 'f' \
-            and self.peek(2) == 'o' \
-            and self.peek(3) == 'r':
+        if self.peek() == 'f' and self.peek(2) == 'o' and self.peek(3) == 'r':
                 self.insert_token(TOKEN_TYPE['for'])
                 self.next(3)
 
@@ -112,34 +134,47 @@ class Lexer:
         pass 
 
     def var_definition(self):
-        if self.peek() == 'i' \
-            and self.peek(2) == 'n' \
-            and self.peek(3) == 't':
+        if self.peek() == 'i' and self.peek(2) == 'n' and self.peek(3) == 't':
                 self.insert_token(TOKEN_TYPE['int'])
                 self.next(3)
+                self.read_identifier()
+        elif self.peek() == 'c' and self.peek(2) == 'h' and self.peek(3) == 'a' and self.peek(4) == 'r':
+                self.insert_token(TOKEN_TYPE['char'])
+                self.next(4)
+                self.read_identifier()
+        elif self.peek() == 'f' and self.peek(2) == 'l' and self.peek(3) == 'o' and self.peek(4) == 'a' and self.peek(5) == 't':
+                self.insert_token(TOKEN_TYPE['float'])
+                self.next(5)
+                self.read_identifier()
+        elif self.peek() == 'v' and self.peek(2) == 'o' and self.peek(3) == 'i' and self.peek(4) == 'd':
+                self.insert_token(TOKEN_TYPE['void'])
+                self.next(4)
+                self.read_identifier()
+        elif self.peek() == 'b' and self.peek(2) == 'o' and self.peek(3) == 'o' and self.peek(4) == 'l':
+                self.insert_token(TOKEN_TYPE['bool'])
+                self.next(4)
                 self.read_identifier()
 
                 
 
     def expression_statement(self):
-        pass
+        self.expression()
+        
+        if self.peek() == ';':
+            self.insert_token(TOKEN_TYPE[';'])
+            self.next()
 
     def no_op(self):
-        pass
-
-    def expression(self):
-        pass
-
+        if self.peek() == ';':
+            self.insert_token(TOKEN_TYPE[';'])
+            self.next()
 
     def read_identifier(self):
-        # "int [abc ]= 2;"
-        # lol this accepts any character except space so assume all inputs are correct
-        while self.peek() in var_name:
+        while self.peek() in identifier_chars:
             self.cursor += 1
 
         self.insert_token(TOKEN_TYPE['var'])
         self.next(0)
-        print(f"--- '{self.expr[self.cursor]}'" , self.peek())
         match self.peek():
             case ';':
                 self.insert_token(TOKEN_TYPE[';'])
@@ -149,14 +184,45 @@ class Lexer:
                 self.insert_token(TOKEN_TYPE['='])
                 self.next()
                 self.expression()
+                
+                if self.peek() == ',':
+                    self.insert_token(TOKEN_TYPE[','])
+                    self.next()
+                    self.read_identifier()
 
             case ',':
                 self.insert_token(TOKEN_TYPE[','])
                 self.next()
                 self.read_identifier()
+        
+    def expression(self):
+        self.literal_expression()
+        self.grouped_expression()
 
-        
-        
+    def literal_expression(self):
+        if self.peek() in identifier_chars  or self.peek() in literal_chars:
+            while self.peek() in identifier_chars or self.peek() in literal_chars:
+                self.cursor += 1
+            
+            self.insert_token(TOKEN_TYPE['lit'])
+            self.next(0)
+            self.arithmetic_expression()
+
+    def grouped_expression(self):
+        if self.peek() == '(':
+            self.insert_token(TOKEN_TYPE['('])
+            self.next()
+            self.expression()
+
+            if self.peek() == ')':
+                self.insert_token(TOKEN_TYPE[')'])
+                self.next()
+
+    def arithmetic_expression(self):
+        if self.peek() in ['+', '-', '*', '/']:
+            self.insert_token("OPERATION")
+            self.next()
+            self.expression()
 
 class Counter:
     def __init__(self, expr) -> None:
@@ -206,7 +272,10 @@ def main():
     c = Counter(expression)
     print(    c.get_n())
     l = Lexer(expression)
-    l.statement()
+
+    while l.peek() is not None:
+        l.statement()
+    
     print(l.tokens)
 
 if __name__ == "__main__":

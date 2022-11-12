@@ -17,10 +17,11 @@ Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_th
 		- [ ] for (we only need this)
 		- [ ] while
 	- [ ] Return Statement (probably dont need it)
-	- [ ] Variable Definition (WIP right now)
-	- [ ] Expression Statement
-	- [ ] No-op Statement
+	- [x] Variable Definition
+	- [x] Expression Statement
+	- [x] No-op Statement
 	- [ ] Expression
+		- [x] Arithmetic
 - [ ] Finish Parser (do we need this? maybe we can skip it since there's no need to check for the correct grammar)
 - [ ] Finish Counter for T(n)
 	- [ ] Count the operators, loops, increments, etc
@@ -59,13 +60,13 @@ TOKEN_TYPE = {
 
 For checking if the variable name is allowed. Note that it does not care if a number starts at the beginning. A list of allowed characters.
 ```python
-var_name = ['_']
+identifier_chars = ['_']
 for c in range(48, 58):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 for c in range(65, 91):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 for c in range(97, 123):
-        var_name.append(chr(c))
+        identifier_chars.append(chr(c))
 ```
 Check [ASCII](https://www.ieee.li/computer/ascii.htm) on why i used those number range.
 
@@ -96,7 +97,6 @@ These functions should be self-explanatory, right?
 
 
     def insert_token(self, token):
-        print(f"Token: {token}")
         self.tokens.insert(len(self.tokens), token)
 ...
 ```
