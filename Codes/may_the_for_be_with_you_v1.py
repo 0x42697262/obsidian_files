@@ -146,7 +146,7 @@ class Lexer:
                     while self.peek() in literal_chars or self.peek == ';':
                         self.insert_token(TOKEN_TYPE['lit'])
                         self.next()
-                        print(f"{self.expr[self.cursor]} --> {self.peek()} AHHHH")
+                    print(f"{self.expr[self.cursor]} --> {self.peek()} AHHHH")
 
                     # semicolon: ;
                     if self.peek() == ';':
@@ -290,6 +290,110 @@ class Counter:
     def get_n(self) -> int:
         return self.t_n
 
+class Tokenizer:
+    def __init__(self, input_expr) -> None:
+        self.tokens = list()
+        self.index = 0
+        self.input_expr = input_expr
+
+    def peek(self, i=1):
+        if self.index + i < len(self.input_expr):
+            return self.input_expr[self.index + i]
+        return "\\EOF\\"
+
+    def next(self, i=1):
+        self.index += i
+        self.skip_ws()
+
+    def skip_ws(self):
+        while self.peek() == ' ':
+            self.index += 1
+
+    def is_data_type(self, i=0) -> bool:
+        text = re.findall(r'[a-zA-Z][a-zA-Z]*', self.input_expr[i:])
+        
+        if len(text):
+            if text[0] in ['int', 'char', 'void', 'float', 'bool']:
+                self.index += len(text[0]) - 1
+                self.next()
+                return True
+        return False
+
+    def read_identifier(self, i=0):
+        text = re.findall(r'[a-zA-Z_][a-zA-Z_0-9]*', self.input_expr[i:])
+        
+        if len(text):
+            self.index += len(text[0]) - 1
+            self.next()
+            self.tokens.append('IDENTIFIER')
+
+
+    def statement(self):
+        self.var_def_statement()
+        self.var_statement()
+        
+    def var_def_statement(self):
+        # type -> iden -> ; 
+        #              -> , -> ::
+        #              -> = -> arith_expr -> , -> ::
+        #                                 -> ;
+        if self.is_data_type():
+            self.tokens.append("TYPE")
+            self.var_def_statement_()
+
+    def var_def_statement_(self):
+        self.read_identifier(self.index)
+        match self.peek():
+            case ';':
+                self.tokens.append(';')
+                self.next()
+            case ',':
+                self.tokens.append(',')
+                self.next()
+                self.var_def_statement_()
+            case '=':
+                self.tokens.append('=')
+                self.next()
+                self.expression_statement() 
+
+        if self.peek() == ';':
+            self.tokens.append(';')
+            self.next()
+
+    def var_statement(self):
+        if not self.is_data_type():
+            self.read_identifier(self.index)
+            if self.input_expr[self.index] != ' ':
+                self.index -= 1
+
+            if self.peek() == '=':
+                self.tokens.append('=')
+                self.next()
+                self.expression_statement()
+
+                print(self.peek())
+                if self.peek() == ';':
+                    self.tokens.append(';')
+                    self.next()
+
+    def expression_statement(self):
+        # LIT/NUM -> OP -> ::
+        text = re.findall(r'-{0,1}\d*\.{0,1}\d+|[a-zA-Z_][a-zA-Z_0-9]*', self.input_expr[self.index::])
+        if len(text):
+            self.index += len(text[0]) - 1
+            self.next()
+            self.tokens.append('LITERAL')
+
+            if self.peek() in ['+', '-', '*', '/', '**']:
+                self.tokens.append("OP")
+                self.next()
+                self.expression_statement()
+
+
+        print(len(text[0]), text)
+
+
+
 
 def main():
     # Take inputs, assume inputs are correct
@@ -299,9 +403,7 @@ def main():
     for _ in range(lines):
         expression += input()
 
-    c = Counter(expression)
-    print(    c.get_n())
-       
+
 
 if __name__ == "__main__":
     main()
