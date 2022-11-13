@@ -134,27 +134,14 @@ class Lexer:
         pass 
 
     def var_definition(self):
-        if self.peek() == 'i' and self.peek(2) == 'n' and self.peek(3) == 't':
-                self.insert_token(TOKEN_TYPE['int'])
-                self.next(3)
-                self.read_identifier()
-        elif self.peek() == 'c' and self.peek(2) == 'h' and self.peek(3) == 'a' and self.peek(4) == 'r':
-                self.insert_token(TOKEN_TYPE['char'])
-                self.next(4)
-                self.read_identifier()
-        elif self.peek() == 'f' and self.peek(2) == 'l' and self.peek(3) == 'o' and self.peek(4) == 'a' and self.peek(5) == 't':
-                self.insert_token(TOKEN_TYPE['float'])
-                self.next(5)
-                self.read_identifier()
-        elif self.peek() == 'v' and self.peek(2) == 'o' and self.peek(3) == 'i' and self.peek(4) == 'd':
-                self.insert_token(TOKEN_TYPE['void'])
-                self.next(4)
-                self.read_identifier()
-        elif self.peek() == 'b' and self.peek(2) == 'o' and self.peek(3) == 'o' and self.peek(4) == 'l':
-                self.insert_token(TOKEN_TYPE['bool'])
-                self.next(4)
-                self.read_identifier()
+        # this place got mistakes but whatever, we only need to lex the lexemes anyways
+        if self.peek() in identifier_chars:
+            while self.peek() in identifier_chars:
+                self.cursor += 1
 
+            self.insert_token(TOKEN_TYPE['lit'])
+            self.next(0)
+            self.read_identifier()
                 
 
     def expression_statement(self):
@@ -230,38 +217,17 @@ class Lexer:
 class Counter:
     def __init__(self, expr) -> None:
         self.t_n = 0
-        self.input_expr = expr.split(';')
+        l = Lexer(expr)
 
-        for statement in self.input_expr:
-            self.t_n += statement.count('=') + \
-                    statement.count('+') + \
-                    statement.count('-') + \
-                    statement.count('*') + \
-                    statement.count('/') + \
-                    statement.count('%') + \
-                    statement.count('++') + \
-                    statement.count('--') + \
-                    statement.count('==') + \
-                    statement.count('!=') + \
-                    statement.count('>') + \
-                    statement.count('<') + \
-                    statement.count('>=') + \
-                    statement.count('<=') + \
-                    statement.count('&&') + \
-                    statement.count('||') + \
-                    statement.count('//') + \
-                    statement.count('**') + \
-                    statement.count('>>') + \
-                    statement.count('<<') + \
-                    statement.count('+=') + \
-                    statement.count('-=') + \
-                    statement.count('*=') + \
-                    statement.count('/=')
+        while l.peek() is not None:
+            l.statement()
+
+        for tokens in l.tokens:
+            if tokens in ['ASSIGN', 'OPERATION']:
+                self.t_n += 1
 
     def get_n(self) -> int:
         return self.t_n
-
-
 
 
 def main():
@@ -274,12 +240,7 @@ def main():
 
     c = Counter(expression)
     print(    c.get_n())
-    l = Lexer(expression)
-
-    while l.peek() is not None:
-        l.statement()
-    
-    print(l.tokens)
+       
 
 if __name__ == "__main__":
     main()
