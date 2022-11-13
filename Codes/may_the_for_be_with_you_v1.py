@@ -42,6 +42,7 @@ TOKEN_TYPE = {
         '<='    :  'OPERATION',
         '>='    :  'OPERATION',
         '=='    :  'OPERATION',
+        '!='    :  'OPERATION',
     #   others
         'lit'   :  'LITERAL',
         }
@@ -116,6 +117,7 @@ class Lexer:
                     self.statement()
     
     def for_loop(self):
+        # FORGIVE JESUS CHRIST FOR THIS SPAGHETTI CODE
         if self.peek() == 'f' and self.peek(2) == 'o' and self.peek(3) == 'r':
                 self.insert_token(TOKEN_TYPE['for'])
                 self.next(3)
@@ -123,7 +125,64 @@ class Lexer:
                 if self.peek() == '(':
                     self.insert_token(TOKEN_TYPE['('])
                     self.next()
-                    self.expression()
+                    # for(int i=0; i<n; i++)
+                    
+                    # int part: int
+                    while self.peek() in [chr(c) for c in range(97, 123)]:
+                        self.insert_token(TOKEN_TYPE['lit'])
+                        self.next()
+
+                    # identifier part: i
+                    while self.peek() in [chr(c) for c in range(97, 123)]:
+                        self.insert_token(TOKEN_TYPE['var'])
+                        self.next()
+
+                    # assign: =
+                    if self.peek() == '=':
+                        self.insert_token(TOKEN_TYPE['='])
+                        self.next()
+            
+                    # literal: 0 
+                    while self.peek() in literal_chars or self.peek == ';':
+                        self.insert_token(TOKEN_TYPE['lit'])
+                        self.next()
+                        print(f"{self.expr[self.cursor]} --> {self.peek()} AHHHH")
+
+                    # semicolon: ;
+                    if self.peek() == ';':
+                        self.insert_token(TOKEN_TYPE[';'])
+                        self.next()
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
+
+                    # identifier: i
+                    while self.peek() in [chr(c) for c in range(97, 123)]:
+                        self.insert_token(TOKEN_TYPE['var'])
+                        self.next()
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
+
+                    # condition operation: <
+                    if self.peek() in ['<', '>', '<=', '>=', '==', '!=']:
+                        self.insert_token("OPERATION")
+                        self.next()
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
+
+                    # identifier: n
+                    while self.peek() in [chr(c) for c in range(97, 123)]:
+                        self.insert_token(TOKEN_TYPE['var'])
+                        self.next()
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
+
+                    # semicolon: ;
+                    if self.peek() == ';':
+                        self.insert_token(TOKEN_TYPE[';'])
+                        self.next()
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
+                    
+                    # increment: i++
+                    if (self.peek() == '-' and self.peek(2) == '-') or (self.peek() == '+' and self.peek(2) == '+'):
+                        self.insert_token("OPERATION")
+                        self.next(2)
+                    print(f"{self.expr[self.cursor]} --> {self.peek()}")
 
                     if self.peek() == ')':
                         self.insert_token(TOKEN_TYPE[')'])
@@ -223,8 +282,10 @@ class Counter:
             l.statement()
 
         for tokens in l.tokens:
-            if tokens in ['ASSIGN', 'OPERATION']:
+            if tokens in ['ASSIGN', 'OPERATION', 'BITWISE']:
                 self.t_n += 1
+
+        print(l.tokens)
 
     def get_n(self) -> int:
         return self.t_n
