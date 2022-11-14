@@ -13,7 +13,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [ ] [[Class Project @2022-11-18]]
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
@@ -24,6 +23,7 @@ kanban-plugin: basic
 ## DOING
 
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
+- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [ ] Annotated Bibliography (RioT)
 
 
