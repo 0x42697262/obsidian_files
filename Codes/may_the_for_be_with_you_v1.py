@@ -5,67 +5,41 @@ Notes:
 
 import re
 
-TOKEN_TYPE = {
-        '{'     :  'OPEN_BRACE',
-        '}'     :  'CLOSE_BRACE',
-        '('     :  'OPEN_PAREN',
-        ')'     :  'CLOSE_PAREN',
-    #   KEYWORDS
-        'if'    :  'KEYWORD',
-        'else'  :  'KEYWORD',
-        'for'   :  'KEYWORD',
-    #   DATA TYPES
-        'int'   :  'DATA_TYPE',
-        'float' :  'DATA_TYPE',
-        'char'  :  'DATA_TYPE',
-        'void'  :  'DATA_TYPE',
-        'bool'  :  'DATA_TYPE',
-        'var'   :  'IDENTIFIER',
-        ';'     :  'SEMICOLON',
-        ','     :  'COMMA',
-    #   something that costs T(n)
-        '-='    :  'ASSIGN',
-        '+='    :  'ASSIGN',
-        '*='    :  'ASSIGN',
-        '/='    :  'ASSIGN',
-        '='     :  'ASSIGN',
-        '>>'    :  'BITWISE',
-        '<<'    :  'BITWISE',
-    #   ARITHMETIC OPERATIONS
-        '+'     :  'OPERATION',
-        '-'     :  'OPERATION',
-        '/'     :  'OPERATION',
-        '*'     :  'OPERATION',
-    #   CONDITIONAL OPERATIONS
-        '<'     :  'OPERATION',
-        '>'     :  'OPERATION',
-        '<='    :  'OPERATION',
-        '>='    :  'OPERATION',
-        '=='    :  'OPERATION',
-        '!='    :  'OPERATION',
-    #   others
-        'lit'   :  'LITERAL',
-        }
-
 identifier_chars = ['_']
-for c in range(48, 58):
-        identifier_chars.append(chr(c))
-for c in range(65, 91):
-        identifier_chars.append(chr(c))
-for c in range(97, 123):
-        identifier_chars.append(chr(c))
+lower_letters = [chr(c) for c in range(97, 123)]
+upper_letters = [chr(c) for c in range(65, 91)]
+digits = [chr(c) for c in range(48, 58)]
+
+for _ in digits:
+        identifier_chars.append(_)
+for _ in lower_letters:
+        identifier_chars.append(_)
+for _ in upper_letters:
+        identifier_chars.append(_)
 
 literal_chars = ['"', '\'']
+
+
+
+class Scanner:
+    def __init__(self, source: str) -> None:
+        self.source = source
+        self.tokens = list()
+
+        self.start = 0
+        self.current = 0
+        self.line = 1
+          
 
 def main():
     # Take inputs, assume inputs are correct
     # no sanitization
     lines = int(input())
-    expression = str()
+    source_code = list()
     for _ in range(lines):
-        expression += input()
-
-
+        source_code.append(input())
+    
+    print(source_code)
 
 if __name__ == "__main__":
     main()
