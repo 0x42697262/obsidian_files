@@ -1,10 +1,67 @@
-> [!INFO]
+ > [!INFO]
 > Status: #WIP
 > Tags: #Machine_Problem #CMSC142 #Python
 
 ----
 # CMSC 142 May the for be with you - version 1
 Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_the_for_be_with_you_v1.py
+
+# main function
+```python
+def main():
+    lines = int(input())
+    source_code = list()
+    for _ in range(lines):
+        source_code.append(input())
+
+if __name__ == "__main__":
+    main()
+```
+Take number of lines for the code then get each line of the source. Append it to an array list of line by line source code.
+
+Example Input:
+```
+5
+int x = 10, y = 8, z = -2;
+x = x + y;
+y = x - y;
+x = x - y;
+z = x + y;
+```
+
+Example Output:
+```
+[
+	'int x = 10, y = 8, z = -2;', 
+	'x = x + y;', 
+	'y = x - y;', 
+	'x = x - y;', 
+	'z = x + y;'
+]
+```
+This code does not necessarily have an output of array. This is simply for visualization.
+
+# Scanning the input or source
+I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html
+```python
+class Scanner:
+    def __init__(self, source: str) -> None:
+        self.source = source
+        self.tokens = list()
+
+        self.start = 0
+        self.current = 0
+        self.line = 1
+```
+`start` and `current` are indexes of the string.
+
+
+
+
+
+
+
+# BELOW THIS IS OLD NOTES. NOT NEEDED (for archive purpose)
 
 ### TODO:
 - [ ] Finish Lexer
@@ -22,8 +79,8 @@ Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_th
 	- [x] No-op Statement
 	- [ ] Expression
 		- [x] Arithmetic
-- [ ] Finish Parser (do we need this? maybe we can skip it since there's no need to check for the correct grammar)
-- [ ] Finish Counter for T(n)
+- [ ] Parser (do we need this? maybe we can skip it since there's no need to check for the correct grammar)
+- [ ] Counter for T(n)
 	- [ ] Count the operators, loops, increments, etc
 	- [ ] sum them
 	- [ ] decision tree for if-else
