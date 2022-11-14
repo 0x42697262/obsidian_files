@@ -20,6 +20,41 @@ for _ in upper_letters:
 literal_chars = ['"', '\'']
 
 
+def Token_Type(token: str) -> str:
+    match token:
+        case '(':
+            return "OPEN_PAREN"
+        case ')':
+            return "CLOSE_PAREN"
+        case '{':
+            return "OPEN_BRACE"
+        case '}':
+            return "CLOSE_BRACE"
+        case '[':
+            return "OPEN_BRACKET"
+        case ']':
+            return "CLOSE_BRACKET"
+        case ';':
+            return "SEMICOLON"
+        case ':':
+            return "COLON"
+        case ',':
+            return "COMMA"
+        case '.':
+            return "DOT"
+        case '+':
+            return "PLUS"
+        case '-':
+            return "MINUS"
+        case '*':
+            return "STAR"
+        case '/':
+            return "FORWARD_SLASH"
+        case '\\':
+            return "BACKWARD_SLASH"
+        case _:
+            return "ILLEGAL"
+
 
 class Scanner:
     def __init__(self, source: str) -> None:
@@ -29,6 +64,9 @@ class Scanner:
         self.start = 0
         self.current = 0
         self.line = 1
+    
+    def is_eof(self):
+        return self.current >= len(self.source)
           
 
 def main():
@@ -38,8 +76,6 @@ def main():
     source_code = list()
     for _ in range(lines):
         source_code.append(input())
-    
-    print(source_code)
 
 if __name__ == "__main__":
     main()

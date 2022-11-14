@@ -6,6 +6,13 @@
 # CMSC 142 May the for be with you - version 1
 Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_the_for_be_with_you_v1.py
 
+# TODOs 
+- [ ] Write Unit Tests (i swear, it makes your life easier)
+
+
+
+---
+
 # main function
 ```python
 def main():
@@ -20,7 +27,7 @@ if __name__ == "__main__":
 Take number of lines for the code then get each line of the source. Append it to an array list of line by line source code.
 
 Example Input:
-```
+```c++
 5
 int x = 10, y = 8, z = -2;
 x = x + y;
@@ -30,7 +37,7 @@ z = x + y;
 ```
 
 Example Output:
-```
+```python
 [
 	'int x = 10, y = 8, z = -2;', 
 	'x = x + y;', 
@@ -53,8 +60,13 @@ class Scanner:
         self.current = 0
         self.line = 1
 ```
-`start` and `current` are indexes of the string.
+`start` and `current` are indexes of the string. `start` first character index of a lexeme. `current` current character index. `line` current line of source code (which is the array)
 
+```python
+def is_eof(self):
+	return self.current >= len(self.source)
+```
+A helper function if we reached end of file.
 
 
 
