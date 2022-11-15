@@ -22,6 +22,13 @@ for _ in upper_letters:
 
 literal_chars = ['"', '\'']
 
+
+##
+#
+#   TOKENS
+#
+##
+
 class TokenType(Enum):
     # single character tokens 
     OPEN_PAREN          = auto() # {
@@ -77,46 +84,32 @@ class TokenType(Enum):
     COUT                = auto() # cout 
     RETURN              = auto() # return
     WHILE               = auto() # while
+    INT                 = auto() # int
+    CHAR                = auto() # char
+    FLOAT               = auto() # float
+    VOID                = auto() # void
+    BOOL                = auto() # bool
+
+    # EOF
+    EOF                 = auto()
 
 
+class Token:
+    def __init__(self, _type, lexeme, literal, line) -> None:
+       self.type    = _type
+       self.lexeme  = lexeme
+       self.literal = literal
+       self.line    = line
+
+    def __str__(self):
+        return f"{self.type} {self.lexeme} {self.literal}"
 
 
-
-def Token_Type(token: str) -> str:
-    match token:
-        case '(':
-            return "OPEN_PAREN"
-        case ')':
-            return "CLOSE_PAREN"
-        case '{':
-            return "OPEN_BRACE"
-        case '}':
-            return "CLOSE_BRACE"
-        case '[':
-            return "OPEN_BRACKET"
-        case ']':
-            return "CLOSE_BRACKET"
-        case ';':
-            return "SEMICOLON"
-        case ':':
-            return "COLON"
-        case ',':
-            return "COMMA"
-        case '.':
-            return "DOT"
-        case '+':
-            return "PLUS"
-        case '-':
-            return "MINUS"
-        case '*':
-            return "STAR"
-        case '/':
-            return "FORWARD_SLASH"
-        case '\\':
-            return "BACKWARD_SLASH"
-        case _:
-            return "ILLEGAL"
-
+##
+#
+#  SCANNER 
+#
+##
 
 class Scanner:
     def __init__(self, source: str) -> None:
@@ -131,6 +124,7 @@ class Scanner:
         return self.current >= len(self.source)
 
     def next(self):
+        pass
 
           
 

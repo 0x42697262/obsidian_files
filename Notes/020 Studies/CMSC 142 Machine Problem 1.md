@@ -5,12 +5,16 @@
 ----
 # CMSC 142 May the for be with you - version 1
 Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_the_for_be_with_you_v1.py
+Some references:
+- https://github.com/Esamanoaz/plox
+- https://craftinginterpreters.com
 
 # TODOs 
 - [ ] Write Unit Tests (i swear, it makes your life easier)
+- [x] Tokens
 - [ ] Scanner
 - [ ] Lexer
-- [ ] Parser (dont think we need this since we only need to assume input source code is correct)
+- [ ] Parser (dont think we need this since we only need to assume input source code is correct. no need for abstract syntax trees hehe)
 
 
 ---
@@ -109,8 +113,29 @@ class TokenType(Enum):
     COUT                = auto() # cout 
     RETURN              = auto() # return
     WHILE               = auto() # while
+    INT                 = auto() # int
+    CHAR                = auto() # char
+    FLOAT               = auto() # float
+    VOID                = auto() # void
+    BOOL                = auto() # bool
+
+	
+    # EOF
+    EOF                 = auto()
 ```
 
+So far I do not know what this is for.
+```python
+class Token:
+    def __init__(self, _type, lexeme, literal, line) -> None:
+       self.type    = _type
+       self.lexeme  = lexeme
+       self.literal = literal
+       self.line    = line
+
+    def __str__(self):
+        return f"{self.type} {self.lexeme} {self.literal}"
+```
 # Scanning the input or source
 I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html
 ```python
