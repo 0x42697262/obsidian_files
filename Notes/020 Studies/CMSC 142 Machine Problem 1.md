@@ -8,7 +8,9 @@ Source Code: https://github.com/KrulYuno/obsidian_files/blob/master/Codes/may_th
 
 # TODOs 
 - [ ] Write Unit Tests (i swear, it makes your life easier)
-
+- [ ] Scanner
+- [ ] Lexer
+- [ ] Parser (dont think we need this since we only need to assume input source code is correct)
 
 
 ---
@@ -47,6 +49,67 @@ Example Output:
 ]
 ```
 This code does not necessarily have an output of array. This is simply for visualization.
+
+Tokens... Ever changing tokens, gets added when needed. Don't know what enums are? Check here: https://docs.python.org/3/library/enum.html because I don't know either (only knew about it in rust sooooo)
+```python
+from enum import Enum, auto
+
+class TokenType(Enum):
+    # single character tokens 
+    OPEN_PAREN          = auto() # {
+    CLOSE_PAREN         = auto() # }
+    OPEN_BRACE          = auto() # {
+    CLOSE_BRACE         = auto() # }
+    OPEN_BRACKET        = auto() # [
+    CLOSE_BRACKET       = auto() # ]
+    COMMA               = auto() # ,
+    DOT                 = auto() # .
+    COLON               = auto() # :
+    SEMICOLON           = auto() # ;
+    BACKWARD_SLASH      = auto() # \
+
+    # one or two character tokens
+    LOGICAL_AND         = auto() # &&
+    LOGICAL_OR          = auto() # ||
+    BANG                = auto() # !
+    BANG_EQUAL          = auto() # !=
+    EQUAL               = auto() # =
+    EQUAL_EQUAL         = auto() # ==
+    GREATER             = auto() # >
+    GREATER_GREATER     = auto() # >>
+    GREATER_EQUAL       = auto() # >=
+    LESSER              = auto() # <
+    LESSER_LESSER       = auto() # <<
+    LESSER_EQUAL        = auto() # <=
+    PLUS                = auto() # +
+    PLUS_PLUS           = auto() # ++
+    PLUS_EQUAL          = auto() # +=
+    MINUS               = auto() # -
+    MINUS_MINUS         = auto() # --
+    MINUS_EQUAL         = auto() # -=
+    STAR                = auto() # *
+    STAR_STAR           = auto() # **
+    STAR_EQUAL          = auto() # *=
+    SLASH               = auto() # /
+    SLASH_SLASH         = auto() # //
+    SLASH_EQUAL         = auto() # /= 
+
+    # literals
+    IDENTIFIER          = auto()
+    STRING              = auto()
+    NUMBER              = auto()
+
+    # keywords
+    TRUE                = auto() # true
+    FALSE               = auto() # false 
+    IF                  = auto() # if
+    ELSE                = auto() # else
+    FOR                 = auto() # for
+    CIN                 = auto() # cin 
+    COUT                = auto() # cout 
+    RETURN              = auto() # return
+    WHILE               = auto() # while
+```
 
 # Scanning the input or source
 I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html
