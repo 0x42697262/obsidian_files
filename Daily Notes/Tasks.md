@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 
@@ -14,10 +13,11 @@ kanban-plugin: basic
 ## Will Do
 
 - [ ] [[Class Project @2022-11-18]]
+- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [ ] [[First Long Exam @2022-11-04]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
-- [ ] please check cmsc124 group reporting
+- [ ] please check cmsc124 group reporting @[[2022-11-20]]
 
 
 ## DOING
