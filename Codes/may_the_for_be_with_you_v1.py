@@ -5,22 +5,8 @@ References:
         https://github.com/Esamanoaz/plox
 """
 
-import re
 from enum import Enum, auto
 
-identifier_chars = ['_']
-lower_letters = [chr(c) for c in range(97, 123)]
-upper_letters = [chr(c) for c in range(65, 91)]
-digits = [chr(c) for c in range(48, 58)]
-
-for _ in digits:
-        identifier_chars.append(_)
-for _ in lower_letters:
-        identifier_chars.append(_)
-for _ in upper_letters:
-        identifier_chars.append(_)
-
-literal_chars = ['"', '\'']
 
 
 ##
@@ -31,7 +17,7 @@ literal_chars = ['"', '\'']
 
 class TokenType(Enum):
     # single character tokens 
-    OPEN_PAREN          = auto() # {
+    OPEN_PAREN          = auto() # (
     CLOSE_PAREN         = auto() # }
     OPEN_BRACE          = auto() # {
     CLOSE_BRACE         = auto() # }
@@ -96,35 +82,93 @@ class TokenType(Enum):
 
 class Token:
     def __init__(self, _type, lexeme, literal, line) -> None:
-       self.type    = _type
-       self.lexeme  = lexeme
-       self.literal = literal
-       self.line    = line
+       self.type        = _type
+       self.lexeme      = lexeme
+       self.literal     = literal
+       self.line        = line
 
     def __str__(self):
-        return f"{self.type} {self.lexeme} {self.literal}"
+        return f"Token<{self.type} : {self.lexeme}, {self.literal}> ({self.line})"
 
 
 ##
 #
-#  SCANNER 
+#  LEXICAL ANALYZER 
 #
 ##
 
 class Scanner:
     def __init__(self, source: str) -> None:
-        self.source = source
-        self.tokens = list()
+        self.source     = source
+        self.tokens     = list()
 
-        self.start = 0
-        self.current = 0
-        self.line = 1
+        self.start      = 0
+        self.current    = 0
+        self.line       = 1
+
+        self.alpha      = ['_']                                             # [a-zA-Z_]
+        self.digits     = [chr(c) for c in range(48, 58)]                   # [0-9]
+        
+        for _ in [chr(c) for c in range(97, 123)]:
+                self.alpha.append(_)
+        for _ in [chr(c) for c in range(65, 91)]:
+                self.alpha.append(_)
+
+        self.token_strings  = {
+                '('      :      lambda c: TokenType.OPEN_PAREN,        
+                ')'      :      lambda c: TokenType.CLOSE_PAREN,        
+                '['      :      lambda c: TokenType.OPEN_BRACKET,        
+                ']'      :      lambda c: TokenType.CLOSE_BRACKET,        
+                '{'      :      lambda c: TokenType.OPEN_BRACE,        
+                '}'      :      lambda c: TokenType.CLOSE_BRACE,        
+                ','      :      lambda c: TokenType.COMMA,        
+                '.'      :      lambda c: TokenType.DOT,        
+                ':'      :      lambda c: TokenType.COLON,        
+                ';'      :      lambda c: TokenType.SEMICOLON,        
+                '\\'     :      lambda c: TokenType.BACKWARD_SLASH,        
+
+
+        }
+
+        self.keywords       = {
+            'true'      :       TokenType.TRUE,
+            'false'     :       TokenType.FALSE,
+            'if'        :       TokenType.IF,
+            'else'      :       TokenType.ELSE,
+            'for'       :       TokenType.FOR,
+            'cin'       :       TokenType.CIN,
+            'cout'      :       TokenType.COUT,
+            'return'    :       TokenType.RETURN,
+            'while'     :       TokenType.WHILE,
+            'int'       :       TokenType.INT,
+            'char'      :       TokenType.CHAR,
+            'float'     :       TokenType.FLOAT,
+            'bool'      :       TokenType.BOOL,
+            'void'      :       TokenType.VOID,
+        }
+
+
+    def _peek(self):
+        if self.is_eof():
+            return "\0"
+        return self.source[self.current]
+
+    def _peek_next(self):
+        if self.current + 1 >= len(self.source):
+            return "\0"
+        return self.source[self.current + 1]
+
+    def is_digit(self, c):
+        return c in self.digits
+
+    def is_alpha(self, c):
+        return c in self.alpha
+
+    def is_alphanum(self, c):
+        return self.is_alpha(c) or self.is_digit(c)
     
     def is_eof(self):
         return self.current >= len(self.source)
-
-    def next(self):
-        pass
 
           
 

@@ -12,8 +12,8 @@ Some references:
 # TODOs 
 - [ ] Write Unit Tests (i swear, it makes your life easier)
 - [x] Tokens
-- [ ] Scanner
 - [ ] Lexer
+	- [ ] Scanner
 - [ ] Parser (dont think we need this since we only need to assume input source code is correct. no need for abstract syntax trees hehe)
 
 
@@ -60,8 +60,8 @@ from enum import Enum, auto
 
 class TokenType(Enum):
     # single character tokens 
-    OPEN_PAREN          = auto() # {
-    CLOSE_PAREN         = auto() # }
+    OPEN_PAREN          = auto() # (
+	    CLOSE_PAREN         = auto() # )
     OPEN_BRACE          = auto() # {
     CLOSE_BRACE         = auto() # }
     OPEN_BRACKET        = auto() # [
@@ -124,7 +124,7 @@ class TokenType(Enum):
     EOF                 = auto()
 ```
 
-So far I do not know what this is for.
+So far I do not know what this is for. Probs printing the tokens.
 ```python
 class Token:
     def __init__(self, _type, lexeme, literal, line) -> None:
@@ -134,21 +134,56 @@ class Token:
        self.line    = line
 
     def __str__(self):
-        return f"{self.type} {self.lexeme} {self.literal}"
+        return f"Token<{self.type} : {self.lexeme}, {self.literal}> ({self.line})"
 ```
 # Scanning the input or source
-I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html
+I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html but used someone's code instead. I can't read Java.
 ```python
 class Scanner:
     def __init__(self, source: str) -> None:
-        self.source = source
-        self.tokens = list()
-
-        self.start = 0
-        self.current = 0
-        self.line = 1
+        self.source     = source
+        self.tokens     = list()
+        self.start      = 0
+        self.current    = 0
+        self.line       = 1
+        self.alpha      = ['_']                                             # [a-zA-Z_]
+        self.digits     = [chr(c) for c in range(48, 58)]                   # [0-9]
+        for _ in [chr(c) for c in range(97, 123)]:
+                self.alpha.append(_)
+        for _ in [chr(c) for c in range(65, 91)]:
+                self.alpha.append(_)
+    ...
 ```
-`start` and `current` are indexes of the string. `start` first character index of a lexeme. `current` current character index. `line` current line of source code (which is the array)
+`start` and `current` are indexes of the string. `start` first character index of a lexeme. `current` current character index. `line` current line of source code (which is the array).
+Continuation on the next block of code
+
+Dictionary of token types. [Lambdas](https://docs.python.org/3/reference/expressions.html#lambda), makes life a bit easier. Helper functions for character consumptions.
+```python
+...
+def _peek(self):
+	if self.is_eof():
+		return "\0"
+	return self.source[self.current]
+
+def _peek_next(self):
+	if self.current + 1 >= len(self.source):
+		return "\0"
+	return self.source[self.current + 1]
+
+def is_digit(self, c):
+	return c in self.digits
+
+def is_alpha(self, c):
+	return c in self.alpha
+
+def is_alphanum(self, c):
+	return self.is_alpha(c) or self.is_digit(c)
+
+def is_eof(self):
+	return self.current >= len(self.source)
+...
+```
+
 
 ```python
 def is_eof(self):
