@@ -170,6 +170,66 @@ class Scanner:
     def is_eof(self):
         return self.current >= len(self.source)
 
+    
+    def _advance(self):
+        self.current += 1
+        return self.source[self.current - 1]
+
+    def _add_token(self, token_type, literal = None):
+        text = self.source[self.start : self.current]
+        self.tokens.append(Token(token_type, text, literal, self.line))
+
+    def _advance_line(self):
+        self.line += 1
+
+
+    def _match(self, expected) -> bool:
+        if self.is_eof():
+            return False
+        elif self.source[self.current] != expected:
+            return False
+        else:
+            self.current +=1
+            return True
+
+
+    def scan_token(self):
+        while not self.is_eof():
+            self.start = self.current
+            self._scan_token()
+
+        self.tokens.append(Token(TokenType.EOF, '', None, self.line))
+        return self.tokens
+
+    def _scan_token(self):
+        c = self._advance()
+        if c in self.token_strings:
+            c = self.token_strings[c](c)
+            if c is not None:
+                self._add_token(c)
+        elif self.is_digit(c):
+            self._number_logic()
+        elif self.is_alpha(c):
+            self._identifier_logic()
+        else:
+            # self.interpreter.error(line=self.line, message="Unexpected character.")
+            print(f"Unexpected character on line {self.line}")
+
+    
+    def _string_logic(self):
+        starting_line = self.line
+        while self._peek() != '\'' and not self.is_eof():
+            self._advance()
+        
+        if self.is_eof():
+            print(f"Expected ' at end of string on line {starting_line}")
+            return None
+
+        self._advance()
+        self._add_token(TokenType.STRING, self.source[self.start+1 : self.current-1])
+
+
+    
           
 
 def main():

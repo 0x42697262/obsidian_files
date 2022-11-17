@@ -61,7 +61,7 @@ from enum import Enum, auto
 class TokenType(Enum):
     # single character tokens 
     OPEN_PAREN          = auto() # (
-	    CLOSE_PAREN         = auto() # )
+	CLOSE_PAREN         = auto() # )
     OPEN_BRACE          = auto() # {
     CLOSE_BRACE         = auto() # }
     OPEN_BRACKET        = auto() # [
@@ -157,7 +157,29 @@ class Scanner:
 `start` and `current` are indexes of the string. `start` first character index of a lexeme. `current` current character index. `line` current line of source code (which is the array).
 Continuation on the next block of code
 
-Dictionary of token types. [Lambdas](https://docs.python.org/3/reference/expressions.html#lambda), makes life a bit easier. Helper functions for character consumptions.
+Dictionary of token types. [Lambdas](https://docs.python.org/3/reference/expressions.html#lambda), makes life a bit easier. 
+```python
+...
+
+self.keywords       = {
+	'true'      :       TokenType.TRUE,
+	'false'     :       TokenType.FALSE,
+	'if'        :       TokenType.IF,
+	'else'      :       TokenType.ELSE,
+	'for'       :       TokenType.FOR,
+	'cin'       :       TokenType.CIN,
+	'cout'      :       TokenType.COUT,
+	'return'    :       TokenType.RETURN,
+	'while'     :       TokenType.WHILE,
+	'int'       :       TokenType.INT,
+	'char'      :       TokenType.CHAR,
+	'float'     :       TokenType.FLOAT,
+	'bool'      :       TokenType.BOOL,
+	'void'      :       TokenType.VOID,
+}
+```
+
+Helper functions for character checking the next character of the source input.
 ```python
 ...
 def _peek(self):
@@ -184,16 +206,78 @@ def is_eof(self):
 ...
 ```
 
-
+Same as above but helper functions for consuming the next character.
 ```python
-def is_eof(self):
-	return self.current >= len(self.source)
+...
+def _advance(self):
+	self.current += 1
+	return self.source[self.current - 1]
+
+def _add_token(self, token_type, literal = None):
+	text = self.source[self.start : self.current]
+	self.tokens.append(Token(token_type, text, literal, self.line))
+
+def _advance_line(self):
+	self.line += 1
+...
 ```
-A helper function if we reached end of file.
 
 
+Matches an expected character.
+```python
+...
+def _match(self, expected) -> bool:
+	if self.is_eof():
+		return False
+	elif self.source[self.current] != expected:
+		return False
+	else:
+		self.current +=1
+		return True
+...
+```
 
+Loops the source input for characters (or lexemes) then append its token to `self.tokens`.
+```python
+def scan_token(self):
+	while not self.is_eof():
+		self.start = self.current
+		self._scan_token()
 
+	self.tokens.append(Token(TokenType.EOF, '', None, self.line))
+	return self.tokens
+
+def _scan_token(self):
+	c = self._advance()
+	if c in self.token_strings:
+		c = self.token_strings[c](c)
+		if c is not None:
+			self._add_token(c)
+	elif self.is_digit(c):
+		self._number_logic()
+	elif self.is_alpha(c):
+		self._identifier_logic()
+	else:
+		print(f"Unexpected character on line {self.line}")
+```
+
+Helper functions in lexemizing literals and identifiers.
+
+i still dont get how this work
+```python
+def _string_logic(self):
+	starting_line = self.line
+	while self._peek() != '\'' and not self.is_eof():
+		self._advance()
+	
+	if self.is_eof():
+		print(f"Expected ' at end of string on line {starting_line}")
+		return None
+
+	self._advance()
+	self._add_token(TokenType.STRING, self.source[self.start+1 : self.current-1])
+```
+The while loop takes the literal of a string (but in c++, there's only chars so only 1 length) then the last `self._advance()` simply takes the last `'` char. Which then adds a token type string. It starts at `self.start+1` because there is a need to skip the first `'` and `self.current-1` to ignore the last `'`.
 
 
 # BELOW THIS IS OLD NOTES. NOT NEEDED (for archive purpose)
