@@ -8,7 +8,7 @@ kanban-plugin: basic
 
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
-- [ ] [[MODULE 1 - TOPIC 1 & 2]]
+- [ ] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 - [ ] [[MODULE 2]] #STS1 @[[2022-12-07]]
 - [ ] [[MODULE 3]] #STS1 @[[2022-12-14]]
 - [ ] [[MODULE 5]]  #STS1 @[[2022-12-21]]
