@@ -50,7 +50,7 @@ User Story
 Use Case Diagram
 ---
 
-![[Pasted image 20221115121101.png]]
+![[image17.png]]
 
 <div style="page-break-after: always;"></div>
 
@@ -146,7 +146,8 @@ User Story
 
 Use Case Diagram
 ---
-![[image3.png]]
+
+![[image5 1.png]]
 
 <div style="page-break-after: always;"></div>
 

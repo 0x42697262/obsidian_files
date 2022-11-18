@@ -20,6 +20,11 @@
 - [[Expression Notations]]: [[Expression Notation - Infix|Infix]] [[Expression Notation - Prefix|Prefix]] [[Expression Notation - Postfix|Postfix]]
 - [[CMSC 124 Machine Problem 4]]
 
+## CMSC 128 Software Engineering 1
+### Requirements Modeling: Scenario-based
+- [[Laboratory Exercise 6 - Scenario-Based Modelling]]
+
+
 ## CMSC 142 Design and Analysis of Algorithms
 ### Week 5 (10 October - 16 October): Big O Notation
 - [[CMSC 142 Problem Set 1]]
@@ -28,6 +33,7 @@
 ## CMSC 192 Ethical and Professional Issues in Computing
 [[Think]]
 ### Week 3
+- [[Imperatives in Ethics]]
 - [[Immanuel Kant’s Categorical Imperative]]
 - [[Utilitarianism]]
 - [[Natural Law Ethics]]
