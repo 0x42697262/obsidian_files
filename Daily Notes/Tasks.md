@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 - [ ] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 - [ ] [[MODULE 2]] #STS1 @[[2022-12-07]]
@@ -18,31 +17,33 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Class Project @2022-11-18]]
-- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
-- [ ] [[First Long Exam @2022-11-04]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
-- [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] please check cmsc124 group reporting @[[2022-11-20]]
+- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 
 
 ## DOING
 
+- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 - [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
-- [ ] Annotated Bibliography (RioT)
+- [ ] [[Machine Problem 4]] @[[2022-12-02]]
 
 
 ## Postponed
 
+- [ ] Annotated Bibliography (RioT)
 - [ ] ALL CMSC 128 TASKS
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
+- [ ] Annotated Bibliography (ORG)
+- [ ] [[First Long Exam @2022-11-04]]
 
 
 ## DONE
 
 **Complete**
+- [x] [[Class Project @2022-11-18]]
 - [x] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [x] [[Machine Problem 3]] @[[2022-11-04]]
 - [x] REFLECTIVE ESSAY*: “REVISITING YOUR EXPECTATIONS” @[[2022-11-04]]
