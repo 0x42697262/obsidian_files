@@ -16,6 +16,9 @@
 - [[Lexical & Syntax Analysis]]
 - [[CMSC 124 Problem Set 4]]
 - [[CMSC 124 Machine Problem 3]] ([[CMSC 124 Machine Problem 3 Documentation|Documentation]])
+### Weeks 11-12: Expressions
+- [[Expression Notations]]: [[Expression Notation - Infix|Infix]] [[Expression Notation - Prefix|Prefix]] [[Expression Notation - Postfix|Postfix]]
+- [[CMSC 124 Machine Problem 4]]
 
 ## CMSC 142 Design and Analysis of Algorithms
 ### Week 5 (10 October - 16 October): Big O Notation
@@ -33,4 +36,4 @@
 
 ## CMSC 194.1
 - [[CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)]]
-[[CMSC 194.1 Task 2 Annotated Bibliography (RioT)]]
+- [[CMSC 194.1 Task 2 Annotated Bibliography (RioT)]]
