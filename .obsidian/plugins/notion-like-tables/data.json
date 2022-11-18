@@ -93,6 +93,94 @@
         "shouldUpdate": true,
         "tableCacheVersion": 431
       }
+    },
+    "Notes/020 Studies/CMSC 124 Machine Problem 4.md": {
+      "Ypn5Cf": {
+        "data": {
+          "headers": [
+            {
+              "id": "a43b7eb4-1a22-4083-9631-45cccb005fba",
+              "content": "Input",
+              "sortDir": "default",
+              "width": "100px",
+              "shouldWrapOverflow": true,
+              "useAutoWidth": false,
+              "type": "text"
+            },
+            {
+              "id": "1cb9a41e-e1f6-4230-a85d-a66997852078",
+              "content": "Output",
+              "sortDir": "default",
+              "width": "100px",
+              "shouldWrapOverflow": true,
+              "useAutoWidth": false,
+              "type": "text"
+            }
+          ],
+          "rows": [
+            {
+              "id": "769b28b9-d222-4015-8540-d4f379ecdb6f",
+              "creationTime": 1668749294216
+            },
+            {
+              "id": "f4fa797b-ec26-4480-8c6a-d01a26ac798c",
+              "creationTime": 1668749293914
+            },
+            {
+              "id": "848cbdd9-b224-435a-bb5f-b200483a20e9",
+              "creationTime": 1668749294142
+            }
+          ],
+          "cells": [
+            {
+              "id": "0d718b4f-09cb-472e-aa24-d391ed85640c",
+              "headerId": "a43b7eb4-1a22-4083-9631-45cccb005fba",
+              "rowId": "769b28b9-d222-4015-8540-d4f379ecdb6f",
+              "type": "text",
+              "content": "Infix"
+            },
+            {
+              "id": "cc772af4-6a5b-498b-a161-2eeb77af3110",
+              "headerId": "1cb9a41e-e1f6-4230-a85d-a66997852078",
+              "rowId": "769b28b9-d222-4015-8540-d4f379ecdb6f",
+              "type": "text",
+              "content": "Prefix and postfix equivalent"
+            },
+            {
+              "id": "b76981e0-31f1-4d73-8eaa-0cab77baf40d",
+              "headerId": "a43b7eb4-1a22-4083-9631-45cccb005fba",
+              "rowId": "f4fa797b-ec26-4480-8c6a-d01a26ac798c",
+              "type": "text",
+              "content": "Prefix"
+            },
+            {
+              "id": "eeecc990-48dd-4899-aa44-91aaac6d9351",
+              "headerId": "1cb9a41e-e1f6-4230-a85d-a66997852078",
+              "rowId": "f4fa797b-ec26-4480-8c6a-d01a26ac798c",
+              "type": "text",
+              "content": "Infix and postfix equivalent"
+            },
+            {
+              "id": "0caa087e-6dd3-49aa-a1a0-180ba39965d8",
+              "headerId": "a43b7eb4-1a22-4083-9631-45cccb005fba",
+              "rowId": "848cbdd9-b224-435a-bb5f-b200483a20e9",
+              "type": "text",
+              "content": "Postfix"
+            },
+            {
+              "id": "4e072b83-e537-4985-addb-25eb3e43f31f",
+              "headerId": "1cb9a41e-e1f6-4230-a85d-a66997852078",
+              "rowId": "848cbdd9-b224-435a-bb5f-b200483a20e9",
+              "type": "text",
+              "content": "Infix and prefix equivalent"
+            }
+          ],
+          "tags": []
+        },
+        "shouldUpdate": false,
+        "viewType": "reading",
+        "tableCacheVersion": 431
+      }
     }
   },
   "sectionInfo": {

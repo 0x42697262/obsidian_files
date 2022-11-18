@@ -70,7 +70,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+                "file": "Notes/020 Studies/Expression Notations.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#2022-11-08",
+                "query": "tag:#2022-11-1",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -137,7 +137,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -153,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+                "file": "Notes/020 Studies/Expression Notations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md",
+                "file": "Notes/020 Studies/Expression Notations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -193,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/010 My Arch Journey/011 Pacman Updates.md"
+                "file": "Notes/020 Studies/Expression Notations.md"
               }
             }
           },
@@ -223,15 +224,15 @@
   },
   "active": "3973d05ed7771632",
   "lastOpenFiles": [
-    "Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "Notes/010 My Arch Journey/012 Package Installs.md",
-    "Notes/010 My Arch Journey/011 Pacman Updates.md",
-    "Notes/__index/000 Index.md",
-    "Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
     "Notes/020 Studies/020 Studies.md",
-    "Notes/020 Studies/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
-    "Notes/010 My Arch Journey/etc - Touchpad.md",
-    "Notes/010 My Arch Journey/016 Notes.md",
-    "Notes/010 My Arch Journey/014 User Changes.md"
+    "Notes/__orphans/Expression Notation - Infix.md",
+    "Notes/020 Studies/CMSC 124 Machine Problem 4.md",
+    "Notes/__orphans/scenario based modelling task lab 6.md",
+    "Notes/020 Studies/CMSC 124 Machine Problem 3.md",
+    "Notes/030 Learning/Rust Programming.md",
+    "Notes/030 Learning/030 Learning.md",
+    "Notes/030 Learning/Cross Site Scripting.md",
+    "Notes/090 Others/Interesting Websites To Check.md",
+    "Notes/020 Studies/Expression Notations.md"
   ]
 }
