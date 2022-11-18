@@ -12,4 +12,4 @@
 - Save/Load the modified design
 - Choose one of the profile customizations
 
-[[scenario based modelling task lab 6]]
+[[Laboratory Exercise 6 - Scenario-Based Modelling]]
