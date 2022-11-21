@@ -1,50 +1,56 @@
-# Week 2
+# Executive Summary
+
+
+# My Weekly Learning Logs
+## Week 2
 ### 1. What is computer ethics? Define.
-```
+
 Computer ethics deals with a set of moral principles regarding the regulation of the use of computers by an individual or group of people. This concerns the decision making in computing professionals from a professional and social conduct. 
-```
+
 
 ### 2. As a computer science student, why do you need to be educated on computer ethics? Discuss.
-```
+
 I should be educated enough because I have to uphold integrity as being a decent human. Of course by not causing harm to others either with an intention and accidents. This would also help educate other people who are lacking in computer ethical manners.
-```
+
 
 ### 3. What were two unexpected uses of social networking? Identify.
-```
+
 The use of business marketing and political campaigns. There are many more other unexpected uses of social networking but these two are the common ones.
-```
+
 
 ### 4. What is the difference between negative and positive rights? Describe and give examples for each.
-```
+
 Negative rights refer to freedom from outside interference in certain activities while positive rights refer to rights that provide something that people need to secure their well being.
-```
+
 
 ### 5. Distinguish between the negative and positive right to freedom of speech. Explain
-```
+
 Negative Rights allows people to exercise their freedom of speech without getting disturbed by outside influence like the government or individuals. This makes people "free" to present their speech however people are not free from the consequences of their speech. 
 Postive Rights to freedom of speech implies that 3rd parties like government should be involved to ensure that the public are provided with all the speech. This means that freedom of speech also involves democracy.
-```
+
 
 
 # Week 3
 ### 1. What are two of Kant’s important ideas about ethics? Describe.
-```
+
 Kant's two important ideas are the Principle of Universality and Principle of Humanity. 
 In Principle of Universality, if a proposed action is adopted by everyone, then it can be considered as a universal act. It is a basis for morality principle. It has been criticized that this principle is too strict. As for the Principle of Humanity, humans have inherent values then by treating them as tools rather than an end, the person woud be reduced to the level of an animal according to Kant. Also known as "formula of the end".
-```
+
 ### 2. What is the utility principle in Utilitarianism? Explain.
-```
+
 Utilitarianism has its principles based on an act that promotes happiness to the majority of people in order for it to be considered as good or morality right even at the cost of producing pain to the minority as long as the main principle of "greatest happiness to the greatest number of people". So, if you were to steal from the rich and give it to the poor, that would be considered morally good in Utilitarianism.
-```
+
 ### 3. What is the difference between act utilitarianism and rule utilitarianism? Compare.
-```
-```
+
+In Act Utilitarianism, it is the principle of applying a particular act in a particular situation or circumstance. So the basis of morality is the "act" itself to be considered as good or morally right. As for Rule Utilitarianism, morality is based on a certain rule or code of conduct that benefits the most people to be considered good or morally right. 
+Act utilitarianism is all about the act and providing results whether it is good or bad. As for rule utilitarianism, it regards itself to a rule, law, or a code of conduct that is formulated from the utility principle.
+
 ### 4. What can be considered as morally good act in Natural Law ethical view? Explain.
-```
-```
+
+
 ### 5. What are the main differences in Kant’s Categorical Imperatives and Utilitarianism ethical views? Discuss.
-```
-```
+
+
 
 # Week 4
 1. What is intellectual property? Describe.
