@@ -27,7 +27,6 @@ kanban-plugin: basic
 - [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
-- [ ] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 
 
 ## Postponed
@@ -43,6 +42,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [x] [[Class Project @2022-11-18]]
 - [x] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
 - [x] [[Machine Problem 3]] @[[2022-11-04]]
