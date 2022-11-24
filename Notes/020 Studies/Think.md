@@ -3,6 +3,7 @@
 
 # My Weekly Learning Logs
 ## Week 2
+The very first lesson in class, I am a bit interested since it is about computer ethics. I was expecting that the topics are related to real life events. So this is my learning log for this week's topic.
 ### 1. What is computer ethics? Define.
 Computer ethics deals with a set of moral principles regarding the regulation of the use of computers by an individual or group of people. This concerns the decision making in computing professionals from a professional and social conduct. 
 
@@ -19,9 +20,12 @@ Negative rights refer to freedom from outside interference in certain activities
 Negative Rights allows people to exercise their freedom of speech without getting disturbed by outside influence like the government or individuals. This makes people "free" to present their speech however people are not free from the consequences of their speech. 
 Postive Rights to freedom of speech implies that 3rd parties like government should be involved to ensure that the public are provided with all the speech. This means that freedom of speech also involves democracy.
 
+---
 
+After this lesson, I was intrigued since it tackled about the freedom of speech especially when cencorship is quite strong for certain countries.
 
 # Week 3
+I expected a bit more of what happened last week so I considered this learning log as a bit uninteresting as I do not like concepts as much when it comes to computing.
 ### 1. What are two of Kant’s important ideas about ethics? Describe.
 Kant's two important ideas are the Principle of Universality and Principle of Humanity. 
 In Principle of Universality, if a proposed action is adopted by everyone, then it can be considered as a universal act. It is a basis for morality principle. It has been criticized that this principle is too strict. As for the Principle of Humanity, humans have inherent values then by treating them as tools rather than an end, the person woud be reduced to the level of an animal according to Kant. Also known as "formula of the end".
@@ -34,13 +38,16 @@ In Act Utilitarianism, it is the principle of applying a particular act in a par
 Act utilitarianism is all about the act and providing results whether it is good or bad. As for rule utilitarianism, it regards itself to a rule, law, or a code of conduct that is formulated from the utility principle.
 
 ### 4. What can be considered as morally good act in Natural Law ethical view? Explain.
-
+I think what can be considered as a morallyl good act for natural law is that if we follow the seven basic goods then it can be considered as morally good. For example, reproduction for the purpose of giving birth to a new life is morally good however if the act has another end or purpose then it is not considered to be morally good.
 
 ### 5. What are the main differences in Kant’s Categorical Imperatives and Utilitarianism ethical views? Discuss.
+Their main difference for Kantianism is that the act must be as a means of an end because it is a duty while in Utilitarianism ethical views the act can be considered morally good if it produces the greatest number of people. These two ethical views can sometimes overlap however there are differences between them. Kantianism is more inclined to sake of duty and a virtue by intrinsict value. So, even if the act in utilitarianism is morally good but it does not mean it is also morally good for Kantianism. Such example is stealing from the rich and giving it to the poor. Utilitarianism would say it is morally good since it benefits the largest amount of people however in Kantianism, it is not because it cannot be applied universally according to Principle of Universality. 
 
-
+---
+Although I was not interested on this lesson, I was able to brush up my previous semesters lesson for ethics. I think I had more understanding in the past than now, or maybe the opposite.
 
 # Week 4
+Looking into this lesson, I immediately brougth back my interest to this class since it tooks about intellectual property. As a proud P-flag person, I have no moral or ethical issues of what I have been doing ever since I used a computer. Ever. Here's my learning log for this week's lesson.
 ### 1.What is intellectual property? Describe.
 A concept, law, or idea that when a person creates a work or creation, they have rights to ownership. This prevents other people from stealing their works. So, when someone produces a music or writes a novel, they have the rights to copyright. When someone discovers or have a new invention, then they have the rights for patent. When someone creates a company, they the the rights to trademark. And so for other different kinds of rights as long as the person who created such works, concepts, or ideas are protected.
 If put into otherwords, intellectual property is an intangible creative work, that is its ideas and not necesarrily the physical form, which is protected by the copyright and patent laws.
@@ -63,8 +70,11 @@ The "free" in free software does not mean "free" as in "free beer" but instead "
 ### 7. What are the pros and cons on the calls for patenting software? Summarize.
 The good side in patenting software is that this prevents others from stealing the creator's ideas and this allows him to take ownership of his creative works. However, this also leads issues to patents that prevents the development of the idea behind. One such example of this is patent trolls that its purpose is to disallow other creators from making profit from it.
 
+---
+As much as how I know about the ethical aspects in intellectual property, I would still do it regardless of the act since: 1) I have no money, 2) if I have money, I will rather buy food, and 3) some creative works are not available in our country.
 
 # Week 5
+Ah, well, this looks a bit more interesting than before, of course definitely not by experience I can guarantee it as much as the half-life of a technetium-85 isotope. 
 ### 1. What is hacking? Define.
 There are multiple definitions of hacking over the course of these years. To start, hacking is an intentional, unauthorized access to computer systems. In early days of computing, hacking was termed as a brilliant or clever solution to a particular problem in programming. Hacking also is a term for making the computer command certain actions that were not intended by the programmers. On the later years, it slowly developed into a term rings a negative connotation to the public. Maybe we have hollywood movies to blame for this. The term hacking lately refers to gaining access to a computer system without authorization by any means necessary.
 Hacking is not necessarily negative, it is possible to hack a system with authorization and those kind of people are security experts in finding vulnerabilities and securing the system.
@@ -84,8 +94,11 @@ Criminals typically phish people online like their banking sites or social media
 ### 6. What suggestions do you have for resolving the issues created by differences in laws by different countries? What do you think would work, or would not? Discuss.
 There is no universal solution that every countries can agree upon however countries can make agreements with each others on what laws can be appiled to individual countries. If we borrow the same ideas from the agreement of prohibiting nuclear weapons, then there will still be countries that would not agree to that treaty. Which is why it is very difficult to implement laws internationally since countries can either agree to it or not. An example of this would be piracy where it's illegal to distribute the copyrighted material in one country but it is legal to be distributed in another.
 
+---
+The term "hacking" gets thrown out a lot of times that it sometimes does not fit in the situation. You open up with your riced terminal then they call you a "hacker". You study computer science or IT, then you get called a "hacker". If sex education is important, so should be using the computer.
 
 # Week 6
+My favorite part of this class, the privacy aspect. If you can pick one, would you rather have zero privacy but full security or zero security but full privacy? My answer is of course full privacy with zero security. Security does not ensure privacy however privacy can ensure you security through isolation.
 ### 1. What are the key aspects of privacy? Describe.
 There are three key aspects of privacy: freedom of intrusion, control of information about oneself, and freedom from surveillance. Firstly, we should have the rights to not disclose any of our personal information. Secondly, we should be able to control how much information we provide. If someone does not want to reveal any information, then let them have that freedom and choice to do so. Lastly, we should have the freedom from surveillance, no one should have the authority to fully track or record our movements whenever and wherever we are. It is not about "there is nothing to hide" but instead "we need to have some form of respect and dignity". If someone is not an advocate for privacy, they should leave their curtains open at night because "they have nothing to hide".
 
@@ -96,16 +109,26 @@ The main risk of privacy is through social media and the consumer aspect of comp
 Rephrasing the Republic Act No. 10173, it is about protecting an individual's right to data privacy regarding personal information in information and communication systems be it in the government or private sectors such as businesses or nonprofit organizations. Due to this act, organizations should oblige in securing and protecting an individual's personal information. Carelessly handling sensitive personal information can potentially lead them to court trials. Filipinos can then rest assure that their data are protected properly and should only be used accordingly based on their stated purposes. Otherwise, one can file a lawsuit against an organization.
 
 ### 4. What are the underlying principles of the Data Privacy Act of the Philippines with respect to the processing of personal data? Discuss.
+>[!INFO]
+>SEC. 11. _General Data Privacy Principles._ – The processing of personal information shall be allowed, subject to compliance with the requirements of this Act and other laws allowing disclosure of information to the public and adherence to the principles of transparency, legitimate purpose and proportionality.
+
+There are six underlying principles of data privacy act. These personal information must, be collected and used for a specific and legitimate purposes to which then must be processed fairly and according to the law. When such purpose is a necessity, it must be up to date, accurate, and relevant, then the inaccurate and incomplete data must be updated, destroyed, or restricted from access. Personal information collected should only be adequate and not excessive with relation to its purpose. And to only store the personal information collected for a specific period of time that is in according to its purpose which must also be kept in a form that permits identification of data subjects.
 
 
 ### 5. What types of personal information are covered by the Data Privacy Act of 2012? Describe.
+These types are sensitive personal information which means the personal information of a person and privileged information which refers to any and all forms of data. Personal information can be anything as long as it can identify an individual as for the privileged information that regards with the court of the law and information that does not need to be disclosed in legal proceedings.
 
 ### 6. What is the main (ethical) issue in the business sector that has implications on privacy? How about for the government systems? Compare.
+Data collection for both business sector and government systems. In business sector, businesses mine personal data and collect them to be used for marketing and personalization which can help their market revenue increase in sales. Which is why sometimes you'll notice that you have certain advertisements targeted at you, this is called targeted ads. Some are called personalized ads that are based on your preferences. As for the government systems, data collection is mostly used for surveillance and national security. Millions of its citizens are monitored to detect terrorism and prevent them, or to even catch wanted criminals.
 
 ### 7. What are the two kinds of approaches in protecting one’s privacy? Describe.
+The two kinds of approaches to protect against one's privacy are by using privacy enhancing-technologies and throught the Rights and Laws. In the technology aspect, data can be encrypted to protect them against unauthorized access or use standard procedures in protecting privacy. As for the rights and laws there are two kinds, these are free market view where the consumers have the freedom of choice and consumer protection view which protects the consumers from breaching their privacy. 
 
 ### 8. What are the two (2) contrasting viewpoints on privacy under rights and laws? Summarize.
+The two contrasting viewpoints are: Free Market View and Consumer Protection View. Free market view allows the consumers to have freedom of choice, the diversity of individual tastes and values, and freedom in general. As for the consumer protection view, the consumers privacy should be protected by the organization handling their data. Consumers should also be educated on what they do not have knowledge of.
 
+---
+A bit lacking on this lesson but it was alright I guess. If you have a social media account, you should be aware of the actions that you do every moment. Who knows that every picture you upload, every memes you share, every comments you engage can potentially be used against you in the future.
 
 # Week 7
 ### 1. What is professional ethics? What is professional code of ethics? Compare.
