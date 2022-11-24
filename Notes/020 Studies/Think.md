@@ -1,4 +1,14 @@
 # Executive Summary
+The topics that interests me the most are privacy, hacking, and intellectual property that is because it relates me to my *almost* everyday living of life. My reasoning to that is because I pretty much use the computer almost everyday and the ethical aspects relating to intellectual property is an everyday occuring event to me. Not that I make profits from other people's creative works but I make a profit as a consumer, that is: enjoyment. I am an advocate for privacy, prioritizing it at all cost although I make some exceptions for myself sometimes. Hacking on the otherhand, it's a topic that interests me but no effort in putting action to actually learn its concepts.
+
+The topics that bored me the most are ethical theories and professional ethics. There is nothing for me to suggest since the boredom comes from within myself as it is not my preference to learn this type of lesson. Although I must do it for the sake of my grades. I sitck to my computing actions of "if it does not harm anyone, but still makes everyone happy then it's all gucci". I cannot simply apply one ethical theory in my life, that's not how it works since not every ethical theories are perfect. One might need to mix and match them depending on the situation.
+
+I do not really think there are learning materials that I found engaging. If anything, I simply read the text on online sources or watch the video material provided. I do not consider video materials as engaging. Well, it depends on how a video is presented but on this class, none of them are engaging enough.
+
+I think my best learning realization is about intellectual property. Anyone can easily argue that creators have the rights to their own creations and can have patents for it. But however, ideas or concepts are not original. It never is and will never be. The ideas that you have think of are already existing ideas that have existed around you. For example, try thinking of a face of a non-existent person. You might say you can but the truth is that person already exists somewhere or is a combination of faces of multiple people. So, I realized that when someone creates a "new" idea and "owns" them, it can sometimes restrict other people from further developing that idea.
+
+This class would have been a lot interesting if the learning materials were not all youtube videos from a decade old video upload. I mean sure we students from this class can dig deeper and it is our job to do so, but on this level it just sets my expectation low. Did I enjoy this class? I don't know, you tell me. So I shall ask "Did you enjoy teaching this class?"
+
 
 
 # My Weekly Learning Logs
@@ -131,17 +141,26 @@ The two contrasting viewpoints are: Free Market View and Consumer Protection Vie
 A bit lacking on this lesson but it was alright I guess. If you have a social media account, you should be aware of the actions that you do every moment. Who knows that every picture you upload, every memes you share, every comments you engage can potentially be used against you in the future.
 
 # Week 7
+The last lesson of this class, quite intrigued how quick it ended. This is my last learning log.
 ### 1. What is professional ethics? What is professional code of ethics? Compare.
+Professional ethics is sort of like an expectation for investors and consumers to have quality standards on their products or services. It makes the investors and consumers trust the business. This is not only limited to the two, but also involves the relationships with and responsibilities towards others who use the products and services including to whom it affects.
+Professional code of ethics just simply makes sure that businesses are behaving in such a manner that is socially acceptable and respectful of one another.
+Professional ethics focuses more on personal and corporate standards that are expected to have certain professional code of ethics behaviors.
 
 ### 2. For computing professionals, which organizations develop professional codes of ethics? What are the core values espouse by these organizations’ code of conduct for computer professionals? Describe.
+These organizationis are Association for Computing Machinery (ACM), Institute of Electrical and Electronics Engineers (IEEE), and Tralee Institute of Technology. They have basic ethical values of honesty and fairness, responsibility to respect confidentiality, maintain professional competence, being aware of relevant laws and owner contracts and agreements, upholds respect, protect privacy, and respects property rights.
 
 ### 3. What are the ethical guidelines and professional responsibilities for computer professionals? Summarize.
+There are a lot of ethical guidelines and professional responsibilities, although the most important thing to consider is that communicate, respect, understand, and provide honest behaviors to the clients or customers. If the business sector where to do this, they will be successful. Although the same thing can be said when they try to unethical, business sectors can still succeed. 
 
 ### 4. What are the two (2) major phases in ethical scenario analysis? Describe.
+The first phase is the brainstorming phase where you list all the stakeholders then list the risks, problems, issues, consequences and then the benefiits. Then the next phase is the analysis phase where you identify the responsibilities of the decision maker and the rights of stakeholders. Which then we consider the effect to the stakeholders and after that we categorize them.
 
 ### 5. In the analysis phase of a scenario., which part you think is the most critical one? Justify.
+I think the most important part is identifying the rights of the stakeholders since the next steps would not have any meaning if the stakeholders did not have any rights. Like for example, the stakeholders can get harm but they do not have the rights to protect themselves. Then when we categorize that from a potential action, we might as well consider their harm as acceptable and neglect it. Which is why I think identifying their rights is thte most critical step in analysis phase.
 
-
+---
+I think I am a bit lost on this lesson. This takes a lot of good morality to continue on my end. I did not expect it would take a bit longer to understand this topic.
 
 ---
 ## References
