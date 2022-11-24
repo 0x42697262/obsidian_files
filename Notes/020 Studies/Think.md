@@ -162,12 +162,14 @@ I think the most important part is identifying the rights of the stakeholders si
 ---
 I think I am a bit lost on this lesson. This takes a lot of good morality to continue on my end. I did not expect it would take a bit longer to understand this topic.
 
+To sum it all up, what I have learned in this semester class is that we ought to apply the ethical views in computing technology although since this field is not fairly new, it isn't old either. There may still have some mishaps regarding the ethical aspects that someone may not be aware of.
+
 ---
 ## References
-- https://ethics.csc.ncsu.edu/basics/principles/study.php
-- https://www.scu.edu/ethics/ethics-resources/ethical-decision-making/rights/
+- Principles. (n.d.). https://ethics.csc.ncsu.edu/basics/principles/study.php
+- Santa Clara University. (n.d.). Rights. Markkula Center for Applied Ethics. https://www.scu.edu/ethics/ethics-resources/ethical-decision-making/rights/
 - https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=4692&context=etd
-- https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/
-- https://www.widen.com/blog/digital-rights-management
-- http://plaza.ufl.edu/ysmgator/projects/project2/history.html
+- Stim, R. (2021, November 25). What Is Fair Use? Stanford Copyright and Fair Use Center. https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/
+- Hamm, M. (n.d.). Digital Rights Management: A Guide. https://www.widen.com/blog/digital-rights-management
+- History of Hacking. (n.d.). http://plaza.ufl.edu/ysmgator/projects/project2/history.html
 - Baase, S. (2013). _A Gift of Fire: Social, Legal, and Ethical Issues for Computing Technology_. Pearson.
