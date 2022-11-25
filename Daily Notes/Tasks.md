@@ -41,7 +41,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
-- [x] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
+- [x] [[Assignment 2 - Learning Portfolio]] [[CMSC192 Learning Portfolio]] @[[2022-11-25]]
 - [x] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [x] [[Class Project @2022-11-18]]
 - [x] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
