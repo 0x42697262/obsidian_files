@@ -31,7 +31,7 @@
 - [[CMSC 142 Machine Problem 1]]
 
 ## CMSC 192 Ethical and Professional Issues in Computing
-[[Think]]
+[[CMSC192 Learning Portfolio]]
 ### Week 3
 - [[Imperatives in Ethics]]
 - [[Immanuel Kant’s Categorical Imperative]]
