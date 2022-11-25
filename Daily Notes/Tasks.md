@@ -22,7 +22,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [ ] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
@@ -41,6 +40,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [x] [[Assignment 2 - Learning Portfolio]] [[CMSC192 Learning Portfolio]] @[[2022-11-25]]
 - [x] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [x] [[Class Project @2022-11-18]]
@@ -70,6 +70,6 @@ kanban-plugin: basic
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic","new-note-template":"Templates/Deadlines.md"}
+{"kanban-plugin":"basic","new-note-template":"Templates/Deadlines.md","tag-colors":[],"show-relative-date":false}
 ```
 %%
