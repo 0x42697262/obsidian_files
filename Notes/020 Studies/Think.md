@@ -11,6 +11,8 @@ This class would have been a lot interesting if the learning materials were not 
 
 
 
+<div style="page-break-after: always;"></div>
+
 # My Weekly Learning Logs
 ## Week 2
 The very first lesson in class, I am a bit interested since it is about computer ethics. I was expecting that the topics are related to real life events. So this is my learning log for this week's topic.
@@ -33,6 +35,7 @@ Postive Rights to freedom of speech implies that 3rd parties like government sho
 ---
 
 After this lesson, I was intrigued since it tackled about the freedom of speech especially when cencorship is quite strong for certain countries.
+<div style="page-break-after: always;"></div>
 
 # Week 3
 I expected a bit more of what happened last week so I considered this learning log as a bit uninteresting as I do not like concepts as much when it comes to computing.
@@ -55,6 +58,7 @@ Their main difference for Kantianism is that the act must be as a means of an en
 
 ---
 Although I was not interested on this lesson, I was able to brush up my previous semesters lesson for ethics. I think I had more understanding in the past than now, or maybe the opposite.
+<div style="page-break-after: always;"></div>
 
 # Week 4
 Looking into this lesson, I immediately brougth back my interest to this class since it tooks about intellectual property. As a proud P-flag person, I have no moral or ethical issues of what I have been doing ever since I used a computer. Ever. Here's my learning log for this week's lesson.
@@ -73,6 +77,7 @@ There are multiple methods of responding to copyright infringement. One of these
 
 ### 5. What is digital rights management (DRM)? Characterize.
 It is a tool for protecting software products from unauthorized modifications or distributions. It is a different method of restricting the use of copyrighted digital materials. This assures the owners of the software to be safe from getting their software stolen. However, DRMs can also cause issues to the consumers especially when it comes to games. There are cases where the consumer who owns the right to a particular game is restricted from transferring the product from one computer to another. Another case of DRMs providing issues is that it reduces the performance of the game due to how it alters and modifies the code of the software to protect it from modifications. DRMs simply exist to protect the rights of the owners of their work but with consequences that troubles some margin of the customers.
+<div style="page-break-after: always;"></div>
 
 ### 6. Is the “free” in free software means free of cost? Justify.
 The "free" in free software does not mean "free" as in "free beer" but instead "free" as in "freedom". A software can be free of cost however it does not necessarily mean anyone have the freedom to modify, distribute, and profit from it. This is the nature of free and open-source softwares (FOSS). There are software that are free but they are only free of cost but not free of use in freedom.
@@ -82,6 +87,7 @@ The good side in patenting software is that this prevents others from stealing t
 
 ---
 As much as how I know about the ethical aspects in intellectual property, I would still do it regardless of the act since: 1) I have no money, 2) if I have money, I will rather buy food, and 3) some creative works are not available in our country.
+<div style="page-break-after: always;"></div>
 
 # Week 5
 Ah, well, this looks a bit more interesting than before, of course definitely not by experience I can guarantee it as much as the half-life of a technetium-85 isotope. 
@@ -103,9 +109,11 @@ Criminals typically phish people online like their banking sites or social media
 
 ### 6. What suggestions do you have for resolving the issues created by differences in laws by different countries? What do you think would work, or would not? Discuss.
 There is no universal solution that every countries can agree upon however countries can make agreements with each others on what laws can be appiled to individual countries. If we borrow the same ideas from the agreement of prohibiting nuclear weapons, then there will still be countries that would not agree to that treaty. Which is why it is very difficult to implement laws internationally since countries can either agree to it or not. An example of this would be piracy where it's illegal to distribute the copyrighted material in one country but it is legal to be distributed in another.
+<div style="page-break-after: always;"></div>
 
 ---
 The term "hacking" gets thrown out a lot of times that it sometimes does not fit in the situation. You open up with your riced terminal then they call you a "hacker". You study computer science or IT, then you get called a "hacker". If sex education is important, so should be using the computer.
+<div style="page-break-after: always;"></div>
 
 # Week 6
 My favorite part of this class, the privacy aspect. If you can pick one, would you rather have zero privacy but full security or zero security but full privacy? My answer is of course full privacy with zero security. Security does not ensure privacy however privacy can ensure you security through isolation.
@@ -124,6 +132,7 @@ Rephrasing the Republic Act No. 10173, it is about protecting an individual's ri
 
 There are six underlying principles of data privacy act. These personal information must, be collected and used for a specific and legitimate purposes to which then must be processed fairly and according to the law. When such purpose is a necessity, it must be up to date, accurate, and relevant, then the inaccurate and incomplete data must be updated, destroyed, or restricted from access. Personal information collected should only be adequate and not excessive with relation to its purpose. And to only store the personal information collected for a specific period of time that is in according to its purpose which must also be kept in a form that permits identification of data subjects.
 
+<div style="page-break-after: always;"></div>
 
 ### 5. What types of personal information are covered by the Data Privacy Act of 2012? Describe.
 These types are sensitive personal information which means the personal information of a person and privileged information which refers to any and all forms of data. Personal information can be anything as long as it can identify an individual as for the privileged information that regards with the court of the law and information that does not need to be disclosed in legal proceedings.
@@ -139,6 +148,7 @@ The two contrasting viewpoints are: Free Market View and Consumer Protection Vie
 
 ---
 A bit lacking on this lesson but it was alright I guess. If you have a social media account, you should be aware of the actions that you do every moment. Who knows that every picture you upload, every memes you share, every comments you engage can potentially be used against you in the future.
+<div style="page-break-after: always;"></div>
 
 # Week 7
 The last lesson of this class, quite intrigued how quick it ended. This is my last learning log.
@@ -163,6 +173,7 @@ I think the most important part is identifying the rights of the stakeholders si
 I think I am a bit lost on this lesson. This takes a lot of good morality to continue on my end. I did not expect it would take a bit longer to understand this topic.
 
 To sum it all up, what I have learned in this semester class is that we ought to apply the ethical views in computing technology although since this field is not fairly new, it isn't old either. There may still have some mishaps regarding the ethical aspects that someone may not be aware of.
+<div style="page-break-after: always;"></div>
 
 ---
 ## References
