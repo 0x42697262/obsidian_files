@@ -22,9 +22,8 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [ ] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
-- [ ] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
+- [ ] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
@@ -32,16 +31,17 @@ kanban-plugin: basic
 ## Postponed
 
 - [ ] Annotated Bibliography (RioT)
+- [ ] Annotated Bibliography (ORG)
 - [ ] ALL CMSC 128 TASKS
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
-- [ ] Annotated Bibliography (ORG)
 - [ ] [[First Long Exam @2022-11-04]]
 
 
 ## DONE
 
 **Complete**
+- [x] [[Assignment 2 - Learning Portfolio]] [[Think]] @[[2022-11-25]]
 - [x] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
 - [x] [[Class Project @2022-11-18]]
 - [x] [[Learning Log  Weeks 9-10]] @[[2022-11-11]]
