@@ -19,6 +19,7 @@
 ### Weeks 11-12: Expressions
 - [[Expression Notations]]: [[Expression Notation - Infix|Infix]] [[Expression Notation - Prefix|Prefix]] [[Expression Notation - Postfix|Postfix]]
 - [[CMSC 124 Machine Problem 4]]
+- [[CMSC 124 Guide Question for Chapter 6. Expressions]]
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
