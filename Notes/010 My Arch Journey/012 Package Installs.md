@@ -19,6 +19,14 @@ Total Download Size:   16.80 MiB
 Total Installed Size:  85.84 MiB
 ```
 
+`paru -s netcat`
+```sh
+Packages (1) gnu-netcat-0.7.1-8
+
+Total Download Size:   0.03 MiB
+Total Installed Size:  0.06 MiB
+```
+
 ## 2022-11-10
 `paru -S timeshift`
 ```sh
