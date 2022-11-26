@@ -15,16 +15,15 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] please check cmsc124 group reporting @[[2022-11-20]]
 - [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
-- [ ] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 
 
 ## DOING
 
-- [ ] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
+- [ ] please check cmsc124 group reporting @[[2022-11-20]]
+- [ ] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 
 
 ## Postponed
@@ -40,6 +39,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [x] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [x] [[Assignment 2 - Learning Portfolio]] [[CMSC192 Learning Portfolio]] @[[2022-11-25]]
 - [x] MIDTERM PROJECT: Balak sa Dalan @[[2022-11-12]]
