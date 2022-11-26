@@ -4,6 +4,21 @@
 ----
 # 012 Package Installs
 
+## 2022-11-26
+`paru -S easyeffects`
+```sh
+Packages (14) graphene-1.10.8-1  gsl-2.7.1-1
+              gst-plugins-bad-libs-1.20.4-3
+              gst-plugins-base-libs-1.20.4-3  gstreamer-1.20.4-3
+              gtk4-1:4.8.2-1  libadwaita-1:1.2.0-1
+              libebur128-1.2.6-1  libsigc++-3.0-3.2.0-1
+              orc-0.4.33-1  rnnoise-0.4.1-1  tbb-2021.5.0-2
+              zita-convolver-4.0.3-2  easyeffects-7.0.0-1
+
+Total Download Size:   16.80 MiB
+Total Installed Size:  85.84 MiB
+```
+
 ## 2022-11-10
 `paru -S timeshift`
 ```sh

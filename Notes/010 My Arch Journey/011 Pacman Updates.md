@@ -4,6 +4,85 @@
 ----
 # 011 Pacman Updates
 
+## 2022-11-26
+```sh
+Packages (141) alsa-card-profiles-1:0.3.60-3
+               amd-ucode-20221109.60310c2-2
+               archlinux-keyring-20221123-1  bluez-libs-5.66-1
+               brotli-1.0.9-9  bzip2-1.0.8-5
+               ca-certificates-mozilla-3.85-1  cmake-3.25.0-1
+               code-1.73.1-1  curl-7.86.0-4  dconf-0.40.0-2
+               device-mapper-2.03.17-1  dotnet-host-7.0.0.sdk100-1
+               dotnet-runtime-7.0.0.sdk100-1
+               dotnet-sdk-7.0.0.sdk100-1
+               dotnet-targeting-pack-7.0.0.sdk100-1  fcitx5-5.0.21-1
+               fcitx5-chewing-5.0.13-1  fcitx5-configtool-5.0.16-1
+               fcitx5-gtk-5.0.21-1  fcitx5-qt-5.0.16-1
+               firefox-107.0-1  gawk-5.2.1-1  gnutls-3.7.8-4
+               gptfdisk-1.0.9-2  graphviz-7.0.2-1
+               grub-2:2.06.r380.g151467888-1  gtk3-1:3.24.35-2
+               guile-3.0.8-3  iana-etc-20221107-1  icu-72.1-2
+               ijs-0.35-5  kguiaddons-5.100.0-1
+               kitemviews-5.100.0-1  kwidgetsaddons-5.100.0-1
+               lazygit-0.36.0-1  lib32-brotli-1.0.9-5
+               lib32-bzip2-1.0.8-3  lib32-icu-72.1-2
+               lib32-libunwind-1.6.2-2  lib32-libx11-1.8.2-2
+               lib32-libxau-1.0.10-3  lib32-libxcb-1.15-2
+               lib32-libxcrypt-4.4.33-1  lib32-libxdamage-1.1.5-3
+               lib32-libxdmcp-1.1.3-2  lib32-libxfixes-6.0.0-2
+               lib32-llvm-libs-14.0.6-3
+               lib32-lm_sensors-1:3.6.0.r41.g31d1f125-2
+               lib32-mesa-22.2.3-1
+               lib32-vulkan-icd-loader-1.3.235-1  lib32-xz-5.2.8-2
+               lib32-zlib-1.2.13-2  libdatrie-0.2.13-2
+               libedit-20210910_3.1-2  libev-4.33-2
+               libgcrypt-1.10.1-2  libgpg-error-1.46-2
+               libheif-1.14.0-1  libinput-1.22.0-1
+               libluv-1.44.2_1-2  libmm-glib-1.20.2-1
+               libnewt-0.52.22-1  libnghttp2-1.51.0-1
+               libnm-1.40.4-1  libpipeline-1.5.7-1  libpng-1.6.39-1
+               libthai-0.1.29-2  libtirpc-1.3.3-2  libunwind-1.6.2-2
+               libupnp-1.14.15-1  libvpx-1.12.0-2  libx11-1.8.2-2
+               libxau-1.0.10-2  libxcb-1.15-2  libxcrypt-4.4.33-1
+               libxcursor-1.2.1-2  libxdamage-1.1.5-5
+               libxdmcp-1.1.4-1  libxfixes-6.0.0-2  libxft-2.3.7-1
+               libxi-1.8-2  libxkbcommon-1.4.1-2
+               libxkbcommon-x11-1.4.1-2  libxpm-3.5.14-1
+               libxpresent-1.0.1-1  libxrandr-1.5.3-1
+               linux-6.0.9.arch1-1
+               linux-firmware-20221109.60310c2-2
+               linux-firmware-whence-20221109.60310c2-2
+               linux-headers-6.0.9.arch1-1  llvm-libs-14.0.6-4
+               lm_sensors-1:3.6.0.r41.g31d1f125-2
+               luajit-2.1.0.beta3.r455.g46aa45dc-1  lvm2-2.03.17-1
+               lzo-2.10-4  make-4.3-5  man-db-2.11.1-1
+               mesa-22.2.3-1  minizip-1:1.2.13-2  mkinitcpio-33-1
+               mpfr-4.1.1-1  mpv-1:0.35.0-2  neovim-0.8.1-2
+               netstandard-targeting-pack-7.0.0.sdk100-1
+               networkmanager-1.40.4-1  nodejs-19.1.0-1  nss-3.85-1
+               nvidia-520.56.06-11  pango-1:1.50.12-1
+               pciutils-3.9.0-1  picom-10.1-1  pipewire-1:0.3.60-3
+               pipewire-alsa-1:0.3.60-3  pipewire-audio-1:0.3.60-3
+               pipewire-jack-1:0.3.60-3  pipewire-pulse-1:0.3.60-3
+               poppler-data-0.4.11-3  qt5-base-5.15.7+kde+r176-1
+               qt5-declarative-5.15.7+kde+r23-1
+               qt5-wayland-5.15.7+kde+r55-1  sdl2-2.26.0-1
+               shadow-4.12.3-2  sqlite-3.40.0-1  systemd-252.2-1
+               systemd-libs-252.2-1  systemd-sysvcompat-252.2-1
+               vulkan-icd-loader-1.3.235-1  xapp-2.4.1-1
+               xcb-imdkit-1.0.4-1  xcb-proto-1.15.2-2
+               xfsprogs-6.0.0-1  xorg-fonts-100dpi-1.0.3-8
+               xorg-fonts-75dpi-1.0.3-8  xorg-xkbevd-1.1.5-1
+               xorg-xkill-1.0.6-1  xorg-xlsatoms-1.1.4-1
+               xorg-xlsclients-1.1.5-1  xxhash-0.8.1-3  xz-5.2.8-1
+               zlib-1:1.2.13-2
+
+Total Download Size:    849.34 MiB
+Total Installed Size:  2393.53 MiB
+Net Upgrade Size:        64.38 MiB
+```
+I wanted to install `easyeffects` [[012 Package Installs#2022-11-26]]
+
 ## 2022-11-10
 ```sh
 Packages (11) btrfs-progs-6.0.1-1  hwdata-0.364-1  libnma-1.10.4-3  libnma-common-1.10.4-3  network-manager-applet-1.30.0-1  nm-connection-editor-1.30.0-1  popt-1.19-1  qt5-base-5.15.7+kde+r173-1
