@@ -3,6 +3,16 @@
 
 ----
 # 012 Package Installs
+`paru -S obs-studio`
+## 2022-11-27
+```sh
+Packages (7) libb2-0.98.1-2  mbedtls-2.28.1-1  qt6-base-6.4.1-1
+             qt6-svg-6.4.1-1  qt6-translations-6.4.1-1
+             vulkan-headers-1:1.3.235-1  obs-studio-28.1.2-1
+
+Total Download Size:    22.02 MiB
+Total Installed Size:  113.72 MiB
+```
 
 ## 2022-11-26
 `paru -S easyeffects`
