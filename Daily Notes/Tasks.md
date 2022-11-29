@@ -20,15 +20,13 @@ kanban-plugin: basic
 
 ## DOING
 
+- [ ] Annotated Bibliography (RioT)
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
-- [ ] please check cmsc124 group reporting @[[2022-11-20]]
-- [ ] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 
 
 ## Postponed
 
-- [ ] Annotated Bibliography (RioT)
 - [ ] Annotated Bibliography (ORG)
 - [ ] ALL CMSC 128 TASKS
 - [ ] [[Mastery Quiz  Process Models]]
@@ -39,6 +37,8 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
+- [x] please check cmsc124 group reporting @[[2022-11-20]]
 - [x] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
 - [x] [[Learning Log  Weeks 11-12]] @[[2022-11-25]]
 - [x] [[Assignment 2 - Learning Portfolio]] [[CMSC192 Learning Portfolio]] @[[2022-11-25]]
