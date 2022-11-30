@@ -3,8 +3,26 @@
 
 ----
 # 012 Package Installs
-`paru -S obs-studio`
+
+## 2022-11-30
+`paru -Syu acpi`
+```sh
+Packages (27) alsa-card-profiles-1:0.3.61-1  btrfs-progs-6.0.2-1  cryptsetup-2.6.0-1  firefox-107.0.1-1
+              glib2-2.74.2-1  glib2-docs-2.74.2-1  graphviz-7.0.3-1  iputils-20221126-1  libcamera-0.0.2-1
+              libwireplumber-0.4.12-2  linux-6.0.10.arch2-1  linux-headers-6.0.10.arch2-1
+              luajit-2.1.0.beta3.r457.g637721d0-1  netpbm-10.73.41-1  nvidia-520.56.06-12
+              pipewire-1:0.3.61-1  pipewire-alsa-1:0.3.61-1  pipewire-audio-1:0.3.61-1
+              pipewire-jack-1:0.3.61-1  pipewire-pulse-1:0.3.61-1  sed-4.9-1  systemd-252.2-2
+              systemd-libs-252.2-2  systemd-sysvcompat-252.2-2  wayland-protocols-1.30-1
+              wireplumber-0.4.12-2  acpi-1.7-3
+
+Total Download Size:   319.34 MiB
+Total Installed Size:  704.92 MiB
+Net Upgrade Size:        2.45 MiB
+```
+
 ## 2022-11-27
+`paru -S obs-studio`
 ```sh
 Packages (7) libb2-0.98.1-2  mbedtls-2.28.1-1  qt6-base-6.4.1-1
              qt6-svg-6.4.1-1  qt6-translations-6.4.1-1
