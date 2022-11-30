@@ -15,11 +15,13 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
+- [ ] Annotated Bibliography (ORG)
+- [ ] CMSC 194.1 Workshop 3-5
 
 
 ## DOING
 
+- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [ ] Annotated Bibliography (RioT)
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
@@ -27,12 +29,10 @@ kanban-plugin: basic
 
 ## Postponed
 
-- [ ] Annotated Bibliography (ORG)
 - [ ] ALL CMSC 128 TASKS
 - [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
 - [ ] [[First Long Exam @2022-11-04]]
-- [ ] CMSC 194.1 Workshop 3-5
 
 
 ## DONE
