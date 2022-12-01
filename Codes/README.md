@@ -34,4 +34,4 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 	- Prefix as Input, then convert
 	- Postfix as Input then convert
 
-*Note:* Unit Testing portion of the code exist to ensure that the functions work as expected.
+*Note: Unit Testing portion of the code exists to ensure that the functions work as expected.*
