@@ -104,12 +104,10 @@ fn postfix_to_infix(expression: &str) -> String {
                 stack.push(token.to_string());
             }
             '+' | '-' | '*' | '/' | '^' => {
-                let operand_right: String;
-                let operand_left: String;
+                let operand_right: String = stack.pop().unwrap();
+                let operand_left: String = stack.pop().unwrap();
 
                 let mut temp_string: String = String::new();
-                operand_right = stack.pop().unwrap();
-                operand_left = stack.pop().unwrap();
 
                 temp_string.push('(');
                 temp_string.push_str(&operand_left);
@@ -126,8 +124,29 @@ fn postfix_to_infix(expression: &str) -> String {
     stack[0].to_owned()
 }
 
-fn postfix_to_prefix(expression: &str) -> Vec<&str> {
-    let mut stack: Vec<&str> = Vec::new();
+fn postfix_to_prefix(expression: &str) -> String {
+    let mut stack: Vec<String> = Vec::new();
+
+    for token in expression.chars() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+
+            '+' | '-' | '*' | '/' | '^' => {
+                let operand_right: String = stack.pop().unwrap();
+                let operand_left: String = stack.pop().unwrap();
+
+                let mut temp_string: String = String::new();
+                temp_string.push(token);
+                temp_string.push_str(&operand_left);
+                temp_string.push_str(&operand_right);
+
+                stack.push(temp_string);
+            }
+            _ => {}
+        }
+    }
 
     stack[0].to_owned()
 }
@@ -135,12 +154,11 @@ fn postfix_to_prefix(expression: &str) -> Vec<&str> {
 fn prefix_to_infix(expression: &str) -> String {
     let mut stack: Vec<&str> = Vec::new();
 
-    infix
+    stack[0].to_owned()
 }
 
 fn main() {
-    println!("{:?}", postfix_to_infix("AB+C+D+"));
-    // postfix_to_infix("AB+CD-*");
+    println!("{:?}", postfix_to_prefix("abc*def^/g*-h*+"));
 }
 
 /*
@@ -261,5 +279,20 @@ mod tests {
             postfix_to_infix("abc*def^/g*-h*+"),
             "(a+(((b*c)-((d/(e^f))*g))*h))"
         );
+    }
+    #[test]
+    fn postfix_to_prefix_test() {
+        assert_eq!(postfix_to_prefix("ABC*+D+"), "++A*BCD");
+        assert_eq!(postfix_to_prefix("AB+CD+*"), "*+AB+CD");
+        assert_eq!(postfix_to_prefix("AB*CD*+"), "+*AB*CD");
+        assert_eq!(postfix_to_prefix("AB+C+D+"), "+++ABCD");
+        assert_eq!(postfix_to_prefix("AB+C*"), "*+ABC");
+        assert_eq!(postfix_to_prefix("AB*CD/+"), "+*AB/CD");
+        assert_eq!(postfix_to_prefix("ABC+*D/"), "/*A+BCD");
+        assert_eq!(postfix_to_prefix("abcd/+*"), "*a+b/cd");
+        assert_eq!(postfix_to_prefix("abc+*"), "*a+bc");
+        assert_eq!(postfix_to_prefix("ab/cd/+"), "+/ab/cd");
+        assert_eq!(postfix_to_prefix("ab+c*d-"), "-*+abcd");
+        assert_eq!(postfix_to_prefix("abc*def^/g*-h*+"), "+a*-*bc*/d^efgh");
     }
 }

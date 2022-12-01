@@ -23,7 +23,7 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 - [x] Infix to Prefix
 - [x] Infix to Postfix
 - [x] Postfix to Infix
-- [ ] Postfix to Prefix
+- [x] Postfix to Prefix
 - [ ] Prefix to Infix
 - [ ] Prefix to Postfix
 - [ ] Error Handling

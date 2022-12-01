@@ -172,11 +172,10 @@ fn postfix_to_infix(expression: &str) -> String {
                 stack.push(token.to_string());
             }
             '+' | '-' | '*' | '/' | '^' => {
-                let operand_right: String;
-                let operand_left: String;
+			    let operand_right: String = stack.pop().unwrap();
+                let operand_left: String = stack.pop().unwrap();
+
                 let mut temp_string: String = String::new();
-                operand_right = stack.pop().unwrap();
-                operand_left = stack.pop().unwrap();
                 temp_string.push('(');
                 temp_string.push_str(&operand_left);
                 temp_string.push(token);
@@ -192,12 +191,47 @@ fn postfix_to_infix(expression: &str) -> String {
 ```
 Unlike other functions, this returns a String instead of a character vector.
 
+**Converting Postfix expression to Prefix expression***
+Stacks is implemented for the conversion.
 
+1. Create a stack `stack`.
+2. Iterate the input expression from left to right as tokens.
+3. Push to `stack` if token is an operand.
+4. Pop `stack` twice if token is an operator.
+	1. Set `operand_right` as the first pop.
+	2. Set `operand_left` as the second pop.
+5. Concatenate the token, `operand_left`, and `operand_right` (e.g. `+AB`)
+6. Push the concatenated string.
 
+```rust
+fn postfix_to_prefix(expression: &str) -> String {
+    let mut stack: Vec<String> = Vec::new();
+    for token in expression.chars() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                let operand_right: String = stack.pop().unwrap();
+                let operand_left: String = stack.pop().unwrap();
+                let mut temp_string: String = String::new();
+                temp_string.push(token);
+                temp_string.push_str(&operand_left);
+                temp_string.push_str(&operand_right);
+                stack.push(temp_string);
+            }
+            _ => {}
+        }
+    }
+    stack[0].to_owned()
+}
+```
+A bit similar to converting postfix to infix, but without the parentheses. Still returns a String.
 
 ## Solution to number 2:
 
 
 # References
 ---
-_2.9. Infix, Prefix and Postfix Expressions — Resolução de Problemas Usando Python_. (n.d.). https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html
+- _2.9. Infix, Prefix and Postfix Expressions — Resolução de Problemas Usando Python_. (n.d.). https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html
+- https://www.web4college.com/converters/postfix-to-prefix-to-postfix.php
