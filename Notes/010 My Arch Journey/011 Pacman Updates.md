@@ -4,6 +4,21 @@
 ----
 # 011 Pacman Updates
 
+## 2022-12-02
+```sh
+Packages (18) cmake-3.25.1-1  elfutils-0.188-1  lib32-libelf-0.188-1
+              lib32-nvidia-utils-525.60.11-1  libelf-0.188-1  libnewt-0.52.23-1  libnm-1.40.6-1
+              libteam-1.31-7  libxnvctrl-525.60.11-2  mpfr-4.1.1.p1-1  networkmanager-1.40.6-1
+              nodejs-19.2.0-1  nvidia-525.60.11-1  nvidia-settings-525.60.11-2
+              nvidia-utils-525.60.11-1  obs-studio-28.1.2-2  opencl-nvidia-525.60.11-1
+              tzdata-2022g-1
+
+Total Download Size:    390.94 MiB
+Total Installed Size:  1119.02 MiB
+Net Upgrade Size:        31.93 MiB
+```
+~~I secretly install arch-install-scripts~~
+
 ## 2022-11-26
 ```sh
 Packages (141) alsa-card-profiles-1:0.3.60-3
