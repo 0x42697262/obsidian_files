@@ -18,6 +18,7 @@ Collaboration source code for [[CMSC 142 Machine Problem 1]].
 
 #### [mp4_expression_notation_converter.rs](mp4_expression_notation_converter.rs)
 Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Machine Problem 4 Problem 1]]. Basically just converts the three notations: [[Expression Notation - Infix]], [[Expression Notation - Postfix]], and  [[Expression Notation - Prefix]]. Error type checking is not handled by the converter so there is a need to sanitize the input expression first.
+
 **TODO:**
 - [x] Infix to Prefix
 - [x] Infix to Postfix
@@ -32,4 +33,5 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 	-  Infix as Input, then convert
 	- Prefix as Input, then convert
 	- Postfix as Input then convert
+
 *Note:* Unit Testing portion of the code exist to ensure that the functions work as expected.
