@@ -26,6 +26,8 @@ ELSIF expr3 THEN stmt3
 ELSE stmt0
 ```
 
+Another problem would be ambiguity as it would be confusing to which part of the `if` condition is the `else` statement when nested.
+
 #### 2. Given the concurrent Pascal program:
 ```pascal
 program increment;
@@ -51,10 +53,21 @@ Probably `The sum is 40`, assuming that the syntax is correct.
 Both C and Pascal breaks out of the case when a match is found, and both the languages follows a "check every cases until a match is found". Instead of using `else` for C language just like in Pascal, C uses `default` instead. Both languages are almost the same except their syntaxes although in order to write multiple instructions for Pascal, there is a need to wrap the instructions around `begin` and `end` unlike in C which just uses `{}`.
 
 #### 4. What is wrong with arithmetic IF statement of FORTRAN?
+Fortran's arithmetic `if` only takes an expression that checks if the value is less than zero, equal to zero, or greater than zero. It then executes one of the three statements accordingly. It is wrong because arithmetic `if` cannot take boolean inputs unlike logical `if`.
 
 #### 5. Give the equivalent case statement in Pascal for the FORTRAN if statement:
 ```fortran
 IF (expression) label1, label2, label3.
+```
+
+```pascal
+if (expression) then
+	label1
+else
+	if (expression) then
+		label2
+	else
+		label3
 ```
 
 #### 6. Rewrite the following C for loop
@@ -64,12 +77,51 @@ for (sum=0, i=0, j=0; i<10; i++, j+=2)
 ```
 in the loop statements in Java, Python and FORTRAN.
 
+Java:
+```java
+
+```
+
+Python:
+```python
+sum=0
+i=0
+j=0
+for i in range(10):
+	sum=sum+i+j
+	i=i+1
+	j=j+2
+```
+
+Fortran:
+```fortran
+integer :: sum = 0
+integer :: i = 0
+integer :: j = 0
+
+do n = 0, 9
+	sum = sum + i + j
+	i = i + 1
+	j = j + 2
+end do
+```
+
 #### 7. Describe the seven kinds of statements in terms of C. Or, classify all the C statements into one of the seven major classifications of statements.
+Labeled statements are labels through `:`.
+Jump statements uses labeled statements to jump to another statement; `goto`, `break`, `continue`, and `return` are jump statements.
+Compound statements is a statement that groups multiple statements using `{}`. 
+Expression statements are statements that may return a value; Usually ended with a `;`. 
+Selection statements is like a branching statements; Statements like `for` and `switch` cases. 
+Iteration statements are loops or simply repeats the same block of statements.
 
 #### 8. Differentiate ADA’s exit statements from C’s break statements.
+ADA's exit statement is used for stopping a looping statement unlike C's break statement that jumps after a condition is met. Both needs conditions to be met but C's break statement is not used in a loop.
 
 #### 9. Enumerate several design issues involved in the design of conditional and iterative statements.
+Conditional statements in switch cases are risky as some cases can get traversed even if the condition is met. In iterative statements, there are multiple ways to express it: posttest and pretest loops.
 
 #### 10. Some programming languages have a single syntax for statements. Give examples of programming languages that adopt this strategy.
+C++ and Python.
 
 #### 11. Although the use of templates for translating statements are very popular, it also has its disadvantages. What are these disadvantages?
+Maybe it gets confusing?
