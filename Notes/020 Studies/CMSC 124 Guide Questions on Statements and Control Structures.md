@@ -79,7 +79,9 @@ in the loop statements in Java, Python and FORTRAN.
 
 Java:
 ```java
-
+for (sum=0, i=0,j=0; i<10;i++,j+=2){
+        sum+=i+j;
+}
 ```
 
 Python:
