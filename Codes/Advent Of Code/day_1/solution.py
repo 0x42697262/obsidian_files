@@ -16,4 +16,3 @@ print(max(elven_calories))
 # --- Part Two ---
 elven_calories_sorted = sorted(elven_calories)
 print(elven_calories_sorted[-1]+elven_calories_sorted[-2]+elven_calories_sorted[-3])
-print(elven_calories_sorted)
