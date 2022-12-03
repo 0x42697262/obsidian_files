@@ -24,14 +24,11 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 - [x] Infix to Postfix
 - [x] Postfix to Infix
 - [x] Postfix to Prefix
-- [ ] Prefix to Infix
-- [ ] Prefix to Postfix
+- [x] Prefix to Infix
+- [x] Prefix to Postfix
 - [ ] Error Handling
 	- Check input for whitespaces
 	- Check input expression is correct
 - [ ] User Interface Input
-	-  Infix as Input, then convert
-	- Prefix as Input, then convert
-	- Postfix as Input then convert
 
 *Note: Unit Testing portion of the code exists to ensure that the functions work as expected.*
