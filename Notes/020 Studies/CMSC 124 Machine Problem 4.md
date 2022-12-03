@@ -189,7 +189,7 @@ fn postfix_to_infix(expression: &str) -> String {
     stack[0].to_owned()
 }
 ```
-Unlike other functions, this returns a String instead of a character vector.
+Unlike other functions, this returns a String instead of a character vector. I initiated the stack as a string so that it will be easier to pop concatenated tokens like `(a+b)`.
 
 **Converting Postfix expression to Prefix expression***
 Stacks is implemented for the conversion.
@@ -228,10 +228,276 @@ fn postfix_to_prefix(expression: &str) -> String {
 ```
 A bit similar to converting postfix to infix, but without the parentheses. Still returns a String.
 
+**Converting Prefix expression to Infix expression***
+Stacks is implemented for the conversion.
+
+```rust
+fn prefix_to_infix(expression: &str) -> String {
+    let mut stack: Vec<String> = Vec::new();
+    for token in expression.chars().rev() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                let operand_left: String = stack.pop().unwrap();
+                let operand_right: String = stack.pop().unwrap();
+                let mut temp_string: String = String::new();
+                temp_string.push('(');
+                temp_string.push_str(&operand_left);
+                temp_string.push(token);
+                temp_string.push_str(&operand_right);
+                temp_string.push(')');
+                stack.push(temp_string);
+            }
+            _ => {}
+        }
+    }
+    stack[0].to_owned()
+}
+```
+
+
+**Converting Prefix expression to Postfix  expression***
+Stacks is implemented for the conversion.
+
+```rust
+fn prefix_to_postfix(expression: &str) -> String {
+    let mut stack: Vec<String> = Vec::new();
+    for token in expression.chars().rev() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                let operand_left: String = stack.pop().unwrap();
+                let operand_right: String = stack.pop().unwrap();
+                let mut temp_string: String = String::new();
+                temp_string.push_str(&operand_left);
+                temp_string.push_str(&operand_right);
+                temp_string.push(token);
+                stack.push(temp_string);
+            }
+            _ => {}
+        }
+    }
+    stack[0].to_owned()
+}
+```
+
+A helper method for returning the operator's precedence value.
+```rust
+fn precedence_rank(token: Option<&char>) -> u32 {
+    match token {
+        Some(&'(') => return 1,
+        Some(&')') => return 1,
+        Some(&'+') => return 2,
+        Some(&'-') => return 2,
+        Some(&'*') => return 3,
+        Some(&'/') => return 3,
+        Some(&'^') => return 4,
+        _ => return 0,
+    }
+}
+```
+
+A helper method for printing vector arrays.
+```rust
+fn result_to_string(result: Vec<char>) {
+    let mut expression: String = "".to_owned();
+    for c in result {
+        expression.push(c);
+    }
+    println!("{}", expression);
+}
+```
+
+Method for checking the type of the input expression.
+```rust
+fn check_notation_type(expression: &str) -> isize {
+    match expression.chars().nth(0).unwrap() {
+        '+' | '-' | '*' | '/' | '^' => {
+            return -1;
+        }
+        _ => match expression.chars().nth_back(0).unwrap() {
+            '+' | '-' | '*' | '/' | '^' => {
+                return 1;
+            }
+            _ => return 0,
+        },
+    }
+}
+```
+**Return values:**
+-  `-1`, prefix
+- `1`, postfix
+- `0`, infix
+
+**Next up is checking if the expression notations are valid:**
+Stacks are still used to implement the algorithm. Returns a boolean value.
+
+Method for checking if the Prefix Notation is valid. 
+```rust
+fn check_prefix(expression: &str) -> bool {
+    let mut stack: Vec<String> = Vec::new();
+    for token in expression.chars().rev() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                if stack.last() != None {
+                    let operand_left: String = stack.pop().unwrap();
+                    if stack.last() != None {
+                        let operand_right: String = stack.pop().unwrap();
+                        let mut temp_string: String = String::new();
+                        temp_string.push_str(&operand_left);
+                        temp_string.push_str(&operand_right);
+                        temp_string.push(token);
+                        stack.push(temp_string);
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+            ' ' => {}
+            _ => return false,
+        }
+    }
+    if stack.len() != 1 {
+        return false;
+    }
+    true
+}
+```
+Nesting the if-else statements to ensure expression validation since it checks if the two operands exist and an operator exists. The last part checks if the length of the stack is `1`; If it is a valid expression, it should only return one item in the stack.
+
+Same method it implemented from the Prefix checker for this Postfix notation validation.
+```rust
+fn check_postfix(expression: &str) -> bool {
+    let mut stack: Vec<String> = Vec::new();
+    for token in expression.chars() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                stack.push(token.to_string());
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                if stack.last() != None {
+                    let operand_right: String = stack.pop().unwrap();
+                    if stack.last() != None {
+                        let operand_left: String = stack.pop().unwrap();
+                        let mut temp_string: String = String::new();
+                        temp_string.push_str(&operand_left);
+                        temp_string.push_str(&operand_right);
+                        stack.push(temp_string);
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+            ' ' => {}
+            _ => return false,
+        }
+    }
+    if stack.len() != 1 {
+        return false;
+    }
+    true
+}
+```
+
+
+```rust
+fn check_infix(expression: &str) -> bool {
+    let mut operand_stack: Vec<char> = Vec::new();
+    let mut operator_stack: Vec<char> = Vec::new();
+    for token in expression.chars() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                operand_stack.push(token);
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                if !operator_stack.is_empty() {
+                    if precedence_rank(Some(&token)) >= precedence_rank(operator_stack.last()) {
+                        operator_stack.push(token);
+                    } else {
+                        if operand_stack.last() != None {
+                            operand_stack.pop();
+                            if operand_stack.last() != None {
+                                operand_stack.pop();
+                                if operator_stack.last() != None {
+                                    operator_stack.pop();
+                                    operand_stack.push('X');
+                                    operator_stack.push(token);
+                                } else {
+                                    return false;
+                                }
+                            } else {
+                                return false;
+                            }
+                        } else {
+                            return false;
+                        }
+                    }
+                } else {
+                    operator_stack.push(token);
+                }
+            }
+            '(' => {
+                operator_stack.push(token);
+            }
+            ')' => {
+                let mut top_token: Option<char> = operator_stack.pop();
+                while top_token != Some('(') {
+                    if operand_stack.last() != None {
+                        operand_stack.pop();
+                        if operand_stack.last() != None {
+                            operand_stack.pop();
+                            operand_stack.push('X');
+                            top_token = operator_stack.pop();
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            ' ' => {}
+            _ => return false,
+        }
+    }
+    for _ in operator_stack {
+        if operand_stack.last() != None {
+            operand_stack.pop();
+            if operand_stack.last() != None {
+                operand_stack.pop();
+                operand_stack.push('X');
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    if operand_stack.len() != 1 {
+        return false;
+    }
+    true
+}
+```
+
+Unit tests exists to check if the methods works as expected.
+
 ## Solution to number 2:
 
 
 # References
 ---
 - _2.9. Infix, Prefix and Postfix Expressions — Resolução de Problemas Usando Python_. (n.d.). https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html
+- Expression Evaluation Using Stack. (n.d.). _Code Studio_. https://www.codingninjas.com/codestudio/library/expression-evaluation-using-stack
 - https://www.web4college.com/converters/postfix-to-prefix-to-postfix.php

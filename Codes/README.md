@@ -26,9 +26,9 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 - [x] Postfix to Prefix
 - [x] Prefix to Infix
 - [x] Prefix to Postfix
-- [ ] Error Handling
+- [x] Error Handling
 	- Check input for whitespaces
 	- Check input expression is correct
-- [ ] User Interface Input
+- [x] User Interface Input
 
 *Note: Unit Testing portion of the code exists to ensure that the functions work as expected.*

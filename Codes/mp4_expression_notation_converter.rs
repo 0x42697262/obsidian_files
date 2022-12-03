@@ -11,12 +11,12 @@ fn precedence_rank(token: Option<&char>) -> u32 {
     }
 }
 
-fn result_to_string(result: Vec<char>) {
+fn result_to_string(result: Vec<char>) -> String {
     let mut expression: String = "".to_owned();
     for c in result {
         expression.push(c);
     }
-    println!("{}", expression);
+    expression
 }
 
 fn infix_to_postfix(expression: &str) -> Vec<char> {
@@ -299,13 +299,128 @@ fn check_postfix(expression: &str) -> bool {
     true
 }
 
+fn check_infix(expression: &str) -> bool {
+    let mut operand_stack: Vec<char> = Vec::new();
+    let mut operator_stack: Vec<char> = Vec::new();
+
+    for token in expression.chars() {
+        match token {
+            'a'..='z' | 'A'..='Z' => {
+                operand_stack.push(token);
+            }
+            '+' | '-' | '*' | '/' | '^' => {
+                if !operator_stack.is_empty() {
+                    if precedence_rank(Some(&token)) >= precedence_rank(operator_stack.last()) {
+                        operator_stack.push(token);
+                    } else {
+                        if operand_stack.last() != None {
+                            operand_stack.pop();
+                            if operand_stack.last() != None {
+                                operand_stack.pop();
+                                if operator_stack.last() != None {
+                                    operator_stack.pop();
+                                    operand_stack.push('X');
+                                    operator_stack.push(token);
+                                } else {
+                                    return false;
+                                }
+                            } else {
+                                return false;
+                            }
+                        } else {
+                            return false;
+                        }
+                    }
+                } else {
+                    operator_stack.push(token);
+                }
+            }
+            '(' => {
+                operator_stack.push(token);
+            }
+            ')' => {
+                let mut top_token: Option<char> = operator_stack.pop();
+                while top_token != Some('(') {
+                    if operand_stack.last() != None {
+                        operand_stack.pop();
+                        if operand_stack.last() != None {
+                            operand_stack.pop();
+                            operand_stack.push('X');
+
+                            top_token = operator_stack.pop();
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            ' ' => {}
+            _ => return false,
+        }
+    }
+    for _ in operator_stack {
+        if operand_stack.last() != None {
+            operand_stack.pop();
+            if operand_stack.last() != None {
+                operand_stack.pop();
+                operand_stack.push('X');
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    if operand_stack.len() != 1 {
+        return false;
+    }
+    true
+}
+
 fn main() {
     let mut expression: String = String::new();
+    println!("INPUT EXPRESSION: ");
     std::io::stdin()
         .read_line(&mut expression)
         .expect("Incorrect expression input.");
+    expression = expression.trim().parse().expect("INVALID INPUT");
 
-    let expression_type: isize = check_notation_type(&expression);
+    println!();
+    match check_notation_type(&expression) {
+        -1 => {
+            if check_prefix(&expression) {
+                println!("Prefix Notation: {}", expression);
+                println!("Infix Notation: {}", prefix_to_infix(&expression));
+                println!("Postfix Notation: {}", prefix_to_postfix(&expression));
+            }
+        }
+        0 => {
+            if check_infix(&expression) {
+                println!("Infix Notation: {}", expression);
+                println!(
+                    "Prefix Notation {}",
+                    result_to_string(infix_to_prefix(&expression))
+                );
+                println!(
+                    "Postfix Notation {}",
+                    result_to_string(infix_to_postfix(&expression))
+                );
+            }
+        }
+        1 => {
+            if check_postfix(&expression) {
+                println!("Postfix Notation: {}", expression);
+                println!("Infix Notation: {}", postfix_to_infix(&expression));
+                println!("Postfix Notation: {}", postfix_to_prefix(&expression));
+            }
+        }
+        _ => {
+            println!("INVALID INPUT.");
+        }
+    }
 }
 
 /*
@@ -340,6 +455,7 @@ mod check_notations_test {
         assert_eq!(check_postfix("AB++"), false);
         assert_eq!(check_postfix("AB"), false);
         assert_eq!(check_postfix("A+B"), false);
+        assert_eq!(check_postfix("A+Z+CB+"), false);
         assert_eq!(check_postfix("++A"), false);
         assert_eq!(check_postfix("AaaA"), false);
     }
@@ -347,20 +463,58 @@ mod check_notations_test {
     #[test]
     fn check_prefix_test() {
         assert_eq!(check_prefix("+AB"), true);
+        assert_eq!(check_prefix("-AB"), true);
         assert_eq!(check_prefix("*+AB-SW"), true);
         assert_eq!(check_prefix("+ A B"), true);
         assert_eq!(check_prefix("/*+AB+CD+GF"), true);
         assert_eq!(check_prefix("+ A   B"), true);
+        assert_eq!(check_prefix("+A++BCD"), true);
 
+        assert_eq!(check_prefix("+AB*C-D"), false);
         assert_eq!(check_prefix("+AB+"), false);
         assert_eq!(check_prefix("+-AB"), false);
         assert_eq!(check_prefix("AB"), false);
+        assert_eq!(check_prefix("+A+BC+D"), false);
         assert_eq!(check_prefix("+++"), false);
         assert_eq!(check_prefix("(+AB)"), false);
         assert_eq!(check_prefix("+  () AB"), false);
         assert_eq!(check_prefix("A+AB"), false);
+        assert_eq!(check_prefix("+CA+AB"), false);
         assert_eq!(check_prefix("A+A+B"), false);
         assert_eq!(check_prefix("AB+"), false);
+    }
+
+    #[test]
+    fn check_infix_test() {
+        assert_eq!(check_infix("((A+(B*C))+D)"), true);
+        assert_eq!(check_infix("((A+B)*(C+D))"), true);
+        assert_eq!(check_infix("((A*B)+(C*D))"), true);
+        assert_eq!(check_infix("(((A+B) +C)+D)"), true);
+        assert_eq!(check_infix("((A+B)*C)"), true);
+        assert_eq!(check_infix("((A*B  )+(C/D))"), true);
+        assert_eq!(check_infix("((A*(B+C))/D)"), true);
+        assert_eq!(check_infix("(a*(b    +(c/d)))"), true);
+        assert_eq!(check_infix("(a*(b+ c))"), true);
+        assert_eq!(check_infix("((a/b)+( c/d))"), true);
+        assert_eq!(check_infix("(((a+b)*c)-d)"), true);
+        assert_eq!(check_infix("(a+(((b*c)-((d/(e^f))*g))*h))"), true);
+        assert_eq!(check_infix("D"), true);
+        assert_eq!(check_infix("(A)"), true);
+
+        assert_eq!(check_infix("A*B+((C/D)+)"), false);
+        assert_eq!(check_infix("A*B+(C/D))"), false);
+        assert_eq!(check_infix("A*B+(C)/D)"), false);
+        assert_eq!(check_infix("A*B+(C//D)"), false);
+        assert_eq!(check_infix("+A*B+(C/D)"), false);
+        assert_eq!(check_infix("A*B+(C/D)+"), false);
+        assert_eq!(check_infix("D)"), false);
+        assert_eq!(check_infix("+"), false);
+        assert_eq!(check_infix(""), false);
+        assert_eq!(check_infix("++"), false);
+        assert_eq!(check_infix("A**"), false);
+        assert_eq!(check_infix("A*"), false);
+        assert_eq!(check_infix("**A"), false);
+        assert_eq!(check_infix("*A"), false);
     }
 }
 
