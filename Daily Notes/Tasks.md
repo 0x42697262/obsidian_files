@@ -6,8 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[MODULE 2]] #STS1 @[[2022-12-07]]
-- [ ] [[MODULE 3]] #STS1 @[[2022-12-14]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 - [ ] [[MODULE 5]]  #STS1 @[[2022-12-21]]
 - [ ] [[Position Argumentative Paper]] #STS1 @[[2023-01-18]]
@@ -17,12 +15,12 @@ kanban-plugin: basic
 
 - [ ] Annotated Bibliography (ORG)
 - [ ] CMSC 194.1 Workshop 3-5
+- [ ] [[MODULE 3]] #STS1 @[[2022-12-14]]
 
 
 ## DOING
 
-- [ ] [[Learning Log  Week 13]] @[[2022-12-02]]
-- [ ] Annotated Bibliography (RioT)
+- [ ] [[MODULE 2]] #STS1 @[[2022-12-07]]
 - [ ] [[Machine Problem 4]] @[[2022-12-02]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
@@ -38,6 +36,8 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Annotated Bibliography (RioT)
+- [x] [[Learning Log  Week 13]] @[[2022-12-02]]
 - [x] [[MODULE 1 - TOPIC 1 & 2]] #STS1 @[[2022-11-30]]
 - [x] please check cmsc124 group reporting @[[2022-11-20]]
 - [x] [[Thesis Statement & Outline]] #STS1 @[[2022-11-25]]
