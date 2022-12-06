@@ -26,6 +26,8 @@
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
 - [[Laboratory Exercise 6 - Scenario-Based Modelling]]
+### Requirements Modeling: Behavior-based
+- [[Behavior-Based Modelling]]
 
 
 ## CMSC 142 Design and Analysis of Algorithms
