@@ -60,6 +60,8 @@ Expression: ( 5 + 10 ) / ( 20 / 4 )
 Answer: 3
 
 Source Code: 
+- https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp4_expression_notation_evaluator.py
+- https://replit.com/@KrulYuno/CMSC124-Machine-Problem-42#main.py
 
 ---
 

@@ -18,9 +18,8 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[Machine Problem 4]] @[[2022-12-02]]
-- [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 - [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
+- [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
 
 ## Postponed
@@ -34,6 +33,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[Machine Problem 4]] @[[2022-12-02]]
 - [x] [[MODULE 3]] #STS1 @[[2022-12-14]]
 - [x] [[MODULE 2]] #STS1 @[[2022-12-07]]
 - [x] [  <br>Machine Problem 4](app://obsidian.md/Machine%20Problem%204) @[2022-12-02](app://obsidian.md/2022-12-02)<br><br>[2022-12-02](app://obsidian.md/2022-12-02)<br><br>[May the for be with you - version 1](app://obsidian.md/May%20the%20for%20be%20with%20you%20-%20version%201) @[2022-11-12](app://obsidian.md/2022-11-12)<br><br>[2022-11-12](app://obsidian.md/2022-11-12)<br><br>+Add a card<br><br>Postponed<br><br>4<br><br>ALL CMSC 128 TASKS<br><br>[Mastery Quiz Process Models](app://obsidian.md/Mastery%20Quiz%20%20Process%20Models)<br><br>Mastery Quiz: Agile Development<br><br>[First Long Exam @2022-11-04](app://obsidian.md/First%20Long%20Exam%20@2022-11-04)<br><br>+Add a card<br><br>DONE<br><br>29<br><br>Annotated Bibliograph
