@@ -32,3 +32,6 @@ Source code for [[CMSC 124 Machine Problem 4#Solution to problem 1:|CMSC124 Mach
 - [x] User Interface Input
 
 *Note: Unit Testing portion of the code exists to ensure that the functions work as expected.*
+
+#### [mp4_expression_notation_evaluator.py](mp4_expression_notation_evaluator.py)
+Source code for [[CMSC 124 Machine Problem 4#Solution to number 2:|CMSC 124 Machine Problem 4 Problem 1]]. Evaluates the input expressions.

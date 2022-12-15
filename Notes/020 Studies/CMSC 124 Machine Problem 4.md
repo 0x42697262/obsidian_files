@@ -18,6 +18,7 @@ Install [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) or use 
 ^Ypn5Cf
 
 Sample expressions:
+
 | Infix                            | Prefix           | Postfix            |
 | -------------------------------- | ---------------- | ------------------ |
 | A+B\*C+D                         | ++A\*BCD         | ABC\*+D+           |
@@ -31,10 +32,16 @@ Sample expressions:
 | a\*(b+c)                         | \*a+bc           | abc+\*             |
 | a/b+c/d                          | +/ab/cd          | ab/cd/+            |
 | ((a+b)\*c)-d                     | -\*+abcd         | ab+c\*d-           |
-| (a+(((b\*c)-((d/(e^f))\*g))\*h)) | +a\*-*bc*/d^efgh | abc\*def^/g\*-h\*+ |
+| (a+(((b\*c)-((d/(e^f))\*g))\*h)) | +a\*-\*bc\*/d^efgh | abc\*def^/g\*-h\*+ |
 ^5aqOWm
 
 Source Code: 
+- https://github.com/KrulYuno/obsidian_files/blob/master/Codes/mp4_expression_notation_converter.rs 
+- https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=be1166c26d86ad5e2a133c84a021130a 
+- https://replit.com/@KrulYuno/CMSC124-Machine-Problem-41#src/main.rs
+
+
+<div style="page-break-after: always;"></div>
 
 ## 2. Use the same algorithms you have implemented in #1 to accept an expression (this time variables are actual numbers) and evaluate them to give the final answer. For clarity purposes, separate each token with a space. Also, assume that user may input erroneous expressions, so include exception handling in your implementation. Shown below are some example runs:
 Expression: 6 2 3 + - 3 8 2 / + * 2 ^ 3 +
@@ -52,7 +59,7 @@ Answer: 8
 Expression: ( 5 + 10 ) / ( 20 / 4 )
 Answer: 3
 
-Source Code:
+Source Code: 
 
 ---
 
@@ -301,14 +308,14 @@ fn precedence_rank(token: Option<&char>) -> u32 {
 }
 ```
 
-A helper method for printing vector arrays.
+A helper method for returning concatenated string of vector characters..
 ```rust
-fn result_to_string(result: Vec<char>) {
+fn result_to_string(result: Vec<char>) -> String {
     let mut expression: String = "".to_owned();
     for c in result {
         expression.push(c);
     }
-    println!("{}", expression);
+    expression
 }
 ```
 
@@ -493,7 +500,191 @@ fn check_infix(expression: &str) -> bool {
 
 Unit tests exists to check if the methods works as expected.
 
+
 ## Solution to number 2:
+
+The same algorithm is used for evaluating the numbers from solution \#1.
+
+Returns the precedence rank of the operators.
+```python
+def precedence_rank(token: str):
+    match token:
+        case '(':
+            return 1
+        case ')':
+            return 1
+        case '+':
+            return 2
+        case '-':
+            return 2
+        case '*':
+            return 3
+        case '/':
+            return 3
+        case '^':
+            return 4
+        case _:
+            return 0
+```
+
+Converts a string into a number.
+```python
+
+def number_identifier(number:str):
+    try:
+        return int(number)
+    except:
+        return None
+```
+
+Returns the arithmetic calculation / evaluation of the input expression.
+```python
+def arithmetic_operations(operator, left, right):
+    match operator:
+        case '+':
+            return left + right
+        case '-':
+            return left - right
+        case '*':
+            return left * right
+        case '/':
+            return left / right
+        case '^':
+            return left ** right
+        case _:
+            return None
+```
+
+Evaluates and checks if the expression is valid, returns the evaluated expression if valid for postfix notation.
+```python
+def evaluate_postfix(expression: str):
+    tokens      = expression.split()
+    stack       = list()
+    
+    for token in tokens:
+        if number_identifier(token) == None:
+            match token:
+                case '+' | '-' | '*' | '/' | '^':
+                    try:
+                        operand_right   = stack.pop()
+                        operand_left    = stack.pop()
+                        value           = arithmetic_operations(token, operand_left, operand_right)
+                        stack.append(value)
+                    except:
+                        print("Invalid Expression.")
+                        return None
+                    
+                case _:
+                    print("Invalid Expression.")
+                    return None
+
+        else:
+            stack.append(number_identifier(token))
+    
+    if len(stack) != 1:
+        print("Invalid Expression.")
+        return None
+
+    return stack[0]
+```
+
+
+Evaluates and checks if the expression is valid, returns the evaluated expression if valid for prefix notation.
+```python
+def evaluate_prefix(expression: str):
+    tokens      = expression.split()
+    stack       = list()
+
+    tokens.reverse()
+    for token in tokens:
+        if number_identifier(token) == None:
+            match token:
+                case '+' | '-' | '*' | '/' | '^':
+                    try:
+                        operand_left    = stack.pop()
+                        operand_right   = stack.pop()
+                        value           = arithmetic_operations(token, operand_left, operand_right)
+                        stack.append(value)
+                    except:
+                        print("Invalid Expression.")
+                        return None
+
+                case _:
+                    print("Invalid Expression.")
+                    return None
+
+        else:
+            stack.append(number_identifier(token))
+
+    if len(stack) != 1:
+        print("Invalid Expression.")
+        return None
+
+    return stack[0]
+```
+
+Converts an infix notation to postfix notation.
+```python
+
+def infix_to_postfix(expression: str):
+    tokens          = expression.split()
+    operator_stack  = list()
+    postfix_stack   = list()
+
+    for token in tokens:
+        number_token    = number_identifier(token)
+        if number_token == None:
+            match token:
+                case '+' | '-' | '*' | '/' | '^':
+                    while len(operator_stack) > 0 \
+                        and precedence_rank(operator_stack[-1]) >= precedence_rank(token):
+                        try:
+                            postfix_stack.append(operator_stack.pop())        
+                        except:
+                            print("Invalid Expression.")
+                            return None
+                    operator_stack.append(token)
+
+                case '(':
+                       operator_stack.append(token)
+
+                case ')':
+                    try:
+                        top_token   = operator_stack.pop()
+                        while top_token != '(': 
+                            postfix_stack.append(top_token)
+                            top_token   = operator_stack.pop()
+
+                    except:
+                        print("Invalid Expression.")
+                        return None
+
+                case _:
+                    print("Invalid Expression.")
+                    return None
+        else:
+            postfix_stack.append(number_token)
+
+    while len(operator_stack) > 0:
+        try:
+            postfix_stack.append(operator_stack.pop())
+        except:
+            print("Invalid Expression.")
+            return None
+
+    return ' '.join(map(str, postfix_stack))
+```
+
+A helper function that checks the type of notation from the input expression.
+```python
+def check_notation_type(expression: str) -> int:
+    if expression[0] in ['-', '+', '*', '/', '^']:
+        return -1
+    elif expression[-1] in ['-', '+', '*', '/', '^']: 
+        return 1
+    else:
+        return 0
+```
 
 
 # References

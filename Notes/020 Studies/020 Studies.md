@@ -48,3 +48,5 @@
 ## CMSC 194.1
 - [[CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)]]
 - [[CMSC 194.1 Task 2 Annotated Bibliography (RioT)]]
+- [[CMSC 194.1 Task 3 Annotated Bibliography (ORG)]]
+- [[CMSC 194.1 Task 4 Annotated Bibliography (ML)]]
