@@ -20,10 +20,6 @@ def part1():
         sign_left   = int(left[0]) - int(right[0])
         sign_right  = int(left[1]) - int(right[1])
 
-
-
-        print(left, right, sign_left, sign_right)
-
         if sign_left >= 0 and sign_right <= 0 \
             or sign_left <= 0 and sign_right >= 0:
                 result  = result + 1
@@ -32,10 +28,22 @@ def part1():
 
 
 def part2():
-    result  = None
+    result  = 0
+
+
+    for section_assignments in puzzle_input_cleaned:
+        left        = section_assignments[0]
+        right       = section_assignments[1]
+
+        overlap1     = int(left[1]) - int(right[0])
+        overlap2     = int(left[0]) - int(right[1])
+
+        if overlap1 >= 0 and overlap2 <= 0: 
+            result  = result + 1
 
 
 
     print("Part 2: ", result)
 
 part1()
+part2()
