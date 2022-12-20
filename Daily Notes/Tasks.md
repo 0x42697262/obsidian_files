@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[MODULE 5]]  #STS1 @[[2022-12-21]]
 - [ ] [[Position Argumentative Paper]] #STS1 @[[2023-01-18]]
 
 
@@ -14,11 +13,12 @@ kanban-plugin: basic
 
 - [ ] Annotated Bibliography (ORG)
 - [ ] CMSC 194.1 Workshop 3-5
+- [ ] Expression Tree Implementation #CMSC142
+- [ ] The General's Daughter - err - Tree #CMSC142
 
 
 ## DOING
 
-- [ ] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 - [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
 
 
@@ -33,6 +33,8 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] [[MODULE 5]]  #STS1 @[[2022-12-21]]
+- [x] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 - [x] [[Machine Problem 4]] @[[2022-12-02]]
 - [x] [[MODULE 3]] #STS1 @[[2022-12-14]]
 - [x] [[MODULE 2]] #STS1 @[[2022-12-07]]
