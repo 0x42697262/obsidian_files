@@ -1,4 +1,17 @@
 
+## 2022-12-23
+Today's Daily Note: [[2022-12-23]]
+- [ ] Read **CompTIA Security+ SY0-031** book
+- [ ] Finish **DICT Python Course** (Certification)
+- [x] Play some **CTFs**
+	- [x] PicoCTF
+		- [ ] Primer
+- [ ] Play **Wargames**
+	- [ ] [Hacker.org](http://www.hacker.org/)
+	- [ ] [HackThisSite](https://www.hackthissite.org/)
+	- [ ] [Mod-X](http://www.mod-x.co.uk/main.php)
+	- [ ] [OverTheWire](https://overthewire.org/wargames/)
+
 ## 2022-12-12
 Today's Daily Note: [[2022-12-12]]
 - [ ] Read **CompTIA Security+ SY0-031** book
