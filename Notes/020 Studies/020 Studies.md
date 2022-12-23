@@ -22,6 +22,8 @@
 - [[CMSC 124 Guide Question for Chapter 6. Expressions]]
 ## Week 13: Statements
 - [[CMSC 124 Guide Questions on Statements and Control Structures]]
+### Week 14-15: Procedure and Subprograms
+- [[CMSC 124 Guide Question for Chapter 8. Procedures and Subprograms]]
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
