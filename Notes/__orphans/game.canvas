@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"2c729dab9bc7d40a","x":-496,"y":-240,"width":415,"height":306,"type":"text","text":"**Dungeon Crawler**\n- Procedural Maps\n- Magic System (more on to this later)\n\t- Magic Creation\n\t- Language\n\t- Environment Interaction\n- "}
+	],
+	"edges":[]
+}
