@@ -30,6 +30,7 @@ class TokenType(Enum):
     BACKWARD_SLASH      = auto() # \
 
     # one or two character tokens
+    AMPERSAND           = auto() # &
     LOGICAL_AND         = auto() # &&
     LOGICAL_OR          = auto() # ||
     BANG                = auto() # !
@@ -80,6 +81,8 @@ class TokenType(Enum):
     EOF                 = auto()
 
 
+
+
 class Token:
     def __init__(self, _type, lexeme, literal, line) -> None:
        self.type        = _type
@@ -97,17 +100,25 @@ class Token:
 #
 ##
 
+
 class Scanner:
-    def __init__(self, source: str) -> None:
-        self.source     = source
-        self.tokens     = list()
+    def __init__(self, source: list) -> None:
+        """
+            This class takes the source code input as a list which should be iterated
+            each loop. Should return the tokenized source code.
+        """
+        
+        self.source         = source
+        self.tokens         = list()
 
-        self.start      = 0
-        self.current    = 0
-        self.line       = 1
+        self.char_start     = 0
+        self.char_current   = 0
+        self.line           = 1
+        self.index          = 0
 
-        self.alpha      = ['_']                                             # [a-zA-Z_]
-        self.digits     = [chr(c) for c in range(48, 58)]                   # [0-9]
+
+        self.alpha          = ['_']                                             # [a-zA-Z_]
+        self.digits         = [chr(c) for c in range(48, 58)]                   # [0-9]
         
         for _ in [chr(c) for c in range(97, 123)]:
                 self.alpha.append(_)
@@ -115,18 +126,41 @@ class Scanner:
                 self.alpha.append(_)
 
         self.token_strings  = {
-                '('      :      lambda c: TokenType.OPEN_PAREN,        
-                ')'      :      lambda c: TokenType.CLOSE_PAREN,        
-                '['      :      lambda c: TokenType.OPEN_BRACKET,        
-                ']'      :      lambda c: TokenType.CLOSE_BRACKET,        
-                '{'      :      lambda c: TokenType.OPEN_BRACE,        
-                '}'      :      lambda c: TokenType.CLOSE_BRACE,        
-                ','      :      lambda c: TokenType.COMMA,        
-                '.'      :      lambda c: TokenType.DOT,        
-                ':'      :      lambda c: TokenType.COLON,        
-                ';'      :      lambda c: TokenType.SEMICOLON,        
-                '\\'     :      lambda c: TokenType.BACKWARD_SLASH,        
+                '('         :       lambda _: TokenType.OPEN_PAREN,        
+                ')'         :       lambda _: TokenType.CLOSE_PAREN,        
+                '['         :       lambda _: TokenType.OPEN_BRACKET,        
+                ']'         :       lambda _: TokenType.CLOSE_BRACKET,        
+                '{'         :       lambda _: TokenType.OPEN_BRACE,        
+                '}'         :       lambda _: TokenType.CLOSE_BRACE,        
+                ','         :       lambda _: TokenType.COMMA,        
+                '.'         :       lambda _: TokenType.DOT,        
+                ':'         :       lambda _: TokenType.COLON,        
+                ';'         :       lambda _: TokenType.SEMICOLON,        
+                '\\'        :       lambda _: TokenType.BACKWARD_SLASH,        
+                '\''        :       lambda _: self._string_logic(),
 
+                '&'         :       lambda _: TokenType.LOGICAL_AND     if self._match('&') else TokenType.AMPERSAND,
+                '|'         :       lambda _: TokenType.LOGICAL_OR      if self._match('|') else None,
+                '!'         :       lambda _: TokenType.BANG_EQUAL      if self._match('!') else TokenType.BANG,
+                '='         :       lambda _: TokenType.EQUAL_EQUAL     if self._match('=') else TokenType.EQUAL,
+                '>'         :       lambda _: TokenType.GREATER_EQUAL   if self._match('=') else TokenType.GREATER_GREATER \
+                                                                        if self._match('>') else TokenType.GREATER,
+                '<'         :       lambda _: TokenType.LESSER_EQUAL    if self._match('=') else TokenType.LESSER_LESSER \
+                                                                        if self._match('<') else TokenType.LESSER,
+                '+'         :       lambda _: TokenType.PLUS_EQUAL      if self._match('=') else TokenType.PLUS_PLUS \
+                                                                        if self._match('+') else TokenType.PLUS,
+                '-'         :       lambda _: TokenType.MINUS_EQUAL     if self._match('=') else TokenType.MINUS_MINUS \
+                                                                        if self._match('-') else TokenType.MINUS,
+                '*'         :       lambda _: TokenType.STAR_EQUAL      if self._match('=') else TokenType.STAR_STAR \
+                                                                        if self._match('*') else TokenType.STAR,
+                '/'         :       lambda _: TokenType.SLASH_EQUAL     if self._match('=') else None \
+                                                                        if self._match('*') else None \
+                                                                        if self._match('/') else TokenType.SLASH,
+
+                ' '         :       lambda _: None,
+                '\t'        :       lambda _: None,
+                '\r'        :       lambda _: None,
+                '\n'        :       lambda _: self._next_line(),
 
         }
 
@@ -148,97 +182,242 @@ class Scanner:
         }
 
 
-    def _peek(self):
-        if self.is_eof():
-            return "\0"
-        return self.source[self.current]
+    def is_digit(self, c: str) -> bool:
+        """
+            Returns boolean type if character is a digit.
 
-    def _peek_next(self):
-        if self.current + 1 >= len(self.source):
-            return "\0"
-        return self.source[self.current + 1]
-
-    def is_digit(self, c):
+            Note:
+                You can use Python's built-in module: isdigit()
+        """
         return c in self.digits
 
-    def is_alpha(self, c):
+
+
+
+
+    def is_alpha(self, c: str) -> bool:
+        """
+            Returns boolean type if character is a letter and _.
+        """
+
         return c in self.alpha
 
-    def is_alphanum(self, c):
-        return self.is_alpha(c) or self.is_digit(c)
-    
-    def is_eof(self):
-        return self.current >= len(self.source)
 
-    
-    def _advance(self):
-        self.current += 1
-        return self.source[self.current - 1]
 
-    def _add_token(self, token_type, literal = None):
-        text = self.source[self.start : self.current]
+
+
+    def is_alnum(self, c: str) -> bool:
+        """
+            Returns boolean type if character is digit, letter, or _.
+        """
+        
+        return self.is_digit(c) or self.is_alpha(c)
+
+
+
+
+    def is_line_eof(self, count: int = 0) -> bool:
+        """
+            Checks if current line is end of input.
+        """
+
+        return self.char_current+count >= len(self.source[self.index])
+
+
+
+
+
+    def _peek(self) -> str:
+        """
+            Returns the current character.
+        """
+
+        if self.is_line_eof():
+            return '\0'
+
+        return self.source[self.index][self.char_current]
+
+
+
+
+
+    def _peek_next(self, count: int = 1) -> str:
+        """
+            Returns the next i character.
+        """
+
+        if self.is_line_eof(count):
+            return '\0'
+
+        return self.source[self.index][self.char_current+count]
+
+
+
+
+
+    def _advance(self) -> str:
+        """
+            Increments index of current character (source line).
+            Returns previous current character.
+        """
+
+        self.char_current += 1
+        return self.source[self.index][self.char_current-1]
+
+
+
+
+    def _next_line(self) -> None:
+        """
+            Increments current line and index.
+        """
+
+        self.line   += 1
+        self.index  += 1
+
+
+
+
+
+    def _append_token(self, token_type, literal = None) -> None:
+        """
+            Appends new token to tokens list.
+        """
+
+        text = self.source[self.index][self.char_start : self.char_current]
         self.tokens.append(Token(token_type, text, literal, self.line))
 
-    def _advance_line(self):
-        self.line += 1
 
 
-    def _match(self, expected) -> bool:
-        if self.is_eof():
+
+
+    def _match(self, expected_char) -> bool:
+        """
+            what does this do? Matches an expected character... Very helpful, indeed.
+
+            Returns boolean type if <?>. Where is this used for...?
+        """
+
+        if self.is_line_eof():
             return False
-        elif self.source[self.current] != expected:
+        elif self.source[self.index][self.char_current] != expected_char:
             return False
         else:
-            self.current +=1
+            self.char_current += 1
             return True
 
 
-    def scan_token(self):
-        while not self.is_eof():
-            self.start = self.current
-            self._scan_token()
 
+
+
+    def reset_line(self) -> None:
+        """
+            Sets the line's starting character index and current character index to 0.
+        """
+
+        self.char_current   = 0
+        self.char_start     = 0
+
+
+
+
+
+    def scan_tokens(self) -> list:
+        """
+            Iterates the source code list and scans for tokens.
+            Returns token list.
+        """
+
+        for _ in self.source:
+            self.reset_line()
+            while not self.is_line_eof():
+                self.char_start = self.char_current
+                self._scan_token()
+            self._next_line()
         self.tokens.append(Token(TokenType.EOF, '', None, self.line))
+        
         return self.tokens
 
-    def _scan_token(self):
-        c = self._advance()
+
+
+
+
+    def _scan_token(self) -> None:
+        """
+            Consumes current character, checks the token type, and do magic.
+
+        """
+
+        c   = self._advance()
+
         if c in self.token_strings:
-            c = self.token_strings[c](c)
+            c   = self.token_strings[c](c)
             if c is not None:
-                self._add_token(c)
+                self._append_token(c)
         elif self.is_digit(c):
             self._number_logic()
         elif self.is_alpha(c):
-            self._identifier_logic()
+          self._identifier_logic()
         else:
-            # self.interpreter.error(line=self.line, message="Unexpected character.")
-            print(f"Unexpected character on line {self.line}")
+            print("Unexpected character on line", self.line, ":", c)
 
     
-    def _string_logic(self):
-        starting_line = self.line
-        while self._peek() != '\'' and not self.is_eof():
+
+
+
+    def _number_logic(self) -> None:
+        while self.is_digit(self._peek()):
             self._advance()
-        
-        if self.is_eof():
+
+        if self._peek() == '.' and self.is_digit(self._peek_next()):
+            self._advance()
+            while self.is_digit(self._peek()):
+                self._advance()
+        self._append_token(TokenType.NUMBER, float(self.source[self.index][self.char_start : self.char_current]))
+
+
+
+
+
+    def _identifier_logic(self) -> None:
+        while self.is_alnum(self._peek()):
+            self._advance()
+        text        = self.source[self.index][self.char_start : self.char_current]
+        token_type  = self.keywords.get(text)
+
+        if token_type is None:
+            token_type = TokenType.IDENTIFIER
+
+        self._append_token(token_type)
+
+
+
+
+    def _string_logic(self) -> None:
+        starting_line   = self.line
+        while self._peek() != '\'' and not self.is_line_eof():
+            self._advance()
+
+        if self.is_line_eof():
             print(f"Expected ' at end of string on line {starting_line}")
-            return None
+            return
 
         self._advance()
-        self._add_token(TokenType.STRING, self.source[self.start+1 : self.current-1])
+        self._append_token(TokenType.STRING, self.source[self.index][self.char_start+1 : self.char_current-1])
 
 
-    
-          
 
 def main():
-    # Take inputs, assume inputs are correct
-    # no sanitization
-    lines = int(input())
-    source_code = list()
+    lines           = int(input())
+    source_code     = list()
     for _ in range(lines):
         source_code.append(input())
+
+    scan = Scanner(source_code).scan_tokens()
+    print("Tokens: ")
+    for _ in scan:
+        print(_.type, _.lexeme)
+
 
 if __name__ == "__main__":
     main()

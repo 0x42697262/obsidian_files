@@ -12,8 +12,8 @@ Some references:
 # TODOs 
 - [ ] Write Unit Tests (i swear, it makes your life easier)
 - [x] Tokens
-- [ ] Lexer
-	- [ ] Scanner
+- [x] Lexer
+	- [x] Scanner
 - [ ] Parser (dont think we need this since we only need to assume input source code is correct. no need for abstract syntax trees hehe)
 
 
@@ -278,6 +278,23 @@ def _string_logic(self):
 	self._add_token(TokenType.STRING, self.source[self.start+1 : self.current-1])
 ```
 The while loop takes the literal of a string (but in c++, there's only chars so only 1 length) then the last `self._advance()` simply takes the last `'` char. Which then adds a token type string. It starts at `self.start+1` because there is a need to skip the first `'` and `self.current-1` to ignore the last `'`.
+
+Takes number
+```python
+    def _number_logic(self):
+        while self.is_digit(self._peek()):
+            self._advance()
+        if self._peek() == '.' and self.is_digit(self._peek_next()):
+            self._advance()
+            while self.is_digit(self._peek()):
+                self._advance()
+        self._add_token(TokenType.NUMBER, float(self.source[self.start : self.current]))
+```
+Scans the input token from the starting string till end. Returns float of the token as number.
+
+
+
+
 
 
 # BELOW THIS IS OLD NOTES. NOT NEEDED (for archive purpose)
