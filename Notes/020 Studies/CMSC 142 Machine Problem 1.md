@@ -14,7 +14,7 @@ Some references:
 - [x] Tokens
 - [x] Lexer
 	- [x] Scanner
-- [ ] Parser (dont think we need this since we only need to assume input source code is correct. no need for abstract syntax trees hehe)
+- [ ] Parser (probs for figuring out stuffs?)
 
 
 ---
@@ -22,15 +22,16 @@ Some references:
 # main function
 ```python
 def main():
-    lines = int(input())
-    source_code = list()
+    lines           = int(input())
+    source_code     = list()
     for _ in range(lines):
         source_code.append(input())
+    tokens          = Scanner(source_code).scan_tokens()
 
 if __name__ == "__main__":
     main()
 ```
-Take number of lines for the code then get each line of the source. Append it to an array list of line by line source code.
+Inputs the number of lines and source code. Saves the tokens to `tokens` variable.
 
 Example Input:
 ```c++
@@ -42,18 +43,6 @@ x = x - y;
 z = x + y;
 ```
 
-Example Output:
-```python
-[
-	'int x = 10, y = 8, z = -2;', 
-	'x = x + y;', 
-	'y = x - y;', 
-	'x = x - y;', 
-	'z = x + y;'
-]
-```
-This code does not necessarily have an output of array. This is simply for visualization.
-
 Tokens... Ever changing tokens, gets added when needed. Don't know what enums are? Check here: https://docs.python.org/3/library/enum.html because I don't know either (only knew about it in rust sooooo)
 ```python
 from enum import Enum, auto
@@ -61,7 +50,7 @@ from enum import Enum, auto
 class TokenType(Enum):
     # single character tokens 
     OPEN_PAREN          = auto() # (
-	CLOSE_PAREN         = auto() # )
+    CLOSE_PAREN         = auto() # }
     OPEN_BRACE          = auto() # {
     CLOSE_BRACE         = auto() # }
     OPEN_BRACKET        = auto() # [
@@ -73,6 +62,7 @@ class TokenType(Enum):
     BACKWARD_SLASH      = auto() # \
 
     # one or two character tokens
+    AMPERSAND           = auto() # &
     LOGICAL_AND         = auto() # &&
     LOGICAL_OR          = auto() # ||
     BANG                = auto() # !
@@ -119,43 +109,84 @@ class TokenType(Enum):
     VOID                = auto() # void
     BOOL                = auto() # bool
 
-	
     # EOF
     EOF                 = auto()
 ```
 
-So far I do not know what this is for. Probs printing the tokens.
+A class for handling a token. Contains its `type`, `lexeme`, and `literal`.
 ```python
 class Token:
     def __init__(self, _type, lexeme, literal, line) -> None:
-       self.type    = _type
-       self.lexeme  = lexeme
-       self.literal = literal
-       self.line    = line
+       self.type        = _type
+       self.lexeme      = lexeme
+       self.literal     = literal
+       self.line        = line
 
     def __str__(self):
-        return f"Token<{self.type} : {self.lexeme}, {self.literal}> ({self.line})"
+        return f"({self.line}) Token<{self.type:<25}: {self.lexeme:<5} | {self.literal}>"
 ```
 # Scanning the input or source
 I base my interpreter for C++ here: https://craftinginterpreters.com/scanning.html but used someone's code instead. I can't read Java.
 ```python
 class Scanner:
     def __init__(self, source: str) -> None:
-        self.source     = source
-        self.tokens     = list()
-        self.start      = 0
-        self.current    = 0
-        self.line       = 1
-        self.alpha      = ['_']                                             # [a-zA-Z_]
-        self.digits     = [chr(c) for c in range(48, 58)]                   # [0-9]
+        self.source         = source
+        self.tokens         = list()
+        self.char_start     = 0
+        self.char_current   = 0
+        self.line           = 1
+        self.index          = 0
+        self.alpha          = ['_']                                             # [a-zA-Z_]
+        self.digits         = [chr(c) for c in range(48, 58)]                   # [0-9]
         for _ in [chr(c) for c in range(97, 123)]:
                 self.alpha.append(_)
         for _ in [chr(c) for c in range(65, 91)]:
                 self.alpha.append(_)
     ...
 ```
-`start` and `current` are indexes of the string. `start` first character index of a lexeme. `current` current character index. `line` current line of source code (which is the array).
+`char_start` and `char_current` are indexes of the string input in the current line. `char_start` first character index of a lexeme. `char_current` current character index. `line` current line of source code (which is the array). `index` is `line - 1`.
 Continuation on the next block of code
+
+
+```python
+        self.token_strings  = {
+                '('         :       lambda _: TokenType.OPEN_PAREN,        
+                ')'         :       lambda _: TokenType.CLOSE_PAREN,        
+                '['         :       lambda _: TokenType.OPEN_BRACKET,        
+                ']'         :       lambda _: TokenType.CLOSE_BRACKET,        
+                '{'         :       lambda _: TokenType.OPEN_BRACE,        
+                '}'         :       lambda _: TokenType.CLOSE_BRACE,        
+                ','         :       lambda _: TokenType.COMMA,        
+                '.'         :       lambda _: TokenType.DOT,        
+                ':'         :       lambda _: TokenType.COLON,        
+                ';'         :       lambda _: TokenType.SEMICOLON,        
+                '\\'        :       lambda _: TokenType.BACKWARD_SLASH,        
+                '\''        :       lambda _: self._string_logic(),
+                '&'         :       lambda _: TokenType.LOGICAL_AND     if self._match('&') else TokenType.AMPERSAND,
+                '|'         :       lambda _: TokenType.LOGICAL_OR      if self._match('|') else None,
+                '!'         :       lambda _: TokenType.BANG_EQUAL      if self._match('!') else TokenType.BANG,
+                '='         :       lambda _: TokenType.EQUAL_EQUAL     if self._match('=') else TokenType.EQUAL,
+                '>'         :       lambda _: TokenType.GREATER_EQUAL   if self._match('=') else TokenType.GREATER_GREATER \
+                                                                        if self._match('>') else TokenType.GREATER,
+                '<'         :       lambda _: TokenType.LESSER_EQUAL    if self._match('=') else TokenType.LESSER_LESSER \
+                                                                        if self._match('<') else TokenType.LESSER,
+                '+'         :       lambda _: TokenType.PLUS_EQUAL      if self._match('=') else TokenType.PLUS_PLUS \
+                                                                        if self._match('+') else TokenType.PLUS,
+                '-'         :       lambda _: TokenType.MINUS_EQUAL     if self._match('=') else TokenType.MINUS_MINUS \
+                                                                        if self._match('-') else TokenType.MINUS,
+                '*'         :       lambda _: TokenType.STAR_EQUAL      if self._match('=') else TokenType.STAR_STAR \
+                                                                        if self._match('*') else TokenType.STAR,
+                '/'         :       lambda _: TokenType.SLASH_EQUAL     if self._match('=') else None \
+                                                                        if self._match('*') else None \
+                                                                        if self._match('/') else TokenType.SLASH,
+                ' '         :       lambda _: None,
+                '\t'        :       lambda _: None,
+                '\r'        :       lambda _: None,
+                '\n'        :       lambda _: self._next_line(),
+        }
+```
+Token strings that can be used to check each character in the current lexeme. Should give `None` if it is not in the list.
+
 
 Dictionary of token types. [Lambdas](https://docs.python.org/3/reference/expressions.html#lambda), makes life a bit easier. 
 ```python
@@ -178,6 +209,11 @@ self.keywords       = {
 	'void'      :       TokenType.VOID,
 }
 ```
+
+
+Too lazy to update this part. Just read the comments in the code.
+---
+
 
 Helper functions for character checking the next character of the source input.
 ```python

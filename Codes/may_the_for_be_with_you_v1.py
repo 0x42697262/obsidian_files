@@ -91,7 +91,7 @@ class Token:
        self.line        = line
 
     def __str__(self):
-        return f"Token<{self.type} : {self.lexeme}, {self.literal}> ({self.line})"
+        return f"({self.line}) Token<{self.type:<25}: {self.lexeme:<5} | {self.literal}>"
 
 
 ##
@@ -345,7 +345,6 @@ class Scanner:
     def _scan_token(self) -> None:
         """
             Consumes current character, checks the token type, and do magic.
-
         """
 
         c   = self._advance()
@@ -366,6 +365,10 @@ class Scanner:
 
 
     def _number_logic(self) -> None:
+        """
+            Does not check if number is negative or positive. Maybe use a parser?
+        """
+
         while self.is_digit(self._peek()):
             self._advance()
 
@@ -406,18 +409,90 @@ class Scanner:
         self._append_token(TokenType.STRING, self.source[self.index][self.char_start+1 : self.char_current-1])
 
 
+class Parser():
+    def __init__(self, source) -> None:
+        self.tokens         = Scanner(source).scan_tokens()
+        self.count          = 0
+        
+        self.fix_tokens()
+
+        self.token_operations = [
+                # Arithmetic
+                TokenType.PLUS,
+                TokenType.MINUS,
+                TokenType.STAR,
+                TokenType.SLASH,
+                TokenType.PLUS_EQUAL,
+                TokenType.MINUS_EQUAL,
+                TokenType.STAR_EQUAL,
+                TokenType.SLASH_EQUAL,
+                TokenType.EQUAL,
+                TokenType.MINUS_MINUS,
+                TokenType.PLUS_PLUS,
+                
+                # Logic
+                TokenType.EQUAL_EQUAL,
+                TokenType.BANG_EQUAL,
+                TokenType.LESSER,
+                TokenType.LESSER_EQUAL,
+                TokenType.GREATER,
+                TokenType.GREATER_EQUAL,
+                TokenType.LESSER_LESSER,
+                TokenType.GREATER_GREATER,
+                TokenType.LOGICAL_AND,
+                TokenType.LOGICAL_OR,
+                ]
+
+    def print_tokens(self) -> None:
+        for _ in self.tokens:
+            print(_)
+
+    def tokens_list(self) -> list:
+        return [_.type for _ in self.tokens]
+
+    def fix_tokens(self) -> None:
+        """
+            There are sometimes issues with lexemes like "-42" that gets taken as two tokens instead of one.
+            Needs to fix that.
+            Eh, let's just assume that operator inputs only exists once, no duplicates.
+
+            Probably that don't need fixing:
+                - - - -42
+                -- -42
+                ---42 (this is an error btw)
+                -+-42
+        """
+        
+        i = 0
+        for _ in self.tokens:
+            if self.tokens[i].type == TokenType.MINUS:
+                if self.tokens[i+1].type == TokenType.NUMBER: # Assume that i+1 exists...
+                    self.tokens.pop(i)
+                    self.tokens[i].lexeme = str("-"+self.tokens[i].lexeme)
+                    self.tokens[i].literal  = float(-self.tokens[i].literal)
+            i = i+1
+
+    def count_tokens(self):
+        for token in self.tokens:
+            if token.type in self.token_operations:
+                self.count = self.count + 1
+
+    def result(self) -> str:
+        return f"T(n) = {self.count}"
 
 def main():
     lines           = int(input())
     source_code     = list()
+
     for _ in range(lines):
         source_code.append(input())
 
-    scan = Scanner(source_code).scan_tokens()
-    print("Tokens: ")
-    for _ in scan:
-        print(_.type, _.lexeme)
-
+    stuff   = Parser(source_code)
+    stuff.count_tokens()
+    stuff.count
+    print(stuff.result())
+    # print(stuff.tokens_list())
+    # stuff.print_tokens()
 
 if __name__ == "__main__":
     main()
