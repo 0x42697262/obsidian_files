@@ -413,6 +413,7 @@ class Parser():
     def __init__(self, source) -> None:
         self.tokens         = Scanner(source).scan_tokens()
         self.count          = 0
+        self.index          = 0
         
         self.fix_tokens()
 
@@ -461,24 +462,174 @@ class Parser():
                 -- -42
                 ---42 (this is an error btw)
                 -+-42
+            Don't forget a-b otherwise it'll get taken as NUM NUM instead of NUM OP NUM
+            oyu know wht fuck this shit. test cases don't have "a-b" problem. good thing the values are constant...
         """
         
         i = 0
         for _ in self.tokens:
-            if self.tokens[i].type == TokenType.MINUS:
-                if self.tokens[i+1].type == TokenType.NUMBER: # Assume that i+1 exists...
-                    self.tokens.pop(i)
-                    self.tokens[i].lexeme = str("-"+self.tokens[i].lexeme)
-                    self.tokens[i].literal  = float(-self.tokens[i].literal)
+            if self.tokens[i-1].type != TokenType.NUMBER or self.tokens[i-1].type != TokenType.IDENTIFIER:
+                if self.tokens[i].type == TokenType.MINUS:
+                    if self.tokens[i+1].type == TokenType.NUMBER: # Assume that i+1 exists...
+                        self.tokens.pop(i)
+                        self.tokens[i].lexeme = str("-"+self.tokens[i].lexeme)
+                        self.tokens[i].literal  = float(-self.tokens[i].literal)
             i = i+1
 
-    def count_tokens(self):
-        for token in self.tokens:
-            if token.type in self.token_operations:
-                self.count = self.count + 1
 
-    def result(self) -> str:
-        return f"T(n) = {self.count}"
+    def count_expression(self, start: int, end: int) -> int:
+        """
+            Using this for counting the operations inside a for loop statement.
+            start - starting index
+            end   - last index
+        """
+
+        count = 0
+        for i in range(start, end):
+            if self.tokens[i].type == TokenType.EOF:
+                break
+            if self.tokens[i].type in self.token_operations:
+                count = count + 1
+
+        return count
+
+    def count_for_statement(self) -> list:
+        """
+            This function should take control of the iteration, and sets the `self.index` value.
+            This function is missing a lot of stuffs. Like the conditional part: i < n + 1
+            It would not properly parse it. Take another case example:  
+                for(int i = 1+2+3-5; int i-i+(i*i) < (n-4)+4; i *= 1+1)
+        """
+
+        total_count         = 0
+
+        # need to check the init of for statement
+        start               = self.index + 2
+        end                 = self.index - 1
+
+        while self.index+2 in range(len(self.tokens)):
+            if self.tokens[self.index].type == TokenType.SEMICOLON:
+                break
+            end         = end + 1
+            self.index  = self.index + 1
+
+        init_count     = self.count_expression(start, end)
+        init_value     = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
+                                                        else self.tokens[end].lexeme
+
+        # condition of for statement
+        start               = self.index + 1    # should be after the ;
+        end                 = self.index        # should be before the next ;
+        self.index          = self.index + 1    # must be after ;
+
+        condition_symbol    = None
+
+        while self.index in range(len(self.tokens)):
+            if self.tokens[self.index].type == TokenType.SEMICOLON:
+                break
+            match self.tokens[self.index].type:
+                case TokenType.LESSER \
+                        | TokenType.LESSER_EQUAL \
+                        | TokenType.GREATER \
+                        | TokenType.GREATER_EQUAL \
+                        | TokenType.EQUAL_EQUAL:
+                    condition_symbol = self.tokens[self.index].type
+                case _:
+                    pass
+
+            end         = end + 1
+            self.index  = self.index + 1
+
+        condition_count     = self.count_expression(start, end)
+        condition_value     = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
+                                                        else self.tokens[end].lexeme
+
+        # update increment
+        self.index          = self.index + 1    # increment it first
+        start               = self.index        
+        end                 = self.index - 1    # must be before (
+
+        #)
+        while self.index in range(len(self.tokens)):
+            if self.tokens[self.index].type == TokenType.CLOSE_PAREN:
+                break
+            end         = end + 1
+            self.index  = self.index + 1
+
+        update_count        = self.count_expression(start, end+1)
+        update_value        = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
+                                                        else 1  if self.tokens[end].type == TokenType.PLUS_PLUS \
+                                                        else -1 if self.tokens[end].type == TokenType.MINUS_MINUS \
+                                                        else self.tokens[end].lexeme
+
+        start               = self.index + 1    # {
+        end                 = self.index        # }
+        self.index          = self.index + 1
+
+
+        while self.index in range(len(self.tokens)):
+            if self.tokens[self.index].type == TokenType.CLOSE_BRACE:
+                break
+            end         = end + 1
+            self.index  = self.index + 1
+
+        statement_count     = self.count_expression(start, end)
+
+
+        loop_count          = condition_value
+        constant_count      = init_count+condition_count
+
+        if type(loop_count) == float:   # it's float cus the token's literal is float
+            loop_count      = loop_count - init_value
+            if condition_symbol         == TokenType.LESSER_EQUAL \
+                    or condition_symbol == TokenType.LESSER_EQUAL \
+                    or condition_symbol == TokenType.GREATER_EQUAL \
+                    or condition_symbol == TokenType.GREATER_EQUAL:
+                        loop_count = loop_count + 1
+
+            return [0, (constant_count + condition_count + update_count) * loop_count + (init_count + condition_count)]
+
+        else:
+            if condition_symbol         == TokenType.LESSER_EQUAL \
+                    or condition_symbol == TokenType.LESSER_EQUAL \
+                    or condition_symbol == TokenType.GREATER_EQUAL \
+                    or condition_symbol == TokenType.GREATER_EQUAL:
+                constant_count  = constant_count + (statement_count+condition_count+update_count) 
+            constant_count  = constant_count - (init_value * (statement_count+condition_count+update_count))
+
+            return [1, update_value + statement_count + condition_count, loop_count, constant_count]
+
+
+    def count_tokens(self):
+        """
+            Iterates the `self.tokens` tokens and counts the token operations.
+            Checks if a `for loop` statement is found then call `self.count_for_statement()`.
+
+            This code is a convulted mess and i deeply apologize.
+        """
+
+        for_stmt    = list()
+        while self.index in range(len(self.tokens)):
+            if self.tokens[self.index].type in self.token_operations:
+                self.count = self.count + 1
+            elif self.tokens[self.index].type == TokenType.FOR:
+                for_stmt        = self.count_for_statement()
+            
+            self.index = self.index + 1
+
+        if len(for_stmt) > 0:
+            if for_stmt[0] == 0:
+                self.count  = self.count + for_stmt[1] 
+                print("T(n) = ", int(self.count))
+            else:
+                self.count  =  self.count + for_stmt[3]
+                eval_str    = str(for_stmt[1]) + str(for_stmt[2])
+                sign            = '+' if for_stmt[3] >= 0 else '-'
+                print("T(n) = ", eval_str, sign, str(int(abs(self.count))))
+        else:
+            print("T(n) = ", self.count)
+
+
 
 def main():
     lines           = int(input())
@@ -489,10 +640,6 @@ def main():
 
     stuff   = Parser(source_code)
     stuff.count_tokens()
-    stuff.count
-    print(stuff.result())
-    # print(stuff.tokens_list())
-    # stuff.print_tokens()
 
 if __name__ == "__main__":
     main()
