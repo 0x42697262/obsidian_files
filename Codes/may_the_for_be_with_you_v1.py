@@ -493,7 +493,7 @@ class Parser():
 
         return count
 
-    def count_for_statement(self) -> list:
+    def count_for_statement_old(self) -> list:
         """
             This function should take control of the iteration, and sets the `self.index` value.
             This function is missing a lot of stuffs. Like the conditional part: i < n + 1
@@ -597,13 +597,13 @@ class Parser():
                 constant_count  = constant_count + (statement_count+condition_count+update_count) 
             constant_count  = constant_count - (init_value * (statement_count+condition_count+update_count))
 
-            return [1, update_value + statement_count + condition_count, loop_count, constant_count]
+            return [1, update_count + statement_count + condition_count, loop_count, constant_count]
 
 
     def count_tokens(self):
         """
             Iterates the `self.tokens` tokens and counts the token operations.
-            Checks if a `for loop` statement is found then call `self.count_for_statement()`.
+            Checks if a `for loop` statement is found then call `self.count_for_statement_old()`.
 
             This code is a convulted mess and i deeply apologize.
         """
@@ -613,7 +613,7 @@ class Parser():
             if self.tokens[self.index].type in self.token_operations:
                 self.count = self.count + 1
             elif self.tokens[self.index].type == TokenType.FOR:
-                for_stmt        = self.count_for_statement()
+                for_stmt        = self.count_for_statement_old()
             
             self.index = self.index + 1
 
