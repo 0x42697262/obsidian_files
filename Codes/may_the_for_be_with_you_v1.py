@@ -493,37 +493,60 @@ class Parser():
 
         return count
 
-    def count_for_statement_old(self) -> list:
+    def count_for_statement(self):
         """
-            This function should take control of the iteration, and sets the `self.index` value.
-            This function is missing a lot of stuffs. Like the conditional part: i < n + 1
-            It would not properly parse it. Take another case example:  
+            Example Test Case:
                 for(int i = 1+2+3-5; int i-i+(i*i) < (n-4)+4; i *= 1+1)
+
+            This can be grouped into 6 parts:
+                1) int i
+                2) 1+2+3-5
+                3) i-i+(i*i)
+                4) (n-4)+4
+                5) i
+                6) 1+1
+
+            We only need to focus on 2, 3, 4, and 6.
+            Assume that 2 and 4 only contains 1 operation (e.g. `i = 1` or `i = n`)
+
+            Maybe create a dictionary as it might be easier to read?
+                variable - initialization identifier
+                op       - operator of the foor loop segment 
+                value    - literal of the for loop segment
+                count    - number of steps of the for loop segment
         """
 
-        total_count         = 0
+        data   = {
+                   "variable"           : str(),
 
-        # need to check the init of for statement
-        start               = self.index + 2
-        end                 = self.index - 1
+                   "init_value"         : None,      # can be a variable or number
 
-        while self.index+2 in range(len(self.tokens)):
-            if self.tokens[self.index].type == TokenType.SEMICOLON:
-                break
-            end         = end + 1
-            self.index  = self.index + 1
+                   "condition_op"       : str(),
+                   "condition_value"    : None,      # can be a variable or number
+                   "condition_count"    : 0,
 
-        init_count     = self.count_expression(start, end)
-        init_value     = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
-                                                        else self.tokens[end].lexeme
+                   "update_op"          : None,
+                   "update_value"       : 0,
 
-        # condition of for statement
-        start               = self.index + 1    # should be after the ;
-        end                 = self.index        # should be before the next ;
-        self.index          = self.index + 1    # must be after ;
+                   "body_count"         : 0,
+               }
+        # SET THE VARIABLE IDENTIFIER
+        self.index              = self.index + 3
+        data["variable"]        = self.tokens[self.index].lexeme
 
-        condition_symbol    = None
+        # SET THE INIT VALUE
+        # CAN BE NUMBER OR VARIABLE
+        self.index              = self.index + 2
+        if self.tokens[self.index].type == TokenType.NUMBER:
+            data["init_value"]      = int(self.tokens[self.index].lexeme)
+        else:
+            data["init_value"]      = self.tokens[self.index].lexeme
 
+
+        # ITERATE THE 2ND SEGMENT UNTIL `;` IS FOUND
+        self.index              = self.index + 2    # moves cursor index after `;`
+        start                   = self.index
+        end                     = self.index
         while self.index in range(len(self.tokens)):
             if self.tokens[self.index].type == TokenType.SEMICOLON:
                 break
@@ -532,72 +555,70 @@ class Parser():
                         | TokenType.LESSER_EQUAL \
                         | TokenType.GREATER \
                         | TokenType.GREATER_EQUAL \
+                        | TokenType.BANG_EQUAL \
                         | TokenType.EQUAL_EQUAL:
-                    condition_symbol = self.tokens[self.index].type
+                    data["condition_op"]    = self.tokens[self.index].type
+                case TokenType.IDENTIFIER:
+                    data["condition_value"] = self.tokens[self.index].lexeme
+                case  TokenType.NUMBER:
+                    data["condition_value"] = int(self.tokens[self.index].lexeme)
                 case _:
                     pass
-
             end         = end + 1
             self.index  = self.index + 1
 
-        condition_count     = self.count_expression(start, end)
-        condition_value     = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
-                                                        else self.tokens[end].lexeme
+        data["condition_count"]     = self.count_expression(start, end)
 
-        # update increment
-        self.index          = self.index + 1    # increment it first
-        start               = self.index        
-        end                 = self.index - 1    # must be before (
 
-        #)
+        # ITERATE 3RD SEGMENT UNTIL AN CLOSE PARENTHESIS IS FOUND
+        self.index              = self.index + 1    # moves cursor index after `;`
+        start                   = self.index
+        end                     = self.index
         while self.index in range(len(self.tokens)):
             if self.tokens[self.index].type == TokenType.CLOSE_PAREN:
                 break
+            match self.tokens[self.index].type:
+                case TokenType.PLUS_EQUAL \
+                    | TokenType.MINUS_EQUAL \
+                    | TokenType.STAR_EQUAL \
+                    | TokenType.SLASH_EQUAL:
+                    data['update_op']    = self.tokens[self.index].lexeme
+                case  TokenType.NUMBER:
+                    data["update_value"] = int(self.tokens[self.index].lexeme)
+                case TokenType.PLUS_PLUS:
+                    data["update_value"] = 1
+                case TokenType.PLUS_PLUS:
+                    data["update_value"] = -1
+                case _:
+                    pass
             end         = end + 1
             self.index  = self.index + 1
 
-        update_count        = self.count_expression(start, end+1)
-        update_value        = self.tokens[end].literal  if self.tokens[end].type == TokenType.NUMBER \
-                                                        else 1  if self.tokens[end].type == TokenType.PLUS_PLUS \
-                                                        else -1 if self.tokens[end].type == TokenType.MINUS_MINUS \
-                                                        else self.tokens[end].lexeme
 
-        start               = self.index + 1    # {
-        end                 = self.index        # }
-        self.index          = self.index + 1
-
-
+        # ITERATE BODY UNTIL CLOSING BRACE IS FOUND
+        self.index              = self.index + 1    # moves cursor index to `{`
+        # }
+        start                   = self.index
+        end                     = self.index
         while self.index in range(len(self.tokens)):
             if self.tokens[self.index].type == TokenType.CLOSE_BRACE:
                 break
             end         = end + 1
             self.index  = self.index + 1
 
-        statement_count     = self.count_expression(start, end)
+        data["body_count"]      = self.count_expression(start, end)
+
+        count                   = {
+                                    "call"          : 1 + data["condition_count"],   # 1 is from `=` sign assignment1 + data["condition_count"]   # 1 is from `=` sign assignment
+                                    "loop"          : 1 + data["condition_count"] + data["body_count"],  # 1 is from the 3rd segment operation assignment
+                                    "total_loop"    : 0,
+                                }
+        
+        
+
+        print(data)
 
 
-        loop_count          = condition_value
-        constant_count      = init_count+condition_count
-
-        if type(loop_count) == float:   # it's float cus the token's literal is float
-            loop_count      = loop_count - init_value
-            if condition_symbol         == TokenType.LESSER_EQUAL \
-                    or condition_symbol == TokenType.LESSER_EQUAL \
-                    or condition_symbol == TokenType.GREATER_EQUAL \
-                    or condition_symbol == TokenType.GREATER_EQUAL:
-                        loop_count = loop_count + 1
-
-            return [0, (constant_count + condition_count + update_count) * loop_count + (init_count + condition_count)]
-
-        else:
-            if condition_symbol         == TokenType.LESSER_EQUAL \
-                    or condition_symbol == TokenType.LESSER_EQUAL \
-                    or condition_symbol == TokenType.GREATER_EQUAL \
-                    or condition_symbol == TokenType.GREATER_EQUAL:
-                constant_count  = constant_count + (statement_count+condition_count+update_count) 
-            constant_count  = constant_count - (init_value * (statement_count+condition_count+update_count))
-
-            return [1, update_count + statement_count + condition_count, loop_count, constant_count]
 
 
     def count_tokens(self):
@@ -608,26 +629,27 @@ class Parser():
             This code is a convulted mess and i deeply apologize.
         """
 
-        for_stmt    = list()
-        while self.index in range(len(self.tokens)):
-            if self.tokens[self.index].type in self.token_operations:
-                self.count = self.count + 1
-            elif self.tokens[self.index].type == TokenType.FOR:
-                for_stmt        = self.count_for_statement_old()
-            
-            self.index = self.index + 1
-
-        if len(for_stmt) > 0:
-            if for_stmt[0] == 0:
-                self.count  = self.count + for_stmt[1] 
-                print("T(n) = ", int(self.count))
-            else:
-                self.count  =  self.count + for_stmt[3]
-                eval_str    = str(for_stmt[1]) + str(for_stmt[2])
-                sign            = '+' if for_stmt[3] >= 0 else '-'
-                print("T(n) = ", eval_str, sign, str(int(abs(self.count))))
-        else:
-            print("T(n) = ", self.count)
+        # for_stmt    = list()
+        # while self.index in range(len(self.tokens)):
+        #     if self.tokens[self.index].type in self.token_operations:
+        #         self.count = self.count + 1
+        #     elif self.tokens[self.index].type == TokenType.FOR:
+        #         for_stmt        = self.count_for_statement_old()
+        #     
+        #     self.index = self.index + 1
+        #
+        # if len(for_stmt) > 0:
+        #     if for_stmt[0] == 0:
+        #         self.count  = self.count + for_stmt[1] 
+        #         print("T(n) = ", int(self.count))
+        #     else:
+        #         self.count  =  self.count + for_stmt[3]
+        #         eval_str    = str(for_stmt[1]) + str(for_stmt[2])
+        #         sign            = '+' if for_stmt[3] >= 0 else '-'
+        #         print("T(n) = ", eval_str, sign, str(int(abs(self.count))))
+        # else:
+        #     print("T(n) = ", self.count)
+        self.count_for_statement()
 
 
 
