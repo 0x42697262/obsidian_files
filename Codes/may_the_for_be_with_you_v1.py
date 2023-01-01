@@ -464,16 +464,17 @@ class Parser():
                 -+-42
             Don't forget a-b otherwise it'll get taken as NUM NUM instead of NUM OP NUM
             oyu know wht fuck this shit. test cases don't have "a-b" problem. good thing the values are constant...
+            actually, there might be....
         """
         
         i = 0
         for _ in self.tokens:
-            if self.tokens[i-1].type != TokenType.NUMBER or self.tokens[i-1].type != TokenType.IDENTIFIER:
-                if self.tokens[i].type == TokenType.MINUS:
-                    if self.tokens[i+1].type == TokenType.NUMBER: # Assume that i+1 exists...
-                        self.tokens.pop(i)
-                        self.tokens[i].lexeme = str("-"+self.tokens[i].lexeme)
-                        self.tokens[i].literal  = float(-self.tokens[i].literal)
+            if self.tokens[i].type == TokenType.MINUS:
+                if self.tokens[i-1].type != TokenType.NUMBER and self.tokens[i-1].type != TokenType.IDENTIFIER:
+                    self.tokens.pop(i)
+                    self.tokens[i].lexeme = str("-"+self.tokens[i].lexeme)
+                    self.tokens[i].literal  = float(-self.tokens[i].literal)
+
             i = i+1
 
 
@@ -493,7 +494,7 @@ class Parser():
 
         return count
 
-    def count_for_statement(self):
+    def count_for_statement(self) -> dict:
         """
             Example Test Case:
                 for(int i = 1+2+3-5; int i-i+(i*i) < (n-4)+4; i *= 1+1)
@@ -570,33 +571,17 @@ class Parser():
         data["condition_count"]     = self.count_expression(start, end)
 
 
-        # ITERATE 3RD SEGMENT UNTIL AN CLOSE PARENTHESIS IS FOUND
-        self.index              = self.index + 1    # moves cursor index after `;`
-        start                   = self.index
-        end                     = self.index
-        while self.index in range(len(self.tokens)):
-            if self.tokens[self.index].type == TokenType.CLOSE_PAREN:
-                break
-            match self.tokens[self.index].type:
-                case TokenType.PLUS_EQUAL \
-                    | TokenType.MINUS_EQUAL \
-                    | TokenType.STAR_EQUAL \
-                    | TokenType.SLASH_EQUAL:
-                    data['update_op']    = self.tokens[self.index].lexeme
-                case  TokenType.NUMBER:
-                    data["update_value"] = int(self.tokens[self.index].lexeme)
-                case TokenType.PLUS_PLUS:
-                    data["update_value"] = 1
-                case TokenType.PLUS_PLUS:
-                    data["update_value"] = -1
-                case _:
-                    pass
-            end         = end + 1
-            self.index  = self.index + 1
+        # 3RD SEGMENT
+        self.index              = self.index + 2    # moves cursor index to the operator
+        data['update_op']       = self.tokens[self.index].type
+
+        self.index              = self.index + 1    # moves cursor index to value
+        data['update_value']    = 1 if data['update_op'] == TokenType.PLUS_PLUS else \
+                                    -1 if data['update_op'] == TokenType.MINUS_MINUS else int(self.tokens[self.index].lexeme)
 
 
         # ITERATE BODY UNTIL CLOSING BRACE IS FOUND
-        self.index              = self.index + 1    # moves cursor index to `{`
+        self.index              = self.index + 2    # moves cursor index to `{`
         # }
         start                   = self.index
         end                     = self.index
@@ -609,15 +594,105 @@ class Parser():
         data["body_count"]      = self.count_expression(start, end)
 
         count                   = {
-                                    "call"          : 1 + data["condition_count"],   # 1 is from `=` sign assignment1 + data["condition_count"]   # 1 is from `=` sign assignment
-                                    "loop"          : 1 + data["condition_count"] + data["body_count"],  # 1 is from the 3rd segment operation assignment
-                                    "total_loop"    : 0,
-                                }
+
+                "loop"          : 1 + data["condition_count"] + data["body_count"],  # 1 is from the 3rd segment operation assignment
+                "total_loop"    : 0,
+                }
+
+        # in `variable`, i used `1` as else so that we can multiply that to the coefficient and sum it with the constant.
+        # if it's a string, then we simply do string magic
+        # 1 will also be used to check as condition
+        values                  = {
+                "coefficient"   : 0, 
+                "variable"      : data['condition_value'] if type(data['condition_value']) == str else 1,
+                "constant"      : 1 + data["condition_count"],   # 1 is from `=` sign assignment1 + data["condition_count"]   # 1 is from `=` sign assignment
+                }
         
-        
+        # LOOP, SUMMATION
+        # init_value is the lower bound
+        # condition_value is the upper bound
+        if type(data['init_value']) == int and type(data['condition_value']) == int:
+            # everything is a number
+
+            # upper bound must be subtracted by 1
+            if data['condition_op']     == TokenType.LESSER:
+                data['condition_value']     = data['condition_value'] - 1
+            elif data['condition_op']   == TokenType.GREATER:
+                data['condition_value']     = data['condition_value'] + 1
+
+            # summation
+            values['coefficient'] = count['loop'] * (data['condition_value'] - data['init_value'] + 1) 
+
+
+            # forgot about > and >=
+
+        elif type(data['init_value']) == int and type(data['condition_value']) == str:
+            # init is number, condition is variable
+
+            values['coefficient']   = count['loop']
+            subtract                = (count['loop'] * (data['init_value'] - 1)) if data['init_value'] - 1 > 0 else 0
+            values['constant']      = values['constant'] - subtract 
+
+            if data['condition_op'] == TokenType.LESSER or data['condition_op'] == TokenType.LESSER_EQUAL:
+                match data['update_op']:
+                    case TokenType.STAR_EQUAL:
+                        values['variable']      = " log(" + str(data['update_value']) + ") " + values['variable']
+                    case TokenType.PLUS_EQUAL:
+                        values['variable']      = values['variable'] + f"/{data['update_value']}"
+                    case TokenType.MINUS_EQUAL | TokenType.MINUS_MINUS | TokenType.SLASH_EQUAL:
+                        values['variable']      = "infinite"
+
+                    case _:
+                        pass
+            elif data['condition_op'] == TokenType.GREATER or data['condition_op'] == TokenType.GREATER_EQUAL:
+                values['coefficient']   = 0
+                values['variable']      = 1
+
+            match data['condition_count']:
+                case 2:
+                    values['variable']  = f" sqrt({values['variable']})"
+                case 3:
+                    values['variable']  = f" cubert({values['variable']})"
+                case _:
+                    pass
+
+
+        elif type(data['init_value']) == str and type(data['condition_value']) == int:
+            # init is variable, condition is number
+
+            values['coefficient']   = count['loop']
+            values['variable']      = data['init_value']
+
+            if data['condition_op'] == TokenType.GREATER or data['condition_op'] == TokenType.GREATER_EQUAL:
+                match data['update_op']:
+                    case TokenType.SLASH_EQUAL:
+                        values['variable']      = f" log({data['update_value']}) {values['variable']}"
+                    case TokenType.MINUS_EQUAL:
+                        values['variable']      = f"{values['variable']}/{data['update_value']}"
+                    case TokenType.PLUS_EQUAL | TokenType.PLUS_PLUS | TokenType.STAR_EQUAL:
+                        values['variable']      = "infinite"
+
+                    case _:
+                        pass
+            elif data['condition_op'] == TokenType.LESSER or data['condition_op'] == TokenType.LESSER_EQUAL:
+                values['coefficient']   = 0
+                values['variable']      = 1
+
+            match data['condition_count']:
+                case 2:
+                    values['variable']  = f" sqrt({values['variable']})"
+                case 3:
+                    values['variable']  = f" cubert({values['variable']})"
+                case _:
+                    pass
+
+
 
         print(data)
+        print(values)
+        
 
+        return values
 
 
 
@@ -629,28 +704,38 @@ class Parser():
             This code is a convulted mess and i deeply apologize.
         """
 
-        # for_stmt    = list()
-        # while self.index in range(len(self.tokens)):
-        #     if self.tokens[self.index].type in self.token_operations:
-        #         self.count = self.count + 1
-        #     elif self.tokens[self.index].type == TokenType.FOR:
-        #         for_stmt        = self.count_for_statement_old()
-        #     
-        #     self.index = self.index + 1
-        #
-        # if len(for_stmt) > 0:
-        #     if for_stmt[0] == 0:
-        #         self.count  = self.count + for_stmt[1] 
-        #         print("T(n) = ", int(self.count))
-        #     else:
-        #         self.count  =  self.count + for_stmt[3]
-        #         eval_str    = str(for_stmt[1]) + str(for_stmt[2])
-        #         sign            = '+' if for_stmt[3] >= 0 else '-'
-        #         print("T(n) = ", eval_str, sign, str(int(abs(self.count))))
-        # else:
-        #     print("T(n) = ", self.count)
-        self.count_for_statement()
+        for_stmt    = dict()
+        result      = None
 
+        while self.index in range(len(self.tokens)):
+            if self.tokens[self.index].type in self.token_operations:
+                self.count  = self.count + 1
+            elif self.tokens[self.index].type == TokenType.FOR:
+                for_stmt    = self.count_for_statement()
+            
+            self.index = self.index + 1
+
+        if len(for_stmt) > 0:
+            if for_stmt['variable'] == 1:
+                result  = for_stmt['coefficient'] * for_stmt['variable'] + for_stmt['constant'] + self.count
+            else:
+                c       = for_stmt['constant'] + self.count
+                sign    = ' + ' if c >= 0 else ' - '
+                if for_stmt['variable'] == "infinite":
+                    result  = "infinite"
+                else:
+                    result  = str(for_stmt['coefficient']) + for_stmt['variable'] + sign + str(abs(c))
+
+            self.result(result)
+        else:
+            self.result(self.count)
+
+        # i don't think there's gonna be anoter statement in the test cases so there's no need to code for it
+        # a hacky code will be a hacky code
+
+    def result(self, result) -> None:
+        print("T(n) =", result)
+        
 
 
 def main():
