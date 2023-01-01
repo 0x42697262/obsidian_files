@@ -13,26 +13,26 @@ kanban-plugin: basic
 
 - [ ] Annotated Bibliography (ORG)
 - [ ] CMSC 194.1 Workshop 3-5
-- [ ] Expression Tree Implementation #CMSC142
 - [ ] The General's Daughter - err - Tree #CMSC142
+- [ ] [[First Long Exam @2022-11-04]]
 
 
 ## DOING
 
-- [ ] [[May the for be with you - version 1]] @[[2022-11-12]]
+- [ ] Expression Tree Implementation #CMSC142
+- [ ] [[Mastery Quiz  Process Models]]
 
 
 ## Postponed
 
 - [ ] ALL CMSC 128 TASKS
-- [ ] [[Mastery Quiz  Process Models]]
 - [ ] Mastery Quiz: Agile Development
-- [ ] [[First Long Exam @2022-11-04]]
 
 
 ## DONE
 
 **Complete**
+- [x] [[May the for be with you - version 1]] @[[2022-11-12]]
 - [x] [[MODULE 5]]  #STS1 @[[2022-12-21]]
 - [x] [[Learning Log  Weeks 14-15]] @[[2022-12-16]]
 - [x] [[Machine Problem 4]] @[[2022-12-02]]
