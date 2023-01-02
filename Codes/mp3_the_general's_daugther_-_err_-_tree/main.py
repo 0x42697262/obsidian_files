@@ -21,10 +21,6 @@ def main():
     for _ in cmd.pwd.children:
         print(_.name)
 
-    cmd.pwd = cmd.pwd.children[1]
-    print()
-    cmd.mkdir("birb")
-    cmd.mkdir("jean")
     
 
 
