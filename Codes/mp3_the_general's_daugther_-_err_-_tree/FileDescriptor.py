@@ -26,3 +26,14 @@ class FileDescriptor:
         
         return False
 
+    def cd(self):
+        pass
+
+
+    def ls(self):
+        pass
+
+
+    def mv(self):
+        pass
+

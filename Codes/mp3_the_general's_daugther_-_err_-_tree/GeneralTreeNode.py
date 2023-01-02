@@ -4,7 +4,15 @@ class GeneralTreeNode:
         self.parent     = parent
         self.name       = name
 
-    def insert(self, child):
+
+
+
+class DirectoryNode(GeneralTreeNode):
+    def __init__(self, name: str, parent = None) -> None:
+        super().__init__(name, parent)
+        
+
+    def insert(self, child: GeneralTreeNode):
         """
             Appends child to the current node or parent node.
         """
@@ -45,10 +53,6 @@ class GeneralTreeNode:
 
 
 
-class DirectoryNode(GeneralTreeNode):
-    def __init__(self, name: str, parent = None) -> None:
-        super().__init__(name, parent)
-        
 
 
 class FileNode(GeneralTreeNode):
@@ -56,6 +60,7 @@ class FileNode(GeneralTreeNode):
         super().__init__(name)
 
         self.data: bytearray    = bytearray()
+
 
     def append(self, contents: str):
         self.data.extend(bytes(contents, 'utf-8'))
