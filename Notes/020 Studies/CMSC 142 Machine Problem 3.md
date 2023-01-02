@@ -54,11 +54,11 @@ Tasks
 - [ ] mkdir
 - [ ] rmdir
 - [ ] cd
-- [ ] edit
-- [ ] rm
+- [ ] ls
 - [ ] mv
 	- [ ] rn
 - [ ] cp
-- [ ] ls
+- [ ] rm
+- [ ] edit
 - [ ] show
 - [ ] whereis
