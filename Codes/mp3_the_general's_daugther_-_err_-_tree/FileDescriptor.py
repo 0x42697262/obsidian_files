@@ -37,3 +37,17 @@ class FileDescriptor:
     def mv(self):
         pass
 
+    def cp(self):
+        pass
+
+    def rm(self):
+        pass
+
+    def edit(self):
+        pass
+
+    def show(self):
+        pass
+
+    def whereis(self):
+        pass
