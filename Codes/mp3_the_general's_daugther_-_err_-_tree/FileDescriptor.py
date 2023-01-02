@@ -51,3 +51,42 @@ class FileDescriptor:
 
     def whereis(self):
         pass
+    
+
+
+
+
+    def _resolve_path(self, path: str) -> DirectoryNode | None:
+        """
+            Resolve the given path to a node in the tree.
+            Checks if the current directory or file exists.
+        """
+
+        if path == '/':
+            return self.root
+
+        # add .. and . traversing
+
+        if path.startswith('/'):
+            current_node    = self.root
+        else:
+            current_node    = self.pwd
+
+        parts   = path.split('/')
+
+        for part in parts:
+            if not part:    # check if its an empty string
+                continue
+
+            found   = False
+            for child in current_node.children:     # checks each child if current file or directory exists
+                if child.name == part:
+                    current_node    = child
+                    found           = True
+                    break
+            if not found:
+                return None
+
+
+        return current_node
+
