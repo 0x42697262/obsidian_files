@@ -1,6 +1,5 @@
 """
-
-
+    Source: https://github.com/KrulYuno/obsidian_files/tree/master/Codes/mp3_the_general's_daugther_-_err_-_tree
 """
 
 import sys
@@ -21,6 +20,11 @@ def main():
 
     for _ in cmd.pwd.children:
         print(_.name)
+
+    cmd.pwd = cmd.pwd.children[1]
+    print()
+    cmd.mkdir("birb")
+    cmd.mkdir("jean")
     
 
 
