@@ -11,10 +11,13 @@ def main():
 
     root    = DirectoryNode('/') 
     cmd     = FileDescriptor(root)
-    cmd.mkdir("etc")
-    cmd.mkdir("home")
-    cmd.mkdir("bin")
+    dirs    = ['bin', 'dev', 'home', 'opt', 'root', 'sbin', 'sys', 'usr',
+               'boot', 'etc', 'mnt', 'proc', 'run', 'srv', 'tmp', 'var']
+    for name in dirs:
+        cmd.mkdir(name)
 
+    for _ in cmd.pwd.children:
+        print(_.name)
 
 def print_help():
     print(f"{'Commands':<10}   Info")
