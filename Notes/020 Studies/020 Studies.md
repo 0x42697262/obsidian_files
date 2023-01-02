@@ -36,6 +36,7 @@
 ### Week 5 (10 October - 16 October): Big O Notation
 - [[CMSC 142 Problem Set 1]]
 - [[CMSC 142 Machine Problem 1]]
+- [[CMSC 142 Machine Problem 3]]
 
 ## CMSC 192 Ethical and Professional Issues in Computing
 [[CMSC192 Learning Portfolio]]
