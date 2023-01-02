@@ -18,12 +18,6 @@ def main():
     cmd.mkdir("home")
     cmd.mkdir("bin")
 
-    for _ in cmd.pwd.children:
-        print(_.name)
-
-    
-
-
 
 def print_help():
     print(f"{'Commands':<10}   Info")
