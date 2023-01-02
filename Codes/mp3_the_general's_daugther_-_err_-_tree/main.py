@@ -8,9 +8,6 @@ from GeneralTreeNode import (DirectoryNode, FileNode)
 
 
 def main():
-    """
-        Will check if we run the code as GUI or CLI.
-    """
 
     root    = DirectoryNode('/') 
     cmd     = FileDescriptor(root)
@@ -26,6 +23,9 @@ def print_help():
     print()
 
 if __name__ == "__main__":
+    """
+        Will check if we run the code as GUI or CLI.
+    """
     if len(sys.argv) > 1:
         match sys.argv[1]:
             case "-h" | "--help":
