@@ -16,25 +16,14 @@ def main():
     for name in dirs:
         cmd.mkdir(name)
 
+    cmd.cd("home")
+    cmd.mkdir("birb")
+    cmd.mkdir("chicken")
+    cmd.mkdir("neko")
+    for _ in cmd.pwd.children:
+        print(_.name)
     
 
-    cmd._resolve_path("/bin")
-    cmd._resolve_path("home/")
-    cmd._resolve_path("///home/////")
-    cmd._resolve_path("////")
-    cmd._resolve_path("/")
-    cmd.pwd = cmd.pwd.children[2]
-    cmd.mkdir("birb")
-    cmd.pwd = cmd.root.children[0]
-    print(cmd.pwd.name)
-    cmd._resolve_path("home/birb")
-    cmd._resolve_path("/birb")
-    cmd._resolve_path("birb")
-    cmd._resolve_path("/home/birb")
-    cmd._resolve_path("/home/birb/")
-
-    print(cmd._resolve_path("/home/birb").name, "---")  # i think we can now use this for `cd` command
-    # jesus fucking christ please write a unit test case instead of printing each function
 
 
 def print_help():

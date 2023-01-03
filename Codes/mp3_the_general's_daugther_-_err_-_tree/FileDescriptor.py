@@ -26,8 +26,13 @@ class FileDescriptor:
         
         return False
 
-    def cd(self):
-        pass
+    def cd(self, path: str) -> bool:
+        to_path_node    = self._resolve_path(path)
+        if to_path_node:
+            self.pwd    = to_path_node
+            return True
+        else:
+            return False
 
 
     def ls(self):
@@ -62,10 +67,14 @@ class FileDescriptor:
             Checks if the current directory or file exists.
         """
 
-        if path == '/':
-            return self.root
+        match path:
+            case '/':
+                return self.root
+            case '.':
+                return self.pwd
+            case '..':
+                return self.pwd.parent if self.pwd != self.root else self.root
 
-        # add .. and . traversing
 
         if path.startswith('/'):
             current_node    = self.root
@@ -77,15 +86,21 @@ class FileDescriptor:
         for part in parts:
             if not part:    # check if its an empty string
                 continue
-
-            found   = False
-            for child in current_node.children:     # checks each child if current file or directory exists
-                if child.name == part:
-                    current_node    = child
-                    found           = True
-                    break
-            if not found:
-                return None
+            
+            match part:
+                case '..':
+                    current_node     = current_node.parent if current_node != self.root else self.root
+                case '.':
+                    continue
+                case _:
+                    found   = False
+                    for child in current_node.children:     # checks each child if current file or directory exists
+                        if child.name == part:
+                            current_node    = child
+                            found           = True
+                            break
+                    if not found:
+                        return None
 
 
         return current_node
