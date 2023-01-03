@@ -14,17 +14,34 @@ class FileDescriptor:
 
         self.pwd.insert(DirectoryNode(name, self.pwd))
 
-    def rmdir(self, name: str) -> bool:
+    def rmdir(self, path: str) -> int:
         """
-            Searches for the node, removes if found and returns True, otherwise False.
+            Remove empty directories.
         """
 
-        node = self.pwd.search(name)
-        if node:
-            self.pwd.remove(node)
-            return True
-        
-        return False
+        node    = self._resolve_path(path)
+
+        # Disallow deletion of / (root).
+        if node == self.root:
+            return 4
+
+        # If path is current directory
+        if node == self.pwd and self.pwd.parent is not None:
+            self.pwd = self.pwd.parent
+
+        # Guard Clauses 
+        ## If None
+        if not node:
+            return 2
+
+        ## If not empty
+        if len(node.children) > 0:
+            return 1
+
+        ## Delete Success
+        self.pwd.remove(node)
+        return 0
+
 
     def cd(self, path: str) -> bool:
         to_path_node    = self._resolve_path(path)

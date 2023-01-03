@@ -21,19 +21,14 @@ class DirectoryNode(GeneralTreeNode):
 
     def remove(self, node):
         """
-           Removes node and its descendants.
+           Removes node.
            Note: Python has its own garbage collection so the node gets deleted.
         """
         
-        for child in node.children:
-            self.remove(child)      # remove child and its descendants
-            child.parent    = None  # remove reference to parent
-            child.children  = None  # remove references to children
-
         node.parent.children.remove(node)   # remove node from parent's children
         node.parent     = None              # remove reference to parent
-        node.children   = None              # remove references to children# del node
-
+        node.children   = None              # remove references to children
+        node            = None
 
         
 

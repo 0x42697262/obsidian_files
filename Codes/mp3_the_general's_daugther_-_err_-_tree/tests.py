@@ -36,6 +36,14 @@ class TestFileDescriptor(unittest.TestCase):
         self.assertEqual(cmd.cd("/./././../..///../sbin"), True)
         self.assertEqual(cmd.cd("/usr///"), True)
         self.assertEqual(cmd.cd("////proc"), True)
+        self.assertEqual(cmd.cd("////aproc"), False)
+
+    def test_rmdir(self):
+        cmd.pwd = root
+        self.assertEqual(cmd.rmdir("bin"), 0)
+        self.assertEqual(cmd.rmdir("/../."), 4)
+        self.assertEqual(cmd.rmdir("bin"), 2)
+        
 
 if __name__ == "__main__":
     unittest.main()
