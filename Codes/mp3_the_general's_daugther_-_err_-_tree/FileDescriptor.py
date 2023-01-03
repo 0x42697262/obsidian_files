@@ -6,13 +6,22 @@ class FileDescriptor:
         self.root   = root
         self.pwd    = root
 
-    def mkdir(self, name: str):
+    def mkdir(self, path: str) -> int:
         """
             Creates a new child node.
             Sets the parent of the child node to self.
         """
+        
+        parent, name    = self._resolve_parent_and_name(path)
+        if not parent:
+            return 2
 
-        self.pwd.insert(DirectoryNode(name, self.pwd))
+        if any(child.name == name for child in parent.children):
+            return 1
+
+
+        parent.insert(DirectoryNode(name, parent))
+        return 0
 
     def rmdir(self, path: str) -> int:
         """
@@ -75,7 +84,14 @@ class FileDescriptor:
         pass
     
 
-
+    def _pwd(self) -> str:
+        directories     = list()
+        cwd             = self.pwd
+        while cwd != self.root:
+            directories.insert(0, cwd.name)
+            cwd = cwd.parent
+        
+        return '/' + '/'.join(directories)
 
 
     def _resolve_path(self, path: str) -> DirectoryNode | None:
@@ -122,3 +138,20 @@ class FileDescriptor:
 
         return current_node
 
+    def _resolve_parent_and_name(self, path: str) -> tuple[DirectoryNode | None, str]:
+        """
+            Resolve the parent node and name for the file or directory at the given path.
+        """
+
+        parts   = path.split('/')
+        name    = parts[-1]
+        if not name:
+            return None, ''
+
+        if len(parts) == 1:
+            return self.pwd, name
+
+        parent_path = '/'.join(parts[:-1])
+        parent = self._resolve_path(parent_path)
+
+        return parent, name

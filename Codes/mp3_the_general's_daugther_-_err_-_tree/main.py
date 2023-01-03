@@ -22,26 +22,20 @@ def main():
     cmd.mkdir("neko")
     
     cmd.cd("birb")
-    cmd.mkdir("Downloads")
-    cmd.mkdir(".config")
+    # cmd.mkdir("Downloads")
+    # cmd.mkdir(".config")
+    cmd.mkdir("/home/birb/Downloads")
+    cmd.mkdir("/home/birb/.config")
 
-    cmd.rmdir("/home/birb/Downloads")
-    cmd.rmdir("/home/birb/.config")
-    print(cmd.rmdir("/home/birb/"))
+    cmd.cd("..")
+    cmd.mkdir("birb/Stuffs")
+    cmd.mkdir("birb/Stuffs")
 
-    print(cmd.rmdir("."))
-    cmd.mkdir("ah")
-    print("..",cmd.pwd.name)
-    cmd.cd("/home")
-    for _ in cmd.pwd.children:
-        print(_.name)
-    print(cmd.rmdir("/set"))
-    cmd.cd("/")
-    cmd.mkdir("home/stat")
-    cmd.cd("home")
-    for _ in cmd.pwd.children:
-        print(_.name)
-
+    print(cmd._pwd())
+    print(cmd.mkdir("/tmp/cats"))
+    cmd.cd("/tmp")
+    print(cmd._pwd())
+    print(cmd.mkdir("cats"))
 
 
 
