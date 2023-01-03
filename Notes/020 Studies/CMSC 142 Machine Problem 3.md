@@ -51,9 +51,9 @@ Note 2: For those who will be developing a graphical user interface (extra credi
 
 Tasks
 ---
-- [ ] mkdir
-- [ ] rmdir
-- [ ] cd
+- [x] mkdir
+- [x] rmdir
+- [x] cd
 - [ ] ls
 - [ ] mv
 	- [ ] rn
@@ -62,3 +62,6 @@ Tasks
 - [ ] edit
 - [ ] show
 - [ ] whereis
+
+---
+Source Code: https://github.com/KrulYuno/obsidian_files/tree/master/Codes/mp3_the_general's_daugther_-_err_-_tree
