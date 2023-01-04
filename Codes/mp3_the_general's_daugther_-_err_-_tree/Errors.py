@@ -11,4 +11,8 @@ errors = {
                         3 : "Invalid argument",
                         4 : "Cannot delete root directory",
             },
+        "ls"        : {
+                        0 : True,
+                        1 : "No such file or directory",
+                },
         }

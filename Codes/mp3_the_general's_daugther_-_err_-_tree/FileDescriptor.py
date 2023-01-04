@@ -1,4 +1,6 @@
 from GeneralTreeNode import (DirectoryNode, FileNode)
+import fnmatch, re
+import itertools
 
 
 class FileDescriptor:
@@ -13,13 +15,17 @@ class FileDescriptor:
         """
         
         parent, name    = self._resolve_parent_and_name(path)
+
+        # Guard Clauses
+        # Directory already exist 
         if not parent:
             return 2
 
+        ## Directory not exist
         if any(child.name == name for child in parent.children):
             return 1
 
-
+        # Sucess, make directory
         parent.insert(DirectoryNode(name, parent))
         return 0
 
@@ -53,6 +59,10 @@ class FileDescriptor:
 
 
     def cd(self, path: str) -> bool:
+        """
+            Change the working directory.
+        """
+
         to_path_node    = self._resolve_path(path)
         if to_path_node:
             self.pwd    = to_path_node
@@ -61,8 +71,55 @@ class FileDescriptor:
             return False
 
 
-    def ls(self):
-        pass
+    def ls(self, path: str) -> list | int | dict | None:
+        """
+            List directory contents.
+
+            Buggy, incomplete, please fix
+        """
+
+        if '*' in path:
+            directories     = self._resolve_path_wildcard([path])
+            # results = dict()
+            # if directories:
+            #     for d in directories:
+            #         results[d] = list()
+            #         r   = self._resolve_path(d)
+            #         if type(r) is DirectoryNode:
+            #             results[d].append(((self.ls(d))))
+            #     
+            #     if len(results) > 0:
+            #         return results
+
+
+            return directories
+
+        else:
+            cwd     = self._resolve_path(path)
+
+            # Guard Clauses
+            ## Directory not exist
+            if not cwd:
+                return 1
+
+            ## Show contents
+            contents    = [child.name for child in cwd.children] 
+
+            # if no arguments provided
+            if not path: 
+                return contents 
+
+            # woah, if argument is "*", then we have to recursively call ls...
+
+            name        = path.split('/')[-1]
+            if cwd == self.pwd:
+                name    = '*'
+            else:
+                name    = '*'
+
+            # print(name, cwd.name, path.split('/'), path, contents)
+            return fnmatch.filter(contents, name) 
+
 
 
     def mv(self):
@@ -155,3 +212,26 @@ class FileDescriptor:
         parent = self._resolve_path(parent_path)
 
         return parent, name
+
+
+
+    def _resolve_path_wildcard(self, paths: list) -> list | None:
+        contents    = list()
+        for path in paths:
+            wildcards   = re.findall(r'[^\\^/^\s]*\*[^\\^/^\s]*', path)
+            parent      = DirectoryNode
+            for wc in wildcards:
+                find    = path[:path.find(wc)]
+                parent  = self._resolve_path(find)
+                if parent:
+                    matches     = fnmatch.filter(self.ls(find), wc)
+                    if len(matches) > 0:
+                        for p in matches:
+                            tmp     = path
+                            contents.append(tmp.replace(wc, p, 1))
+        
+        contents    = list(dict.fromkeys(contents))
+        for c in contents:
+            if '*' in c:
+                return self._resolve_path_wildcard(contents)
+        return contents
