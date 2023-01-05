@@ -29,6 +29,10 @@ class FileDescriptor:
         parent.insert(DirectoryNode(name, parent))
         return 0
 
+
+
+
+
     def rmdir(self, path: str) -> int:
         """
             Remove empty directories.
@@ -58,6 +62,10 @@ class FileDescriptor:
         return 0
 
 
+
+
+
+
     def cd(self, path: str) -> bool:
         """
             Change the working directory.
@@ -69,6 +77,10 @@ class FileDescriptor:
             return True
         else:
             return False
+
+
+
+
 
 
     def ls(self, path: str) -> list | int | dict | None:
@@ -109,7 +121,6 @@ class FileDescriptor:
             if not path: 
                 return contents 
 
-            # woah, if argument is "*", then we have to recursively call ls...
 
             name        = path.split('/')[-1]
             if cwd == self.pwd:
