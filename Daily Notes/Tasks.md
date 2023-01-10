@@ -6,21 +6,21 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] [[Position Argumentative Paper]] #STS1 @[[2023-01-18]]
 
 
 ## Will Do
 
-- [ ] Annotated Bibliography (ORG)
 - [ ] CMSC 194.1 Workshop 3-5
 - [ ] [[First Long Exam @2022-11-04]]
-- [ ] Expression Tree Implementation #CMSC142
+- [ ] [[Position Argumentative Paper]] #STS1 @[[2023-01-18]]
 
 
 ## DOING
 
+- [ ] Annotated Bibliography (ORG)
 - [ ] The General's Daughter - err - Tree #CMSC142
 - [ ] [[Mastery Quiz  Process Models]]
+- [ ] Expression Tree Implementation #CMSC142
 
 
 ## Postponed
