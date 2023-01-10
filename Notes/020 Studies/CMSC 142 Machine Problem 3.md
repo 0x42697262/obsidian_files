@@ -55,10 +55,14 @@ Tasks
 - [x] rmdir
 - [x] cd
 - [ ] ls
+	- [ ] regex for `*`
 - [ ] mv
 	- [ ] rn
+	- [ ] `*` wildcard
 - [ ] cp
+	- [ ] `*` wildcard
 - [ ] rm
+	- [ ] `*` wildcard
 - [ ] edit
 - [ ] show
 - [ ] whereis

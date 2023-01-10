@@ -13,13 +13,13 @@ kanban-plugin: basic
 
 - [ ] Annotated Bibliography (ORG)
 - [ ] CMSC 194.1 Workshop 3-5
-- [ ] The General's Daughter - err - Tree #CMSC142
 - [ ] [[First Long Exam @2022-11-04]]
+- [ ] Expression Tree Implementation #CMSC142
 
 
 ## DOING
 
-- [ ] Expression Tree Implementation #CMSC142
+- [ ] The General's Daughter - err - Tree #CMSC142
 - [ ] [[Mastery Quiz  Process Models]]
 
 
