@@ -34,15 +34,20 @@ def main():
 
     cmd.cd("birb")
     # print("contents:", cmd.ls("*"))
-    print(cmd._pwd())
     cmd.mkdir("hello.docx")
     cmd.mkdir("there.docx")
     cmd.mkdir("fren.docx")
     cmd.mkdir("/home/neko/hello1.docx")
     cmd.mkdir("/home/neko/there2.docx")
     cmd.mkdir("/home/neko/fren3.docx")
+    cmd.cd("../neko")
+    # print(cmd.ls("*.docx"))
+
     cmd.cd("/home/birb/Downloads")
     cmd.mkdir("temp")
+    cmd.mkdir("xampp")
+    cmd.mkdir("idm")
+    cmd.mkdir("net")
     # cmd.cd("..")
     # cmd.ls("/home/*/*.docx")
 
@@ -51,8 +56,16 @@ def main():
     # print(cmd._resolve_path_wildcard(['.']))
     # print(cmd.ls("/home/*/*"))
     # print(cmd.ls('/home/b*rb'))
-    print(cmd.ls("/*/*/"))
+    # print(cmd.ls("/*/*/"))
 
+    cmd.cd("/home/birb/Downloads")
+    print(cmd._pwd(), cmd.ls(""))
+    cmd.mv("temp", "xampp")
+    cmd.mv("net", "xampp/.")
+    cmd.mv("idm", "xampp/sdf/shit")
+    print(cmd._pwd(), cmd.ls(""))
+    print("xampp:", cmd.ls("xampp"))
+    
 
 
 def print_help():
@@ -64,6 +77,7 @@ def print_help():
 if __name__ == "__main__":
     """
         Will check if we run the code as GUI or CLI.
+        (not yet implemented and will never be)
     """
     if len(sys.argv) > 1:
         match sys.argv[1]:

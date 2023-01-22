@@ -15,4 +15,8 @@ errors = {
                         0 : True,
                         1 : "No such file or directory",
                 },
+        "mv"        : {
+                0 : True,
+                1 : "No such file or directory",
+                },
         }
