@@ -5,3 +5,4 @@
 ----
 # 091 Notes
 [[Mental Models]]
+[[LAMPP]]
