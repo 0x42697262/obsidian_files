@@ -1,6 +1,0 @@
-{
-	"nodes":[
-		{"id":"2c729dab9bc7d40a","x":-496,"y":-240,"width":791,"height":547,"type":"text","text":"**Dungeon Crawler**\n- Procedural Maps\n- Magic System (more on to this later)\n\t- Magic Creation\n\t- Language\n\t- Environment Interaction\n- Items or weapons (not main focus)\n- 2.5D, voxel.\n\t- Particle physics, perhaps?\n\n---\nPlot(?):\nSoul gets transferred to another world. Person can only interact there through possessing other people (NPC). Possession gives the soul strength to exist. Possessed characters can be used to play the game. NPCs randomly passes through (so a bit of RNG and luck). Can possess humans, animals, and other races. \nIf possessed character dies, it will affect the world (character will never come back and others). If enough soul strength is present, player can now manifest his own character (has variations like limits). "}
-	],
-	"edges":[]
-}
