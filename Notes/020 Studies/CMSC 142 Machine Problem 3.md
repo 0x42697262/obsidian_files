@@ -57,8 +57,8 @@ Tasks
 - [x] ls
 	- [x] regex for `*`
 - [x] mv
-	- [ ] rn
-	- [ ] `*` wildcard
+	- [ ] rn (this is just move, so either make a new function or use `mv` command)
+	- [x] `*` wildcard
 - [ ] cp
 	- [ ] `*` wildcard
 - [ ] rm
