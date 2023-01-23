@@ -133,51 +133,62 @@ class FileDescriptor:
 
 
 
-    def mv(self, sources: list, destination: str) -> int:
+    def mv(self, sources: list, destination: str) -> list | tuple:
         """
             Move (rename) files.
-
-            wildcard is not implemented
         """
+
+        errors = list()
         
-        source_node         = self._resolve_path(source)
+        # note that `mv` command can take multiple files and directories as argument as sources
+        # then its very last argument is the destination 
         destination_node    = self._resolve_path(destination)
+        if not destination_node and len(sources) > 1:
+            return 1, Errors.errors['mv'][1].replace('{}', destination)
 
-        if not source_node:
-            return 1    # no such file or directory
-
-        # Check if path exists, if not simply rename the source to destination.
-        if destination_node:
-            # print(source_node.parent.children)
-            source_node.parent.children.remove(source_node)
-            source_node.parent  = destination_node
-            source_node.parent.insert(source_node)
-
-            return 0
-        else:
-            # once this branch is executed, we know that the <destination> of
-            # path/<parent>/<destination> does not exist
-            # 
-            # so we take its parent folder and check if that also exists, otherwise
-            # return a file directory not exist error
-
-            destination_name    = destination.split('/')[-1]                    # <destination>
-            parent_path         = destination.replace(destination_name, '')     # path/<parent>
-            parent_node         = self._resolve_path(parent_path)               # <parent> node
-
-
-            # check if parent node exists, return error 1 file/directory not exist if not
-            # set the parent of the source node to parent_node then do magic
-            if parent_node:
-                source_node.parent.children.remove(source_node)     # remove source node from directory
-                source_node.parent  = parent_node                   # set source node parent
-                source_node.parent.insert(source_node)              # add source node to parent children
-                source_node.name    = destination_name              # rename
-
-                return 0
-            else:
-                return 1
+        for source_wildcard in sources:
+            source_paths    = self._wildcard_handler([source_wildcard])
+            source_node     = self._resolve_path(source_wildcard)
             
+            if len(source_paths) == 0 or not source_node:
+                errors.append((1, Errors.errors['mv'][1].replace('{}', source_wildcard)))
+                continue
+
+            if source_wildcard == destination:
+                errors.append((2, Errors.errors['mv'][2].replace('{}', source_wildcard)))
+                continue
+
+            if type(destination_node) is FileNode:
+                errors.append((3, Errors.errors['mv'][3].replace('{destination}', destination).replace('{source}', source_wildcard)))
+                continue
+
+            # there is one nefty case where we should avoid and that is a wildstar in destination directory
+            # will not take care of it
+
+            # move file or directory
+            # else, rename
+            if destination_node:
+                source_node.parent.children.remove(source_node)
+                source_node.parent  = destination_node
+                source_node.parent.insert(source_node)
+            else:
+                # once this branch is executed, we know that the <destination> of
+                # path/<parent>/<destination> does not exist
+                # 
+                # so we take its parent folder and check if that also exists, otherwise
+                # return a file directory not exist error
+
+                destination_name    = destination.split('/')[-1]                    # <destination>
+                parent_path         = destination.replace(destination_name, '')     # path/<parent>
+                parent_node         = self._resolve_path(parent_path)               # <parent> node
+                source_node.parent.children.remove(source_node)                     # remove source node from directory
+                source_node.parent  = parent_node                                   # set source node parent
+                source_node.parent.insert(source_node)                              # add source node to parent children
+                source_node.name    = destination_name                              # rename
+
+            
+        return errors
+
 
 
     def cp(self):

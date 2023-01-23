@@ -13,17 +13,17 @@ errors = {
                         5 : "rmdir: failed to remove '{}': Not a directory",
             },
         "cd"        : {
-                        0: True,
-                        1: "cd: no such file or directory: {}",
-                        2: "cd: not a directory: {}"
+                        0 : True,
+                        1 : "cd: no such file or directory: {}",
+                        2 : "cd: not a directory: {}"
                 },
         "ls"        : {
                         1 : "ls: cannot access '{}': No such file or directory",
                 },
         "mv"        : {
                         0 : True,
-                        1 : "No such file or directory",
-                        2 : "cannot move '{}' to a subdirectory of itself, '{}/{}'",
-                        3 : "cannot overwrite non-directory '{destination}' with directory '{source}'",
+                        1 : "mv: cannot stat '{}': No such file or directory",
+                        2 : "mv: cannot move '{}' to a subdirectory of itself, '{}/{}'",
+                        3 : "mv: cannot overwrite non-directory '{destination}' with directory '{source}'",
                 },
         }
