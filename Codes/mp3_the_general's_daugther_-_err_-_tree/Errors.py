@@ -6,10 +6,10 @@ errors = {
                 },
         "rmdir"     : {
                         0 : True,
-                        1 : "Directory not empty",
-                        2 : "No such file or directory",
-                        3 : "Invalid argument",
-                        4 : "Cannot delete root directory",
+                        1 : "rmdir: failed to remove '{}': Directory not empty",
+                        2 : "rmdir: failed to remove '{}': No such file or directory",
+                        3 : "rmdir: Invalid argument",
+                        4 : "rmdir: cannot delete root directory",
                         5 : "rmdir: failed to remove '{}': Not a directory",
             },
         "cd"        : {

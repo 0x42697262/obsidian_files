@@ -15,16 +15,12 @@ class FileDescriptor:
         
         parent, name    = self._resolve_parent_and_name(path)
 
-        # Guard Clauses
-        ## Error 2
         if not parent:
             return 2,Errors.errors['mkdir'][2].replace('{}', path)
 
-        ## Error 1
         if any(child.name == name for child in parent.children):
             return 1,Errors.errors['mkdir'][1].replace('{}', name)
 
-        # Sucess, make directory
         parent.insert(DirectoryNode(name, parent))
 
         return 0, Errors.errors['mkdir'][0]
@@ -40,31 +36,28 @@ class FileDescriptor:
 
         node    = self._resolve_path(path)
 
-        # path is not a directory
         if type(node) is FileNode:
             return 5, Errors.errors['rmdir'][5].replace('{}', path)
 
-
-        # Disallow deletion of / (root).
         if node == self.root:
-            return 4
+            return 4, Errors.errors['rmdir'][4]
+
+        if not node:
+            return 2, Errors.errors['rmdir'][2].replace('{}', path)
+
+        if len(node.children) > 0:
+            return 1, Errors.errors['rmdir'][1].replace('{}', path)
+
+
 
         # If path is current directory
         if node == self.pwd and self.pwd.parent is not None:
             self.pwd = self.pwd.parent
 
-        # Guard Clauses 
-        ## If None
-        if not node:
-            return 2
-
-        ## If not empty
-        if len(node.children) > 0:
-            return 1
-
         ## Delete Success
         self.pwd.remove(node)
-        return 0
+
+        return 0, Errors.errors['rmdir'][0]
 
 
 
