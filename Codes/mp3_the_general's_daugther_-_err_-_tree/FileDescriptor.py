@@ -133,11 +133,10 @@ class FileDescriptor:
 
 
 
-    def mv(self, source, destination):
+    def mv(self, source, destination) -> int:
         """
             Move (rename) files.
         """
-
         
         source_node         = self._resolve_path(source)
         destination_node    = self._resolve_path(destination)
@@ -145,14 +144,14 @@ class FileDescriptor:
         if not source_node:
             return 1    # no such file or directory
 
-        print(source, "->", destination)
-
         # Check if path exists, if not simply rename the source to destination.
         if destination_node:
             # print(source_node.parent.children)
             source_node.parent.children.remove(source_node)
             source_node.parent  = destination_node
             source_node.parent.insert(source_node)
+
+            return 0
         else:
             # once this branch is executed, we know that the <destination> of
             # path/<parent>/<destination> does not exist
@@ -172,6 +171,8 @@ class FileDescriptor:
                 source_node.parent  = parent_node                   # set source node parent
                 source_node.parent.insert(source_node)              # add source node to parent children
                 source_node.name    = destination_name              # rename
+
+                return 0
             else:
                 return 1
             
@@ -266,6 +267,57 @@ class FileDescriptor:
 
         return parent, name
 
+
+
+    def _wildcard_handler(self, paths: list) -> list:
+        """
+            Take a list of paths and check if that list contains a wildcard `*`.
+            Check each path in paths if a wildcard exists then add it to path queues.
+            Attempt to convert the `*` to proper paths. Only convert 1 wildcard from the left.
+            Add the converted `*` to the cleaned paths. Check if at least one of the path 
+            contains a wildcard `*`.
+
+            Return a list of fully cleaned path, without any wildcards.
+        """
+
+        cleaned_paths   = list()
+        wildcard_paths  = list()
+
+        for path in paths:
+            if '*' in path:
+                # find the first * in path
+                wildcard_index      = path.find('*')
+                # get substring until *
+                wildcard_substring  = path[:wildcard_index]
+                # get its node
+                wildcard_node       = self._resolve_path(wildcard_substring)
+                # check if the wildcard node exists, add all its children to list
+                # to be checked for matching paths
+                if wildcard_node:
+                    # add the child's path to children list
+                    children        = [wildcard_substring + child.name for child in wildcard_node.children]
+                    # match only the ones with a wildcard
+                    matches         = fnmatch.filter(children, path[:wildcard_index+1])
+
+                    # iterate the list then append the macthed child + the remaining path string
+                    for match in matches:
+                        cleaned_paths.append(match + path[wildcard_index+1:])
+
+            else:
+                cleaned_paths.append(path)
+                
+        # remove duplicates in cleaned paths
+        cleaned_paths   = list(dict.fromkeys(cleaned_paths))
+        # check if wildcard `*` still exists in a list, then recursively call the function if it does
+        wildcard_bool   = False
+        for cp in cleaned_paths:
+            wildcard_bool   = '*' in cp
+            if wildcard_bool:
+                # call the function
+                cleaned_paths   = self._wildcard_handler(cleaned_paths)
+                break
+
+        return cleaned_paths
 
 
     def _resolve_path_wildcard(self, paths: list) -> list | None:

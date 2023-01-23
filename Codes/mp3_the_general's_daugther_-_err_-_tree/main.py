@@ -65,6 +65,7 @@ def main():
     cmd.mv("idm", "xampp/sdf/shit")
     print(cmd._pwd(), cmd.ls(""))
     print("xampp:", cmd.ls("xampp"))
+    print(    cmd._wildcard_handler(["/home/*/", "/home", "/home/*/Downloads/*.docx", "/home/*/Downloads/*", "/home/*/Downloads/*"]))
     
 
 
