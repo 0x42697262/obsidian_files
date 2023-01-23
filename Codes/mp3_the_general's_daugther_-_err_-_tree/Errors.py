@@ -10,6 +10,7 @@ errors = {
                         2 : "No such file or directory",
                         3 : "Invalid argument",
                         4 : "Cannot delete root directory",
+                        5 : "Not a directory",
             },
         "ls"        : {
                         0 : True,

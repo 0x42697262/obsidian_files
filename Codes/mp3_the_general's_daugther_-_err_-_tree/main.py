@@ -49,8 +49,10 @@ def main():
     cmd.mkdir("idm")
     cmd.mkdir("net")
     # cmd.cd("..")
-    # print(cmd.ls("/home/birb/*.docx"))
     print(cmd.ls("/home/*/*.docx"))
+    # print(cmd.ls("/home/birb/*.docx"))
+    # print(cmd.ls(".."))
+    # print(cmd.ls("/home/"))
 
     # print(    cmd._resolve_path_wildcard(['/home/n*k*//*.docx', '/home/*//*.docx']))
     # cmd._resolve_path_wildcard(['/home/neko//*.docx', '/home/naku//*.docx', '/home/birb//*.docx', '/home/chicken//*.docx'])

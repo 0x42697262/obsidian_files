@@ -101,11 +101,12 @@ class FileDescriptor:
 
         for cwd in cwds:
             if cwd:
-                results[self._pwd(cwd.parent)]  = list()
+                results[self._pwd(cwd)]  = list()
 
         for cwd in cwds:
             if cwd:
-                results[self._pwd(cwd.parent)].append(cwd.name)
+                for child in cwd.children:
+                    results[self._pwd(cwd)].append(child.name)
 
         return results
 
@@ -117,6 +118,8 @@ class FileDescriptor:
     def mv(self, source, destination) -> int:
         """
             Move (rename) files.
+
+            wildcard is not implemented
         """
         
         source_node         = self._resolve_path(source)
@@ -165,7 +168,7 @@ class FileDescriptor:
     def rm(self):
         pass
 
-    def edit(self):
+    def edit(self, filename: str):
         pass
 
     def show(self):
@@ -175,7 +178,7 @@ class FileDescriptor:
         pass
     
 
-    def _pwd(self, node: DirectoryNode = None) -> str:
+    def _pwd(self, node: DirectoryNode | FileNode = None) -> str:
         """
             Returns current working directory.
             Can be used to get full path of a node.
