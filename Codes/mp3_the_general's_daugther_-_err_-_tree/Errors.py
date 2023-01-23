@@ -1,8 +1,8 @@
 errors = {
         "mkdir"     : {
                         0 : True,
-                        1 : "File exists",
-                        2 : "No such file or directory",
+                        1 : "cannot create directory '{}': File exists",
+                        2 : "cannot create directory ‘{}’: No such file or directory",
                 },
         "rmdir"     : {
                         0 : True,
@@ -24,5 +24,7 @@ errors = {
         "mv"        : {
                         0 : True,
                         1 : "No such file or directory",
+                        2 : "cannot move '{}' to a subdirectory of itself, '{}/{}'",
+                        3 : "cannot overwrite non-directory '{destination}' with directory '{source}'",
                 },
         }

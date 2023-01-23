@@ -1,14 +1,13 @@
 from GeneralTreeNode import (DirectoryNode, FileNode)
 import fnmatch, re
-import itertools
-
+import Errors
 
 class FileDescriptor:
     def __init__(self, root: DirectoryNode) -> None:
         self.root   = root
         self.pwd    = root
 
-    def mkdir(self, path: str) -> int:
+    def mkdir(self, path: str) -> str:
         """
             Creates a new child node.
             Sets the parent of the child node to self.
@@ -17,13 +16,13 @@ class FileDescriptor:
         parent, name    = self._resolve_parent_and_name(path)
 
         # Guard Clauses
-        # Directory already exist 
+        ## Error 2
         if not parent:
-            return 2
+            return f"mkdir: {Errors.errors['mkdir'][2].replace('{}', path)}"
 
-        ## Directory not exist
+        ## Error 1
         if any(child.name == name for child in parent.children):
-            return 1
+            return f"mkdir: {Errors.errors['mkdir'][1].replace('{}', name)}"
 
         # Sucess, make directory
         parent.insert(DirectoryNode(name, parent))
@@ -126,7 +125,7 @@ class FileDescriptor:
 
 
 
-    def mv(self, source, destination) -> int:
+    def mv(self, sources: list, destination: str) -> int:
         """
             Move (rename) files.
 
