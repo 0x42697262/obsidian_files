@@ -54,9 +54,9 @@ Tasks
 - [x] mkdir
 - [x] rmdir
 - [x] cd
-- [ ] ls
-	- [ ] regex for `*`
-- [ ] mv
+- [x] ls
+	- [x] regex for `*`
+- [x] mv
 	- [ ] rn
 	- [ ] `*` wildcard
 - [ ] cp
