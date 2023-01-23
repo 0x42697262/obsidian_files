@@ -70,17 +70,24 @@ class FileDescriptor:
 
 
 
-    def cd(self, path: str) -> bool:
+    def cd(self, path: str) -> int:
         """
             Change the working directory.
         """
 
         to_path_node    = self._resolve_path(path)
-        if to_path_node:
-            self.pwd    = to_path_node
-            return True
-        else:
-            return False
+
+        # does not exist
+        if not to_path_node:
+            return 1
+
+        # Not a directory
+        if type(to_path_node) is FileNode:
+            return 2
+
+        self.pwd    = to_path_node
+
+        return 0
 
 
 
@@ -187,9 +194,6 @@ class FileDescriptor:
             Returns current working directory.
             Can be used to get full path of a node.
         """
-
-        if node is None:
-            return '/'
 
         directories     = list()
         cwd             = self.pwd if node is None else node
