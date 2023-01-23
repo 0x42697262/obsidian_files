@@ -12,12 +12,17 @@ errors = {
                         4 : "Cannot delete root directory",
                         5 : "Not a directory",
             },
+        "cd"        : {
+                        0: True,
+                        1: "",
+                        2: "Not a directory"
+                },
         "ls"        : {
                         0 : True,
                         1 : "No such file or directory",
                 },
         "mv"        : {
-                0 : True,
-                1 : "No such file or directory",
+                        0 : True,
+                        1 : "No such file or directory",
                 },
         }
