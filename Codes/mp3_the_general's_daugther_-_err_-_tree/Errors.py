@@ -18,8 +18,7 @@ errors = {
                         2: "cd: not a directory: {}"
                 },
         "ls"        : {
-                        0 : True,
-                        1 : "No such file or directory",
+                        1 : "ls: cannot access '{}': No such file or directory",
                 },
         "mv"        : {
                         0 : True,

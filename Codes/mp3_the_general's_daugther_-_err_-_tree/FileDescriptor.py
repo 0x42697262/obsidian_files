@@ -101,7 +101,7 @@ class FileDescriptor:
 
 
 
-    def ls(self, path: str) -> dict | int | None:
+    def ls(self, path: str) -> dict | tuple | None:
         """
             List directory contents.
         """
@@ -112,8 +112,8 @@ class FileDescriptor:
         cwds    = [self._resolve_path(p) for p in paths]
 
         # path does not exist
-        if len(paths) == 0:
-            return 1
+        if len(cwds) == 1 and cwds[0] == None:
+            return 1, Errors.errors['ls'][1].replace('{}', path)
 
         results     = dict()
 
