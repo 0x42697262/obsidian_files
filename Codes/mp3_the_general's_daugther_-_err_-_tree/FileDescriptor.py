@@ -1,3 +1,10 @@
+"""
+    mkdir: does not support multiple arguments for directory creation
+    rmdir: does not support multiple arguments for directory deletion
+
+    these can easily be added tho, but not a priority
+"""
+
 from GeneralTreeNode import (DirectoryNode, FileNode)
 import fnmatch, re
 import Errors
@@ -6,6 +13,10 @@ class FileDescriptor:
     def __init__(self, root: DirectoryNode) -> None:
         self.root   = root
         self.pwd    = root
+
+
+
+
 
     def mkdir(self, path: str) -> tuple:
         """
@@ -20,6 +31,8 @@ class FileDescriptor:
 
         if any(child.name == name for child in parent.children):
             return 1,Errors.errors['mkdir'][1].replace('{}', name)
+
+
 
         parent.insert(DirectoryNode(name, parent))
 
@@ -64,24 +77,24 @@ class FileDescriptor:
 
 
 
-    def cd(self, path: str) -> int:
+    def cd(self, path: str) -> tuple:
         """
             Change the working directory.
         """
 
         to_path_node    = self._resolve_path(path)
 
-        # does not exist
         if not to_path_node:
-            return 1
+            return 1, Errors.errors['cd'][1].replace('{}', path)
 
-        # Not a directory
         if type(to_path_node) is FileNode:
-            return 2
+            return 2, Errors.errors['cd'][2].replace('{}', path)
+
+
 
         self.pwd    = to_path_node
 
-        return 0
+        return 0, Errors.errors['cd'][0]
 
 
 

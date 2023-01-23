@@ -14,8 +14,8 @@ errors = {
             },
         "cd"        : {
                         0: True,
-                        1: "",
-                        2: "Not a directory"
+                        1: "cd: no such file or directory: {}",
+                        2: "cd: not a directory: {}"
                 },
         "ls"        : {
                         0 : True,
