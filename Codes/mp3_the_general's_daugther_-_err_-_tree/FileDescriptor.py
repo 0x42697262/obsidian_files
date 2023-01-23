@@ -148,9 +148,9 @@ class FileDescriptor:
 
         for source_wildcard in sources:
             source_paths    = self._wildcard_handler([source_wildcard])
-            source_node     = self._resolve_path(source_wildcard)
+            source_nodes    = [self._resolve_path(s) for s in source_paths]
             
-            if len(source_paths) == 0 or not source_node:
+            if len(source_paths) == 0:
                 errors.append((1, Errors.errors['mv'][1].replace('{}', source_wildcard)))
                 continue
 
@@ -168,23 +168,29 @@ class FileDescriptor:
             # move file or directory
             # else, rename
             if destination_node:
-                source_node.parent.children.remove(source_node)
-                source_node.parent  = destination_node
-                source_node.parent.insert(source_node)
+                for clean_source in source_nodes:
+                    clean_source.parent.children.remove(clean_source)
+                    clean_source.parent  = destination_node
+                    clean_source.parent.insert(clean_source)
             else:
+                if len(source_nodes) > 1:
+                    errors.append((1, Errors.errors['mv'][1].replace('{}', destination)))
+                    continue
+
                 # once this branch is executed, we know that the <destination> of
                 # path/<parent>/<destination> does not exist
                 # 
                 # so we take its parent folder and check if that also exists, otherwise
                 # return a file directory not exist error
 
-                destination_name    = destination.split('/')[-1]                    # <destination>
-                parent_path         = destination.replace(destination_name, '')     # path/<parent>
-                parent_node         = self._resolve_path(parent_path)               # <parent> node
-                source_node.parent.children.remove(source_node)                     # remove source node from directory
-                source_node.parent  = parent_node                                   # set source node parent
-                source_node.parent.insert(source_node)                              # add source node to parent children
-                source_node.name    = destination_name                              # rename
+                for clean_source in source_nodes:
+                    destination_name    = destination.split('/')[-1]                    # <destination>
+                    parent_path         = destination.replace(destination_name, '')     # path/<parent>
+                    parent_node         = self._resolve_path(parent_path)               # <parent> node
+                    clean_source.parent.children.remove(clean_source)                   # remove source node from directory
+                    clean_source.parent  = parent_node                                  # set source node parent
+                    clean_source.parent.insert(clean_source)                            # add source node to parent children
+                    clean_source.name    = destination_name                             # rename
 
             
         return errors
