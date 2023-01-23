@@ -40,6 +40,10 @@ class FileDescriptor:
 
         node    = self._resolve_path(path)
 
+        # path is not a directory
+        if type(node) is FileNode:
+            return 5
+
         # Disallow deletion of / (root).
         if node == self.root:
             return 4
@@ -197,7 +201,7 @@ class FileDescriptor:
 
 
 
-    def _resolve_path(self, path: str) -> DirectoryNode | None:
+    def _resolve_path(self, path: str) -> DirectoryNode | FileNode | None:
         """
             Resolve the given path to a node in the tree.
             Checks if the current directory or file exists.
@@ -314,5 +318,6 @@ class FileDescriptor:
                 break
 
         return cleaned_paths
+
 
 
