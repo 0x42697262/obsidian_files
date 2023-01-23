@@ -1,8 +1,8 @@
 errors = {
         "mkdir"     : {
                         0 : True,
-                        1 : "cannot create directory '{}': File exists",
-                        2 : "cannot create directory ‘{}’: No such file or directory",
+                        1 : "mkdir: cannot create directory '{}': File exists",
+                        2 : "mkdir: cannot create directory ‘{}’: No such file or directory",
                 },
         "rmdir"     : {
                         0 : True,
@@ -10,7 +10,7 @@ errors = {
                         2 : "No such file or directory",
                         3 : "Invalid argument",
                         4 : "Cannot delete root directory",
-                        5 : "Not a directory",
+                        5 : "rmdir: failed to remove '{}': Not a directory",
             },
         "cd"        : {
                         0: True,

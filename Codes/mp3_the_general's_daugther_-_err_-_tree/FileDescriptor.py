@@ -7,7 +7,7 @@ class FileDescriptor:
         self.root   = root
         self.pwd    = root
 
-    def mkdir(self, path: str) -> str:
+    def mkdir(self, path: str) -> tuple:
         """
             Creates a new child node.
             Sets the parent of the child node to self.
@@ -18,21 +18,22 @@ class FileDescriptor:
         # Guard Clauses
         ## Error 2
         if not parent:
-            return f"mkdir: {Errors.errors['mkdir'][2].replace('{}', path)}"
+            return 2,Errors.errors['mkdir'][2].replace('{}', path)
 
         ## Error 1
         if any(child.name == name for child in parent.children):
-            return f"mkdir: {Errors.errors['mkdir'][1].replace('{}', name)}"
+            return 1,Errors.errors['mkdir'][1].replace('{}', name)
 
         # Sucess, make directory
         parent.insert(DirectoryNode(name, parent))
-        return 0
+
+        return 0, Errors.errors['mkdir'][0]
 
 
 
 
 
-    def rmdir(self, path: str) -> int:
+    def rmdir(self, path: str) -> tuple:
         """
             Remove empty directories.
         """
@@ -41,7 +42,8 @@ class FileDescriptor:
 
         # path is not a directory
         if type(node) is FileNode:
-            return 5
+            return 5, Errors.errors['rmdir'][5].replace('{}', path)
+
 
         # Disallow deletion of / (root).
         if node == self.root:
