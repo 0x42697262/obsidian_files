@@ -111,11 +111,11 @@ class FileDescriptor:
         results     = dict()
 
         for cwd in cwds:
-            if cwd:
+            if type(cwd) is DirectoryNode:
                 results[self._pwd(cwd)]  = list()
 
         for cwd in cwds:
-            if cwd:
+            if type(cwd) is DirectoryNode:
                 for child in cwd.children:
                     results[self._pwd(cwd)].append(child.name)
 
