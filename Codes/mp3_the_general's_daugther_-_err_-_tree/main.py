@@ -49,7 +49,8 @@ def main():
     cmd.mkdir("idm")
     cmd.mkdir("net")
     # cmd.cd("..")
-    # cmd.ls("/home/*/*.docx")
+    # print(cmd.ls("/home/birb/*.docx"))
+    print(cmd.ls("/home/*/*.docx"))
 
     # print(    cmd._resolve_path_wildcard(['/home/n*k*//*.docx', '/home/*//*.docx']))
     # cmd._resolve_path_wildcard(['/home/neko//*.docx', '/home/naku//*.docx', '/home/birb//*.docx', '/home/chicken//*.docx'])
@@ -58,14 +59,14 @@ def main():
     # print(cmd.ls('/home/b*rb'))
     # print(cmd.ls("/*/*/"))
 
-    cmd.cd("/home/birb/Downloads")
-    print(cmd._pwd(), cmd.ls(""))
-    cmd.mv("temp", "xampp")
-    cmd.mv("net", "xampp/.")
-    cmd.mv("idm", "xampp/sdf/shit")
-    print(cmd._pwd(), cmd.ls(""))
-    print("xampp:", cmd.ls("xampp"))
-    print(    cmd._wildcard_handler(["/home/*/", "/home", "/home/*/Downloads/*.docx", "/home/*/Downloads/*", "/home/*/Downloads/*"]))
+    # cmd.cd("/home/birb/Downloads")
+    # print(cmd._pwd(), cmd.ls(""))
+    # cmd.mv("temp", "xampp")
+    # cmd.mv("net", "xampp/.")
+    # cmd.mv("idm", "xampp/sdf/shit")
+    # print(cmd._pwd(), cmd.ls(""))
+    # print("xampp:", cmd.ls("xampp"))
+    # print(    cmd._wildcard_handler(["/home/*/", "/home", "/home/*/Downloads/*.docx", "/home/*/Downloads/*", "/home/*/Downloads/*"]))
     
 
 

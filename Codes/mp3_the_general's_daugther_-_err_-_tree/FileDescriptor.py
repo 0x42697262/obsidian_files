@@ -83,53 +83,34 @@ class FileDescriptor:
 
 
 
-    def ls(self, path: str) -> list | int | dict | None:
+    def ls(self, path: str) -> dict | int | None:
         """
             List directory contents.
-
-            Buggy, incomplete, please fix
         """
 
-        if '*' in path:
-            directories     = self._resolve_path_wildcard([path])
-            # results = dict()
-            # if directories:
-            #     for d in directories:
-            #         results[d] = list()
-            #         r   = self._resolve_path(d)
-            #         if type(r) is DirectoryNode:
-            #             results[d].append(((self.ls(d))))
-            #     
-            #     if len(results) > 0:
-            #         return results
+        # make sure the path is free from any wildcards
+        paths   = self._wildcard_handler([path])
+        # we get its nodes
+        cwds    = [self._resolve_path(p) for p in paths]
+
+        # path does not exist
+        if len(paths) == 0:
+            return 1
+
+        results     = dict()
+
+        for cwd in cwds:
+            if cwd:
+                results[self._pwd(cwd.parent)]  = list()
+
+        for cwd in cwds:
+            if cwd:
+                results[self._pwd(cwd.parent)].append(cwd.name)
+
+        return results
 
 
-            return directories
 
-        else:
-            cwd     = self._resolve_path(path)
-
-            # Guard Clauses
-            ## Directory not exist
-            if not cwd:
-                return 1
-
-            ## Show contents
-            contents    = [child.name for child in cwd.children] 
-
-            # if no arguments provided
-            if not path: 
-                return contents 
-
-
-            name        = path.split('/')[-1]
-            if cwd == self.pwd:
-                name    = '*'
-            else:
-                name    = '*'
-
-            # print(name, cwd.name, path.split('/'), path, contents)
-            return fnmatch.filter(contents, name) 
 
 
 
@@ -194,9 +175,17 @@ class FileDescriptor:
         pass
     
 
-    def _pwd(self) -> str:
+    def _pwd(self, node: DirectoryNode = None) -> str:
+        """
+            Returns current working directory.
+            Can be used to get full path of a node.
+        """
+
+        if node is None:
+            return '/'
+
         directories     = list()
-        cwd             = self.pwd
+        cwd             = self.pwd if node is None else node
         while cwd != self.root:
             directories.insert(0, cwd.name)
             cwd = cwd.parent
@@ -281,10 +270,12 @@ class FileDescriptor:
         """
 
         cleaned_paths   = list()
-        wildcard_paths  = list()
 
         for path in paths:
             if '*' in path:
+                # find all wildcards as a list
+                # will be used for string substitution later on
+                wildcards           = re.findall(r'[^\\^/^\s]*\*[^\\^/^\s]*', path)
                 # find the first * in path
                 wildcard_index      = path.find('*')
                 # get substring until *
@@ -297,11 +288,13 @@ class FileDescriptor:
                     # add the child's path to children list
                     children        = [wildcard_substring + child.name for child in wildcard_node.children]
                     # match only the ones with a wildcard
-                    matches         = fnmatch.filter(children, path[:wildcard_index+1])
+                    matches         = fnmatch.filter(children, wildcard_substring+wildcards[0])
+                    # get back on this issue where the stuffs gets duplicated, eat first
 
-                    # iterate the list then append the macthed child + the remaining path string
+                    # iterate the list then append the matched child + the remaining path string
                     for match in matches:
-                        cleaned_paths.append(match + path[wildcard_index+1:])
+                        tmp     = path
+                        cleaned_paths.append(tmp.replace(wildcard_substring+wildcards[0], match, 1))
 
             else:
                 cleaned_paths.append(path)
