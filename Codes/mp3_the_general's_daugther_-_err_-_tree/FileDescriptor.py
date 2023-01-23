@@ -313,23 +313,3 @@ class FileDescriptor:
         return cleaned_paths
 
 
-    def _resolve_path_wildcard(self, paths: list) -> list | None:
-        contents    = list()
-        for path in paths:
-            wildcards   = re.findall(r'[^\\^/^\s]*\*[^\\^/^\s]*', path)
-            parent      = DirectoryNode
-            for wc in wildcards:
-                find    = path[:path.find(wc)]
-                parent  = self._resolve_path(find)
-                if parent:
-                    matches     = fnmatch.filter(self.ls(find), wc)
-                    if len(matches) > 0:
-                        for p in matches:
-                            tmp     = path
-                            contents.append(tmp.replace(wc, p, 1))
-        
-        contents    = list(dict.fromkeys(contents))
-        for c in contents:
-            if '*' in c:
-                return self._resolve_path_wildcard(contents)
-        return contents
