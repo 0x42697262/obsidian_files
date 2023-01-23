@@ -51,8 +51,8 @@ class DirectoryNode(GeneralTreeNode):
 
 
 class FileNode(GeneralTreeNode):
-    def __init__(self, name: str) -> None:
-        super().__init__(name)
+    def __init__(self, name: str, parent = None) -> None:
+        super().__init__(name, parent)
 
         self.data: bytearray    = bytearray()
 
