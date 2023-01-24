@@ -35,4 +35,14 @@ errors = {
                         0 : True,
                         1 : "rm: cannot remove '{}': No such file or directory",
                 },
+        "show"      : {
+                        0 : True,
+                        1 : "show: target '{}': No such file or directory",
+                },
+        "edit"      : {
+                        0 : True,
+                        1 : "edit: target '{}': Not a file",
+                        2 : "edit: target '{}': Parent directory does not exist",
+                        3 : "edit: data input is empty",
+                },
         }

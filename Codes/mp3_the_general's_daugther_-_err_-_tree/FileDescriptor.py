@@ -3,6 +3,9 @@
     rmdir: does not support multiple arguments for directory deletion
 
     these can easily be added tho, but not a priority
+
+
+    ls: alphabetical
 """
 
 from GeneralTreeNode import (DirectoryNode, FileNode)
@@ -275,13 +278,52 @@ class FileDescriptor:
             
         return errors
 
-    def edit(self, filename: str):
-        pass
 
-    def show(self):
-        pass
+    def edit(self, filename: str, data: str = None) -> tuple:
+        """
+            Creates a new file or appends data to file.
+        """
 
-    def whereis(self):
+        node = self._resolve_path(filename)
+        parent, name = self._resolve_parent_and_name(filename)
+
+        if isinstance(node, DirectoryNode):
+            return 1, Errors.errors['edit'][1].replace('{}', filename)
+
+        # create new file
+        if not node:
+            # if it's a root directory, then there's no parent
+            if not parent:
+                return 2, Errors.errors['edit'][2].replace('{}', filename)
+
+            parent.insert(FileNode(name, parent))
+
+            return 0, Errors.errors['edit'][0]
+
+        # append 
+        if not data:
+            return 3, Errors.errors['edit'][3]
+
+        node.append(data)
+
+        return 0, Errors.errors['edit'][0]
+
+
+
+
+    def show(self, filename: str) -> bytearray | tuple:
+        node = self._resolve_path(filename)
+
+        if not isinstance(node, FileNode):
+            return 1, Errors.errors['show'][1].replace('{}', filename)
+
+        return node.data
+
+    def whereis(self, source: list) -> list | tuple:
+        """
+            Locate the binary, source, and manual page files for a command
+        """
+
         pass
     
 
