@@ -4,7 +4,7 @@
 
 import sys
 from FileDescriptor import FileDescriptor
-from GeneralTreeNode import DirectoryNode
+from GeneralTreeNode import DirectoryNode, FileNode
 
 
 def main():
@@ -16,60 +16,19 @@ def main():
     for name in dirs:
         cmd.mkdir(name)
 
-    cmd.cd("home")
-    cmd.mkdir("birb")
-    cmd.mkdir("chicken")
-    cmd.mkdir("neko")
-    cmd.mkdir("naku")
-    
-    cmd.cd("birb")
-    cmd.mkdir("/home/birb/Downloads")
-    cmd.mkdir("/home/birb/.config")
-    cmd.mkdir("/home/birb/.local")
-    cmd.mkdir("/home/birb/.share")
-    cmd.mkdir("/home/birb/.cache")
 
-    cmd.cd("..")
-    cmd.mkdir("birb/Stuffs")
+    cmd.root.insert(FileNode("hello.txt", root))
+    cmd.root.insert(FileNode("hellr.txt", root))
+    cmd.root.insert(FileNode("hellrar.txt", root))
+    cmd.mkdir("/home/birb")
+    print(cmd.edit("/home/birb/asfd"))
+    print(cmd.edit("/home/birb/asfd", "sadf"))
+    print(cmd.show("/home/birb/asfd/asdf"))
+    # cmd.edit("test1.txt", "osijdfoisdjfo")
+    # print(cmd.show("test1.txt"))
+    print(cmd.ls("/home"))
 
-    cmd.cd("birb")
-    # print("contents:", cmd.ls("*"))
-    cmd.mkdir("hello.docx")
-    cmd.mkdir("there.docx")
-    cmd.mkdir("fren.docx")
-    cmd.mkdir("/home/neko/hello1.docx")
-    cmd.mkdir("/home/neko/there2.docx")
-    cmd.mkdir("/home/neko/fren3.docx")
-    cmd.cd("../neko")
-    # print(cmd.ls("*.docx"))
 
-    cmd.cd("/home/birb/Downloads")
-    cmd.mkdir("temp")
-    cmd.mkdir("xampp")
-    cmd.mkdir("idm")
-    cmd.mkdir("net")
-    # cmd.cd("..")
-    print(cmd.ls("/home/*/*.docx"))
-    # print(cmd.ls("/home/birb/*.docx"))
-    # print(cmd.ls(".."))
-    # print(cmd.ls("/home/"))
-
-    # print(    cmd._resolve_path_wildcard(['/home/n*k*//*.docx', '/home/*//*.docx']))
-    # cmd._resolve_path_wildcard(['/home/neko//*.docx', '/home/naku//*.docx', '/home/birb//*.docx', '/home/chicken//*.docx'])
-    # print(cmd._resolve_path_wildcard(['.']))
-    # print(cmd.ls("/home/*/*"))
-    # print(cmd.ls('/home/b*rb'))
-    # print(cmd.ls("/*/*/"))
-
-    # cmd.cd("/home/birb/Downloads")
-    # print(cmd._pwd(), cmd.ls(""))
-    # cmd.mv("temp", "xampp")
-    # cmd.mv("net", "xampp/.")
-    # cmd.mv("idm", "xampp/sdf/shit")
-    # print(cmd._pwd(), cmd.ls(""))
-    # print("xampp:", cmd.ls("xampp"))
-    # print(    cmd._wildcard_handler(["/home/*/", "/home", "/home/*/Downloads/*.docx", "/home/*/Downloads/*", "/home/*/Downloads/*"]))
-    
 
 
 def print_help():
