@@ -31,4 +31,8 @@ errors = {
                         1 : "cp: target '{}': No such file or directory",
                         2 : "cp: cannot copy a directory, '{}', into itself, '{}/{}'",
                 },
+        "rm"        : {
+                        0 : True,
+                        1 : "rm: cannot remove '{}': No such file or directory",
+                },
         }

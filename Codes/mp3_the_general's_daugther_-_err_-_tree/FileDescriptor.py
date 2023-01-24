@@ -255,8 +255,25 @@ class FileDescriptor:
             
         return errors
 
-    def rm(self):
-        pass
+    def rm(self, sources: list) -> list | tuple:
+        """
+            Remove files or directories
+        """
+
+        errors = list()
+
+        for source_wildcard in sources:
+            source_paths    = self._wildcard_handler([source_wildcard])
+            source_nodes    = [self._resolve_path(s) for s in source_paths]
+            
+            if len(source_paths) == 0 or not source_nodes:
+                errors.append((1, Errors.errors['rm'][1].replace('{}', source_wildcard)))
+                continue
+
+            for s in source_nodes:
+                s.parent.delete(s)
+            
+        return errors
 
     def edit(self, filename: str):
         pass

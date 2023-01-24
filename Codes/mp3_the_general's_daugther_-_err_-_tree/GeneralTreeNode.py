@@ -4,6 +4,12 @@ class GeneralTreeNode:
         self.parent     = parent
         self.name       = name
 
+    def delete(self, node) -> None:
+        node.parent.children.remove(node)
+        node.parent     = None
+        node.children   = None
+        node            = None
+
 
 
 
