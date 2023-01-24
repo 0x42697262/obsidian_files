@@ -59,13 +59,13 @@ Tasks
 - [x] mv
 	- [ ] rn (this is just move, so either make a new function or use `mv` command)
 	- [x] `*` wildcard
-- [ ] cp
-	- [ ] `*` wildcard
-- [ ] rm
-	- [ ] `*` wildcard
-- [ ] edit
-- [ ] show
-- [ ] whereis
+- [x] cp
+	- [x] `*` wildcard
+- [x] rm
+	- [x] `*` wildcard
+- [x] edit
+- [x] show
+- [x] whereis
 
 ---
 Source Code: https://github.com/KrulYuno/obsidian_files/tree/master/Codes/mp3_the_general's_daugther_-_err_-_tree

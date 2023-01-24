@@ -319,13 +319,34 @@ class FileDescriptor:
 
         return node.data
 
-    def whereis(self, source: list) -> list | tuple:
+
+    def whereis(self, name, path = '/') -> list | tuple:
         """
             Locate the binary, source, and manual page files for a command
         """
 
-        pass
-    
+        path_stack = []
+
+        directories = self.ls(path)
+
+        for directory in directories:
+            for file in directories[directory]:
+                
+                
+                if re.match(name.replace('*', '.*'), file):
+                    if(path == '/'):
+                        path_stack.append(directory  + file)
+                    else:
+                        path_stack.append(directory + '/' + file)
+
+                try:
+                    path_stack += self.whereis(name, directory + '/' + file)
+                except:
+                    continue
+            
+        
+
+        return path_stack    
 
     def _pwd(self, node: DirectoryNode | FileNode = None) -> str:
         """

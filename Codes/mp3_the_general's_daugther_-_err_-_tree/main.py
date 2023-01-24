@@ -16,17 +16,17 @@ def main():
     for name in dirs:
         cmd.mkdir(name)
 
-
-    cmd.root.insert(FileNode("hello.txt", root))
-    cmd.root.insert(FileNode("hellr.txt", root))
-    cmd.root.insert(FileNode("hellrar.txt", root))
     cmd.mkdir("/home/birb")
-    print(cmd.edit("/home/birb/asfd"))
-    print(cmd.edit("/home/birb/asfd", "sadf"))
-    print(cmd.show("/home/birb/asfd/asdf"))
-    # cmd.edit("test1.txt", "osijdfoisdjfo")
-    # print(cmd.show("test1.txt"))
-    print(cmd.ls("/home"))
+    cmd.mkdir("/home/birb/Downloads")
+    cmd.edit("/home/birb/Downloads/test.docx")
+    cmd.edit("/home/birb/Downloads/test.docx", "HEllo WOlRd.")
+    cmd.edit("/test1.docx")
+    print(cmd.ls(""))
+    print(cmd.ls("/home/birb/Downloads"))
+
+
+
+    print(cmd.whereis("*.docx"))
 
 
 
