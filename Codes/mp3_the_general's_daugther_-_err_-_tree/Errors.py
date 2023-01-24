@@ -26,4 +26,9 @@ errors = {
                         2 : "mv: cannot move '{}' to a subdirectory of itself, '{}/{}'",
                         3 : "mv: cannot overwrite non-directory '{destination}' with directory '{source}'",
                 },
+        "cp"        : {
+                        0 : True,
+                        1 : "cp: target '{}': No such file or directory",
+                        2 : "cp: cannot copy a directory, '{}', into itself, '{}/{}'",
+                },
         }

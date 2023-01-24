@@ -150,7 +150,7 @@ class FileDescriptor:
             source_paths    = self._wildcard_handler([source_wildcard])
             source_nodes    = [self._resolve_path(s) for s in source_paths]
             
-            if len(source_paths) == 0:
+            if len(source_paths) == 0 or not source_nodes:
                 errors.append((1, Errors.errors['mv'][1].replace('{}', source_wildcard)))
                 continue
 
@@ -169,6 +169,9 @@ class FileDescriptor:
             # else, rename
             if destination_node:
                 for clean_source in source_nodes:
+                    if not clean_source:
+                        errors.append((1, Errors.errors['mv'][1].replace('{}', source_wildcard)))
+                        continue
                     clean_source.parent.children.remove(clean_source)
                     clean_source.parent  = destination_node
                     clean_source.parent.insert(clean_source)
@@ -188,17 +191,69 @@ class FileDescriptor:
                     parent_path         = destination.replace(destination_name, '')     # path/<parent>
                     parent_node         = self._resolve_path(parent_path)               # <parent> node
                     clean_source.parent.children.remove(clean_source)                   # remove source node from directory
-                    clean_source.parent  = parent_node                                  # set source node parent
+                    clean_source.parent = parent_node                                  # set source node parent
                     clean_source.parent.insert(clean_source)                            # add source node to parent children
-                    clean_source.name    = destination_name                             # rename
+                    clean_source.name   = destination_name                             # rename
 
             
         return errors
 
 
 
-    def cp(self):
-        pass
+    def cp(self, sources: list, destination: str) -> list | tuple:
+        """
+            Copy files and directories
+        """
+
+        # `cp` and `mv` are quite similar, so i will copy paste code
+
+        errors = list()
+        
+        # note that `mv` command can take multiple files and directories as argument as sources
+        # then its very last argument is the destination 
+        destination_node    = self._resolve_path(destination)
+        if not destination_node and len(sources) > 1:
+            return 1, Errors.errors['cp'][1].replace('{}', destination)
+
+        for source_wildcard in sources:
+            source_paths    = self._wildcard_handler([source_wildcard])
+            source_nodes    = [self._resolve_path(s) for s in source_paths]
+            
+            if len(source_paths) == 0:
+                errors.append((1, Errors.errors['cp'][1].replace('{}', source_wildcard)))
+                continue
+
+            if source_wildcard == destination:
+                errors.append((2, Errors.errors['cp'][2].replace('{}', source_wildcard)))
+                continue
+
+            if type(destination_node) is FileNode:
+                # errors.append((3, Errors.errors['cp'][3].replace('{destination}', destination).replace('{source}', source_wildcard)))
+                continue
+
+
+            if type(destination_node) is DirectoryNode:
+                for clean_source in source_nodes:
+                    if not clean_source:
+                        errors.append((1, Errors.errors['cp'][1].replace('{}', source_wildcard)))
+                        continue
+
+                    destination_node.insert(clean_source)
+            else:
+                if len(source_nodes) > 1:
+                    errors.append((1, Errors.errors['mv'][1].replace('{}', destination)))
+                    continue
+
+                for clean_source in source_nodes:
+                    destination_name    = destination.split('/')[-1]                    
+                    parent_path         = destination.replace(destination_name, '')     
+                    parent_node         = self._resolve_path(parent_path)               
+                    clean_source.parent = parent_node                                  
+                    clean_source.parent.insert(clean_source)                            
+                    clean_source.name   = destination_name                             
+
+            
+        return errors
 
     def rm(self):
         pass
