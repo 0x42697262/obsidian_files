@@ -17,8 +17,6 @@ kanban-plugin: basic
 - [ ] [[First Long Exam @2022-11-04]] + Mastery Exam (before jan. 25)
 - [ ] Expression Tree Implementation #CMSC142
 - [ ] The General's Daughter - err - Tree #CMSC142
-- [ ] Mastery Quiz: Agile Development
-- [ ] [[Mastery Quiz  Process Models]]
 
 
 ## Postponed
@@ -70,10 +68,15 @@ kanban-plugin: basic
 - [x] 2022-10-13 19:51 Score/Grade for the three groups @[[2022-10-12]]
 
 
+***
 
+## Archive
+
+- [ ] 2023-01-24 03:45 [[Mastery Quiz  Process Models]]
+- [ ] 2023-01-24 03:45 Mastery Quiz: Agile Development
 
 %% kanban:settings
 ```
-{"kanban-plugin":"basic","new-note-template":"Templates/Deadlines.md","tag-colors":[],"show-relative-date":false}
+{"kanban-plugin":"basic","new-note-template":"Templates/Deadlines.md","tag-colors":[],"show-relative-date":true}
 ```
 %%
