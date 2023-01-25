@@ -14,9 +14,6 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] [[First Long Exam @2022-11-04]] + Mastery Exam (before jan. 25)
-- [ ] Expression Tree Implementation #CMSC142
-- [ ] The General's Daughter - err - Tree #CMSC142
 
 
 ## Postponed
@@ -26,6 +23,9 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] The General's Daughter - err - Tree #CMSC142
+- [x] Expression Tree Implementation #CMSC142
+- [x] [[First Long Exam @2022-11-04]] + Mastery Exam (before jan. 25)
 - [x] ALL CMSC 128 TASKS
 - [x] [[Position Argumentative Paper]] #STS1 @[[2023-01-18]]
 - [x] Annotated Bibliography (ORG)
