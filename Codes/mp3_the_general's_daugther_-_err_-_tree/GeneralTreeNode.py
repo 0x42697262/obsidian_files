@@ -1,3 +1,4 @@
+
 class GeneralTreeNode:
     def __init__(self, name: str, parent = None) -> None:
         self.children   = list()
@@ -65,6 +66,7 @@ class FileNode(GeneralTreeNode):
 
     def append(self, contents: str):
         self.data.extend(bytes(contents, 'utf-8'))
+        self.data.extend(bytes('\n', 'utf-8'))
         
 
 

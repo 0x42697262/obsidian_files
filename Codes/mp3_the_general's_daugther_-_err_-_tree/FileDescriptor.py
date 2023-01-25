@@ -11,7 +11,6 @@
 from GeneralTreeNode import (DirectoryNode, FileNode)
 import fnmatch, re
 import Errors
-import copy
 
 class FileDescriptor:
     def __init__(self, root: DirectoryNode) -> None:
@@ -253,7 +252,10 @@ class FileDescriptor:
                     parent_path         = destination.replace(destination_name, '')     
                     parent_node         = self._resolve_path(parent_path)               
                     clean_source.parent = parent_node                                  
-                    new_node            = copy.deepcopy(clean_source)
+                    if type(clean_source) is DirectoryNode:
+                        new_node            = DirectoryNode(clean_source.name, clean_source.parent)
+                    if type(clean_source) is FileNode:
+                        new_node            = FileNode(clean_source.name, clean_source.parent)
                     new_node.name       = destination
                     clean_source.parent.insert(new_node)                            
 
@@ -313,13 +315,13 @@ class FileDescriptor:
 
 
 
-    def show(self, filename: str) -> bytearray | tuple:
+    def show(self, filename: str) -> tuple:
         node = self._resolve_path(filename)
 
         if not isinstance(node, FileNode):
             return 1, Errors.errors['show'][1].replace('{}', filename)
 
-        return node.data
+        return 0, node.data
 
 
     def whereis(self, name, path = '/') -> list | tuple:
@@ -449,11 +451,13 @@ class FileDescriptor:
                 # will be used for string substitution later on
                 wildcards           = re.findall(r'[^\\^/^\s]*\*[^\\^/^\s]*', path)
                 # find the first * in path
-                wildcard_index      = path.find('*')
+                # wildcard_index      = path.find('*')
                 # get substring until *
-                wildcard_substring  = path[:wildcard_index]
+                wildcard_substring  = path.replace(wildcards[0], '')
+                # wildcard_substring  = path[:wildcard_index]
                 # get its node
                 wildcard_node       = self._resolve_path(wildcard_substring)
+                # print('iii',wildcard_substring, wildcards)
                 # check if the wildcard node exists, add all its children to list
                 # to be checked for matching paths
                 if wildcard_node:
@@ -461,6 +465,9 @@ class FileDescriptor:
                     children        = [wildcard_substring + child.name for child in wildcard_node.children]
                     # match only the ones with a wildcard
                     matches         = fnmatch.filter(children, wildcard_substring+wildcards[0])
+                    # print('iii',children)
+                    # for ww in wildcard_node.children:
+                        # print('xx', ww)
                     # get back on this issue where the stuffs gets duplicated, eat first
 
                     # iterate the list then append the matched child + the remaining path string
