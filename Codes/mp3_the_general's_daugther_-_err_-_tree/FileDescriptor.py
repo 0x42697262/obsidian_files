@@ -11,6 +11,7 @@
 from GeneralTreeNode import (DirectoryNode, FileNode)
 import fnmatch, re
 import Errors
+import copy
 
 class FileDescriptor:
     def __init__(self, root: DirectoryNode) -> None:
@@ -104,7 +105,7 @@ class FileDescriptor:
 
 
 
-    def ls(self, path: str) -> dict | tuple | None:
+    def ls(self, path: str) -> dict | tuple:
         """
             List directory contents.
         """
@@ -129,7 +130,7 @@ class FileDescriptor:
                 for child in cwd.children:
                     results[self._pwd(cwd)].append(child.name)
 
-        return results
+        return 0, results
 
 
 
@@ -252,8 +253,9 @@ class FileDescriptor:
                     parent_path         = destination.replace(destination_name, '')     
                     parent_node         = self._resolve_path(parent_path)               
                     clean_source.parent = parent_node                                  
-                    clean_source.parent.insert(clean_source)                            
-                    clean_source.name   = destination_name                             
+                    new_node            = copy.deepcopy(clean_source)
+                    new_node.name       = destination
+                    clean_source.parent.insert(new_node)                            
 
             
         return errors
