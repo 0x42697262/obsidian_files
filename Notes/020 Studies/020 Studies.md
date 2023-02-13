@@ -3,6 +3,17 @@
 
 ----
 # 020 Studies
+
+[Table of Contents]
+- [[#CMSC 124 Design and Implementation of Programming Languages]]
+- [[#CMSC 125 Operating Systems]]
+- [[#CMSC 128 Software Engineering 1]]
+- [[#CMSC 142 Design and Analysis of Algorithms]]
+- [[#CMSC 192 Ethical and Professional Issues in Computing]]
+- [[#CMSC 194.1]]
+
+---
+
 ## CMSC 124 Design and Implementation of Programming Languages
 ### Week 2: Background and Preliminaries
 - [[CMSC 124 Machine Problem 1]]
@@ -20,10 +31,14 @@
 - [[Expression Notations]]: [[Expression Notation - Infix|Infix]] [[Expression Notation - Prefix|Prefix]] [[Expression Notation - Postfix|Postfix]]
 - [[CMSC 124 Machine Problem 4]]
 - [[CMSC 124 Guide Question for Chapter 6. Expressions]]
-## Week 13: Statements
+### Week 13: Statements
 - [[CMSC 124 Guide Questions on Statements and Control Structures]]
 ### Week 14-15: Procedure and Subprograms
 - [[CMSC 124 Guide Question for Chapter 8. Procedures and Subprograms]]
+
+## CMSC 125 Operating Systems
+### Week 1:
+- 
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
@@ -39,7 +54,7 @@
 - [[CMSC 142 Machine Problem 3]]
 
 ## CMSC 192 Ethical and Professional Issues in Computing
-[[CMSC192 Learning Portfolio]]
+- [[CMSC192 Learning Portfolio]]
 ### Week 3
 - [[Imperatives in Ethics]]
 - [[Immanuel Kant’s Categorical Imperative]]
