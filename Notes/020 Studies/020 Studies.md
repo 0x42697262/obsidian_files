@@ -4,13 +4,15 @@
 ----
 # 020 Studies
 
-[Table of Contents]
-- [[#CMSC 124 Design and Implementation of Programming Languages]]
-- [[#CMSC 125 Operating Systems]]
-- [[#CMSC 128 Software Engineering 1]]
-- [[#CMSC 142 Design and Analysis of Algorithms]]
-- [[#CMSC 192 Ethical and Professional Issues in Computing]]
-- [[#CMSC 194.1]]
+>[!INFO]- Table of Contents
+> - [[#CMSC 124 Design and Implementation of Programming Languages]]
+> - [[#CMSC 125 Operating Systems]]
+> - [[#CMSC 128 Software Engineering 1]]
+> - [[#CMSC 142 Design and Analysis of Algorithms]]
+> - [[#CMSC 170 Introduction to AI]]
+> - [[#CMSC178 Image Processing]]
+> - [[#CMSC 192 Ethical and Professional Issues in Computing]]
+> - [[#CMSC 194.1]]
 
 ---
 
@@ -37,8 +39,8 @@
 - [[CMSC 124 Guide Question for Chapter 8. Procedures and Subprograms]]
 
 ## CMSC 125 Operating Systems
-### Week 1:
-- 
+### Week 3-4: Introduction
+- [[CMSC 125 Problem Set 1]]
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
@@ -52,6 +54,13 @@
 - [[CMSC 142 Problem Set 1]]
 - [[CMSC 142 Machine Problem 1]]
 - [[CMSC 142 Machine Problem 3]]
+
+## CMSC 170 Introduction to AI
+
+
+## CMSC178 Image Processing
+### Week 1: Image Sensors and Image Representations
+
 
 ## CMSC 192 Ethical and Professional Issues in Computing
 - [[CMSC192 Learning Portfolio]]
