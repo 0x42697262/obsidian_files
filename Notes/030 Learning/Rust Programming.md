@@ -5,6 +5,7 @@
 ----
 # Rust Programming
 - [[Rust Programming#Stacks|Implementing Stacks]]
+- [[#Summation of Array]]
 
 ---
 
@@ -25,4 +26,11 @@ When unwrapping, make sure that the value is not `None`. Otherwise it panics:
 ```rust
 thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src/main.rs:9:12
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+
+# Summation of Array
+```rust
+fn sum_of_array(ar: &[i32]) -> i32 {
+	return ar.iter().sum();
+}
 ```
