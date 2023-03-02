@@ -8,6 +8,7 @@
 - [[Interesting Websites To Check#Something Touhou (東方Project) Related|Something Touhou (東方Project) Related]]
 - [[Interesting Websites To Check#Something on Github|Random Stuffs on Github]]
 - [[Interesting Websites To Check#Pentesting|Pentesting]]
+- [[#Uncategorized]]
 
 ---
 
@@ -37,3 +38,6 @@
 ### Something on Github
 - https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
 
+
+### Uncategorized
+- https://wiki.skullsecurity.org/index.php/Main_Page
