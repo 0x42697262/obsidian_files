@@ -5,7 +5,9 @@ CMSC 125 Problem Set 1
 ----
 
 1) An extreme method of spooling, known as staging a tape, is to read the entire contents of a magnetic tape onto disk before using it. Discuss the main advantages of such a scheme. 
+Magnetic tapes are slow, unreliable, and serial. Unlike disks which is faster, more reliable, can processes jobs in parallel, and has better data management than magnetic tapes. That is because magnetic tapes takes longer time to locate and retrieve data because its sequential unlike disks which is a random-access device. Magnetic tapes are much more prone to errors and data loss unlike disks. Also, disks can process in parallel as there is no need for I/O when data is being processed. So, many jobs can access the data simultaneously. And disk can also have features such as searching and sorting unlike magnetic tapes. Which is why staging a tape onto a disk is much better and simpler.
 
+Although it has issues with higher startup time and lots of storage space required.
 
 2) What is the main advantage of multiprogramming?
 
