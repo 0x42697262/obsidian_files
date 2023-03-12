@@ -42,7 +42,9 @@ which allocates them to specific programs/users as necessary
 Should decide which requests are allocates the resources should there be a conflicting requests. 
 We can view OS as a resource allocator
 
-[[Control Program]] manages execution of user programs to prevent errors and imprkkoper use of the computer.
+[[Control Program]] manages execution of user programs to prevent errors and improper use of the computer.
 
 Also check:
 1. [[Spooling]]
+
+## Types of Operating Systems
