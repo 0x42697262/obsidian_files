@@ -92,12 +92,33 @@ b.) Input and output device utilization (in milliseconds)
 ```
 Show your computations.
 
+**Card Reader**:
+(600 cards/min)(1min/60s) = 10 cards/s
+**Line Printer**:
+(100 lines/min)(1min/60s) = 1.667 lines/s
 
+**a.) CPU utilization**
+	e = (1ms/701ms)(100) = 0.143%
+	**e** = `0.143%`
+	Since, it has very little CPU utilization percentage, we can say that it has a poor CPU utilization.
 
-
+**b.) Input and output device utilization** (in milliseconds)
+	**Input:** 10 cards/s
+		(1s/10cards)(1000ms/1s) = 100ms/card
+		`Input phase (1 card): 100 ms`
+	**Process:** 1000 instructions
+		  (1000μs)(1s/1000000μs)(1000ms/1s) = 1ms
+		`Process: 1 ms`
+	 **Output:** 1.667 lines/s
+		  (1s/1.667lines)(1000ms/1s) = 600ms/line
+		`Output phase (1 line): 600 ms`
+	**Total:**  100ms + 1ms + 600ms = 701ms
+	Therefore, CPU is busy only for 1ms for every 701ms.
+	
 9) Explain how throughput (number of completed jobs per unit time) is increased by doing input/output operation in an off-line manner.
 
 Input/Output (I/O) operations are slow so by adressing addressing the issue to a solution by doing offline processing, it is possible to efficiently utilize the system's resources. This happens by doing I/O in the background while the processor focuses on executing jobs Since the I/O process is done in an offline manner, the processor can continue executing other jobs that it needs to execute thus overall reducing the idle time and increasing the throughput. This type of processing also reduces the overhead of the system because I/O operations can be batched together thus further increases its processing speed.
+
 
 10) Differentiate
 ```
