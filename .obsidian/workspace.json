@@ -65,27 +65,72 @@
             }
           },
           {
-            "id": "d46cde5f7a135733",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "3973d05ed7771632",
+            "id": "f942dea99b649c91",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/__orphans/CMSC 194.1 Task 4 Annotated Bibliography (ML).md",
+                "file": "Notes/020 Studies/CMSC 125 Problem Set 2.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ff5dd4b9b7c34edb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/020 Studies/Operating Systems.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "2e89eff3be1e9432",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/__orphans/Multiprogramming.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1c2e360e577c096",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/020 Studies/Interrupt-Driven Input-Output.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "91c185b7e80c6fd4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/020 Studies/CMSC 125 Problem Set 1.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -114,7 +159,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#2022-11-1",
+                "query": "tag:#OperatingSystem",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -139,8 +184,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -160,7 +204,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/020 Studies/Interrupt-Driven Input-Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +221,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/020 Studies/Interrupt-Driven Input-Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -200,7 +244,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/Tasks.md"
+                "file": "Notes/020 Studies/Interrupt-Driven Input-Output.md"
               }
             }
           },
@@ -241,17 +285,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "361ce46d17e14e9a",
+  "active": "a1c2e360e577c096",
   "lastOpenFiles": [
-    "ATTACHMENT_FOLDER/Pasted image 20221229153934.png",
-    "Daily Notes/Tasks.md",
-    "Notes/__orphans/cmsc142 state diagram.canvas",
-    "Notes/020 Studies/CMSC 142 Machine Problem 1.md",
-    "Codes/README.md",
-    "Notes/__orphans/game.canvas",
-    "Templates/Non0Day.md",
+    "Notes/__orphans/Programmed Input-Output.md",
+    "Notes/020 Studies/Interrupt-Driven Input-Output.md",
+    "Notes/__orphans/IO Operations.md",
+    "Notes/__orphans/Multiprogramming.md",
+    "Notes/020 Studies/Operating Systems.md",
+    "Notes/__orphans/Time Sharing.md",
+    "Interrupt-Driver I/O.md",
+    "Interrupt-Driver I",
+    "Notes/__orphans/Time Slicing.md",
+    "Notes/020 Studies/CMSC 125 Problem Set 1.md",
+    "Notes/020 Studies/CMSC 125 Problem Set 2.md",
+    "Notes/020 Studies/Spooling.md",
+    "Notes/__orphans/CMSC 125 Machine Problem 1.md",
+    "Notes/020 Studies/Laboratory Exercise 6 - Scenario-Based Modelling.md",
+    "Notes/020 Studies/020 Studies.md",
+    "Notes/__orphans/111.md",
     "Daily Notes/Non Zero Day.md",
-    "Notes/030 Learning/OverTheWire.md",
-    "Notes/030 Learning/Capture The Flags.md"
+    "Daily Notes/Tasks.md",
+    "Notes/030 Learning/Learn Deep Learning in 6 Weeks.md",
+    "Codes/MATLAB/practice/A1_code/vintage_postcard.tif",
+    "Codes/MATLAB/practice/A1_code/smart_blur_test.m",
+    "Codes/MATLAB/practice/A1_code/smart_blur.m",
+    "Codes/MATLAB/practice/A1_code/median_test.m",
+    "Codes/MATLAB/practice/A1_code/median_filter.m",
+    "Codes/MATLAB/practice/A1_code/low_light.tif",
+    "Codes/MATLAB/practice/A1_code/lift_toodark.tif",
+    "Codes/MATLAB/practice/A1_code/kookaburra_flat.tif",
+    "Codes/MATLAB/practice/A1_code/house_flat.tif",
+    "Codes/MATLAB/practice/A1_code/color_toys.jpg",
+    "Codes/MATLAB/practice/A1_code/color_testchart.jpg",
+    "Codes/MATLAB/practice/A1_code/color_person2.jpg",
+    "Codes/MATLAB/practice/A1_code/color_person1.jpg",
+    "Notes/090 Others/Interesting Websites To Check.md",
+    "Templates/Header.md",
+    "Notes/020 Studies/Bayer filter.md",
+    "Notes/__orphans/011.md",
+    "Notes/020 Studies/Grayscale.md",
+    "ATTACHMENT_FOLDER/Pasted image 20230304034239.png",
+    "Notes/__orphans/user stories test for cmsc194_1.md",
+    "Notes/020 Studies/CMSC 124 Problem Set 4.md",
+    "Notes/020 Studies/CMSC 124 Problem Set 3.md"
   ]
 }

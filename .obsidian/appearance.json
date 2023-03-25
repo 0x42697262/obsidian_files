@@ -1,7 +1,5 @@
 {
-  "baseFontSize": 15,
-  "cssTheme": "Pink Topaz",
+  "accentColor": "",
   "theme": "moonstone",
-  "translucency": false,
-  "accentColor": "#fe2aa6"
+  "cssTheme": "Pink Topaz"
 }
