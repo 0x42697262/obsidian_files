@@ -5,9 +5,13 @@ CMSC 125 Problem Set 2
 ----
 
 1. Why are interrupts necessary in a time-sharing system?
->Interrupts are necessary in a time-sharing system to enable efficient multitasking and prevent a single process from monopolizing the CPU. Interrupts allow the system to switch between multiple processes, giving the appearance of simultaneous execution. (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
+>Interrupts are necessary in a time-sharing system to enable efficient multitasking and prevent a single process from monopolizing the CPU. Interrupts allow the system to switch between multiple processes, giving the appearance of simultaneous execution. Since interrupts suspends the current operation, it can then proceed to the next operation and in this case, it's the user's operations. Which when an operation is completed, it resumes the suspended operation. (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
+
 2. Why is it necessary to provide supervisor calls in an operating system? Give an instance wherein such call has to be made
->Supervisor calls, or system calls, are necessary to provide a safe and controlled interface between user programs and the operating system's kernel. For instance, a program might make a system call to request access to a file, which the operating system can then grant or deny based on permissions. (Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
+>Supervisor calls, or system calls, are necessary to provide a safe and controlled interface between user programs and the operating system's kernel. This sets some sort of boundary between a user application and the kernel by providing an access control.
+>
+>For instance, a program might make a system call to request access to a file, which the operating system can then grant or deny based on permissions. Since user applications does not have full access or control to the system and its hardware unlike the kernel. (Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
+
 3. Discuss one problem that is solved by double buffering, but is not properly handled by ordinary buffering.
 >Double buffering solves the problem of "tearing" that occurs when the producer and consumer work at different speeds, and the consumer reads data while the producer is still updating it. Ordinary buffering does not handle this issue because it doesn't manage the synchronization between the producer and consumer. (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
 4. Why was circular buffering introduced?

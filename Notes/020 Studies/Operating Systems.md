@@ -51,3 +51,7 @@ Also check:
 1. [[Batch Processing]] 
 2. [[Multiprogramming]]
 3. [[Time Sharing]]
+
+## Modes of Operation
+1. [[User Mode]]
+2. [[Kernel Mode]]
