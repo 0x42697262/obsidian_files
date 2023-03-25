@@ -46,6 +46,8 @@ We can view OS as a resource allocator
 
 Also check:
 1. [[Spooling]]
+2. [[IO Operations]]
+3. [[Buffering]]
 
 ## Types of Operating Systems
 1. [[Batch Processing]] 
@@ -55,3 +57,4 @@ Also check:
 ## Modes of Operation
 1. [[User Mode]]
 2. [[Kernel Mode]]
+
