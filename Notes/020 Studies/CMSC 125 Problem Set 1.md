@@ -114,7 +114,8 @@ Show your computations.
 		`Output phase (1 line): 600 ms`
 	**Total:**  100ms + 1ms + 600ms = 701ms
 	Therefore, CPU is busy only for 1ms for every 701ms.
-	
+
+
 9) Explain how throughput (number of completed jobs per unit time) is increased by doing input/output operation in an off-line manner.
 
 Input/Output (I/O) operations are slow so by adressing addressing the issue to a solution by doing offline processing, it is possible to efficiently utilize the system's resources. This happens by doing I/O in the background while the processor focuses on executing jobs Since the I/O process is done in an offline manner, the processor can continue executing other jobs that it needs to execute thus overall reducing the idle time and increasing the throughput. This type of processing also reduces the overhead of the system because I/O operations can be batched together thus further increases its processing speed.

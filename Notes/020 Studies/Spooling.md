@@ -1,6 +1,6 @@
 > [!INFO]
 > Status:
-> Tags: #OPERATING_SYSTEM #CMSC125 
+> Tags: #OperatingSystem #CMSC125 
 
 ----
 # Spooling

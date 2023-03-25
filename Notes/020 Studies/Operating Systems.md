@@ -48,3 +48,6 @@ Also check:
 1. [[Spooling]]
 
 ## Types of Operating Systems
+1. [[Batch Processing]] 
+2. [[Multiprogramming]]
+3. [[Time Sharing]]
