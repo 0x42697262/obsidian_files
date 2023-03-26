@@ -10,12 +10,22 @@ CMSC 125 Problem Set 2
 2. Why is it necessary to provide supervisor calls in an operating system? Give an instance wherein such call has to be made
 >Supervisor calls, or system calls, are necessary to provide a safe and controlled interface between user programs and the operating system's kernel. This sets some sort of boundary between a user application and the kernel by providing an access control.
 >
->For instance, a program might make a system call to request access to a file, which the operating system can then grant or deny based on permissions. Since user applications does not have full access or control to the system and its hardware unlike the kernel. (Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
+>For instance, a program might make a system call to request access to a file, which the operating system can then grant or deny based on permissions. Since user applications does not have full access or control to the system and its hardware unlike the kernel. 
+>
+>(Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
 
 3. Discuss one problem that is solved by double buffering, but is not properly handled by ordinary buffering.
->Double buffering solves the problem of "tearing" that occurs when the producer and consumer work at different speeds, and the consumer reads data while the producer is still updating it. Ordinary buffering does not handle this issue because it doesn't manage the synchronization between the producer and consumer. (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
+>Double buffering solves the problem of "tearing" that occurs when the producer and consumer work at different speeds, and the consumer reads data while the producer is still updating it. When the producer and consumer works at different speeds, like having different read, write, and cpu clock, this can cause tearing which is the corruption of the data because while the consumer is still reading the data, the producer might have already overwritten it already. 
+>
+>Ordinary buffering does not handle this issue because it doesn't manage the synchronization between the producer and consumer. It cannot be determined by the consumer if it reads the data completely and accurately produced by the producer. Double Buffering solves this problem by having two memory locations where the producer writes the data on one buffer and the consumer reads data from the other buffer. Once complete, they switch buffers until the transfer is complete. Which is why double buffering is also called as buffer swapping.
+>
+>(Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
+
 4. Why was circular buffering introduced?
->Circular buffering was introduced to efficiently manage buffer space by treating it as a circular queue. This eliminates the need to move data through the buffer, reduces overhead, and allows for continuous, simultaneous read and write operations. (Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
+>Circular buffering was introduced to efficiently manage buffer space by treating it as a circular queue. This eliminates the need to move data through the buffer, reduces overhead, and allows for continuous, simultaneous read and write operations. 
+>
+>(Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
+
 5. Explain the statement: Spooling reduces the amount of time spent by a process waiting for an I/O operation to complete.
 >Spooling reduces the amount of time a process spends waiting for I/O by allowing the process to continue executing while I/O operations are performed asynchronously in the background. This decouples the process's execution from I/O device speed. (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
 6. Explain briefly why interrupts are indispensable in a single-processor system that supports parallel activities.

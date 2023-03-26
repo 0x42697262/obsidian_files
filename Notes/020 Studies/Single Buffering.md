@@ -1,6 +1,6 @@
 > [!INFO]
 > Status:
-> Tags: #IO #Buffering 
+> Tags: #IO #Buffering #OperatingSystem 
 
 ----
 # Single Buffering
