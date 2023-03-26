@@ -5,3 +5,5 @@
 ----
 # PicoCTFs
 - [[PicoCTF - GET aHEAD|GET aHEAD]]
+## Writeups
+- [[picoCTF 2023]]
