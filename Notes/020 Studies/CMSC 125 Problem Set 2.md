@@ -22,7 +22,9 @@ CMSC 125 Problem Set 2
 >(Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018.)
 
 4. Why was circular buffering introduced?
->Circular buffering was introduced to efficiently manage buffer space by treating it as a circular queue. This eliminates the need to move data through the buffer, reduces overhead, and allows for continuous, simultaneous read and write operations. 
+>Circular buffering was introduced to efficiently manage buffer space by treating it as a circular queue. Meaning that data is stored in a circular pattern just like in circular linked-lists. This eliminates the need to move data through the buffer, reduces overhead, and allows for continuous, simultaneous read and write operations allowing the system to read and write to the buffer simultaneously without having to wait for the buffer to be filled or empty.
+>
+>When the buffer is in circular manner, this makes sure that the buffer is always in use and no data is being wasted. This method is much more efficient for continuous and, simultaneous read and write operations.
 >
 >(Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
 
