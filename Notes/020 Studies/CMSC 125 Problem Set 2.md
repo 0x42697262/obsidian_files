@@ -104,4 +104,6 @@ b) increase CPU utilization
 >(Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
 
 15. Give one change in the system when it is upgraded from a simple multiprogramming system to time-sharing systems.
->
+> When upgrading from a simple multiprogramming system to a time-sharing system, one change is the implementation of a more sophisticated scheduling algorithm. Time-sharing systems require more advanced scheduling algorithms, such as round-robin or priority-based scheduling, to ensure that each user receives a fair share of CPU time and to provide the illusion of simultaneous execution. 
+> 
+> (Stallings, W. "Operating Systems: Internals and Design Principles." Pearson, 2018; Tanenbaum, A. S. "Modern Operating Systems." Pearson, 2015.)
