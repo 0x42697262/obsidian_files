@@ -1,6 +1,6 @@
 > [!INFO]
 > Status: #WIP
-> Tags: #CMSC1214 
+> Tags: #CMSC124 
 
 ----
 # Syntax Analyzer
