@@ -21,7 +21,7 @@
  
  NOTE: As to the order of the usage, just base it on the user number. You may use any language for implementation.
 ```
-Create a struct of `Users` and `Resources`. Imagine that this problem is somewhat similar to Internet Cafe.
+Create a struct of `Users` and `Resources`. Imagine that this problem is somewhat similar to Internet Cafe. It is entirely possible to generate multiple resources but only 1 resource is used by all users.
 
 ---
 # TODO
@@ -46,3 +46,14 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 - `label` : String
 - `is_used` : bool
 - `is_available` : bool
+
+---
+## Randomization
+Use `rand::Rng` [crate](https://rust-lang-nursery.github.io/rust-cookbook/algorithms/randomness.html). To generate a random number between two integers (min and max), do this:
+```rust
+let mut rng =  rand::thread_rng();
+let num: i32 = rng.gen_range(0..31);
+```
+
+## Creating and Indexing Vectors
+Read it from this [documentation](https://doc.rust-lang.org/book/ch08-01-vectors.html).
