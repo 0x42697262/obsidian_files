@@ -6,14 +6,23 @@ kanban-plugin: basic
 
 ## Deadlines
 
+- [ ] Quiz 5 #CMSC178 @[[2023-04-20]]
+- [ ] Problem Set 3 #CMSC125 @[[2023-04-23]]
+- [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
+- [ ] Problem Set 4 #CMSC125 @[[2023-05-07]]
+- [ ] Machine Problem 3 #CMSC125 @[[2023-05-28]]
 
 
 ## Will Do
 
+- [ ] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
+- [ ] First Long Exam #CMSC125 @[[2023-04-17]]
+- [ ] Assignment 1 #CMSC178 @[[2023-04-20]]
 
 
 ## DOING
 
+- [ ] Machine Problem 1 #CMSC125 @[[2023-04-16]]
 
 
 ## Postponed
