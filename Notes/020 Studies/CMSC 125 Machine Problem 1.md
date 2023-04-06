@@ -37,17 +37,15 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 ---
 ## Users
 ### Fields
-- `enabled` : bool
 - `id` : i32
 - `label` : String
-- `jobs_list` : Vec\<i32\>
+- `jobs_list` : Vec\<Job\>
 - `current_job`: Option\<Resource\>
 
 **Note:**
 1. A user can take multiple jobs (resource/s) and can only have one current job. And after finishing all the jobs, a may not have a job.
 
 ## Resources
-- `enabled` : bool
 - `id` : i32
 - `label` : String
 
@@ -89,31 +87,39 @@ for id in active_users_id.iter() {
 	);
 
 	for res_ids in resources_id_to_use {
-		users[*id].jobs_list.push(res_ids);
+		users[*id].jobs_list.push(Job::new(res_ids, rng.gen_range(1..31)));
 	}
 }
 ```
 So, there's a minimized version of this code which translates to:
 ```rust
-let available_resources_id: Vec<i32> = resources.iter()
-    .filter(|res| res.enabled)
-    .map(|res| res.id)
-    .collect();
+let available_resources_id: Vec<i32> = resources
+	.iter()
+	.filter(|res| res.enabled)
+	.map(|res| res.id)
+	.collect();
 
-let active_users_id: Vec<usize> = users.iter()
-    .enumerate()
-    .filter(|(_, user)| user.enabled)
-    .map(|(i, _)| i)
-    .collect();
+let active_users_id: Vec<usize> = users
+	.iter()
+	.enumerate()
+	.filter(|(_, user)| user.enabled)
+	.map(|(i, _)| i)
+	.collect();
 
 for id in &active_users_id {
-    let resources_id_to_use = pick_random_items_from_list(
-        rng.gen_range(0..available_resources_id.len()) as i32,
-        0,
-        available_resources_id.len() as i32,
-    );
-    users[*id].jobs_list.extend(resources_id_to_use);
+	let resources_id_to_use = pick_random_items_from_list(
+		rng.gen_range(0..available_resources_id.len()) as i32,
+		0,
+		available_resources_id.len() as i32,
+	);
+
+	for res_id in resources_id_to_use {
+		users[*id]
+			.jobs_list
+			.push(Job::new(res_id, rng.gen_range(1..31) as f64));
+	}
 }
+
 ```
 Here's what this code does:
 -   `available_resources_id` is computed using the `filter` and `map` iterator methods. The `filter` method returns only the resources that are enabled, and the `map` method extracts the IDs of those resources. Finally, the `collect` method collects the IDs into a `Vec<i32>`.
