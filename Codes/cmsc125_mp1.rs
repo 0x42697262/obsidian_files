@@ -18,8 +18,8 @@
  * NOTE: As to the order of the usage, just base it on the user number. You may use any language for implementation.
  *
  */
-
-#[derive(Debug)]
+use rand::Rng;
+use std::collections::VecDeque;
 
 /// Represents a Resource, with currently in use and availability
 ///
@@ -29,20 +29,10 @@
 /// let resource_1 = Resource::new(1);
 /// ```
 ///
+#[derive(Debug)]
 struct Resource {
-    enabled: bool,
     id: i32,
     label: String,
-}
-
-impl Resource {
-    fn new(id: i32) -> Resource {
-        return Resource {
-            enabled: false,
-            id,
-            label: format!("resource{}", id),
-        };
-    }
 }
 
 // A `Job` represents a task that needs to be completed using a particular `Resource`.
@@ -93,26 +83,13 @@ impl Job {
 /// let user_1 = User::new(1);
 /// ```
 ///
+#[derive(Debug)]
 struct User {
-    enabled: bool,
     id: i32,
     label: String,
 
-    jobs_list: Vec<Job>,
+    jobs_list: VecDeque<Job>,
     current_job: Option<Resource>,
-}
-
-impl User {
-    fn new(id: i32) -> User {
-        User {
-            enabled: false,
-            id,
-            label: format!("user{}", id),
-
-            jobs_list: Vec::<Job>::new(),
-            current_job: None,
-        }
-    }
 }
 
 // Picks a given number of unique random integers within a specified range.
@@ -155,95 +132,56 @@ fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
     items
 }
 
-fn generate_resources(count: i32, total: i32) -> Vec<Resource> {
-    let mut entities: Vec<Resource> = Vec::<Resource>::new();
-
-    for i in 0..total {
-        let resource = Resource::new(i);
-        entities.push(resource);
-    }
-
-    let selected: Vec<i32> = pick_random_items_from_list(count, 1, total);
-    for e in selected {
-        entities[e as usize].enabled = true;
-    }
-
-    entities
-}
-
-fn generate_users(count: i32, total: i32) -> Vec<User> {
-    let mut entities: Vec<User> = Vec::<User>::new();
-
-    for i in 0..total {
-        entities.push(User::new(i));
-    }
-
-    let selected: Vec<i32> = pick_random_items_from_list(count, 0, total);
-    for e in selected {
-        entities[e as usize].enabled = true;
-    }
-
-    entities
-}
-
-use rand::Rng;
-
 fn main() {
+    let MAX_USERS: i32 = 2;
+    let MAX_RESOURCES: i32 = 30;
     let mut rng = rand::thread_rng();
 
-    // Generate random amount of resources and users
-    let resources = generate_resources(rng.gen_range(1..31), 30);
-    let mut users = generate_users(rng.gen_range(1..31), 30);
-
-    let available_resources_id: Vec<i32> = resources
-        .iter()
-        .filter(|res| res.enabled)
-        .map(|res| res.id)
+    let mut resources: Vec<Option<Resource>> = (1..=rng.gen_range(1..=MAX_RESOURCES))
+        .map(|id| {
+            Some(Resource {
+                id,
+                label: format!("resource{}", id),
+            })
+        })
         .collect();
 
-    let active_users_id: Vec<usize> = users
-        .iter()
-        .enumerate()
-        .filter(|(_, user)| user.enabled)
-        .map(|(i, _)| i)
+    let mut users: VecDeque<User> = (1..=rng.gen_range(1..=MAX_USERS))
+        .map(|id| User {
+            id,
+            label: format!("user{}", id),
+            jobs_list: VecDeque::new(),
+            current_job: None,
+        })
         .collect();
 
-    // Randomize the jobs for the users
-    for id in &active_users_id {
-        let resources_id_to_use = pick_random_items_from_list(
-            rng.gen_range(0..available_resources_id.len()) as i32,
-            0,
-            available_resources_id.len() as i32,
-        );
+    let mut count: u32;
+    let mut items: Vec<i32>;
+    for u in users.iter_mut() {
+        count = rng.gen_range(1..resources.len() as u32);
+        items = pick_random_items_from_list(count as i32, 0, resources.len() as i32);
 
-        for res_id in resources_id_to_use {
-            users[*id]
-                .jobs_list
-                .push(Job::new(res_id, rng.gen_range(1..6) as f64));
+        for i in items {
+            u.jobs_list
+                .push_back(Job::new(i, rng.gen_range(1..=30) as f64));
         }
+        // check if resource is taken or already owned
+        // u.current_job = resources[u.jobs_list.pop_front()].take();
+        println!("----");
+        println!("{:?}", u);
+        let test = u.jobs_list.pop_front().unwrap();
+        println!("supposed id : {}", test.resource_id);
+        u.current_job = resources[test.resource_id as usize].take();
+        println!("taken id: {}", test.resource_id as usize);
+        println!("----");
     }
 
-    let mut new_user = User::new(69);
-    new_user.enabled = true;
-    new_user
-        .jobs_list
-        .push(Job::new(11, rng.gen_range(1..6) as f64));
-    new_user
-        .jobs_list
-        .push(Job::new(7, rng.gen_range(1..6) as f64));
-    new_user
-        .jobs_list
-        .push(Job::new(13, rng.gen_range(1..6) as f64));
+    println!("{} {}", resources.len(), users.len());
 
-    let mut new_user_job = new_user.jobs_list.pop();
-    new_user.current_job = Some(resources[0]);
-
-    users.push(new_user);
-    for a in users {
-        if a.enabled == true {
-            println!("{} {:?} {:?}", a.id, a.current_job, a.jobs_list);
-        }
+    for u in users.iter() {
+        println!("{:?}", u);
     }
-    println!("{:?} ", new_user_job.unwrap().duration);
-    println!("{:?} ", resources[0]);
+    for r in resources {
+        println!("{:?}", r);
+    }
 }
