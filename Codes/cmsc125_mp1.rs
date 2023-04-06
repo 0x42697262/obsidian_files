@@ -133,11 +133,11 @@ fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
 }
 
 fn main() {
-    let MAX_USERS: i32 = 2;
-    let MAX_RESOURCES: i32 = 30;
+    let MAX_USERS: i32 = 11;
+    let MAX_RESOURCES: i32 = 5;
     let mut rng = rand::thread_rng();
 
-    let mut resources: Vec<Option<Resource>> = (1..=rng.gen_range(1..=MAX_RESOURCES))
+    let mut resources: Vec<Option<Resource>> = (0..=rng.gen_range(4..MAX_RESOURCES))
         .map(|id| {
             Some(Resource {
                 id,
@@ -146,7 +146,7 @@ fn main() {
         })
         .collect();
 
-    let mut users: VecDeque<User> = (1..=rng.gen_range(1..=MAX_USERS))
+    let mut users: VecDeque<User> = (1..=rng.gen_range(4..=MAX_USERS))
         .map(|id| User {
             id,
             label: format!("user{}", id),
@@ -165,22 +165,36 @@ fn main() {
             u.jobs_list
                 .push_back(Job::new(i, rng.gen_range(1..=30) as f64));
         }
+        println!("{} Items: {:?}", u.id, u.jobs_list);
         // check if resource is taken or already owned
-        // u.current_job = resources[u.jobs_list.pop_front()].take();
-        println!("----");
-        println!("{:?}", u);
-        let test = u.jobs_list.pop_front().unwrap();
-        println!("supposed id : {}", test.resource_id);
-        u.current_job = resources[test.resource_id as usize].take();
-        println!("taken id: {}", test.resource_id as usize);
-        println!("----");
+        let mut job: i32;
+        let mut job_resource: Option<Resource> = None;
+        for i in 0..u.jobs_list.len() {
+            job = u.jobs_list[i].resource_id;
+            job_resource = resources[job as usize].take();
+
+            match &job_resource {
+                None => {
+                    continue;
+                }
+                Some(_) => {
+                    u.jobs_list.remove(i);
+                    break;
+                }
+            }
+        }
+        u.current_job = job_resource;
     }
 
     println!("{} {}", resources.len(), users.len());
 
     for u in users.iter() {
-        println!("{:?}", u);
+        println!("ID: {:?}", u.id);
+        println!("Job List: {:?}", u.jobs_list);
+        println!("Current Job: {:?}", u.current_job);
+        println!();
     }
+    println!("----");
     for r in resources {
         println!("{:?}", r);
     }

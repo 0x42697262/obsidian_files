@@ -28,6 +28,8 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 - [x] Generate Random Amount of Users
 - [x] Generate Random Amount of Resources
 - [x] Randomizing User using at least one resource
+- [x] Proceed to next job if job is taken
+- [ ] Return the resource after borrowing
 - [ ] User Interface
 	- [ ] Status
 	- [ ] Interactivity
