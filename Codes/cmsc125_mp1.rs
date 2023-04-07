@@ -19,7 +19,7 @@
  *
  */
 use rand::Rng;
-use std::collections::VecDeque;
+use std::{collections::VecDeque, fmt::format};
 
 /// Represents a Resource, with currently in use and availability
 ///
@@ -90,6 +90,7 @@ struct User {
 
     jobs_list: VecDeque<Job>,
     current_job: Option<Resource>,
+    duration: f64,
 }
 
 // Picks a given number of unique random integers within a specified range.
@@ -135,9 +136,10 @@ fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
 fn main() {
     let MAX_USERS: i32 = 11;
     let MAX_RESOURCES: i32 = 5;
+
     let mut rng = rand::thread_rng();
 
-    let mut resources: Vec<Option<Resource>> = (0..=rng.gen_range(4..MAX_RESOURCES))
+    let mut resources: Vec<Option<Resource>> = (0..rng.gen_range(1..MAX_RESOURCES))
         .map(|id| {
             Some(Resource {
                 id,
@@ -146,26 +148,28 @@ fn main() {
         })
         .collect();
 
-    let mut users: VecDeque<User> = (1..=rng.gen_range(4..=MAX_USERS))
+    let mut users: VecDeque<User> = (0..rng.gen_range(1..MAX_USERS))
         .map(|id| User {
             id,
             label: format!("user{}", id),
             jobs_list: VecDeque::new(),
             current_job: None,
+            duration: 0.00,
         })
         .collect();
 
+    // Populate a user with random jobs
     let mut count: u32;
     let mut items: Vec<i32>;
     for u in users.iter_mut() {
-        count = rng.gen_range(1..resources.len() as u32);
+        count = rng.gen_range(1..=resources.len() as u32);
         items = pick_random_items_from_list(count as i32, 0, resources.len() as i32);
 
         for i in items {
             u.jobs_list
                 .push_back(Job::new(i, rng.gen_range(1..=30) as f64));
         }
-        println!("{} Items: {:?}", u.id, u.jobs_list);
+        // println!("{} Items: {:?}", u.id, u.jobs_list);
         // check if resource is taken or already owned
         let mut job: i32;
         let mut job_resource: Option<Resource> = None;
@@ -178,24 +182,131 @@ fn main() {
                     continue;
                 }
                 Some(_) => {
-                    u.jobs_list.remove(i);
+                    // maybe on this part we add a new field for the resource that has duration
+                    // which if it is 0, it should be returned
+                    let j: Job = u.jobs_list.remove(i).unwrap(); // runs at O(n)
+                    u.current_job = job_resource;
+                    u.duration = j.duration;
+
                     break;
                 }
             }
         }
-        u.current_job = job_resource;
     }
 
-    println!("{} {}", resources.len(), users.len());
+    // testing area ++
+    resources = (0..3)
+        .map(|id| {
+            Some(Resource {
+                id,
+                label: format!("resource{}", id),
+            })
+        })
+        .collect();
 
-    for u in users.iter() {
-        println!("ID: {:?}", u.id);
-        println!("Job List: {:?}", u.jobs_list);
-        println!("Current Job: {:?}", u.current_job);
+    users = (0..6)
+        .map(|id| User {
+            id,
+            label: format!("user{}", id),
+            jobs_list: VecDeque::new(),
+            current_job: None,
+            duration: 0.00,
+        })
+        .collect();
+
+    users[0].jobs_list.push_back(Job::new(2, 4.00));
+    users[0].jobs_list.push_back(Job::new(0, 2.00));
+
+    users[1].jobs_list.push_back(Job::new(2, 5.00));
+    users[1].jobs_list.push_back(Job::new(0, 9.00));
+
+    users[2].jobs_list.push_back(Job::new(0, 11.00));
+    users[2].jobs_list.push_back(Job::new(1, 10.00));
+
+    users[3].jobs_list.push_back(Job::new(1, 3.00));
+    users[3].jobs_list.push_back(Job::new(2, 5.00));
+
+    users[4].jobs_list.push_back(Job::new(0, 7.00));
+    users[4].jobs_list.push_back(Job::new(1, 7.00));
+
+    users[5].jobs_list.push_back(Job::new(2, 10.00));
+
+    for u in users.iter_mut() {
+        let mut job: i32;
+        let mut job_resource: Option<Resource> = None;
+        for i in 0..u.jobs_list.len() {
+            job = u.jobs_list[i].resource_id;
+            job_resource = resources[job as usize].take();
+
+            match &job_resource {
+                None => {
+                    continue;
+                }
+                Some(_) => {
+                    // maybe on this part we add a new field for the resource that has duration
+                    // which if it is 0, it should be returned
+                    let j: Job = u.jobs_list.remove(i).unwrap(); // runs at O(n)
+                    u.current_job = job_resource;
+                    u.duration = j.duration;
+
+                    break;
+                }
+            }
+        }
+    }
+
+    // testing area --
+
+    let mut TOTAL_TIME: f64 = 0.00; // seconds
+
+    loop {
+        let mut all_free: u32 = 0;
+        println!("Total Resources: {}", resources.len());
+        println!("Time: {} seconds", TOTAL_TIME);
         println!();
+        println!("USER    CURRENT JOB     TIME LEFT    STATUS      JOBS    ");
+        println!("----------------------------------------------------------");
+
+        for u in users.iter_mut() {
+            let mut job: &Resource = &Resource {
+                id: -1,
+                label: format!("None"),
+            };
+            if u.current_job.is_some() {
+                job = u.current_job.as_ref().unwrap();
+            }
+            if u.current_job.is_none() && u.jobs_list.len() == 0 {
+                all_free += 1;
+                println!("FREE +1");
+            }
+            println!(
+                "{}    {}     {}    {}      {:?}",
+                u.id, job.label, u.duration, -1, u.jobs_list
+            );
+
+            // decrease time
+            if u.duration > 0.00 {
+                u.duration -= 1.00;
+            } else {
+                if u.current_job.is_some() {
+                    resources[job.id as usize] = u.current_job;
+                }
+            }
+        }
+
+        println!("----------------------------------------------------------");
+
+        break;
     }
-    println!("----");
-    for r in resources {
-        println!("{:?}", r);
-    }
+
+    // for u in users.iter() {
+    //     println!("ID: {:?}", u.id);
+    //     println!("Job List: {:?}", u.jobs_list);
+    //     println!("Current Job: {:?}", u.current_job);
+    //     println!();
+    // }
+    // println!("----");
+    // for r in resources {
+    //     println!("{:?}", r);
+    // }
 }
