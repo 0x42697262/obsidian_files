@@ -18,6 +18,7 @@
  * NOTE: As to the order of the usage, just base it on the user number. You may use any language for implementation.
  *
  */
+use rand::distributions::Uniform;
 use rand::Rng;
 use std::collections::VecDeque;
 use std::{thread, time};
@@ -118,20 +119,9 @@ impl Job {
 /// ```
 fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
     // Ensure count is within range
-    if max - min < count {
-        count = max - min;
-    }
-    let mut items: Vec<i32> = Vec::new();
-
     let mut rng = rand::thread_rng();
-
-    let mut item: i32;
-    while items.len() < count as usize {
-        item = rng.gen_range(min..max);
-        if !items.contains(&item) {
-            items.push(item);
-        }
-    }
+    let range = Uniform::new(min, max);
+    let items: Vec<i32> = (0..count).map(|_| rng.sample(&range)).collect();
 
     items
 }
@@ -208,22 +198,18 @@ fn main() {
             }
 
             if user.current_job.is_none() && !user.jobs_list.is_empty() {
-                let mut job_id: i32;
-                let mut job_resource: Option<Resource> = None;
                 for i in 0..user.jobs_list.len() {
+                    let mut job_id: i32;
+                    let mut job_resource: Option<Resource> = None;
                     job_id = user.jobs_list[i].resource_id as i32;
-                    job_resource = resources[job_id as usize].take();
 
-                    match &job_resource {
-                        None => {
-                            continue;
-                        }
-                        Some(_) => {
+                    match resources[job_id as usize].take() {
+                        None => continue,
+                        resource => {
                             let j: Job = user.jobs_list.remove(i).unwrap(); // runs at O(n)
-                            user.current_job = job_resource;
+                            user.current_job = resource;
                             user.job_time = j.duration;
                             user.resource_id = j.resource_id as i32;
-
                             break;
                         }
                     }
