@@ -41,9 +41,10 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 ### Fields
 - `id` : i32
 - `label` : String
-- `jobs_list` : Vec\<Job\>
+- `resource_id` : i32
+- `jobs_list` : VecDeque\<Job\>
 - `current_job`: Option\<Resource\>
-- `duration` : f64
+- `job_time` : f64
 
 **Note:**
 1. A user can take multiple jobs (resource/s) and can only have one current job. And after finishing all the jobs, a may not have a job.
@@ -63,68 +64,15 @@ let num: i32 = rng.gen_range(0..31);
 ## Creating and Indexing Vectors
 Read it from this [documentation](https://doc.rust-lang.org/book/ch08-01-vectors.html).
 
----
-# Code History
+## Sleeping
 ```rust
-// Save the IDs of the enabled resources and users into a vector.
-let mut available_resources_id: Vec<i32> = Vec::<i32>::new();
-for res in resources.iter() {
-	if res.enabled == true {
-		available_resources_id.push(res.id);
-	}
-}
-let mut active_users_id: Vec<usize> = Vec::<usize>::new();
-for (i, user) in users.iter().enumerate() {
-	if user.enabled == true {
-		active_users_id.push(i);
-	}
-}
-
-// Randomize the jobs for the users
-let mut resources_id_to_use: Vec<i32>;
-for id in active_users_id.iter() {
-	resources_id_to_use = pick_random_items_from_list(
-		rng.gen_range(0..available_resources_id.len()) as i32,
-		0,
-		available_resources_id.len() as i32,
-	);
-
-	for res_ids in resources_id_to_use {
-		users[*id].jobs_list.push(Job::new(res_ids, rng.gen_range(1..31)));
-	}
-}
+use std::{thread, time};
+let one_secs = time::Duration::from_millis(1000);
+//let now = time::Instant::now();
+thread::sleep(one_secs);
 ```
-So, there's a minimized version of this code which translates to:
+
+## Clearing the terminal
 ```rust
-let available_resources_id: Vec<i32> = resources
-	.iter()
-	.filter(|res| res.enabled)
-	.map(|res| res.id)
-	.collect();
-
-let active_users_id: Vec<usize> = users
-	.iter()
-	.enumerate()
-	.filter(|(_, user)| user.enabled)
-	.map(|(i, _)| i)
-	.collect();
-
-for id in &active_users_id {
-	let resources_id_to_use = pick_random_items_from_list(
-		rng.gen_range(0..available_resources_id.len()) as i32,
-		0,
-		available_resources_id.len() as i32,
-	);
-
-	for res_id in resources_id_to_use {
-		users[*id]
-			.jobs_list
-			.push(Job::new(res_id, rng.gen_range(1..31) as f64));
-	}
-}
-
+print!("\x1B[2J\x1B[1;1H");
 ```
-Here's what this code does:
--   `available_resources_id` is computed using the `filter` and `map` iterator methods. The `filter` method returns only the resources that are enabled, and the `map` method extracts the IDs of those resources. Finally, the `collect` method collects the IDs into a `Vec<i32>`.
--   `active_users_id` is computed using a similar approach, but with the `enumerate` method to get the index of each user.
--   The loop that assigns jobs to users is simplified by using the `extend` method of the `Vec` type to add the randomly selected resources to each user's job list.

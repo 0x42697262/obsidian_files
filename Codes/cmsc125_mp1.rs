@@ -137,13 +137,12 @@ fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
 }
 
 fn main() {
-    let MAX_USERS: i32 = 11;
-    let MAX_RESOURCES: i32 = 5;
+    let MAX_USERS: i32 = 30;
+    let MAX_RESOURCES: i32 = 30;
     let MAX_TIME: u32 = 10;
 
     let mut rng = rand::thread_rng();
     let one_secs = time::Duration::from_millis(1000);
-    let now = time::Instant::now();
 
     let mut resources: Vec<Option<Resource>> = (0..rng.gen_range(1..MAX_RESOURCES))
         .map(|id| {
@@ -185,13 +184,17 @@ fn main() {
     }
     // Loop Inits
     let mut total_time: f64 = 0.00; // seconds
-    let mut working_users: u32 = users.len() as u32;
+    let mut working_users: u32;
     loop {
         working_users = users.len() as u32;
+
+        print!("\x1B[2J\x1B[1;1H");
         println!("Total Resources: {}", resources.len());
         println!("Time: {} seconds", total_time);
         println!();
-        println!("USER   TIME LEFT   STATUS      CURRENT JOB                             JOBS    ");
+        println!(
+            "USER   TIME LEFT   STATUS      CURRENT JOB                             NEXT JOB    "
+        );
         println!(
             "----------------------------------------------------------------------------------"
         );
@@ -229,15 +232,26 @@ fn main() {
             if user.current_job.is_none() && user.jobs_list.is_empty() {
                 working_users -= 1;
             }
-            println!(
-                "{}         {}          {}          {:?}               {:?}",
-                user.id, user.job_time, -1, user.current_job, user.jobs_list
-            );
+            if !user.jobs_list.is_empty() {
+                println!(
+                    "{}         {}          {}          {:?}               {:?}",
+                    user.id, user.job_time, -1, user.current_job, user.jobs_list[0]
+                );
+            } else {
+                println!(
+                    "{}         {}          {}          {:?}               {:?}",
+                    user.id, user.job_time, -1, user.current_job, user.jobs_list
+                );
+            }
         }
 
         println!(
             "----------------------------------------------------------------------------------"
         );
+        println!("RESOURCES:");
+        for r in &resources {
+            println!(" {:?}", r);
+        }
 
         total_time += 1.0;
         thread::sleep(one_secs);
@@ -247,136 +261,6 @@ fn main() {
         }
     }
 
-    // loop {
-    //     let mut working_users: u32 = users.len() as u32; // if this is 0, then we break the loop
-    //
-    //     /*
-    //      * 1) Populate users with random jobs
-    //      *
-    //      * This is at `total_time` = 0.0 where everything is initialized. Users would have no jobs
-    //      * in the list. Resources would have no users in the list.
-    //      *
-    //      * Iterate each users then populate them with jobs.
-    //      */
-    //     let mut job_count: u32;
-    //     let mut job_items: Vec<i32>;
-    //
-    //     for r in resources.iter() {
-    //         println!("{:?}", r);
-    //     }
-    //     for user in users.iter_mut() {
-    //         /*
-    //          * The amount of jobs should each user should have is between 1 and the length of the
-    //          * amount of resources. So randomize that.
-    //          *
-    //          * We may allow a user to not have any jobs at all. So, a user is FREE in the beginning
-    //          * doing nothing.
-    //          */
-    //
-    //         // Only populate users with random jobs at initialization.
-    //         if total_time == 0.0 {
-    //             job_count = rng.gen_range(1..=resources.len() as u32);
-    //             job_items =
-    //                 pick_random_items_from_list(job_count as i32, 0, resources.len() as i32);
-    //             for res_id in job_items {
-    //                 user.jobs_list.push_back(Job::new(
-    //                     user.id as u32,
-    //                     res_id as u32,
-    //                     rng.gen_range(1..=MAX_TIME) as f64,
-    //                 ));
-    //             }
-    //         }
-    //
-    //         /*
-    //          * Begin to move resources to the user.
-    //          * But first return all before taking a new resource.
-    //          */
-    //
-    //         let mut job_id: i32;
-    //         let mut job_resource: Option<Resource> = None;
-    //
-    //         // Return the borrowed resource if the user has finished their current job
-    //         if user.current_job.is_some() && user.job_time == 0.0 {
-    //             resources[user.resource_id as usize] = user.current_job.take();
-    //             user.resource_id = -1;
-    //         }
-    //
-    //         for i in 0..user.jobs_list.len() {
-    //             job_id = user.jobs_list[i].resource_id as i32;
-    //             job_resource = resources[job_id as usize].take();
-    //
-    //             match &job_resource {
-    //                 None => {
-    //                     // println!("---- DEBUG: Nothing is taken for id {}", user.id);
-    //                     continue;
-    //                 }
-    //                 Some(_) => {
-    //                     let j: Job = user.jobs_list.remove(i).unwrap(); // runs at O(n)
-    //                     user.current_job = job_resource;
-    //                     user.job_time = j.duration;
-    //                     user.resource_id = j.resource_id as i32;
-    //
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     // let mut t = resources[0].take().unwrap();
-    //     // t.wait_time += 1.0;
-    //     // println!("-- {:?}", t);
-    //     // resources[0] = Some(t).take();
-    //
-    //     println!("Total Resources: {}", resources.len());
-    //     println!("Time: {} seconds", total_time);
-    //     println!();
-    //     println!("USER   TIME LEFT   STATUS      CURRENT JOB                             JOBS    ");
-    //     println!(
-    //         "----------------------------------------------------------------------------------"
-    //     );
-    //     for user in users.iter_mut() {
-    //         if user.current_job.is_none() && user.jobs_list.len() == 0 {
-    //             working_users -= 1;
-    //         }
-    //
-    //         // let mut current_job: Resource = Resource {
-    //         //     id: -1,
-    //         //     label: format!("-1"),
-    //         // };
-    //         //
-    //         // if user.current_job.is_some() {
-    //         //     current_job = user.current_job.take().unwrap();
-    //         // }
-    //         println!(
-    //             "{}         {}          {}          {:?}               {:?}",
-    //             user.id, user.job_time, -1, user.current_job, user.jobs_list
-    //         );
-    //         if user.job_time > 0.0 {
-    //             user.job_time -= 1.0;
-    //         }
-    //         // if current_job.id >= 0 {
-    //         //     user.current_job = Some(current_job).take();
-    //         // }
-    //         // if user.job_time > 0.0 {
-    //         //     user.job_time -= 1.0;
-    //         // } else {
-    //         //     if user.current_job.is_some() {
-    //         //         resources[user.resource_id as usize] = user.current_job.take();
-    //         //     }
-    //         // }
-    //     }
-    //
-    //     println!(
-    //         "----------------------------------------------------------------------------------"
-    //     );
-    //     total_time += 1.0;
-    //     thread::sleep(one_secs);
-    //
-    //     if working_users == 0 as u32 {
-    //         println!("\n All users are free of jobs.");
-    //         break;
-    //     }
-    // }
-
     // for u in users.iter() {
     //     println!("ID: {:?}", u.id);
     //     println!("Job: {:?}", u.current_job);
@@ -384,8 +268,4 @@ fn main() {
     //     println!("Job List: {:?}", u.jobs_list);
     //     println!();
     // }
-    println!("----");
-    for r in resources {
-        println!("R: {:?}", r);
-    }
 }
