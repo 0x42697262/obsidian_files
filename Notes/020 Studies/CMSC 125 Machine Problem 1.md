@@ -29,7 +29,7 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 - [x] Generate Random Amount of Resources
 - [x] Randomizing User using at least one resource
 - [x] Proceed to next job if job is taken
-- [ ] Return the resource after borrowing
+- [x] Return the resource after borrowing
 - [ ] User Interface
 	- [ ] Status
 	- [ ] Interactivity
@@ -43,6 +43,7 @@ Create a struct of `Users` and `Resources`. Imagine that this problem is somewha
 - `label` : String
 - `jobs_list` : Vec\<Job\>
 - `current_job`: Option\<Resource\>
+- `duration` : f64
 
 **Note:**
 1. A user can take multiple jobs (resource/s) and can only have one current job. And after finishing all the jobs, a may not have a job.
