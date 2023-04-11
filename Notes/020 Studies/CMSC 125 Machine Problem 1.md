@@ -23,35 +23,23 @@
 ```
 Create a struct of `Users` and `Resources`. Imagine that this problem is somewhat similar to Internet Cafe. It is entirely possible to generate multiple resources but only 1 resource is used by all users. A user will borrow a resource making it unavailable to other users. I think **rust** is the perfect language for that?
 
+**Flow**:
+A user takes ownership of a resource from a vector then the user would pop the job and give it to the resource. The resource can then set the current user and duration it will be owned. 
+
+In the loop section, all users must return their borrowed resource first before a user can take a resource because otherwise if a resource ends and a user requests a resource happens at the same time, the user that will borrow a resource would not be able to acquire it.
+
 ---
 # TODO
 - [x] Generate Random Amount of Users
 - [x] Generate Random Amount of Resources
 - [x] Randomizing User using at least one resource
-- [x] Proceed to next job if job is taken
+- [ ] Proceed to next job if job is taken
 - [x] Return the resource after borrowing
 - [ ] User Interface
 	- [ ] Status
 	- [ ] Interactivity
 		- [ ] Steps
 		- [ ] Pause
-
----
-## Users
-### Fields
-- `id` : i32
-- `label` : String
-- `resource_id` : i32
-- `jobs_list` : VecDeque\<Job\>
-- `current_job`: Option\<Resource\>
-- `job_time` : f64
-
-**Note:**
-1. A user can take multiple jobs (resource/s) and can only have one current job. And after finishing all the jobs, a may not have a job.
-
-## Resources
-- `id` : i32
-- `label` : String
 
 ---
 ## Randomization

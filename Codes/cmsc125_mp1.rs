@@ -19,242 +19,281 @@
  *
  */
 use rand::distributions::Uniform;
-use rand::Rng;
+use rand::{thread_rng, Rng};
+use std::collections::HashMap;
 use std::collections::VecDeque;
+use std::time::Duration;
 use std::{thread, time};
 
-/// Represents a Resource, with currently in use and availability
-///
-/// # Examples
-///
-/// ```
-/// let resource_1 = Resource::new(1);
-/// ```
-///
-#[derive(Debug)]
-struct Resource {
-    id: i32,
-    label: String,
+struct SETTINGS {
+    USERS: u32,
+    RESOURCES: u32,
+    TIME: Duration,
 }
 
-/// Represents a User
-///
-/// # Examples
-///
-/// ```
-/// let user_1 = User::new(1);
-/// ```
-///
-#[derive(Debug)]
-struct User {
-    id: i32,
-    label: String,
-
-    resource_id: i32,
-    jobs_list: VecDeque<Job>,
-    current_job: Option<Resource>,
-    job_time: f64,
+impl SETTINGS {
+    fn new(USERS: u32, RESOURCES: u32, TIME: Duration) -> SETTINGS {
+        SETTINGS {
+            USERS,
+            RESOURCES,
+            TIME,
+        }
+    }
 }
-// A `Job` represents a task that needs to be completed using a particular `Resource`.
-///
-/// # Examples
-///
-/// Creating a new `Job`:
-///
-/// ```
-/// let job = Job::new(1, 2.5);
-/// ```
-///
-/// This creates a new `Job` that needs to be completed using the `Resource` with an ID of 1, and has a duration of 2.5 seconds.
+
+#[derive(Debug)]
+enum ResourceStatus {
+    Available,
+    Processing,
+}
+
+#[derive(Debug)]
+enum UserStatus {
+    Idle,
+    Working,
+    Waiting,
+}
+
 #[derive(Debug)]
 struct Job {
-    user_id: u32,
     resource_id: u32,
-    duration: f64,
+    user_id: u32,
+    job_time: Duration,
 }
 
 impl Job {
-    /// Creates a new `Job` with the specified `resource_id` and `duration`.
-    ///
-    /// # Arguments
-    ///
-    /// * `resource_id` - The ID of the `Resource` needed to complete this `Job`.
-    /// * `duration` - The duration of the `Job`.
-    ///
-    /// # Examples
-    ///
-    /// Creating a new `Job` with an ID of 1, and a duration of 2.5 seconds:
-    ///
-    /// ```
-    /// let job = Job::new(1, 2.5);
-    /// ```
-    fn new(user_id: u32, resource_id: u32, duration: f64) -> Job {
-        return Job {
-            user_id,
+    fn new(resource_id: u32, user_id: u32, job_time: Duration) -> Job {
+        Job {
             resource_id,
-            duration,
-        };
+            user_id,
+            job_time,
+        }
+    }
+}
+#[derive(Debug)]
+struct Resource {
+    id: u32,
+    status: ResourceStatus,
+    user: Option<u32>,    // user id
+    time_left: Duration,  // in seconds
+    queue: VecDeque<u32>, // user id list
+}
+
+impl Resource {
+    fn new(id: u32) -> Resource {
+        Resource {
+            id,
+            status: ResourceStatus::Available,
+            user: None,
+            time_left: Duration::from_secs(0),
+            queue: VecDeque::new(),
+        }
+    }
+
+    fn make_available(&mut self) {
+        self.status = ResourceStatus::Available;
+        self.user = None;
+    }
+
+    fn make_in_use(&mut self, user: u32, time_left: Duration) {
+        self.user = Some(user);
+        self.time_left = time_left;
+        self.status = ResourceStatus::Processing;
+        // check the queue
+    }
+
+    fn decrement_time(&mut self) {
+        if self.time_left.as_secs() > 0 {
+            self.time_left -= Duration::from_secs(1);
+        }
+    }
+    fn check_time(&mut self) -> bool {
+        if self.time_left.as_secs() == 0 {
+            true
+        } else {
+            false
+        }
     }
 }
 
-// Picks a given number of unique random integers within a specified range.
-///
-/// # Arguments
-///
-/// * `count`: the number of integers to pick
-/// * `min`: the minimum value of the range (inclusive)
-/// * `max`: the maximum value of the range (exclusive)
-///
-/// # Returns
-///
-/// A vector containing the selected integers.
-///
-/// # Example
-///
-/// ```
-/// use rand::Rng;
-///
-/// let selected = pick_random_items_from_list(5, 0, 10);
-/// println!("{:?}", selected);
-/// ```
-fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
-    // Ensure count is within range
-    if max - min < count {
-        count = max - min;
+#[derive(Debug)]
+struct User {
+    id: u32,
+    status: UserStatus,
+    resource_using: Option<Resource>,
+    jobs: VecDeque<Job>,
+}
+
+impl User {
+    fn new(id: u32) -> User {
+        User {
+            id,
+            status: UserStatus::Idle,
+            resource_using: None,
+            jobs: VecDeque::new(),
+        }
+    }
+    fn start_job(&mut self, resource: Option<Resource>) {
+        if let Some(job) = self.jobs.pop_front() {
+            self.resource_using = resource;
+            self.status = UserStatus::Working;
+
+            if let Some(mut res) = self.resource_using.take() {
+                res.make_in_use(self.id, job.job_time);
+                self.resource_using = Some(res).take();
+            }
+        }
     }
 
-    let mut rng = rand::thread_rng();
-    let range = Uniform::new(min, max);
-    let items: Vec<i32> = (0..count).map(|_| rng.sample(&range)).collect();
+    fn make_waiting(&mut self) {
+        self.status = UserStatus::Waiting;
+        self.resource_using = None;
+    }
+
+    fn check_if_not_working(&mut self) -> bool {
+        if self.resource_using.is_none() {
+            true
+        } else {
+            false
+        }
+    }
+    fn check_if_there_are_jobs(&mut self) -> bool {
+        if !self.jobs.is_empty() {
+            true
+        } else {
+            false
+        }
+    }
+
+    fn are_all_jobs_finished(&mut self) -> bool {
+        if self.resource_using.is_none() && self.jobs.is_empty() {
+            true
+        } else {
+            false
+        }
+    }
+}
+
+fn pick_random_items_from_list(count: i32, min: i32, max: i32) -> Vec<i32> {
+    let count = count.min(max - min + 1).max(0); // Ensure count is within range
+
+    let mut rng = thread_rng();
+    let mut items: Vec<i32> = Vec::with_capacity(count as usize);
+
+    while items.len() < count as usize {
+        let item = rng.gen_range(min..=max);
+        if !items.contains(&item) {
+            items.push(item);
+        }
+    }
 
     items
 }
 
 fn main() {
-    let MAX_USERS: i32 = 11;
-    let MAX_RESOURCES: i32 = 5;
-    let MAX_TIME: u32 = 5;
+    let settings = SETTINGS::new(30, 30, Duration::from_secs(10));
+    let mut rng = thread_rng();
+    let mut total_time: Duration = Duration::from_secs(0);
 
-    let mut rng = rand::thread_rng();
-    let one_secs = time::Duration::from_millis(1000);
-
-    let mut resources: Vec<Option<Resource>> = (0..rng.gen_range(1..MAX_RESOURCES))
-        .map(|id| {
-            Some(Resource {
-                id,
-                label: format!("R{}", id + 1),
-            })
-        })
+    // Generate available resources and users
+    let mut resources: Vec<Option<Resource>> = (0..rng.gen_range(1..settings.RESOURCES))
+        .map(|id| Some(Resource::new(id)))
+        .collect();
+    let mut users: Vec<User> = (0..rng.gen_range(1..settings.USERS))
+        .map(|id| User::new(id))
         .collect();
 
-    let mut users: VecDeque<User> = (0..rng.gen_range(1..MAX_USERS))
-        .map(|id| User {
-            id,
-            label: format!("U{}", id + 1),
-            resource_id: -1,
-            jobs_list: VecDeque::new(),
-            current_job: None,
-            job_time: 0.0,
-        })
-        .collect();
-
-    let mut jobs: VecDeque<Job> = VecDeque::new();
-
-    // Populate users with random jobs at initialization
+    // Add random jobs to a user
     for user in users.iter_mut() {
-        let job_count = rng.gen_range(1..=resources.len() as u32);
-        let job_items = pick_random_items_from_list(job_count as i32, 0, resources.len() as i32);
-        for res_id in job_items {
-            user.jobs_list.push_back(Job::new(
-                user.id as u32,
-                res_id as u32,
-                rng.gen_range(1..=MAX_TIME) as f64,
+        let number_of_resources = resources.len();
+        let job_count = rng.gen_range(1..=number_of_resources);
+        let job_items =
+            pick_random_items_from_list(job_count as i32, 0, number_of_resources as i32 - 1);
+
+        for id in job_items {
+            user.jobs.push_back(Job::new(
+                id as u32,
+                user.id,
+                Duration::from_secs(rng.gen_range(1..settings.TIME.as_secs())),
+                // Duration::from_secs(5),
             ));
         }
     }
 
-    for j in jobs {
-        println!("{:?}", j);
+    for u in users.iter_mut() {
+        println!("{:?}", u);
     }
-    // Loop Inits
-    let mut total_time: f64 = 0.00; // seconds
-    let mut working_users: u32;
+    println!();
+    println!();
+    println!();
+    // Main Loop
     loop {
-        working_users = users.len() as u32;
+        let mut idle_users: u32 = 0;
 
-        print!("\x1B[2J\x1B[1;1H");
-        println!("Total Resources: {}", resources.len());
-        println!("Time: {} seconds", total_time);
-        println!();
-        println!(
-            "USER   TIME LEFT   STATUS      CURRENT JOB                             NEXT JOB    "
-        );
-        println!(
-            "----------------------------------------------------------------------------------"
-        );
+        // Before taking ownership, return all borrowed resources first.
         for user in users.iter_mut() {
-            if user.job_time > 0.0 {
-                user.job_time -= 1.0;
+            // holy mother grail of fuck, a lot of borrowing then returning then borrowing then
+            // returning again
+            // i love rust!!!
+            if let Some(mut res) = user.resource_using.take() {
+                if res.check_time() == true {
+                    res.make_available();
+                    user.make_waiting();
+                    let rid = res.id as usize;
+                    resources[rid] = Some(res);
+                } else {
+                    user.resource_using = Some(res); // return to the user
+                }
             }
-            if user.current_job.is_some() && user.job_time == 0.0 {
-                resources[user.resource_id as usize] = user.current_job.take();
-                user.resource_id = -1;
-            }
+        }
 
-            if user.current_job.is_none() && !user.jobs_list.is_empty() {
-                for i in 0..user.jobs_list.len() {
-                    let mut job_id: i32;
-                    job_id = user.jobs_list[i].resource_id as i32;
+        // start borrowing of resource
+        for user in users.iter_mut() {
+            if user.check_if_not_working() && user.check_if_there_are_jobs() {
+                for i in 0..user.jobs.len() {
+                    let r = user.jobs[i as usize].resource_id;
 
-                    match resources[job_id as usize].take() {
+                    // println!("User {} is not working should grab job: {}", user.id, r);
+                    match resources[r as usize].take() {
                         None => continue,
                         resource => {
-                            let j: Job = user.jobs_list.remove(i).unwrap(); // runs at O(n)
-                            user.current_job = resource;
-                            user.job_time = j.duration;
-                            user.resource_id = j.resource_id as i32;
+                            // println!("User {} took the job: {:?}", user.id, resource);
+                            user.start_job(resource);
                             break;
                         }
                     }
                 }
             }
-            if user.current_job.is_none() && user.jobs_list.is_empty() {
-                working_users -= 1;
-            }
-            if !user.jobs_list.is_empty() {
-                println!(
-                    "{}         {}          {}          {:?}               {:?}",
-                    user.id, user.job_time, -1, user.current_job, user.jobs_list[0]
-                );
-            } else {
-                println!(
-                    "{}         {}          {}          {:?}               {:?}",
-                    user.id, user.job_time, -1, user.current_job, user.jobs_list
-                );
+
+            if user.are_all_jobs_finished() == true {
+                idle_users += 1;
             }
         }
 
-        println!(
-            "----------------------------------------------------------------------------------"
-        );
-        println!("RESOURCES:");
-        for r in &resources {
-            println!(" {:?}", r);
+        // Print shits
+        println!("-----");
+        println!("Time: {}", total_time.as_secs());
+        for r in resources.iter() {
+            println!("{:?}", r);
+        }
+        println!();
+        for u in users.iter() {
+            println!("{:?}", u);
         }
 
-        total_time += 1.0;
-        thread::sleep(one_secs);
+        // Increment stuffs after printing
+        total_time += Duration::from_secs(1);
+        thread::sleep(Duration::from_secs(1));
+        for user in users.iter_mut() {
+            if let Some(mut res) = user.resource_using.take() {
+                res.decrement_time();
+                user.resource_using = Some(res);
+            }
+        }
 
-        if working_users == 0 {
+        // Exit loop if all resources are free and all users no longer have tasks/jobs
+        if idle_users == users.len() as u32 {
             break;
         }
     }
-
-    // for u in users.iter() {
-    //     println!("ID: {:?}", u.id);
-    //     println!("Job: {:?}", u.current_job);
-    //     println!("Time Remaining: {:?}", u.job_time);
-    //     println!("Job List: {:?}", u.jobs_list);
-    //     println!();
-    // }
 }
