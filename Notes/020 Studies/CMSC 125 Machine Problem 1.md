@@ -33,7 +33,7 @@ In the loop section, all users must return their borrowed resource first before 
 - [x] Generate Random Amount of Users
 - [x] Generate Random Amount of Resources
 - [x] Randomizing User using at least one resource
-- [ ] Proceed to next job if job is taken
+- [x] Proceed to next job if job is taken
 - [x] Return the resource after borrowing
 - [ ] User Interface
 	- [ ] Status
