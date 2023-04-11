@@ -6,18 +6,22 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] Quiz 5 #CMSC178 @[[2023-04-20]]
-- [ ] Problem Set 3 #CMSC125 @[[2023-04-23]]
+- [ ] Activity 2: Familiarizing Standard Measures in Software Tool Performance #CMSC194_2 @[[2023-04-27]]
 - [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 - [ ] Problem Set 4 #CMSC125 @[[2023-05-07]]
+- [ ] Activity 3: A Hands-on Exploration of Bioinformatics-related Databases and Publicly-available Online Tools #CMSC194_2 @[[2023-05-18]]
 - [ ] Machine Problem 3 #CMSC125 @[[2023-05-28]]
+- [ ] Activity 4: Enriching the RRL in the Form of Annotated Bibliography #CMSC194_2 @[[2023-06-01]]
 
 
 ## Will Do
 
 - [ ] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
 - [ ] First Long Exam #CMSC125 @[[2023-04-17]]
+- [ ] Activity 1: Familiarizing Standards and/or Frameworks used in Software Design #CMSC194_2 @[[2023-04-16]]
 - [ ] Assignment 1 #CMSC178 @[[2023-04-20]]
+- [ ] Quiz 5 #CMSC178 @[[2023-04-20]]
+- [ ] Problem Set 3 #CMSC125 @[[2023-04-23]]
 
 
 ## DOING
