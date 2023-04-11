@@ -119,6 +119,10 @@ impl Job {
 /// ```
 fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
     // Ensure count is within range
+    if max - min < count {
+        count = max - min;
+    }
+
     let mut rng = rand::thread_rng();
     let range = Uniform::new(min, max);
     let items: Vec<i32> = (0..count).map(|_| rng.sample(&range)).collect();
@@ -127,9 +131,9 @@ fn pick_random_items_from_list(mut count: i32, min: i32, max: i32) -> Vec<i32> {
 }
 
 fn main() {
-    let MAX_USERS: i32 = 30;
-    let MAX_RESOURCES: i32 = 30;
-    let MAX_TIME: u32 = 10;
+    let MAX_USERS: i32 = 11;
+    let MAX_RESOURCES: i32 = 5;
+    let MAX_TIME: u32 = 5;
 
     let mut rng = rand::thread_rng();
     let one_secs = time::Duration::from_millis(1000);
@@ -138,7 +142,7 @@ fn main() {
         .map(|id| {
             Some(Resource {
                 id,
-                label: format!("R{}", id),
+                label: format!("R{}", id + 1),
             })
         })
         .collect();
@@ -146,7 +150,7 @@ fn main() {
     let mut users: VecDeque<User> = (0..rng.gen_range(1..MAX_USERS))
         .map(|id| User {
             id,
-            label: format!("U{}", id),
+            label: format!("U{}", id + 1),
             resource_id: -1,
             jobs_list: VecDeque::new(),
             current_job: None,
@@ -200,7 +204,6 @@ fn main() {
             if user.current_job.is_none() && !user.jobs_list.is_empty() {
                 for i in 0..user.jobs_list.len() {
                     let mut job_id: i32;
-                    let mut job_resource: Option<Resource> = None;
                     job_id = user.jobs_list[i].resource_id as i32;
 
                     match resources[job_id as usize].take() {
