@@ -7,7 +7,6 @@ kanban-plugin: basic
 ## Deadlines
 
 - [ ] Activity 2: Familiarizing Standard Measures in Software Tool Performance #CMSC194_2 @[[2023-04-27]]
-- [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 - [ ] Problem Set 4 #CMSC125 @[[2023-05-07]]
 - [ ] Activity 3: A Hands-on Exploration of Bioinformatics-related Databases and Publicly-available Online Tools #CMSC194_2 @[[2023-05-18]]
 - [ ] Machine Problem 3 #CMSC125 @[[2023-05-28]]
@@ -16,17 +15,16 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
 - [ ] First Long Exam #CMSC125 @[[2023-04-17]]
-- [ ] Activity 1: Familiarizing Standards and/or Frameworks used in Software Design #CMSC194_2 @[[2023-04-16]]
 - [ ] Assignment 1 #CMSC178 @[[2023-04-20]]
 - [ ] Quiz 5 #CMSC178 @[[2023-04-20]]
 - [ ] Problem Set 3 #CMSC125 @[[2023-04-23]]
+- [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 
 
 ## DOING
 
-- [ ] Machine Problem 1 #CMSC125 @[[2023-04-16]]
+- [ ] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
 
 
 ## Postponed
@@ -36,6 +34,8 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Machine Problem 1 #CMSC125 @[[2023-04-16]]
+- [x] Activity 1: Familiarizing Standards and/or Frameworks used in Software Design #CMSC194_2 @[[2023-04-16]]
 - [x] The General's Daughter - err - Tree #CMSC142
 - [x] Expression Tree Implementation #CMSC142
 - [x] [[First Long Exam @2022-11-04]] + Mastery Exam (before jan. 25)

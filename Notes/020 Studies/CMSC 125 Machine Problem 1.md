@@ -1,5 +1,5 @@
 > [!INFO]
-> Status: #WIP
+> Status: #SUBMITTED
 > Tags: #CMSC125 #MachineProblem #OperatingSystem
 
 ----
@@ -35,6 +35,8 @@ In the loop section, all users must return their borrowed resource first before 
 - [x] Randomizing User using at least one resource
 - [x] Proceed to next job if job is taken
 - [x] Return the resource after borrowing
+- [ ] **(Item \#5)** Show waiting time in seconds
+- [ ] **(Item \#6)** Show time in seconds when a resource will no longer have users
 - [ ] User Interface
 	- [ ] Status
 	- [ ] Interactivity

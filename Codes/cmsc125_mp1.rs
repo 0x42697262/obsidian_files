@@ -1,3 +1,4 @@
+use crossterm::terminal::enable_raw_mode;
 /****
  *
  * LABARATORY EXERCISE 1 (https://github.com/KrulYuno/obsidian_files/blob/master/Notes/020%20Studies/CMSC%20125%20Machine%20Problem%201.md)
@@ -18,12 +19,12 @@
  * NOTE: As to the order of the usage, just base it on the user number. You may use any language for implementation.
  *
  */
-use rand::distributions::Uniform;
 use rand::{thread_rng, Rng};
 use std::collections::HashMap;
 use std::collections::VecDeque;
+use std::io;
+use std::thread;
 use std::time::Duration;
-use std::{thread, time};
 
 struct SETTINGS {
     USERS: u32,
@@ -41,13 +42,31 @@ impl SETTINGS {
     }
 }
 
+enum Event<I> {
+    Input(I),
+    Tick,
+}
+
+enum MenuItem {
+    Home,
+}
+
+impl From<MenuItem> for usize {
+    fn from(input: MenuItem) -> usize {
+        match input {
+            MenuItem::Home => 0,
+            MenuItem::Home => 1,
+        }
+    }
+}
+
 #[derive(Debug)]
 enum ResourceStatus {
     Available,
     Processing,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 enum UserStatus {
     Idle,
     Working,
@@ -74,9 +93,9 @@ impl Job {
 struct Resource {
     id: u32,
     status: ResourceStatus,
-    user: Option<u32>,    // user id
-    time_left: Duration,  // in seconds
-    queue: VecDeque<u32>, // user id list
+    user: Option<u32>, // user id
+    time_left: Duration, // in seconds
+                       // queue: VecDeque<Job>, // job list
 }
 
 impl Resource {
@@ -86,7 +105,7 @@ impl Resource {
             status: ResourceStatus::Available,
             user: None,
             time_left: Duration::from_secs(0),
-            queue: VecDeque::new(),
+            // queue: VecDeque::new(),
         }
     }
 
@@ -128,7 +147,7 @@ impl User {
     fn new(id: u32) -> User {
         User {
             id,
-            status: UserStatus::Idle,
+            status: UserStatus::Waiting,
             resource_using: None,
             jobs: VecDeque::new(),
         }
@@ -190,8 +209,8 @@ fn pick_random_items_from_list(count: i32, min: i32, max: i32) -> Vec<i32> {
     items
 }
 
-fn main() {
-    let settings = SETTINGS::new(30, 30, Duration::from_secs(10));
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let settings = SETTINGS::new(5, 5, Duration::from_secs(10));
     let mut rng = thread_rng();
     let mut total_time: Duration = Duration::from_secs(0);
 
@@ -255,7 +274,10 @@ fn main() {
 
                     // println!("User {} is not working should grab job: {}", user.id, r);
                     match resources[r as usize].take() {
-                        None => continue,
+                        None => {
+                            user.make_waiting();
+                            continue;
+                        }
                         resource => {
                             // println!("User {} took the job: {:?}", user.id, resource);
                             user.start_job(resource);
@@ -266,19 +288,59 @@ fn main() {
             }
 
             if user.are_all_jobs_finished() == true {
+                user.status = UserStatus::Idle;
                 idle_users += 1;
             }
         }
 
         // Print shits
+        print!("\x1B[2J\x1B[1;1H");
+
         println!("-----");
         println!("Time: {}", total_time.as_secs());
-        for r in resources.iter() {
-            println!("{:?}", r);
-        }
         println!();
+        println!("Resources: ");
+        for i in 0..resources.len() {
+            println!("#{}: {:?}", i, resources[i]);
+        }
+
+        println!();
+        println!("Users: ");
         for u in users.iter() {
-            println!("{:?}", u);
+            if u.status == UserStatus::Waiting {
+                if u.jobs.is_empty() {
+                    println!("{} | {:?} | {:?} | ", u.id, u.status, u.resource_using,);
+                } else {
+                    println!(
+                        "{} | {:?} | {:?} | Next {:?}",
+                        u.id, u.status, u.resource_using, u.jobs[0]
+                    );
+                }
+            }
+        }
+        for u in users.iter() {
+            if u.status == UserStatus::Idle {
+                if u.jobs.is_empty() {
+                    println!("{} | {:?} | {:?} | ", u.id, u.status, u.resource_using,);
+                } else {
+                    println!(
+                        "{} | {:?} | {:?} | Next {:?}",
+                        u.id, u.status, u.resource_using, u.jobs[0]
+                    );
+                }
+            }
+        }
+        for u in users.iter() {
+            if u.status == UserStatus::Working {
+                if u.jobs.is_empty() {
+                    println!("{} | {:?} | {:?} | ", u.id, u.status, u.resource_using,);
+                } else {
+                    println!(
+                        "{} | {:?} | {:?} | Next {:?}",
+                        u.id, u.status, u.resource_using, u.jobs[0]
+                    );
+                }
+            }
         }
 
         // Increment stuffs after printing
@@ -296,4 +358,5 @@ fn main() {
             break;
         }
     }
+    Ok(())
 }
