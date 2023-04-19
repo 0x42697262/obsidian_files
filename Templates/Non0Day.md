@@ -12,3 +12,7 @@ Today's Daily Note: [[{{date:YYYY-MM-DD}}]]
 	- [ ] [OverTheWire](https://overthewire.org/wargames/)
 - [ ] Learn
 	- [ ] PicoCTF Primer
+
+ 
+ **EXTRA:**
+ - 
