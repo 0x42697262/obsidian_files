@@ -6,3 +6,4 @@
 # 091 Notes
 [[Mental Models]]
 [[LAMPP]]
+[[My guideline for reading]]
