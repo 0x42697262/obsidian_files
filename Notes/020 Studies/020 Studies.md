@@ -44,6 +44,7 @@
 ### Week 5-6: Basic Operating System Concepts
 - [[CMSC 125 Machine Problem 1]]
 - [[CMSC 125 Problem Set 2]]
+- [[Operating Systems]]
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
