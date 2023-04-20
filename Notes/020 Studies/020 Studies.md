@@ -64,6 +64,10 @@
 
 ## CMSC178 Image Processing
 ### Week 1: Image Sensors and Image Representations
+### Week 2: Basic Image Enhancement
+- [[CMSC 178 Assignment 1]]
+### Week 5: Image Compression
+- [[Image Compression]]
 
 
 ## CMSC 192 Ethical and Professional Issues in Computing
