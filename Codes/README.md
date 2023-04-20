@@ -1,8 +1,11 @@
-## CMSC178
+## CMSC125
 
 #### [cmsc125_mp1.rs](cmsc125_mp1.rs)
 
 Source code for [[CMSC 125 Machine Problem 1]]
+
+
+### others
 
 #### [basic_bnf_op.py](basic_bnf_op.py)
 
