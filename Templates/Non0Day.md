@@ -16,3 +16,4 @@ Today's Daily Note: [[{{date:YYYY-MM-DD}}]]
  
  **EXTRA:**
  - 
+
