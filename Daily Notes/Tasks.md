@@ -22,7 +22,6 @@ kanban-plugin: basic
 ## DOING
 
 - [ ] Assignment 1 #CMSC178 @[[2023-04-20]]
-- [ ] Quiz 5 #CMSC178 @[[2023-04-20]]
 
 
 ## Postponed
@@ -33,6 +32,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Quiz 5 #CMSC178 @[[2023-04-20]]
 - [x] First Long Exam #CMSC125 @[[2023-04-17]]
 - [x] Machine Problem 1 #CMSC125 @[[2023-04-16]]
 - [x] Activity 1: Familiarizing Standards and/or Frameworks used in Software Design #CMSC194_2 @[[2023-04-16]]
