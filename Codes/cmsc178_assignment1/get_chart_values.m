@@ -33,8 +33,6 @@ PATCH_GAP     = 14;
 PATCH_MID_V   = PATCH_HEIGHT/2;
 PATCH_MID_H   = PATCH_WIDTH/2;
 
-% Compute the height and width of each patch in the color chart
-[chart_width, chart_height, ~]  = size(chart_image); %% the result should be [1595px x 1137px]
 
 % Loop through each patch in the color chart and extract its RGB value
 for row = 1:number_of_rows
