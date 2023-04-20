@@ -30,7 +30,6 @@ PATCH_MID_H   = PATCH_WIDTH/2;
 ```
 
 Next thing to do is to loop through the rows and colums of the color chart. We have to get the values of each patches and put it to the RGB list.
-
 The general formula for this is to get the index of the color then its RGB fields: `RGB_list(patch_index, RGB) = chart_image(height, width, rgb);`
 ```matlab
 for row = 1:number_of_rows
