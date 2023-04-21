@@ -87,6 +87,27 @@ end
 
 
 ## 2 Procedure
+### Step 1
+This step is simply the implementation of the function of the histogram equalization. To make life easier, using `hist()` function makes it easier although MATLAB says to use `histogram()`.
+```matlab
+histogram_result  = histcounts(img(:), 0:255);
+```
+
+After acquiring the values of the histogram, compute the cumulative distribution function.
+```matlab
+cdf               = cumsum(hist_result);
+```
+
+And proceed to calculate histogram map:
+```matlab
+equalization_map  = uint8((cdf / max(cdf)) * 255);
+```
+
+Replace the original pixel values with the equalized values using the lookup table and return the replaced image as a double image.
+```matlab
+new_img           = equalization_map(img + 1);
+eq_img            = double(new_img) / 255;
+```
 
 
 ## 3 Results & Discussion
