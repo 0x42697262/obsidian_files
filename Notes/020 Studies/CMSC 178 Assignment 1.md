@@ -105,3 +105,8 @@ RGB_map(:, 3)   = uint8(B_map);
 
 
 # Exercise 1E– (2%) – Written Questions
+
+
+
+---
+Github Reposity: [CMSC178 Assignment 1](https://github.com/KrulYuno/obsidian_files/tree/master/Codes)

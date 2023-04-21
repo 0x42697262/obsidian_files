@@ -29,17 +29,17 @@ function RGB_map = chart_correction(RGB_reference,RGB_measured)
 
 
 % Fitting for Red Channel
-p_Red = polyfit(RGB_reference(:,1), RGB_measured(:,1),2);
+p_Red = polyfit(RGB_measured(:,1), RGB_reference(:,1),2);
 R_map = polyval(p_Red, 0:1:255);
 
 
 % Fitting for Green Channel
-p_Green = polyfit(RGB_reference(:,2), RGB_measured(:,2),2);
+p_Green = polyfit(RGB_measured(:,2), RGB_reference(:,2),2);
 G_map = polyval(p_Green, 0:1:255);
 
 
 % Fitting for Blue Channel
-p_Blue = polyfit(RGB_reference(:,3), RGB_measured(:,3),2);
+p_Blue = polyfit(RGB_measured(:,3), RGB_reference(:,3),2);
 B_map = polyval(p_Blue, 0:1:255);
 
 
