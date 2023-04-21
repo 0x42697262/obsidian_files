@@ -21,8 +21,6 @@ function RGB_map = chart_correction(RGB_reference,RGB_measured)
 
 % ---- INSERT YOUR CODE BELOW -----
 
-% REPLACE THIS LINE WITH YOUR OWN CODE
-RGB_map = round(255*rand(256,3)); % <--- for now this returns a dummy result
 
 % HINT  - you can try and work these out from first principles or use interp1 or 
 % polyfit/polyval to estimate the corrections from the measured to reference
@@ -45,8 +43,13 @@ p_Blue = polyfit(RGB_reference(:,3), RGB_measured(:,3),2);
 B_map = polyval(p_Blue, 0:1:255);
 
 
-% Something
-
+% Create a 256x3 matrix to store the RGB lookup table
+RGB_map         = zeros(256, 3);
+% Store the lookup table for the red, green, and blue channels in the first column of RGB_map
+% We convert the lookup table values to uint8 data type to ensure that they are integers between 0 and 255
+RGB_map(:, 1)   = uint8(R_map);
+RGB_map(:, 2)   = uint8(G_map);
+RGB_map(:, 3)   = uint8(B_map);
 
 
 

@@ -45,6 +45,17 @@ end
 
 
 ### Step 2
+First create a list of RGB maps all initiated to zeros.
+```matlab
+RGB_map         = zeros(256, 3);
+```
+
+Since the code for fitting the RGB values are already provided, next thing to do is to store their unsigned integer value to the `RGB_map` to ensure that the values are 8 bits or within 0 to 255 range.
+```matlab
+RGB_map(:, 1)   = uint8(R_map);
+RGB_map(:, 2)   = uint8(G_map);
+RGB_map(:, 3)   = uint8(B_map);
+```
 
 ## 3 Results & Discussion
 ## 4 Comments & Conclusion

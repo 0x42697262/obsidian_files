@@ -1,4 +1,4 @@
-% GET_CHART_VALUES(chart_image) - extract the 6x4 color values from the
+`% GET_CHART_VALUES(chart_image) - extract the 6x4 color values from the
 % supplied colour chart image.
 %
 % Usage:
