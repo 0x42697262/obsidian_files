@@ -57,6 +57,23 @@ RGB_map(:, 2)   = uint8(G_map);
 RGB_map(:, 3)   = uint8(B_map);
 ```
 
+### Step 3
+Initalize a list of zeros to store the corrected image values.
+```matlab
+adjusted_image  = zeros(size(RGB_image));
+```
+
+Then, the code iterates over each pixel in the input image using nested for-loops. For each pixel, the code looks up the corresponding R, G, and B values in the RGB lookup table, which is done by indexing the lookup table using the RGB values of the current pixel. The corrected R, G, and B values are then stored in the corresponding positions of the adjusted_image list.
+```matlab
+for row = 1:size(RGB_image, 1)
+  for column = 1:size(RGB_image, 2)
+    adjusted_image(row, column, 1) = RGB_map(RGB_image(row, column, 1) + 1, 1);
+    adjusted_image(row, column, 2) = RGB_map(RGB_image(row, column, 2) + 1, 2);
+    adjusted_image(row, column, 3) = RGB_map(RGB_image(row, column, 3) + 1, 3);
+  end
+end
+```
+
 ## 3 Results & Discussion
 ## 4 Comments & Conclusion
 

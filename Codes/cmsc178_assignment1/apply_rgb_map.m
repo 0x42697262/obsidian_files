@@ -23,7 +23,6 @@ adjusted_image  = zeros(size(RGB_image));
 
 for row = 1:size(RGB_image, 1)
   for column = 1:size(RGB_image, 2)
-    % adjusted_image(row, column, :) = RGB_map(RGB_image(row, column, :) + 1, :);
     adjusted_image(row, column, 1) = RGB_map(RGB_image(row, column, 1) + 1, 1);
     adjusted_image(row, column, 2) = RGB_map(RGB_image(row, column, 2) + 1, 2);
     adjusted_image(row, column, 3) = RGB_map(RGB_image(row, column, 3) + 1, 3);
