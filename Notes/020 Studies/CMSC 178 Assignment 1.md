@@ -121,7 +121,34 @@ eq_img            = double(new_img) / 255;
 
 
 ## 2 Procedure
+### Step 1
+Pad the image dimension arrays in the edges. There are two ways to pad the edge arrays, either using zero padding or pixel replication. For this code, using pixel replication is better and MATLAB `padarray()` function already exists.
+```matlab
+padded_img  = padarray(img, [floor(M/2) floor(N/2)], 'symmetric');
+```
 
+Next is to make a new image to store the results based on the input image and initialize it to zeros.
+```matlab
+med_img     = zeros(size(img));
+```
+
+The algorithm of median filter is to simply apply the function to each pixel of the image. This can be done through iterating the entire pixels. Since an image is two dimensional, it would make sense to iterate it through nested loops.
+
+Inside the second loop of the iteration, pixels around the selected pixel are used and then sorted to get its median. Once taken, set the return function value to the median.
+```matlab
+for row = 1:size(img, 1)
+  for column = 1:size(img, 2)
+    entire_row      = row:row+M-1;
+    entire_column   = column:column+N-1;
+    pixels          = padded_img(entire_row, entire_column);
+    if mod(M*N, 2) == 0
+      med_img(row, column)  = mean(sorted_pixels(M*N/2:M*N/2+1));
+    else
+      med_img(row, column)  = sorted_pixels((M*N+1)/2);
+    end
+  end
+end
+```
 
 ## 3 Results & Discussion
 
