@@ -438,12 +438,12 @@
       }
     },
     "Notes/__orphans/CMSC 125 Problem Set 3.md": {
-      "uE5fFx": {
+      "bL0v7u": {
         "data": {
           "headers": [
             {
-              "id": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "content": "Process",
+              "id": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "content": "",
               "sortDir": "default",
               "width": "100px",
               "shouldWrapOverflow": true,
@@ -451,8 +451,8 @@
               "type": "text"
             },
             {
-              "id": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "content": "Burst Time",
+              "id": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "content": "t",
               "sortDir": "default",
               "width": "100px",
               "shouldWrapOverflow": true,
@@ -460,8 +460,8 @@
               "type": "text"
             },
             {
-              "id": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "content": "Priority",
+              "id": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "content": "p",
               "sortDir": "default",
               "width": "100px",
               "shouldWrapOverflow": true,
@@ -469,17 +469,8 @@
               "type": "text"
             },
             {
-              "id": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "content": "New Column",
-              "sortDir": "default",
-              "width": "100px",
-              "shouldWrapOverflow": true,
-              "useAutoWidth": false,
-              "type": "text"
-            },
-            {
-              "id": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "content": "New Column",
+              "id": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "content": "d",
               "sortDir": "default",
               "width": "100px",
               "shouldWrapOverflow": true,
@@ -489,207 +480,172 @@
           ],
           "rows": [
             {
-              "id": "f314be34-3097-44b1-964c-975cbcf11a9d",
-              "creationTime": 1682280523747
+              "id": "eeb39cf9-0450-4bd3-966c-3f2c3ebdfc2c",
+              "creationTime": 1682281428576
             },
             {
-              "id": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
-              "creationTime": 1682280524359
+              "id": "e2c8b9a1-b8b1-402d-a67e-22040abce2f8",
+              "creationTime": 1682281428894
             },
             {
-              "id": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
-              "creationTime": 1682280524012
+              "id": "dabdd9ba-5045-4be9-b82e-b739fe06ee03",
+              "creationTime": 1682281428602
             },
             {
-              "id": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
-              "creationTime": 1682280523459
+              "id": "6742cc58-e03f-4198-9e58-d8d3a126f883",
+              "creationTime": 1682281428847
             },
             {
-              "id": "ad58ce55-4025-4385-8610-68bef969d69b",
-              "creationTime": 1682280523575
+              "id": "e256f850-6263-4ff0-bf29-f6ca8ab6b0bc",
+              "creationTime": 1682281429187
             }
           ],
           "cells": [
             {
-              "id": "5ee22aec-5cc7-4e46-abe1-4e3931ccbfff",
-              "headerId": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "rowId": "f314be34-3097-44b1-964c-975cbcf11a9d",
+              "id": "a10c4eb9-a7e6-47e2-b03d-54350a83f9c8",
+              "headerId": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "rowId": "eeb39cf9-0450-4bd3-966c-3f2c3ebdfc2c",
               "type": "text",
-              "content": "P1"
+              "content": "j1"
             },
             {
-              "id": "cc7b623c-0663-48d7-95d6-27f479ddd347",
-              "headerId": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "rowId": "f314be34-3097-44b1-964c-975cbcf11a9d",
+              "id": "b6a57f79-5ab0-4b70-a989-3a91629e4015",
+              "headerId": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "rowId": "eeb39cf9-0450-4bd3-966c-3f2c3ebdfc2c",
               "type": "text",
               "content": "10"
             },
             {
-              "id": "357d0a7e-27c1-4770-be1a-3ecd7139f37d",
-              "headerId": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "rowId": "f314be34-3097-44b1-964c-975cbcf11a9d",
-              "type": "text",
-              "content": "3"
-            },
-            {
-              "id": "b4fe6431-66e1-46ef-aad4-4f79a4651fdc",
-              "headerId": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "rowId": "f314be34-3097-44b1-964c-975cbcf11a9d",
-              "type": "text",
-              "content": ""
-            },
-            {
-              "id": "9447b23e-f9d0-4faf-b940-5d80c015d12d",
-              "headerId": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "rowId": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
-              "type": "text",
-              "content": "P2"
-            },
-            {
-              "id": "24393273-fd47-496d-b695-55dc2492e6a9",
-              "headerId": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "rowId": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
-              "type": "text",
-              "content": "1"
-            },
-            {
-              "id": "4c2dbfbe-9d24-4f8b-8f7e-c0ae55ce72d3",
-              "headerId": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "rowId": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
-              "type": "text",
-              "content": "1"
-            },
-            {
-              "id": "64a54ccf-c7ac-4e9f-99b3-48feb071da4f",
-              "headerId": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "rowId": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
-              "type": "text",
-              "content": ""
-            },
-            {
-              "id": "ae2d989d-bf56-4cff-9e71-309768715d8a",
-              "headerId": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "rowId": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
-              "type": "text",
-              "content": "P3"
-            },
-            {
-              "id": "01f3ae72-32e1-408a-bd23-aff23b6a23c3",
-              "headerId": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "rowId": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
-              "type": "text",
-              "content": "2"
-            },
-            {
-              "id": "87e4a3a8-8f60-46c4-8532-7a47da7e62b0",
-              "headerId": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "rowId": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
-              "type": "text",
-              "content": "3"
-            },
-            {
-              "id": "83ac3f80-7acb-46b4-a7ab-59fc81981af0",
-              "headerId": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "rowId": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
-              "type": "text",
-              "content": ""
-            },
-            {
-              "id": "e4e19651-a365-46f4-9fb7-4d72b3da42c2",
-              "headerId": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "rowId": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
-              "type": "text",
-              "content": "P4"
-            },
-            {
-              "id": "6cce2ba4-51b4-47ad-a460-5bc6ec8d7687",
-              "headerId": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "rowId": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
-              "type": "text",
-              "content": "1"
-            },
-            {
-              "id": "1df33767-a23c-4bd8-bbdf-086e3efdc502",
-              "headerId": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "rowId": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
+              "id": "fbac9950-db67-4bdb-b625-2fba3dccdd06",
+              "headerId": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "rowId": "eeb39cf9-0450-4bd3-966c-3f2c3ebdfc2c",
               "type": "text",
               "content": "4"
             },
             {
-              "id": "1a024712-cacb-4e0e-813a-c8d77eb6f986",
-              "headerId": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "rowId": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
+              "id": "b2a1cc6a-eb54-4319-8ffd-93ee7060db96",
+              "headerId": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "rowId": "eeb39cf9-0450-4bd3-966c-3f2c3ebdfc2c",
               "type": "text",
-              "content": ""
+              "content": "15"
             },
             {
-              "id": "716439a3-c9c3-4042-b4c3-63ae1e91c305",
-              "headerId": "c67c7322-98f3-4804-a603-b12f7906b0bc",
-              "rowId": "ad58ce55-4025-4385-8610-68bef969d69b",
+              "id": "410df96d-9c69-4643-a384-b28ffcc84354",
+              "headerId": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "rowId": "e2c8b9a1-b8b1-402d-a67e-22040abce2f8",
               "type": "text",
-              "content": "P5"
+              "content": "j2"
             },
             {
-              "id": "825c149a-fee7-46c6-b101-c59d7a8bbdb8",
-              "headerId": "8ca32906-cb70-4492-afc6-0813c4677ddb",
-              "rowId": "ad58ce55-4025-4385-8610-68bef969d69b",
+              "id": "af5d7f5e-55a9-43dd-9f54-3c21bc02d6aa",
+              "headerId": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "rowId": "e2c8b9a1-b8b1-402d-a67e-22040abce2f8",
               "type": "text",
-              "content": "5"
+              "content": "8"
             },
             {
-              "id": "310abdeb-e1ad-496e-9b7d-8956a38c6a03",
-              "headerId": "07b0055f-d605-4cc9-86c1-0232a125a43f",
-              "rowId": "ad58ce55-4025-4385-8610-68bef969d69b",
+              "id": "e3500456-8b14-4025-8fd2-c232c29940ba",
+              "headerId": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "rowId": "e2c8b9a1-b8b1-402d-a67e-22040abce2f8",
               "type": "text",
               "content": "2"
             },
             {
-              "id": "6ed7cf9e-a6c2-4b9c-86d7-bcf8f301a45e",
-              "headerId": "7e95e7ec-cb20-4ef2-843a-e8401a68eb70",
-              "rowId": "ad58ce55-4025-4385-8610-68bef969d69b",
+              "id": "699640c7-d781-489e-ba05-ba7e17bd3f33",
+              "headerId": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "rowId": "e2c8b9a1-b8b1-402d-a67e-22040abce2f8",
               "type": "text",
-              "content": ""
+              "content": "10"
             },
             {
-              "id": "d749329e-bb14-4819-8400-fd8cd14a5ec6",
-              "headerId": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "rowId": "f314be34-3097-44b1-964c-975cbcf11a9d",
+              "id": "7fd20faa-6b46-44cc-aed9-2a754f6ea806",
+              "headerId": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "rowId": "dabdd9ba-5045-4be9-b82e-b739fe06ee03",
               "type": "text",
-              "content": ""
+              "content": "j3"
             },
             {
-              "id": "62ea4110-ac36-4458-b3cb-4a5e2cb1800e",
-              "headerId": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "rowId": "4b23454a-9e9c-4966-99ae-02f464ffbc2a",
+              "id": "a5e70cda-5328-465a-ab92-64bb2ee632b9",
+              "headerId": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "rowId": "dabdd9ba-5045-4be9-b82e-b739fe06ee03",
               "type": "text",
-              "content": ""
+              "content": "4"
             },
             {
-              "id": "1dba5aa3-66ab-4732-81e0-6bcfc296dba7",
-              "headerId": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "rowId": "af907d58-f2c3-411e-90bf-6c19e1c74c00",
+              "id": "41641add-2d29-441b-976f-45ae3655090c",
+              "headerId": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "rowId": "dabdd9ba-5045-4be9-b82e-b739fe06ee03",
               "type": "text",
-              "content": ""
+              "content": "1"
             },
             {
-              "id": "d6841592-1967-4e43-9c62-bc661370c3e1",
-              "headerId": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "rowId": "4c399eb4-81d1-4e6f-9a8a-15e569817738",
+              "id": "4237cd3a-b99c-4b14-8298-b20196883c45",
+              "headerId": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "rowId": "dabdd9ba-5045-4be9-b82e-b739fe06ee03",
               "type": "text",
-              "content": ""
+              "content": "15"
             },
             {
-              "id": "c0133656-0387-4c43-aee9-ffddabb83cd0",
-              "headerId": "ecadf73e-cd68-4c12-888b-5b6a3f23f756",
-              "rowId": "ad58ce55-4025-4385-8610-68bef969d69b",
+              "id": "23bbd081-b330-4595-9d98-265e814143fc",
+              "headerId": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "rowId": "6742cc58-e03f-4198-9e58-d8d3a126f883",
               "type": "text",
-              "content": ""
+              "content": "j4"
+            },
+            {
+              "id": "bf97f09e-6366-456c-bf64-46860436cc60",
+              "headerId": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "rowId": "6742cc58-e03f-4198-9e58-d8d3a126f883",
+              "type": "text",
+              "content": "6"
+            },
+            {
+              "id": "5d414c77-8145-479a-969b-76504381cbc9",
+              "headerId": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "rowId": "6742cc58-e03f-4198-9e58-d8d3a126f883",
+              "type": "text",
+              "content": "3"
+            },
+            {
+              "id": "c2d6065e-4cc8-4ea3-ae33-d5861724c4ef",
+              "headerId": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "rowId": "6742cc58-e03f-4198-9e58-d8d3a126f883",
+              "type": "text",
+              "content": "10"
+            },
+            {
+              "id": "7fe7d077-017e-4834-ad07-a447311b19cd",
+              "headerId": "8eb2462c-f58a-4bf6-aa77-dc3f4d782c53",
+              "rowId": "e256f850-6263-4ff0-bf29-f6ca8ab6b0bc",
+              "type": "text",
+              "content": "j5"
+            },
+            {
+              "id": "4a7a130f-66d2-40c5-9c9b-d3aba091c6c5",
+              "headerId": "e0a2e95e-0a05-413f-bdef-fb3631ca1350",
+              "rowId": "e256f850-6263-4ff0-bf29-f6ca8ab6b0bc",
+              "type": "text",
+              "content": "5"
+            },
+            {
+              "id": "35d1feda-cf73-427f-b47b-e40c84e3bec5",
+              "headerId": "e8a372de-3c9b-4a74-b6b6-cbb96714e5d8",
+              "rowId": "e256f850-6263-4ff0-bf29-f6ca8ab6b0bc",
+              "type": "text",
+              "content": "5"
+            },
+            {
+              "id": "31cad22d-19cc-46ce-924a-dea64f3c13cb",
+              "headerId": "aa2c4e24-b8b5-43d8-920d-c498afc7aee8",
+              "rowId": "e256f850-6263-4ff0-bf29-f6ca8ab6b0bc",
+              "type": "text",
+              "content": "12"
             }
           ],
           "tags": []
         },
+        "shouldUpdate": false,
         "viewType": "reading",
-        "shouldUpdate": true,
         "tableCacheVersion": 431
       }
     }

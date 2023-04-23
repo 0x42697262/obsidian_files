@@ -1,5 +1,8 @@
 {
   "accentColor": "",
   "theme": "moonstone",
-  "cssTheme": "Mado Miniflow"
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "center_table"
+  ]
 }

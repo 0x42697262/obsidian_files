@@ -96,7 +96,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/020 Studies/CMSC 125 Problem Set 2.md",
+                "file": "Notes/090 Others/091 Notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -262,6 +262,8 @@
   },
   "active": "ec43fec491bbd7b2",
   "lastOpenFiles": [
+    "Notes/090 Others/091 Notes.md",
+    "Notes/__orphans/Center a Table in Obsidian.md",
     "Notes/020 Studies/CMSC 125 Problem Set 2.md",
     "Notes/__orphans/CMSC 125 Problem Set 3.md",
     "Notes/020 Studies/CMSC 178 Assignment 1.md",
@@ -299,14 +301,12 @@
     "Notes/__orphans/011.md",
     "Notes/090 Others/090 Others.md",
     "Notes/090 Others/My guideline for reading.md",
-    "Notes/090 Others/091 Notes.md",
     "Notes/__index/000 Index.md",
     "Notes/030 Learning/030 Learning.md",
     "Notes/020 Studies/CMSC 125 Problem Set 1.md",
     "Notes/020 Studies/Operating Systems.md",
     "Notes/010 My Arch Journey/Fuck WINE associations.md",
     "Notes/__orphans/CMSC194.2 Activity Guide 1.md",
-    "Notes/__orphans/Untitled 1.md",
-    "Notes/010 My Arch Journey/016 Notes.md"
+    "Notes/__orphans/Untitled 1.md"
   ]
 }
