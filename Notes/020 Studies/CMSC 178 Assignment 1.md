@@ -152,7 +152,6 @@ end
 
 ## 3 Results & Discussion
 
-
 ## 4 Comments & Conclusion
 
 
@@ -161,12 +160,58 @@ end
 
 
 ## 2 Procedure
+### Step 1
+Create a blurred image B using a simple NxN averaging filter.
+```matlab
+B       = conv2(I, ones(N) / N^2, 'same');
+```
 
+Calculate the x and y image gradientsxI andyI using the following 5x5 Sobel gradient filters:
+```matlab
+Sobelx  = [ -4,   -5,   0,    5,    4; 
+            -8,   -10,  0,    10,   8;
+            -10,  -20,  0,    20,   10;
+            -8,   -10,  0,    10,   8; 
+            -4,   -5,   0,    5,    4];
+Sobely  = [ 4,    8,    10,   8,    4; 
+            5,    10,   20,   10,   5;
+            0,    0,    0,    0,    0;
+            -5,   -10,  -20,  -10,  -5; 
+            -4,   -8,   -10,  -8,   -4];
+Sobelx      = Sobelx*(1/240);
+Sobely      = Sobely*(1/240);
+```
+
+Compute the gradient image G.
+```matlab
+Gradientx = conv2(I, Sobelx, 'same');
+Gradienty = conv2(I, Sobely, 'same');
+gradient_vector = sqrt(Gradientx.^2 + Gradienty.^2);
+G = 7 * gradient_vector + 1;
+```
+The `7` here can be any number since it's simply an arbitraty constant that can be changed.
+
+For each pixel, compute the weighting function W.
+```matlab
+W = ones(size(I));
+```
+
+For each pixel, construct the output image as a weighted combination of the blurred and original images using the computed weight values.
+```matlab
+for r = 1:size(I, 1)
+    for c = 1:size(I, 2)
+        if gradient_vector(r, c) <= tolerance
+            W(r, c) = G(r, c) / tolerance;
+        end
+    end
+end
+```
 
 ## 3 Results & Discussion
 
 
 ## 4 Comments & Conclusion
+This section of the assignment is quite difficult so I had an assistance by using an AI tool to help me develop the code so I am not that certain which configuration that provides the best output.
 
 
 # Exercise 1E– (2%) – Written Questions

@@ -33,7 +33,7 @@ end
 
 % ------ INSERT YOUR CODE BELOW ------
 % Create a blurred image B using a simple NxN averaging filter
-blurred_image   = conv2(I, ones(N) / N^2, 'same');
+B       = conv2(I, ones(N) / N^2, 'same');
 
 % Calculate the x and y image gradients using the following 5x5 sobel
 % filter.
@@ -50,26 +50,34 @@ Sobely  = [ 4,    8,    10,   8,    4;
 Sobelx      = Sobelx*(1/240);
 Sobely      = Sobely*(1/240);
 
-padded_image    = padarray(blurred_image, [2,2], 'replicate', 'both');
+% Compute x and y gradients using Sobel filters
+Gradientx = conv2(I, Sobelx, 'same');
+Gradienty = conv2(I, Sobely, 'same');
 
-[row, column]   = size(padded_image);
+% Compute gradient magnitude and direction
+gradient_vector = sqrt(Gradientx.^2 + Gradienty.^2);
 
+% Compute the gradient image G
+G = 7 * gradient_vector + 1;
 
-for r = 3:row - 2
-  for j = 3:column - 2
-    pixels      = padded_image(r-2 : r+2, j-2 : j+2);
+% Compute the weighting function W
+W = ones(size(I));
 
-    Gradientx(r, j)   = (pixels(r,j) * Sobelx(r,j));
-    Gradienty(r, j)   = (pixels(r,j) * Sobely(r,j));
-
-    Gradientx(r, j)   = (pixels(r,j) * Sobelx(r,j));
-    Gradienty(r, j)   = (pixels(r,j) * Sobely(r,j));
-  end
+% For each pixel, construct the output image as a weighted combination of the
+% blurred and original images using the computed weight values
+for r = 1:size(I, 1)
+    for c = 1:size(I, 2)
+        if gradient_vector(r, c) <= tolerance
+            W(r, c) = G(r, c) / tolerance;
+        end
+    end
 end
 
+% Compute the output image as a weighted combination of blurred and original images
+out_img = W .* B + (1 - W) .* I;
+im2double(out_img);
 
 % ------ INSERT YOUR CODE ABOVE ------
 
 return
 end
-
