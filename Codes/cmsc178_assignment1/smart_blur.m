@@ -32,8 +32,41 @@ if (nargin<2)
 end
 
 % ------ INSERT YOUR CODE BELOW ------
+% Create a blurred image B using a simple NxN averaging filter
+blurred_image   = conv2(I, ones(N) / N^2, 'same');
 
-B = rand(size(I,2),size(I,2)); % dummy result, remove this line
+% Calculate the x and y image gradients using the following 5x5 sobel
+% filter.
+Sobelx  = [ -4,   -5,   0,    5,    4; 
+            -8,   -10,  0,    10,   8;
+            -10,  -20,  0,    20,   10;
+            -8,   -10,  0,    10,   8; 
+            -4,   -5,   0,    5,    4];
+Sobely  = [ 4,    8,    10,   8,    4; 
+            5,    10,   20,   10,   5;
+            0,    0,    0,    0,    0;
+            -5,   -10,  -20,  -10,  -5; 
+            -4,   -8,   -10,  -8,   -4];
+Sobelx      = Sobelx*(1/240);
+Sobely      = Sobely*(1/240);
+
+padded_image    = padarray(blurred_image, [2,2], 'replicate', 'both');
+
+[row, column]   = size(padded_image);
+
+
+for r = 3:row - 2
+  for j = 3:column - 2
+    pixels      = padded_image(r-2 : r+2, j-2 : j+2);
+
+    Gradientx(r, j)   = (pixels(r,j) * Sobelx(r,j));
+    Gradienty(r, j)   = (pixels(r,j) * Sobely(r,j));
+
+    Gradientx(r, j)   = (pixels(r,j) * Sobelx(r,j));
+    Gradienty(r, j)   = (pixels(r,j) * Sobely(r,j));
+  end
+end
+
 
 % ------ INSERT YOUR CODE ABOVE ------
 
