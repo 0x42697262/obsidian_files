@@ -19,6 +19,11 @@ end
 % to solve this. Consider also how you plan to deal with values near the
 % boundary.
 
+% Early return if MxN is < 2.
+if M < 2 && N < 2
+  med_img   = img;
+  return
+end
 
 % Pad the image near the boundary
 padded_img  = padarray(img, [floor(M/2) floor(N/2)], 'symmetric');
