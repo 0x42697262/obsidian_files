@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "361ce46d17e14e9a",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Daily Notes/Tasks.md"
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "59ca0275dc773067",
             "type": "leaf",
             "pinned": true,
@@ -30,6 +18,18 @@
                 "mode": "source",
                 "backlinks": true,
                 "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "361ce46d17e14e9a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Daily Notes/Tasks.md"
               },
               "pinned": true
             }
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "264a82bb47cd35dd",
+            "id": "f942dea99b649c91",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -65,7 +65,33 @@
             }
           },
           {
-            "id": "f942dea99b649c91",
+            "id": "0132ed1f53242c15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/020 Studies/CMSC 178 Assignment 1.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ec43fec491bbd7b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "85f40b5bf36d44ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,7 +103,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -132,7 +159,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -153,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/Tasks.md",
+                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -193,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/Tasks.md"
+                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md"
               }
             }
           },
@@ -218,8 +245,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -234,50 +260,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "361ce46d17e14e9a",
+  "active": "ec43fec491bbd7b2",
   "lastOpenFiles": [
     "Notes/020 Studies/CMSC 125 Problem Set 2.md",
+    "Notes/__orphans/CMSC 125 Problem Set 3.md",
+    "Notes/020 Studies/CMSC 178 Assignment 1.md",
+    "Daily Notes/2023-04-20.md",
     "Notes/020 Studies/020 Studies.md",
-    "Notes/__orphans/Syntax Analysis.md",
-    "Daily Notes/Tasks.md",
+    "ATTACHMENT_FOLDER/Pasted image 20230424011009.png",
+    "Codes/cmsc178_assignment1/chickenstare.jpg",
+    "ATTACHMENT_FOLDER/Pasted image 20230424010811.png",
+    "Codes/cmsc178_assignment1/chickenhaha.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230424003053.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230424003032.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230424002718.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230424002010.png",
     "Daily Notes/Non Zero Day.md",
-    "Notes/090 Others/Interesting Websites To Check.md",
-    "Notes/090 Others/099 Random.md",
+    "Daily Notes/Tasks.md",
+    "Notes/020 Studies/Image Compression.md",
+    "Notes/__orphans/111.md",
+    "Codes/README.md",
+    "Codes/cmsc178_assignment1/vintage_postcard.tif",
+    "Codes/cmsc178_assignment1/smart_blur_test.m",
+    "Codes/cmsc178_assignment1/smart_blur.m",
+    "Codes/cmsc178_assignment1/median_test.m",
+    "Codes/cmsc178_assignment1/median_filter.m",
+    "Codes/cmsc178_assignment1/low_light.tif",
+    "Codes/cmsc178_assignment1/lift_toodark.tif",
+    "Codes/cmsc178_assignment1/kookaburra_flat.tif",
+    "Codes/cmsc178_assignment1/house_flat.tif",
+    "Codes/cmsc178_assignment1/histeq_test.m",
+    "Codes/cmsc178_assignment1/color_toys.jpg",
+    "Codes/cmsc178_assignment1/color_testchart.jpg",
+    "Notes/020 Studies/CMSC 125 Machine Problem 1.md",
+    "Notes/020 Studies/CMSC 124 Machine Problem 2 Documentation.md",
+    "Notes/020 Studies/CMSC 124 Machine Problem 2.md",
+    "Templates/Non0Day.md",
+    "Notes/__orphans/011.md",
     "Notes/090 Others/090 Others.md",
+    "Notes/090 Others/My guideline for reading.md",
     "Notes/090 Others/091 Notes.md",
     "Notes/__index/000 Index.md",
-    "Notes/020 Studies/Buffering.md",
-    "Notes/020 Studies/Circular Buffering.md",
-    "Notes/020 Studies/Operating Systems.md",
-    "Notes/020 Studies/Spooling.md",
+    "Notes/030 Learning/030 Learning.md",
     "Notes/020 Studies/CMSC 125 Problem Set 1.md",
-    "Notes/__orphans/picoCTF 2023 - Specialer.md",
-    "Notes/__orphans/Multiprogramming.md",
-    "Notes/020 Studies/Single Buffering.md",
-    "Notes/030 Learning/picoCTF 2023.md",
-    "Notes/030 Learning/picoCTF 2023 - Special.md",
-    "Templates/CTF Writeup.md",
-    "Notes/030 Learning/PicoCTFs.md",
-    "Notes/030 Learning/Capture The Flags.md",
-    "Templates/Non0Day.md",
-    "Notes/020 Studies/Double Buffering.md",
-    "ATTACHMENT_FOLDER/Pasted image 20230326062424.png",
-    "Notes/020 Studies/IO Operations.md",
-    "ATTACHMENT_FOLDER/Pasted image 20230326055804.png",
-    "Interrupt-Driver I",
-    "Codes/MATLAB/practice/A1_code/vintage_postcard.tif",
-    "Codes/MATLAB/practice/A1_code/smart_blur_test.m",
-    "Codes/MATLAB/practice/A1_code/smart_blur.m",
-    "Codes/MATLAB/practice/A1_code/median_test.m",
-    "Codes/MATLAB/practice/A1_code/median_filter.m",
-    "Codes/MATLAB/practice/A1_code/low_light.tif",
-    "Codes/MATLAB/practice/A1_code/lift_toodark.tif",
-    "Codes/MATLAB/practice/A1_code/kookaburra_flat.tif",
-    "Codes/MATLAB/practice/A1_code/house_flat.tif",
-    "Codes/MATLAB/practice/A1_code/color_toys.jpg",
-    "Codes/MATLAB/practice/A1_code/color_testchart.jpg",
-    "Codes/MATLAB/practice/A1_code/color_person2.jpg",
-    "Codes/MATLAB/practice/A1_code/color_person1.jpg",
-    "ATTACHMENT_FOLDER/Pasted image 20230304034239.png"
+    "Notes/020 Studies/Operating Systems.md",
+    "Notes/010 My Arch Journey/Fuck WINE associations.md",
+    "Notes/__orphans/CMSC194.2 Activity Guide 1.md",
+    "Notes/__orphans/Untitled 1.md",
+    "Notes/010 My Arch Journey/016 Notes.md"
   ]
 }
