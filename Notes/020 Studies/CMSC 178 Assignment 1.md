@@ -1,6 +1,11 @@
 # Exercise 1A – ( 3% ) – Colour Balancing using a Reference Chart
 ## 1 Background of the Problem
+The advent of digital cameras has transformed the photography industry, making it possible for people of all skill levels to capture high-quality photos. However, one of the biggest challenges for photographers is correcting images for lighting conditions during post-processing. To overcome this hurdle, companies are developing enhancement packages that come bundled with digital cameras. One of the tools included in these packages is a color chart that photographers use to adjust the color balance of their images. This process involves taking a photo of a 24-color chart under the same lighting conditions as the subject and comparing it to the original chart to correct any color imbalances. To achieve this, three simple functions are developed: the first extracts samples from the color chart image, the second calculates the RGB color mapping from less than ideal to ideal conditions, and the third applies the mapping to the image to correct its color imbalance. The successful implementation of these functions will provide photographers with a user-friendly solution to correct their images' color imbalance, enabling them to produce high-quality photos even under challenging lighting conditions.
 
+The three files used in this exercise are:
+1. `get_chart_values.m` : This function takes a color sample from a color chart and adds it to a list of RGB color patches.
+2. `chart_correction.m` : This function calculates the RGB mappings needed to adjust for color imbalances between the values measured from reference and test charts.
+3. `apply_rgb_map.m` : This function replaces the red (R), green (G), and blue (B) color values in an image with new values based on a supplied lookup table.
 
 ## 2 Procedure
 ### Step 1
@@ -75,7 +80,10 @@ end
 ```
 
 ## 3 Results & Discussion
+
+
 ## 4 Comments & Conclusion
+
 
 ---
 
