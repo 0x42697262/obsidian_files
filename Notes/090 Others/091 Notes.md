@@ -7,3 +7,4 @@
 [[Mental Models]]
 [[LAMPP]]
 [[My guideline for reading]]
+[[Center a Table in Obsidian]]
