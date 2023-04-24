@@ -14,7 +14,6 @@ kanban-plugin: basic
 
 ## Will Do
 
-- [ ] Problem Set 3 #CMSC125 @[[2023-04-23]]
 - [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 - [ ] Activity 2: Familiarizing Standard Measures in Software Tool Performance #CMSC194_2 @[[2023-04-27]]
 
@@ -32,6 +31,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Problem Set 3 #CMSC125 @[[2023-04-23]]
 - [x] Quiz 5 #CMSC178 @[[2023-04-20]]
 - [x] First Long Exam #CMSC125 @[[2023-04-17]]
 - [x] Machine Problem 1 #CMSC125 @[[2023-04-16]]
