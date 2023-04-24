@@ -108,11 +108,11 @@ Priority(Nonpreemptive):
 Waiting time: `8.2` ms
 
 Round-Robin:
-`P1` = 8ms; `P2` = 0ms; `P3` = 4ms; `P4` = 2ms; `P5` = 8ms;
+`P1` = 9ms; `P2` = 1ms; `P3` = 5ms; `P4` = 3ms; `P5` = 9ms;
 ```matlab
-(8 + 0 + 4 + 2 + 8) / 5 = 22 / 5 = 4.4
+(9 + 1 + 5 + 3 + 9) / 5 = 27 / 5 = 5.4
 ```
-Waiting time: `4.4` ms
+Waiting time: `5.4` ms
 
 **d)** SJF since it has an average of `3.2` ms of waiting time.
 
