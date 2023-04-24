@@ -45,7 +45,9 @@
 - [[CMSC 125 Machine Problem 1]]
 - [[CMSC 125 Problem Set 2]]
 - [[Operating Systems]]
-### Week 10: Processor Management
+### Week 7: Processor Management
+- [[CPU Scheduler]]
+### Week 10: Processor Management (continuation)
 - [[CMSC 125 Problem Set 3]]
 
 ## CMSC 128 Software Engineering 1
