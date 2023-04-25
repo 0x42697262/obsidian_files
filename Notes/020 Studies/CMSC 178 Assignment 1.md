@@ -232,7 +232,9 @@ Input images and its output:
 
 In the median filter parameter, setting the mask filter dimension to different values would result into a blurred image like the one shown below:
 ![[Pasted image 20230425200823.png]]
-Notice that when the median filter mask is set to `1x1` dimension, there is no change or removal of the noise salt and pepper.
+Notice that when the median filter mask is set to `1x1` dimension, there is no change or removal of the noise salt and pepper. 
+
+The median filter fails at `0.2` noise level.
 
 ## 4 Comments & Conclusion
 The purpose of this exercise is to eliminate the "salt and pepper" noise from input images using the median filter function. The function takes three parameters, namely the input image and the width and height of the filter mask. Modifying the dimensions of the mask can yield various output images, including ones with no discernible changes or images that appear excessively blurred.
@@ -256,7 +258,7 @@ Note that *3*, *4*, and *5* are outside this exercise's scope.
 
 # Exercise 1D – ( 3% ) – A "Smart" Edge Preserving Noise Filter
 ## 1 Background of the Problem
-
+In this exercise, we are going to implemenet a smart edge preserving noise filter filter that smartly detects the edges of an input image using a Sobel filter. Using a simple blur will blur the entire image but with this exercise, edges are not blurred. This is achieved by reducing the proportion of the averaged image returned by the filter in areas of the image where the image gradients are large. 
 
 ## 2 Procedure
 ### Step 1
@@ -307,11 +309,38 @@ end
 ```
 
 ## 3 Results & Discussion
+The default image provided was used to test the smart blur function and the resulting output was nearly identical, as demonstrated below. This image has a default gaussian blur of `0.002`.
+![[Pasted image 20230425220819.png]]
+
+Increasing the gaussian blur to `0.02` reveals this result:
+![[Pasted image 20230425220914.png]]
+
+Further increasing it to `20%` would result to this:
+![[Pasted image 20230425221008.png]]
+
+The edge can still be seen however it is not that clear. The expected output of this smart blur image should show a very clear edge however what can be seen on the image above does not have a clear edge.
+
+So far, that is for adjusting the tolerance level. If the `N` parameter value where to be set, like for example to 10, this would be the result shown below.
+![[Pasted image 20230425221250.png]]
+What this entails is that the image has been blurred a lot. Suffice to say, `N` represents the blur filter size.
+
 
 
 ## 4 Comments & Conclusion
-This section of the assignment is quite difficult so I had an assistance by using an AI tool to help me develop the code so I am not that certain which configuration that provides the best output.
+This section of the assignment is quite difficult so I had an assistance by using an AI tool to help me develop the code so I am not that certain which configuration that provides the best output. The best parameter values to have a better result would depend on the image size as increasing `N` would increase its blur value and increasing `tolerance` would preserve more edges however it would create more noise. Basing on this scheme, it would be possible to have lower blur value and high tolerance intensity which would output a noisy image which we can then use to one of our exercise's median filter. This would probably fix the noise levels of the image.
 
+There are several limitations to the smart blur function:
+1. The code uses fixed Sobel filters of size 5x5, which may not be appropriate for all images. Different sizes and types of filters may be more suitable for different images.
+2. The code does not provide a way to adjust the strength of the blur. The size of the blur is set by the input parameter N, but there is no way to control the strength of the blur separately from the size.
+3. The code does not provide any options for adjusting the weighting between the original and blurred data. The weighting function is based solely on the gradient magnitude, and the tolerance level is used to determine when to switch between using the original and blurred data. There is no way to adjust the weighting function based on other criteria, such as image content or user preferences.
+4. The code does not account for color images. It converts all input images to grayscale, which may not be appropriate for all applications.
+5. The code is relatively slow due to the use of nested loops to compute the output image. This may be a limitation for large images or real-time applications.
+
+Here are a few suggestions to improve the output of the smart blur function:
+1. Fine-tune the N and tolerance values: The N and tolerance values determine the size of the blur filter and the threshold for detecting edges. Try experimenting with different values of N and tolerance to achieve the desired level of blur while preserving edge details.
+2. Use a better edge detection algorithm: The Sobel filter used in this code is a simple edge detection algorithm that can produce jagged edges. Consider using more advanced algorithms like Canny edge detector or Hough transform to improve edge detection.
+3. Use different weighting functions: The current weighting function is a linear function that only depends on the gradient magnitude. Try experimenting with other weighting functions that incorporate additional image features such as color or texture to achieve better results.
+4. Apply the blur selectively: Instead of applying the blur uniformly across the entire image, try selectively applying the blur to specific regions of the image. For example, you could use a mask to apply the blur only to the noisy regions of the image while preserving the details in other areas.
 
 # Exercise 1E– (2%) – Written Questions
 
