@@ -93,6 +93,16 @@ Third example input image.
 
 The output will always be the same for every identitical image since the input parameter is simply putting an image to the function and taking their RGB values into a list. If an input image where to have been modified to have a bad image result in another parameter, then the image would still be fixed. 
 
+In addition to using regular images as inputs, I also experimented with using a completely white image as the input. The resulting output is displayed below.
+![[Pasted image 20230425195524.png]]
+
+I previously noted that the function does not have any configurations or parameters to adjust, but we can change the input image's tone levels. The previous input images had a bad image tone level of `50%`. Decreasing this value would provide exact results. However, when I increased the tone level percentage to `1000%`, the resulting image would mess up the output image.
+![[Pasted image 20230425195907.png]]
+
+The bad image is somehow identical to the reference image, meaning that when you fix a "good image" in this case, the opposite would effect would happen. It would turn a good image into a bad image. As for the example image below, the bad image is not the same as the reference image however the fixed image still resulted into a bad image.
+
+![[Pasted image 20230425200219.png]]
+
 
 ## 4 Comments & Conclusion
 In this exercise, the function only takes an input image as a parameter so there is nothing to be configured to have the most optimal output. 
@@ -143,7 +153,7 @@ eq_img            = double(new_img) / 255;
 
 
 ## 3 Results & Discussion
-In this study, the function histogram equalization was tested on three different input images. The results of the testing showed that the function worked well as expected. The function only requires the input image itself as a parameter and does not need any other configuration to produce different image outputs.
+In this exercise, the function histogram equalization was tested on three different input images. The results of the testing showed that the function worked well as expected. The function only requires the input image itself as a parameter and does not need any other configuration to produce different image outputs.
 
 To evaluate the performance of the function, two gray colored images and one full colored image were used as input. The choice of a colored image was made to verify if the code worked correctly for such images. However, it should be noted that if an input image is in the RGB color space instead of grayscale, the histogram equalization function may not be applicable, and it would instead require a separate exercise to solve this problem which was already completed on Exercise 1A. Nevertheless, the code function worked as expected similar to Exercise 1A Color Correction / Balancing for the RGB input image.
 
@@ -174,6 +184,7 @@ Below are several limitations of the function code:
 
 # Exercise 1C – ( 2% ) – A Simple median Filter
 ## 1 Background of the Problem
+The objective of this exercise is to implement a simple median filter with the dimensions of MxN pixels by modifying the provided code template, without using library functions from MATLAB Image Processing Toolbox. The exercise includes a pre-existing function, `median_filter.m`, and a testing function, `median_test.m`, which evaluates the efficacy of our solution by removing salt and pepper noise from the input image.
 
 
 ## 2 Procedure
@@ -207,9 +218,41 @@ end
 ```
 
 ## 3 Results & Discussion
+In this exercise, the function was tested on multiple image inputs with slight variations in the levels of salt and pepper noise in order to evaluate its effectiveness across different scenarios. The first image input is the default test image provided by the exercise module and it worked well as expected.
+
+During the second image input test, it was observed that the input image was not in grayscale color space. However, the median filter function was still able to process the image by converting it from RGB color space to grayscale color space. The otuput of the image however is not an RGB color space but a grayscale color space.
+
+The third input image is the same as the first one, but with an increased noise level from `0.02` to `0.2`. Despite using a `3x3 filter mask`, the median filter did not completely remove the salt and pepper noise from the output image. However, the filter performed even worse on the fourth image, which had a noise level closer to 1. The resulting output image was completely distorted, with no trace of the original input image left.
+
+Input images and its output:
+![[Pasted image 20230425193456.png]]
+![[Pasted image 20230425193538.png]]
+![[Pasted image 20230425194902.png]]
+![[Pasted image 20230425195041.png]]
+
+In the median filter parameter, setting the mask filter dimension to different values would result into a blurred image like the one shown below:
+![[Pasted image 20230425200823.png]]
+Notice that when the median filter mask is set to `1x1` dimension, there is no change or removal of the noise salt and pepper.
 
 ## 4 Comments & Conclusion
+The purpose of this exercise is to eliminate the "salt and pepper" noise from input images using the median filter function. The function takes three parameters, namely the input image and the width and height of the filter mask. Modifying the dimensions of the mask can yield various output images, including ones with no discernible changes or images that appear excessively blurred.
 
+The best configuration of the parameter for this code depends on the specific characteristics of the input image and the desired outcome. Generally, a larger filter size can remove more noise but can also result in a more blurred output image which can be seen from our sample input images. Smaller filter sizes, on the other hand, may not remove all the noise but can preserve more detail in the output image.
+
+Based on the code, some of its limitations are:
+1. It only supports 2D grayscale images. If the input image is in color or has more than two dimensions, the function will automatically convert it to grayscale using rgb2gray().
+2. The function assumes that the salt and pepper noise is uniformly distributed across the image, and does not take into account the spatial characteristics of the noise.
+3. The function employs a simple median filter with a fixed window size, which may not be effective for removing noise in all types of images or under different noise conditions.
+4. The function does not provide any user interface for tuning the filter parameters or adjusting the noise removal algorithm.
+
+There are several ways to further improve the output of the median filter:
+1. Adjust the size of the filter mask: A larger filter mask may remove more noise, but at the cost of blurring the image. A smaller filter mask may preserve more detail but may not remove as much noise.
+2. Use adaptive filtering: Instead of using a fixed filter mask size, adaptive filtering adjusts the size of the filter mask based on the local image properties. This can be more effective at removing noise while preserving detail.
+3. Use other filtering techniques: Median filtering is just one type of filter that can be used to remove noise. Other filters such as Gaussian, bilateral, or Wiener filters may be more effective in some situations.
+4. Use machine learning techniques: Machine learning algorithms can be used to learn the properties of noise in an image and remove it in a more sophisticated manner. However, this approach requires a large amount of training data and may be computationally expensive.
+5. Use a combination of techniques: In practice, a combination of filtering techniques may be used to remove noise while preserving detail. For example, a median filter could be followed by a Gaussian filter to further smooth the image.
+
+Note that *3*, *4*, and *5* are outside this exercise's scope.
 
 # Exercise 1D – ( 3% ) – A "Smart" Edge Preserving Noise Filter
 ## 1 Background of the Problem
