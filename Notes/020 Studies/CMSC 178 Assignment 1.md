@@ -343,8 +343,44 @@ Here are a few suggestions to improve the output of the smart blur function:
 4. Apply the blur selectively: Instead of applying the blur uniformly across the entire image, try selectively applying the blur to specific regions of the image. For example, you could use a mask to apply the blur only to the noisy regions of the image while preserving the details in other areas.
 
 # Exercise 1E– (2%) – Written Questions
+**1. (1.0%) You have been given a set of imagery from a 256x256 pixel video surveillance camera to analyse. However, to work out roughly how far away objects of known size (eg. people) are from the camera in the footage you need to determine the field of view of the sensor. Using a tape measure as a guide you are able to estimate that a doorway of 2 metres height appears to span around 32 pixels in the imagery when viewed from 10 metres away.**
+![[Pasted image 20230425224730.png]]
+
+Q: Given the above, what is the likely field of view of the camera? *(you may assume the vertical and horizontal fields of view are the same)*
+![[Pasted image 20230425230043.png]]
 
 
+Q: How far away would a person of height 1.75 metres be if they appeared as  a region of height 8 pixels in this imagery?
+![[Pasted image 20230425231515.png]]
+If we ration the pixel of the door and the person, the person is 3.5x smaller in terms of pixels. Since we know it's 3.5x smaller, this would mean that the person is 3.5x away. Hence, if we multiply 10m by 3.5, the person is `35m` away from the camera.
+
+
+**2. (1%) Carefully explain how a 'median' and an 'alpha trimmed mean' filter work and describe under what circumstances they are useful (illustrate if required).**
+A median filter and an alpha trimmed mean filter are two types of nonlinear filters used to remove noise from images or signals.
+
+A median filter works by replacing the intensity of each pixel with the median intensity value of its neighboring pixels (including itself). The median is calculated by sorting all the pixel intensities in the neighborhood from low to high and picking the middle value. This is useful for removing 'shot' or impulse noise while preserving edges.
+
+An alpha trimmed mean filter works by removing a percentage (alpha) of the highest and lowest intensity pixels from the neighborhood, and then calculating the mean of the remaining pixels. The intensity of the center pixel is replaced with this mean. This filter is useful when there are extreme outlier pixels (high shot noise) that skew the mean. By trimming out these outliers, the filter can reduce the effect of shot noise while still smoothing the image.
+
+For example, in a 5x5 neighborhood, if alpha is 0.2 (trim 20% of pixels), the top and bottom row (5 pixels) are removed. The mean is calculated from the remaining 15 central pixels. This makes the filter less sensitive to impulse noise compared to a standard mean filter.
+
+
+Q: Without using a computer, what would be the result of applying a 3x3 and  a 5x5 median filter to the following simple image? *(you may assume that  white=1, black=0 and that all values outside the image boundaries shown  here are also black ie. 0)*
+![[Pasted image 20230425232230.png]]
+
+
+![[Pasted image 20230425234145.png]]
+3x3 filter:
+![[Pasted image 20230426000451.png]]
+5x5 filter:
+![[Pasted image 20230426000524.png]]
+
+
+Q: Approximately, what would the result be if we instead applied a 3x3 alpha  trimmed mean filter with d=3 ?
+
+![[Pasted image 20230426001527.png]]
+Dark gray = 0.67
+Light gray = 0.33
 
 ---
 Github Reposity: [CMSC178 Assignment 1](https://github.com/KrulYuno/obsidian_files/tree/master/Codes)
