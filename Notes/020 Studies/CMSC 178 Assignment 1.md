@@ -80,10 +80,34 @@ end
 ```
 
 ## 3 Results & Discussion
+ I have tested the following three functions using three input images with varying parameters. The input images consist of a reference image and a corresponding image with poor RGB values. During processing, the image is first passed through the function that extracts reference image values, followed by the function that maps the RGB values, and finally the function that corrects the input image. The output of this process is a fixed image that accurately represents the original subject's color.
+
+This is the resulting output of the corrected image.
+![[Pasted image 20230424002010.png]]
+
+Another example of the same picture but with different bad chart values.
+![[Pasted image 20230424010811.png]]
+
+Third example input image.
+![[Pasted image 20230424011009.png]]
+
+The output will always be the same for every identitical image since the input parameter is simply putting an image to the function and taking their RGB values into a list. If an input image where to have been modified to have a bad image result in another parameter, then the image would still be fixed. 
 
 
 ## 4 Comments & Conclusion
+In this exercise, the function only takes an input image as a parameter so there is nothing to be configured to have the most optimal output. 
 
+For improving the output image, here's a few suggestions to take:
+1. Use vectorization: The current code uses nested loops to iterate over every pixel in the image. However, this approach can be slow and inefficient, especially for large images. A more efficient approach would be to use vectorization to perform the operation on the entire image at once. This can be done using MATLAB's array indexing and broadcasting capabilities.
+2. Use preallocation: The code currently initializes the adjusted_image matrix to zeros at every iteration of the loop. This can be slow, especially for large images. A more efficient approach would be to preallocate the matrix outside the loop, and then fill in the values inside the loop.
+3. Check the size of the RGB_map: The code assumes that the RGB_map is a 256x3 matrix. However, if the size of the map is different, the code will not work correctly. It is important to check the size of the RGB_map before applying it to the image.
+
+There are several limitations of this code:
+1. **Limited lookup table size**: The code assumes that the lookup table is 256x3, which limits the number of colors that can be used to map the RGB values. If a higher color depth is required, the lookup table size will need to be increased, which can be computationally expensive.
+2. **Limited color accuracy**: The code maps the RGB values independently, which can result in inaccurate color representation. The RGB triples do not represent actual colors in the image, and this is not a true colormap. This means that some color information may be lost during the mapping process.
+3. **No support for non-RGB images**: The code only works with RGB images and cannot be used with other color spaces, such as grayscale or indexed color images. If the input image is not in the correct format, the code will not work correctly.
+4. **No error handling for out-of-range values**: The code assumes that the input image and lookup table have values within the range of 0 to 255. If there are any values outside of this range, the code will not work correctly. It is important to handle these out-of-range values appropriately to avoid errors or incorrect output.
+5. **Slow performance for large images**: The code uses nested loops to iterate over every pixel in the image, which can be slow and inefficient for large images. Using vectorization can improve the performance, but this may not be enough for extremely large images
 
 ---
 
@@ -92,7 +116,7 @@ end
 # Exercise 1B – ( 2% ) – Image Contrast Enhancement
 
 ## 1 Background of the Problem
-
+The objective of this exercise is to implement a function that improves the contrast of an image using histogram equalization without relying on built-in MATLAB Image Processing Toolbox functions. Histogram equalization is a technique used to adjust the contrast of an image by redistributing the pixel values to cover a wider range of intensities. This exercise provides an opportunity to develop a deeper understanding of image processing techniques and to gain experience in implementing them using MATLAB.
 
 ## 2 Procedure
 ### Step 1
@@ -119,10 +143,34 @@ eq_img            = double(new_img) / 255;
 
 
 ## 3 Results & Discussion
+In this study, the function histogram equalization was tested on three different input images. The results of the testing showed that the function worked well as expected. The function only requires the input image itself as a parameter and does not need any other configuration to produce different image outputs.
 
+To evaluate the performance of the function, two gray colored images and one full colored image were used as input. The choice of a colored image was made to verify if the code worked correctly for such images. However, it should be noted that if an input image is in the RGB color space instead of grayscale, the histogram equalization function may not be applicable, and it would instead require a separate exercise to solve this problem which was already completed on Exercise 1A. Nevertheless, the code function worked as expected similar to Exercise 1A Color Correction / Balancing for the RGB input image.
+
+Sample inputs:
+![[Pasted image 20230425180414.png]]
+![[Pasted image 20230425180439.png]]
+![[Pasted image 20230425180500.png]]
+![[Pasted image 20230425180508.png]]
+![[Pasted image 20230425180640.png]]
+![[Pasted image 20230425180645.png]]
 
 ## 4 Comments & Conclusion
+Given that the exercise involves a single function which exclusively takes an input image as a parameter, no further configurations are required to optimize the output image. 
 
+Below are several approaches that could be taken to enhance the function's ability to produce high-quality image outputs:
+1. Incorporate adaptive histogram equalization (AHE) or contrast-limited adaptive histogram equalization (CLAHE).
+	1. AHE and CLAHE divide the image into small regions and apply histogram equalization to each region separately to enhance contrast, leading to better results, particularly for images with uneven illumination or varying contrast levels.
+ 2. Use a different method to compute the equalization map, such as the cumulative distribution function (CDF) of the image pixels' intensity values or incorporate techniques like gamma correction to enhance the overall visual quality of the image.
+ 3. Incorporate error handling and input validation to ensure the function can handle a wide range of input images without crashing or producing incorrect results.
+	 1. Add appropriate checks to handle input images with unusual sizes or pixel formats.
+
+Below are several limitations of the function code:
+1. The function assumes that the input image is in the range 0 to 1, and therefore may not work properly for images with a different range of pixel values.
+2. The function only performs histogram equalization and does not include other image enhancement techniques such as noise reduction or sharpening.
+3. The function uses a fixed equalization map for all images and does not adapt to the characteristics of the input image, which may result in suboptimal results for certain images.
+4. The function only works with 2D grayscale images and does not support color images or 3D images.
+5. The function does not include error handling or input validation, which may cause errors or produce incorrect results for certain input images.
 
 # Exercise 1C – ( 2% ) – A Simple median Filter
 ## 1 Background of the Problem
