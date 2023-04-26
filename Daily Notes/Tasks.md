@@ -15,22 +15,22 @@ kanban-plugin: basic
 ## Will Do
 
 - [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
-- [ ] Activity 2: Familiarizing Standard Measures in Software Tool Performance #CMSC194_2 @[[2023-04-27]]
 
 
 ## DOING
 
-- [ ] Assignment 1 #CMSC178 @[[2023-04-20]]
+- [ ] Activity 2: Familiarizing Standard Measures in Software Tool Performance #CMSC194_2 @[[2023-04-27]]
 
 
 ## Postponed
 
-- [ ] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
 
 
 ## DONE
 
 **Complete**
+- [x] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
+- [x] Assignment 1 #CMSC178 @[[2023-04-20]]
 - [x] Problem Set 3 #CMSC125 @[[2023-04-23]]
 - [x] Quiz 5 #CMSC178 @[[2023-04-20]]
 - [x] First Long Exam #CMSC125 @[[2023-04-17]]
