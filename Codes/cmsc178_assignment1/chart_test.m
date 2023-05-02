@@ -5,9 +5,7 @@
 truecard = imread('color_testchart.jpg');
 RGB_truechart = get_chart_values(truecard);
 
-% trueimage = imread('color_toys.jpg');   %<-- you can change this if you like
-% trueimage = imread('chickenhaha.png');   %<-- you can change this if you like
-trueimage = imread('chickenstare.jpg');   %<-- you can change this if you like
+trueimage = imread('color_toys.jpg');   %<-- you can change this if you like
 
 % -------------------------------------------------------------------------
 % test example 1 - reduce all red tones by 50% (cyan colored)

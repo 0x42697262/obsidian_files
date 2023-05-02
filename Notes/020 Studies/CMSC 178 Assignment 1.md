@@ -1,4 +1,4 @@
-# Exercise 1A – ( 3% ) – Colour Balancing using a Reference Chart
+	# Exercise 1A – ( 3% ) – Colour Balancing using a Reference Chart
 ## 1 Background of the Problem
 The objective of this exercise is to implement three functions that extract RGB color samples from a color chart patch, map the RGB values to correct color imbalances between the reference and test charts, and apply the correction to an image. This exercise presents an opportunity to learn and develop color balancing skills by using a reference chart. 
 
