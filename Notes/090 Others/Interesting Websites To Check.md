@@ -29,6 +29,7 @@
 - https://github.com/enaqx/awesome-pentest
 - https://github.com/onlurking/awesome-infosec
 - https://github.com/hmaverickadams/Beginner-Network-Pentesting
+- https://github.com/cider-security-research/cicd-goat
 
 ### Something Touhou (東方Project) Related
 - [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
