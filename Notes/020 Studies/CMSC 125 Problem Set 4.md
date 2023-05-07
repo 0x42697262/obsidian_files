@@ -26,7 +26,11 @@ c.) Worst-fit
 ```
 
 > [!INFO]- Answer
->
+> In **first-fit**, the *first chunk of memory in the free list that is big enough* to accomadate the requesting process is allocated. It starts at the beginning of the list and searches sequentially for the first chunk that is big enough. This is the simplest and fastest method but may lead to internal fragmentation.
+> 
+> In **best-fit**, the chunk of memory in the free list which produces the *smallest left-over* is assigned to the requesting process. This strategy is efficient in terms of memory usage, as it can help minimize internal fragmentation. However, it may take longer to find a suitable block of memory since the entire free list needs to be searched.
+> 
+> As for **worst-fit**, the chuck of memory in the free list which produces the *largest left-over* is assigned to the requesting process. This results in the most significant leftover memory after the allocation as this strategy can lead to more internal fragmentation and may not be as efficient as the other two methods. However, it can be useful when allocating larger memory blocks.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
