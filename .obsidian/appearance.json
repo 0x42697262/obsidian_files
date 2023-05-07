@@ -2,7 +2,6 @@
   "accentColor": "",
   "theme": "moonstone",
   "cssTheme": "Blue Topaz",
-  "enabledCssSnippets": [
-    "center_table"
-  ]
+  "enabledCssSnippets": [],
+  "baseFontSize": 16
 }

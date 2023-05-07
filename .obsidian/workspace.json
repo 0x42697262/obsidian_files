@@ -27,9 +27,12 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Daily Notes/Tasks.md"
+                "file": "Daily Notes/Tasks.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               },
               "pinned": true
             }
@@ -65,38 +68,12 @@
             }
           },
           {
-            "id": "0132ed1f53242c15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/020 Studies/CMSC 178 Assignment 1.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec43fec491bbd7b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "85f40b5bf36d44ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/090 Others/091 Notes.md",
+                "file": "Notes/__orphans/CPU Scheduler.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -104,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -151,7 +128,15 @@
             }
           },
           {
-            "id": "c40d7ef376ccd36e",
+            "id": "3cdc0fa36b8d9777",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "3d46161ec402b92a",
             "type": "leaf",
             "state": {
               "type": "file-tree-view",
@@ -159,12 +144,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -180,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
+                "file": "Notes/020 Studies/020 Studies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md",
+                "file": "Notes/020 Studies/020 Studies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -220,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/__orphans/CMSC 125 Problem Set 3.md"
+                "file": "Notes/020 Studies/020 Studies.md"
               }
             }
           },
@@ -245,68 +229,72 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "notion-like-tables:Create Notion-Like table": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "ec43fec491bbd7b2",
+  "active": "f942dea99b649c91",
   "lastOpenFiles": [
-    "Notes/090 Others/091 Notes.md",
-    "Notes/__orphans/Center a Table in Obsidian.md",
-    "Notes/020 Studies/CMSC 125 Problem Set 2.md",
-    "Notes/__orphans/CMSC 125 Problem Set 3.md",
-    "Notes/020 Studies/CMSC 178 Assignment 1.md",
-    "Daily Notes/2023-04-20.md",
+    "Codes/cmsc125_machine_problem_2/requirements.txt",
+    "Codes/cmsc125_machine_problem_2/README.md",
+    "Codes/cmsc125_machine_problem_2/tests/__init__.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/views.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/__init__.py",
+    "Codes/cmsc125_machine_problem_2/tests",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/main.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2",
+    "Codes/cmsc125_machine_problem_2/main.py",
+    "Codes/cmsc125_machine_problem_2/process2.txt",
+    "Codes/cmsc125_machine_problem_2/process1.txt",
+    "Codes/cmsc125_machine_problem_2",
+    "Drawing 2023-05-06 06.20.48.excalidraw.md",
     "Notes/020 Studies/020 Studies.md",
-    "ATTACHMENT_FOLDER/Pasted image 20230424011009.png",
-    "Codes/cmsc178_assignment1/chickenstare.jpg",
-    "ATTACHMENT_FOLDER/Pasted image 20230424010811.png",
-    "Codes/cmsc178_assignment1/chickenhaha.png",
-    "ATTACHMENT_FOLDER/Pasted image 20230424003053.png",
-    "ATTACHMENT_FOLDER/Pasted image 20230424003032.png",
-    "ATTACHMENT_FOLDER/Pasted image 20230424002718.png",
-    "ATTACHMENT_FOLDER/Pasted image 20230424002010.png",
-    "Daily Notes/Non Zero Day.md",
-    "Daily Notes/Tasks.md",
+    "Untitled.canvas",
+    "Notes/__orphans/Center a Text Vertically in Latex.md",
+    "Notes/090 Others/091 Notes.md",
+    "Notes/__orphans/Image Analysis.md",
+    "Notes/__orphans/CPU Scheduler.md",
+    "Drawing 2023-05-04 03.00.12.excalidraw.md",
+    "Daily Notes/2023-04-24.md",
+    "Image Analysis.canvas",
     "Notes/020 Studies/Image Compression.md",
+    "Notes/090 Others/Interesting Websites To Check.md",
+    "Daily Notes/Non Zero Day.md",
+    "Notes/020 Studies/CMSC 178 Assignment 1.md",
+    "Daily Notes/Tasks.md",
+    "Notes/__index/000 Index.md",
+    "ATTACHMENT_FOLDER/Pasted image 20230426001527.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230426000524.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230426000451.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425234407.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425234145.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425232230.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425231515.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425230043.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425224730.png",
+    "ATTACHMENT_FOLDER/Pasted image 20230425221250.png",
+    "Notes/020 Studies/CMSC 125 Problem Set 3.md",
+    "Notes/020 Studies/CMSC 125 Problem Set 2.md",
+    "Notes/__orphans/Untitled 2.md",
+    "Notes/020 Studies/Operating Systems.md",
+    "Templates/Non0Day.md",
+    "Notes/090 Others/Center a Table in Obsidian.md",
+    "Daily Notes/2023-04-20.md",
     "Notes/__orphans/111.md",
     "Codes/README.md",
-    "Codes/cmsc178_assignment1/vintage_postcard.tif",
-    "Codes/cmsc178_assignment1/smart_blur_test.m",
-    "Codes/cmsc178_assignment1/smart_blur.m",
-    "Codes/cmsc178_assignment1/median_test.m",
-    "Codes/cmsc178_assignment1/median_filter.m",
-    "Codes/cmsc178_assignment1/low_light.tif",
-    "Codes/cmsc178_assignment1/lift_toodark.tif",
-    "Codes/cmsc178_assignment1/kookaburra_flat.tif",
-    "Codes/cmsc178_assignment1/house_flat.tif",
-    "Codes/cmsc178_assignment1/histeq_test.m",
-    "Codes/cmsc178_assignment1/color_toys.jpg",
-    "Codes/cmsc178_assignment1/color_testchart.jpg",
-    "Notes/020 Studies/CMSC 125 Machine Problem 1.md",
-    "Notes/020 Studies/CMSC 124 Machine Problem 2 Documentation.md",
-    "Notes/020 Studies/CMSC 124 Machine Problem 2.md",
-    "Templates/Non0Day.md",
-    "Notes/__orphans/011.md",
-    "Notes/090 Others/090 Others.md",
-    "Notes/090 Others/My guideline for reading.md",
-    "Notes/__index/000 Index.md",
-    "Notes/030 Learning/030 Learning.md",
-    "Notes/020 Studies/CMSC 125 Problem Set 1.md",
-    "Notes/020 Studies/Operating Systems.md",
-    "Notes/010 My Arch Journey/Fuck WINE associations.md",
-    "Notes/__orphans/CMSC194.2 Activity Guide 1.md",
-    "Notes/__orphans/Untitled 1.md"
+    "Notes/020 Studies/CMSC 125 Machine Problem 1.md"
   ]
 }
