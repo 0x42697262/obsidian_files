@@ -8,3 +8,4 @@
 [[LAMPP]]
 [[My guideline for reading]]
 [[Center a Table in Obsidian]]
+[[Center a Text Vertically in Latex]]
