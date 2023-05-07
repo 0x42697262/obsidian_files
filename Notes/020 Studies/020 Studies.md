@@ -49,6 +49,9 @@
 - [[CPU Scheduler]]
 ### Week 10: Processor Management (continuation)
 - [[CMSC 125 Problem Set 3]]
+### Weeks 11-12: Memory Management
+- [[CMSC 125 Problem Set 4]]
+
 
 ## CMSC 128 Software Engineering 1
 ### Requirements Modeling: Scenario-based
@@ -72,6 +75,8 @@
 - [[CMSC 178 Assignment 1]]
 ### Week 5: Image Compression
 - [[Image Compression]]
+### Week 7: Image Analysis
+- [[Image Analysis]]
 
 
 ## CMSC 192 Ethical and Professional Issues in Computing
