@@ -43,27 +43,27 @@ c.) Worst-fit
 >**Steps:**
 >
 >0) Memory Initialization
->1) Allocated *212K* memory
->2) Allocated *417K* memory
->3) Allocated *112K* memory
+>1) Allocated *212K* memory to block size of *500k* (remaining 288k)
+>2) Allocated *417K* memory to block size of *600k* (remaining 183k)
+>3) Allocated *112K* memory to block size of *500k* (remaining 176k)
 >4) Failure to allocate *426K* memory
 > 
 > ![[Pasted image 20230508100118.png]]
 >**Steps:**
 >
 >0) Memory Initialization
->1) Allocated *212K* memory
->2) Allocated *417K* memory
->3) Allocated *112K* memory
->4) Allocated *426K* memory
+>1) Allocated *212K* memory memory to block size of *300k* (remaining 88k)
+>2) Allocated *417K* memory memory to block size of *500k* (remaining 83k)
+>3) Allocated *112K* memory memory to block size of *200k* (remaining 88k)
+>4) Allocated *426K* memory memory to block size of *600k* (remaining 174k)
 > 
 > ![[Pasted image 20230508100805.png]]
 >**Steps:**
 >
 >0) Memory Initialization
->1) Allocated *212K* memory
->2) Allocated *417K* memory
->3) Allocated *112K* memory
+>1) Allocated *212K* memory memory to block size of *600k* (remaining 388k)
+>2) Allocated *417K* memory memory to block size of *500k* (remaining 83k)
+>3) Allocated *112K* memory memory to block size of *600k* (remaining 276k)
 >4) Failure to allocate *426K* memory
 >
 > In this particular example, the **best-fit** algorithm makes the most efficient use of memory as it minimizes the amount of leftover memory after allocation, thereby reducing the possibility of fragmentation.
@@ -94,7 +94,9 @@ c.) Worst-fit
 ### 6.) Most operating systems go to the extend of exhausting all methods of making available a space for an incoming job just to avoid resorting to compaction. Why is this so?
 
 > [!INFO]- Answer
->
+> Compaction is usually used as a last resort because it is expensive as it cost a lot of CPU computations and is only possible if the programs in memory can be relocated. Hence why most operating systems try to avoid resorting to compaction because it can be a very time-consuming and resource-intensive process. Compaction involves moving the data in memory around so that all the free space is contiguous, which requires a significant amount of CPU time and can cause delays in other processes running on the system. This is why most operating systems will first try to use other methods to make space available for incoming jobs, such as swapping out inactive processes, releasing memory used by terminated processes, or using memory overcommitment techniques.
+> 
+> Although, there may be situations where compaction is necessary to avoid memory exhaustion or to optimize memory usage. In these cases, operating systems will typically use algorithms such as mark-and-sweep or copying garbage collection to minimize the impact of compaction on system performance.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
@@ -103,7 +105,32 @@ c.) Worst-fit
 ### 7.) Consider a swapping system in which the memory is composed of the following hole sizes (assuming the leftmost hole is the first in the list): 10K, 4K, 20K, 18K, 9K, 12K, 15K Which hole is taken for successive segment requests of 12K, 5K and 10K for first-fit? How about for best-fit and worst-fit?
 
 > [!INFO]- Answer
+> ![[Pasted image 20230508194015.png]]
+> 
+> **Steps:**
 >
+> 0) Memory Initialization of Holes
+> 1) Allocated *12K* memory on the *20k* block hole (remaining 8k)
+> 2) Allocated *5K* memory on the *10k* block hole (remaining 5k)
+> 3) Allocated *10K* memory on the *18k* block hole (remaining 8k)
+>
+> ![[Pasted image 20230508200122.png]]
+> 
+> **Steps:**
+>
+> 0) Memory Initialization of Holes
+> 1) Allocated *12K* memory on the *12k* block hole (remaining 0k)
+> 2) Allocated *5K* memory on the *9k* block hole (remaining 4k)
+> 3) Allocated *10K* memory on the *10k* block hole (remaining 0k)
+> 
+> ![[Pasted image 20230508200725.png]]
+> 
+> **Steps:**
+>
+> 0) Memory Initialization of Holes
+> 1) Allocated *12K* memory on the *20k* block hole (remaining 8k)
+> 2) Allocated *5K* memory on the *18k* block hole (remaining 13k)
+> 3) Allocated *10K* memory on the *15k* block hole (remaining 5k)
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
