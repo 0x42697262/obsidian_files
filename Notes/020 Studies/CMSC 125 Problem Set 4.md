@@ -133,13 +133,18 @@ c.) Worst-fit
 > 3) Allocated *10K* memory on the *15k* block hole (remaining 5k)
 
 > [!INFO]- Source
-> Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
-> Albacea, Eliezer. (2007). “Operating Systems: Basic Concepts Third Edition”. JPVA Publishing House.
+> Me
 
 ### 8.) What is swapping? What are the motivations for providing swapping? Show how this technique enables a reasonable response time to be given to each user of an interactive system. In what situation is swapping not effective?
 
 > [!INFO]- Answer
->
+> Swapping refers to temporarily moving data or processes from RAM (Random Access Memory) to disk storage, in order to free up memory space and improve overall system performance.
+> 
+> The main motivation for providing swapping is to allow a computer's operating system to manage memory usage more efficiently. When there is insufficient physical memory available to run all active programs simultaneously, swapping allows some of these programs to be moved to disk while others continue to run. This can help prevent crashes caused by running out of memory, as well as improve overall system responsiveness.
+> 
+> Swapping also helps ensure that all users of an interactive system receive a reasonable response time, even when many programs are running concurrently. By temporarily moving less frequently used applications to disk, the operating system can make more physical memory available to other programs that need it. As a result, waiting times for individual users can be reduced, helping to maintain the overall usability of the system.
+> 
+> However, there are situations where swapping may not be effective, such as when the disk I/O speed is much slower than the CPU processing speed. In such cases, constantly reading and writing data between the RAM and disk can lead to significant slowdowns and negatively impact system performance. Additionally, using older disks with higher latencies and lower throughput can further exacerbate these issues.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
@@ -159,7 +164,28 @@ e.) get faster other I/O devices?
 ```
 
 > [!INFO]- Answer
->
+> To determine the effect on CPU utilization under different scenarios, let's first consider the current scenario:
+> 
+> - CPU utilization is at 20%, meaning that 80% of the time, the CPU is idle.
+> - The drum swapping device has a high utilization rate of 99.7%.
+> - Other I/O devices have a low utilization rate of only 5%.
+> 
+> Now, let's analyze each of the proposed changes:
+> 
+> a) Get a Faster CPU
+> If you add a faster CPU to your existing setup, the CPU utilization could potentially reduce significantly due to increased efficiency. With a faster processor, the same amount of work can be completed faster, which means that the CPU would spend less time idling. However, since the swapping device is already heavily loaded, adding a faster CPU alone might not have a noticeable impact on reducing CPU utilization.
+> 
+> b) Get a Bigger Hard Disk for Swapping
+> Increasing the size of the swap device (hard disk) could alleviate the load on the current swapping device. If the new swap device is large enough, it could store more data, allowing the system to rely less on the original swap device. Since the original swap device is currently highly utilized, reducing its load should release resources that were previously tied up during swapping operations. This could result in improved overall system performance and possibly lower CPU utilization rates.
+> 
+> c) Increase Degree of Multiprogramming
+> By increasing the number of jobs being processed simultaneously through multitasking, the demand placed on system resources increases proportionally. This increase in resource consumption usually results in increased CPU utilization. Since the CPU is currently only utilized 20% of the time, introducing additional tasks into the mix should cause the CPU utilization percentage to rise.
+> 
+> d) Decrease Degree of Multiprogramming
+> On the opposite end of the spectrum, decreasing the degree of multiprogramming reduces the total number of tasks competing for system resources, resulting in fewer context switches and less CPU utilization.
+> 
+> e) Get Faster I/O Devices
+> I/O device utilization is only 5% then it is suffice to say that the I/O devices is being bottlenecked by other components of the system. So, getting  a faster I/O device is unlikely to have a significant impact on CPU utilization.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
