@@ -39,11 +39,38 @@ c.) Worst-fit
 ### 3.) Given memory partitions of 100K, 500K, 200K, 300K and 600K (in order), how would each of the First-fit, Best-fit and Worst-fit algorithms place processes of 212K, 417K, 112K, and 426K (in order)? Which algorithm makes the most efficient use of memory?
 
 > [!INFO]- Answer
+>![[Pasted image 20230508090237.png]]
+>**Steps:**
 >
+>0) Memory Initialization
+>1) Allocated *212K* memory
+>2) Allocated *417K* memory
+>3) Allocated *112K* memory
+>4) Failure to allocate *426K* memory
+> 
+> ![[Pasted image 20230508100118.png]]
+>**Steps:**
+>
+>0) Memory Initialization
+>1) Allocated *212K* memory
+>2) Allocated *417K* memory
+>3) Allocated *112K* memory
+>4) Allocated *426K* memory
+> 
+> ![[Pasted image 20230508100805.png]]
+>**Steps:**
+>
+>0) Memory Initialization
+>1) Allocated *212K* memory
+>2) Allocated *417K* memory
+>3) Allocated *112K* memory
+>4) Failure to allocate *426K* memory
+>
+> In this particular example, the **best-fit** algorithm makes the most efficient use of memory as it minimizes the amount of leftover memory after allocation, thereby reducing the possibility of fragmentation.
 
 > [!INFO]- Source
-> Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
-> Albacea, Eliezer. (2007). “Operating Systems: Basic Concepts Third Edition”. JPVA Publishing House.
+> Me
+
 
 ### 4.) Consider a system where a program can be separated into two parts: code and data. The CPU knows whether it wants an instruction (instruction fetch) or data (data fetch or store). Therefore, two base-limit register pairs are provided: one for the instructions and one for the data. The instruction base-limit register pair is automatically read-only, so programs can be shared among different users. Discuss the advantages and disadvantages of this scheme.
 
