@@ -67,6 +67,7 @@
 - [[CMSC 142 Machine Problem 3]]
 
 ## CMSC 170 Introduction to AI
+- [[CMSC 170 Naive Bayes Exercise]]
 
 
 ## CMSC178 Image Processing

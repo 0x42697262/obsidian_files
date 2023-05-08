@@ -1,4 +1,41 @@
 
+## 2023-05-08
+Today's Daily Note: [[2023-05-08]]
+- [ ] Read **CompTIA Security+ SY0-031** book
+- [ ] Play some **CTFs**
+	- [ ] PicoCTF
+- [ ] Play **Wargames**
+	- [ ] [Hacker.org](http://www.hacker.org/)
+	- [ ] [HackThisSite](https://www.hackthissite.org/)
+	- [ ] [Mod-X](http://www.mod-x.co.uk/main.php)
+	- [ ] [OverTheWire](https://overthewire.org/wargames/)
+- [ ] Learn
+	- [ ] PicoCTF Primer
+
+ 
+ **EXTRA:**
+ - [[CMSC 125 Problem Set 4]]
+ - [[CMSC 170 Naive Bayes Exercise]]
+
+
+## 2023-04-28
+Today's Daily Note: [[2023-04-28]]
+- [ ] Read **CompTIA Security+ SY0-031** book
+- [ ] Play some **CTFs**
+	- [ ] PicoCTF
+- [ ] Play **Wargames**
+	- [ ] [Hacker.org](http://www.hacker.org/)
+	- [ ] [HackThisSite](https://www.hackthissite.org/)
+	- [ ] [Mod-X](http://www.mod-x.co.uk/main.php)
+	- [ ] [OverTheWire](https://overthewire.org/wargames/)
+- [ ] Learn
+	- [ ] PicoCTF Primer
+
+ 
+ **EXTRA:**
+ - CMSC 178 Quiz 6
+
+
 ## 2023-04-26
 Today's Daily Note: [[2023-04-26]]
 - [ ] Read **CompTIA Security+ SY0-031** book
