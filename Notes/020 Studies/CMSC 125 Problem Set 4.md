@@ -75,7 +75,9 @@ c.) Worst-fit
 ### 4.) Consider a system where a program can be separated into two parts: code and data. The CPU knows whether it wants an instruction (instruction fetch) or data (data fetch or store). Therefore, two base-limit register pairs are provided: one for the instructions and one for the data. The instruction base-limit register pair is automatically read-only, so programs can be shared among different users. Discuss the advantages and disadvantages of this scheme.
 
 > [!INFO]- Answer
->
+> The scheme where a program is separated into code and data segments, and two base-limit register pairs are provided for each segment has several advantages. One of the major advantages is that it facilitates code and data sharing among different processes, thereby reducing memory usage and improving system efficiency. Since the instruction base-limit register is read-only, it ensures that program code cannot be modified, which enhances system security and prevents unauthorized access and malicious attacks.
+> 
+> Furthermore, this scheme can be used to enforce memory protection by restricting program access to memory outside of its allocated range, preventing segmentation faults and improving system stability. However, there are some disadvantages to this scheme. For instance, the available address space for each segment is limited, which can become a constraint when dealing with large programs. Additionally, separating code and data segments requires additional overhead on the CPU, which can lead to reduced system performance. Finally, implementing and maintaining this scheme can add complexity to the memory management system, making it difficult to implement and manage.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
@@ -84,11 +86,10 @@ c.) Worst-fit
 ### 5.) Why is virtual address translation usually done using hardware instead of software?
 
 > [!INFO]- Answer
->
+> Virtual address translation is usually done using hardware instead of software because hardware-based translation is much faster than software-based translation. Hardware-based translation uses a special, small, fast-lookup hardware cache called a translation look-aside buffer (TLB), which is associative, high-speed memory. Each entry in the TLB consists of two parts: a key (or tag) and a value. When the associative memory is presented with an item, the item is compared with all keys simultaneously. If the item is found, the corresponding value field is returned. The search is fast; a TLB lookup in modern hardware is part of the instruction pipeline, essentially adding no performance penalty. On the other hand, software-based translation requires the operating system to perform the translation, which involves accessing the page table and performing calculations to determine the physical address. This process is much slower than hardware-based translation and can significantly slow down the system.
 
 > [!INFO]- Source
 > Silberschatz, A., Gagne, G and Galvin, P. (2018). “Operating Systems Concepts Tenth Edition”. John Wiley & Sons Inc.
-> Albacea, Eliezer. (2007). “Operating Systems: Basic Concepts Third Edition”. JPVA Publishing House.
 
 ### 6.) Most operating systems go to the extend of exhausting all methods of making available a space for an incoming job just to avoid resorting to compaction. Why is this so?
 
