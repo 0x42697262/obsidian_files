@@ -8,5 +8,5 @@ def test_config():
 def test_index(client):
     response    = client.get('/')
     assert response.status_code == 200
-    assert b'<div class="split left">' in response.data
-    assert b'<div class="split right">' in response.data
+    assert b'<div class="container input">' in response.data
+    assert b'<div class="container output">' in response.data
