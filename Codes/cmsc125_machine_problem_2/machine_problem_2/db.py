@@ -39,3 +39,25 @@ def init_app(app):
     # adds a new command that can be called with the flask command.
     app.cli.add_command(init_db_command)
 
+
+def insert_process(process_id: int, quantum = None):
+    get_db().execute(
+            "INSERT INTO process (process_id, quantum) VALUES (?, ?)",
+            (process_id, quantum),
+            )
+
+
+def insert_job(process_id: int, job_id: int, arrival_time: int, burst_time: int, priority = None ):
+    """process_id: Process ID of the job
+    job_id: Job ID
+    arritval_time: Time job arrived
+    burst_time: Job duration
+    priority: Priority ranking for Priority scheduling (optional)"""
+
+    get_db().execute(
+            "INSERT INTO job (process_id, job_id, arrival_time, burst_time, priority) VALUES (?, ?, ?, ?, ?)",
+            (process_id, job_id, arrival_time, burst_time, priority),
+            )
+
+def commit():
+    get_db().commit()

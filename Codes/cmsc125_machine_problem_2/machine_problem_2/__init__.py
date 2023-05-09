@@ -17,11 +17,25 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    from . import db
+    db.init_app(app)
+
     @app.route('/')
     def index():
         return "index() page"
 
-    from . import db
-    db.init_app(app)
+    @app.route('/test')
+    def test():
+        db.insert_process(1);
+        db.insert_job(1, 1, 0, 10)
+        print('dddd')
+        db.commit()
+
+        return "OK!"
+    
+    @app.route('/commit')
+    def commit():
+
+        return "commited!"
 
     return app
