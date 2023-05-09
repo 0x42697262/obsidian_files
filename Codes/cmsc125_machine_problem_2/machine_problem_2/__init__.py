@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -22,20 +22,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return "index() page"
+        return render_template('index.html')
 
-    @app.route('/test')
-    def test():
-        db.insert_process(1);
-        db.insert_job(1, 1, 0, 10)
-        print('dddd')
-        db.commit()
-
-        return "OK!"
-    
-    @app.route('/commit')
-    def commit():
-
-        return "commited!"
 
     return app
