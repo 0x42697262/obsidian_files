@@ -40,10 +40,10 @@ def init_app(app):
     app.cli.add_command(init_db_command)
 
 
-def insert_process(process_id: int, quantum = None):
+def insert_process(quantum = None):
     get_db().execute(
-            "INSERT INTO process (process_id, quantum) VALUES (?, ?)",
-            (process_id, quantum),
+            "INSERT INTO process (quantum) VALUES (?)",
+            (quantum,),
             )
 
 

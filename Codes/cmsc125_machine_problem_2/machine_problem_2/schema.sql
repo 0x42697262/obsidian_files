@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS job;
 
 CREATE TABLE
   process (
-    process_id INTEGER NOT NULL PRIMARY KEY,
+    process_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     quantum INTEGER NULL
   );
 
