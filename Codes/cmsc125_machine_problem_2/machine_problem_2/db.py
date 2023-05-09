@@ -59,5 +59,13 @@ def insert_job(process_id: int, job_id: int, arrival_time: int, burst_time: int,
             (process_id, job_id, arrival_time, burst_time, priority),
             )
 
+
+def select_last_process():
+    cursor = get_db().execute(
+                "SELECT MAX(process_id) FROM process;"
+                )
+    
+    return cursor.fetchone()
+
 def commit():
     get_db().commit()

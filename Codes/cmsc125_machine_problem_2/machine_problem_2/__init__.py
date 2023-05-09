@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, request
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -23,6 +23,15 @@ def create_app(test_config=None):
     @app.route('/')
     def index():
         return render_template('index.html')
+
+
+    from . import functions
+
+    @app.route('/submitprocess', methods=['POST'])
+    def submit_input():
+        functions.insert_to_db(request.json['process'], request.json['quantum'])
+
+        return jsonify("sdf")
 
 
     return app
