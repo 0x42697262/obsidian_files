@@ -4,38 +4,28 @@ Make sure to have a python environment configured. I won't set it inside here to
 
 # Running
 
-First initialize the database sqlite by
+Move to the `machine_problem_2` directory, then run:
 
 ```bash
-$ flask --app machine_problem_2 init-db
+$ python main.py
 ```
 
-Move to the root directory, then run:
+or you can just without changing directory
 
 ```bash
-$ flask --app machine_problem_2 run --debug
+$ python machine_problem_2/main.py
 ```
 
 # Project Layout
 
-I based the project layout structure on [Flask's documentation](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/) since following ChatGPT's structure was quite confusing.
-Not to mention, video tutorials like from YouTube are also confusing. Hence, I will follow this kind of structure:
-
 ```
 .
 ├── machine_problem_2/
-│   ├── __init__.py
-│   ├── db.py
-│   ├── schema.sql
-│   ├── templates/
-│       └── base.html
-│   └── static/
-│       └── style.css
-├── tests/
-│   ├── conftest.py
-│   ├── data.sql
-│   ├── test_factory.py
-│   ├── test_db.py
+│   ├── frame.py
+│   ├── main.py
+│   ├── scheduling_algorithms.py
+│   ├── styles.py
+│   ├── tabview.py
+│   └── treeview.py
+└── tests/
 ```
-
-Note that I skipped some files from the standard layout since I do not need them.
