@@ -7,7 +7,10 @@
   "table-editor-obsidian",
   "calendar",
   "better-word-count",
-  "obsidian-kanban",
   "dataview",
-  "file-tree-alternative"
+  "file-tree-alternative",
+  "obsidian-kanban",
+  "mathlinks",
+  "obsidian-latex",
+  "obsidian-mathjax-wikilinks"
 ]
