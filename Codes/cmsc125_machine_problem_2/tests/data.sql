@@ -1,11 +1,11 @@
 INSERT INTO
-  process (process_id, quantum)
+  process (quantum)
 VALUES
-  (1, 4),
-  (2, 4),
-  (3, NULL),
-  (4, NULL),
-  (5, NULL);
+  (4),
+  (4),
+  (NULL),
+  (NULL),
+  (NULL);
 
 INSERT INTO
   job (
