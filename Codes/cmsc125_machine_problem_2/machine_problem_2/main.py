@@ -22,7 +22,7 @@ class App(ctk.CTk):
 
 
         self.title("Machine Problem 2 – On Processor Management and Job Scheduling")
-        self.geometry(f"{1366}x{768}") 
+        self.geometry(f"{1716}x{768}") 
 
 
         # configure grid layout (4x4)
@@ -113,24 +113,27 @@ class App(ctk.CTk):
         console_debug(inspect.stack()[0][3], "Copied data of self.PROCESS to self.scheduling_algorithms")
 
         # calculate
-        for p in self.scheduling_algorithms['FCFS'].data:
-            self.scheduling_algorithms['FCFS'].calculate_waiting_time(p)
-            self.scheduling_algorithms['FCFS'].calculate_turnaround_time(p)
-            self.scheduling_algorithms['FCFS'].calculate_computing_time(p)
-            print(self.scheduling_algorithms['FCFS'].data[p]['waiting_time'], self.scheduling_algorithms['FCFS'].data[p]['turnaround_time'])
+        for algo in self.algorithms:
+            for index in range(len(self.scheduling_algorithms[algo].data)):
+                self.scheduling_algorithms[algo].calculate_waiting_time(index)
+                self.scheduling_algorithms[algo].calculate_turnaround_time(index)
+                self.scheduling_algorithms[algo].calculate_computing_time(index)
+
 
         # place
         for algo in self.algorithms:
             for p in self.scheduling_algorithms[algo].data:
-                # print(self.treeview_algos[algo].table)
                 self.treeview_algos[algo].table.insert(
                         '',
                         'end',
                         values = (
-                            p,
-                            self.scheduling_algorithms[algo].data[p]['turnaround_time'],
-                            self.scheduling_algorithms[algo].data[p]['waiting_time'],
-                            self.scheduling_algorithms[algo].data[p]['computing_time'],
+                            p[0], # job
+                            p[1]['arrival_time'],
+                            p[1]['burst_time'],
+                            p[1]['priority'],
+                            p[1]['waiting_time'],
+                            p[1]['turnaround_time'],
+                            p[1]['computing_time'],
                             )
                         )
             self.treeview_algos[algo].table.insert(
@@ -138,8 +141,11 @@ class App(ctk.CTk):
                         'end',
                         values = (
                             'avg',
-                            self.scheduling_algorithms[algo].calculate_avg_waiting_time(),
+                            '-',
+                            '-',
+                            '-',
                             self.scheduling_algorithms[algo].calculate_avg_turnaround_time(),
+                            self.scheduling_algorithms[algo].calculate_avg_waiting_time(),
                             self.scheduling_algorithms[algo].calculate_avg_computing_time(),
                             )
                         )
@@ -156,7 +162,7 @@ class App(ctk.CTk):
         console_debug(inspect.stack()[0][3], "Cleared data for self.input_process_tree")
 
         for sa in self.scheduling_algorithms:
-            self.scheduling_algorithms[sa].data = {}
+            self.scheduling_algorithms[sa].data = []
         console_debug(inspect.stack()[0][3], "Cleared data for self.scheduling_algorithms")
 
         # dont forget to clear the treeviews in tabview
