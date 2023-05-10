@@ -66,7 +66,9 @@ class App(ctk.CTk):
         treeview.modify(self.input_process_tree)
         def item_selected(event):
             for tv_a in self.algorithms:
-                self.treeview_algos[tv_a].table.selection_set(self.input_process_tree.selection())
+                items = self.input_process_tree.selection()
+                self.treeview_algos[tv_a].table.selection_set(items)
+                print(items)
         self.input_process_tree.bind('<<TreeviewSelect>>', item_selected)
 
         # create tabview
@@ -97,7 +99,8 @@ class App(ctk.CTk):
             self.input_process_tree.insert(
                     '', 
                     'end', 
-                    values=(
+                    iid = p,
+                    values =(
                         p, 
                         self.PROCESS[p]['arrival_time'], 
                         self.PROCESS[p]['burst_time'], 
@@ -130,6 +133,7 @@ class App(ctk.CTk):
                 self.treeview_algos[algo].table.insert(
                         '',
                         'end',
+                        iid = p[0],
                         values = (
                             p[0], # job
                             p[1]['arrival_time'],
@@ -143,6 +147,7 @@ class App(ctk.CTk):
             self.treeview_algos[algo].table.insert(
                         '',
                         'end',
+                        iid = None,
                         values = (
                             'avg',
                             '-',
