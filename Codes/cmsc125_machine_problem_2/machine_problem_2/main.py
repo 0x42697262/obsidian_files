@@ -22,7 +22,7 @@ class App(ctk.CTk):
 
 
         self.title("Machine Problem 2 – On Processor Management and Job Scheduling")
-        self.geometry(f"{1716}x{768}") 
+        self.geometry(f"{1916}x{768}") 
 
 
         # configure grid layout (4x4)
@@ -68,7 +68,6 @@ class App(ctk.CTk):
             for tv_a in self.algorithms:
                 items = self.input_process_tree.selection()
                 self.treeview_algos[tv_a].table.selection_set(items)
-                print(items)
         self.input_process_tree.bind('<<TreeviewSelect>>', item_selected)
 
         # create tabview
@@ -122,8 +121,9 @@ class App(ctk.CTk):
         # calculate
         for algo in self.algorithms:
             for index in range(len(self.scheduling_algorithms[algo].data)):
-                self.scheduling_algorithms[algo].calculate_waiting_time(index)
+                self.scheduling_algorithms[algo].calculate_completion_time(index)
                 self.scheduling_algorithms[algo].calculate_turnaround_time(index)
+                self.scheduling_algorithms[algo].calculate_waiting_time(index)
                 self.scheduling_algorithms[algo].calculate_computing_time(index)
 
 
@@ -139,8 +139,9 @@ class App(ctk.CTk):
                             p[1]['arrival_time'],
                             p[1]['burst_time'],
                             p[1]['priority'],
-                            p[1]['waiting_time'],
+                            p[1]['completion_time'],
                             p[1]['turnaround_time'],
+                            p[1]['waiting_time'],
                             p[1]['computing_time'],
                             )
                         )
@@ -150,6 +151,7 @@ class App(ctk.CTk):
                         iid = None,
                         values = (
                             'avg',
+                            '-',
                             '-',
                             '-',
                             '-',

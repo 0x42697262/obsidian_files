@@ -14,6 +14,7 @@ class SchedulingAlgorithm:
             self.process[p]['arrival_time']    = process[p]['arrival_time']
             self.process[p]['burst_time']      = process[p]['burst_time']
             self.process[p]['priority']        = process[p]['priority']
+            self.process[p]['completion_time'] = 0
             self.process[p]['turnaround_time'] = 0
             self.process[p]['waiting_time']    = 0
             self.process[p]['computing_time']  = 0
@@ -21,18 +22,25 @@ class SchedulingAlgorithm:
         self.highest_job    = max(filter(lambda k: isinstance(k, int), self.process.keys()))
         self.lowest_job     = min(filter(lambda k: isinstance(k, int), self.process.keys()))
 
-
+    
+    def calculate_completion_time(self, index):
+        if index >= 1:
+            self.data[index][1]['completion_time'] = self.data[index][1]['burst_time'] + self.data[index-1][1]['completion_time']
+        else:
+            self.data[index][1]['completion_time'] = self.data[index][1]['burst_time'] 
     
     def calculate_waiting_time(self, index):
         if index >= 1:
-            self.data[index][1]['waiting_time'] = self.data[index-1][1]['turnaround_time']
+            # self.data[index][1]['waiting_time'] = self.data[index-1][1]['turnaround_time']
+            self.data[index][1]['waiting_time'] = self.data[index][1]['turnaround_time'] - self.data[index][1]['burst_time']
             self.total_waiting_time += self.data[index][1]['waiting_time']
 
     def calculate_turnaround_time(self, index):
-        if index >= 1:
-            self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] + self.data[index][1]['waiting_time']
-        else:
-            self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] 
+        # if index >= 1:
+        #     self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] + self.data[index][1]['waiting_time']
+        # else:
+        #     self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] 
+        self.data[index][1]['turnaround_time'] = self.data[index][1]['completion_time']
 
         self.total_turnaround_time          += self.data[index][1]['turnaround_time']
 
@@ -61,6 +69,9 @@ class FCFSAlgo(SchedulingAlgorithm):
         super().__init__(process)
 
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['arrival_time'])
+
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
 
     def calculate_waiting_time(self, index):
         return super().calculate_waiting_time(index)
@@ -91,6 +102,9 @@ class SJFAlgo(SchedulingAlgorithm):
 
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['burst_time'])
 
+    
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
 
     def calculate_waiting_time(self, index):
         return super().calculate_waiting_time(index)
@@ -116,7 +130,11 @@ class SRPTAlgo(SchedulingAlgorithm):
     def __init__(self, process):
         super().__init__(process)
 
-        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['waiting_time'])
+        self.original_data  = process
+        self.data           = []
+        self.initial_data   = sorted(list(self.process.items()), key=lambda x: x[1]['arrival_time'])
+
+        self.total_time     = 0
 
 
 
@@ -128,6 +146,8 @@ class PriorityAlgo(SchedulingAlgorithm):
 
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['priority'])
 
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
 
     def calculate_waiting_time(self, index):
         return super().calculate_waiting_time(index)
