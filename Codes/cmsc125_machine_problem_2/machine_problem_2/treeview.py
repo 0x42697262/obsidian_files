@@ -37,15 +37,12 @@ class SchedulingTable:
                 pady    = (20, 20),
                 )
 
-        self.table['columns']   = ("Job", "Started", "Completion", "Turnaround Time (TAT)", "Waiting Time", "Computing Time")
+        self.table['columns']   = ("Job", "Turnaround Time (ms)", "Waiting Time (ms)", "Computing Time (ms)")
         for c in self.table['columns']:
             self.table.heading(c, text=c)
 
         self.table.column('Job',                    width=48,   anchor=ctk.CENTER)
-        self.table.column('Started',                width=68,   anchor=ctk.CENTER)
-        self.table.column('Completion',             width=98,   anchor=ctk.CENTER)
-        self.table.column('Turnaround Time (TAT)',  width=168,  anchor=ctk.CENTER)
-        self.table.column('Waiting Time',           width=98,   anchor=ctk.CENTER)
-        self.table.column('Computing Time',         width=128,  anchor=ctk.CENTER)
+        self.table.column('Turnaround Time (ms)',  width=168,  anchor=ctk.CENTER)
+        self.table.column('Waiting Time (ms)',           width=98,   anchor=ctk.CENTER)
+        self.table.column('Computing Time (ms)',         width=128,  anchor=ctk.CENTER)
 
-        
