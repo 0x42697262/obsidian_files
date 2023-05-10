@@ -64,6 +64,10 @@ class App(ctk.CTk):
         # treeview table
         self.input_process_tree     = treeview.create_tableview(self.frames['right'])
         treeview.modify(self.input_process_tree)
+        def item_selected(event):
+            for tv_a in self.algorithms:
+                self.treeview_algos[tv_a].table.selection_set(self.input_process_tree.selection())
+        self.input_process_tree.bind('<<TreeviewSelect>>', item_selected)
 
         # create tabview
         self.tabview            = tabview.create_tabview(self)
@@ -176,12 +180,13 @@ class App(ctk.CTk):
 
 
 
+
+
     def sidebar_button_event(self):
         for sa in self.algorithms:
             self.scheduling_algorithms[sa].show_stats()
 
         console_debug(inspect.stack()[0][3], "Clicked!")
-        self.scheduling_algorithms['FCFS'].calculate_started()
 
 
 

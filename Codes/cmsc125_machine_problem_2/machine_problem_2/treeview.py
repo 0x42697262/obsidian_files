@@ -24,7 +24,9 @@ def modify(table):
     table.column('CPU Burst Time',  width=120,  anchor=ctk.CENTER)
     table.column('Priority',        width=65,   anchor=ctk.CENTER)
 
+
     return table
+
 
 class SchedulingTable:
     def __init__(self, parent):
