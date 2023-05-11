@@ -32,15 +32,10 @@ class SchedulingAlgorithm:
     
     def calculate_waiting_time(self, index):
         if index >= 1:
-            # self.data[index][1]['waiting_time'] = self.data[index-1][1]['turnaround_time']
             self.data[index][1]['waiting_time'] = self.data[index][1]['turnaround_time'] - self.data[index][1]['burst_time']
             self.total_waiting_time += self.data[index][1]['waiting_time']
 
     def calculate_turnaround_time(self, index):
-        # if index >= 1:
-        #     self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] + self.data[index][1]['waiting_time']
-        # else:
-        #     self.data[index][1]['turnaround_time'] = self.data[index][1]['burst_time'] 
         self.data[index][1]['turnaround_time'] = self.data[index][1]['completion_time']
 
         self.total_turnaround_time          += self.data[index][1]['turnaround_time']
@@ -95,10 +90,6 @@ class FCFSAlgo(SchedulingAlgorithm):
     def calculate_avg_computing_time(self):
         return super().calculate_avg_computing_time()
 
-        
-
-
-
 
 class SJFAlgo(SchedulingAlgorithm):
     def __init__(self, process):
@@ -128,9 +119,128 @@ class SJFAlgo(SchedulingAlgorithm):
     def calculate_avg_computing_time(self):
         return super().calculate_avg_computing_time()
 
-
-
 class SRPTAlgo(SchedulingAlgorithm):
+    def __init__(self, process):
+        super().__init__(process)
+
+        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['arrival_time'])
+
+        n = len(self.data)
+        self.proc = []
+        processes = self.proc
+
+        for i in range(n):
+            p = self.data[i]
+            self.proc.append([i, p[1]['burst_time'], p[1]['arrival_time']]) # [id, burst, arrival]
+
+        self.slice_time = []
+        self.slice_job = []
+
+        wt = [0] * n
+        tat = [0] * n
+     
+        self.calc_wt(processes, n, wt)
+        self.calc_tat(processes, n, wt, tat)
+
+        for i in range(n):
+            self.total_waiting_time = self.total_waiting_time + wt[i]
+            self.total_turnaround_time = self.total_turnaround_time + tat[i]
+
+        
+
+
+        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['turnaround_time'])
+        print('length:')
+        print(len(self.slice_time))
+        print(len(self.slice_job))
+        
+
+
+    def calc_wt(self, processes, n, wt):
+        rt = [0] * n
+     
+        # Copy the burst time into rt[]
+        for i in range(n):
+            rt[i] = processes[i][1]
+        complete = 0
+        t = 0
+        minm = 999999999
+        short = 0
+        check = False
+        maxm = -9999999999
+     
+        while (complete != n):
+             
+            for j in range(n):
+                if ((processes[j][2] <= t) and
+                    (rt[j] < minm) and rt[j] > 0):
+                    minm = rt[j]
+                    short = j
+                    check = True
+                    # self.slice_time.append(t + minm)
+                    self.slice_job.append(short)
+                    if minm >= maxm-1:
+                        self.slice_time.append(t + minm)
+                        maxm = minm
+                    #     self.slice_job.append(short)
+
+                    print(minm)
+
+
+            if (check == False):
+                t += 1
+                continue
+                 
+            rt[short] -= 1
+            minm = rt[short]
+            if (minm == 0):
+                minm = 999999999
+     
+            if (rt[short] == 0):
+                complete += 1
+                check = False
+                fint = t + 1
+                wt[short] = (fint - self.proc[short][1] -   
+                                    self.proc[short][2])
+     
+                if (wt[short] < 0):
+                    wt[short] = 0
+             
+            t += 1
+        
+        for i in range(n):
+            self.data[i][1]['waiting_time'] = wt[i]
+     
+    def calc_tat(self, processes, n, wt, tat):
+        for i in range(n):
+            tat[i] = processes[i][1] + wt[i]
+            self.data[i][1]['turnaround_time'] = tat[i]
+     
+    def calculate_completion_time(self, index):
+        pass
+
+    def calculate_waiting_time(self, index):
+        pass
+
+    def calculate_turnaround_time(self, index):
+        pass
+    
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
+
+    def calculate_avg_waiting_time(self):
+        return super().calculate_avg_waiting_time()
+
+    def calculate_avg_turnaround_time(self):
+        return super().calculate_avg_turnaround_time()
+
+    def calculate_avg_computing_time(self):
+        return super().calculate_avg_computing_time()
+
+
+
+
+class SRPTAlgo2(SchedulingAlgorithm):
     def __init__(self, process):
         super().__init__(process)
 
@@ -247,7 +357,84 @@ class PriorityAlgo(SchedulingAlgorithm):
 
 
 class RoundRobinAlgo(SchedulingAlgorithm):
-    def __init__(self, process):
+    def __init__(self, process, QUANTUM = 4):
         super().__init__(process)
 
-        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['waiting_time'])
+        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['arrival_time'])
+
+        count = len(self.data)
+        burst_time = []
+
+        for j in self.data:
+            burst_time.append(j[1]['burst_time'])
+
+        self.slice_time = []
+        self.slice_job = []
+
+        waiting_time = [0] * count
+        turnaround_time = [0] * count
+     
+        self.calc_wt(count, burst_time, waiting_time, QUANTUM)
+        self.calc_tat(count, burst_time, waiting_time, turnaround_time)
+     
+        for i in range(count):
+            self.total_waiting_time = self.total_waiting_time + waiting_time[i]
+            self.total_turnaround_time = self.total_waiting_time + turnaround_time[i]
+
+        self.data = sorted(list(self.process.items()), key=lambda x: x[1]['turnaround_time'])
+
+
+    def calc_wt(self, job_count, burst_time, waiting_time, QUANTUM):
+        remaining_burst_time = [0] * job_count
+     
+        for i in range(job_count):
+            remaining_burst_time[i] = burst_time[i]
+        TIME = 0 
+     
+        while True:
+            done = True
+     
+            for i in range(job_count):
+                if (remaining_burst_time[i] > 0) :
+                    done = False 
+                    if (remaining_burst_time[i] > QUANTUM) :
+                        TIME += QUANTUM
+                        self.slice_time.append(TIME)
+                        self.slice_job.append(i)
+                        remaining_burst_time[i] -= QUANTUM
+                    else:
+                        TIME = TIME + remaining_burst_time[i]
+                        waiting_time[i] = TIME - burst_time[i]
+                        self.data[i][1]['waiting_time'] = waiting_time[i]
+                        remaining_burst_time[i] = 0
+                     
+            if (done == True):
+                break
+                 
+    def calc_tat(self, n, burst_time, waiting_time, turnaround_time):
+        for i in range(n):
+            turnaround_time[i] = burst_time[i] + waiting_time[i]
+            self.data[i][1]['turnaround_time'] = turnaround_time[i]
+
+
+    def calculate_completion_time(self, index):
+        pass
+
+    def calculate_waiting_time(self, index):
+        pass
+
+    def calculate_turnaround_time(self, index):
+        pass
+    
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
+
+    def calculate_avg_waiting_time(self):
+        return super().calculate_avg_waiting_time()
+
+    def calculate_avg_turnaround_time(self):
+        return super().calculate_avg_turnaround_time()
+
+    def calculate_avg_computing_time(self):
+        return super().calculate_avg_computing_time()
+

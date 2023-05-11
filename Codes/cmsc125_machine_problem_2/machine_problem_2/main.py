@@ -15,7 +15,6 @@ class App(ctk.CTk):
         super().__init__()
 
         self.PROCESS    = {}
-        self.QUANTUM    = 4
 
         self.algorithms = ('FCFS', 'SJF', 'SRPT', 'Priority', 'Round-Robin')
 
@@ -59,7 +58,7 @@ class App(ctk.CTk):
         self.buttons['calculate'].grid(row=3, column=0, padx=20, pady=10)
 
 
-        self.sidebar_button_3   = ctk.CTkButton(self.frames['left'], command=self.sidebar_button_event)
+        self.sidebar_button_3   = ctk.CTkButton(self.frames['left'], text="Summary", command=self.sidebar_button_event)
         self.sidebar_button_3.grid(row=4, column=0, padx=20, pady=10)
 
         
@@ -77,13 +76,23 @@ class App(ctk.CTk):
         tabview.modify(self.tabview)
         
         self.treeview_algos = {}
+        self.gcframe = {}
+        self.gantchart = {}
         for tv_a in self.algorithms:
             self.treeview_algos[tv_a] = treeview.SchedulingTable(self.tabview.tab(tv_a))
+            self.gcframe[tv_a] =  ctk.CTkScrollableFrame(self.tabview.tab(tv_a))
+            self.gcframe[tv_a].grid(
+                row     = 1, 
+                column  = 0, 
+                rowspan = 2,
+                sticky  = "nsew",
+                padx        = (20, 20), 
+                pady        = (20, 20), 
+                )
+
 
         self.scheduling_algorithms = {}
 
-        # gant chart
-        self.gantchart = frame.GantChart(self.frames['gant_chart'])
 
 
         
@@ -161,13 +170,31 @@ class App(ctk.CTk):
                             '-',
                             '-',
                             '-',
-                            self.scheduling_algorithms[algo].calculate_avg_turnaround_time(),
-                            self.scheduling_algorithms[algo].calculate_avg_waiting_time(),
-                            self.scheduling_algorithms[algo].calculate_avg_computing_time(),
+                            round(self.scheduling_algorithms[algo].calculate_avg_turnaround_time(),2), 
+                            round(self.scheduling_algorithms[algo].calculate_avg_waiting_time(),2),
+                            round(self.scheduling_algorithms[algo].calculate_avg_computing_time(),2),
                             )
                         )
 
             console_debug(inspect.stack()[0][3], f"Copied data of self.scheduling_algorithms[{algo}].data to self.treeview_algos[{algo}].table")
+
+        for algo in self.algorithms:
+            p = self.scheduling_algorithms[algo]
+            n = len(p.data)
+            completion = []
+            jobs = []
+            if algo in ('SRPT', 'Round-Robin'):
+                completion = p.slice_time
+                jobs = p.slice_job
+                n = len(completion)
+            else:
+                for i in range(n):
+                    completion.append(p.data[i][1]['completion_time'])
+                    jobs.append(p.data[i][0])
+
+            self.gantchart[algo] = frame.GantChart(self.gcframe[algo], n, completion, jobs)
+
+
 
 
     def clear_treeview_data(self):
@@ -187,9 +214,6 @@ class App(ctk.CTk):
             for item in self.treeview_algos[algo].table.get_children():
                 self.treeview_algos[algo].table.delete(item)
             console_debug(inspect.stack()[0][3], f"Cleared data for self.treeview_algos[{algo}]")
-
-
-
 
 
 

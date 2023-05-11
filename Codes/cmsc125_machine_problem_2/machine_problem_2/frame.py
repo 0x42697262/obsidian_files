@@ -6,7 +6,6 @@ def create_frame(parent):
 
     frame['left']         = ctk.CTkFrame(parent, width=140, corner_radius=0)
     frame['right']        = ctk.CTkFrame(parent, width=350)
-    frame['gant_chart']   = ctk.CTkFrame(parent)
 
     frame['left'].grid(
             row     = 0, 
@@ -22,14 +21,6 @@ def create_frame(parent):
             padx        = (20, 20), 
             pady        = (20, 20), 
             sticky      = "nsew",
-            )
-    frame['gant_chart'].grid(
-            row     = 1, 
-            column  = 1, 
-            rowspan = 2,
-            sticky  = "nsew",
-            padx        = (20, 20), 
-            pady        = (20, 20), 
             )
 
     frame['left'].grid_rowconfigure(
@@ -47,31 +38,38 @@ def create_frame(parent):
 
 
 class GantChart:
-    def __init__(self, parent):
+    def __init__(self, parent, count, right_value = [], jobs = []):
         self.frames = {}
 
-        for i in range(30):
-                self.frames[i] = ctk.CTkFrame(parent, height=50, width=50, corner_radius=0,border_width=1, border_color='#FF0090', fg_color='#5080CC')
-                self.frames[i].grid(
-                                row=(i//10)+1,
-                                column=(i%10)+1,
-                                sticky="nw",
-                                )
-                self.frames[i].grid_rowconfigure(1, weight=1)
-                self.frames[i].grid_columnconfigure(3, weight=1)
-                self.process_text = ctk.CTkLabel(self.frames[i], text=f"P{i}")
-                self.process_text.grid(row=0, column=3, sticky="nsew", padx=(10,10), pady=(10, 10))
-                # self.process_text.grid_rowconfigure(1, weight=1)
-                # self.process_text.grid_columnconfigure(1, weight=1)
-                self.time_text = ctk.CTkLabel(self.frames[i], text=f"{i}")
-                self.time_text.grid(row=1, column=0, sticky="nsew", padx=(10,10), pady=(10, 10))
+        for i in range(count):
+            self.frames[i] = ctk.CTkFrame(parent, height=5, width=5, corner_radius=0, border_width=1, border_color='#FF0090', fg_color='#5080CC')
+            self.frames[i].grid(row=(i//10)+1, column=(i%10)+1, sticky="nsew")
+            self.frames[i].grid_rowconfigure(0, weight=0)
+            self.frames[i].grid_columnconfigure(0, weight=1)
 
-                # self.time_text.grid_rowconfigure(1, weight=1)
-                # self.time_text.grid_columnconfigure(1, weight=1)
-                self.time_text2 = ctk.CTkLabel(self.frames[i], text=f"{i+100}")
-                self.time_text2.grid(row=1, column=5, sticky="nsew", padx=(10,10), pady=(10, 10))
+            # Add a box to the frame
+            box = ctk.CTkFrame(self.frames[i], bg_color='blue', fg_color='#900040', border_width=1)
+            box.grid(row=0, column=0, sticky="nsew")
+            box.grid_rowconfigure(0, weight=1)
+            box.grid_columnconfigure(0, weight=1)
+
+            # Add a label to the box for the process ID
+            process_text = ctk.CTkLabel(box, text=f"P{jobs[i]}", font=("Arial", 20), height=25, width=25)
+            process_text.place(relx=0.5, rely=0.5, anchor="center")
+
+            if i == 0:
+                    # Add a label to the box for the start time
+                    start_time_text = ctk.CTkLabel(box, text=f"0", font=("Arial", 20))
+                    start_time_text.place(relx=0.05, rely=0.9, anchor="sw")
+
+            # Add a label to the box for the end time
+            end_time_text = ctk.CTkLabel(box, text=f"{right_value[i]}", font=("Arial", 20))
+            end_time_text.place(relx=0.95, rely=0.9, anchor="se")
+
+        # Configure the rows and columns of the parent frame
+        for i in range(10):
+            parent.grid_rowconfigure(i, weight=1)
+            parent.grid_columnconfigure(i, weight=1)
 
         
-
-
 

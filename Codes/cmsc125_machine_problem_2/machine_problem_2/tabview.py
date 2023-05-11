@@ -3,7 +3,7 @@ from tkinter import ttk
 
 def create_tabview(parent):
     tab            = ctk.CTkTabview(parent, width=250)
-    tab.grid(row=3, column=1, rowspan=14, padx=(20, 0), pady=(20, 20), sticky="nsew")
+    tab.grid(row=1, column=1, rowspan=14, padx=(20, 0), pady=(20, 20), sticky="nsew")
 
     return tab
 
