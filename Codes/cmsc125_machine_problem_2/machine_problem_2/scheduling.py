@@ -74,6 +74,27 @@ class FCFSAlgo(SchedulingAlgorithm):
 
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['arrival_time'])
 
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
+
+    def calculate_waiting_time(self, index):
+        return super().calculate_waiting_time(index)
+
+    def calculate_turnaround_time(self, index):
+        return super().calculate_turnaround_time(index)
+
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
+
+    def calculate_avg_waiting_time(self):
+        return super().calculate_avg_waiting_time()
+
+    def calculate_avg_turnaround_time(self):
+        return super().calculate_avg_turnaround_time()
+
+    def calculate_avg_computing_time(self):
+        return super().calculate_avg_computing_time()
+
         
 
 
@@ -86,6 +107,27 @@ class SJFAlgo(SchedulingAlgorithm):
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['burst_time'])
 
     
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
+
+    def calculate_waiting_time(self, index):
+        return super().calculate_waiting_time(index)
+
+    def calculate_turnaround_time(self, index):
+        return super().calculate_turnaround_time(index)
+
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
+
+    def calculate_avg_waiting_time(self):
+        return super().calculate_avg_waiting_time()
+
+    def calculate_avg_turnaround_time(self):
+        return super().calculate_avg_turnaround_time()
+
+    def calculate_avg_computing_time(self):
+        return super().calculate_avg_computing_time()
+
 
 
 class SRPTAlgo(SchedulingAlgorithm):
@@ -165,6 +207,11 @@ class SRPTAlgo(SchedulingAlgorithm):
         self.data[index][1]['turnaround_time'] = self.data[index][1]['completion_time'] - self.data[index][1]['arrival_time']
         self.total_turnaround_time          += self.data[index][1]['turnaround_time']
 
+    def calculate_waiting_time(self, index):
+        return super().calculate_waiting_time(index)
+
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
 
 
 
@@ -173,6 +220,27 @@ class PriorityAlgo(SchedulingAlgorithm):
         super().__init__(process)
 
         self.data = sorted(list(self.process.items()), key=lambda x: x[1]['priority'])
+
+    def calculate_completion_time(self, index):
+        return super().calculate_completion_time(index)
+
+    def calculate_waiting_time(self, index):
+        return super().calculate_waiting_time(index)
+
+    def calculate_turnaround_time(self, index):
+        return super().calculate_turnaround_time(index)
+
+    def calculate_computing_time(self, index):
+        return super().calculate_computing_time(index)
+
+    def calculate_avg_waiting_time(self):
+        return super().calculate_avg_waiting_time()
+
+    def calculate_avg_turnaround_time(self):
+        return super().calculate_avg_turnaround_time()
+
+    def calculate_avg_computing_time(self):
+        return super().calculate_avg_computing_time()
 
 
 

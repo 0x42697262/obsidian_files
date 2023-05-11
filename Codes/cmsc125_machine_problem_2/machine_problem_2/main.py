@@ -29,7 +29,7 @@ class App(ctk.CTk):
         self.grid_columnconfigure(0, weight=0)
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((1, 2), weight=1)
+        self.grid_rowconfigure((1, 2, 3), weight=1)
 
 
         self.style   = styles.treeview_theme()
@@ -40,11 +40,13 @@ class App(ctk.CTk):
 
         self.labels = {}
         
-        self.labels['input']         = ctk.CTkLabel(self.frames['left'], text="Input", font=ctk.CTkFont(size=20, weight="bold"))
+        self.labels['input']            = ctk.CTkLabel(self.frames['left'], text="Input", font=ctk.CTkFont(size=20, weight="bold"))
         self.labels['input'].grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.labels['output']         = ctk.CTkLabel(self, text="Output", font=ctk.CTkFont(size=20, weight="bold"))
+        self.labels['output']           = ctk.CTkLabel(self, text="Output", font=ctk.CTkFont(size=20, weight="bold"))
         self.labels['output'].grid(row=0, column=1, sticky="n", pady=(20, 0))
         self.labels['output'].grid_columnconfigure(0, weight=0)
+
+
 
         self.buttons = {}
 
@@ -79,6 +81,10 @@ class App(ctk.CTk):
             self.treeview_algos[tv_a] = treeview.SchedulingTable(self.tabview.tab(tv_a))
 
         self.scheduling_algorithms = {}
+
+        # gant chart
+        self.gantchart = frame.GantChart(self.frames['gant_chart'])
+
 
         
 
