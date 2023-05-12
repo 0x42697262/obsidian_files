@@ -1,4 +1,12 @@
 function I_deblur = wiener_deblur(I,B,k)
+  % All input and output are of type double
+  % Inputs:
+  % I - input image 
+  % B - blur kernel 
+  % k - regularizzation parameter 
+  %
+  % Output:
+  % I_deblur - deblurred image
  
 if ( isa(I,'uint8') || isa(B,'uint8') )
   error('deblur: Image and blur data should be of type double.');
@@ -8,16 +16,25 @@ I = edgetaper(I,B);
 Fi = fft2(I);
 % modify the code below ------------------------------------------------
 
-% this section is just dummy code - delete it
-
-F_deblur = Fi;
-I_deblur = real( ifft2(F_deblur) );
-
-% Here you will need to:
 % 1. zero pad B and compute its FFT
+pad_size    = floor((size(I) - size(B)) / 2);             % calculate pad size
+padded_b    = padarray(B, pad_size, 0, 'both');           % zero pad B
+F_b         =  fft2(padded_b, size(I, 1), size(I, 2));    % fourier representation of image B
+
+
 % 2. compute and apply the inverse filter
+F_inv       = zeros(size(I));                             % weiner function array
+abs_F_b     = abs(F_b).^2;                                 
+F_inv       = (Fi ./ F_b) .* (abs_F_b ./ (abs_F_b + k));  % weiner inverse filter
+
+
 % 3. convert back to a real image
+I_deblur    = real(ifft2(F_inv));
+
+
 % 4. handle any spatial delay caused by zero padding of B
+I_deblur    = ifftshift(I_deblur);
+
 %
 % you may need to deal with values near zero in the FFT of B etc
 % to avoid division by zero's etc.
