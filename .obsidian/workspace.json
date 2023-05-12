@@ -68,29 +68,19 @@
             "id": "35c426aba1112cca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Notes/020 Studies/CMSC 125 Problem Set 4.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "85f40b5bf36d44ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/020 Studies/CMSC 170 Naive Bayes Exercise.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Notes/020 Studies/chapter14 characters.canvas",
+                "viewState": {
+                  "x": -97.5,
+                  "y": 931,
+                  "zoom": -3.035591803822454
+                }
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -145,19 +135,19 @@
             }
           },
           {
-            "id": "3d46161ec402b92a",
+            "id": "d5e1e2be15a68b5c",
             "type": "leaf",
             "state": {
               "type": "file-tree-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -173,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Notes/Non Zero Day.md",
+                "file": "Notes/020 Studies/chapter14 characters.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Notes/Non Zero Day.md",
+                "file": "Notes/020 Studies/chapter14 characters.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -213,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Notes/Non Zero Day.md"
+                "file": "Notes/020 Studies/chapter14 characters.canvas"
               }
             }
           },
@@ -226,7 +216,7 @@
             }
           },
           {
-            "id": "69c0c862bb356ffa",
+            "id": "f8655c264c18d2d1",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -249,34 +239,39 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "notion-like-tables:Create Notion-Like table": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "59ca0275dc773067",
+  "active": "35c426aba1112cca",
   "lastOpenFiles": [
-    "Codes/cmsc125_machine_problem_2/instance/mp2.sqlite-journal",
-    "Codes/cmsc125_machine_problem_2/tests/__pycache__/test_db.cpython-311-pytest-7.3.1.pyc",
-    "Codes/cmsc125_machine_problem_2/tests/test_db.py",
-    "Codes/cmsc125_machine_problem_2/tests/__pycache__/test_factory.cpython-311-pytest-7.3.1.pyc",
-    "Codes/cmsc125_machine_problem_2/tests/__pycache__/conftest.cpython-311-pytest-7.3.1.pyc",
-    "Codes/cmsc125_machine_problem_2/tests/__pycache__/__init__.cpython-311.pyc",
-    "Codes/cmsc125_machine_problem_2/tests/__pycache__",
-    "Codes/cmsc125_machine_problem_2/tests/test_factory.py",
-    "Codes/cmsc125_machine_problem_2/tests/data.sql",
-    "Codes/cmsc125_machine_problem_2/machine_problem_2/db_commands.py",
-    "Codes/cmsc125_machine_problem_2/machine_problem_2/modules",
-    "Daily Notes/Tasks.md",
+    "Canvas",
+    "Notes/__index/000 Index.md",
+    "Notes/020 Studies/020 Studies.md",
+    "Notes/020 Studies/chapter14 characters.canvas",
+    "Excalidraw/Drawing 2023-05-12 10.05.15.excalidraw.md",
+    "Notes/020 Studies/CMSC 125 Problem Set 4.md",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/process3.txt",
+    "Codes/cmsc125_machine_problem_2/process3.txt",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/__pycache__/scheduling.cpython-311.pyc.140478427142384",
+    "Untitled 1.canvas",
+    "Notes/020 Studies/CMSC 125 Problem Set 3.md",
+    "Excalidraw/Drawing 2023-05-11 00.10.42.excalidraw.md",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/__pycache__/scheduling.cpython-311.pyc",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/scheduling.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/__pycache__/scheduling_algorithms.cpython-311.pyc",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/scheduling_algorithms.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/__pycache__/tabview.cpython-311.pyc",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/tabview.py",
+    "Codes/cmsc125_machine_problem_2/machine_problem_2/taview.py",
     "Notes/020 Studies/CMSC 170 Naive Bayes Exercise.md",
-    "Excalidraw/Drawing 2023-05-08 22.52.49.excalidraw.md",
+    "Daily Notes/Tasks.md",
     "Daily Notes/Non Zero Day.md",
+    "Excalidraw/Drawing 2023-05-08 22.52.49.excalidraw.md",
     "ATTACHMENT_FOLDER/Pasted image 20230509000211.png",
     "ATTACHMENT_FOLDER/Pasted image 20230509000204.png",
-    "Notes/020 Studies/020 Studies.md",
-    "Notes/020 Studies/CMSC 125 Problem Set 4.md",
-    "Notes/__index/000 Index.md",
     "Excalidraw/Drawing 2023-05-08 08.31.16.excalidraw.md",
     "ATTACHMENT_FOLDER/Pasted image 20230508200725.png",
     "ATTACHMENT_FOLDER/Pasted image 20230508200122.png",
@@ -286,10 +281,8 @@
     "ATTACHMENT_FOLDER/Pasted image 20230508090237.png",
     "ATTACHMENT_FOLDER/Pasted image 20230508085010.png",
     "ATTACHMENT_FOLDER/Pasted image 20230507234330.png",
-    "Notes/020 Studies/CMSC 125 Problem Set 3.md",
     "Codes/cmsc125_machine_problem_2/README.md",
     "Drawing 2023-05-06 06.20.48.excalidraw.md",
-    "Untitled.canvas",
     "Notes/__orphans/Center a Text Vertically in Latex.md",
     "Notes/090 Others/091 Notes.md",
     "Notes/__orphans/Image Analysis.md",
@@ -302,8 +295,6 @@
     "Notes/020 Studies/CMSC 178 Assignment 1.md",
     "Notes/020 Studies/CMSC 125 Problem Set 2.md",
     "Notes/__orphans/Untitled 2.md",
-    "Notes/020 Studies/Operating Systems.md",
-    "Templates/Non0Day.md",
-    "Notes/090 Others/Center a Table in Obsidian.md"
+    "Notes/020 Studies/Operating Systems.md"
   ]
 }
