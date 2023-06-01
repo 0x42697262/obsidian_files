@@ -67,7 +67,7 @@ class MemoryBlock:
         string += f"Used Count: {self.allocations_count}\n"
         string += f"Seconds Used: {self.seconds_used_by_a_job}\n"
         string += f"Allocated Job: [{self.job}]\n"
-        string += f"Memory Used: [{self.bytes_used}]\n"
+        string += f"Memory Used: {self.bytes_used} bytes\n"
 
         return string
 
@@ -80,12 +80,17 @@ class MemoryManager:
     def __init__(self, memory: List[MemoryBlock], jobs: List[Job]) -> None:
         self.memory: List[MemoryBlock]      = memory
         self.jobs: List[Job]                = jobs
-        self.total_memory: int              = sum(block.size            for block in self.memory)
-        self.total_fragmentation:int        = sum(block.fragmentation   for block in self.memory)
-        self.memory_used:int                = sum(block.bytes_used      for block in self.memory)
+        self.total_memory: int              = sum(block.size for block in self.memory)
+        self.total_fragmentation: int       = 0
+        self.memory_used: int               = 0
+        self.job_total_memory: int          = sum(job.size  for job in self.jobs)
 
         self.allocatable_jobs: List[Job]    = []
         self.current_complete: List[Job]    = []
+
+    def recalculate_memory(self) -> None:
+        self.total_fragmentation:int    = sum(block.fragmentation   for block in self.memory)
+        self.memory_used:int            = sum(block.bytes_used      for block in self.memory)
 
 
     def allocate_job(self, block: MemoryBlock, job: Job) -> None:
@@ -93,7 +98,9 @@ class MemoryManager:
         block.fragmentation         = block.size - job.size
         block.job                   = job 
         block.bytes_used            = job.size
-        block.allocations_count  += 1
+        block.allocations_count     += 1
+        self.recalculate_memory()
+
 
     def deallocate_job(self, block: MemoryBlock, job: Job) -> None:
         block.bytes_used    = 0
@@ -102,6 +109,7 @@ class MemoryManager:
         job.complete        = True
         job.assigned_memory_block = None
         self.current_complete.append(job)
+        self.recalculate_memory()
 
 
 
@@ -110,15 +118,13 @@ class MemoryManager:
 class Metric:
     def __init__(self) -> None:
         self.throughput: int                    = 0
-        self.module_storage_utilization: float = 0
+        self.module_storage_utilization: float  = 0
         self.waiting_queue_length: int          = 0
         self.total_waiting_time: timedelta      = timedelta(seconds=0)
         self.total_fragmentation: int           = 0
+        self.total_allocations_count: int       = 0
+        self.processing_count: int              = 0
         
-        # self.total_memory: int                  = 0
-        # self.memory_used: int                   = 0
-        # self.storage_utilization: float         = 0
-
     def __str__(self) -> str:
         string = ""
         string += f"Throughput: {self.throughput}\n"
@@ -126,6 +132,7 @@ class Metric:
         string += f"Waiting Queue Length: {self.waiting_queue_length}\n"
         string += f"total_waiting_time: {self.total_waiting_time}\n"
         string += f"Total Internal Fragmentation: {self.total_fragmentation}\n"
+        string += f"Total Allocations: {self.total_allocations_count}\n"
 
         return string
 
@@ -146,9 +153,6 @@ class ModuleSnapshot:
         self.module: MemoryManager  = module
         self.metric: Metric         = Metric()
 
-        # self.total_memory           = sum(_.size for _ in self.module.memory)
-        # self.total_fragmentation    = sum(_.fragmentation for _ in self.module.memory)
-        # self.metric.memory_used     = sum(_.bytes_used for _ in self.module.memory)
 
     def apply_metrics(self) -> None:
         self.metric.throughput                      = len(self.module.current_complete)
@@ -157,15 +161,10 @@ class ModuleSnapshot:
         for _ in self.module.jobs:
             self.metric.total_waiting_time          += _.waiting_time
         self.metric.total_fragmentation             = self.module.total_fragmentation
+        self.metric.total_allocations_count         = sum(_.allocations_count  for _ in self.module.memory)
+        self.metric.processing_count                = sum(1 for _ in self.module.memory if _.job)
 
 
-
-    # def display_metrics(self) -> None:
-    #     print("Throughput:", self.metric.throughput, "jobs")
-    #     print(f"Storage Utilization: {self.metric.module_storage_utilization*100:.2f}%")
-    #     print("Waiting Queue Length:", self.metric.waiting_queue_length, "jobs")
-    #     print("Total Waiting Time in Queue:", self.metric.total_waiting_time)
-    #     print("Internal Fragmentation:", self.metric.total_fragmentation, "bytes")
 
 
 
@@ -225,8 +224,8 @@ def simulate(module: MemoryManager) -> SnapshotsManager:
 
         # process all jobs in memory
         for block in module.memory:
-            block.seconds_used_by_a_job += timedelta(seconds=1)
             if block.job:
+                block.seconds_used_by_a_job += timedelta(seconds=1)
                 block.job.current_time -= timedelta(seconds=1)
 
         # increment all allocated jobs
@@ -237,12 +236,12 @@ def simulate(module: MemoryManager) -> SnapshotsManager:
         if not total_jobs:
             break
 
+
     return all_snapshots
 
 def calculate(simulation: SnapshotsManager) -> SnapshotsManager:
     for snapshot in simulation.snapshots:
         snapshot.apply_metrics()
-        # input()
 
     return simulation
 
@@ -252,14 +251,15 @@ def display(simulation: SnapshotsManager, index: int) -> None:
 
     snapshot = simulation.snapshots[i]
     module   = snapshot.module
+    memory   = module.memory
 
-    memory_table: PrettyTable   = PrettyTable(["Memory Stream", "Assigned Job Stream", "Memory Size (bytes)", "Internal Fragmentation (bytes)", "Time Utilization", "Allocations Count"])
+    memory_table: PrettyTable   = PrettyTable(["Memory Stream", "Assigned Job Stream", "Memory Size (bytes)", "Memory Used (bytes)", "Internal Fragmentation (bytes)", "Time Utilization", "Allocations Count", "Storage Utilization"])
     job_table: PrettyTable      = PrettyTable(["Job Stream", "Assigned Memory Block", "Job Size (bytes)", "Waiting Time", "Current Time", "Completed"])
     for m in module.memory:
         if m.job:
-            memory_table.add_row([m.stream, m.job.stream, m.size, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count])
+            memory_table.add_row([m.stream, m.job.stream, m.size, m.bytes_used, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count, f"{(m.bytes_used / m.size) * 100:.2f}%"])
         else:
-            memory_table.add_row([m.stream, "-", m.size, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count])
+            memory_table.add_row([m.stream, "-", m.size, m.bytes_used, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count, f"{(m.bytes_used / m.size) * 100: .2f}%"])
 
     for j in module.jobs:
         if j.assigned_memory_block:
@@ -267,8 +267,8 @@ def display(simulation: SnapshotsManager, index: int) -> None:
         else:
             job_table.add_row([j.stream, "-", j.size, j.waiting_time, j.current_time, j.complete])
 
-    memory_table.add_row(["Total", "-", snapshot.total_memory, snapshot.total_fragmentation, "-", "-"])
-    job_table.add_row(["Total", snapshot.metric.waiting_queue_length, snapshot.metric.memory_used, snapshot.metric.total_waiting_time, "-", sum(1 for _ in module.jobs if _.complete)])
+    memory_table.add_row(["Total", f"{snapshot.metric.processing_count} jobs (working)", f"{module.total_memory} bytes", f"{module.memory_used} bytes", f"{module.total_fragmentation} bytes", "-", f"{snapshot.metric.total_allocations_count} jobs", f"{snapshot.metric.module_storage_utilization*100: .2f}% (average)"])
+    job_table.add_row(["Total", f"{snapshot.metric.waiting_queue_length} jobs (queue)", f"{module.job_total_memory} bytes", snapshot.metric.total_waiting_time, "-", f"{sum(1 for _ in module.jobs if _.complete)} jobs ( +{snapshot.metric.throughput} )"])
 
     print("Timestamp:", simulation.snapshots[i].timestamp)
     print()
@@ -276,7 +276,7 @@ def display(simulation: SnapshotsManager, index: int) -> None:
     print(job_table)
     print()
 
-    simulation.snapshots[i].display_metrics()
+    print(simulation.snapshots[i].metric)
 
 
 def main():
@@ -324,7 +324,7 @@ def main():
     m = MemoryManager(blocks, jobs)
     snap = simulate(m)
 
-    calculate(snap)
+    snap = calculate(snap)
 
     index = 0
     while True:
