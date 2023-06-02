@@ -348,94 +348,88 @@ def show_help():
     print(keys)
 
 
-def read_file(filename: str) -> List[Job]:
+def read_file_jobs(filename: str) -> List[Job]:
     with open(filename, 'r') as file:
         lines = file.readlines()
-    print(lines)
 
-    # return file
+    jobs = []
+    for line in lines:
+        j = line.rstrip().split()
+        job = Job(int(j[0]), int(j[1]), int(j[2]))
+        jobs.append(job)
+
+    return jobs
+
+def read_file_blocks(filename: str) -> List[MemoryBlock]:
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+
+    blocks = []
+    for line in lines:
+        j = line.rstrip().split()
+        block = MemoryBlock(int(j[0]), int(j[1]))
+        blocks.append(block)
+
+    return blocks
+
 
 def main(args):
-    jobs: List[Job] = [
-        Job(1,   5,  5760),
-        Job(2,   4,  4190),
-        Job(3,   8,  3290),
-        Job(4,   2,  2030),
-        Job(5,   2,  2550),
-        Job(6,   6,  6990),
-        Job(7,   8,  8940),
-        Job(8,   10, 740),
-        Job(9,   7,  3930),
-        Job(10,  6,  6890),
-        Job(11,  5,  6580),
-        Job(12,  8,  3820),
-        Job(13,  9,  9140),
-        Job(14,  10, 420),
-        Job(15,  10, 220),
-        Job(16,  7,  7540),
-        Job(17,  3,  3210),
-        Job(18,  1,  1380),
-        Job(19,  9,  9850),
-        Job(20,  3,  3610),
-        Job(21,  7,  7540),
-        Job(22,  2,  2710),
-        Job(23,  8,  8390),
-        Job(24,  5,  5950),
-        Job(25,  10, 760),
-    ]
+    if len(args) == 3:
+        jobs: List[Job]             = read_file_jobs(args[0])
+        blocks: List[MemoryBlock]   = read_file_blocks(args[1])
 
-    blocks: List[MemoryBlock] = [
-        MemoryBlock(1,  9500),
-        MemoryBlock(2,  7000),
-        MemoryBlock(3,  4500),
-        MemoryBlock(4,  8500),
-        MemoryBlock(5,  3000),
-        MemoryBlock(6,  9000),
-        MemoryBlock(7,  1000),
-        MemoryBlock(8,  5500),
-        MemoryBlock(9,  1500),
-        MemoryBlock(10, 500),
-    ]
-
-    m = MemoryManager(blocks, jobs)
-    snap = simulate(m)
-
-    snap = calculate(snap)
-
-    index = 0
-
-    while True:
-        display(snap, index)
-        t = input()
-        match t:
-            case 'b':
-                if t:
-                    index -= 1
-            case 'q':
-                break
-            case 'h':
-                os.system("clear")
-                show_help()
-                print()
-                input("PRESS ANY <ENTER> TO CONTINUE")
-            case 't':
-                index = int(input("TIMESTAMP > "))
-            case 's':
-                os.system("clear")
-                snap.display_memory_block_average()
-                snap.display_job_average()
-                input()
+        match args[2]:
+            case 'ff' | 'first-fit':
+                # module = MemoryManager(blocks, jobs)
+                pass
+            case 'bf' | 'best-fit':
+                blocks = sorted(blocks, key=lambda x: x.size)
+            case 'wf' | 'worst-fit':
+                blocks = sorted(blocks, key=lambda x: x.size, reverse=True)
             case _:
-                if 'b' in t and t[0] == 'b':
+                print("Run: python main.py <job file name> <memory block file name> <algorithm: first-fit | best-fit | worst-fit>")
+
+        module = MemoryManager(blocks, jobs)
+        simulation = simulate(module)
+        simulation = calculate(simulation)
+
+        index = 0
+
+        while True:
+            display(simulation, index)
+            t = input()
+            match t:
+                case 'b':
                     if t:
-                        index -= t.count('b') + 1
-                if 'n' in t and t[0] == 'n':
-                    index += t.count('n')
-                else:
-                    index += 1
+                        index -= 1
+                case 'q':
+                    break
+                case 'h':
+                    os.system("clear")
+                    show_help()
+                    print()
+                    input("PRESS ANY <ENTER> TO CONTINUE")
+                case 't':
+                    index = int(input("TIMESTAMP > "))
+                case 's':
+                    os.system("clear")
+                    simulation.display_memory_block_average()
+                    simulation.display_job_average()
+                    input()
+                case _:
+                    if 'b' in t and t[0] == 'b':
+                        if t:
+                            index -= t.count('b') + 1
+                    if 'n' in t and t[0] == 'n':
+                        index += t.count('n')
+                    else:
+                        index += 1
+    else:
+        print("Run: python main.py <job file name> <memory block file name> <algorithm: first-fit | best-fit | worst-fit>")
 
 
-    
+
+        
 
 if __name__ == "__main__":
     main(sys.argv[1:])
