@@ -17,9 +17,11 @@
 
 from datetime import timedelta
 from copy import deepcopy
-from typing import List, Tuple
+from typing import List
+import os, sys
+
 from prettytable import PrettyTable
-import os
+from pynput import keyboard
 
 class Job:
     def __init__(self, stream: int, current_time: int, size: int) -> None:
@@ -55,7 +57,7 @@ class MemoryBlock:
         self.size: int                          = size
         self.fragmentation: int                 = 0
         self.allocations_count: int             = 0
-        self.seconds_used_by_a_job: timedelta   = timedelta(seconds=0)
+        self.time_utilization: timedelta        = timedelta(seconds=0)
         self.job: Job|None                      = None
         self.bytes_used: int                    = 0
 
@@ -65,7 +67,7 @@ class MemoryBlock:
         string += f"Size: {self.size} bytes\n"
         string += (f"Fragmentation: {self.fragmentation}\n") 
         string += f"Used Count: {self.allocations_count}\n"
-        string += f"Seconds Used: {self.seconds_used_by_a_job}\n"
+        string += f"Seconds Used: {self.time_utilization}\n"
         string += f"Allocated Job: [{self.job}]\n"
         string += f"Memory Used: {self.bytes_used} bytes\n"
 
@@ -147,6 +149,7 @@ class Metric:
 
 
 
+
 class ModuleSnapshot:
     def __init__(self, timestamp: timedelta, module: MemoryManager) -> None:
         self.timestamp: timedelta   = timestamp
@@ -182,6 +185,61 @@ class SnapshotsManager:
 
     def add(self, snapshot: ModuleSnapshot) -> None:
         self.snapshots.append(snapshot)
+
+    def display_memory_block_average(self) -> None:
+        memory_table: PrettyTable = PrettyTable(["Memory Stream", "Memory Size", "Average Memory Usaged", "Average Internal Fragmentation", "Time Utilization", "Average Storage Utilization", "Allocations Count"])
+
+        memory_block_count: int = len(self.snapshots[0].module.memory)
+        snapshot_count: int     = len(self.snapshots) - 1 # do not include last
+
+        total_mem_usage           = 0
+        total_fragmentation       = 0
+        total_storage_utilization = 0
+        total_time_util           = timedelta(seconds=0)
+
+        for i in range(memory_block_count):
+            mem_usage           = 0
+            fragmentation       = 0
+            storage_utilization = 0
+            for snapshot in self.snapshots:
+                mem_usage       += snapshot.module.memory[i].bytes_used
+                fragmentation   += snapshot.module.memory[i].fragmentation
+                storage_utilization += snapshot.module.memory[i].bytes_used / snapshot.module.memory[i].size
+
+            memory_table.add_row([i+1, f"{self.snapshots[0].module.memory[i].size} bytes", f"{mem_usage/snapshot_count:.2f} bytes", f"{fragmentation/snapshot_count:.2f} bytes", self.snapshots[-1].module.memory[i].time_utilization, f"{storage_utilization/snapshot_count*100:.2f}%", f"{self.snapshots[-1].module.memory[i].allocations_count} jobs"])
+
+        for snap in self.snapshots:
+            total_mem_usage += snap.module.memory_used
+            total_fragmentation += snap.module.total_fragmentation
+            total_storage_utilization += snap.metric.module_storage_utilization
+
+        for memory in self.snapshots[-1].module.memory:
+            total_time_util += memory.time_utilization
+        memory_table.add_row(["Algorithm Average", "-", f"{total_mem_usage/snapshot_count:.2f} bytes", f"{total_fragmentation/snapshot_count:.2f} bytes", total_time_util/snapshot_count, f"{total_storage_utilization/snapshot_count*100:.2f}%", "-"])
+                
+        print(memory_table)
+        ppnu = sum(1 for block in self.snapshots[-1].module.memory if not block.allocations_count)/memory_block_count*100
+        pphu = sum(1 for block in self.snapshots[-1].module.memory if block.allocations_count >= (max(block.allocations_count for block in self.snapshots[-1].module.memory)*0.75))/memory_block_count*100
+        print(f"Percentage Partitions Never Used: {ppnu:.2f}%")
+        print(f"Percentage Partitions Heavily Used: {pphu:.2f}%")
+
+    def display_job_average(self) -> None:
+        job_count: int          = len(self.snapshots[0].module.jobs)
+        snapshot_count: int     = len(self.snapshots) - 1 # do not include last
+
+        total_throughput    = 0
+        total_waiting_time  = timedelta(seconds=0)
+        total_queue_length  = 0
+        for snap in self.snapshots:
+            total_throughput    += snap.metric.processing_count
+            total_queue_length  += snap.metric.waiting_queue_length
+        for job in self.snapshots[-1].module.jobs:
+            total_waiting_time += job.waiting_time
+
+        print(f"Time: {self.snapshots[-1].timestamp}")
+        print(f"Average Waiting Time: {total_waiting_time/job_count} ({self.snapshots[-1].metric.total_waiting_time})")
+        print(f"Average Processing Jobs: {total_throughput/snapshot_count:.2f} jobs per unit time")
+        print(f"Average Queue Length: {total_queue_length/snapshot_count:.2f} jobs per unit time")
 
 
 
@@ -225,7 +283,7 @@ def simulate(module: MemoryManager) -> SnapshotsManager:
         # process all jobs in memory
         for block in module.memory:
             if block.job:
-                block.seconds_used_by_a_job += timedelta(seconds=1)
+                block.time_utilization += timedelta(seconds=1)
                 block.job.current_time -= timedelta(seconds=1)
 
         # increment all allocated jobs
@@ -251,15 +309,14 @@ def display(simulation: SnapshotsManager, index: int) -> None:
 
     snapshot = simulation.snapshots[i]
     module   = snapshot.module
-    memory   = module.memory
 
     memory_table: PrettyTable   = PrettyTable(["Memory Stream", "Assigned Job Stream", "Memory Size (bytes)", "Memory Used (bytes)", "Internal Fragmentation (bytes)", "Time Utilization", "Allocations Count", "Storage Utilization"])
     job_table: PrettyTable      = PrettyTable(["Job Stream", "Assigned Memory Block", "Job Size (bytes)", "Waiting Time", "Current Time", "Completed"])
     for m in module.memory:
         if m.job:
-            memory_table.add_row([m.stream, m.job.stream, m.size, m.bytes_used, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count, f"{(m.bytes_used / m.size) * 100:.2f}%"])
+            memory_table.add_row([m.stream, m.job.stream, m.size, m.bytes_used, m.fragmentation, m.time_utilization, m.allocations_count, f"{(m.bytes_used / m.size) * 100:.2f}%"])
         else:
-            memory_table.add_row([m.stream, "-", m.size, m.bytes_used, m.fragmentation, m.seconds_used_by_a_job, m.allocations_count, f"{(m.bytes_used / m.size) * 100: .2f}%"])
+            memory_table.add_row([m.stream, "-", m.size, m.bytes_used, m.fragmentation, m.time_utilization, m.allocations_count, f"{(m.bytes_used / m.size) * 100: .2f}%"])
 
     for j in module.jobs:
         if j.assigned_memory_block:
@@ -276,10 +333,29 @@ def display(simulation: SnapshotsManager, index: int) -> None:
     print(job_table)
     print()
 
-    print(simulation.snapshots[i].metric)
+    # print(simulation.snapshots[i].metric)
 
 
-def main():
+def show_help():
+    keys = PrettyTable(["Key", "Command"])
+    keys.add_row(["h", "Show help menu"])
+    keys.add_row(["q", "Quit simulation"])
+    keys.add_row(["b", "Decrement time"])
+    keys.add_row(["n", "Increment time"])
+    keys.add_row(["s", "Show statistics"])
+    keys.add_row(["t", "Set time"])
+
+    print(keys)
+
+
+def read_file(filename: str) -> List[Job]:
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    print(lines)
+
+    # return file
+
+def main(args):
     jobs: List[Job] = [
         Job(1,   5,  5760),
         Job(2,   4,  4190),
@@ -327,6 +403,7 @@ def main():
     snap = calculate(snap)
 
     index = 0
+
     while True:
         display(snap, index)
         t = input()
@@ -336,11 +413,23 @@ def main():
                     index -= 1
             case 'q':
                 break
+            case 'h':
+                os.system("clear")
+                show_help()
+                print()
+                input("PRESS ANY <ENTER> TO CONTINUE")
+            case 't':
+                index = int(input("TIMESTAMP > "))
+            case 's':
+                os.system("clear")
+                snap.display_memory_block_average()
+                snap.display_job_average()
+                input()
             case _:
-                if 'b' in t:
+                if 'b' in t and t[0] == 'b':
                     if t:
                         index -= t.count('b') + 1
-                if 'n' in t:
+                if 'n' in t and t[0] == 'n':
                     index += t.count('n')
                 else:
                     index += 1
@@ -349,4 +438,4 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
