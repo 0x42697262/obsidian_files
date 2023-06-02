@@ -196,6 +196,7 @@ class SnapshotsManager:
         total_fragmentation       = 0
         total_storage_utilization = 0
         total_time_util           = timedelta(seconds=0)
+        mem_stream                = []
 
         for i in range(memory_block_count):
             mem_usage           = 0
@@ -206,7 +207,7 @@ class SnapshotsManager:
                 fragmentation   += snapshot.module.memory[i].fragmentation
                 storage_utilization += snapshot.module.memory[i].bytes_used / snapshot.module.memory[i].size
 
-            memory_table.add_row([i+1, f"{self.snapshots[0].module.memory[i].size} bytes", f"{mem_usage/snapshot_count:.2f} bytes", f"{fragmentation/snapshot_count:.2f} bytes", self.snapshots[-1].module.memory[i].time_utilization, f"{storage_utilization/snapshot_count*100:.2f}%", f"{self.snapshots[-1].module.memory[i].allocations_count} jobs"])
+            memory_table.add_row([self.snapshots[0].module.memory[i].stream, f"{self.snapshots[0].module.memory[i].size} bytes", f"{mem_usage/snapshot_count:.2f} bytes", f"{fragmentation/snapshot_count:.2f} bytes", self.snapshots[-1].module.memory[i].time_utilization, f"{storage_utilization/snapshot_count*100:.2f}%", f"{self.snapshots[-1].module.memory[i].allocations_count} jobs"])
 
         for snap in self.snapshots:
             total_mem_usage += snap.module.memory_used
