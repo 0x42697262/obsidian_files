@@ -8,6 +8,8 @@
 - [[Interesting Websites To Check#Pentesting|Pentesting]]
 - [[Interesting Websites To Check#Something Touhou (東方Project) Related|Something Touhou (東方Project) Related]]
 - [[Interesting Websites To Check#Something on Github|Random Stuffs on Github]]
+- [[#Articles]]
+- [[#Windows]]
 - [[#Uncategorized]]
 
 ---
@@ -21,6 +23,7 @@
 - https://github.com/bmorelli25/Become-A-Full-Stack-Web-Developer
 - https://github.com/Developer-Y/cs-video-courses
 - https://github.com/ossu/computer-science
+- https://overapi.com/
 
 ### Pentesting
 - https://github.com/carpedm20/awesome-hacking
@@ -30,6 +33,7 @@
 - https://github.com/onlurking/awesome-infosec
 - https://github.com/hmaverickadams/Beginner-Network-Pentesting
 - https://github.com/cider-security-research/cicd-goat
+- https://github.com/vavkamil/awesome-vulnerable-apps
 
 ### Something Touhou (東方Project) Related
 - [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
@@ -42,9 +46,17 @@
 - [Lenovo Ideapad Gaming 3 2021 Linux RGB Keyboard Light Controller](https://github.com/InstinctEx/lenovo-ideapad-legion-keyboard-led)
 - [Guide for GPU Passthrough on laptop with Optimus Manager](https://github.com/mysteryx93/GPU-Passthrough-with-Optimus-Manager-Guide)
 - [https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books")
+- https://saurabhdaware.github.io/text-to-handwriting/
 
-## Articles
+### Articles
 - [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
+
+### Windows
+- [XToolBox](https://github.com/xemulat/XToolbox)
+
+### Image Processing
+- [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/)
 
 ### Uncategorized
 - https://wiki.skullsecurity.org/index.php/Main_Page
+- https://ripped.guide/
