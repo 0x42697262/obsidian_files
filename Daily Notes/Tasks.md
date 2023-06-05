@@ -6,18 +6,17 @@ kanban-plugin: basic
 
 ## Deadlines
 
-- [ ] Activity 3: A Hands-on Exploration of Bioinformatics-related Databases and Publicly-available Online Tools #CMSC194_2 @[[2023-05-18]]
 - [ ] Activity 4: Enriching the RRL in the Form of Annotated Bibliography #CMSC194_2 @[[2023-06-01]]
 
 
 ## Will Do
 
 - [ ] Machine Problem 3 #CMSC125 @[[2023-05-28]]
+- [ ] Activity 3: A Hands-on Exploration of Bioinformatics-related Databases and Publicly-available Online Tools #CMSC194_2 @[[2023-05-18]]
 
 
 ## DOING
 
-- [ ] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 
 
 ## Postponed
@@ -28,6 +27,7 @@ kanban-plugin: basic
 ## DONE
 
 **Complete**
+- [x] Machine Problem 2 #CMSC125 @[[2023-05-03]]
 - [x] Problem Set 4 #CMSC125 @[[2023-05-07]]
 - [x] Alpha-Beta Pruning Activity #CMSC170 @[[2023-04-16]]
 - [x] Assignment 1 #CMSC178 @[[2023-04-20]]

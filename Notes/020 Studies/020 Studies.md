@@ -47,10 +47,13 @@
 - [[Operating Systems]]
 ### Week 7: Processor Management
 - [[CPU Scheduler]]
+- [[Processes]]
 ### Week 10: Processor Management (continuation)
 - [[CMSC 125 Problem Set 3]]
 ### Weeks 11-12: Memory Management
 - [[CMSC 125 Problem Set 4]]
+### Week 16-17: Concurrent Processes/Concurrency Management
+- [[Message Passing]]
 
 
 ## CMSC 128 Software Engineering 1
