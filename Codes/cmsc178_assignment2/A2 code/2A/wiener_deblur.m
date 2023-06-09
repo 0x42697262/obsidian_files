@@ -41,5 +41,15 @@ I_deblur    = ifftshift(I_deblur);
 
 % modify the code above ------------------------------------------------
 
+
+% NOTES:
+%
+% On the first step, zero padding is necessary but not required for wiener deconvolution.
+% Applying zero padding ensures that the input image and kernel blur are of the same size
+% for easier element-wise multiplication in the frequency domain.
+%
+% What happened here is that kernel blur is padded with zeros so that it will match the size of
+% the image input. 
+
 return
 

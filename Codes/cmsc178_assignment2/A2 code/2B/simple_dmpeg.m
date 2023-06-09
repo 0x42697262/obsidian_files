@@ -38,6 +38,7 @@ for row = 1:8:size(new_image,1)
 
 
       % 1. retrieve ac coefficients for the current block
+      % tile_num would be the index for the ac_coeffs block
       ac_current_coefficients   = ac_coeffs(:, tile_num);
 
       % 2. retrieve dc coefficients for the current block
