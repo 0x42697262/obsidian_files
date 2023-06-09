@@ -29,13 +29,28 @@ new_image = previous_image;
 tile_num=0;
 % ANALYSE (AND COMPRESS?) EACH 8x8 BLOCK IN THE IMAGE IN TURN
 % FOR LOOPS
-      % 1. retrieve coefficients for this block
-      % 2. retrieve coefficients for this block
+for row = 1:8:size(new_image,1)
+  for column = 1:8:size(new_image,2)
+    tile_num  = tile_num + 1;
+
+      % 1. retrieve ac coefficients for the current block
+      ac_current_coefficients   = ac_coeffs(:, tile_num);
+
+      % 2. retrieve dc coefficients for the current block
+      % we need to shift the block to reference the bottom right corner for
+      % the dc coefficient
+      dc_current_coefficients   = dc_coeffs((row+7)/8, (column+7)/8);
+
       % 3. determine if block needs updating / decoding
+      if (dc_current_coefficients ~= 0 || any(ac_current_coefficients))
       %   NOTE - any block not encoded will have all of the
       %   ac and dc coefficients set to ZERO. This 'clue' can be used to
       %   determine if a image block needs updating here.
       % 4. extract out the decompressed tile (if required)
+        new_image(row:row+7, column:column+7) = djpeg_8x8(dc_current_coefficients, ac_current_coefficients, Q);
+      end
+    end
+end
 %
 % SEE SIMPLE_MPEG for clues.
 
@@ -49,8 +64,3 @@ return
 end
 
 % -------------------------------------------------------------------------
-
-
-
-  
-
