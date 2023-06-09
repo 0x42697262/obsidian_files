@@ -33,6 +33,10 @@ for row = 1:8:size(new_image,1)
   for column = 1:8:size(new_image,2)
     tile_num  = tile_num + 1;
 
+      % we have to retrieve the coefficients of the current block
+      % to reconstruct the image block
+
+
       % 1. retrieve ac coefficients for the current block
       ac_current_coefficients   = ac_coeffs(:, tile_num);
 
