@@ -1,0 +1,432 @@
+\documentclass{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{amsmath}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+% Set the basic style to a coding-style font
+\definecolor{lightyellow}{RGB}{255, 255, 224}
+\definecolor{lightgreen}{RGB}{144,238,144}
+\definecolor{darkgreen}{RGB}{0,128,0}
+
+\lstset{
+    backgroundcolor=\color{lightyellow},
+    basicstyle=\color{darkgreen}\fontsize{10}{12}\ttfamily,
+    frame=single,
+    breaklines=true,
+    columns=fullflexible,
+    xleftmargin=0.05 in,
+    xrightmargin=0.05in
+}
+
+% Importing your images here. Don't put it inside the document class
+\usepackage{graphicx}
+	\graphicspath{ {./imgs/} }
+
+% Define title page
+\newcommand{\mytitlepage}{
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{1.5cm}
+            
+            \LARGE\textbf{ASSIGNMENT 2}
+            \vspace{0.5cm}\\
+            \Large CMSC 178\\
+            \Large Digital Image Processing\\
+            \vspace{3cm}
+            Submitted to:\\
+            
+            \vspace{2.5cm}
+            Submitted by:\\
+            
+            \vspace{4cm}
+            
+	April 2023
+            
+            \vspace{1.3cm}
+        \end{center}
+        \large\textbf{Overview}\\
+        The assignment was aimed at providing a practical learning opportunity in digital image manipulation using MATLAB, while also reinforcing our knowledge of the foundational concepts in image processing covered in the course. As part of the task, we were required to modify various functions to carry out basic yet essential techniques such as color correction, contrast enhancement, and noise filtering. The main objective was to acquire hands-on experience with these methods.
+    \end{titlepage}
+}
+
+\begin{document}
+
+\mytitlepage
+
+\newpage
+	\section*{Exercise 2A –  ( 5\% ) – De-convolution using a Wiener Filter}
+	
+	\subsection*{1. Background of the Problem}
+	Color balancing is a critical aspect of image processing, but achieving accurate color balance can be challenging, especially when working with images captured under non-standard lighting conditions or different cameras or devices. One approach to color balancing is to use a reference chart, and in this exercise, three simple functions are required:
+	\begin{itemize}
+	\item {\texttt{get\textunderscore chart\textunderscore values.m}} – extracts samples from the 24-color chart image; and 
+	\item {\texttt{chart\textunderscore correct.m}}  – calculates the mapping between the ideal and less than ideal cases using the extracted values from both charts. 
+	\item {\texttt{apply\textunderscore rgb\textunderscore map.m}} –  applies this mapping to an image to correct for color imbalance.
+	\end{itemize}
+ These functions can be useful in various applications that require accurate color representation, such as photography, graphic design, and other fields where visual content is critical.
+ AAA
+ AAA
+
+ AAA
+
+ AAA
+ AAA
+ AAA
+ 
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ AAA
+ 
+
+
+
+
+
+	\subsection*{2. Procedure}
+	We used the {\texttt{wiener\_deblur.m}} function for image deblurring using the Wiener deconvolution algorithm. This function is already supplied however it is incomplete and cannot be used. 
+	We need to modify the {\texttt{wiener\_deblur.m}} function to implement the algorithmic process of Wiener Deconvolution. Inside the {\texttt{wiener\_deblur.m}} function, these following 
+	functions are used: {\texttt{floor()}}, {\texttt{padarray()}}, {\texttt{zeros()}}, {\texttt{abs()}}, {\texttt{ifft2()}}, {\texttt{real()}}, and {\texttt{ifftshift()}}. 
+	The remaining functions, {\texttt{edgetaper()}} and {\texttt{fft2()}}, are already supplied. The {\texttt{floor}} function is used to get the floor values of the padding size. 
+	The {\texttt{padarray}} function is used to pad zeros to the blur kernel. 
+	The {\texttt{zeros}} function is used to instantiate an array of zeros. 
+	The {\texttt{absolute}} function is used to ensure that only magnitude is used for the inverse filter. 
+	The {\texttt{inverse fast fourier transformation 2}} function is used to convert an image from spatial domain to the frequency domain. 
+	The {\texttt{real}} function is used to extract the real values used for the final deblurred image. 
+	And the {\texttt{inverse fast fourier transform shift}} or {\texttt{inverse zero-frequency shift}} is used to shift the zero-frequency component of the DFT to the center of the array 
+	effectively shifting the image back to its original position putting the image back in the top-left corner.
+	
+	The algorithm Wiener deconvolution is used to remove the blurriness from an image caused by a known blur kernel. The code modifications we have added focuses on the main steps through using 
+	zero padding, inverse filtering, image reconstruction, and spatial delay handling. The first step is to add zero padding. To begin, the initial step involves applying zero padding to the blur kernel. 
+	This adjustment ensures that the kernel matches the size of the input image. This serves the purpose of convenient element-wise multiplication in the frequency domain. 
+	Although, Wiener deconvolution does not require zero padding, this step simply adds ease or convenience when dealing with the next steps. We then compute for the Fast Fourier Transform 
+	representation of the blur kernel. Next step is to compute wiener inverse filter through this formula:
+	\[F_{\text{inv}} = \frac{F_I}{F_B} \frac{|F_b|^2}{|F_B|^2 + k}\]
+	the {\texttt{$F_{inv}$}} can then be calcuated through element-wise multiplication and division in {\texttt{MATLAB}}. Other way of solving this is to iterate each pixels and calculate their values.
+	But using element-wise operation is much more efficient in vector operations compared to iterating in loops. The next step is to convert the image back to the frequency domain from the spatial domain
+	and then acquire its real values that will be used to display the image. The reason why real values are extracted is because complex numbers in the Wiener inverse filter may include 
+	negative and imaginary values, but in the frequency domain, negative values are not utilized as the focus is typically on magnitude and phase information. Displaying the complex numbers would
+	probably alter the image however testing the image example in this exercise did not alter much of the image and still looked similar with real values being extracted. Once the wiener inverse filter
+	is calculated and extracted for display, the last step is to fix the spatial delays or zero values due to the zero padding.
+
+
+
+
+
+	\subsection*{3. Results and Discussion}
+	In this section, we present the outcomes of our modified {\texttt{wiener blur}} function and analyze how the outputs are influenced by the selected parameters or configurations. 
+	The sample image inputs we used are already provided from this laboratory exercise and their corresponding outputs are showcased to demonstrate the function's behavior. There are a total of three (3)
+	tests for {\texttt{deconv\_test.m}} function with varying parameters: {\texttt{K=0.01}}, {\texttt{K=0.9}}, and {\texttt{K=0.000001}}. The following figures below are the original image inputs:
+	\begin{figure*}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE1Orig}
+    	\caption{Sample Input Image 1}
+    	\label{fig:example1}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE2Orig}
+    	\caption{Sample Input Image 2}
+    	\label{fig:example2}
+  	\end{minipage}
+	\end{figure*}
+
+	Since only the parameter K value has been changed, these figures below will be used as the default corrupted data of the two input images:
+	\begin{figure*}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE1Corrupted}
+    	\caption{Corrupted Data of Input Image 1}
+    	\label{fig:example1corrupted}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE2Corrupted}
+    	\caption{Corrupted Data of Input Image 2}
+    	\label{fig:example2corrupted}
+  	\end{minipage}
+	\end{figure*}
+
+
+	The following below are the tests cases:
+	\begin{itemize}
+  	\item \textbf{Parameter K = 0.01} – This test only modifies the K parameter value to 0.01 which is the default parameter K from the exercise.
+
+			\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.40\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1PSF}
+    			\caption{PSF of Sample Input Image 1}
+    			\label{fig:psf1}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.40\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2PSF}
+    			\caption{PSF of Sample Input Image 2}
+    			\label{fig:psf2}
+  			\end{minipage}
+			\end{figure}
+
+			Figure {\ref{fig:psf1}} and Figure {\ref{fig:psf2}} are the guessed PSF values used for deblurring the image. 
+
+			\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.40\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1K0.01}
+    			\caption{Deconvuled of Sample Input Image 1}
+    			\label{fig:deblur1}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.40\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2K0.01}
+    			\caption{Deconvuled of Sample Input Image 2}
+    			\label{fig:deblur2}
+  			\end{minipage}
+			\end{figure}
+
+			Based on these two images Figure {\ref{fig:deblur1}} and Figure {\ref{fig:deblur2}}, the license plate numbers can be clearly seen but as you can see there are a bit of blocks pattern
+			on the image. But for Figure {\ref{fig:deblur1}}, the license plate number is a bit harder to read. Thus, we have tested Figure {\ref{fig:example1}} with K value of {\texttt{0.001}}.
+			
+			\begin{figure}[ht]
+  			\begin{minipage}{0.4\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1K0.001}
+    			\caption{Deconvolution of Sample Input Image 1 at K=0.001}
+    			\label{fig:deblur1a}
+  			\end{minipage}
+  			\hfill
+  			\begin{minipage}{0.35\textwidth}
+    			The license plate number in Figure {\ref{fig:deblur1a}} is now much clearer compared to the image with {\texttt{K=0.01}}.
+  			\end{minipage}
+			\end{figure}
+
+			The results shows that the deconvoled output figures of the sample input images will have different parameter K values and their PSF can differ depending on the images. We have tested
+			both K values for the same images but in order to depict the image with clarity, we further tested {\ref{fig:example1}} with another K value. The result was far clearer in comparison
+			with the default K value. Basing on this test case result, we decided to further test on checking the result of a higher parameter K.
+
+
+  	\item \textbf{Parameter K = 0.9} – In this test, we tried to acquire the result of the deconvoled image if K is {\texttt{0.9}}.
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1Corrupted2}
+    			\caption{Corrupted Data of Sample Input Image 1}
+    			\label{fig:corrupted_e1}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2Corrupted2}
+    			\caption{Corrupted Data of Sample Input Image 2}
+    			\label{fig:corrupted_e2}
+  			\end{minipage}
+			\end{figure}
+
+			To much of our surprise, {Figure~\ref{fig:corrupted_e1}} and {Figure~\ref{fig:corrupted_e2}} has changed. We did not expect that changing the parameter K value would alter the result of
+			the corrupted image. As it turns out, modifying {\texttt{K}} was actually the noise standard deviation which may also be the blur kernel.
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1K0.9}
+    			\caption{Deconvuled Sample Input Image 1}
+    			\label{fig:deconv_e1_2}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2K0.9}
+    			\caption{Deconvuled Sample Input Image 2}
+    			\label{fig:deconv_e2_2}
+  			\end{minipage}
+			\end{figure}
+
+			{Figure~\ref{fig:deconv_e1_2}} and {Figure~\ref{fig:deconv_e2_2}} exhibits noticeable degradation in terms of clarity. Due to the presence of extensive image noise, only a limited portion of the image quality was successfully restored using 
+			our wiener deblur function. The substantial loss of data caused by the noise renders a complete recovery of the image impossible.
+
+
+		\item \textbf{Parameter K = 0.000001} – In this test, we tried to acquire the result of the deconvoled image if K is {\texttt{0.000001}}.
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1K0.000001}
+    			\caption{Deconvoled Sample Input Image 1}
+    			\label{fig:deconv_e1_3}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2K0.000001}
+    			\caption{Deconvoled Sample Input Image 2}
+    			\label{fig:deconv_e2_3}
+  			\end{minipage}
+			\end{figure}
+
+			{Figure~\ref{fig:deconv_e1_3}} and {Figure~\ref{fig:deconv_e2_3}} demonstrate minimal noticeable noise, closely resembling Figures {Figure~\ref{fig:example1corrupted}} and 
+			{Figure~\ref{fig:example2corrupted}}, which represent the corresponding corrupted data. However, upon closer examination of the output images, line-like artifacts are apparent along the 
+			X and Y axes. These artifacts indicate the challenges faced by our wiener deblur function in effectively restoring the image to its original clarity.
+
+		\item \textbf{Parameter K = 0.01 (without deblurring)} – In this test, similar parameter K value is used to the first test however we do not blur the image.
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1NoBlur}
+    			\caption{Deconvoled Sample Input Image 1}
+    			\label{fig:deconv_e1_4}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2NoBlur}
+    			\caption{Deconvoled Sample Input Image 2}
+    			\label{fig:deconv_e2_4}
+  			\end{minipage}
+			\end{figure}
+
+			{Figure~\ref{fig:deconv_e1_4}} and {Figure~\ref{fig:deconv_e2_4}} skips the blurring process and directly undergo to the deblurring process. The output images do not resemble 
+			the input images but instead they exhibit distortions resembling the visual effects associated with LSD usage.
+
+		\item \textbf{Parameter K = 0.01 (laplacian and sobel blur filter)} – In this test, similar parameter K value is used to the first test however we have changed the blur filter being used for the input images.
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1Corrupted_laplacian}
+    			\caption{Corrupted Data of Sample Input Image 1}
+    			\label{fig:laplacian_cd}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2Corrupted_sobel}
+    			\caption{Corrupted Data of Sample Input Image 2}
+    			\label{fig:sobel_cd}
+  			\end{minipage}
+			\end{figure}
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1PSF_laplacian}
+    			\caption{PSF of Sample Input Image 1}
+    			\label{fig:laplacian_psf}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2PSF_sobel}
+    			\caption{PSF of Sample Input Image 2}
+    			\label{fig:sobel_psf}
+  			\end{minipage}
+			\end{figure}
+
+  		\begin{figure}[ht]
+  			\centering
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE1K0.01_laplacian}
+    			\caption{Deconvoled Sample Input Image 1}
+    			\label{fig:laplacian_decon}
+  			\end{minipage}\hfill
+  			\begin{minipage}[t]{0.45\textwidth}
+    			\centering
+    			\includegraphics[width=\textwidth]{2AE2K0.01_sobel}
+    			\caption{Deconvoled Sample Input Image 2}
+    			\label{fig:sobel_decon}
+  			\end{minipage}
+			\end{figure}
+
+			We applied different blur filters to the images: Laplacian blur filter in Figure~\ref{fig:laplacian_cd} and Sobel filter in Figure~\ref{fig:sobel_cd}. 
+			The purpose of using these filters was to observe their effect on the images and compare it with the Gaussian filter. As shown in the figures, it is evident that a 
+			significant amount of details has been lost due to the blurring process. The blurring caused a considerable degradation in the image quality, making the recovery of the original 
+			image nearly impossible unlike Gaussian filter.
+
+			As a proof to that statement, we present Figure~\ref{fig:laplacian_decon} and Figure~\ref{fig:sobel_decon}. These figures show the deconvolution results after applying the 
+			Wiener deblur algorithm to the blurred images. Despite the attempt to deblur the images, the resulting outputs still exhibit substantial artifacts and the images being black. 
+			These artifacts are remnants of the severe degradation introduced by Laplacian and Sobel filters.
+
+	\end{itemize}
+
+	Overall, these sample test cases highlight the expected output of our modified wiener blur function similarly to the laboratory exercise's outputs. The variation of the parameter K has a 
+	significant impact on both the corrupted data and the deconvolved image. When the K value approaches 1, excessive noise becomes evident in the output. Conversely, selecting a K value 
+	close to 0 minimizes the presence of noise, but introduces line-like artifacts in the resulting image. It is important to note that deblurring the image is a necessary prerequisite for 
+	the proper functioning of the Wiener Deconvolution algorithm.
+
+	\clearpage
+
+
+
+
+
+	\subsection*{4. Comments and Conclusion}
+	The {\texttt{wiener\_deblur.m}} function is implemented to deblur an input image using the Wiener deconvolution algorithm. The optimal output can be achieved by selecting suitable parameters or 
+	configurations. The key parameter in this function is the regularization parameter {\texttt{K}}. Adjusting the value of {\texttt{K}} allows controlling the trade-off between noise reduction 
+	and clarity of the deblurred image. Generally, a smaller value of {\texttt{K}} results in less noise but may introduce artifacts or line-like distortions in the output. On the other hand, 
+	a larger value of {\texttt{K}} would result in an increased noise standard deviation, leading to higher levels of noise in the output image. There is no best parameter or configurations since
+	it would depend on the blurr level intensity of the input image. Experimenting the values for different images would be the best result.
+
+	\noindent One limitation of the our modified function is that it assumes the blurring model being used, such as a Gaussian blur kernel. While it may work well for images blurred by this model, 
+	it may not be as effective for images blurred using different kernels or complex blurring mechanisms which is evident in our Results and Discussions. 
+
+
+
+	\vspace{0.5cm}
+	
+\newpage
+	
+
+	\section*{Exercise 1E– (2\%) – Written Questions }
+	
+	\subsubsection*{1. (1.0\%) You have been given a set of imagery from a 256x256 pixel video surveillance camera to analyse. However, to work out roughly how far away objects of known size (eg. people) are from the camera in the footage you need to determine the field of view of the sensor. Using a tape measure as a guide you are able to estimate that a doorway of 2 metres height appears to span around 32 pixels in the imagery when viewed from 10 metres away.}
+	
+	\subsubsection*{Q: Given the above, what is the likely field of view of the camera?  (you may assume the vertical and horizontal fields of view are the same)}
+	\includegraphics[width=1.1\textwidth,height=\textheight,keepaspectratio]{1E1Q1}
+	
+	\subsubsection*{Q: How far away would a person of height 1.75 metres be if they appeared as a region of height 8 pixels in this imagery?}
+	\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{1E1Q2}
+
+	\subsubsection*{2. (1\%) Carefully explain how a 'median' and an 'alpha trimmed mean' filter work and describe under what circumstances they are useful (illustrate if required).}
+
+	\begin{center}
+		\includegraphics[width=0.15\textwidth,keepaspectratio]{1E2G}
+	\end{center}
+	
+	\subsubsection*{Q: Without using a computer, what would be the result of applying a 3x3 and a 5x5 median filter to the following simple image? (you may assume that white=1, black=0 and that all values outside the image boundaries shown here are also black ie. 0) }
+	
+	\begin{center}	
+		\includegraphics[width=0.895\textwidth,height=\textheight,keepaspectratio]{1E2Q1a}
+	\end{center}
+	\newpage
+	\noindent \includegraphics[width=1.15\textwidth,height=\textheight,keepaspectratio]{1E2Q1b}
+	
+	\newpage
+	\subsubsection*{Q: Approximately, what would the result be if we instead applied a 3x3 alpha trimmed mean filter with d=3 ? }
+	\noindent \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{1E2Q2a}
+	
+	\newpage
+	\noindent \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{1E2Q2b}
+
+\end{document}
