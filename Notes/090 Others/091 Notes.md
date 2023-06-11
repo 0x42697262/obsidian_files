@@ -10,3 +10,4 @@
 [[Center a Table in Obsidian]]
 [[Center a Text Vertically in Latex]]
 [[PyTorch]]
+[[Firefox Zoom Level]]
