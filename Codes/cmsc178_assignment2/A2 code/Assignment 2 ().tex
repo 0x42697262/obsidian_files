@@ -55,9 +55,9 @@
 
 \begin{document}
 
-\mytitlepage
+	\mytitlepage
 
-\newpage
+	\newpage
 	\section*{Exercise 2A –  ( 5\% ) – De-convolution using a Wiener Filter}
 	
 	\subsection*{1. Background of the Problem}
@@ -369,6 +369,74 @@
 			These artifacts are remnants of the severe degradation introduced by Laplacian and Sobel filters.
 
 	\end{itemize}
+	
+	\vspace{15pt}
+	\noindent{\textbf{Deblurring Six Plate Numbers}}
+	\par
+	\vspace{10pt}
+	In order to further test our implemented function, we tested this against six plate numbers that have been blurred. It is assumed that Gaussian filtered was applied. Our goal for this
+	test is to guess which {\texttt{K}} parameter value works best in deblurring the plate numbers. {Figure~\ref{fig:2AE3_Blurred}} shows the blurred plate numbers that needs to be deblurred
+	using our implemented wiener deconvolution function and {Figure~\ref{fig:2AE3_PSF}} is the PSF guess. We tested guessing {\texttt{K}} at {\texttt{0.01}}, {\texttt{0.001}}, 
+	{\texttt{0.003}}, and {\texttt{0.005}}.
+
+	Based on our test results, the parameter with the value of {\texttt{K}} would be {\texttt{0.003}} since all the six plate numbers can be read. These six numbers are: {\texttt{EN 1113}}, {\texttt{DT 1735}}, 
+	{\texttt{CD 7984}}, {\texttt{BT 9824}}, {\texttt{WYG 734}}, and {\texttt{IT 0420}}.
+
+  	
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_Blurred}
+    	\caption{Blurred Six Plate Numbers}
+    	\label{fig:2AE3_Blurred}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_PSF}
+    	\caption{PSF Guess for Six Plate Numbers}
+    	\label{fig:2AE3_PSF}
+  	\end{minipage}
+	\end{figure}
+
+
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_D01}
+    	\caption{K = 0.01}
+    	\label{fig:2AE3_D01}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_D001}
+    	\caption{K = 0.001}
+    	\label{fig:2AE3_D001}
+  	\end{minipage}
+	\end{figure}
+
+
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_D003}
+    	\caption{K = 0.003}
+    	\label{fig:2AE3_D003}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2AE3_D005}
+    	\caption{K = 0.005}
+    	\label{fig:2AE3_D005}
+  	\end{minipage}
+	\end{figure}
+
+
+
+
+	\par\vspace{10pt}
 
 	Overall, these sample test cases highlight the expected output of our modified wiener blur function similarly to the laboratory exercise's outputs. The variation of the parameter K has a 
 	significant impact on both the corrupted data and the deconvolved image. When the K value approaches 1, excessive noise becomes evident in the output. Conversely, selecting a K value 
@@ -388,45 +456,48 @@
 	a larger value of {\texttt{K}} would result in an increased noise standard deviation, leading to higher levels of noise in the output image. There is no best parameter or configurations since
 	it would depend on the blurr level intensity of the input image. Experimenting the values for different images would be the best result.
 
-	\noindent One limitation of the our modified function is that it assumes the blurring model being used, such as a Gaussian blur kernel. While it may work well for images blurred by this model, 
+	One limitation of the our modified function is that it assumes the blurring model being used, such as a Gaussian blur kernel. While it may work well for images blurred by this model, 
 	it may not be as effective for images blurred using different kernels or complex blurring mechanisms which is evident in our Results and Discussions. 
 
 
 
 	\vspace{0.5cm}
 	
-\newpage
+	\newpage
+	\section*{Exercise 2B –  ( 5\% ) – Motion Image Compression}
 	
+	\subsection*{1. Background of the Problem}
 
-	\section*{Exercise 1E– (2\%) – Written Questions }
+
+	\subsection*{2. Procedure}
+	There are two functions, {\texttt{jpeg\_8x8.m}} and {\texttt{simple\_mpeg.m}}, that are supplied from this laboratory exercise as a guide to modify two incomplete functions, 
+	{\texttt{djpeg\_8x8.m}} and {\texttt{simple\_dmpeg.m}}, that effectively decode an image and a video. We first focused on {\texttt{djpeg\_8x8.m}} that implements the decoding 
+	process for the image. It first copies the DC coefficient to the quantized coefficient array. The first and second element or index in the array is the DC while the rest 
+	are the AC coefficients. Which is to be used for iterating the array in zig-zag pattern where the AC coefficient index is assigned to the quantized array while ensuring 
+	the direction. Where its next step is to acquire its quantization scale factor to determine the level of compression applied to the coefficients in the array. We then 
+	perform the inverse quantization step in the JPEG decoding process. It reconstructs the original DCT coefficients from the quantized coefficients by applying the 
+	quantization table and the Q scale factor. The result would be then a matrix that represents a reconstructed DCT coefficients which will be used for IDCT. In the final step, 
+	we use the inverse discrete cosine transform to convert the frequency coefficients back into pixel values. This process, performed with the help of the idct() function from the 
+	signal processing toolbox, allows us to reconstruct the 8x8 image block tile to its original form.
+
+	After performing the decoding process for images, the next step of the laboratory exercise is to implement the decoding of MPEG video formats. We modified {\texttt{simple\_dmpeg.m}}
+	to iterate over the 8x8 block in an image. Two frames are compared to each other and analyzed to see whether there is a change in pixels. Blocks that had similar coefficient values
+	are ignored and blocks that do have differences are extracted. The intention of this function is not to iterate over each frames in the video but instead to compare two frames. 
+	It is the job of {\texttt{mpeg\_test.m}} to iterate each frames. Once the decompression of the frame is done, an output is generated.
+
+
+
+	\subsection*{3. Results and Discussion}
+
+	\subsection*{4. Comments and Conclusion}
+
+
+
+	\newpage
+	\section*{Exercise 2C– (2\%) – Written Questions }
 	
 	\subsubsection*{1. (1.0\%) You have been given a set of imagery from a 256x256 pixel video surveillance camera to analyse. However, to work out roughly how far away objects of known size (eg. people) are from the camera in the footage you need to determine the field of view of the sensor. Using a tape measure as a guide you are able to estimate that a doorway of 2 metres height appears to span around 32 pixels in the imagery when viewed from 10 metres away.}
 	
-	\subsubsection*{Q: Given the above, what is the likely field of view of the camera?  (you may assume the vertical and horizontal fields of view are the same)}
-	\includegraphics[width=1.1\textwidth,height=\textheight,keepaspectratio]{1E1Q1}
-	
-	\subsubsection*{Q: How far away would a person of height 1.75 metres be if they appeared as a region of height 8 pixels in this imagery?}
-	\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{1E1Q2}
 
-	\subsubsection*{2. (1\%) Carefully explain how a 'median' and an 'alpha trimmed mean' filter work and describe under what circumstances they are useful (illustrate if required).}
-
-	\begin{center}
-		\includegraphics[width=0.15\textwidth,keepaspectratio]{1E2G}
-	\end{center}
-	
-	\subsubsection*{Q: Without using a computer, what would be the result of applying a 3x3 and a 5x5 median filter to the following simple image? (you may assume that white=1, black=0 and that all values outside the image boundaries shown here are also black ie. 0) }
-	
-	\begin{center}	
-		\includegraphics[width=0.895\textwidth,height=\textheight,keepaspectratio]{1E2Q1a}
-	\end{center}
-	\newpage
-	\noindent \includegraphics[width=1.15\textwidth,height=\textheight,keepaspectratio]{1E2Q1b}
-	
-	\newpage
-	\subsubsection*{Q: Approximately, what would the result be if we instead applied a 3x3 alpha trimmed mean filter with d=3 ? }
-	\noindent \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{1E2Q2a}
-	
-	\newpage
-	\noindent \includegraphics[width=1\textwidth,height=\textheight,keepaspectratio]{1E2Q2b}
 
 \end{document}
