@@ -52,7 +52,8 @@ for row = 1:8:size(new_image,1)
       %   ac and dc coefficients set to ZERO. This 'clue' can be used to
       %   determine if a image block needs updating here.
       % 4. extract out the decompressed tile (if required)
-        new_image(row:row+7, column:column+7) = djpeg_8x8(dc_current_coefficients, ac_current_coefficients, Q);
+        decoded_block                         = djpeg_8x8(dc_current_coefficients, ac_current_coefficients, Q)
+        new_image(row:row+7, column:column+7) = decoded_block;
       end
     end
 end

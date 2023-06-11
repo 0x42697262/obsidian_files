@@ -30,22 +30,22 @@ Zq=zeros(8,8);
 Zq(1,1)   = dc_coeff;
  
 % 2. order zig-zag access and copy AC back
-ll = 1; mm = 2; ac_count = 1; direction = 1;
-for kk = 3:16
-  % using max(1, kk-8) restricts the range of the lower limit from 1 to 8
-  % using min(kk-1, 8) restricts the range of the upper limit does not exceed 8
+ll = 1; ac_count = 1; direction = 1;
+for index = 3:16
+  % using max(1, index-8) restricts the range of the lower limit from 1 to 8
+  % using min(index-1, 8) restricts the range of the upper limit does not exceed 8
   % checking the direction if 1 or 0 (true or false) sets the direction to being regular or reverse
   % the quantized coefficient array Zq will be assigned with the current ac_coeff array based on the index ac_count
   % we need to update ac_count in order to use the next ac coefficient value to avoid reusing it
   if (direction)
-    for ll = max(1,kk-8):min(kk-1,8)
-      Zq(min(8,ll),kk-min(8,ll))  = ac_coeff(ac_count);
-      ac_count                    = ac_count+1;
+    for ll = max(1,index-8):min(index-1,8)
+      Zq(min(8,ll),index-min(8,ll))   = ac_coeff(ac_count);
+      ac_count                        = ac_count+1;
     end
   else
-    for ll = max(1,kk-8):min(kk-1,8)
-      Zq(kk-min(8,ll),min(8,ll))  = ac_coeff(ac_count);
-      ac_count                    = ac_count+1;
+    for ll = max(1,index-8):min(index-1,8)
+      Zq(index-min(8,ll),min(8,ll))   = ac_coeff(ac_count);
+      ac_count                        = ac_count+1;
     end
   end
   % This flips the direction (a boolean-like)
@@ -75,6 +75,10 @@ tile=uint8(tile+128);
 % ----------------------------------------------------------------------
 
 
+% NOTES
+%
+% Zq should be the quantized DC coefficient.
+% 
 
 
 
