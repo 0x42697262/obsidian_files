@@ -7,6 +7,8 @@
 \usepackage{amsmath}
 \geometry{left=1in,right=1in,top=1in,bottom=1in}
 
+\usepackage{subcaption} % i used this for the 2B part in 2B3 only in MPEG 
+
 % Set the basic style to a coding-style font
 \definecolor{lightyellow}{RGB}{255, 255, 224}
 \definecolor{lightgreen}{RGB}{144,238,144}
@@ -543,6 +545,309 @@
     	\label{fig:2B_Diff2}
   	\end{minipage}
 	\end{figure}
+
+	Continuing on to the next test, we are subjected into testing the {\texttt{Q}} value first before testing the {\texttt{tolerance}} level. The test values used for {\texttt{Q}} are 
+	{\texttt{1}}, {\texttt{25}}, {\texttt{50}}, {\texttt{80}}, and {\texttt{99}}. We will be using {Figure~\ref{fig:2B_Input1any}} and {Figure~\ref{fig:2B_Input1anyref}} as the input and reference 
+	images for all the test	cases, respectively, unless stated. By examining {Figure~\ref{fig:2B_Input1TD}} and {Figure~\ref{fig:2B_Input5TD}}, we can observe that the quality of the image frame 
+	is controlled by the parameter {\texttt{Q}}. A higher value of {\texttt{Q}} corresponds to higher image quality, while a lower value of {\texttt{Q}} corresponds to lower image quality. 
+	It is evident from {Figure~\ref{fig:2B_Tolerance50}} that using a tolerance level of {\texttt{50.0}} results in disoriented pixels or artifacts. However, when the tolerance level is lowered, 
+	as shown in	{Figure~\ref{fig:2B_Tolerance5}}, the image appears cleaner and clearer.
+
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input1Orig}
+
+			\caption{Input  1 (103680 bytes total)}
+			\label{fig:2B_Input1any}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input1Ref}
+
+			\caption{Reference}
+			\label{fig:2B_Input1anyref}
+
+		\end{subfigure}
+
+
+		\caption{Input 1 at any Q and Tolerance values}
+		\label{fig:2B_Input1anyall}
+	\end{figure}
+
+	\begin{figure}[ht]
+		% q = 1
+		\centering
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input1TD}
+
+			\caption{Transmitted Data (516 bytes)}
+			\label{fig:2B_Input1TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input1Reconstructed}
+
+			\caption{Reconstructed (516 bytes total)}
+			\label{fig:2B_Input1Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 1, Tolerance = 5.00}
+		\label{fig:2B_Input1}
+	\end{figure}
+
+	\begin{figure}[ht]
+		% new figure
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input2TD}
+
+			\caption{Transmitted Data (15729 bytes)}
+			\label{fig:2B_Input2TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input2Reconstructed}
+
+			\caption{Reconstructed (15729 bytes total)}
+			\label{fig:2B_Input2Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 25, Tolerance = 5.00}
+		\label{fig:2B_Input2}
+	\end{figure}
+
+		\begin{figure}[ht]
+			% new fig
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input3TD}
+
+			\caption{Transmitted Data (21862 bytes)}
+			\label{fig:2B_Input3TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input3Reconstructed}
+
+			\caption{Reconstructed (21862 bytes total)}
+			\label{fig:2B_Input3Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 50, Tolerance = 5.00}
+		\label{fig:2B_Input3}
+	\end{figure}
+
+
+
+		\begin{figure}[ht]
+			% q = 80
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4TD}
+
+			\caption{Transmitted Data (31383 bytes)}
+			\label{fig:2B_Input4TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4Reconstructed}
+
+			\caption{Reconstructed (31383 bytes total)}
+			\label{fig:2B_Input4Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 80, Tolerance = 5.00}
+		\label{fig:2B_Input4}
+	\end{figure}
+
+
+		\begin{figure}[ht]
+			% Q = 99
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input5TD}
+
+			\caption{Transmitted Data (83173 bytes)}
+			\label{fig:2B_Input5TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input5Reconstructed}
+
+			\caption{Reconstructed (83173 bytes total)}
+			\label{fig:2B_Input5Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 99, Tolerance = 5.00}
+		\label{fig:2B_Input5}
+	\end{figure}
+		\begin{figure}[ht]
+			% q = 80, input 8
+		\centering
+
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4Orig2}
+
+			\caption{Frame 8}
+			\label{fig:2B_Input4Orig2}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4Ref2}
+
+			\caption{Reference}
+			\label{fig:2B_Input4Ref2}
+
+		\end{subfigure}
+
+
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4TD2}
+
+			\caption{Transmitted Data (3674 bytes)}
+			\label{fig:2B_Input4TD2}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Input4Reconstructed2}
+
+			\caption{Reconstructed (58437 bytes total)}
+			\label{fig:2B_Input4Reconstructed2}
+
+		\end{subfigure}
+
+		\caption{Q = 80, Tolerance = 5.00}
+		\label{fig:2B_Input4b}
+	\end{figure}
+
+
+		\begin{figure}[ht]
+			% input 100; Q = 80, tolerance = 5
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance5Input}
+
+			\caption{Input 100 (10368000 bytes total)}
+			\label{fig:2B_Tolerance5Input}
+
+		\end{subfigure}
+
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance5TD}
+
+			\caption{Transmitted Data (2843 bytes)}
+			\label{fig:2B_Tolerance5TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance5Reconstructed}
+
+			\caption{Reconstructed (552853 bytes total)}
+			\label{fig:2B_Tolerance5Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 80, Tolerance = 5.00}
+		\label{fig:2B_Tolerance5}
+	\end{figure}
+
+
+		\begin{figure}[ht]
+			% input 100; Q = 80, tolerance = 50
+		\centering
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance50Input}
+
+			\caption{Input 100 (10368000 bytes total)}
+			\label{fig:2B_Tolerance50Input}
+
+		\end{subfigure}
+
+			\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance50TD}
+
+			\caption{Transmitted Data (638 bytes)}
+			\label{fig:2B_Tolerance50TD}
+
+		\end{subfigure}
+		\hspace{1cm}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+
+			\includegraphics[width=\textwidth]{2B_Tolerance50Reconstructed}
+
+			\caption{Reconstructed (347376 bytes total)}
+			\label{fig:2B_Tolerance50Reconstructed}
+
+		\end{subfigure}
+
+		\caption{Q = 80, Tolerance = 50.00}
+		\label{fig:2B_Tolerance50}
+	\end{figure}
+
+	In summary, the parameter Q in the code determines the quality factor for image encoding. A higher value of Q leads to lower compression, preserving more image details and resulting in 
+	higher image quality. Conversely, a lower value of Q increases compression, sacrificing some image details for higher efficiency. However, when the transmitted data gets reconstructed 
+	the image data or details are lost. The tolerance level, on the other hand, determines the level of change or difference between consecutive frames that will be considered significant 
+	enough to encode and transmit which is why having lower tolerance value would compress smaller compared to having high tolerance value which compresses huge data. Having a higher tolerance
+	value would result image artificats with deformed pixels.
+
 
 	\subsection*{4. Comments and Conclusion}
 
