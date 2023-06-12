@@ -487,7 +487,62 @@
 
 
 
+
 	\subsection*{3. Results and Discussion}
+
+	In this section, we show the results of {\texttt{djpeg\_8x8.m}} and {\texttt{simple\_dmpeg.m}} and analyze its outputs based on given parameter configurations. Sample input images are
+	already provided. Using {Figure~\ref{fig:2B_Input}} and {Figure~\ref{fig:2B_Input2}} as inputs, we where able to acquire its decompressed image 
+	shown on {Figure~\ref{fig:2B_Decom1}} and {Figure~\ref{fig:2B_Decom2}}. Their difference is shown on {Figure~\ref{fig:2B_Diff1}} and {Figure~\ref{fig:2B_Diff2}}.
+
+
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Input}
+    	\caption{JPEG Input 1}
+    	\label{fig:2B_Input}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Input2}
+    	\caption{JPEG Input 2}
+    	\label{fig:2B_Input2}
+  	\end{minipage}
+	\end{figure}
+
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Decom1}
+    	\caption{Decompressed Input 1}
+    	\label{fig:2B_Decom1}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Decom2}
+    	\caption{Decompressed Input 2}
+    	\label{fig:2B_Decom2}
+  	\end{minipage}
+	\end{figure}
+
+	
+	\begin{figure}[ht]
+  	\centering
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Diff1}
+    	\caption{Input 1 Difference (rms 8.02)}
+    	\label{fig:2B_Diff1}
+  	\end{minipage}\hfill
+  	\begin{minipage}[t]{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=\textwidth]{2B_Diff2}
+    	\caption{Input 2 Difference (rms 6.24)}
+    	\label{fig:2B_Diff2}
+  	\end{minipage}
+	\end{figure}
 
 	\subsection*{4. Comments and Conclusion}
 
