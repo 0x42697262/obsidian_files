@@ -853,10 +853,155 @@
 
 
 
-	\newpage
-	\section*{Exercise 2C– (2\%) – Written Questions }
 	
-	\subsubsection*{1. (1.0\%) You have been given a set of imagery from a 256x256 pixel video surveillance camera to analyse. However, to work out roughly how far away objects of known size (eg. people) are from the camera in the footage you need to determine the field of view of the sensor. Using a tape measure as a guide you are able to estimate that a doorway of 2 metres height appears to span around 32 pixels in the imagery when viewed from 10 metres away.}
+	\vspace{0.5cm}
+	\clearpage
+	\newpage
+	\section*{Exercise 2C -- (2\%) -- Written Questions }
+	
+
+	\begin{itemize}
+		\item{\textbf{2C.1} (0.5\%)}
+			{
+				\begin{itemize}
+					\item[A.] 
+
+
+					\item[B.]
+
+				\end{itemize}
+			}
+		
+		\item{\textbf{2C.2} (0.5\%)}
+			
+						Given the matrix transformation of linear-conformal, we equate the given matrix representation of the linear transformation and then solve for the values.
+
+						$
+							T = \begin{bmatrix}
+  									sR_2 & t \\
+  									0 & 1
+									\end{bmatrix}
+								= \begin{bmatrix}
+									s(\cos(\theta))  & s(\sin(\theta)) & t_x \\
+									s(-\sin(\theta)) & s(\cos(\theta)) & t_y \\
+									0 & 0 & 1
+									\end{bmatrix}
+								= \begin{bmatrix}
+									1.7321 	& 1 		  & 10 	\\
+									-1 		  & -1.7321	& -20 \\
+									0       & 0       & 1
+								\end{bmatrix}
+						$
+
+						Then we have these system of equations:
+
+						$t_x = 10$; $t_y = -20$; $s(\cos(\theta)) = 1.7321$; $s(\sin(\theta)) = 1$
+
+						Solving for the rotation:
+
+						$s = \frac{1.7321}{\cos\theta}$; $s = \frac{1}{\sin\theta}$
+
+						Equating those into:
+						
+						\begin{align*}
+							\frac{1.7321}{\cos\theta}\sin\theta & = 1 \\
+							1.7321\tan\theta                    & = 1 \\
+							\tan\theta                          & = \frac{1}{1.7321} \\
+							\theta                              & = \arctan({\frac{1}{1.7321})} \\
+							\theta                              & = 30^{\circ}
+						\end{align*}
+
+						Using the $\theta$ value we acquired, we can now get the scale value:
+
+
+						\begin{align*}
+							s & = \frac{1.7321}{cos\theta} \\
+							s & = \frac{1.7321}{cos(30^{\circ})} \\
+							s & \approx 2.000056803 = 2
+						\end{align*}
+
+						Thus, our translation values are:
+
+						
+						\begin{align*}
+							t_x    & = 10 \\
+							t_y    & = -20 \\
+							\theta & = 30^{\circ} \\
+							s & = 2
+						\end{align*}
+
+
+		\item{\textbf{2C.3} (0.5\%)}
+
+
+			We will use {Equation~\ref{eq:BilinearInterpolationFormula}} for the bilinear interpolation:
+			\begin{equation}
+				\begin{split}
+    				I(p) &= [(1-a)(1-b)(I(x,y))] \\
+    				&\quad+ [(1-a)(b)(I(x,y+1))] \\
+    				&\quad+ [(a)(1-b)(I(x+1,y))] \\
+    				&\quad+ [(a)(b)(I(x+1,y+1))]
+				\end{split}
+				\label{eq:BilinearInterpolationFormula}
+			\end{equation}
+			In order to get the values $a$ and $b$ for the bilinear estimates for pixel (20.6, 10.2), we can use {Equation~\ref{eq:BIa}} and {Equation~\ref{eq:BIb}}:
+
+			\begin{equation}
+				\begin{split}
+				  a & = p_x - \lfloor p_x \rfloor \\
+				   & = 20.6 - \lfloor 20.6 \rfloor \\
+				   & = 20.6 - 20 \\
+				  a & = 0.6
+				\end{split}
+				\label{eq:BIa}
+			\end{equation}
+			\begin{equation}
+				\begin{split}
+				  b & = p_y - \lfloor p_y \rfloor \\
+				   & = 10.2 - \lfloor 10.2 \rfloor \\
+				   & = 10.2 - 10 \\
+				  b & = 0.2
+				\end{split}
+				\label{eq:BIb}
+			\end{equation}
+
+			Now that $a$ and $b$ values have been determined, we can substitute those values into Equation~\ref{eq:BilinearInterpolationFormula}. Thus, we get {Equation~\ref{eq:BISolution}}:
+
+			\begin{equation}
+				\begin{split}
+    				I(p) &= [(1-0.6)(1-0.2)(128)] + [(1-0.6)(0.2)(64)] + [(0.6)(1-0.2)(64)] \\
+    				&\quad+ [(0.6)(0.2)(32)] \\
+    				&=      [(0.4)(0.8)(128)] + [(0.4)(0.2)(64)] + [(0.6)(0.8)(64)] + [(0.6)(0.2)(32)] \\
+    				&=      40.96 + 5.12 + 30.72 + 3.84 \\ 
+    				I(p) &= 80.64
+				\end{split}
+				\label{eq:BISolution}
+			\end{equation}
+
+			Thus, the bilinear estimate for the pixel $(20.6, 10.2)$ is {\texttt{80.64}} and its nearest neighbor is $(21,10)$ shown on {Figure~\ref{fig:2CGraph}}. However, if we follow the formula
+
+			\begin{figure}
+  			\centering
+  			\includegraphics[width=0.5\textwidth]{2CGraph}
+  			\caption{Nearest neighboring pixels of (20.6, 10.2)}
+  			\label{fig:2CGraph}
+			\end{figure}
+
+		\item{\textbf{2C.4} (0.5\%)}
+
+			Based on a detailed analysis of the spectral characteristics and their corresponding outputs, we can draw specific conclusions regarding the relationship between {\texttt{Spectra 1}}, 
+			{\texttt{Spectra 2}}, and their respective outputs.
+
+			Firstly, {\texttt{Spectra 1}} can be attributed to the generation of {\texttt{Output 2}} due to its distinctive composition of black and white. This composition is reflected in the 
+			resulting image, where the cameraman is prominently highlighted in white against a mostly black background with subtle gray shades. The presence of blacks and whites in {\texttt{Spectra 1}} 
+			contributes to the stark contrast between the subject and the background, emphasizing the cameraman's features. Notice that {\texttt{Spectra 1}} shows a relatively smoother profile without 
+			any prominent stripes, implying a more uniform background. This aligns with the characteristics of {\texttt{Output 1}}, which exhibits a consistent and evenly distributed response
+
+			As for {\texttt{Spectra 2}}, it is found to be responsible for the creation of {\texttt{Output 1}}. This conclusion is supported by the predominantly gray background observed in the 
+			resulting image. The grayscale background, with a central black line indicating the presence of dark edges around objects, aligns with the spectral characteristics of {\texttt{Spectra 2}}. 
+			The absence of distinct black and white regions suggests a more uniform distribution of gray tones, resulting in a less contrasting image.
+
+	\end{itemize}
 	
 
 
