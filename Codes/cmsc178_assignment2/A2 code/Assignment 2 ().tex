@@ -40,9 +40,12 @@
             \Large Digital Image Processing\\
             \vspace{3cm}
             Submitted to:\\
+            Mr. Dhong-Fhel K. Gom-os\\
             
             \vspace{2.5cm}
             Submitted by:\\
+            Lyka Jeanine L. Panchacala\\
+            Wineff Chen Zhen Y. Gulane
             
             \vspace{4cm}
             
@@ -846,10 +849,19 @@
 	higher image quality. Conversely, a lower value of Q increases compression, sacrificing some image details for higher efficiency. However, when the transmitted data gets reconstructed 
 	the image data or details are lost. The tolerance level, on the other hand, determines the level of change or difference between consecutive frames that will be considered significant 
 	enough to encode and transmit which is why having lower tolerance value would compress smaller compared to having high tolerance value which compresses huge data. Having a higher tolerance
-	value would result image artificats with deformed pixels.
+	value would result image artifacts with deformed pixels.
 
 
 	\subsection*{4. Comments and Conclusion}
+
+	The completion of the {\texttt{djpeg\_8x8.m}} and {\texttt{simple\_dmpeg.m}} functions enables the decoding of JPEG images and MPEG videos, respectively. The decoding process involves quantization, inverse quantization, 
+	IDCT, and comparison of frames. The experiments conducted using different parameter configurations demonstrated the influence of the {\texttt{Q}} value and tolerance level on image quality and compression efficiency. A 
+	higher {\texttt{Q}} value resulted in higher image quality with less compression, while a lower {\texttt{Q}} value sacrificed image details for better compression efficiency. Lower tolerance levels produced cleaner 
+	images with fewer artifacts, while higher tolerance levels resulted in more noticeable artifacts.
+
+	These findings emphasize the importance of choosing appropriate parameter values in image and video decoding to balance the trade-off between image quality and compression efficiency. The completed functions provide 
+	a foundation for further research and development in the field of image and video processing.
+
 
 
 
@@ -865,9 +877,26 @@
 			{
 				\begin{itemize}
 					\item[A.] 
+						Considering the absence of lens distortion, the optimal transformation to capture the relationship between images in this situation is a projective linear transformation. This type of transformation is 
+						particularly suited for scenarios where points in an image plane need to be mapped to points in a 3D space, and vice versa. It enables the projection of 3D points onto the 2D image plane, as illustrated in 
+						the lecture material on spatial transformations. When it comes to celestial objects like Jupiter, the projective linear transformation is an ideal choice for 
+						capturing their projection onto a 2D image plane. The camera records the celestial body's appearance in a 2D format, with the transformation preserving the relative positions and shapes 
+						of objects within the scene.
 
+						When the telescope is adjusted or moved, it captures different views of the celestial body, altering the perspective of the scene being recorded by the camera. Each change in 
+						perspective results in a unique mapping of the 3D scene onto the 2D image plane. Consequently, the captured image presents a specific viewpoint of the camera, showcasing the celestial body from a 
+						particular vantage point.
 
 					\item[B.]
+						In the given scenario, where the transformation of the document itself is the focus rather than the room, the most appropriate transformation would be an {\texttt{affine linear transformation}}. 
+						This choice is based on the requirement to maintain the document's proportions and parallelism when it is photographed and viewed from different angles and positions. Other linear transformations 
+						are not suitable for this situation. Like for example, projective transformation, not preserve parallel lines and involves planar scaling, which is not applicable in this case where the document 
+						is observed from various positions within the room. Isometry, another type of transformation, preserves distances, but it is not feasible in this context as the observer moves to different locations in the room. 
+						Linear-conformal transformation, which preserves shape, is also unsuitable as the picture may be taken from different angles, resulting in a change in shape. Translation, which is a simple rigid transformation 
+						involving movement, is not relevant here since the viewpoint remains fixed.
+
+						Therefore, the {\texttt{affine linear transformation}} stands out as the most appropriate choice for maintaining the document's proportions and parallelism while allowing for variations in viewing angles and positions. 
+						This makes sure that the document appears consistent and accurately represents its original geometry despite changes in perspective.
 
 				\end{itemize}
 			}
