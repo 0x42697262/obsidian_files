@@ -13,8 +13,27 @@ end
 % T.
 
 % ---------- INSERT YOUR CODE BELOW ------------------------------------
-     
-T = rand(1,1); % <--- DELETE and REPLACE
+
+
+% average of overall elements
+
+initial_threshold   = mean(I, 'all')
+
+% iterate it at least 10 times. randomly chose 35, no reason at all.
+
+for i = 1:35
+  average_intensity_above   = mean(I > initial_threshold, 'all');
+  average_intensity_below   = mean(I <= initial_threshold, 'all');
+
+  initial_threshold   = (average_intensity_above + average_intensity_below) / 2;
+end
+
+T   = initial_threshold;
+
+
+
+
+
 
 % ---------- INSERT YOUR CODE ABOVE ------------------------------------
 
