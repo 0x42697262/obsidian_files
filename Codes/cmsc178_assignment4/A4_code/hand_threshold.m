@@ -17,27 +17,25 @@ end
 
 % average of overall elements
 
-initial_threshold   = mean(I, 'all')
-value   = 100;
+initialize_threshold  = mean(I(:)); % Initial estimate of overall average image intensity
 
+% Iterate for at least 10 iterations
+for iter = 1:10
+    % Calculate the average intensity for values above and below the threshold
+    I_above   = mean(I(I > initialize_threshold));
+    I_below   = mean(I(I <= initialize_threshold));
 
-% iterate it at least 10 times. randomly chose 35, no reason at all.
-
-for i = 1:value
-  average_intensity_above   = mean(I > initial_threshold, 'all');
-  average_intensity_below   = mean(I <= initial_threshold, 'all');
-
-  initial_threshold   = (average_intensity_above + average_intensity_below) / 2;
+    % Update the threshold using the isothresh calculation
+    initialize_threshold  = (I_above + I_below) / 2;
 end
-
-
 % Hint: Applying a small scale offset to the threshold estimated by isothresh (eg. “thresh_used = k
 % * thresh_est;” may help to reduce problems with shadows seen in the palm of the hand for the
 % “scissors” images.
 
-k   = 0.95;
+k   = 0.5;
 
-T   = initial_threshold * k;
+T   = initialize_threshold * k;
+% T   = graythresh(I) * k; % when we cant graythresh, so sad
 
 
 

@@ -1,7 +1,7 @@
 % [F,C]=all_hand_features(mode) - script to generate array of feature data
 %  from the raw hand images. Calls up extract_hand().
 %
-% the subdirectories 'rock' 'paper' 'scissors'
+% the subdirectories 'rock' 'papqer' 'scissors'
 % should be present. Returns the NxM array of features
 % all the loaded imagery, and C is the associated class values.
 %

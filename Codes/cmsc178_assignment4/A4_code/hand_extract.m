@@ -39,7 +39,21 @@ threshold = hand_threshold(I);
 % examples etc.
 % ----------- FILL IN THE SECTION BELOW ------------------------------
 
-B = (I > threshold); % <-- DELETE AND REPLACE THIS LINE
+
+% B = I >= threshold;
+ B = imbinarize(I, threshold*0.4725);
+    B = imfill(B, 'holes'); % Fill holes in the image
+    S = strel('disk', 6); % Create a disk-shaped structuring element
+    B = imopen(B, S); % Close small gaps in the image
+    B = bwareafilt(B, 1);
+
+
+    [L, n] = bwlabel(B);
+    ObjectIdx = 1;
+    if n ~= 1
+        ObjectIdx = mode(L(L>0));
+    end
+    B = L == ObjectIdx;
 
 % ----------- FILL IN THE SECTION ABOVE ------------------------------
 
@@ -47,3 +61,13 @@ return
 
 % -------------------------------------------------------------------
 % END OF FILE
+
+
+
+%%%
+%
+% BEST VALUES
+% Threshold: 0.16
+% Morphological Filter: Opening
+%
+%%%

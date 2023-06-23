@@ -16,8 +16,22 @@ function F = hand_features(B)
 
 % ---------- INSERT YOUR CODE BELOW ------------------------------------
 
-% DELETE THIS LINE - IT JUST GENERATES A 1x5 vector OF DUMMY DATA
-F = [5 4 3 2 1] .* randn(1,5) + [1 2 3 4 5];
+% Get features using regionprops
+% uncomment the ones that we don't need. append the ones we need
+feats   = {};
+feats{end+1} = 'Circularity';
+feats{end+1} = 'Perimeter';
+feats{end+1} = 'Area';
+feats{end+1} = 'Solidity';
+feats{end+1} = 'MajorAxisLength';
+feats{end+1} = 'MinorAxisLength';
+features = regionprops(B, feats, 'table');
+
+PerimeterAreaRatio = features.Perimeter / features.Area;
+Roundness = features.MajorAxisLength / features.MinorAxisLength;
+
+
+F = [features.Solidity Roundness PerimeterAreaRatio];
 
 % ---------- INSERT YOUR CODE ABOVE ------------------------------------
 
