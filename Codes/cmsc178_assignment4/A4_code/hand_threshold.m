@@ -35,7 +35,7 @@ end
 % * thresh_est;” may help to reduce problems with shadows seen in the palm of the hand for the
 % “scissors” images.
 
-k   = 0.7;
+k   = 0.95;
 
 T   = initial_threshold * k;
 
@@ -56,4 +56,8 @@ T   = initial_threshold * k;
 % have any artefacts but there are still some on the wrist. On 85%, we go back to our main issue.
 % On 80%, there is an issue somewhere on image 176 or 177. There is a bad scissor on image 177 for 75%.
 % I think I should use 70% Threshold value.
+% Looking at it again, the rock have artefacts and considering the amount of bad scissors and rocks,
+% there are more rocks with artefacts than with scissors. Thus, it's better to stick with 100% scaling threshold.
+%
+%%%
 
