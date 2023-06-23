@@ -7,7 +7,7 @@
 
 function hand_regions
 
-% NOTE: do not alter this code
+% NOTE: do not alter this code  
 
 cname = { 'rock' 'paper' 'scissors' }; % run 3 classes
   
@@ -37,8 +37,8 @@ for classnum=1:length(cname)
     colormap(gray);
     drawnow;
     
-    %disp('Press a key...');
-    %pause
+    % disp('Press a key...');
+    % pause
   end
 end
 
