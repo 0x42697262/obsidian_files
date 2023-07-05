@@ -14,6 +14,10 @@ Trying to take notes by using Zettelkasten Method where every notes (the files h
 
 `__orphans` default directory for new files with no class.
 
+## \_\_class
+Each class in this directory should have an index with this format: `0## <string>`. 
+There should be an index file named identical to the class directory. This will be used by `__index`.
+
 # PLANS
 - [ ] Reorganize notes
 	- [x] Canvas
