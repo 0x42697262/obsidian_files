@@ -3,10 +3,11 @@ Trying to take notes by using Zettelkasten Method where every notes (the files h
 
 # PLANS
 - [ ] Reorganize notes
-	- [ ] Canvas
-	- [ ] Daily Notes
-	- [ ] Excalidraw
-	- [ ] Kanban
+	- [x] Canvas
+	- [x] Daily Notes
+	- [x] Excalidraw
+	- [x] Kanban
+	- [ ] Moving of new files
 - [ ] Create a frontend for markdown
 
 
