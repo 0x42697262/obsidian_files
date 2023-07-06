@@ -13,5 +13,6 @@
   "mathlinks",
   "obsidian-latex",
   "obsidian-mathjax-wikilinks",
-  "obsidian-export-image"
+  "obsidian-export-image",
+  "obsidian-state-switcher"
 ]

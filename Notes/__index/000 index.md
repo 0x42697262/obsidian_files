@@ -1,3 +1,7 @@
+---
+type: index
+---
+
 # 000 index
 [[Notes/__index/000 index|000 index]] Home
 

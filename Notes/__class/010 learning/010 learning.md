@@ -1,0 +1,5 @@
+---
+type: index
+---
+
+- [[Data Communication]]

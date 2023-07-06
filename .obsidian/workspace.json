@@ -4,163 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e4f3e78f1bc528a6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "59ca0275dc773067",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Daily Notes/Non Zero Day.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "361ce46d17e14e9a",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "_OLD/Daily Notes/Tasks.md"
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "4f4d3e2f574f4a4b",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/__index/000 Index.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "f942dea99b649c91",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/020 Studies/020 Studies.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "211e9eb4556fba2b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_OLD/Excalidraw/Drawing 2023-05-17 11.17.13.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "7e10296d4b37f264",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/__orphans/CUESTIONARIO 6 - KABANATA 37.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9a64f45f44653a01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/030 Learning/Basic Pentesting - 1.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d74a1575cadbff4c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/090 Others/091 Notes.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "afa9f4e608c84466",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/__orphans/Encryption (Cryptography).md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cd2b89a93c857732",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
         "children": [
           {
-            "id": "b0100f132c6ee6e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_OLD/Deadlines.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c0cb384696d674fe",
+            "id": "fb0f34ad8d035807",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -172,8 +20,26 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "e4f3e78f1bc528a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8eb230d171d6a0d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_OLD/Compass of Zettelkasten.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Comments",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -334,58 +200,59 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "notion-like-tables:Create Notion-Like table": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false
+      "file-tree-alternative:File Tree Alternative Plugin": false,
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "c0cb384696d674fe",
+  "active": "fb0f34ad8d035807",
   "lastOpenFiles": [
-    "_OLD/Arch Updates.md",
     "_OLD/Compass of Zettelkasten.md",
-    "_OLD/CTF Writeup.md",
-    "_OLD/Deadlines.md",
-    "_OLD/Header.md",
+    "_OLD/Notes/030 Learning/Cross Site Scripting.md",
+    "README.md",
+    "Notes/__class/010 learning/Data Communication.md",
+    "Notes/__class/010 learning/010 learning.md",
+    "Templates/New Note.md",
+    "Notes/__index/000 index.md",
+    "_OLD/Notes/030 Learning/030 Learning.md",
     "Templates/Vulnhub Writeup.md",
+    "_OLD/Header.md",
+    "_OLD/Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
+    "_OLD/Deadlines.md",
+    "_OLD/Notes/__orphans/Encryption (Cryptography).md",
+    "_OLD/Notes/090 Others/091 Notes.md",
+    "_OLD/Notes/030 Learning/Basic Pentesting - 1.md",
+    "_OLD/Notes/__orphans/CUESTIONARIO 6 - KABANATA 37.md",
+    "_OLD/Excalidraw/Drawing 2023-05-17 11.17.13.excalidraw.md",
+    "_OLD/Notes/__index/000 Index.md",
+    "_OLD/Notes/010 My Arch Journey/010 My Arch Journey.md",
+    "_OLD/Notes/020 Studies/020 Studies.md",
+    "Notes/__class/010 learning",
+    "Notes/__class/020 studies",
+    "Notes/__class/010 Learning",
+    "Notes/__class/020 Studies",
+    "_OLD/Notes/__index/002 Statuses.md",
+    "_OLD/Notes/__index/001 Tags.md",
+    "Notes/__class",
+    "Notes/__orphans",
+    "Notes/__index",
+    "Notes",
+    "_OLD/Arch Updates.md",
+    "_OLD/CTF Writeup.md",
     "_OLD/Non0Day.md",
     "_OLD",
     "Attachments",
-    "README.md",
-    "_OLD/Notes/__index/000 Index.md",
-    "Plugins/Kanban",
-    "Plugins/Excalidraw",
-    "Plugins/Daily Notes",
-    "Plugins/Canvas",
-    "Plugins",
     "_OLD/Notes/__orphans/Untitled 3.md",
-    "_OLD/Notes/020 Studies/020 Studies.md",
-    "_OLD/Daily Notes/Tasks.md",
     "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703044709_262.png",
-    "_OLD/unorganized fuck/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
-    "_OLD/Daily Notes/Non Zero Day.md",
-    "Excalidraw/Drawing 2023-07-03 04.46.14.excalidraw.md",
     "Canvas/Untitled.canvas",
     "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703141833_604.png",
     "_OLD/ATTACHMENT_FOLDER/Pasted image 20230703135306.png",
     "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703060133_605.png",
-    "_OLD/Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
-    "_OLD/Notes/090 Others/091 Notes.md",
-    "_OLD/Notes/020 Studies/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
-    "_OLD/Kanban/Annotated Bibliography (BRIG).md",
-    "_OLD/Notes/090 Others/Bypass Disable via CSS Text Selection.md",
-    "_OLD/Daily Notes/2023-06-09.md",
-    "_OLD/Excalidraw/Drawing 2023-05-17 11.17.13.excalidraw.md",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_HTDM_20.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_20.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_10.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_HTE_10.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_Input_10_A.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_Input_10_B.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs",
-    "Codes/cmsc178_assignment3/NewFolder",
-    "_OLD/Codes/cmsc178_assignment3/A3_code/skel_test.m",
-    "_OLD/Notes/__orphans/Encryption (Cryptography).md",
-    "_OLD/Notes/030 Learning/cipher text.md",
-    "_OLD/Notes/030 Learning/Cryptography.md",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Untitled 1.canvas",
     "Image Analysis.canvas"

@@ -1,6 +1,13 @@
 # What is this obsidian repository for?
 Trying to take notes by using Zettelkasten Method where every notes (the files here) should be atomic.
 
+This notes must comply with compass of zettelkasten.
+
+`from` where is this information taken?
+`leads to` what insights does it provide?
+`similar ideas` what ideas that are similar?
+`opposing ideas` what ideas that are unalike?
+
 # Directory Structure
 ```
 /Notes
@@ -24,9 +31,8 @@ There should be an index file named identical to the class directory. This will 
 	- [x] Daily Notes
 	- [x] Excalidraw
 	- [x] Kanban
-	- [ ] Moving of new files
+	- [ ] Rewriting notes
 - [ ] Create a frontend for markdown
-
 
 
 ----
