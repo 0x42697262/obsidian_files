@@ -37,4 +37,4 @@ There should be an index file named identical to the class directory. This will 
 
 ----
 # How to use this vault?
-Do a `git clone https://github.com/KrulYuno/obsidian_files.git` then open the vault in Obsidian. I think plugins are already included.
+Do a `git clone https://github.com/KrulYuno/obsidian_files.git` then open the vault in Obsidian. Plugins are included.
