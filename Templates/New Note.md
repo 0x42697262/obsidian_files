@@ -3,3 +3,4 @@ type: note
 tags: []
 ---
 
+# {{title}}
