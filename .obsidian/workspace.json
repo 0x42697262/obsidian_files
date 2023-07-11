@@ -8,12 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fb0f34ad8d035807",
+            "id": "6f1d699127835b41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Notes/__class/090 extras/091 resource dump.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d60d3a635c43a08d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -27,13 +40,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8eb230d171d6a0d0",
+            "id": "8d23c138bf9a16fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_OLD/Compass of Zettelkasten.md",
-                "mode": "preview",
+                "file": "_OLD/Daily Notes/2023-06-05.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -105,7 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239.51103591918945
+    "width": 241.51103591918945
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -121,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Notes/__class/090 extras/091 resource dump.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Notes/__class/090 extras/091 resource dump.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -161,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Notes/__class/090 extras/091 resource dump.md"
               }
             }
           },
@@ -180,9 +193,17 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "b351daec9efe29d0",
+            "type": "leaf",
+            "state": {
+              "type": "FANTASY_CALENDAR",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -201,47 +222,50 @@
       "notion-like-tables:Create Notion-Like table": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "file-tree-alternative:File Tree Alternative Plugin": false,
-      "workspaces:Manage workspace layouts": false
+      "workspaces:Manage workspace layouts": false,
+      "fantasy-calendar:Open Large Fantasy Calendar": false
     }
   },
-  "active": "fb0f34ad8d035807",
+  "active": "6f1d699127835b41",
   "lastOpenFiles": [
-    "_OLD/Compass of Zettelkasten.md",
-    "_OLD/Notes/030 Learning/Cross Site Scripting.md",
     "README.md",
-    "Notes/__class/010 learning/Data Communication.md",
-    "Notes/__class/010 learning/010 learning.md",
-    "Templates/New Note.md",
-    "Notes/__index/000 index.md",
-    "_OLD/Notes/030 Learning/030 Learning.md",
-    "Templates/Vulnhub Writeup.md",
-    "_OLD/Header.md",
-    "_OLD/Notes/020 Studies/CMSC 194.1 Task 2 Annotated Bibliography (RioT).md",
-    "_OLD/Deadlines.md",
-    "_OLD/Notes/__orphans/Encryption (Cryptography).md",
+    "Notes/__class/010 learning/Basic Pentesting - 1.md",
     "_OLD/Notes/090 Others/091 Notes.md",
-    "_OLD/Notes/030 Learning/Basic Pentesting - 1.md",
-    "_OLD/Notes/__orphans/CUESTIONARIO 6 - KABANATA 37.md",
-    "_OLD/Excalidraw/Drawing 2023-05-17 11.17.13.excalidraw.md",
-    "_OLD/Notes/__index/000 Index.md",
-    "_OLD/Notes/010 My Arch Journey/010 My Arch Journey.md",
-    "_OLD/Notes/020 Studies/020 Studies.md",
+    "_OLD/Notes/090 Others/090 Others.md",
+    "Notes/__class/090 extras/Bypass Disable via CSS Text Selection.md",
+    "Notes/__class/090 extras/Firefox Zoom Level.md",
+    "Notes/__class/090 extras/checking pytorch support.md",
+    "_OLD/Daily Notes/2023-06-05.md",
+    "Notes/__class/090 extras/Center a Text Vertically in Latex.md",
+    "Notes/__class/090 extras/Center a Table in Obsidian.md",
+    "_OLD/Notes/090 Others/099 Random.md",
+    "_OLD/Notes/090 Others/Mental Models.md",
+    "_OLD/Notes/090 Others/Occam's Razor.md",
+    "_OLD/Notes/090 Others/LAMPP.md",
+    "_OLD/Notes/090 Others/Inversion.md",
+    "Notes/__class/090 extras/092 tricks.md",
+    "Notes/__class/010 learning/012 programming.md",
+    "Notes/__class/010 learning/undefined constant MYSQLI_STORE_RESULT (CodeIgniter).md",
+    "Notes/__class/090 extras/Interesting Websites To Check.md",
+    "Notes/__class/090 extras/090 extras.md",
+    "Notes/__class/020 linux/Fuck WINE associations.md",
+    "Notes/__class/020 linux/Stream Editor (sed).md",
+    "Notes/__index/000 index.md",
+    "Notes/__class/020 linux/021 root.md",
+    "Notes/__class/020 linux/020 linux.md",
+    "Notes/__class/010 learning/Vulnhub Writeups.md",
+    "_OLD/Cuestionario 6 - Kabanta 37 (Ang Gobernador General).table",
+    "Notes/__class/020 linux",
+    "Attachments/Pasted image 20230709092604.png",
+    "Attachments/Pasted image 20230709092602.png",
+    "Notes/__class/090 extras",
     "Notes/__class/010 learning",
     "Notes/__class/020 studies",
     "Notes/__class/010 Learning",
     "Notes/__class/020 Studies",
-    "_OLD/Notes/__index/002 Statuses.md",
-    "_OLD/Notes/__index/001 Tags.md",
     "Notes/__class",
     "Notes/__orphans",
     "Notes/__index",
-    "Notes",
-    "_OLD/Arch Updates.md",
-    "_OLD/CTF Writeup.md",
-    "_OLD/Non0Day.md",
-    "_OLD",
-    "Attachments",
-    "_OLD/Notes/__orphans/Untitled 3.md",
     "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703044709_262.png",
     "Canvas/Untitled.canvas",
     "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703141833_604.png",
@@ -251,8 +275,6 @@
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_20.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_10.png",
     "_OLD/Codes/cmsc178_assignment3/imgs/C2_HTE_10.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_Input_10_A.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_Input_10_B.png",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Untitled 1.canvas",
     "Image Analysis.canvas"

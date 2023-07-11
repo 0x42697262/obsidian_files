@@ -12,5 +12,6 @@
   "showFrontmatter": false,
   "vimMode": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "Notes/__orphans"
+  "newFileFolderPath": "Notes/__orphans",
+  "promptDelete": true
 }

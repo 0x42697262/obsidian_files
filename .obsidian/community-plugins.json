@@ -14,5 +14,7 @@
   "obsidian-latex",
   "obsidian-mathjax-wikilinks",
   "obsidian-export-image",
-  "obsidian-state-switcher"
+  "obsidian-state-switcher",
+  "fantasy-calendar",
+  "cm-editor-syntax-highlight-obsidian"
 ]
