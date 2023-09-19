@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/__class/090 extras/091 resource dump.md",
-                "mode": "source",
+                "file": "Notes v1/__class/010 learning/VulnHub -- Basic Pentesting - 1.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -26,33 +26,113 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
-                "mode": "source",
+                "file": "Notes v1/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "e4f3e78f1bc528a6",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "8d23c138bf9a16fb",
+            "id": "32433262602d19e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_OLD/Daily Notes/2023-06-05.md",
+                "file": "Plugins/Daily Notes/2023-09-07.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "98d6f8debef29732",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes v1/__class/090 extras/Interesting Websites To Check.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5d49f215299cb2f3",
+            "type": "leaf",
+            "state": {
+              "type": "notion-like-tables",
+              "state": {
+                "file": "Plugins/Notion/window manager checklist.table"
+              }
+            }
+          },
+          {
+            "id": "76ab46d4051ed01a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes v1/__orphans/Untitled.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0e158af6db7a4c87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes v1/__orphans/CMSC 165 Case 1 Project Management at Global Green Books Publishing.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b9107a1edce5de87",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Plugins/Excalidraw/Untitled.md"
+              }
+            }
+          },
+          {
+            "id": "63fdc148536cba34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Project Charter.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ced51190e893d2da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_OLD/Notes/__orphans/CMSC 194.1 Task 4 Annotated Bibliography (ML).md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -114,7 +194,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -134,7 +215,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/__class/090 extras/091 resource dump.md",
+                "file": "_OLD/Notes/__orphans/CMSC 194.1 Task 4 Annotated Bibliography (ML).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,10 +232,18 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/__class/090 extras/091 resource dump.md",
+                "file": "_OLD/Notes/__orphans/CMSC 194.1 Task 4 Annotated Bibliography (ML).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
+            }
+          },
+          {
+            "id": "0c87cba199260fb0",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           },
           {
@@ -174,16 +263,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/__class/090 extras/091 resource dump.md"
+                "file": "_OLD/Notes/__orphans/CMSC 194.1 Task 4 Annotated Bibliography (ML).md"
               }
-            }
-          },
-          {
-            "id": "0c87cba199260fb0",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
             }
           },
           {
@@ -201,9 +282,19 @@
               "type": "FANTASY_CALENDAR",
               "state": {}
             }
+          },
+          {
+            "id": "135277ee9e447b16",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -223,59 +314,63 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "file-tree-alternative:File Tree Alternative Plugin": false,
       "workspaces:Manage workspace layouts": false,
-      "fantasy-calendar:Open Large Fantasy Calendar": false
+      "fantasy-calendar:Open Large Fantasy Calendar": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "6f1d699127835b41",
+  "active": "ced51190e893d2da",
   "lastOpenFiles": [
+    "Notes/Project Charter.md",
+    "Notes/Project Integration Management.md",
+    "Notes v1/__orphans/CMSC 165 Case 1 Project Management at Global Green Books Publishing.md",
+    "Plugins/Excalidraw/Untitled.md",
+    "Notes/Weighted Scoring Model.md",
+    "Notes/Return on Investment.md",
+    "Attachments/Pasted image 20230918050716.png",
+    "Notes/Payback Analysis.md",
+    "Notes/Net Value Present.md",
+    "Notes/SWOT Analysis (Project Integration Management).md",
+    "Attachments/Pasted image 20230918043636.png",
+    "Attachments/Pasted image 20230918043437.png",
+    "Notes/orphans/Particles (Physics).md",
+    "Attachments/Pasted image 20230918041821.png",
+    "Attachments/Pasted image 20230918030707.png",
+    "Attachments/Pasted image 20230918025318.png",
+    "Plugins/Daily Notes/2023-09-18.md",
+    "_OLD/Notes/__orphans/CMSC125 Machine Problem 3.md",
+    "_OLD/Notes/__orphans/CMSC 194.1 Task 5 Annotated Bibliography (NLP).md",
+    "_OLD/Notes/__orphans/CMSC 124 Guide Question for Chapter 8. Procedures and Subprograms.md",
+    "_OLD/Notes/__orphans/CYBERSECURITY STATS.md",
+    "_OLD/Notes/__orphans/Data Objects.md",
+    "_OLD/Notes/__orphans/Expression Notation - Infix.md",
+    "Templates/New Note.md",
+    "Notes v1/__orphans/Untitled.md",
+    "Notes v1/__class/010 learning/VulnHub -- Basic Pentesting - 1.md",
+    "Notes/temporary/Atoms (Chemistry).md",
+    "Plugins/Daily Notes/2023-09-07.md",
     "README.md",
-    "Notes/__class/010 learning/Basic Pentesting - 1.md",
-    "_OLD/Notes/090 Others/091 Notes.md",
-    "_OLD/Notes/090 Others/090 Others.md",
-    "Notes/__class/090 extras/Bypass Disable via CSS Text Selection.md",
-    "Notes/__class/090 extras/Firefox Zoom Level.md",
-    "Notes/__class/090 extras/checking pytorch support.md",
-    "_OLD/Daily Notes/2023-06-05.md",
-    "Notes/__class/090 extras/Center a Text Vertically in Latex.md",
-    "Notes/__class/090 extras/Center a Table in Obsidian.md",
-    "_OLD/Notes/090 Others/099 Random.md",
-    "_OLD/Notes/090 Others/Mental Models.md",
-    "_OLD/Notes/090 Others/Occam's Razor.md",
-    "_OLD/Notes/090 Others/LAMPP.md",
-    "_OLD/Notes/090 Others/Inversion.md",
-    "Notes/__class/090 extras/092 tricks.md",
-    "Notes/__class/010 learning/012 programming.md",
-    "Notes/__class/010 learning/undefined constant MYSQLI_STORE_RESULT (CodeIgniter).md",
-    "Notes/__class/090 extras/Interesting Websites To Check.md",
-    "Notes/__class/090 extras/090 extras.md",
-    "Notes/__class/020 linux/Fuck WINE associations.md",
-    "Notes/__class/020 linux/Stream Editor (sed).md",
-    "Notes/__index/000 index.md",
-    "Notes/__class/020 linux/021 root.md",
-    "Notes/__class/020 linux/020 linux.md",
-    "Notes/__class/010 learning/Vulnhub Writeups.md",
-    "_OLD/Cuestionario 6 - Kabanta 37 (Ang Gobernador General).table",
-    "Notes/__class/020 linux",
-    "Attachments/Pasted image 20230709092604.png",
-    "Attachments/Pasted image 20230709092602.png",
-    "Notes/__class/090 extras",
-    "Notes/__class/010 learning",
-    "Notes/__class/020 studies",
-    "Notes/__class/010 Learning",
-    "Notes/__class/020 Studies",
-    "Notes/__class",
-    "Notes/__orphans",
-    "Notes/__index",
-    "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703044709_262.png",
-    "Canvas/Untitled.canvas",
-    "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703141833_604.png",
-    "_OLD/ATTACHMENT_FOLDER/Pasted image 20230703135306.png",
-    "_OLD/ATTACHMENT_FOLDER/Pasted Image 20230703060133_605.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_HTDM_20.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_20.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_LE_10.png",
-    "_OLD/Codes/cmsc178_assignment3/imgs/C2_HTE_10.png",
+    "Templates/Zettelkasten Compass.md",
+    "Templates/Vulnhub Writeup.md",
+    "Plugins/Notion/window manager checklist.table",
+    "Notes/temporary",
+    "Notes/orphans",
+    "Notes",
+    "Zettelkasten/020-research/021-annotated-bibliography",
+    "Zettelkasten/000-index",
+    "Zettelkasten/Research/_unlinked",
+    "Zettelkasten/020-research",
+    "Zettelkasten/010-knowledge",
+    "Zettelkasten/010-knowledge/010-",
+    "Attachments/Pasted Image 20230913053822_217.png",
+    "Attachments/Pasted image 20230913053740.png",
+    "Plugins/Canvas/DFA.canvas",
+    "jean/output_7_0.png",
+    "jean/output_7_0.svg",
+    "Plugins/Canvas/Untitled.canvas",
+    "Plugins/Canvas/Untitled 1.canvas",
+    "Plugins/Canvas/Machine Learning.canvas",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
+    "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
     "Image Analysis.canvas"
   ]

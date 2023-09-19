@@ -1,4 +1,8 @@
 {
+  "shouldDebug": false,
+  "createAtObsidianAttachmentFolder": false,
+  "customFolderForNewTables": "Plugins/Notion",
+  "nameWithActiveFileNameAndTimestamp": false,
   "appData": {},
   "state": {
     "Notes/020 Studies/CMSC 124 Machine Problem 1.md": {

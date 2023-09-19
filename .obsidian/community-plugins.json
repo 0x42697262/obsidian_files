@@ -16,5 +16,7 @@
   "obsidian-export-image",
   "obsidian-state-switcher",
   "fantasy-calendar",
-  "cm-editor-syntax-highlight-obsidian"
+  "cm-editor-syntax-highlight-obsidian",
+  "templater-obsidian",
+  "obsidian-style-settings"
 ]

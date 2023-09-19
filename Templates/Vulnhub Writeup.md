@@ -3,33 +3,39 @@
 1. [[#Introduction]]
 2. [[#Pre-requisites]]
 3. [[#Methodology]]
-3. [[#Enumeration]]
-4. [[#Exploitation]]
-5. [[#Privilege Escalation]]
-6. [[#Post-Exploitation]]
-7. [[#Documentation of Flags/Proofs]]
-9. [[#Conclusion]]
-10. [[#Acknowledgments and References]]
+	1. [[#Enumeration]]
+	2. [[#Exploitation]]
+	3. [[#Privilege Escalation]]
+	4. [[#Post-Exploitation]]
+4. [[#Documentation of Flags/Proofs]]
+5. [[#Conclusion]]
+6. [[#Acknowledgments and References]]
 
 ---
 
 
 # Introduction
+----
 
 # Pre-requisites
+----
 
 # Methodology
+---
 
-# Enumeration
+## Enumeration
 
-# Exploitation
+## Exploitation
 
-# Privilege Escalation
+## Privilege Escalation
 
-# Post-Exploitation
+## Post-Exploitation
 
 # Documentation of Flags/Proofs
+----
 
 # Conclusion
+----
 
 # Acknowledgments and References
+----

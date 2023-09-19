@@ -17,5 +17,21 @@
       ],
       "key": "C"
     }
+  ],
+  "templater-obsidian:Templates/Lecture Notes.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "templater-obsidian:Templates/New Note.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
   ]
 }

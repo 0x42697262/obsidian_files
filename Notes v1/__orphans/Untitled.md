@@ -1,0 +1,32 @@
+- [ ] exercise
+	- [ ] cardio
+		- [ ] jogging
+	- [ ] stretching
+	- [ ] strength (muscles)
+- [ ] waking up around 3am to 4am
+- [ ] sleep before 10pm
+- [ ] eating on time (1-2 hours after waking up and 1-2 hours before sleeping)
+- [ ] acads together
+- [ ] walking around campus
+- [ ] relax days
+- [ ] acads days
+- [ ] no negative self talk
+	- [ ] if negative self talk, then speak it with your mouth
+- [ ] drink lots of water a day
+	- [ ] at least 1.5L
+	- [ ] at least 2L
+	- [ ] at least 3L
+- [ ] self care 
+	- [ ] physical
+	- [ ] mental
+- [ ] do not postpone convenience, either from both of us
+- [ ] focus
+	- [ ] when either of us gets told to focus, we should focus back on our task no matter what
+- [ ] status update
+	- [ ] day event
+	- [ ] mental states
+	- [ ] physical
+	- [ ] well being
+- [ ] racing for improvement
+	- [ ] pick any new skills we can learn and dedicate to it
+- [ ] 

@@ -1,6 +1,10 @@
 ---
-type: note
-tags: []
+title: "{{title}}"
+date: "{{date}}"
+tags:
 ---
 
 # {{title}}
+
+---
+
