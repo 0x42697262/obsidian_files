@@ -14,7 +14,7 @@ tags:
 **Initiation** -> **Planning** -> **Execution** -> **Monitoring & Controlling** -> **Closing**
 
 ### <u>Initiation</u>
-- Developing the **[[Project Charter]]**
+- Developing the **[[ProjectManagement.ProjectIntegrationManagement.ProjectCharter|Project Charter]]**
 
 ### <u>Planning</u>
 - Developing the **Project Management Plan**
