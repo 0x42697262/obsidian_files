@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"type":"text","text":"INPUT: `first_file.cpp`","id":"6fabd812785c575e","x":-1040,"y":-720,"width":250,"height":60},
+		{"type":"text","text":"```cpp\nvoid another();\nvoid weee();\nvoid haha();\nvoid haha2();\nvoid pc1();\nvoid pc2();\nvoid todo15();\nvoid todo16(int,int);\nvoid todo17(int,int);\nvoid todo18(int,int,int);\nvoid todo11();\nvoid todo12(int,int);\nvoid todo13(int,int);\nvoid todo14(int,int,int);\nvoid todo7();\nvoid todo8(int,int);\nvoid todo9(int,int);\nvoid todo10(int,int,int);\nvoid todo4();\nvoid todo5(int,int);\nvoid todo6(int,int);\nvoid todo5(int,int,int);\nvoid todo21();\nvoid todo22(int,int);\nint main(){\n\ttodo4();\n\ttodo9(9,4);\n\ttodo14(2,4,9);\n\ttodo21();\n\ttodo22(12,25);\n\treturn 0;\n}\n```","id":"7af0e0e99e34a9b2","x":-360,"y":680,"width":460,"height":800,"color":"4"},
+		{"type":"text","text":"# myfile.h\n```cpp\n#include \"pokemon.h\"\n\nvoid haha();\nvoid haha2();\n```","id":"3ff85bde73653deb","x":-360,"y":-388,"width":436,"height":223,"color":"1"},
+		{"type":"text","text":"# pokemon.h\n```cpp\nvoid another();\nvoid weee();\n```","id":"a9d2866f895ddb47","x":160,"y":-361,"width":259,"height":170,"color":"1"},
+		{"type":"text","text":"# computer.cpp\n```cpp\nvoid pc1();\nvoid pc2();\n```","id":"5bc3d8493b02297d","x":400,"y":-80,"width":436,"height":223,"color":"1"},
+		{"type":"text","text":"# first_file.cpp\n```cpp\n#include \"myfile.h\"\n#include \"computer.cpp\"\nvoid todo15();\nvoid todo16(int,int);\nvoid todo17(int,int);\nvoid todo18(int,int,int);\nvoid todo11();\nvoid todo12(int,int);\nvoid todo13(int,int);\nvoid todo14(int,int,int);\nvoid todo7();\nvoid todo8(int,int);\nvoid todo9(int,int);\nvoid todo10(int,int,int);\nvoid todo4();\nvoid todo5(int,int);\nvoid todo6(int,int);\nvoid todo5(int,int,int);\nvoid todo21();\nvoid todo22(int,int);\nint main(){\n\ttodo4();\n\ttodo9(9,4);\n\ttodo14(2,4,9);\n\ttodo21();\n\ttodo22(12,25);\n\treturn 0;\n}\n```","id":"b5137eff94f16f3c","x":-860,"y":-480,"width":400,"height":800,"color":"1"}
+	],
+	"edges":[
+		{"id":"19f44d855a788a00","fromNode":"b5137eff94f16f3c","fromSide":"right","toNode":"3ff85bde73653deb","toSide":"left"},
+		{"id":"a25c76e88e9353aa","fromNode":"3ff85bde73653deb","fromSide":"right","toNode":"a9d2866f895ddb47","toSide":"left"},
+		{"id":"3f895e0003b13ee1","fromNode":"6fabd812785c575e","fromSide":"bottom","toNode":"b5137eff94f16f3c","toSide":"top"},
+		{"id":"c8de6daf02428ed3","fromNode":"a9d2866f895ddb47","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
+		{"id":"92d6554b0f2c2613","fromNode":"3ff85bde73653deb","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
+		{"id":"301ca0b718b64bd6","fromNode":"b5137eff94f16f3c","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
+		{"id":"1be1676df17b50d2","fromNode":"b5137eff94f16f3c","fromSide":"right","toNode":"5bc3d8493b02297d","toSide":"left"},
+		{"id":"e84888ad2f339f69","fromNode":"5bc3d8493b02297d","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"}
+	]
+}

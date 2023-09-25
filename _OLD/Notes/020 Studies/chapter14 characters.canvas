@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Character_Name\n- alternative names\n\n\n---\n\n- details[^1]\n\n---\n[^1]: reference","id":"1130f29066ba1e6f","x":-1540,"y":-560,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# Don Anastasio\n- Tasio the Scholar\n- Tasio the Fool\n\n\n---\n\n- former student of philosophy[^1]\n- stopped studying[^1]\n\t- hoping for a creer in obedience because of his aged mother\n - little Chinese blood from his mother\n - does not believe in Purgatory[^2]\n\n---\n[^1]: Page 1, Paragraph 1\n[^2]: Page 2, Paragraph 20","id":"52fa0c2aa83024fd","x":-65,"y":-620,"width":580,"height":530,"color":"3"},
+		{"type":"text","text":"Near the church the scholar met a man in an alpaca jacket, carrying a brace of candles and a tasselled\ncane of office, who greeted him in Tagalog.","id":"2774803e0b668715","x":-1455,"y":235,"width":250,"height":180},
+		{"type":"text","text":"# ?\n\n\n---\n- a mayor[^1]\n- have a brace of candles bought from a Chinaman's shop[^2]\n\n---\n[^1]: Page 1, Paragraph 6\n[^2]: Page 1, Paragraph 15","id":"2c9f2e31922e36bb","x":-1620,"y":680,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"At the head of the stairs he was welcomed by the house-owner and his wife. His name was Don Filipo\nLino; hers, Do ̃na Teodora Vitia.","id":"b259867449ef88c7","x":1000,"y":591,"width":250,"height":179},
+		{"type":"text","text":"# Don Filipo Lino\n\n\n---\n\n- vice mayor of the town[^1]\n- head of almost a liberal  party[^1]\n- husband of **Doray**\n- holding a book \"The Sufferings of the Blessed Souls in Purgatory\"[^2]\n- ~30 years old\n\n---\n[^1]: Page 2, Paragraph 7\n[^2]: Page 2, Paragraph 5\n\n\n[^1]: Page 2, Paragraph 3\n[^1]: Page 2, Paragraph 3","id":"0560e174499e33cf","x":760,"y":1240,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"#  Dõna Teodora Vitia\n- Doray\n\n---\n\n- asked about **Don Rafael's** son[^1]\n- talked about **Don Rafael's** death[^2]\n- talked about **Tasio's** wife[^3]\n- wife of **Don Filipino Lino**\n\n---\n[^1]: Page 2, Paragraph 8\n[^2]: Page 2, Paragraph 15\n[^3]: Page 2, Paragraph 16","id":"6013fb1e1880bbc1","x":1365,"y":1240,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"“Yes,” said Tasio. “I saw him as he was leaving his carriage.”","id":"ba1654c5049503da","x":255,"y":842,"width":250,"height":96},
+		{"type":"text","text":"#  Don Rafael\n\n\n---\n- has a son[^1]\n- probably dead[^2]\n- only 6 people saw him to his grave[^3]\n\t- **Tasio** was one of them\n- Governor General[^3]\n\n---\n[^1]: Page 2, Paragraph 8\n[^2]: Page 2, Paragraph 10\n[^3]: Page 2, Paragraph 15","id":"199d91ac0436acc0","x":50,"y":1920,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# ?\n\n\n---\n\n- son of **Don Rafael**[^1]\n- returned from Europe[^1]\n\t- because his father passed away\n\n---\n[^1]: Page 2, Paragraph 8","id":"a6ed6b882f3b0a11","x":670,"y":1920,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# ?\n\n---\n\n- mother of **Don Anastasio**[^1]\n\n---\n[^1]: Page 1, Paragraph 2","id":"be3db9c0a4c78ad6","x":880,"y":-660,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# ?\n\n---\n\n-  deceased wife of **Don Anastasio**[^1]\n\n---\n[^1]: Page 2, Paragraph 16","id":"7b45782af785626a","x":880,"y":-200,"width":580,"height":420,"color":"3"},
+		{"id":"cc81fa2bafc391cb","x":-200,"y":1310,"width":250,"height":281,"type":"text","text":"According\nto Father Astete it must have been located in the very center of the globe; on the other hand, according to\na monk cited by Father Girard, it was to be found in the neighborhood of the famous monastery of Cluny"},
+		{"type":"text","text":"# Father Astete\n\n\n---\n\n\n---","id":"0c3ae04dfd0e8a06","x":-2140,"y":2102,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# Father Girard\n\n\n---\n\n\n---","id":"5fad1fab20a1aa6f","x":-1521,"y":2100,"width":580,"height":420,"color":"3"},
+		{"type":"text","text":"# ?\n\n---\n\n- Vice Mayor[^1]\n\n---\n[^1]: Page 2,  Paragraph 26","id":"bc4298cdecec770e","x":-920,"y":2100,"width":580,"height":420,"color":"3"}
+	],
+	"edges":[
+		{"id":"98fe4091326243ac","fromNode":"52fa0c2aa83024fd","fromSide":"bottom","toNode":"2774803e0b668715","toSide":"top"},
+		{"id":"a39d992d8ead7633","fromNode":"2774803e0b668715","fromSide":"bottom","toNode":"2c9f2e31922e36bb","toSide":"top"},
+		{"id":"52064d86df7c27df","fromNode":"52fa0c2aa83024fd","fromSide":"bottom","toNode":"b259867449ef88c7","toSide":"top"},
+		{"id":"caf95fab3c840d32","fromNode":"b259867449ef88c7","fromSide":"bottom","toNode":"0560e174499e33cf","toSide":"top"},
+		{"id":"735e20165e5a6e64","fromNode":"b259867449ef88c7","fromSide":"bottom","toNode":"6013fb1e1880bbc1","toSide":"top"},
+		{"id":"23d767eb21be947b","fromNode":"52fa0c2aa83024fd","fromSide":"bottom","toNode":"ba1654c5049503da","toSide":"top"},
+		{"id":"61aebaf768ca1cc5","fromNode":"ba1654c5049503da","fromSide":"bottom","toNode":"199d91ac0436acc0","toSide":"top"},
+		{"id":"44d9af3250fdb361","fromNode":"6013fb1e1880bbc1","fromSide":"bottom","toNode":"199d91ac0436acc0","toSide":"top"},
+		{"id":"2052a176c6522298","fromNode":"52fa0c2aa83024fd","fromSide":"right","toNode":"be3db9c0a4c78ad6","toSide":"left"},
+		{"id":"14f4bf8e44cab00b","fromNode":"52fa0c2aa83024fd","fromSide":"right","toNode":"7b45782af785626a","toSide":"left"},
+		{"id":"4d447588867547e2","fromNode":"52fa0c2aa83024fd","fromSide":"bottom","toNode":"cc81fa2bafc391cb","toSide":"top"},
+		{"id":"e42ec2ae35ad36a1","fromNode":"cc81fa2bafc391cb","fromSide":"bottom","toNode":"0c3ae04dfd0e8a06","toSide":"top"},
+		{"id":"2e400516d2277c86","fromNode":"cc81fa2bafc391cb","fromSide":"bottom","toNode":"5fad1fab20a1aa6f","toSide":"top"},
+		{"id":"e06e5396e1a6c664","fromNode":"cc81fa2bafc391cb","fromSide":"bottom","toNode":"bc4298cdecec770e","toSide":"top"}
+	]
+}

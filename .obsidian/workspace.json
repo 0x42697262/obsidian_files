@@ -8,32 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d60d3a635c43a08d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes v1/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "76ab46d4051ed01a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes v1/__orphans/Untitled.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "87bdeab4ce0ea366",
             "type": "leaf",
             "state": {
@@ -47,56 +21,14 @@
             "id": "ba87ea8ae44c1fae",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "notion-like-tables",
               "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.RingTopology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f2691a4ac36f8518",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.RingTopology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1a6b34c6fda9cac6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad0504ffe6097799",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Plugins/Notion/window manager checklist.table"
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
+                "file": "Plugins/Notion/window manager checklist.table",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
+                "file": "Plugins/Notion/window manager checklist.table",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -226,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md"
+                "file": "Plugins/Notion/window manager checklist.table"
               }
             }
           },
@@ -281,29 +213,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cef6f232d564ca5a",
+  "active": "ba87ea8ae44c1fae",
   "lastOpenFiles": [
+    "Plugins/Excalidraw/Untitled.md",
+    "Plugins/Kanban/Internship.md",
+    "Plugins/Excalidraw/Drawing 2023-09-02 12.07.06.excalidraw.md",
+    "Plugins/Excalidraw/Drawing 2023-07-12 17.54.08.excalidraw.md",
+    "Plugins/Daily Notes/2023-09-07.md",
+    "Plugins/Daily Notes/2023-08-29.md",
+    "Plugins/Canvas/Untitled 1.canvas",
+    "Plugins/Canvas/Untitled.canvas",
     "Notes/ComputerScience.Networking.NetworkTopology.RingTopology.md",
+    "Plugins/Canvas/Machine Learning.canvas",
     "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
-    "Notes/temporary/ComputerScience.Networking.LocalAreaNetwork.md",
-    "Notes/ComputerScience.Networking.NetworkTopology.StarTopology.md",
-    "Notes/ComputerScience.Networking.NetworkTopology.md",
-    "Notes/ComputerScience.Networking.NetworkTopology.MeshTopology.md",
+    "Plugins/Canvas/DFA.canvas",
+    "_OLD2/__class/090 extras/checking pytorch support.md",
+    "_OLD2/__class/090 extras/Interesting Websites To Check.md",
+    "_OLD2/__class/090 extras/Firefox Zoom Level.md",
+    "_OLD2/__class/090 extras/Center a Text Vertically in Latex.md",
+    "_OLD2/__class/090 extras/Center a Table in Obsidian.md",
+    "_OLD2/__class/090 extras/Bypass Disable via CSS Text Selection.md",
+    "_OLD2/__class/090 extras/092 tricks.md",
+    "_OLD2/__class/090 extras/091 resource dump.md",
+    "_OLD2/__class/090 extras/090 extras.md",
+    "_OLD2/__class/020 linux/etc - Touchpad.md",
+    "_OLD2/__class/020 linux/etc - Numlock sddm.md",
+    "_OLD2/__class/020 linux/Stream Editor (sed).md",
+    "_OLD2/__class/020 linux/Fuck WINE associations.md",
+    "_OLD2/__class/020 linux/Creating new btrfs subvolume for root and home.md",
+    "_OLD2/__class/020 linux/021 root.md",
+    "_OLD2/__class/020 linux/020 linux.md",
+    "_OLD2/__class/010 learning/undefined constant MYSQLI_STORE_RESULT (CodeIgniter).md",
+    "_OLD2/__class/010 learning/picoCTF 2023.md",
+    "_OLD2/__class/090 extras",
+    "_OLD2/__class/020 linux",
+    "_OLD2/__class/010 learning",
+    "_OLD2/__orphans",
+    "_OLD2/__index",
+    "_OLD2/__class",
+    "_OLD2",
     "Plugins/Notion/window manager checklist.table",
-    "Notes/ComputerScience.Networking.NetworkTopology.MeshTopology.PartiallyConnectedMesh.md",
-    "Notes/ComputerScience.Networking.NetworkTopology.MeshTopology.FullyConnectedMesh.md",
-    "Notes/temporary/ComputerScience.NetworkTopology.StarTopology.md",
-    "Notes/ComputerScience.NetworkTopology.MeshTopology.md",
-    "Notes/ComputerScience.NetworkTopology.md",
-    "Notes/ComputerScience.NetworkTopology.StarTopology.md",
-    "Notes v1/__class/010 learning/Cryptography.md",
-    "Notes v1/__class/090 extras/091 resource dump.md",
-    "Notes v1/__class/010 learning/undefined constant MYSQLI_STORE_RESULT (CodeIgniter).md",
-    "Notes v1/__class/010 learning/Data Communication.md",
-    "Notes v1/__class/010 learning/011 computer science.md",
-    "Notes v1/__class/010 learning/010 learning.md",
-    "Notes/ComputerScience.NetworkTopology.MeshTopology.PartiallyConnectedMesh.md",
-    "Notes/ComputerScience.NetworkTopology.MeshTopology.FullyConnectedMesh.md",
     "Attachments/Pasted image 20230918050716.png",
     "Attachments/Pasted image 20230926001633.png",
     "Attachments/Pasted image 20230918043636.png",
@@ -313,26 +262,9 @@
     "Attachments/Pasted image 20230918025318.png",
     "Attachments/Pasted Image 20230913053822_217.png",
     "Attachments/Pasted image 20230913053740.png",
-    "Notes v1/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
-    "Notes/ProjectManagement.ProjectIntegrationManagement.ProjectCharter.PaybackAnalysis.md",
-    "Notes v1/__orphans/Untitled.md",
-    "Plugins/Daily Notes/2023-09-18.md",
-    "Notes/ProjectManagement.ProjectIntegrationManagement.ProjectCharter.md",
-    "Notes/ProjectManagement.ProjectIntegrationManagement.ProjectCharter.NetValuePresent.md",
     "Notes/temporary",
     "Notes/orphans",
-    "Notes",
-    "Zettelkasten/020-research/021-annotated-bibliography",
-    "Zettelkasten/000-index",
-    "Zettelkasten/Research/_unlinked",
-    "Zettelkasten/020-research",
-    "Zettelkasten/010-knowledge",
-    "Zettelkasten/010-knowledge/010-",
-    "Plugins/Canvas/DFA.canvas",
     "jean/output_7_0.png",
-    "Plugins/Canvas/Untitled.canvas",
-    "Plugins/Canvas/Untitled 1.canvas",
-    "Plugins/Canvas/Machine Learning.canvas",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
