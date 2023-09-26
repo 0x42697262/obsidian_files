@@ -24,5 +24,6 @@ Network Topology is the geometric representation of the relationship of all link
 3. [[ComputerScience.Networking.NetworkTopology.BusTopology|Bus Topology]] (Basic)
 4. [[ComputerScience.Networking.NetworkTopology.RingTopology|Ring Topology]] (Basic)
 5. [[ComputerScience.Networking.NetworkTopology.LineTopology|Line Topology]]
-6. [[ComputerScience.Networking.NetworkTopology.TreeTopology|Tree Topology]]
-7. [[ComputerScience.Networking.NetworkTopology.HybridTopology|Hybrid Topology]]
+6. [[ComputerScience.Networking.NetworkTopology.PointToPointTopology|Point-to-Point Topology]]
+7. [[ComputerScience.Networking.NetworkTopology.TreeTopology|Tree Topology]]
+8. [[ComputerScience.Networking.NetworkTopology.HybridTopology|Hybrid Topology]]

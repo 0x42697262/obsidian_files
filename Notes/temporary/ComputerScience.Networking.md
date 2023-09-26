@@ -1,12 +1,12 @@
 ---
-title: Line Topology
+title: Networking
 date: 2023-09-26
 tags:
   - ComputerScience
   - Networking
 ---
 
-# Line Topology
+# Networking
 
 ---
 
