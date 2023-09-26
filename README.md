@@ -6,7 +6,7 @@ This is use for storing notes (? highly questionable) about just anything I do o
 2. Clone the repository
 
 ```
-https://github.com/0x42697262/obsidian_files.git
+git clone https://github.com/0x42697262/obsidian_files.git
 ```
 
 3. Import the cloned repository in Obsidian.
