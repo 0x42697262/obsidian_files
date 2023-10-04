@@ -1,0 +1,7 @@
+Process		Arrival		CPU Burst Time		Priority
+1		0		8			1
+2		1		9			2
+3		2		7			5
+4		3		8			3
+5		4		10			6
+6		5		15			4

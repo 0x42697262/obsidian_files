@@ -11,40 +11,11 @@
             "id": "0d1b934a1fbd1e03",
             "type": "leaf",
             "state": {
-              "type": "notion-like-tables",
-              "state": {
-                "file": "Plugins/Notion/window manager checklist.table"
-              }
-            }
-          },
-          {
-            "id": "ba32a4a1859d93eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plugins/Daily Notes/2023-10-02.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "df77af1e2372fd0e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Signal.DigitalSignals.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 407.51103591918945
+    "width": 407.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -126,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Signal.DigitalSignals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Signal.DigitalSignals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -173,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/Signal.DigitalSignals.md"
-              }
+              "state": {}
             }
           },
           {
@@ -229,44 +197,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "df77af1e2372fd0e",
+  "active": "0d1b934a1fbd1e03",
   "lastOpenFiles": [
-    "Notes/Signal.md",
-    "Notes/Signal.DigitalSignals.md",
-    "Notes/SignalTransmission.md",
-    "Attachments/Pasted image 20231004125023.png",
-    "Notes/Bandwidth.md",
-    "Attachments/Pasted image 20231004124549.png",
-    "Attachments/Pasted image 20231004124250.png",
-    "Attachments/Pasted image 20231004123612.png",
-    "Notes/SineWave.Wavelength.md",
-    "Notes/SineWave.TimeAndFrequencyDomains.md",
-    "Notes/SineWave.Phase.md",
     "Notes/SineWave.md",
-    "Notes/SineWave.PeriodAndFrequency.md",
-    "Notes/SineWave.PeakAmplitude.md",
-    "Notes/Signal.PeriodicAnalogSignals.md",
-    "Notes/NetworkTopology.md",
-    "Notes/NetworkingSystem.md",
-    "Notes/CompositeSignal.md",
-    "Attachments/Pasted image 20231004122656.png",
-    "Notes/DataCommunicationsAndNetworking.md",
-    "Notes/temporary/CompositeSignal.md",
-    "Attachments/Pasted image 20231004102436.png",
-    "Attachments/Pasted image 20231004101601.png",
-    "Attachments/Pasted image 20231004101414.png",
-    "Attachments/Pasted image 20231004095628.png",
-    "Attachments/Pasted image 20231004095510.png",
     "Plugins/Daily Notes/2023-10-02.md",
-    "Notes/NetworkTopology.MeshTopology.FullyConnectedMesh.md",
-    "Notes/NetworkTopology.MeshTopology.md",
-    "Notes/Signal.AperiodicSignals.md",
-    "Notes/Signal.PeriodicSignals.md",
-    "Notes/temporary/AperiodicAnalogSignals.md",
-    "Notes/ProjectManagement.ProjectIntegrationManagement.md",
-    "_OLD2/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
-    "Notes/Wave.Periods.md",
-    "Notes/temporary/Signals.PeriodicAnalogSignal.md",
+    "Notes/temporary/HackThisSite - Basic Level 6.md",
+    "Notes/temporary/old/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
+    "Attachments/Pasted image 20230926125012.png",
+    "Notes/temporary/old",
+    "Attachments/Pasted image 20230918043437.png",
+    "Attachments/Pasted image 20230918041821.png",
+    "Attachments/Pasted image 20230918030707.png",
+    "Attachments/Pasted image 20230918025318.png",
+    "Attachments/Pasted Image 20230913053822_217.png",
+    "_OLD/ATTACHMENT_FOLDER/image3 1.png",
+    "_OLD/ATTACHMENT_FOLDER/image2.png",
+    "_OLD/ATTACHMENT_FOLDER/3.png",
+    "_OLD/ATTACHMENT_FOLDER/image4.png",
+    "_OLD/unorganized fuck/DEFINITIONS.md",
+    "_OLD/unorganized fuck/2022-2023/REFERENCES.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 124/INFO_DUMP.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 2/Background Concepts.md",
+    "_OLD/unorganized fuck/2022-2023/CMSC 110/Technical Writing Essentials.md",
+    "_OLD/Notes/020 Studies/Static Interconnection Networks.md",
+    "_OLD/Notes/020 Studies/Utilitarianism.md",
+    "_OLD/Notes/020 Studies/Spooling.md",
+    "_OLD/Notes/020 Studies/Single Buffering.md",
+    "_OLD/Notes/020 Studies/Rule Utilitarianism.md",
+    "_OLD/Notes/020 Studies/Processes.md",
+    "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Plugins/Notion/window manager checklist.table",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/Untitled.canvas",
@@ -280,8 +250,6 @@
     "_OLD2/__class",
     "_OLD2",
     "Notes/temporary",
-    "Notes/orphans",
-    "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
     "Image Analysis.canvas"
