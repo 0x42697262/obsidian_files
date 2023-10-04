@@ -1,1 +1,0 @@
-a good will is good because it produces good
