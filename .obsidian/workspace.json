@@ -11,11 +11,27 @@
             "id": "0d1b934a1fbd1e03",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "Plugins/Excalidraw/Untitled.md"
+              }
+            }
+          },
+          {
+            "id": "c964bb393386aad7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/temporary/Untitled.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 407.51103591918945,
-    "collapsed": true
+    "width": 407.51103591918945
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -98,6 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/temporary/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/temporary/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -143,7 +160,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/temporary/Untitled.md"
+              }
             }
           },
           {
@@ -197,8 +216,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0d1b934a1fbd1e03",
+  "active": "c964bb393386aad7",
   "lastOpenFiles": [
+    "Plugins/Excalidraw/Untitled.md",
+    "Notes/temporary/Untitled.md",
     "Notes/SineWave.md",
     "Plugins/Daily Notes/2023-10-02.md",
     "Notes/temporary/HackThisSite - Basic Level 6.md",
@@ -234,8 +255,6 @@
     "_OLD/Notes/020 Studies/Utilitarianism.md",
     "_OLD/Notes/020 Studies/Spooling.md",
     "_OLD/Notes/020 Studies/Single Buffering.md",
-    "_OLD/Notes/020 Studies/Rule Utilitarianism.md",
-    "_OLD/Notes/020 Studies/Processes.md",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Plugins/Notion/window manager checklist.table",
     "Plugins/Canvas/Untitled 1.canvas",
