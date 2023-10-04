@@ -3,6 +3,7 @@ title: Star Topology
 date: 2023-09-26
 tags:
   - ComputerScience
+  - DataCommunication
   - Networking
 ---
 
@@ -20,14 +21,14 @@ Each node has a dedicated point-to-point connection with the hub/switch.
 
 In Star Topology...
 
-- it is usually used in [[ComputerScience.Networking.LocalAreaNetwork|Local Area Network]]
+- it is usually used in [[DataCommunication.Networking.LocalAreaNetwork|Local Area Network]]
 - each node have a dedicated point-to-point link only to a central controller (hub)
 - devices are not directly linked to one another
 - the controller acts as an exchange
 
 **Advantages**:
 
-1. Less expensive than [[ComputerScience.Networking.NetworkTopology.MeshTopology|mesh]]
+1. Less expensive than [[NetworkTopology.MeshTopology|mesh]]
 2. Needs only one link and one I/O port to connect
 3. Easy to install and reconfigure
 4. Additions, moves and deletions involve only one connection

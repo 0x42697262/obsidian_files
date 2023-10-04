@@ -3,6 +3,7 @@ title: Partially Connected Mesh
 date: 2023-09-26
 tags:
   - ComputerScience
+  - DataCommunication
   - Networking
 ---
 

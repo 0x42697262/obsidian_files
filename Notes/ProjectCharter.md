@@ -30,7 +30,7 @@ This is part of the **Initiation** phase.
 ### 1. Identifying Potential Projects
 We use _realistic methods_ to select which projects to work on.
 - **Strategic Planning** provides important information to help organizations _identify_ and then _select_ potential projects.
-- **[[ProjectManagement.ProjectIntegrationManagement.SWOTAnalysis|SWOT Analysis]]**
+- **[[ProjectCharter.SWOTAnalysis|SWOT Analysis]]**
 - Align IT with Business Strategy
 	- improving business process
 	- enable innovation and expansion
@@ -57,13 +57,13 @@ There are five common techniques:
 		2. Opportunity
 		3. Directive
 3. **Performing Net Present Value or other financial analyses**
-	1. [[ProjectManagement.ProjectIntegrationManagement.ProjectCharter.NetValuePresent|Net Value Present]]
+	1. [[ProjectCharter.NetValuePresent|Net Value Present]]
 		1. Expected monetary gain or loss from a project
-	2. [[ProjectManagement.ProjectIntegrationManagement.ProjectCharter.ReturnonInvestment|Return on Investment]] (ROI)
+	2. [[ProjectCharter.ReturnOnInvestment|Return On Investment]] (ROI)
 		1. Approximate measure of an investment's profitability
-	3. [[ProjectManagement.ProjectIntegrationManagement.ProjectCharter.PaybackAnalysis|Payback Analysis]]
+	3. [[ProjectCharter.PaybackAnalysis|Payback Analysis]]
 		1. Amount of time to recoup the total amount invested in a project in terms of net cash inflows
-4. **Using a [[ProjectManagement.ProjectIntegrationManagement.ProjectCharter.WeightedScoringModel|Weight Scoring Model]]** (a tool that provides a systematic process for selecting projects based on many criteria)
+4. **Using a [[ProjectCharter.WeightedScoringModel|Weight Scoring Model]]** (a tool that provides a systematic process for selecting projects based on many criteria)
 	1. Identify criteria that are important to the selection process
 	2. Assign a weight to each criterion
 	3. Calculate weighted score for each project

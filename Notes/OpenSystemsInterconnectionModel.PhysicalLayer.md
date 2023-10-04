@@ -3,6 +3,7 @@ title: Physical Layer
 date: 2023-09-26
 tags:
   - ComputerScience
+  - DataCommunication
   - Networking
 ---
 
@@ -32,3 +33,13 @@ The Physical Layer is concerned of:
 - Line configuration
 - Physical topology
 - Transmission mode
+
+## Theoretical Basis
+- **analog data**
+	- refers to information that is continuous
+	- infinite number of values in a range
+- **digital data**
+	- refers to information that has discrete states
+	- limited number of values
+ ![[Pasted image 20231003220150.png]]
+ 
