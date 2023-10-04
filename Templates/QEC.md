@@ -1,7 +1,0 @@
-### Question
-- 
-### Evidence
-- 
-### Conclusion
-- 
----

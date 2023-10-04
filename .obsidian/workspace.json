@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/temporary/Untitled.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/temporary/Untitled.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/temporary/Untitled.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/temporary/Untitled.md"
+                "file": "README.md"
               }
             }
           },
@@ -218,10 +218,24 @@
   },
   "active": "c964bb393386aad7",
   "lastOpenFiles": [
+    "Templates/Vulnhub Writeup.md",
+    "Templates/New Note.md",
+    "Plugins/Canvas/Untitled 1.canvas",
+    "Templates/Zettelkasten Compass.md",
+    "Templates/QEC.md",
+    "Plugins/Canvas/Machine Learning.canvas",
+    "Plugins/Canvas/DFA.canvas",
+    "Plugins/Notion/window manager checklist.table",
     "Plugins/Excalidraw/Untitled.md",
+    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
+    "Plugins/Excalidraw/Drawing 2023-09-02 12.07.06.excalidraw.md",
+    "Plugins/Excalidraw/Drawing 2023-09-26 12.35.45.excalidraw.md",
+    "Plugins/Excalidraw/Drawing 2023-07-12 17.54.08.excalidraw.md",
+    "Plugins/Daily Notes/2023-10-02.md",
+    "Plugins/Daily Notes/2023-09-07.md",
+    "Plugins/Daily Notes/2023-08-29.md",
     "Notes/temporary/Untitled.md",
     "Notes/SineWave.md",
-    "Plugins/Daily Notes/2023-10-02.md",
     "Notes/temporary/HackThisSite - Basic Level 6.md",
     "Notes/temporary/old/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
     "Attachments/Pasted image 20230926125012.png",
@@ -245,22 +259,8 @@
     "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
     "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
     "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 124/INFO_DUMP.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 3-4/Syntax and Semantics.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 3-4/Backus-Naur Form.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 2/MP1 Source Codes.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 124/Week 2/Background Concepts.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 110/Technical Writing Essentials.md",
-    "_OLD/Notes/020 Studies/Static Interconnection Networks.md",
-    "_OLD/Notes/020 Studies/Utilitarianism.md",
-    "_OLD/Notes/020 Studies/Spooling.md",
-    "_OLD/Notes/020 Studies/Single Buffering.md",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
-    "Plugins/Notion/window manager checklist.table",
-    "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/Untitled.canvas",
-    "Plugins/Canvas/Machine Learning.canvas",
-    "Plugins/Canvas/DFA.canvas",
     "_OLD2/__class/090 extras",
     "_OLD2/__class/020 linux",
     "_OLD2/__class/010 learning",
