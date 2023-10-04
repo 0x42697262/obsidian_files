@@ -25,16 +25,16 @@ Phase is measured in degrees or radians.
 
 > [!NOTE]- 3 sine waves with the same amplitude and frequency, but different phases
 > ![[Pasted image 20231004021909.png]]
-
-- (a) A sine wave with a phase of $0\degree$ starts at time 0 with a zero amplitude. The amplitude is _increasing_.
-- (b.) A sine wave with a phase of $90\degree$ starts at time 0 with a peak amplitude. The amplitude is _decreasing_.
-- (c.) A sine wave with a phase of $180\degree$ starts at time 0 with a zero amplitude. The amplitude is _decreasing_.
-
-Another way to look at the phase is in terms of _shift_ or _offset_. We can say that:
-
-- (a.) A sine wave with a phase of $0\degree$ is not shifted.
-- (b.) A sine wave with a phase of $90\degree$ is shifted to the left by 1/4 cycle. However, note that the signal does not really exist before time 0.
-- (c.) A sine wave with a phase of $180\degree$ is shifted to the left by 1/2 cycle. However, note that the signal does not really exist before time 0.
+> 
+> - (a) A sine wave with a phase of $0\degree$ starts at time 0 with a zero amplitude. The amplitude is _increasing_.
+> - (b.) A sine wave with a phase of $90\degree$ starts at time 0 with a peak amplitude. The amplitude is _decreasing_.
+> - (c.) A sine wave with a phase of $180\degree$ starts at time 0 with a zero amplitude. The amplitude is _decreasing_.
+> 
+> Another way to look at the phase is in terms of _shift_ or _offset_. We can say that:
+> 
+> - (a.) A sine wave with a phase of $0\degree$ is not shifted.
+> - (b.) A sine wave with a phase of $90\degree$ is shifted to the left by 1/4 cycle. However, note that the signal does not really exist before time 0.
+> - (c.) A sine wave with a phase of $180\degree$ is shifted to the left by 1/2 cycle. However, note that the signal does not really exist before time 0.
 
 ---
 

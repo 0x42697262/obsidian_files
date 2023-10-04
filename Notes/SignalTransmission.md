@@ -19,7 +19,7 @@ Data can be analog or digital. Analog data refers to information that is continu
 
 ## Analog and Digital Signals
 
-Like the data they represent, [[Signal|signals]] can be either analog or digital. An **analog signal** has infinitely many levels of intensity over a period of time. As the wave moves from value A to value B, it passes through and includes an infinite number of values along its path. A **digital signal**, on the other hand, can have only a limited number of defined values. Although each value can be any number, it is often as simple as 1 and O.
+Like the data they represent, [[Signal|signals]] can be either analog or digital. An **analog signal** has infinitely many levels of intensity over a period of time. As the wave moves from value A to value B, it passes through and includes an infinite number of values along its path. A **[[Signal.DigitalSignals|digital signal]]**, on the other hand, can have only a limited number of defined values. Although each value can be any number, it is often as simple as 1 and O.
 
 The curve representing the analog signal passes through an infinite number of points. The vertical lines of the digital signal, however, demonstrate the sudden jump that the signal makes from value to value.
 
@@ -32,4 +32,4 @@ A *periodic signal* completes a pattern within a measurable time frame, called a
 
 A nonperiodic signal changes without exhibiting a pattern or cycle that repeats over time. 
 
-In [[DataCommunication|data communications]], we frequently use periodic analog signals (because they need less bandwidth), and nonperiodic digital signals (because they can represent variation in data).
+In [[DataCommunicationsAndNetworking|data communications]], we frequently use periodic analog signals (because they need less bandwidth), and nonperiodic digital signals (because they can represent variation in data).

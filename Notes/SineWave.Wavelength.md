@@ -28,7 +28,10 @@ $$\lambda=\frac{c}{f}$$
 
 > [!NOTE]- Example 1
 > Wavelength of red light (frequency = $4\times10^{14} Hz)$ in air is:
-> $$\lambda=\frac{c}{f}$$ > $$\lambda=\frac{3\times10^8\frac{m}{s}}{4\times10^{14} Hz}$$ > $$\lambda=0.75\times10^{-6}m$$ > $$\lambda=0.75\mu m$$
+> $$\lambda=\frac{c}{f}$$ 
+> $$\lambda=\frac{3\times10^8\frac{m}{s}}{4\times10^{14} Hz}$$ 
+> $$\lambda=0.75\times10^{-6}m$$ 
+> $$\lambda=0.75\mu m$$
 
 _In coaxial or fiber-optic cable, however, the wavelength is shorter ($0.5\mu m$) because the propagation speed in the cable is decreased._
 
