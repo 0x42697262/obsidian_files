@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "87bdeab4ce0ea366",
+            "id": "0d1b934a1fbd1e03",
             "type": "leaf",
             "state": {
               "type": "notion-like-tables",
@@ -18,17 +18,33 @@
             }
           },
           {
-            "id": "ba87ea8ae44c1fae",
+            "id": "ba32a4a1859d93eb",
             "type": "leaf",
             "state": {
-              "type": "notion-like-tables",
+              "type": "markdown",
               "state": {
-                "file": "Plugins/Notion/window manager checklist.table"
+                "file": "Plugins/Daily Notes/2023-10-02.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df77af1e2372fd0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/SignalTransmission.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.51103591918945
+    "width": 407.51103591918945
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -110,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Plugins/Notion/window manager checklist.table",
+                "file": "Notes/SignalTransmission.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Plugins/Notion/window manager checklist.table",
+                "file": "Notes/SignalTransmission.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -158,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Plugins/Notion/window manager checklist.table"
+                "file": "Notes/SignalTransmission.md"
               }
             }
           },
@@ -213,38 +229,49 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ba87ea8ae44c1fae",
+  "active": "df77af1e2372fd0e",
   "lastOpenFiles": [
-    "Plugins/Excalidraw/Untitled.md",
-    "Plugins/Kanban/Internship.md",
-    "Plugins/Excalidraw/Drawing 2023-09-02 12.07.06.excalidraw.md",
-    "Plugins/Excalidraw/Drawing 2023-07-12 17.54.08.excalidraw.md",
-    "Plugins/Daily Notes/2023-09-07.md",
-    "Plugins/Daily Notes/2023-08-29.md",
+    "Notes/SignalTransmission.md",
+    "Notes/CompositeSignal.md",
+    "Notes/Signal.md",
+    "Notes/SineWave.md",
+    "Notes/SineWave.Wavelength.md",
+    "Notes/temporary/CompositeSignal.md",
+    "Attachments/Pasted image 20231004102436.png",
+    "Attachments/Pasted image 20231004101601.png",
+    "Attachments/Pasted image 20231004101414.png",
+    "Notes/Signal.PeriodicAnalogSignals.md",
+    "Notes/SineWave.TimeAndFrequencyDomains.md",
+    "Attachments/Pasted image 20231004095628.png",
+    "Attachments/Pasted image 20231004095510.png",
+    "Attachments/Pasted image 20231004095421.png",
+    "Attachments/Pasted image 20231004095015.png",
+    "Plugins/Daily Notes/2023-10-02.md",
+    "Notes/SineWave.PeriodAndFrequency.md",
+    "Notes/SineWave.Phase.md",
+    "Attachments/Pasted image 20231004021909.png",
+    "Notes/NetworkTopology.MeshTopology.FullyConnectedMesh.md",
+    "Notes/NetworkTopology.MeshTopology.md",
+    "Notes/SineWave.PeakAmplitude.md",
+    "Notes/DataCommunication.md",
+    "Notes/Signal.AperiodicSignals.md",
+    "Notes/Signal.PeriodicSignals.md",
+    "Attachments/Pasted image 20231004012735.png",
+    "Notes/temporary/AperiodicAnalogSignals.md",
+    "Notes/ProjectManagement.ProjectIntegrationManagement.md",
+    "_OLD2/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
+    "Notes/Wave.Periods.md",
+    "Attachments/Pasted image 20231004003330.png",
+    "Notes/temporary/Signals.PeriodicAnalogSignal.md",
+    "Notes/temporary/LocalAreaNetwork.md",
+    "Notes/NetworkingSystem.md",
+    "Notes/OpenSystemsInterconnectionModel.md",
+    "Notes/NetworkTopology.md",
+    "Plugins/Notion/window manager checklist.table",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/Untitled.canvas",
-    "Notes/ComputerScience.Networking.NetworkTopology.RingTopology.md",
     "Plugins/Canvas/Machine Learning.canvas",
-    "Notes/ComputerScience.Networking.NetworkTopology.BusTopology.md",
     "Plugins/Canvas/DFA.canvas",
-    "_OLD2/__class/090 extras/checking pytorch support.md",
-    "_OLD2/__class/090 extras/Interesting Websites To Check.md",
-    "_OLD2/__class/090 extras/Firefox Zoom Level.md",
-    "_OLD2/__class/090 extras/Center a Text Vertically in Latex.md",
-    "_OLD2/__class/090 extras/Center a Table in Obsidian.md",
-    "_OLD2/__class/090 extras/Bypass Disable via CSS Text Selection.md",
-    "_OLD2/__class/090 extras/092 tricks.md",
-    "_OLD2/__class/090 extras/091 resource dump.md",
-    "_OLD2/__class/090 extras/090 extras.md",
-    "_OLD2/__class/020 linux/etc - Touchpad.md",
-    "_OLD2/__class/020 linux/etc - Numlock sddm.md",
-    "_OLD2/__class/020 linux/Stream Editor (sed).md",
-    "_OLD2/__class/020 linux/Fuck WINE associations.md",
-    "_OLD2/__class/020 linux/Creating new btrfs subvolume for root and home.md",
-    "_OLD2/__class/020 linux/021 root.md",
-    "_OLD2/__class/020 linux/020 linux.md",
-    "_OLD2/__class/010 learning/undefined constant MYSQLI_STORE_RESULT (CodeIgniter).md",
-    "_OLD2/__class/010 learning/picoCTF 2023.md",
     "_OLD2/__class/090 extras",
     "_OLD2/__class/020 linux",
     "_OLD2/__class/010 learning",
@@ -252,19 +279,8 @@
     "_OLD2/__index",
     "_OLD2/__class",
     "_OLD2",
-    "Plugins/Notion/window manager checklist.table",
-    "Attachments/Pasted image 20230918050716.png",
-    "Attachments/Pasted image 20230926001633.png",
-    "Attachments/Pasted image 20230918043636.png",
-    "Attachments/Pasted image 20230918043437.png",
-    "Attachments/Pasted image 20230918041821.png",
-    "Attachments/Pasted image 20230918030707.png",
-    "Attachments/Pasted image 20230918025318.png",
-    "Attachments/Pasted Image 20230913053822_217.png",
-    "Attachments/Pasted image 20230913053740.png",
     "Notes/temporary",
     "Notes/orphans",
-    "jean/output_7_0.png",
     "_OLD/Notes/020 Studies/chapter14 characters.canvas",
     "Canvas/Untitled.canvas",
     "Untitled 1.canvas",
