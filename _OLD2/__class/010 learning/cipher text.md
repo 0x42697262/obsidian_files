@@ -1,1 +1,0 @@
-information in an encrypted, unreadable format
