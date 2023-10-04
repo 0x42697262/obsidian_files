@@ -36,7 +36,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/SignalTransmission.md",
+                "file": "Notes/Signal.DigitalSignals.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/SignalTransmission.md",
+                "file": "Notes/Signal.DigitalSignals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/SignalTransmission.md",
+                "file": "Notes/Signal.DigitalSignals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/SignalTransmission.md"
+                "file": "Notes/Signal.DigitalSignals.md"
               }
             }
           },
@@ -231,42 +231,42 @@
   },
   "active": "df77af1e2372fd0e",
   "lastOpenFiles": [
-    "Notes/SignalTransmission.md",
-    "Notes/CompositeSignal.md",
     "Notes/Signal.md",
-    "Notes/SineWave.md",
+    "Notes/Signal.DigitalSignals.md",
+    "Notes/SignalTransmission.md",
+    "Attachments/Pasted image 20231004125023.png",
+    "Notes/Bandwidth.md",
+    "Attachments/Pasted image 20231004124549.png",
+    "Attachments/Pasted image 20231004124250.png",
+    "Attachments/Pasted image 20231004123612.png",
     "Notes/SineWave.Wavelength.md",
+    "Notes/SineWave.TimeAndFrequencyDomains.md",
+    "Notes/SineWave.Phase.md",
+    "Notes/SineWave.md",
+    "Notes/SineWave.PeriodAndFrequency.md",
+    "Notes/SineWave.PeakAmplitude.md",
+    "Notes/Signal.PeriodicAnalogSignals.md",
+    "Notes/NetworkTopology.md",
+    "Notes/NetworkingSystem.md",
+    "Notes/CompositeSignal.md",
+    "Attachments/Pasted image 20231004122656.png",
+    "Notes/DataCommunicationsAndNetworking.md",
     "Notes/temporary/CompositeSignal.md",
     "Attachments/Pasted image 20231004102436.png",
     "Attachments/Pasted image 20231004101601.png",
     "Attachments/Pasted image 20231004101414.png",
-    "Notes/Signal.PeriodicAnalogSignals.md",
-    "Notes/SineWave.TimeAndFrequencyDomains.md",
     "Attachments/Pasted image 20231004095628.png",
     "Attachments/Pasted image 20231004095510.png",
-    "Attachments/Pasted image 20231004095421.png",
-    "Attachments/Pasted image 20231004095015.png",
     "Plugins/Daily Notes/2023-10-02.md",
-    "Notes/SineWave.PeriodAndFrequency.md",
-    "Notes/SineWave.Phase.md",
-    "Attachments/Pasted image 20231004021909.png",
     "Notes/NetworkTopology.MeshTopology.FullyConnectedMesh.md",
     "Notes/NetworkTopology.MeshTopology.md",
-    "Notes/SineWave.PeakAmplitude.md",
-    "Notes/DataCommunication.md",
     "Notes/Signal.AperiodicSignals.md",
     "Notes/Signal.PeriodicSignals.md",
-    "Attachments/Pasted image 20231004012735.png",
     "Notes/temporary/AperiodicAnalogSignals.md",
     "Notes/ProjectManagement.ProjectIntegrationManagement.md",
     "_OLD2/__class/010 learning/Learn Deep Learning in 6 Weeks.md",
     "Notes/Wave.Periods.md",
-    "Attachments/Pasted image 20231004003330.png",
     "Notes/temporary/Signals.PeriodicAnalogSignal.md",
-    "Notes/temporary/LocalAreaNetwork.md",
-    "Notes/NetworkingSystem.md",
-    "Notes/OpenSystemsInterconnectionModel.md",
-    "Notes/NetworkTopology.md",
     "Plugins/Notion/window manager checklist.table",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/Untitled.canvas",
