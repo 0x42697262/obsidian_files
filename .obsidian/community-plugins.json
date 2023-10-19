@@ -18,5 +18,9 @@
   "fantasy-calendar",
   "cm-editor-syntax-highlight-obsidian",
   "templater-obsidian",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "waypoint",
+  "folder-note-plugin",
+  "obsidian-citation-plugin",
+  "canvas-mindmap"
 ]

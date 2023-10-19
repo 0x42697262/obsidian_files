@@ -1,0 +1,9 @@
+{
+  "citationExportFormat": "biblatex",
+  "literatureNoteTitleTemplate": "@{{citekey}}",
+  "literatureNoteFolder": "Plugins/Citations/literatures.md",
+  "literatureNoteContentTemplate": "---\ncreated: {{date}} \ntags: \nbibliography: {{authorString}} ({{year}}). {{title}}. {{containerTitle}}, {{entry.data.fields.volume}}({{entry.data.fields.number}}), {{page}}. {{URL}}.\nType: {{entry.type}}\nAuthor: {{authorString}}\nJournal: {{containerTitle}}\nMonth: {{entry.data.fields.month}}\nNumber: {{entry.data.fields.number}}\nPages: {{page}}\nPublisher: {{publisher}}\nTitle: {{title}}\nVolume: {{entry.data.fields.volume}}\nYear: {{year}}\nDOI: {{DOI}}\nUrl: {{URL}}\n---\n",
+  "markdownCitationTemplate": "[@{{citekey}}]",
+  "alternativeMarkdownCitationTemplate": "@{{citekey}}",
+  "citationExportPath": "Plugins/Citations/references.bib"
+}

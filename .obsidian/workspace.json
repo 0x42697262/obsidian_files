@@ -8,22 +8,76 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0d1b934a1fbd1e03",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Plugins/Excalidraw/Untitled.md"
-              }
-            }
-          },
-          {
-            "id": "c964bb393386aad7",
+            "id": "7f63f405cc55c1a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "*Notes/--Papers.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "16de7ec30a8eb93f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "578ae64098b5092b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Plugins/Canvas/Untitled 1.canvas",
+                "viewState": {
+                  "x": 3180.8229244458066,
+                  "y": 318.59397683110967,
+                  "zoom": -0.7132828601201373
+                }
+              }
+            }
+          },
+          {
+            "id": "489d6f6b7e3dd868",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/__tempoary/Untitled 2.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ec0c256c070b5f67",
+            "type": "leaf",
+            "state": {
+              "type": "notion-like-tables",
+              "state": {
+                "file": "Plugins/Notion/window manager checklist.table"
+              }
+            }
+          },
+          {
+            "id": "a7fc5336238d4241",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -31,7 +85,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -97,7 +151,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 407.51103591918945
+    "width": 332.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -113,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -161,7 +216,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md"
               }
             }
           },
@@ -216,61 +271,63 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c964bb393386aad7",
+  "active": "a7fc5336238d4241",
   "lastOpenFiles": [
-    "Templates/Vulnhub Writeup.md",
-    "Templates/New Note.md",
+    "Attachments/Pasted image 20231019130156.png",
+    "*Notes/CodingTheory.ErrorControl.md",
+    "*Notes/CodingTheory.md",
+    "*Notes.md",
+    "README.md",
+    "*Notes/*InterestingWebsitesToCheck.md",
+    "*Notes/--Papers.md",
+    "Plugins/Notion/window manager checklist.table",
+    "*Notes/DataCommunicationsAndNetworking.md",
+    "*Notes/NetworkTopology.md",
+    "*Notes/NetworkTopology.BusTopology.md",
+    "*Notes/InformationTheory.md",
+    "*Notes/NetworkingSystem.md",
+    "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
+    "*Notes/Signal.md",
+    "*Notes/__tempoary/Untitled 2.md",
     "Plugins/Canvas/Untitled 1.canvas",
-    "Templates/Zettelkasten Compass.md",
-    "Templates/QEC.md",
+    "Plugins/Canvas/Internet of Things.canvas",
+    "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "Attachments/Pasted image 20231018073510.png",
+    "Attachments/Pasted image 20231018000357.png",
+    "Notes/{temporary}/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2021). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "Templates/New Note.md",
+    "*Notes/__tempoary/Untitled 1.md",
+    "*Notes/--Papers/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+    "*Notes/OpenSystemsInterconnectionModel.md",
+    "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",
+    "Plugins/Canvas/Notes.canvas",
+    "Plugins/Canvas/DataCommunicationsAndNetworking.canvas",
+    "Plugins/Canvas/Papers.canvas",
+    "DataCommunicationsAndNetworking.canvas",
+    "*Notes/SineWave.md",
     "Plugins/Canvas/Machine Learning.canvas",
     "Plugins/Canvas/DFA.canvas",
-    "Plugins/Notion/window manager checklist.table",
-    "Plugins/Excalidraw/Untitled.md",
-    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
-    "Plugins/Excalidraw/Drawing 2023-09-02 12.07.06.excalidraw.md",
-    "Plugins/Excalidraw/Drawing 2023-09-26 12.35.45.excalidraw.md",
-    "Plugins/Excalidraw/Drawing 2023-07-12 17.54.08.excalidraw.md",
-    "Plugins/Daily Notes/2023-10-02.md",
-    "Plugins/Daily Notes/2023-09-07.md",
+    "Plugins/Canvas/Untitled 2.canvas",
+    "Attachments/Pasted image 20231017043833.png",
+    "Plugins/Citations/references.md",
+    "Plugins/Citations/references.bib",
+    "Templates/Untitled.md",
+    "Templates/Vulnhub Writeup.md",
     "Plugins/Daily Notes/2023-08-29.md",
-    "Notes/temporary/Untitled.md",
-    "Notes/SineWave.md",
-    "Notes/temporary/HackThisSite - Basic Level 6.md",
-    "Notes/temporary/old/CMSC 194.1 Task 1 Annotated Bibliography (BRIGS).md",
+    "Plugins/Citations",
+    "*Notes/--Papers",
+    "Notes/Untitled 1",
     "Attachments/Pasted image 20230926125012.png",
-    "Notes/temporary/old",
+    "*Notes/__tempoary/old",
     "Attachments/Pasted image 20230918043437.png",
     "Attachments/Pasted image 20230918041821.png",
     "Attachments/Pasted image 20230918030707.png",
     "Attachments/Pasted image 20230918025318.png",
     "Attachments/Pasted Image 20230913053822_217.png",
     "_OLD/ATTACHMENT_FOLDER/image3 1.png",
-    "_OLD/ATTACHMENT_FOLDER/image2.png",
-    "_OLD/ATTACHMENT_FOLDER/3.png",
-    "_OLD/ATTACHMENT_FOLDER/image4.png",
-    "_OLD/unorganized fuck/DEFINITIONS.md",
-    "_OLD/unorganized fuck/2022-2023/REFERENCES.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 194.1/Workshop 1/Lecture 1 - Annotated Bibliography.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 192/Week 2 (19-23 September 2022)/Introduction to Computer Ethics.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 142/Week 1/MP1 Primer.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 2 - Software Process Models/Software Process Models.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 2 - Software Process Models/Laboratory Exercise 2.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Horror Stories.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software Engineering and Processes.md",
-    "_OLD/unorganized fuck/2022-2023/CMSC 128/Week 1 - Introduction to Software Engineering/Software.md",
-    "_OLD/Notes/020 Studies/chapter14 characters.canvas",
-    "Plugins/Canvas/Untitled.canvas",
     "_OLD2/__class/090 extras",
     "_OLD2/__class/020 linux",
     "_OLD2/__class/010 learning",
-    "_OLD2/__orphans",
-    "_OLD2/__index",
-    "_OLD2/__class",
-    "_OLD2",
-    "Notes/temporary",
-    "Canvas/Untitled.canvas",
-    "Untitled 1.canvas",
-    "Image Analysis.canvas"
+    "_OLD2/__orphans"
   ]
 }

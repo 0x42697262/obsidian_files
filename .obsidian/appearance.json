@@ -1,7 +1,7 @@
 {
   "accentColor": "#d00ba6",
   "theme": "moonstone",
-  "cssTheme": "Things",
+  "cssTheme": "Minimal",
   "enabledCssSnippets": [],
-  "baseFontSize": 16
+  "baseFontSize": 15
 }
