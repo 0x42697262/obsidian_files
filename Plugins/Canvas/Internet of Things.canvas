@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"0f23c2b48d50eaf4","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#IoT Framework]]","x":260,"y":-290,"width":380,"height":270},
+		{"id":"094244e8998e5c69","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Internet of Things Layers]]","x":260,"y":-490,"width":380,"height":180},
+		{"id":"ff0f613ebedcf826","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Air Pollutants]]","x":260,"y":-830,"width":380,"height":320},
+		{"id":"3164edc4ed4ec3f3","type":"text","text":"\n# Development of IoT technologiesfor air pollution prevention and improvement\nZhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020)\n![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Description]]","x":-420,"y":-480,"width":480,"height":320,"color":"1"},
+		{"id":"3203a6786e9e1e97","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Network Layer]]","x":840,"y":-560,"width":380,"height":320},
+		{"id":"8f51b88bd67a1f2d","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Application Layer]]","x":840,"y":-220,"width":380,"height":200},
+		{"id":"ac8f504b8d040838","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Figure 1. Three layers of IoT]]","x":1420,"y":-692,"width":780,"height":585},
+		{"id":"228661b01e128bd4","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#IoT Framework under axial application development]]","x":840,"y":0,"width":380,"height":440},
+		{"id":"425dd314dbf44a9d","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Description#Systematic monitoring by industrial proven PM technologies]]","x":845,"y":-1180,"width":375,"height":320},
+		{"id":"6effcb4ef506efff","type":"text","text":"![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888#Perception Layer]]","x":840,"y":-830,"width":380,"height":250}
+	],
+	"edges":[
+		{"id":"09f06c67acc700a9","fromNode":"3164edc4ed4ec3f3","fromSide":"right","toNode":"ff0f613ebedcf826","toSide":"left"},
+		{"id":"9ed450dbbaafc5c5","fromNode":"ff0f613ebedcf826","fromSide":"right","toNode":"425dd314dbf44a9d","toSide":"left"},
+		{"id":"ad97c96f5b93f1b1","fromNode":"3164edc4ed4ec3f3","fromSide":"right","toNode":"094244e8998e5c69","toSide":"left"},
+		{"id":"85235afe45ad5e4d","fromNode":"094244e8998e5c69","fromSide":"right","toNode":"6effcb4ef506efff","toSide":"left"},
+		{"id":"52bd2102d4acb637","fromNode":"094244e8998e5c69","fromSide":"right","toNode":"3203a6786e9e1e97","toSide":"left"},
+		{"id":"cc1cfd48c8515cda","fromNode":"094244e8998e5c69","fromSide":"right","toNode":"8f51b88bd67a1f2d","toSide":"left"},
+		{"id":"7aeec35f20c2ab33","fromNode":"3203a6786e9e1e97","fromSide":"right","toNode":"ac8f504b8d040838","toSide":"left"},
+		{"id":"3e8862453d645468","fromNode":"6effcb4ef506efff","fromSide":"right","toNode":"ac8f504b8d040838","toSide":"left"},
+		{"id":"7c365b20df63ff3a","fromNode":"8f51b88bd67a1f2d","fromSide":"right","toNode":"ac8f504b8d040838","toSide":"left"},
+		{"id":"a71702e5ba372d93","fromNode":"3164edc4ed4ec3f3","fromSide":"right","toNode":"0f23c2b48d50eaf4","toSide":"left"},
+		{"id":"03c3b610779b15e7","fromNode":"0f23c2b48d50eaf4","fromSide":"right","toNode":"228661b01e128bd4","toSide":"left"}
+	]
+}

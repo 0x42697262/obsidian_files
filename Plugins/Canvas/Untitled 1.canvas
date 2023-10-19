@@ -1,11 +1,29 @@
 {
 	"nodes":[
+		{"id":"01462502a70f64a6","type":"group","x":3160,"y":264,"width":1120,"height":756,"color":"1","label":"Work Breakdown Structure"},
+		{"id":"8cabb7cc89435c92","type":"group","x":2100,"y":80,"width":900,"height":660,"color":"1","label":"Project Scope Management"},
 		{"type":"text","text":"INPUT: `first_file.cpp`","id":"6fabd812785c575e","x":-1040,"y":-720,"width":250,"height":60},
 		{"type":"text","text":"```cpp\nvoid another();\nvoid weee();\nvoid haha();\nvoid haha2();\nvoid pc1();\nvoid pc2();\nvoid todo15();\nvoid todo16(int,int);\nvoid todo17(int,int);\nvoid todo18(int,int,int);\nvoid todo11();\nvoid todo12(int,int);\nvoid todo13(int,int);\nvoid todo14(int,int,int);\nvoid todo7();\nvoid todo8(int,int);\nvoid todo9(int,int);\nvoid todo10(int,int,int);\nvoid todo4();\nvoid todo5(int,int);\nvoid todo6(int,int);\nvoid todo5(int,int,int);\nvoid todo21();\nvoid todo22(int,int);\nint main(){\n\ttodo4();\n\ttodo9(9,4);\n\ttodo14(2,4,9);\n\ttodo21();\n\ttodo22(12,25);\n\treturn 0;\n}\n```","id":"7af0e0e99e34a9b2","x":-360,"y":680,"width":460,"height":800,"color":"4"},
 		{"type":"text","text":"# myfile.h\n```cpp\n#include \"pokemon.h\"\n\nvoid haha();\nvoid haha2();\n```","id":"3ff85bde73653deb","x":-360,"y":-388,"width":436,"height":223,"color":"1"},
 		{"type":"text","text":"# pokemon.h\n```cpp\nvoid another();\nvoid weee();\n```","id":"a9d2866f895ddb47","x":160,"y":-361,"width":259,"height":170,"color":"1"},
 		{"type":"text","text":"# computer.cpp\n```cpp\nvoid pc1();\nvoid pc2();\n```","id":"5bc3d8493b02297d","x":400,"y":-80,"width":436,"height":223,"color":"1"},
-		{"type":"text","text":"# first_file.cpp\n```cpp\n#include \"myfile.h\"\n#include \"computer.cpp\"\nvoid todo15();\nvoid todo16(int,int);\nvoid todo17(int,int);\nvoid todo18(int,int,int);\nvoid todo11();\nvoid todo12(int,int);\nvoid todo13(int,int);\nvoid todo14(int,int,int);\nvoid todo7();\nvoid todo8(int,int);\nvoid todo9(int,int);\nvoid todo10(int,int,int);\nvoid todo4();\nvoid todo5(int,int);\nvoid todo6(int,int);\nvoid todo5(int,int,int);\nvoid todo21();\nvoid todo22(int,int);\nint main(){\n\ttodo4();\n\ttodo9(9,4);\n\ttodo14(2,4,9);\n\ttodo21();\n\ttodo22(12,25);\n\treturn 0;\n}\n```","id":"b5137eff94f16f3c","x":-860,"y":-480,"width":400,"height":800,"color":"1"}
+		{"type":"text","text":"# first_file.cpp\n```cpp\n#include \"myfile.h\"\n#include \"computer.cpp\"\nvoid todo15();\nvoid todo16(int,int);\nvoid todo17(int,int);\nvoid todo18(int,int,int);\nvoid todo11();\nvoid todo12(int,int);\nvoid todo13(int,int);\nvoid todo14(int,int,int);\nvoid todo7();\nvoid todo8(int,int);\nvoid todo9(int,int);\nvoid todo10(int,int,int);\nvoid todo4();\nvoid todo5(int,int);\nvoid todo6(int,int);\nvoid todo5(int,int,int);\nvoid todo21();\nvoid todo22(int,int);\nint main(){\n\ttodo4();\n\ttodo9(9,4);\n\ttodo14(2,4,9);\n\ttodo21();\n\ttodo22(12,25);\n\treturn 0;\n}\n```","id":"b5137eff94f16f3c","x":-860,"y":-480,"width":400,"height":800,"color":"1"},
+		{"id":"5fd86743248f9d26","type":"text","text":"### Product Scope\nfeatures and functions that characterize a product, service, or result","x":2621,"y":264,"width":332,"height":156},
+		{"id":"c7414fdcf19de47d","type":"text","text":"### Project Scope\nwork performed to deliver a product, service, or result","x":2621,"y":437,"width":332,"height":120},
+		{"id":"19e9778bf7e68330","type":"text","text":"## Scope\nrefers to all the work involved in creating the products of the project and process used to create them","x":2120,"y":352,"width":332,"height":137},
+		{"id":"5a2870176cc49a9e","type":"text","text":"# Scope Management","x":2176,"y":140,"width":220,"height":60,"color":"3"},
+		{"id":"a2f97ed7c8a83bc4","type":"text","text":"includes the process involve in defining or controlling what work is or not included in a project","x":2621,"y":100,"width":332,"height":140},
+		{"id":"7285dcce6130512b","type":"text","text":"## Deliverables\na product created as part of a project","x":2380,"y":580,"width":332,"height":112},
+		{"id":"120a24fce7580745","type":"text","text":"# Work Breakdown Structure","x":3180,"y":383,"width":274,"height":53,"color":"3"},
+		{"id":"96feef87505ee4ee","type":"text","text":"Basis for planning and managing project schedules, costs, resources, and changes","x":3654,"y":300,"width":300,"height":99},
+		{"id":"878d1a6c7b3bea78","type":"text","text":"Defines the total scope of the project","x":3654,"y":419,"width":300,"height":53},
+		{"id":"cddf70a2f5803533","type":"text","text":"\nDivide the work into logical parts based on how the work will be performed","x":3654,"y":492,"width":300,"height":110},
+		{"id":"bb519c2087d7e540","type":"text","text":"Using guidelines","x":3642,"y":612,"width":250,"height":60,"color":"5"},
+		{"id":"fe6622ab00e73ddf","type":"text","text":"Analogy approach","x":3642,"y":692,"width":250,"height":60,"color":"5"},
+		{"id":"2a3c2f1d301730b4","type":"text","text":"Top-down approach","x":3642,"y":772,"width":250,"height":60,"color":"5"},
+		{"id":"c5d434b4a49579a3","type":"text","text":"Bottom-up approach","x":3642,"y":852,"width":250,"height":60,"color":"5"},
+		{"id":"3ba7bf03cea59d6a","type":"text","text":"Mind-mapping approach","x":3642,"y":932,"width":250,"height":60,"color":"5"},
+		{"id":"1b990a3566028c2b","type":"text","text":"Approaches","x":3192,"y":782,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"19f44d855a788a00","fromNode":"b5137eff94f16f3c","fromSide":"right","toNode":"3ff85bde73653deb","toSide":"left"},
@@ -15,6 +33,21 @@
 		{"id":"92d6554b0f2c2613","fromNode":"3ff85bde73653deb","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
 		{"id":"301ca0b718b64bd6","fromNode":"b5137eff94f16f3c","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
 		{"id":"1be1676df17b50d2","fromNode":"b5137eff94f16f3c","fromSide":"right","toNode":"5bc3d8493b02297d","toSide":"left"},
-		{"id":"e84888ad2f339f69","fromNode":"5bc3d8493b02297d","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"}
+		{"id":"e84888ad2f339f69","fromNode":"5bc3d8493b02297d","fromSide":"bottom","toNode":"7af0e0e99e34a9b2","toSide":"top"},
+		{"id":"a9dfdf04cf98d1a3","fromNode":"5a2870176cc49a9e","fromSide":"right","toNode":"a2f97ed7c8a83bc4","toSide":"left","color":"3"},
+		{"id":"5064986ccf8b5cd7","fromNode":"5a2870176cc49a9e","fromSide":"bottom","toNode":"19e9778bf7e68330","toSide":"top"},
+		{"id":"e57b3ce21885ce99","fromNode":"19e9778bf7e68330","fromSide":"right","toNode":"5fd86743248f9d26","toSide":"left"},
+		{"id":"73f21e2070e8d970","fromNode":"19e9778bf7e68330","fromSide":"right","toNode":"c7414fdcf19de47d","toSide":"left"},
+		{"id":"dfc693b805bd2739","fromNode":"5a2870176cc49a9e","fromSide":"bottom","toNode":"7285dcce6130512b","toSide":"top"},
+		{"id":"a21e06e5c1841092","fromNode":"8cabb7cc89435c92","fromSide":"right","toNode":"120a24fce7580745","toSide":"left"},
+		{"id":"e1224027ee2571ce","fromNode":"120a24fce7580745","fromSide":"right","toNode":"96feef87505ee4ee","toSide":"left","color":"3"},
+		{"id":"1c8ec0328e72648e","fromNode":"120a24fce7580745","fromSide":"right","toNode":"878d1a6c7b3bea78","toSide":"left","color":"3"},
+		{"id":"b4aae7cf308bbef9","fromNode":"120a24fce7580745","fromSide":"right","toNode":"cddf70a2f5803533","toSide":"left","color":"3"},
+		{"id":"5d7282f44a7e484e","fromNode":"120a24fce7580745","fromSide":"bottom","toNode":"1b990a3566028c2b","toSide":"top"},
+		{"id":"b61d44b8d225ab08","fromNode":"1b990a3566028c2b","fromSide":"right","toNode":"bb519c2087d7e540","toSide":"left"},
+		{"id":"477e226bf67786cc","fromNode":"1b990a3566028c2b","fromSide":"right","toNode":"fe6622ab00e73ddf","toSide":"left"},
+		{"id":"a0c0af535e59b5c5","fromNode":"1b990a3566028c2b","fromSide":"right","toNode":"2a3c2f1d301730b4","toSide":"left"},
+		{"id":"3bd6fca2e23d5ff5","fromNode":"1b990a3566028c2b","fromSide":"right","toNode":"c5d434b4a49579a3","toSide":"left"},
+		{"id":"928ecfcbb1444513","fromNode":"1b990a3566028c2b","fromSide":"right","toNode":"3ba7bf03cea59d6a","toSide":"left"}
 	]
 }
