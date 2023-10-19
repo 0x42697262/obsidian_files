@@ -10,6 +10,15 @@ git clone https://github.com/0x42697262/obsidian_files.git
 ```
 
 3. Import the cloned repository in Obsidian.
+4. Check the [index](*Notes.md).
+
+# Guide
+
+## Directory Naming
+`__`: core directory of my notes.
+`--`: a [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin).
+`*`: index or resources list
+
 
 ---
 
