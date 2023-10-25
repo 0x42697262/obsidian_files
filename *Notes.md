@@ -7,24 +7,24 @@
 	- [Learn Deep Learning in 6 Weeks](./*Notes/__orphans/Learn%20Deep%20Learning%20in%206%20Weeks.md)
 	- [LocalAreaNetwork](./*Notes/__orphans/LocalAreaNetwork.md)
 	- [picoCTF.2023.(Special)](./*Notes/__orphans/picoCTF.2023.(Special).md)
-- **__tempoary**
-	- [ClassicalScience](./*Notes/__tempoary/ClassicalScience.md)
-	- [CodingTheory.ErrorControl.SingleBitError](./*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md)
-	- [Data Communication](./*Notes/__tempoary/Data%20Communication.md)
-	- [HackThisSite - Basic Level 6](./*Notes/__tempoary/HackThisSite%20-%20Basic%20Level%206.md)
+- **__temporary**
+	- [ClassicalScience](./*Notes/__temporary/ClassicalScience.md)
+	- [CodingTheory.ErrorControl.SingleBitError](./*Notes/__temporary/CodingTheory.ErrorControl.SingleBitError.md)
+	- [Data Communication](./*Notes/__temporary/Data%20Communication.md)
+	- [HackThisSite - Basic Level 6](./*Notes/__temporary/HackThisSite%20-%20Basic%20Level%206.md)
 	- **old**
-		- [CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)](./*Notes/__tempoary/old/CMSC%20194.1%20Task%201%20Annotated%20Bibliography%20(BRIGS).md)
-		- [CMSC 194.1 Task 2 Annotated Bibliography (RioT)](./*Notes/__tempoary/old/CMSC%20194.1%20Task%202%20Annotated%20Bibliography%20(RioT).md)
-		- [CMSC 194.1 Task 3 Annotated Bibliography (ORG)](./*Notes/__tempoary/old/CMSC%20194.1%20Task%203%20Annotated%20Bibliography%20(ORG).md)
-		- [CMSC 194.1 Task 4 Annotated Bibliography (ML)](./*Notes/__tempoary/old/CMSC%20194.1%20Task%204%20Annotated%20Bibliography%20(ML).md)
-		- [CMSC 194.1 Task 5 Annotated Bibliography (NLP)](./*Notes/__tempoary/old/CMSC%20194.1%20Task%205%20Annotated%20Bibliography%20(NLP).md)
+		- [CMSC 194.1 Task 1 Annotated Bibliography (BRIGS)](./*Notes/__temporary/old/CMSC%20194.1%20Task%201%20Annotated%20Bibliography%20(BRIGS).md)
+		- [CMSC 194.1 Task 2 Annotated Bibliography (RioT)](./*Notes/__temporary/old/CMSC%20194.1%20Task%202%20Annotated%20Bibliography%20(RioT).md)
+		- [CMSC 194.1 Task 3 Annotated Bibliography (ORG)](./*Notes/__temporary/old/CMSC%20194.1%20Task%203%20Annotated%20Bibliography%20(ORG).md)
+		- [CMSC 194.1 Task 4 Annotated Bibliography (ML)](./*Notes/__temporary/old/CMSC%20194.1%20Task%204%20Annotated%20Bibliography%20(ML).md)
+		- [CMSC 194.1 Task 5 Annotated Bibliography (NLP)](./*Notes/__temporary/old/CMSC%20194.1%20Task%205%20Annotated%20Bibliography%20(NLP).md)
 		- **Codes**
 			- **__FAILED__**
 				- **cmsc125_machine_problem_2**
 					- **machine_problem_2**
 						- **__pycache__**
 
-					- [README](./*Notes/__tempoary/old/Codes/__FAILED__/cmsc125_machine_problem_2/README.md)
+					- [README](./*Notes/__temporary/old/Codes/__FAILED__/cmsc125_machine_problem_2/README.md)
 					- **tests**
 			- **Advent Of Code**
 				- **day_1**
@@ -59,21 +59,22 @@
 
 			- **mp3_the_general's_daugther_-_err_-_tree**
 
-			- [README](./*Notes/__tempoary/old/Codes/README.md)
+			- [README](./*Notes/__temporary/old/Codes/README.md)
 			- **tests**
-	- [OverTheWire](./*Notes/__tempoary/OverTheWire.md)
-	- [Particles (Physics)](./*Notes/__tempoary/Particles%20(Physics).md)
-	- [PicoCTF - GET aHEAD](./*Notes/__tempoary/PicoCTF%20-%20GET%20aHEAD.md)
-	- [Untitled 1](./*Notes/__tempoary/Untitled%201.md)
-	- [Untitled 2](./*Notes/__tempoary/Untitled%202.md)
-	- [Untitled](./*Notes/__tempoary/Untitled.md)
-	- [VulnHub -- Basic Pentesting - 1](./*Notes/__tempoary/VulnHub%20--%20Basic%20Pentesting%20-%201.md)
+	- [OverTheWire](./*Notes/__temporary/OverTheWire.md)
+	- [Particles (Physics)](./*Notes/__temporary/Particles%20(Physics).md)
+	- [PicoCTF - GET aHEAD](./*Notes/__temporary/PicoCTF%20-%20GET%20aHEAD.md)
+	- [Untitled  - Hyperland Ideas](./*Notes/__temporary/Untitled%20%20-%20Hyperland%20Ideas.md)
+	- [Untitled 1](./*Notes/__temporary/Untitled%201.md)
+	- [Untitled](./*Notes/__temporary/Untitled.md)
+	- [VulnHub -- Basic Pentesting - 1](./*Notes/__temporary/VulnHub%20--%20Basic%20Pentesting%20-%201.md)
 - **[--Papers](./*Notes/--Papers.md)**
 - [*InterestingWebsitesToCheck](./*Notes/*InterestingWebsitesToCheck.md)
 - [Bandwidth](./*Notes/Bandwidth.md)
 - [CodingTheory.ErrorControl](./*Notes/CodingTheory.ErrorControl.md)
 - [CodingTheory](./*Notes/CodingTheory.md)
 - [CompositeSignal](./*Notes/CompositeSignal.md)
+- [Cryptography.(Encoding).Base64](./*Notes/Cryptography.(Encoding).Base64.md)
 - [DataCommunicationsAndNetworking](./*Notes/DataCommunicationsAndNetworking.md)
 - [InformationTheory](./*Notes/InformationTheory.md)
 - [NetworkingSystem](./*Notes/NetworkingSystem.md)
