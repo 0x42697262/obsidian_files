@@ -12,6 +12,6 @@
   "showFrontmatter": false,
   "vimMode": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "Notes/{temporary}",
+  "newFileFolderPath": "*Notes/__temporary",
   "promptDelete": true
 }

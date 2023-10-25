@@ -14,60 +14,9 @@
               "type": "markdown",
               "state": {
                 "file": "*Notes/--Papers.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "16de7ec30a8eb93f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "578ae64098b5092b",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Plugins/Canvas/Untitled 1.canvas",
-                "viewState": {
-                  "x": 3180.8229244458066,
-                  "y": 318.59397683110967,
-                  "zoom": -0.7132828601201373
-                }
-              }
-            }
-          },
-          {
-            "id": "489d6f6b7e3dd868",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "*Notes/__tempoary/Untitled 2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec0c256c070b5f67",
-            "type": "leaf",
-            "state": {
-              "type": "notion-like-tables",
-              "state": {
-                "file": "Plugins/Notion/window manager checklist.table"
               }
             }
           },
@@ -77,7 +26,46 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
+                "file": "*Notes/CodingTheory.ErrorControl.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "20870df116fd840e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4335908628417ecd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/--Papers.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b9e70b6394032844",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/Cryptography.(Encoding).Base64.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -85,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -151,8 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.51103591918945,
-    "collapsed": true
+    "width": 332.51103591918945
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -168,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
+                "file": "*Notes/Cryptography.(Encoding).Base64.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
+                "file": "*Notes/Cryptography.(Encoding).Base64.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -216,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md"
+                "file": "*Notes/Cryptography.(Encoding).Base64.md"
               }
             }
           },
@@ -271,32 +258,41 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a7fc5336238d4241",
+  "active": "cef6f232d564ca5a",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20231019130156.png",
+    "*Notes/--Papers.md",
+    "*Notes/Cryptography.(Encoding).Base64.md",
+    "Untitled.md",
     "*Notes/CodingTheory.ErrorControl.md",
+    "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "Plugins/Canvas/Internet of Things.canvas",
+    "Attachments/Pasted image 20231024142949.png",
+    "Attachments/Pasted image 20231024141301.png",
+    "Attachments/Pasted image 20231023224305.png",
+    "Attachments/Pasted image 20231023222841.png",
+    "Attachments/Pasted image 20231023220905.png",
+    "Attachments/Pasted image 20231023220329.png",
+    "*Notes/__temporary/Untitled  - Hyperland Ideas.md",
+    "*Notes/__temporary/CodingTheory.ErrorControl.SingleBitError.md",
+    "Plugins/Canvas/Untitled 1.canvas",
+    "Attachments/Fe[26]-679.png",
+    "Attachments/Fe[26]-464(WIN).png",
+    "Attachments/Fe[26]-341.5.png",
+    "Plugins/Notion/window manager checklist.table",
+    "Attachments/CodingTheory.ErrorControl.SingleBitError.1.png",
     "*Notes/CodingTheory.md",
     "*Notes.md",
     "README.md",
     "*Notes/*InterestingWebsitesToCheck.md",
-    "*Notes/--Papers.md",
-    "Plugins/Notion/window manager checklist.table",
     "*Notes/DataCommunicationsAndNetworking.md",
     "*Notes/NetworkTopology.md",
     "*Notes/NetworkTopology.BusTopology.md",
     "*Notes/InformationTheory.md",
     "*Notes/NetworkingSystem.md",
-    "*Notes/__tempoary/CodingTheory.ErrorControl.SingleBitError.md",
     "*Notes/Signal.md",
-    "*Notes/__tempoary/Untitled 2.md",
-    "Plugins/Canvas/Untitled 1.canvas",
-    "Plugins/Canvas/Internet of Things.canvas",
-    "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
-    "Attachments/Pasted image 20231018073510.png",
-    "Attachments/Pasted image 20231018000357.png",
     "Notes/{temporary}/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2021). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
     "Templates/New Note.md",
-    "*Notes/__tempoary/Untitled 1.md",
+    "*Notes/__temporary/Untitled 1.md",
     "*Notes/--Papers/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
     "*Notes/OpenSystemsInterconnectionModel.md",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",
@@ -308,23 +304,14 @@
     "Plugins/Canvas/Machine Learning.canvas",
     "Plugins/Canvas/DFA.canvas",
     "Plugins/Canvas/Untitled 2.canvas",
-    "Attachments/Pasted image 20231017043833.png",
     "Plugins/Citations/references.md",
     "Plugins/Citations/references.bib",
     "Templates/Untitled.md",
     "Templates/Vulnhub Writeup.md",
-    "Plugins/Daily Notes/2023-08-29.md",
     "Plugins/Citations",
     "*Notes/--Papers",
     "Notes/Untitled 1",
-    "Attachments/Pasted image 20230926125012.png",
-    "*Notes/__tempoary/old",
-    "Attachments/Pasted image 20230918043437.png",
-    "Attachments/Pasted image 20230918041821.png",
-    "Attachments/Pasted image 20230918030707.png",
-    "Attachments/Pasted image 20230918025318.png",
-    "Attachments/Pasted Image 20230913053822_217.png",
-    "_OLD/ATTACHMENT_FOLDER/image3 1.png",
+    "*Notes/__temporary/old",
     "_OLD2/__class/090 extras",
     "_OLD2/__class/020 linux",
     "_OLD2/__class/010 learning",
