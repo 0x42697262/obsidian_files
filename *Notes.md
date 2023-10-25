@@ -2,14 +2,12 @@
 - **__orphans**
 	- [CMSC 165 Case 1 Project Management at Global Green Books Publishing](./*Notes/__orphans/CMSC%20165%20Case%201%20Project%20Management%20at%20Global%20Green%20Books%20Publishing.md)
 	- [CMSC137 Quiz 2 hybrid topology](./*Notes/__orphans/CMSC137%20Quiz%202%20hybrid%20topology.md)
-	- [CodeIgniter.MYSQLI.Errors](./*Notes/__orphans/CodeIgniter.MYSQLI.Errors.md)
 	- [CrossSiteScripting](./*Notes/__orphans/CrossSiteScripting.md)
 	- [Learn Deep Learning in 6 Weeks](./*Notes/__orphans/Learn%20Deep%20Learning%20in%206%20Weeks.md)
 	- [LocalAreaNetwork](./*Notes/__orphans/LocalAreaNetwork.md)
 	- [picoCTF.2023.(Special)](./*Notes/__orphans/picoCTF.2023.(Special).md)
 - **__temporary**
 	- [ClassicalScience](./*Notes/__temporary/ClassicalScience.md)
-	- [CodingTheory.ErrorControl.SingleBitError](./*Notes/__temporary/CodingTheory.ErrorControl.SingleBitError.md)
 	- [Data Communication](./*Notes/__temporary/Data%20Communication.md)
 	- [HackThisSite - Basic Level 6](./*Notes/__temporary/HackThisSite%20-%20Basic%20Level%206.md)
 	- **old**
@@ -62,16 +60,16 @@
 			- [README](./*Notes/__temporary/old/Codes/README.md)
 			- **tests**
 	- [OverTheWire](./*Notes/__temporary/OverTheWire.md)
-	- [Particles (Physics)](./*Notes/__temporary/Particles%20(Physics).md)
 	- [PicoCTF - GET aHEAD](./*Notes/__temporary/PicoCTF%20-%20GET%20aHEAD.md)
 	- [Untitled  - Hyperland Ideas](./*Notes/__temporary/Untitled%20%20-%20Hyperland%20Ideas.md)
-	- [Untitled 1](./*Notes/__temporary/Untitled%201.md)
 	- [Untitled](./*Notes/__temporary/Untitled.md)
 	- [VulnHub -- Basic Pentesting - 1](./*Notes/__temporary/VulnHub%20--%20Basic%20Pentesting%20-%201.md)
 - **[--Papers](./*Notes/--Papers.md)**
 - [*InterestingWebsitesToCheck](./*Notes/*InterestingWebsitesToCheck.md)
 - [Bandwidth](./*Notes/Bandwidth.md)
+- [CodeIgniter.Errors.MYSQLI](./*Notes/CodeIgniter.Errors.MYSQLI.md)
 - [CodingTheory.ErrorControl](./*Notes/CodingTheory.ErrorControl.md)
+- [CodingTheory.ErrorControl.SingleBitError](./*Notes/CodingTheory.ErrorControl.SingleBitError.md)
 - [CodingTheory](./*Notes/CodingTheory.md)
 - [CompositeSignal](./*Notes/CompositeSignal.md)
 - [Cryptography.(Encoding).Base64](./*Notes/Cryptography.(Encoding).Base64.md)
