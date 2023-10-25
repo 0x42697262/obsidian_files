@@ -5,11 +5,10 @@ tags:
   - Information-Theory
   - Computer-Science
 ---
-
 # Single-Bit Error
 
 ---
 
 Only one bit of a given data is altered.
 
-![[Pasted image 20231019130156.png]]
+![[CodingTheory.ErrorControl.SingleBitError.1.png]]
