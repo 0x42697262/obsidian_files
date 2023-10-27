@@ -7,7 +7,6 @@
 	- [LocalAreaNetwork](./*Notes/__orphans/LocalAreaNetwork.md)
 	- [picoCTF.2023.(Special)](./*Notes/__orphans/picoCTF.2023.(Special).md)
 - **__temporary**
-	- [ClassicalScience](./*Notes/__temporary/ClassicalScience.md)
 	- [Data Communication](./*Notes/__temporary/Data%20Communication.md)
 	- [HackThisSite - Basic Level 6](./*Notes/__temporary/HackThisSite%20-%20Basic%20Level%206.md)
 	- **old**

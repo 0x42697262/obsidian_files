@@ -34,3 +34,47 @@ This is the Base64 alphabet defined in [RFC 4648 §4](https://datatracker.ietf.o
 | 14          | 001110 | O    |     | 30    | 011110 | e    |     | 46    | 101110 | u    |     | 62    | 111110 | +    |
 | 15          | 001111 | P    |     | 31    | 011111 | f    |     | 47    | 101111 | v    |     | 62    | 111111 | /    |
 | **Padding** | =      |
+
+---
+
+## Implementation
+
+```python
+def encode_to_base64(padded_data: int, paddings: int = 0) -> str:
+    """
+    Assume that the input raw data is padded.
+    """
+
+    TABLE: str      = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    PADDING: str    = '='
+    MASK: int       = (0b1 << 6) - 1
+
+    base64_encoded: str = PADDING * paddings
+
+
+    counter: int = padded_data
+    sextet: int = counter & MASK
+    i: int = 0
+    while counter > 0:
+        base64_encoded += TABLE[sextet]
+
+        i += 1
+        counter = (padded_data >> 6*i)
+        sextet = counter & MASK
+
+    return base64_encoded[::-1]
+
+
+def pad_bytes(string: str) -> tuple:
+    data: int       = int(string, 16)
+    n_bytes: int    = (data.bit_length() + 7) // 8
+    n_bits: int     = n_bytes * 8
+
+    n = n_bits % 6
+    bits_to_pad: int    = (6 - n) if n > 0 else 0
+    padded_data: int    = data << bits_to_pad
+    return (padded_data, bits_to_pad//2)
+```
+
+> [!INFO]
+> This Python implementation could have been better if it does not require counting the bits, copying data, and reversing the string.
