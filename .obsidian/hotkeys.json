@@ -33,5 +33,15 @@
       ],
       "key": "1"
     }
+  ],
+  "obsidian-tasks-plugin:edit-task": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "A"
+    }
   ]
 }

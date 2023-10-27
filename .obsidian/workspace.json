@@ -26,33 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "*Notes/CodingTheory.ErrorControl.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "20870df116fd840e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4335908628417ecd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "*Notes/--Papers.md",
+                "file": "*Notes/Error detection and correction.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -65,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "*Notes/Cryptography.(Encoding).Base64.md",
+                "file": "*Notes/Base64.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7c740181bbbb3c96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "*Notes/Bandwidth (signal processing).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -155,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "*Notes/Cryptography.(Encoding).Base64.md",
+                "file": "*Notes/Bandwidth (signal processing).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "*Notes/Cryptography.(Encoding).Base64.md",
+                "file": "*Notes/Bandwidth (signal processing).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -203,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "*Notes/Cryptography.(Encoding).Base64.md"
+                "file": "*Notes/Bandwidth (signal processing).md"
               }
             }
           },
@@ -258,13 +245,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cef6f232d564ca5a",
+  "active": "7c740181bbbb3c96",
   "lastOpenFiles": [
+    "*Notes/Base64.md",
+    "*Notes/Data link layer.md",
+    "*Notes/Physical layer.md",
+    "*Notes/Network topology.md",
+    "*Notes/Data communications.md",
+    "*Notes/SignalTransmission.md",
+    "*Notes/__temporary/Data Communication.md",
+    "*Notes/CompositeSignal.md",
+    "*Notes/*InterestingWebsitesToCheck.md",
+    "*Notes/Bus network topology.md",
+    "Attachments/Bus network topology.png",
     "*Notes/--Papers.md",
-    "*Notes/Cryptography.(Encoding).Base64.md",
+    "Attachments/Bus network topology.png",
+    "Attachments/Network Topologies.png",
+    "*Notes/NetworkingSystem.md",
+    "*Notes/Open systems interconnection model.md",
+    "*Notes/Error detection and correction.md",
+    "*Notes/Single bit error (error control).md",
+    "*Notes/Coding theory.md",
+    "*Notes/Information theory.md",
+    "*Notes/Bandwidth (signal processing).md",
+    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
+    "*Notes/__temporary/Untitled 1.md",
+    "*Notes/__temporary/Untitled.md",
     "Untitled.md",
-    "*Notes/CodingTheory.ErrorControl.md",
-    "*Notes/--Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "*Notes/__temporary/Assignment 1.md",
+    "*Notes/CodeIgniter.Errors.MYSQLI.md",
+    "*Notes/__temporary/VulnHub -- Basic Pentesting - 1.md",
+    "*Notes/__orphans/picoCTF.2023.(Special).md",
     "Plugins/Canvas/Internet of Things.canvas",
     "Attachments/Pasted image 20231024142949.png",
     "Attachments/Pasted image 20231024141301.png",
@@ -272,42 +283,18 @@
     "Attachments/Pasted image 20231023222841.png",
     "Attachments/Pasted image 20231023220905.png",
     "Attachments/Pasted image 20231023220329.png",
-    "*Notes/__temporary/Untitled  - Hyperland Ideas.md",
-    "*Notes/__temporary/CodingTheory.ErrorControl.SingleBitError.md",
     "Plugins/Canvas/Untitled 1.canvas",
     "Attachments/Fe[26]-679.png",
-    "Attachments/Fe[26]-464(WIN).png",
-    "Attachments/Fe[26]-341.5.png",
     "Plugins/Notion/window manager checklist.table",
-    "Attachments/CodingTheory.ErrorControl.SingleBitError.1.png",
-    "*Notes/CodingTheory.md",
-    "*Notes.md",
-    "README.md",
-    "*Notes/*InterestingWebsitesToCheck.md",
-    "*Notes/DataCommunicationsAndNetworking.md",
-    "*Notes/NetworkTopology.md",
-    "*Notes/NetworkTopology.BusTopology.md",
-    "*Notes/InformationTheory.md",
-    "*Notes/NetworkingSystem.md",
-    "*Notes/Signal.md",
-    "Notes/{temporary}/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2021). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
-    "Templates/New Note.md",
-    "*Notes/__temporary/Untitled 1.md",
-    "*Notes/--Papers/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
-    "*Notes/OpenSystemsInterconnectionModel.md",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",
     "Plugins/Canvas/Notes.canvas",
     "Plugins/Canvas/DataCommunicationsAndNetworking.canvas",
     "Plugins/Canvas/Papers.canvas",
     "DataCommunicationsAndNetworking.canvas",
-    "*Notes/SineWave.md",
     "Plugins/Canvas/Machine Learning.canvas",
     "Plugins/Canvas/DFA.canvas",
     "Plugins/Canvas/Untitled 2.canvas",
-    "Plugins/Citations/references.md",
     "Plugins/Citations/references.bib",
-    "Templates/Untitled.md",
-    "Templates/Vulnhub Writeup.md",
     "Plugins/Citations",
     "*Notes/--Papers",
     "Notes/Untitled 1",
