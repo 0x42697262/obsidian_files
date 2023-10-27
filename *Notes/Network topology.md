@@ -20,14 +20,14 @@ Network Topology is the geometric representation of the relationship of all link
 
 **Types**:
 
-1. [[NetworkTopology.MeshTopology|Mesh Topology]] (Basic)
-2. [[NetworkTopology.StarTopology|Star Topology]] (Basic)
+1. [[Mesh network topology|Mesh Topology]] (Basic)
+2. [[Star network topology|Star Topology]] (Basic)
 3. [[Bus network topology|Bus Topology]] (Basic)
-4. [[NetworkTopology.RingTopology|Ring Topology]] (Basic)
-5. [[NetworkTopology.LineTopology|Line Topology]]
-6. [[NetworkTopology.PointToPointTopology|Point-to-Point Topology]]
-7. [[NetworkTopology.TreeTopology|Tree Topology]]
-8. [[NetworkTopology.HybridTopology|Hybrid Topology]]
+4. [[Ring network topology|Ring Topology]] (Basic)
+5. [[Line topology|Line Topology]]
+6. [[Point-to-point network topology|Point-to-Point Topology]]
+7. [[tree network topology|Tree Topology]]
+8. [[Hybrid network topology|Hybrid Topology]]
 
 > [!INFO]
 > ![[Network Topologies.png]]

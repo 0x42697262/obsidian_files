@@ -1,5 +1,5 @@
 ---
-title: Mesh Topology
+title: Mesh network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Mesh Topology
+# Mesh network topology
 
 ---
 
@@ -19,5 +19,5 @@ Mesh Topology is a network architecture characterized by a fully interconnected 
 
 **Types**:
 
-1. [[NetworkTopology.MeshTopology.FullyConnectedMesh|Fully Connected Mesh]]
-2. [[NetworkTopology.PartiallyConnectedMesh|Partially Connected Mesh]]
+1. [[Mesh network topology — fully connected network|Fully Connected Mesh]]
+2. [[Mesh network topology — partially connected network|Partially Connected Mesh]]

@@ -1,5 +1,5 @@
 ---
-title: Point-to-Point Topology
+title: Point-to-point network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Point-to-Point Topology
+# Point-to-point network topology
 
 ---
 

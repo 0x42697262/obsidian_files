@@ -1,5 +1,5 @@
 ---
-title: Ring Topology
+title: Ring network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,9 +7,12 @@ tags:
   - Networking
 ---
 
-# Ring Topology
+# Ring network topology
 
 ---
+
+>[!INFO]
+>![[Ring network topology.png]]
 
 ```
 Imagine a group of people standing in a circle, and each person is holding hands with the person on their left and the person on their right. This forms a ring, and information can travel in one direction around the circle. In a ring topology network, data packets travel in a similar way, passing from one device to the next until they reach their destination.

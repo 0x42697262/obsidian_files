@@ -1,5 +1,5 @@
 ---
-title: Fully Connected Mesh
+title: Mesh network topology — fully connected network
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,9 +7,12 @@ tags:
   - Networking
 ---
 
-# Fully Connected Mesh
+# Mesh network topology — fully connected network
 
 ---
+
+>[!INFO]
+>![[Mesh network topology — fully connected network.png]]
 
 Every node (devices) has a *direct connection* to every other node.
 

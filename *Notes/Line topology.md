@@ -1,5 +1,5 @@
 ---
-title: Line Topology
+title: Line topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Line Topology
+# Line topology
 
 ---
 
@@ -16,4 +16,4 @@ Line topology is a simple and straightforward network configuration where all de
 ```
 
 - [[Bus network topology|Bus Topology]]
-- [[NetworkTopology.RingTopology|Ring Topology]]
+- [[Ring network topology|Ring Topology]]

@@ -1,5 +1,5 @@
 ---
-title: Star Topology
+title: Star network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,9 +7,12 @@ tags:
   - Networking
 ---
 
-# Star Topology
+# Star network topology
 
 ---
+
+>[!INFO]
+>![[Star network topology.png]]
 
 ```
 Imagine you have a group of friends, and you all want to chat with each other. In a star topology, one friend, let's call them the "hub," is at the center. Instead of everyone talking directly to each other, they all talk to the hub. The hub then passes on the messages to the right friend. It's like having a group chat where all messages go through one person before reaching others.
@@ -28,7 +31,7 @@ In Star Topology...
 
 **Advantages**:
 
-1. Less expensive than [[NetworkTopology.MeshTopology|mesh]]
+1. Less expensive than [[Mesh network topology|mesh]]
 2. Needs only one link and one I/O port to connect
 3. Easy to install and reconfigure
 4. Additions, moves and deletions involve only one connection
