@@ -12,5 +12,5 @@ tags:
 ---
 
 - [[Local Area Network]]
-- [[NetworkTopology|Network Topology]]
-- [[OpenSystemsInterconnectionModel|Open Systems Interconnection (OSI) Model]]
+- [[Network topology|Network Topology]]
+- [[Open systems interconnection model|Open Systems Interconnection (OSI) Model]]

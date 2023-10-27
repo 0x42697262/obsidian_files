@@ -1,18 +1,18 @@
 ---
-title: Error Detection and Correction
+title: Error detection and correction
 date: 2023-10-19
 tags:
   - Information-Theory
   - Computer-Science
 ---
 
-# Error Detection and Correction
+# Error detection and correction
 
 ---
 
 ## Types of Errors:
 
-1. [[CodingTheory.ErrorControl.SingleBitError|Single-Bit Error]]
+1. [[Single bit error (error control)|Single-Bit Error]]
 2. [[CodingTheory.ErrorControl.BurstError|Burst Error]]
 
 ## Common Error Detection Techniques:

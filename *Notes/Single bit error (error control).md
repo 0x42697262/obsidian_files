@@ -1,11 +1,11 @@
 ---
-title: Single-Bit Error
+title: Single bit error (error control)
 date: 2023-10-19
 tags:
   - Information-Theory
   - Computer-Science
 ---
-# Single-Bit Error
+# Single bit error (error control)
 
 ---
 

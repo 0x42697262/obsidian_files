@@ -1,5 +1,5 @@
 ---
-title: Bus Topology
+title: Bus network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,9 +7,11 @@ tags:
   - Networking
 ---
 
-# Bus Topology
+# Bus network topology
 
 ---
+> [!INFO]
+> ![[Bus network topology.png]]
 
 ```
 A bus topology is like a single road where all the houses (computers) are connected. In this setup, a single cable, called the "bus," runs through all the computers. Each computer taps into this cable to send and receive data. It's like cars on a road; they share the same path.

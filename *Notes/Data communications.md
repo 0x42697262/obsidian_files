@@ -1,15 +1,15 @@
 ---
-title: Data Communication and Networking
+title: Data communication
 date: 2023-10-04
 tags:
   - Computer-Science
   - DataCommunication
 ---
 
-# Data Communications and Networking
+# Data communications
 
 ---
 
 - [[NetworkingSystem|Networking System]]
 - [[SignalTransmission|Signal Transmission]]
-- [[Bandwidth]]
+- [[Bandwidth (signal processing)]]

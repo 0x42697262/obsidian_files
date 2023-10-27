@@ -1,5 +1,5 @@
 ---
-title: Network Topology
+title: Network topology
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Network Topology
+# Network topology
 
 ---
 
@@ -22,9 +22,12 @@ Network Topology is the geometric representation of the relationship of all link
 
 1. [[NetworkTopology.MeshTopology|Mesh Topology]] (Basic)
 2. [[NetworkTopology.StarTopology|Star Topology]] (Basic)
-3. [[NetworkTopology.BusTopology|Bus Topology]] (Basic)
+3. [[Bus network topology|Bus Topology]] (Basic)
 4. [[NetworkTopology.RingTopology|Ring Topology]] (Basic)
 5. [[NetworkTopology.LineTopology|Line Topology]]
 6. [[NetworkTopology.PointToPointTopology|Point-to-Point Topology]]
 7. [[NetworkTopology.TreeTopology|Tree Topology]]
 8. [[NetworkTopology.HybridTopology|Hybrid Topology]]
+
+> [!INFO]
+> ![[Network Topologies.png]]

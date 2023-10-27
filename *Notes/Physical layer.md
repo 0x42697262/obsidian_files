@@ -1,5 +1,5 @@
 ---
-title: Physical Layer
+title: Physical layer
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Physical Layer
+# Physical layer
 
 ---
 

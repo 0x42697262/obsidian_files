@@ -32,4 +32,4 @@ A *periodic signal* completes a pattern within a measurable time frame, called a
 
 A nonperiodic signal changes without exhibiting a pattern or cycle that repeats over time. 
 
-In [[DataCommunicationsAndNetworking|data communications]], we frequently use periodic analog signals (because they need less bandwidth), and nonperiodic digital signals (because they can represent variation in data).
+In [[Data communications|data communications]], we frequently use periodic analog signals (because they need less bandwidth), and nonperiodic digital signals (because they can represent variation in data).

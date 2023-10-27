@@ -1,14 +1,13 @@
 ---
-title: Encoding to Base64
+title: Base64
 date: 2023-10-25
 tags:
   - Information-Theory
   - Coding-Theory
   - Cryptography
-  - Base64
 ---
 
-# Encoding to Base64
+# Base64
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Bandwidth
+title: Bandwidth (signal processing)
 date: 2023-10-04
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Bandwidth
+# Bandwidth (signal processing)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Open Systems Interconnection Model (OSI Model)
+title: Open systems interconnection model (OSI model)
 date: 2023-09-26
 tags:
   - Computer-Science
@@ -7,7 +7,7 @@ tags:
   - Networking
 ---
 
-# Open Systems Interconnection Model (OSI Model)
+# Open systems interconnection model (OSI model)
 
 ---
 
@@ -17,8 +17,8 @@ The purpose of OSI model is to show how to facilitate communication between diff
 
 ## Layers
 
-1. [[OpenSystemsInterconnectionModel.PhysicalLayer|Physical Layer]]
-2. [[OpenSystemsInterconnectionModel.DataLinkLayer|Data Link Layer]]
+1. [[Physical layer|Physical Layer]]
+2. [[Data link layer|Data Link Layer]]
 3. [[OpenSystemsInterconnectionModel.NetworkLayer|Network Layer]]
 4. [[OpenSystemsInterconnectionModel.TransportLayer|Transport Layer]]
 5. [[OpenSystemsInterconnectionModel.SessionLayer|Session Layer]]
