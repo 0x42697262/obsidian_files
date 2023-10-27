@@ -87,6 +87,7 @@
 - [NetworkTopology.RingTopology](./*Notes/NetworkTopology.RingTopology.md)
 - [NetworkTopology.StarTopology](./*Notes/NetworkTopology.StarTopology.md)
 - [NetworkTopology.TreeTopology](./*Notes/NetworkTopology.TreeTopology.md)
+- [OpenSystemsInterconnectionModel.DataLinkLayer](./*Notes/OpenSystemsInterconnectionModel.DataLinkLayer.md)
 - [OpenSystemsInterconnectionModel](./*Notes/OpenSystemsInterconnectionModel.md)
 - [OpenSystemsInterconnectionModel.PhysicalLayer](./*Notes/OpenSystemsInterconnectionModel.PhysicalLayer.md)
 - [ProjectCharter](./*Notes/ProjectCharter.md)
