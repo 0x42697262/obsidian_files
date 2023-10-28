@@ -62,7 +62,6 @@
 	- [PicoCTF - GET aHEAD](./*Notes/__temporary/PicoCTF%20-%20GET%20aHEAD.md)
 	- [Untitled  - Hyperland Ideas](./*Notes/__temporary/Untitled%20%20-%20Hyperland%20Ideas.md)
 	- [Untitled](./*Notes/__temporary/Untitled.md)
-	- [VulnHub -- Basic Pentesting - 1](./*Notes/__temporary/VulnHub%20--%20Basic%20Pentesting%20-%201.md)
 - **[--Papers](./*Notes/--Papers.md)**
 - [*InterestingWebsitesToCheck](./*Notes/*InterestingWebsitesToCheck.md)
 - [Bandwidth (signal processing)](./*Notes/Bandwidth%20(signal%20processing).md)
@@ -106,5 +105,6 @@
 - [Single bit error (error control)](./*Notes/Single%20bit%20error%20(error%20control).md)
 - [Star network topology](./*Notes/Star%20network%20topology.md)
 - [tree network topology](./*Notes/tree%20network%20topology.md)
+- [VulnHub.BasicPentesting—1](./*Notes/VulnHub.BasicPentesting%E2%80%941.md)
 
 %% End Waypoint %%
