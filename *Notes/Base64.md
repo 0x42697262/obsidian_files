@@ -11,6 +11,15 @@ tags:
 
 ---
 
+## RFC 4648
+
+> [!INFO]
+> A 65-character subset of US-ASCII is used, enabling 6 bits to be represented per printable character. (The extra 65th character, "=", is used to signify a special processing function.)
+>
+> The encoding process represents 24-bit groups of input bits as output strings of 4 encoded characters. Proceeding from left to right, a 24-bit input group is formed by concatenating 3 8-bit input groups. These 24 bits are then treated as 4 concatenated 6-bit groups, each of which is translated into a single character in the base 64 alphabet.
+>
+> Each 6-bit group is used as an index into an array of 64 printable characters. The character referenced by the index is placed in the output string.
+
 ## Base64 Encoding Table
 
 This is the Base64 alphabet defined in [RFC 4648 §4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)
