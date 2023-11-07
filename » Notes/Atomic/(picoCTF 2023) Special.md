@@ -2,8 +2,7 @@
 title: picoCTF 2023 Special
 date: 2023-10-04
 tags:
-  - WriteUps
-  - CaptureTheFlag
+  - ctf/picoctf
 ---
 
 **CaptureTheFlag:**

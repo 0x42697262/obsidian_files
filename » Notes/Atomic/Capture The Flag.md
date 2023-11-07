@@ -12,3 +12,4 @@ tags:
 # Writeups
 
 - [[(VulnHub) Basic Pentesting — 1]]
+- [[(picoCTF 2023) Special]]
