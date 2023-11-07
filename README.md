@@ -17,7 +17,7 @@ git clone https://github.com/0x42697262/obsidian_files.git
 ## Directory Naming
 `__`: core directory of my notes.
 `--`: a [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin).
-`*`: index or resources list
+`»`: index or resources list
 
 
 ---
