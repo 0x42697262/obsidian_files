@@ -54,6 +54,9 @@ tags:
 - [Guide for GPU Passthrough on laptop with Optimus Manager](https://github.com/mysteryx93/GPU-Passthrough-with-Optimus-Manager-Guide)
 - [https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books")
 - https://saurabhdaware.github.io/text-to-handwriting/
+- https://github.com/practical-tutorials/project-based-learning
+- https://github.com/jassics/security-study-plan
+- https://github.com/jwasham/coding-interview-university
 
 ### Articles
 - [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
@@ -67,3 +70,4 @@ tags:
 ### Uncategorized
 - https://wiki.skullsecurity.org/index.php/Main_Page
 - https://ripped.guide/
+- https://www.careercup.com/resume
