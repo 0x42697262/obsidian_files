@@ -6,6 +6,7 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
+        "dimension": 57.55269320843092,
         "children": [
           {
             "id": "7f63f405cc55c1a0",
@@ -13,33 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "*Notes/--Papers.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a7fc5336238d4241",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "*Notes/Error detection and correction.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b9e70b6394032844",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "*Notes/Base64.md",
+                "file": "» Notes/✦ Papers.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -47,12 +22,77 @@
             }
           },
           {
-            "id": "7c740181bbbb3c96",
+            "id": "486045ab29d2a0cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "*Notes/Bandwidth (signal processing).md",
+                "file": "» Notes/Non-atomic/Data Link Layer.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1b905f9939260773",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "» Notes/Atomic/(VulnHub) Basic Pentesting — 1.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8b66fe7d6c6f4bd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "» Notes/__orphans/VSEPR Theory.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "108ba33e31d8b512",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "» Notes/__temporary/Critical Chain Method.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4db01640955dbb30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "» Notes/__temporary/Project Schedule Management.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8068ef6b2f85fc56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Plugins/Daily Notes/2023-11-09.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +100,57 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
+      },
+      {
+        "id": "e89c2ee62d00449b",
+        "type": "tabs",
+        "dimension": 42.44730679156909,
+        "children": [
+          {
+            "id": "b0d201fb14d68b6d",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Plugins/Daily Notes/2023-11-09.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.7827772408535664,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "24a7bd1d06931b7c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -89,7 +179,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#SCIENCE10",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -122,11 +212,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 332.51103591918945
+    "width": 282.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -142,7 +234,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "*Notes/Bandwidth (signal processing).md",
+                "file": "Plugins/Daily Notes/2023-11-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +251,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "*Notes/Bandwidth (signal processing).md",
+                "file": "Plugins/Daily Notes/2023-11-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -190,7 +282,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "*Notes/Bandwidth (signal processing).md"
+                "file": "Plugins/Daily Notes/2023-11-09.md"
               }
             }
           },
@@ -219,9 +311,19 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "574aea05d4ffaa4e",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Plugins/Daily Notes/2023-11-09.md"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -232,60 +334,64 @@
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
       "notion-like-tables:Create Notion-Like table": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "file-tree-alternative:File Tree Alternative Plugin": false,
       "workspaces:Manage workspace layouts": false,
       "fantasy-calendar:Open Large Fantasy Calendar": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "templates:Insert template": false
     }
   },
-  "active": "7c740181bbbb3c96",
+  "active": "8068ef6b2f85fc56",
   "lastOpenFiles": [
-    "*Notes/Base64.md",
-    "*Notes/Data link layer.md",
-    "*Notes/Physical layer.md",
-    "*Notes/Network topology.md",
-    "*Notes/Data communications.md",
-    "*Notes/SignalTransmission.md",
-    "*Notes/__temporary/Data Communication.md",
-    "*Notes/CompositeSignal.md",
-    "*Notes/*InterestingWebsitesToCheck.md",
-    "*Notes/Bus network topology.md",
-    "Attachments/Bus network topology.png",
-    "*Notes/--Papers.md",
-    "Attachments/Bus network topology.png",
-    "Attachments/Network Topologies.png",
-    "*Notes/NetworkingSystem.md",
-    "*Notes/Open systems interconnection model.md",
-    "*Notes/Error detection and correction.md",
-    "*Notes/Single bit error (error control).md",
-    "*Notes/Coding theory.md",
-    "*Notes/Information theory.md",
-    "*Notes/Bandwidth (signal processing).md",
+    "» Notes/__temporary/Project Schedule Management.md",
+    "» Notes/__temporary/Critical Chain Method.md",
+    "Plugins/Daily Notes/2023-11-09.md",
+    "Plugins/Excalidraw/PSM Project Schedule Network Diagram.excalidraw.md",
+    "» Notes/__temporary/Critical Chain.md",
+    "» Notes/__orphans/Critical Chain Scheduling.md",
+    "» Notes/__temporary/Theory of Constraint.md",
+    "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.svg",
+    "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.md",
+    "Plugins/Excalidraw/Scripts/Downloaded",
+    "Plugins/Excalidraw/Scripts",
+    "» Notes/__orphans/VSEPR Theory.md",
     "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
-    "*Notes/__temporary/Untitled 1.md",
-    "*Notes/__temporary/Untitled.md",
-    "Untitled.md",
-    "*Notes/__temporary/Assignment 1.md",
-    "*Notes/CodeIgniter.Errors.MYSQLI.md",
-    "*Notes/__temporary/VulnHub -- Basic Pentesting - 1.md",
-    "*Notes/__orphans/picoCTF.2023.(Special).md",
-    "Plugins/Canvas/Internet of Things.canvas",
+    "» Notes/✦ Papers.md",
+    "» Notes/Atomic/Valence Electron.md",
+    "» Notes/Atomic/Electron.md",
+    "» Notes/Atomic/Octet Rule.md",
+    "» Notes/Atomic/Element.md",
+    "» Notes/Atomic/Hydrogen.md",
+    "» Notes/Atomic/Nucleosynthesis.md",
+    "» Notes/Atomic/Stellar Nucleosynthesis.md",
+    "» Notes/Atomic/Supernova Nucleosynthesis.md",
+    "» Notes/__temporary/Supernova.md",
+    "» Notes/Atomic/(VulnHub) Basic Pentesting — 1.md",
+    "» Notes/Atomic/Big Bang Nucleosynthesis (BBN).md",
+    "» Notes/__temporary/Noble Gas.md",
+    "» Notes/__temporary/Science10.Assignment.2.md",
+    "» Notes/✦ Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "» Notes/Atomic/Universe.md",
+    "Attachments/Composition of the Universe.png",
+    "Attachments/Pasted image 20231108203658.png",
+    "Attachments/Pasted Image 20231108024832_292.png",
+    "Plugins/Notion/window manager checklist.table",
+    "Attachments/Pasted image 20231106205002.png",
+    "Attachments/Pasted image 20231106182758.png",
+    "Attachments/Pasted image 20231106182323.png",
     "Attachments/Pasted image 20231024142949.png",
     "Attachments/Pasted image 20231024141301.png",
     "Attachments/Pasted image 20231023224305.png",
-    "Attachments/Pasted image 20231023222841.png",
-    "Attachments/Pasted image 20231023220905.png",
-    "Attachments/Pasted image 20231023220329.png",
+    "» Notes/Atomic",
+    "» Notes/Non-atomic",
+    "Plugins/Canvas/Internet of Things.canvas",
     "Plugins/Canvas/Untitled 1.canvas",
-    "Attachments/Fe[26]-679.png",
-    "Plugins/Notion/window manager checklist.table",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",
     "Plugins/Canvas/Notes.canvas",
     "Plugins/Canvas/DataCommunicationsAndNetworking.canvas",
@@ -296,12 +402,8 @@
     "Plugins/Canvas/Untitled 2.canvas",
     "Plugins/Citations/references.bib",
     "Plugins/Citations",
-    "*Notes/--Papers",
+    "» Notes/✦ Papers",
     "Notes/Untitled 1",
-    "*Notes/__temporary/old",
-    "_OLD2/__class/090 extras",
-    "_OLD2/__class/020 linux",
-    "_OLD2/__class/010 learning",
-    "_OLD2/__orphans"
+    "» Notes/__temporary/old"
   ]
 }
