@@ -9,11 +9,11 @@ tags:
 
 ---
 
-Nucleosynthesis is the study of nuclear processes responsible for the formation of the [[Elements|elements]].
+Nucleosynthesis is the study of nuclear processes responsible for the formation of the [[Element|elements]].
 
 - basically *creation* of new elements
 - heavier elements are created through [[Nuclear Fusion|fusion]] of lighter elements
-- process that creates new [[Atomic Nuclei|atomic nuclei]] from preexisting [[Nucleons|nucleons]] and nuclei
+- process that creates new [[Atomic Nucleus|atomic nuclei]] from preexisting [[Nucleon|nucleons]] and [[Atomic Nucleus|nuclei]]
 
 ## Types
 

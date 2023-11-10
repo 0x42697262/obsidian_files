@@ -1,10 +1,10 @@
 ---
-title: Elements
+title: Element
 date: 2023-11-08
 tags:
 ---
 
-# Elements
+# Element
 
 ---
 
