@@ -23,3 +23,5 @@ tags:
 
 - [[(root-me.org) FTP - authentication]]
 - [[(root-me.org) TELNET - authentication]]
+- [[(root-me.org) ETHERNET - frame]]
+- [[(root-me.org) Twitter authentication]]
