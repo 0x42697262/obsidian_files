@@ -22,3 +22,4 @@ tags:
 ### root-me.org
 
 - [[(root-me.org) FTP - authentication]]
+- [[(root-me.org) TELNET - authentication]]
