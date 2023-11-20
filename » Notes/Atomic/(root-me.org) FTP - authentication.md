@@ -3,10 +3,9 @@ title: (root-me.org) FTP - authentication
 date: 2023-11-20
 tags:
   - ctf/root-me
-  - "#networking/security"
-  - "#packet-capture-analysis"
+  - "networking/security"
+  - "packet-capture-analysis"
 ---
-
 
 # (root-me.org) FTP - authentication
 
@@ -14,7 +13,7 @@ tags:
 
 ## Description
 
-A `.pcap` file is provided as a challenge. The goal is to analyze and *find the password* in the packets that contains [[File Transfer Protocol|FTP]] network logs.
+A `.pcap` file is provided as a challenge. The goal is to analyze and _find the password_ in the packets that contains [[File Transfer Protocol|FTP]] network logs.
 
 ## Solution
 

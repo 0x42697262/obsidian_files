@@ -2,9 +2,9 @@
 title: (root-me.org) TELNET - authentication
 date: 2023-11-20
 tags:
-  - "#ctf/root-me"
-  - "#networking/security"
-  - "#packet-capture-analysis"
+  - "ctf/root-me"
+  - "networking/security"
+  - "packet-capture-analysis"
 ---
 
 # (root-me.org) TELNET - authentication
@@ -19,7 +19,7 @@ A [[TELNET]] network packet file needs to be analyzed as [[Capture The Flag|CTF]
 
 [[TELNET]] sends the password requests one character of the user password at a time. I thought the method would be similar to a [[File Transfer Protocol]]. To solve this challenge, I used [[Wireshark]] as a tool to filter the packet data with `telnet.data` and then find the frames that contains `Data: Password:` until we find `Data: \r`. I was able to acquire the password by manually checking each frames after filtering the data. This is still an **inefficient** method.
 
- A better approach of this would be to open up [[Wireshark]] and right click the first frame of a [[TELNET]] frame request then select `Follow -> TCP Stream`. The result looks like this:
+A better approach of this would be to open up [[Wireshark]] and right click the first frame of a [[TELNET]] frame request then select `Follow -> TCP Stream`. The result looks like this:
 
 ```
 ........... ..!.."..'.....#..%..%........... ..!..".."........P. ....".....b........b.... B.
@@ -28,7 +28,7 @@ A [[TELNET]] network packet file needs to be analyzed as [[Capture The Flag|CTF]
 
 OpenBSD/i386 (oof) (ttyp1)
 
-  
+
 
 login: .."........"ffaakkee
 
@@ -44,11 +44,11 @@ Warning: no Kerberos tickets issued.
 
 OpenBSD 2.6-beta (OOF) #4: Tue Oct 12 20:42:32 CDT 1999
 
-  
+
 
 Welcome to OpenBSD: The proactively secure Unix-like operating system.
 
-  
+
 
 Please use the sendbug(1) utility to report bugs in the system.
 
@@ -60,7 +60,7 @@ enough information to reproduce the problem is enclosed, and if a
 
 known fix for it exists, include that as well.
 
-  
+
 
 $ llss
 

@@ -2,7 +2,7 @@
 title: TELNET
 date: 2023-11-20
 tags:
-  - "#networking"
+  - "networking"
 ---
 
 # TELNET
