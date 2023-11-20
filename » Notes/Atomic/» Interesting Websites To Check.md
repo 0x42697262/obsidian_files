@@ -4,11 +4,13 @@ date: 2023-10-14
 tags:
   - resources
 ---
+
 # Interesting Websites To Check
 
 ---
 
 ## Table of Contents (i guess?)
+
 - [[» Interesting Websites To Check#Computer Science|Computer Science]]
 - [[» Interesting Websites To Check#Pentesting|Pentesting]]
 - [[» Interesting Websites To Check#Something Touhou (東方Project) Related|Something Touhou (東方Project) Related]]
@@ -20,6 +22,7 @@ tags:
 ---
 
 ### Computer Science
+
 - https://missing.csail.mit.edu/
 - https://missing.csail.mit.edu/2020/version-control/
 - https://cs.paperswithcode.com/
@@ -33,6 +36,7 @@ tags:
 - https://github.com/SkalskiP/courses
 
 ### Pentesting
+
 - https://github.com/carpedm20/awesome-hacking
 - https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources
 - https://github.com/nixawk/pentest-wiki
@@ -42,12 +46,18 @@ tags:
 - https://github.com/cider-security-research/cicd-goat
 - https://github.com/vavkamil/awesome-vulnerable-apps
 
-### Something Touhou (東方Project) Related
+### Cryptography
+
+- https://cryptohack.org/
+
+### Something Touhou (東方 Project) Related
+
 - [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
 - [Touhou Lossless Music Collection](http://illusionaryscore.web.fc2.com/score.html)
 - [Game Tools and Modification](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications)
 
 ### Something on Github
+
 - https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
 - [baton drop (CVE-2022-21894): Secure Boot Security Feature Bypass Vulnerability](https://github.com/Wack0/CVE-2022-21894)
 - [Lenovo Ideapad Gaming 3 2021 Linux RGB Keyboard Light Controller](https://github.com/InstinctEx/lenovo-ideapad-legion-keyboard-led)
@@ -59,15 +69,19 @@ tags:
 - https://github.com/jwasham/coding-interview-university
 
 ### Articles
+
 - [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
 
 ### Windows
+
 - [XToolBox](https://github.com/xemulat/XToolbox)
 
 ### Image Processing
+
 - [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/)
 
 ### Uncategorized
+
 - https://wiki.skullsecurity.org/index.php/Main_Page
 - https://ripped.guide/
 - https://www.careercup.com/resume
