@@ -9,3 +9,7 @@ tags:
 ---
 
 - quantified by a function called [[Probability Mass Function]]
+
+---
+
+See [[Continuous Random Variable]].

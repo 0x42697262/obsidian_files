@@ -4,7 +4,7 @@ date: 2023-11-22
 tags:
 ---
 
-# Discrete Probability Distribution
+# Discrete [[Probability Distribution]]
 
 ---
 
@@ -23,3 +23,4 @@ tags:
 - [[Poisson Distribution]]
 - [[Geometric Distribution]]
 - [[Negative Binomial Distribution]]
+- ...

@@ -8,4 +8,8 @@ tags:
 
 ---
 
-- a function that maps a discrete random variable $X$ to some probability $p \in [0, 1]$
+- a function that maps a [[Discrete Random Variable]] $X$ to some probability $p \in [0, 1]$
+
+---
+
+See [[Probability Density Function]].
