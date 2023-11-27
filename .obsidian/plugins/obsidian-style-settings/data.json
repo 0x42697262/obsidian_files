@@ -1,3 +1,14 @@
 {
-  "things-style@@fancy-highlight": true
+  "things-style@@fancy-highlight": true,
+  "shiba-theme-settings@@shiba-accent-colors": "accent-sea",
+  "shiba-theme-settings@@shiba-colors-theme-light": "ivory-light",
+  "shiba-theme-settings@@shiba-colors-theme-dark": "default-dark-theme",
+  "shiba-theme-settings@@hide-vault-title": false,
+  "shiba-theme-settings@@shib-custom-vault-folder-toggle": false,
+  "shiba-theme-settings@@shib-floating-header": true,
+  "shiba-theme-settings@@shiba-remove-file-icons": true,
+  "shiba-theme-settings@@shiba-toggle-folder-icons": true,
+  "shiba-theme-settings@@shiba-toggle-folder-icons-options": "shiba-toggle-folder-icons-cute",
+  "shiba-theme-settings@@shiba-toggle-indent-colors": true,
+  "shiba-theme-settings@@shiba-toggle-indent-colors-accent": false
 }

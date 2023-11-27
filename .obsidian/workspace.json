@@ -6,7 +6,7 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
-        "dimension": 57.55269320843092,
+        "dimension": 71.62083089526038,
         "children": [
           {
             "id": "7f63f405cc55c1a0",
@@ -22,12 +22,12 @@
             }
           },
           {
-            "id": "486045ab29d2a0cc",
+            "id": "555d7898d8e310bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/Non-atomic/Data Link Layer.md",
+                "file": "» Notes/Atomic/Capture The Flag.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,12 +35,12 @@
             }
           },
           {
-            "id": "1b905f9939260773",
+            "id": "5826d888b2c3189f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/Atomic/(VulnHub) Basic Pentesting — 1.md",
+                "file": "» Notes/Atomic/Discrete Probability Distribution.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,12 +48,12 @@
             }
           },
           {
-            "id": "8b66fe7d6c6f4bd6",
+            "id": "ffb3c0a222954e51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/__orphans/VSEPR Theory.md",
+                "file": "Plugins/Daily Notes/2023-11-23.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,51 +61,25 @@
             }
           },
           {
-            "id": "108ba33e31d8b512",
+            "id": "711f99ea66f2e609",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/__temporary/Critical Chain Method.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4db01640955dbb30",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "» Notes/__temporary/Project Schedule Management.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8068ef6b2f85fc56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md",
-                "mode": "source",
+                "file": "README.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       },
       {
         "id": "e89c2ee62d00449b",
         "type": "tabs",
-        "dimension": 42.44730679156909,
+        "dimension": 28.379169104739617,
         "children": [
           {
             "id": "b0d201fb14d68b6d",
@@ -113,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,14 +110,14 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7827772408535664,
+                  "scale": 0.9065480705764472,
                   "close": true
                 }
               }
             }
           },
           {
-            "id": "24a7bd1d06931b7c",
+            "id": "14103f26cad56a3c",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -179,7 +153,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#SCIENCE10",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -212,13 +186,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 282.51103591918945,
-    "collapsed": true
+    "width": 282.51103591918945
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -234,7 +206,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -251,7 +223,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -282,7 +254,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md"
+                "file": "README.md"
               }
             }
           },
@@ -318,7 +290,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Plugins/Daily Notes/2023-11-09.md"
+                "file": "README.md"
               }
             }
           }
@@ -347,47 +319,50 @@
       "templates:Insert template": false
     }
   },
-  "active": "8068ef6b2f85fc56",
+  "active": "711f99ea66f2e609",
   "lastOpenFiles": [
-    "» Notes/__temporary/Project Schedule Management.md",
-    "» Notes/__temporary/Critical Chain Method.md",
-    "Plugins/Daily Notes/2023-11-09.md",
-    "Plugins/Excalidraw/PSM Project Schedule Network Diagram.excalidraw.md",
-    "» Notes/__temporary/Critical Chain.md",
-    "» Notes/__orphans/Critical Chain Scheduling.md",
-    "» Notes/__temporary/Theory of Constraint.md",
+    "» Notes/✦ Papers.md",
+    "» Notes/✦ Papers/General.md",
+    "» Notes/✦ Papers/Resource/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
+    "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+    "Plugins/Daily Notes/2023-11-23.md",
+    "» Notes/Atomic/Discrete Probability Distribution.md",
+    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
+    "» Notes/Atomic/Multinomial Distribution.md",
+    "» Notes/Atomic/Base64.md",
+    "» Notes/✦ Papers/Resource",
+    "Plugins/Daily Notes/2023-11-27.md",
+    "README.md",
+    "» Notes/Bus Network Topology.md",
+    "» Notes/Atomic/Binomial Distribution.md",
+    "» Notes/Atomic/Atom.md",
+    "» Notes/Atomic/Continuous Probability Distribution.md",
+    "» Notes/Atomic/Uniform Continuous Distribution.md",
+    "» Notes/Non-atomic/Bandwidth (Signal Processing).md",
+    "» Notes/Atomic/» Interesting Websites To Check.md",
+    "» Notes/__orphans/Javascript — eval().md",
+    "Plugins/Excalidraw/Danmaku Deconstruction.md",
+    "» Notes/Atomic/Continuous Random Variable.md",
+    "» Notes/Atomic/Discrete Random Variable.md",
+    "» Notes/Atomic/Probability Density Function.md",
+    "» Notes/Atomic/Probability Mass Function.md",
+    "» Notes/Atomic/Exponential Distribution.md",
+    "» Notes/Atomic/Gamma Distribution.md",
+    "Plugins/Canvas/Untitled.canvas",
+    "Attachments/Pasted Image 20231123155426_934.png",
+    "Plugins/Canvas/DFA.canvas",
+    "Plugins/Notion/window manager checklist.table",
+    "Attachments/Pasted Image 20231110190127_936.png",
     "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.svg",
-    "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.md",
     "Plugins/Excalidraw/Scripts/Downloaded",
     "Plugins/Excalidraw/Scripts",
-    "» Notes/__orphans/VSEPR Theory.md",
-    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
-    "» Notes/✦ Papers.md",
-    "» Notes/Atomic/Valence Electron.md",
-    "» Notes/Atomic/Electron.md",
-    "» Notes/Atomic/Octet Rule.md",
-    "» Notes/Atomic/Element.md",
-    "» Notes/Atomic/Hydrogen.md",
-    "» Notes/Atomic/Nucleosynthesis.md",
-    "» Notes/Atomic/Stellar Nucleosynthesis.md",
-    "» Notes/Atomic/Supernova Nucleosynthesis.md",
-    "» Notes/__temporary/Supernova.md",
-    "» Notes/Atomic/(VulnHub) Basic Pentesting — 1.md",
-    "» Notes/Atomic/Big Bang Nucleosynthesis (BBN).md",
-    "» Notes/__temporary/Noble Gas.md",
-    "» Notes/__temporary/Science10.Assignment.2.md",
-    "» Notes/✦ Papers/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
-    "» Notes/Atomic/Universe.md",
     "Attachments/Composition of the Universe.png",
     "Attachments/Pasted image 20231108203658.png",
     "Attachments/Pasted Image 20231108024832_292.png",
-    "Plugins/Notion/window manager checklist.table",
     "Attachments/Pasted image 20231106205002.png",
     "Attachments/Pasted image 20231106182758.png",
     "Attachments/Pasted image 20231106182323.png",
     "Attachments/Pasted image 20231024142949.png",
-    "Attachments/Pasted image 20231024141301.png",
-    "Attachments/Pasted image 20231023224305.png",
     "» Notes/Atomic",
     "» Notes/Non-atomic",
     "Plugins/Canvas/Internet of Things.canvas",
@@ -398,12 +373,9 @@
     "Plugins/Canvas/Papers.canvas",
     "DataCommunicationsAndNetworking.canvas",
     "Plugins/Canvas/Machine Learning.canvas",
-    "Plugins/Canvas/DFA.canvas",
-    "Plugins/Canvas/Untitled 2.canvas",
     "Plugins/Citations/references.bib",
     "Plugins/Citations",
     "» Notes/✦ Papers",
-    "Notes/Untitled 1",
-    "» Notes/__temporary/old"
+    "Notes/Untitled 1"
   ]
 }
