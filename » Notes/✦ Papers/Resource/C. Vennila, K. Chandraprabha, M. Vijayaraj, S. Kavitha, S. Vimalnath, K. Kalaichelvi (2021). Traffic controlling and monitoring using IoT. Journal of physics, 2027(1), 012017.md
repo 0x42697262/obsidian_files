@@ -11,7 +11,7 @@ Month: 9
 Number: 1
 Pages: 12016
 Publisher: IOP Publishing
-Title: Traffic controlling and monitoring using IoT
+Title: "[[C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017|Traffic controlling and monitoring using IoT]]"
 Volume: 2027
 Year: 2021
 DOI: 10.1088/1742-6596/2027/1/012017

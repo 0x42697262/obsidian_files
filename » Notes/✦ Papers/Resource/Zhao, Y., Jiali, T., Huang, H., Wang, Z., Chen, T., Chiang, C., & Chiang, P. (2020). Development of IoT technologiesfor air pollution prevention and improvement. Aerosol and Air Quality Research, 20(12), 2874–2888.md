@@ -11,7 +11,7 @@ Month: 1
 Number: 12
 Pages: 2874--2888
 Publisher: Taiwan Association for Aerosol Research
-Title: Development of IoT technologies for air pollution prevention and improvement
+Title: "[[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888|Development of IoT technologies for air pollution prevention and improvement]]"
 Volume: 20
 Year: 2020
 Doi: 10.4209/aaqr.2020.05.0255
