@@ -6,7 +6,7 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
-        "dimension": 71.62083089526038,
+        "dimension": 72.46631517281781,
         "children": [
           {
             "id": "7f63f405cc55c1a0",
@@ -14,72 +14,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/✦ Papers.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "555d7898d8e310bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "» Notes/Atomic/Capture The Flag.md",
+                "file": "» Notes/Atomic/Project Cost Management.md",
                 "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5826d888b2c3189f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "» Notes/Atomic/Discrete Probability Distribution.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ffb3c0a222954e51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plugins/Daily Notes/2023-11-23.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "711f99ea66f2e609",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "e89c2ee62d00449b",
         "type": "tabs",
-        "dimension": 28.379169104739617,
+        "dimension": 27.533684827182192,
         "children": [
           {
             "id": "b0d201fb14d68b6d",
@@ -87,7 +34,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "» Notes/Atomic/Project Cost Management.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +100,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#分詞器",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -186,11 +133,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 282.51103591918945
+    "width": 282.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -206,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "» Notes/Atomic/Project Cost Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "» Notes/Atomic/Project Cost Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -254,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "» Notes/Atomic/Project Cost Management.md"
               }
             }
           },
@@ -290,7 +239,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "» Notes/Atomic/Project Cost Management.md"
               }
             }
           }
@@ -319,41 +268,41 @@
       "templates:Insert template": false
     }
   },
-  "active": "711f99ea66f2e609",
+  "active": "7f63f405cc55c1a0",
   "lastOpenFiles": [
+    "» Notes/Atomic/Project Management — Constraints.md",
+    "» Notes/Atomic/Cost.md",
+    "» Notes/Atomic/Project Cost Management.md",
+    "» Notes/__temporary/Project Management.md",
+    "Plugins/Notion/window manager checklist.table",
+    "» Notes/__temporary/Untitled 2.md",
     "» Notes/✦ Papers.md",
-    "» Notes/✦ Papers/General.md",
-    "» Notes/✦ Papers/Resource/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
-    "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
-    "Plugins/Daily Notes/2023-11-23.md",
+    "» Notes/__temporary/Project Schedule Management.md",
+    "Plugins/Daily Notes/2023-11-29.md",
+    "» Notes/Atomic/Capture The Flag.md",
+    "Plugins/Daily Notes/2023-11-28.md",
     "» Notes/Atomic/Discrete Probability Distribution.md",
-    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
-    "» Notes/Atomic/Multinomial Distribution.md",
-    "» Notes/Atomic/Base64.md",
-    "» Notes/✦ Papers/Resource",
-    "Plugins/Daily Notes/2023-11-27.md",
     "README.md",
-    "» Notes/Bus Network Topology.md",
-    "» Notes/Atomic/Binomial Distribution.md",
-    "» Notes/Atomic/Atom.md",
-    "» Notes/Atomic/Continuous Probability Distribution.md",
-    "» Notes/Atomic/Uniform Continuous Distribution.md",
-    "» Notes/Non-atomic/Bandwidth (Signal Processing).md",
-    "» Notes/Atomic/» Interesting Websites To Check.md",
-    "» Notes/__orphans/Javascript — eval().md",
+    "Plugins/Daily Notes/2023-11-22.md",
+    "Plugins/Daily Notes/2023-11-21.md",
+    "» Notes/Atomic/(root-me.org) Encoding - UU.md",
+    "Plugins/Daily Notes/2023-11-20.md",
+    "Plugins/Daily Notes/2023-11-12.md",
+    "Plugins/Daily Notes/2023-11-11.md",
+    "Plugins/Daily Notes/2023-11-09.md",
+    "Plugins/Daily Notes/2023-11-08.md",
+    "Plugins/Daily Notes/2023-10-02.md",
+    "Plugins/Daily Notes/2023-09-07.md",
+    "Plugins/Daily Notes/2023-08-29.md",
+    "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.svg",
+    "Plugins/Excalidraw/Drawing 2023-07-12 17.54.08.excalidraw.md",
     "Plugins/Excalidraw/Danmaku Deconstruction.md",
-    "» Notes/Atomic/Continuous Random Variable.md",
-    "» Notes/Atomic/Discrete Random Variable.md",
-    "» Notes/Atomic/Probability Density Function.md",
-    "» Notes/Atomic/Probability Mass Function.md",
-    "» Notes/Atomic/Exponential Distribution.md",
-    "» Notes/Atomic/Gamma Distribution.md",
+    "Plugins/Excalidraw/Drawing 2023-09-26 12.35.45.excalidraw.md",
+    "» Notes/✦ Papers/Resource",
     "Plugins/Canvas/Untitled.canvas",
     "Attachments/Pasted Image 20231123155426_934.png",
     "Plugins/Canvas/DFA.canvas",
-    "Plugins/Notion/window manager checklist.table",
     "Attachments/Pasted Image 20231110190127_936.png",
-    "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.svg",
     "Plugins/Excalidraw/Scripts/Downloaded",
     "Plugins/Excalidraw/Scripts",
     "Attachments/Composition of the Universe.png",
@@ -364,7 +313,7 @@
     "Attachments/Pasted image 20231106182323.png",
     "Attachments/Pasted image 20231024142949.png",
     "» Notes/Atomic",
-    "» Notes/Non-atomic",
+    "» Notes/WIP",
     "Plugins/Canvas/Internet of Things.canvas",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",

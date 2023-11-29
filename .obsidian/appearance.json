@@ -1,7 +1,7 @@
 {
   "accentColor": "#d00ba6",
   "theme": "moonstone",
-  "cssTheme": "Shiba Inu",
+  "cssTheme": "Material Gruvbox",
   "enabledCssSnippets": [],
-  "baseFontSize": 15
+  "baseFontSize": 14
 }
