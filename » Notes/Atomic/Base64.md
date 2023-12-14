@@ -86,3 +86,35 @@ def pad_bytes(string: str) -> tuple:
 
 > [!INFO]
 > This Python implementation could have been better if it does not require counting the bits, copying data, and reversing the string.
+
+```rust
+fn encode_from_bytes(input: &[u8]) -> String {
+    let mut output: Vec<u8> = Vec::new();
+    let mut temp: u32 = 0;
+    let mut temp_len: u32 = 0;
+    for &byte in input {
+        temp = (temp << 8) | byte as u32;
+        temp_len += 8;
+        while temp_len >= 6 {
+            temp_len -= 6;
+            let chunk: u32 = temp >> temp_len;
+            let char_idx: u32 = chunk & 0x3F;
+            let character: u8 = CHARSET[char_idx as usize];
+            output.push(character);
+        }
+    }
+    if temp_len > 0 {
+        let idx: u32 = temp << (6 - temp_len) & 0x3F;
+        let character: u8 = CHARSET[idx as usize];
+        output.push(character);
+    }
+    while output.len() % 4 != 0 {
+        output.push(b'=');
+    }
+    String::from_utf8(output).unwrap()
+}
+```
+
+
+> [!INFO]
+> A better implementation than the python code above.
