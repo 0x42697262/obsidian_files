@@ -131,7 +131,14 @@
         "index": 4,
         "menuCellId": "a54bd1ac-8a20-48c0-9981-904953a50ec8",
         "creationTime": 1697600227599,
-        "lastEditedTime": 1697641109348
+        "lastEditedTime": 1702572138050
+      },
+      {
+        "id": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "index": 5,
+        "menuCellId": "d260dee4-2918-4a79-a507-1867fbb4e9d1",
+        "creationTime": 1702572111254,
+        "lastEditedTime": 1702574890466
       }
     ],
     "footerRows": [
@@ -512,7 +519,70 @@
         "columnId": "5993280f-7ab1-42b8-bb69-57cb73077402",
         "rowId": "9ff3702f-0482-4f79-8bc3-22be39e7edd1",
         "dateTime": null,
-        "markdown": "X11/Wayland"
+        "markdown": "Both"
+      },
+      {
+        "id": "6bb1dfb6-c291-48cb-854a-523cf8880555",
+        "columnId": "e675aadd-0808-4357-abd6-ff1e41377091",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "sway"
+      },
+      {
+        "id": "d40ff84b-324c-455b-9ef2-5e788579df48",
+        "columnId": "1537049e-a370-4409-9d4a-5a5295f71fcc",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "Yes"
+      },
+      {
+        "id": "be4608eb-3e56-46b3-a95b-4bf9610ab933",
+        "columnId": "26d199d3-99b5-4758-8e92-7e153a678c97",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "Yes"
+      },
+      {
+        "id": "4c9a7f0e-5562-47a9-ae1a-2fcc8847c8e6",
+        "columnId": "a81445fb-0d9f-47bc-bc24-24af807b4025",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "Yes"
+      },
+      {
+        "id": "3d11a062-4d87-4c86-9769-660159aef731",
+        "columnId": "65e75684-85b7-48fd-8470-19b4b5df0baf",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": ""
+      },
+      {
+        "id": "bcb19df4-e726-4ede-9b3b-b469a5048a09",
+        "columnId": "5cbf4f51-e81e-4ecc-9918-2a85254c3d37",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "Yes"
+      },
+      {
+        "id": "e43f5070-6669-462d-8ca9-6dffb5b14173",
+        "columnId": "6e8b34ec-92a8-4ef1-bba9-5a3c43eff815",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": ""
+      },
+      {
+        "id": "4d2026c6-4fa1-4d01-995f-6cb5f7dae8a4",
+        "columnId": "5993280f-7ab1-42b8-bb69-57cb73077402",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "Wayland"
+      },
+      {
+        "id": "6558420a-63bf-48da-a6f5-05aa60db30d3",
+        "columnId": "4ad860d3-8fdf-4135-bfdb-ed8060afd122",
+        "rowId": "59608bd5-55fb-4995-bda0-f513b318a745",
+        "dateTime": null,
+        "markdown": "C"
       }
     ],
     "footerCells": [
