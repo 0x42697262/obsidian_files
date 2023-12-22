@@ -2,6 +2,8 @@
   "accentColor": "#d00ba6",
   "theme": "moonstone",
   "cssTheme": "Material Gruvbox",
-  "enabledCssSnippets": [],
-  "baseFontSize": 14
+  "enabledCssSnippets": [
+    "center_table"
+  ],
+  "baseFontSize": 15
 }

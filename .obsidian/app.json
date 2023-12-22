@@ -13,5 +13,6 @@
   "vimMode": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "» Notes/__temporary",
-  "promptDelete": true
+  "promptDelete": true,
+  "showLineNumber": true
 }
