@@ -7,7 +7,7 @@ bibliography: Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & 
 Type: article
 Author: Zhao, Yu-Lin and Jiali, Tang and Huang, Han‐Pang and Wang, Ze and Chen, Tse-Lun and Chiang, Chih-Wei and Chiang, Pen‐Chi
 Journal: Aerosol and Air Quality Research
-Month: 1
+Month: January
 Number: 12
 Pages: 2874--2888
 Publisher: Taiwan Association for Aerosol Research

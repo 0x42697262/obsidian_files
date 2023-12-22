@@ -7,7 +7,7 @@ bibliography: C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalna
 Type: article
 Author: C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi
 Journal: Journal of physics
-Month: 9
+Month: September
 Number: 1
 Pages: 12016
 Publisher: IOP Publishing
