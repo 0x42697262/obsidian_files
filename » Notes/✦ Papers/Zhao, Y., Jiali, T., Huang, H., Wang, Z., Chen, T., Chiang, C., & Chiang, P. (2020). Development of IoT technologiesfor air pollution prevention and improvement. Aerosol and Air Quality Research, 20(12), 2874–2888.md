@@ -18,6 +18,8 @@ Doi: 10.4209/aaqr.2020.05.0255
 Url: https://doi.org/10.4209/aaqr.2020.05.0255
 subject: CMSC176
 ---
+
+![[Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement.pdf]]
 # Description
 **Main Problem**: Ambient air pollution as potential air pollutants
 **Solution**: Development of instruments measurements and monitoring system for ambient air quality
