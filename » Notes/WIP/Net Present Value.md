@@ -5,7 +5,7 @@ tags:
   - project-management/project-charter
 ---
 
-# Net Value Present
+# Net Present
 
 ---
 

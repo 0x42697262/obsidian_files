@@ -42,6 +42,6 @@ tags:
 ---
 
 Please see:
-- [[Net Value Present]]
+- [[Net Present Value]]
 - [[Return on Investment]]
 - [[Payback Analysis]]

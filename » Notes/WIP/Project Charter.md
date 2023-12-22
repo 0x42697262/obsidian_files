@@ -57,7 +57,7 @@ There are five common techniques:
 		2. Opportunity
 		3. Directive
 3. **Performing Net Present Value or other financial analyses**
-	1. [[Net Value Present|Net Value Present]]
+	1. [[Net Present Value|Net Present Value]]
 		1. Expected monetary gain or loss from a project
 	2. [[Return on Investment|Return On Investment]] (ROI)
 		1. Approximate measure of an investment's profitability
