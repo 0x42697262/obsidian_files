@@ -16,7 +16,11 @@ Volume: 2027
 Year: 2021
 DOI: 10.1088/1742-6596/2027/1/012017
 Url: https://doi.org/10.1088/1742-6596/2027/1/012017
+subject: CMSC176
 ---
+
+![[C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.pdf]]
+
 
 **Main goal**: To assess length of vehicle road occupancy using magnetic sensor nodes, with test resulting in 100% accuracy in vehicle detection, 97% high speed and length rates, and relatively low error rate estimate in road usage
 
