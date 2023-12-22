@@ -23,14 +23,11 @@
 		{"id":"ea3cf17bc3243ebe","type":"text","text":"# ForLoop","x":87,"y":-360,"width":140,"height":50,"color":"4"},
 		{"id":"3bd9c9681a4b2492","type":"text","text":"","x":517,"y":106,"width":250,"height":60},
 		{"id":"26af8feb0a41ac0b","type":"text","text":"for","x":2018,"y":-889,"width":50,"height":60},
-		{"id":"c12294ae9998309a","type":"text","text":"# Conditional Statement","x":1644,"y":-765,"width":176,"height":90,"color":"6"},
-		{"id":"84fc84af08033c2e","type":"text","text":"# Variable Declaration Statement","x":1644,"y":-620,"width":176,"height":100,"color":"6"},
-		{"id":"659d09d00dc2b92e","type":"text","text":"# Statement","x":1000,"y":-675,"width":155,"height":60,"color":"6"},
+		{"id":"659d09d00dc2b92e","type":"text","text":"# Statement","x":1000,"y":-675,"width":160,"height":55,"color":"6"},
 		{"id":"673312532ef0f7b0","type":"text","text":"## Conditional Expression","x":2667,"y":-949,"width":148,"height":80,"color":"5"},
 		{"id":"e2a6db364334d4a0","type":"text","text":";","x":2535,"y":-889,"width":50,"height":60},
 		{"id":"86ca364d53f15a7f","type":"text","text":"(","x":2120,"y":-889,"width":50,"height":60},
 		{"id":"774811e2764e310d","type":"text","text":"## Initialization","x":2269,"y":-929,"width":173,"height":60,"color":"5"},
-		{"id":"0ebcfde09cd9f52a","type":"text","text":"# For Loop Statement","x":1664,"y":-899,"width":156,"height":85,"color":"6"},
 		{"id":"1c1d6ce067ec2645","type":"text","text":";","x":2900,"y":-889,"width":50,"height":60},
 		{"id":"04f43943be11e711","type":"text","text":"## Update Expression","x":3055,"y":-949,"width":148,"height":80,"color":"5"},
 		{"id":"6aa147e05e215d4f","type":"text","text":")","x":3287,"y":-889,"width":50,"height":60},
@@ -39,7 +36,10 @@
 		{"id":"d43d6af33061037d","type":"text","text":"}","x":3667,"y":-829,"width":50,"height":60},
 		{"id":"780fe7b3764cb3d5","type":"text","text":"##  Expression","x":3395,"y":-963,"width":148,"height":69,"color":"5"},
 		{"id":"0cc610268f35f436","type":"text","text":"# Statement","x":3745,"y":-829,"width":155,"height":60,"color":"6"},
-		{"id":"aeee92fcf6508db4","type":"text","text":"# \\<EOF\\>","x":1200,"y":-780,"width":121,"height":60,"color":"1"}
+		{"id":"aeee92fcf6508db4","type":"text","text":"# \\<EOF\\>","x":1664,"y":-989,"width":121,"height":60,"color":"1"},
+		{"id":"0ebcfde09cd9f52a","type":"text","text":"# For Loop Statement","x":1664,"y":-899,"width":156,"height":85,"color":"6"},
+		{"id":"c12294ae9998309a","type":"text","text":"# Conditional Statement","x":1664,"y":-765,"width":176,"height":90,"color":"6"},
+		{"id":"84fc84af08033c2e","type":"text","text":"# Variable Declaration Statement","x":1664,"y":-620,"width":176,"height":100,"color":"6"}
 	],
 	"edges":[
 		{"id":"d480b2d7419d0f35","fromNode":"ea3cf17bc3243ebe","fromSide":"bottom","toNode":"f077823305d578fd","toSide":"top"},
