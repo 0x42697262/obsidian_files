@@ -10,4 +10,5 @@ tags:
 
 ---
 
+- [[systemctl]]
 - [[systemd-analyze]]
