@@ -22,7 +22,7 @@ randomly_read: "true"
 ![[Kadena, Esmeralda & Gupi, Marsidi. Human factors in cybersecurity׃ risks and impacts. 2021.pdf]]
 
 How is it attacked? Human Factor -> [[Weakest Link]]
-How is it defended? [[Multie-Factor Authentication]], [[Network Behavioral Analysis]], Threat Intelligence, [[Sandbox]]ing, forensics, back-up and mirroring, web [[Firewall]]s
+How is it defended? [[Multi-Factor Authentication]], [[Network Behavioral Analysis]], Threat Intelligence, [[Sandbox]]ing, forensics, back-up and mirroring, web [[Firewall]]s
 To who? An issue for individuals and organizations
 For what? Monetary gains. Disrupt operations.
 Medium? Malware.
