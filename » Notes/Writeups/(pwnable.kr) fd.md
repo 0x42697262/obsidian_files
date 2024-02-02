@@ -167,8 +167,7 @@ An argument must be passed and converted to an integer. After some trial and err
 At this point, it's as easy as typing the password `LETMEWIN`.
 
 ```sh
-fd@pwnable:~$ ./fd 4660
-LETMEWIN
+fd@pwnable:~$ echo "LETMEWIN" | ./fd 4660
 good job :)
 mommy! I think I know what a file descriptor is!!
 ```
