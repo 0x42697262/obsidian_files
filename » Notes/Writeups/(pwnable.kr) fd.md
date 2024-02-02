@@ -172,6 +172,14 @@ good job :)
 mommy! I think I know what a file descriptor is!!
 ```
 
+This works because 
+
+```c
+int fd = atoi( argv[1] ) - 0x1234; // must be 0, 1, or 2
+```
+
+would evaluate to `0`.
+
 # Documentation of Flags/Proofs
 
 ---
