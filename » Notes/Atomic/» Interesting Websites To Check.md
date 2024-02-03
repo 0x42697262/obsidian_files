@@ -3,21 +3,45 @@ title: Interesting Websites To Check
 date: 2023-10-14
 tags:
   - resources
+  - websites
 ---
 
 # Interesting Websites To Check
 
 ---
 
-## Table of Contents (i guess?)
-
-- [[» Interesting Websites To Check#Computer Science|Computer Science]]
-- [[» Interesting Websites To Check#Pentesting|Pentesting]]
-- [[» Interesting Websites To Check#Something Touhou (東方Project) Related|Something Touhou (東方Project) Related]]
-- [[» Interesting Websites To Check#Something on Github|Random Stuffs on Github]]
-- [[#Articles]]
-- [[#Windows]]
-- [[#Uncategorized]]
+- 東方 Project
+	- [Game Tools and Modification](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications)
+	- [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
+	- [Touhou Lossless Music Collection](http://illusionaryscore.web.fc2.com/score.html)
+- Articles
+	- [A Compression Resistant Steganography Based on Differential Manchester Code](https://www.mdpi.com/2073-8994/13/2/165)
+	- [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
+- [Cryptohack](https://cryptohack.org/) `A fun, free platform for learning modern cryptography`
+- CVEs
+	- [(CVE-2022-21894) baton drop: Secure Boot Security Feature Bypass Vulnerability](https://github.com/Wack0/CVE-2022-21894)
+- [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/) `Image "Cloaking" for Personal Privacy`
+- [FCC ID Database](https://fccid.io/)
+- Github
+	- [Anime Girls Holding Programming Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books")
+	- [Lenovo Ideapad Gaming 3 2021 Linux RGB Keyboard Light Controller](https://github.com/InstinctEx/lenovo-ideapad-legion-keyboard-led)
+	- [Text to Handwriting](https://saurabhdaware.github.io/text-to-handwriting/)
+- [Nightmare](https://guyinatuxedo.github.io/) `Nightmare is an intro to binary exploitation / reverse engineering course based around ctf challenges`
+- [pwn.college](https://pwn.college/) `pwn.college is an education platform for students (and other interested parties) to learn about, and practice, core cybersecurity concepts in a hands-on fashion`
+- Resources
+	- [Anna's Archive](https://annas-archive.org/)
+	- [LinkedIn Skill Assessments Quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
+	- [Ripped](https://ripped.guide/) `This is a collection of sites and tools that are trusted by the community.`
+	- [Skull Security Wiki](https://wiki.skullsecurity.org/index.php/Main_Page)
+- [Reverse Engineering 101](https://malwareunicorn.org/workshops/re101.html)
+- Tutorials
+	- [Coding Interview University](https://github.com/jwasham/coding-interview-university)
+	- [Guide for GPU Passthrough on laptop with Optimus Manager](https://github.com/mysteryx93/GPU-Passthrough-with-Optimus-Manager-Guide)
+	- [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+	- [Resume Making](https://www.careercup.com/resume)
+	- [Security Study Plan](https://github.com/jassics/security-study-plan)
+	- [Summary of 'Clean code'](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
+- [XToolBox](https://github.com/xemulat/XToolbox) `A collection of 150+ Windows 10/11 optimization and tweaking apps! `
 
 ---
 
@@ -27,7 +51,6 @@ tags:
 - https://missing.csail.mit.edu/2020/version-control/
 - https://cs.paperswithcode.com/
 - http://gameprogrammingpatterns.com/contents.html
-- [Summary of 'Clean code'](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
 - https://github.com/bmorelli25/Become-A-Full-Stack-Web-Developer
 - https://github.com/Developer-Y/cs-video-courses
 - https://github.com/ossu/computer-science
@@ -45,44 +68,3 @@ tags:
 - https://github.com/hmaverickadams/Beginner-Network-Pentesting
 - https://github.com/cider-security-research/cicd-goat
 - https://github.com/vavkamil/awesome-vulnerable-apps
-
-### Cryptography
-
-- https://cryptohack.org/
-
-### Something Touhou (東方 Project) Related
-
-- [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
-- [Touhou Lossless Music Collection](http://illusionaryscore.web.fc2.com/score.html)
-- [Game Tools and Modification](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications)
-
-### Something on Github
-
-- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
-- [baton drop (CVE-2022-21894): Secure Boot Security Feature Bypass Vulnerability](https://github.com/Wack0/CVE-2022-21894)
-- [Lenovo Ideapad Gaming 3 2021 Linux RGB Keyboard Light Controller](https://github.com/InstinctEx/lenovo-ideapad-legion-keyboard-led)
-- [Guide for GPU Passthrough on laptop with Optimus Manager](https://github.com/mysteryx93/GPU-Passthrough-with-Optimus-Manager-Guide)
-- [https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books")
-- https://saurabhdaware.github.io/text-to-handwriting/
-- https://github.com/practical-tutorials/project-based-learning
-- https://github.com/jassics/security-study-plan
-- https://github.com/jwasham/coding-interview-university
-
-### Articles
-
-- [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
-
-### Windows
-
-- [XToolBox](https://github.com/xemulat/XToolbox)
-
-### Image Processing
-
-- [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/)
-
-### Uncategorized
-
-- https://wiki.skullsecurity.org/index.php/Main_Page
-- https://ripped.guide/
-- https://www.careercup.com/resume
-- https://annas-archive.org/
