@@ -33,6 +33,7 @@ tags:
 	- [LinkedIn Skill Assessments Quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
 	- [Ripped](https://ripped.guide/) `This is a collection of sites and tools that are trusted by the community.`
 	- [Skull Security Wiki](https://wiki.skullsecurity.org/index.php/Main_Page)
+	- [Assembly Language / Reversing / Malware Analysis / Game Hacking](https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121)
 - [Reverse Engineering 101](https://malwareunicorn.org/workshops/re101.html)
 - Tutorials
 	- [Coding Interview University](https://github.com/jwasham/coding-interview-university)
@@ -68,3 +69,8 @@ tags:
 - https://github.com/hmaverickadams/Beginner-Network-Pentesting
 - https://github.com/cider-security-research/cicd-goat
 - https://github.com/vavkamil/awesome-vulnerable-apps
+
+
+### Awesomes
+
+- [awesome-malware-analysys](https://github.com/rshipp/awesome-malware-analysis#Resources)
