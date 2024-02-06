@@ -12,7 +12,6 @@ tags:
 - have countable or finite outcomes
 - can be a histogram, list, tables, etc.
 
-
 ## Sample discrete probability distributions with their [[Probability Mass Function]]
 
 - [[Uniform Discrete Distribution]]
@@ -24,3 +23,4 @@ tags:
 - [[Geometric Distribution]]
 - [[Negative Binomial Distribution]]
 - ...
+

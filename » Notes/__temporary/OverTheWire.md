@@ -1,11 +1,3 @@
----
-type: note
-tags:
-	- OverTheWire
-	- capture the flag
-	- writeup
----
-
 # OverTheWire
 
 ohhh, i think i shouldn't be posting this publicly but hmmmm let me think
