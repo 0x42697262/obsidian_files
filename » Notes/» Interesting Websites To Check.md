@@ -17,21 +17,22 @@ tags:
 - Articles
 	- [A Compression Resistant Steganography Based on Differential Manchester Code](https://www.mdpi.com/2073-8994/13/2/165)
 	- [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
-- [Cryptohack](https://cryptohack.org/) `A fun, free platform for learning modern cryptography`
+- [Cryptohack](https://cryptohack.org/) *A fun, free platform for learning modern cryptography*
 - CVEs
 	- [(CVE-2022-21894) baton drop: Secure Boot Security Feature Bypass Vulnerability](https://github.com/Wack0/CVE-2022-21894)
-- [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/) `Image "Cloaking" for Personal Privacy`
+- [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/) *Image "Cloaking" for Personal Privacy*
 - [FCC ID Database](https://fccid.io/)
 - Github
 	- [Anime Girls Holding Programming Books](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books")
 	- [Lenovo Ideapad Gaming 3 2021 Linux RGB Keyboard Light Controller](https://github.com/InstinctEx/lenovo-ideapad-legion-keyboard-led)
 	- [Text to Handwriting](https://saurabhdaware.github.io/text-to-handwriting/)
-- [Nightmare](https://guyinatuxedo.github.io/) `Nightmare is an intro to binary exploitation / reverse engineering course based around ctf challenges`
-- [pwn.college](https://pwn.college/) `pwn.college is an education platform for students (and other interested parties) to learn about, and practice, core cybersecurity concepts in a hands-on fashion`
+	- [iced](https://github.com/iced-rs/iced) *A cross-platform GUI library for Rust, inspired by Elm*
+- [Nightmare](https://guyinatuxedo.github.io/) *Nightmare is an intro to binary exploitation / reverse engineering course based around ctf challenges*
+- [pwn.college](https://pwn.college/) *pwn.college is an education platform for students (and other interested parties) to learn about, and practice, core cybersecurity concepts in a hands-on fashion*
 - Resources
 	- [Anna's Archive](https://annas-archive.org/)
 	- [LinkedIn Skill Assessments Quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
-	- [Ripped](https://ripped.guide/) `This is a collection of sites and tools that are trusted by the community.`
+	- [Ripped](https://ripped.guide/) *This is a collection of sites and tools that are trusted by the community.*
 	- [Skull Security Wiki](https://wiki.skullsecurity.org/index.php/Main_Page)
 	- [Assembly Language / Reversing / Malware Analysis / Game Hacking](https://gist.github.com/muff-in/ff678b1fda17e6188aa0462a99626121)
 - [Reverse Engineering 101](https://malwareunicorn.org/workshops/re101.html)
@@ -42,7 +43,7 @@ tags:
 	- [Resume Making](https://www.careercup.com/resume)
 	- [Security Study Plan](https://github.com/jassics/security-study-plan)
 	- [Summary of 'Clean code'](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
-- [XToolBox](https://github.com/xemulat/XToolbox) `A collection of 150+ Windows 10/11 optimization and tweaking apps! `
+- [XToolBox](https://github.com/xemulat/XToolbox) *A collection of 150+ Windows 10/11 optimization and tweaking apps! *
 
 ---
 
