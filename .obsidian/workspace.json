@@ -6,15 +6,42 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
-        "dimension": 68.38709677419355,
+        "dimension": 51.64528722810932,
         "children": [
           {
-            "id": "a23183123c35d7e0",
+            "id": "c7d1b4145205aa2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+                "file": "» Notes/✦ Papers.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4095144323008c37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "» Notes/WIP/Call Stack.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            },
+            "group": "8ef172bce58defaa"
+          },
+          {
+            "id": "e061e755d27a768a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/TODO List.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -22,12 +49,12 @@
             }
           },
           {
-            "id": "cf6d8b0b2a8a36b2",
+            "id": "89c925555d806426",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/Atomic/Rust.md",
+                "file": "» Notes/Atomic/Memory Layouts — C.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,69 +62,88 @@
             }
           },
           {
-            "id": "b4949bc794510eb8",
+            "id": "01a8489c3315348c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+                "file": "» Notes/Atomic/Capture The Flag.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
-        "id": "e89c2ee62d00449b",
-        "type": "tabs",
-        "dimension": 31.61290322580645,
+        "id": "b75a6a07915fcf9f",
+        "type": "split",
+        "dimension": 48.35471277189068,
         "children": [
           {
-            "id": "b0d201fb14d68b6d",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 2,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": false,
-                  "showArrow": true,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.8943780441363218,
-                  "close": true
+            "id": "bd1ff63453ad17a1",
+            "type": "tabs",
+            "dimension": 65.45454545454545,
+            "children": [
+              {
+                "id": "20eb1fb62f8910ad",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "» Notes/PDFs/Smashing The Stack For Fun and Profit.pdf"
+                  }
                 }
               }
-            }
+            ]
           },
           {
-            "id": "14103f26cad56a3c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
+            "id": "51c5583dfa5f6aff",
+            "type": "tabs",
+            "dimension": 34.54545454545455,
+            "children": [
+              {
+                "id": "99c87c9456ab68cc",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "» Notes/WIP/Call Stack.md",
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": true,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.5932168426730089,
+                      "close": true
+                    }
+                  }
+                },
+                "group": "8ef172bce58defaa"
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -126,8 +172,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "tag:#nixos",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
@@ -159,11 +205,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 282.51103591918945
+    "width": 259.5
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -179,7 +226,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+                "file": "Templates/TODO List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,7 +243,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+                "file": "Templates/TODO List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -227,7 +274,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md"
+                "file": "Templates/TODO List.md"
               }
             }
           },
@@ -253,7 +300,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -263,7 +312,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md"
+                "file": "Templates/TODO List.md"
               }
             }
           }
@@ -290,54 +339,56 @@
       "templates:Insert template": false
     }
   },
-  "active": "a23183123c35d7e0",
+  "active": "e061e755d27a768a",
   "lastOpenFiles": [
-    "» Notes/✦ Papers/Resource/Zhao, Y., Jiali, T., Huang, H., Wang, Z., Chen, T., Chiang, C., & Chiang, P. (2020). Development of IoT technologiesfor air pollution prevention and improvement. Aerosol and Air Quality Research, 20(12), 2874–2888.md",
-    "» Notes/✦ Papers/Resource/C. Vennila, K. Chandraprabha, M. Vijayaraj, S. Kavitha, S. Vimalnath, K. Kalaichelvi (2021). Traffic controlling and monitoring using IoT. Journal of physics, 2027(1), 012017.md",
+    "Plugins/Daily Notes/2024-02-07.md",
+    "Templates/TODO List.md",
+    "Plugins/Daily Notes/2024-02-06.md",
+    "» Notes/WIP/Call Stack.md",
+    "» Notes/__temporary/QEMU.md",
     "» Notes/✦ Papers.md",
-    "» Notes/Atomic/Rust.md",
-    "» Notes/✦ Papers/General.md",
-    "» Notes/Atomic/» Interesting Websites To Check.md",
-    "Plugins/Notion/window manager checklist.table",
-    "Plugins/Canvas/Hyprland.canvas",
-    "Plugins/Excalidraw/Drawing 2023-12-21 05.03.24.excalidraw.md",
-    "Plugins/Excalidraw/Drawing 2023-12-21 05.03.15.excalidraw.md",
-    "Plugins/Daily Notes/2023-11-08.md",
+    "» Notes/Atomic/Capture The Flag.md",
+    "» Notes/Atomic/Memory Layouts — C.md",
+    "» Notes/PDFs/Smashing The Stack For Fun and Profit.pdf",
+    "Plugins/Daily Notes/2023-08-29.md",
+    "Plugins/Daily Notes/2023-09-07.md",
+    "Plugins/Daily Notes/2023-10-02.md",
+    "Plugins/Daily Notes/2023-11-09.md",
+    "Plugins/Daily Notes/2023-11-11.md",
     "Plugins/Daily Notes/2023-11-12.md",
     "Plugins/Daily Notes/2023-11-20.md",
-    "Plugins/Daily Notes/2023-11-11.md",
-    "Plugins/Daily Notes/2023-11-09.md",
-    "Plugins/Daily Notes/2023-12-19.md",
-    "Plugins/Daily Notes/2023-12-18.md",
-    "Plugins/Daily Notes/2023-12-15.md",
-    "» Notes/Atomic/Project Management — Constraints.md",
+    "Plugins/Daily Notes/2023-11-22.md",
+    "Plugins/Daily Notes/2023-11-21.md",
+    "» Notes/Writeups/(root-me.org) Encoding - UU.md",
+    "Plugins/Daily Notes/2023-11-30.md",
     "Plugins/Daily Notes/2023-12-01.md",
-    "» Notes/WIP/Net Present Value.md",
-    "» Notes/WIP/Payback Analysis.md",
-    "» Notes/WIP/Return on Investment.md",
-    "» Notes/WIP/Project Charter.md",
-    "» Notes/Atomic/Project Cost Management.md",
-    "» Notes/__orphans/Critical Chain Scheduling.md",
-    "» Notes/__orphans/Critical Chain Method.md",
-    "» Notes/Atomic/Base64.md",
-    "Plugins/Notion/Untitled.table",
-    "» Notes/Writeups",
+    "Plugins/Daily Notes/2023-12-15.md",
+    "Plugins/Daily Notes/2023-12-18.md",
+    "Plugins/Daily Notes/2023-12-19.md",
+    "Plugins/Daily Notes/2023-12-22.md",
+    "Plugins/Daily Notes/2023-12-25.md",
+    "Plugins/Daily Notes/2023-12-27.md",
+    "» Notes/PDFs/Smashing The Stack For Fun and Profit",
+    "» Notes/PDFs",
+    "» Notes/Archived",
+    "» Notes/✦ Papers/__documents/Kadena, Esmeralda & Gupi, Marsidi. Human factors in cybersecurity׃ risks and impacts. 2021.pdf",
+    "» Notes/✦ Papers/__documents/dick2005.pdf",
+    "» Notes/✦ Papers/__documents/D. Buckley, K. Chen and J. Knowles, \"Predicting skill from gameplay input to a first-person shooter,\" 2013 IEEE Conference on Computational Inteligence in Games (CIG), Niagara Falls, ON, Canada, 2013.pdf",
+    "» Notes/✦ Papers/__documents/mahlmann2010.pdf",
+    "» Notes/✦ Papers/__documents/Hagiwara, G., Akiyama, D., Furukado, R. & Takeshita, S. (2020). A study on psychological training of eSports using digital games׃ Focusing on rhythm game. Journal of Human Sport and Exercise, 15(3proc), S495-S503.pdf",
+    "Attachments/Memory_Layouts_—_C.2.png",
+    "Attachments/Memory_Layouts_—_C.1.png",
+    "Attachments/Pasted image 20240108173900.png",
+    "Attachments/Pasted image 20240108173904.png",
+    "» Notes/✦ Papers/__documents/makarov2017.pdf",
+    "Plugins/Canvas/Hyprland.canvas",
     "Plugins/Excalidraw/Scripts/Downloaded/Mindmap format.svg",
-    "» Notes/✦ Papers/Resource",
     "Attachments/Pasted Image 20231123155426_934.png",
     "Plugins/Canvas/DFA.canvas",
     "Attachments/Pasted Image 20231110190127_936.png",
-    "Plugins/Excalidraw/Scripts/Downloaded",
-    "Plugins/Excalidraw/Scripts",
     "Attachments/Composition of the Universe.png",
     "Attachments/Pasted image 20231108203658.png",
     "Attachments/Pasted Image 20231108024832_292.png",
-    "Attachments/Pasted image 20231106205002.png",
-    "Attachments/Pasted image 20231106182758.png",
-    "Attachments/Pasted image 20231106182323.png",
-    "Attachments/Pasted image 20231024142949.png",
-    "» Notes/Atomic",
-    "» Notes/WIP",
     "Plugins/Canvas/Internet of Things.canvas",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",
@@ -345,8 +396,6 @@
     "Plugins/Canvas/DataCommunicationsAndNetworking.canvas",
     "Plugins/Canvas/Papers.canvas",
     "DataCommunicationsAndNetworking.canvas",
-    "Plugins/Canvas/Machine Learning.canvas",
-    "Plugins/Citations/references.bib",
-    "Plugins/Citations"
+    "Plugins/Canvas/Machine Learning.canvas"
   ]
 }

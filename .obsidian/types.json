@@ -4,6 +4,8 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "date": "date",
-    "Pages": "text"
+    "Pages": "text",
+    "Month": "text",
+    "Volume": "text"
   }
 }
