@@ -24,4 +24,4 @@ When a program is being run, the [[Address Space]] is divided into four [[#secti
 
 ### Heap
 
-### Stack
+### [[Stack]]
