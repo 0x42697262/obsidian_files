@@ -13,13 +13,13 @@ tags:
 
 ## Description
 
-A `.pcap` file is provided as a challenge. The goal is to analyze and _find the password_ in the packets that contains [[File Transfer Protocol|FTP]] network logs.
+A `.pcap` file is provided as a challenge. The goal is to analyze and _find the password_ in the packets that contains File Transfer Protocol network logs.
 
 ## Solution
 
-Opened [[Wireshark]] and manually inspected each entries line by line. It is not an **efficient** method of doing it. I first analyzed it by packet length. But I did not find anything. So I went ahead to investigate the packets one by one until I found an FTP request that submits a password to the server. The **password** can be found on **packet #11**.
+Opened Wireshark and manually inspected each entries line by line. It is not an **efficient** method of doing it. I first analyzed it by packet length. But I did not find anything. So I went ahead to investigate the packets one by one until I found an FTP request that submits a password to the server. The **password** can be found on **packet #11**.
 
-A better approach to solving this is to use [[TShark]] to analyze the network traffic.
+A better approach to solving this is to use TShark to analyze the network traffic.
 Better approach: `tshark -r <packet file> -Y 'ftp.request.filter == PASS'` and the output should be something like this:
 
 ```sh

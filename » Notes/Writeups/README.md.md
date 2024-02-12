@@ -1,0 +1,1 @@
+This is a specific folder for writing writeups **WITHOUT** any links to my notes. See [[» Capture The Flag]] for a list.

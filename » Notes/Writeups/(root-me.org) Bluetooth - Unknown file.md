@@ -18,7 +18,7 @@ The answer is the sha-1 hash of the concatenation of the MAC address (uppercase)
 
 ## Solution
 
-This is a [[BT Snoop File Format]]. 
+This is a BT Snoop File Format. 
 
 ```
 00000000: 6274 736e 6f6f 7000 0000 0001 0000 03ea  btsnoop.........
@@ -33,10 +33,10 @@ This is a [[BT Snoop File Format]].
 00000020: 00e2 2982 2994 18cb                      ..).)..O...
 ```
 
-Just use [[Wireshark]] at this point... 
+Just use Wireshark at this point... 
 ## Thoughts
 
-This is taking longer than I thought I would expect. I gave up midway and instead used [[Wireshark]] like what others did in the forum. However, I did not expect that the MAC address is reversed since I already found the device name. I assumed that the address is besides the device name and I was correct. Except that when I used `sha1sum` to hash the address and device name, I got the wrong result since the address is supposed to be reversed.
+This is taking longer than I thought I would expect. I gave up midway and instead used Wireshark like what others did in the forum. However, I did not expect that the MAC address is reversed since I already found the device name. I assumed that the address is besides the device name and I was correct. Except that when I used `sha1sum` to hash the address and device name, I got the wrong result since the address is supposed to be reversed.
 
 ---
 

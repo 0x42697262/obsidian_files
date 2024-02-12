@@ -13,13 +13,13 @@ tags:
 
 ## Description
 
-A [[TELNET]] network packet file needs to be analyzed as [[Capture The Flag|CTF]]. The goal is to find the password.
+A TELNET network packet file needs to be analyzed as Capture The Flag. The goal is to find the password.
 
 ## Solution
 
-[[TELNET]] sends the password requests one character of the user password at a time. I thought the method would be similar to a [[File Transfer Protocol]]. To solve this challenge, I used [[Wireshark]] as a tool to filter the packet data with `telnet.data` and then find the frames that contains `Data: Password:` until we find `Data: \r`. I was able to acquire the password by manually checking each frames after filtering the data. This is still an **inefficient** method.
+ TELNET sends the password requests one character of the user password at a time. I thought the method would be similar to a File Transfer Protocol. To solve this challenge, I used Wireshark as a tool to filter the packet data with `telnet.data` and then find the frames that contains `Data: Password:` until we find `Data: \r`. I was able to acquire the password by manually checking each frames after filtering the data. This is still an **inefficient** method.
 
-A better approach of this would be to open up [[Wireshark]] and right click the first frame of a [[TELNET]] frame request then select `Follow -> TCP Stream`. The result looks like this:
+A better approach of this would be to open up Wireshark and right click the first frame of a TELNET frame request then select `Follow -> TCP Stream`. The result looks like this:
 
 ```
 ........... ..!.."..'.....#..%..%........... ..!..".."........P. ....".....b........b.... B.
@@ -115,7 +115,7 @@ $ eexxiitt
 
 ## Thoughts
 
-I don't know how [[TELNET]] protocol works so I looked it up and found out that you cannot easily filter the password in `TShark`. Each character key inputs are sent one at a time which is weird in terms of modern standards. I didn't know that the server would echo back the character input to you except the password. If someone wants to filter out the password, maybe they can create a python script that would look for `Data: Login: ` and `Data: Password: ` to acquire the credentials. Enter key is `Data: \r`.
+I don't know how TELNET protocol works so I looked it up and found out that you cannot easily filter the password in `TShark`. Each character key inputs are sent one at a time which is weird in terms of modern standards. I didn't know that the server would echo back the character input to you except the password. If someone wants to filter out the password, maybe they can create a python script that would look for `Data: Login: ` and `Data: Password: ` to acquire the credentials. Enter key is `Data: \r`.
 
 ---
 

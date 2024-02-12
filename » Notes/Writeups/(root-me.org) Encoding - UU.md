@@ -12,7 +12,7 @@ tags:
 
 ## Details
 
-Get the validation password that is encoded by [[Uuencoding]].
+Get the validation password that is encoded by Uuencoding.
 
 ```
 _=_ 
@@ -27,12 +27,12 @@ end
 
 ## Solution
 
-I used a tool to decode the [[Uuencoding]] text encoding.
+I used a tool to decode the Uuencoding text encoding.
 
 ## Thoughts
 
-I might go and try figure out how [[Uuencoding]] work like [[Base64]].
-
+I might go and try figure out how Uuencoding work like Base64.
+Uuencoding
 ---
 
 - https://www.root-me.org/en/Challenges/Cryptanalysis/Encoding-UU

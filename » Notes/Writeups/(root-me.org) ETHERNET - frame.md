@@ -31,7 +31,7 @@ Open the file as a text file then you will see `Authorization: Basic Y29uZmk6ZGV
 
 ## Thoughts
 
-I knew that this file cannot imported in [[Wireshark]] since it's only a frame data. I would've solved this challenge by manually decoding the frame packet however I am too lazy. Thus, I resorted to using tools to simply convert the hex strings as UTF-8 strings.
+I knew that this file cannot imported in Wireshark since it's only a frame data. I would've solved this challenge by manually decoding the frame packet however I am too lazy. Thus, I resorted to using tools to simply convert the hex strings as UTF-8 strings.
 
 ### Alternative Solutions
 
@@ -45,7 +45,7 @@ Add hexadecimal offsets to the hex data string. Since each line contains 16 byte
 0000D0 ...
 ```
 
-Someone else's solution to this is to use [[xxd]].
+Someone else's solution to this is to use xxd.
 
 ---
 
