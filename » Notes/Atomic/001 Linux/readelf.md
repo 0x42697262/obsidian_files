@@ -10,4 +10,4 @@ tags: []
 
 Displays information about [[Executable and Linkable Format]] files.
 
-- [[readelf — commands]]
+- [[readelf — commands|commands]]
