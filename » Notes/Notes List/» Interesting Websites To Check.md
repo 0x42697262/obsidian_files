@@ -11,9 +11,11 @@ tags:
 ---
 
 - 東方 Project
+	- [Doujinshi Spotify List](https://www.thspotify.moe/)
 	- [Game Tools and Modification](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications)
 	- [Score Sheets](http://illusionaryscore.web.fc2.com/score.html)
-	- [Touhou Lossless Music Collection](http://illusionaryscore.web.fc2.com/score.html)
+	- [Touhou Lossless Music Collection](http://www.tlmc.eu/)
+	- [Touhou Things (incomplete music collection)](http://151.80.40.155)
 - Articles
 	- [A Compression Resistant Steganography Based on Differential Manchester Code](https://www.mdpi.com/2073-8994/13/2/165)
 	- [AES Proposal: Rijndael](https://csrc.nist.gov/csrc/media/projects/cryptographic-standards-and-guidelines/documents/aes-development/rijndael-ammended.pdf)
