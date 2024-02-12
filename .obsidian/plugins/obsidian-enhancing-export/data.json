@@ -44,13 +44,19 @@
     },
     {
       "name": "Typst"
+    },
+    {
+      "name": "Bibliography"
     }
   ],
   "defaultExportDirectoryMode": "Auto",
   "openExportedFile": true,
+  "env": {},
+  "showExportProgressBar": true,
   "version": "1.1.5",
   "lastExportDirectory": {
-    "linux": "/home/birb/Downloads"
+    "linux": "/tmp"
   },
-  "lastExportType": "Html"
+  "lastExportType": "Html",
+  "lastEditName": "PDF"
 }

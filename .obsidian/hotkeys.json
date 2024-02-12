@@ -47,9 +47,9 @@
   "app:delete-file": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
-      "key": "Backspace"
+      "key": "Delete"
     }
   ]
 }
