@@ -1,5 +1,5 @@
 ---
-title: GNU Debugger — Command Hook
+title: GNU Debugger — hook-stop
 date: 2024-02-11
 tags:
   - binary-analysis
@@ -7,7 +7,7 @@ tags:
   - debugger
 ---
 
-# [[GNU Debugger]] — Command Hook
+# [[GNU Debugger]] —  hook-stop
 
 ---
 

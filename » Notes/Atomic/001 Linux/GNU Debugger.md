@@ -11,8 +11,8 @@ tags:
 
 ---
 
-- [[GNU Debugger — set]]
-- [[GNU Debugger — Command Hook]]
+- [[GNU Debugger — set|set]]
+- [[GNU Debugger — hook-stop|hook-stop]]
 
 ## Usage
 
