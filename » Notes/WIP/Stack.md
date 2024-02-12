@@ -12,8 +12,6 @@ tags:
 
 A [[Data Structure]] with contiguous block of memory containing data. Adding and removing data will always be performed at the last data placed[^1].
 
-The top of the stack is a [[Stack Pointer]] [[Register]] whose address dynamically changes at runtime by the [[Kernel]].
-
 ## Example
 
 ```
@@ -25,6 +23,12 @@ The top of the stack is a [[Stack Pointer]] [[Register]] whose address dynamical
 ║       a       ║ ⟵ bottom of the stack
 ╚═══════════════╝
 ```
+
+## Applications
+
+- [[Call Stack]]
+
+
 
 ---
 
