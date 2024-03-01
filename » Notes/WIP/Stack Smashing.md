@@ -18,7 +18,7 @@ A [[Cyberattack]] that causes a [[Stack Overflow]]. This is done by intentionall
 
 ## Concept
 
-When written in memory unsafe languages like C and C++, memory allocations does not have bounding checks[^1]. This means that when a buffer is allocated, there is no built-in mechanism to prevent writing data beyond the intended size of the buffer. An attacker can exploit this vulnerability by overflowing the buffer, causing it to overwrite adjacent memory regions. 
+When written in memory unsafe languages like C and C++, memory allocations does not have bounding checks[^1]. This means that when a buffer is allocated, there is no built-in mechanism to prevent writing data beyond the intended size of the buffer. This vulnerability can be exploited by overflowing the buffer, causing it to overwrite adjacent memory regions. 
 
 
 We can then write specific [[Shellcode]]s which gets executed by the [[Extended Instruction Pointer]].
