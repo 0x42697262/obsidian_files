@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Plugins/Daily Notes/2024-02-12.md",
+                "file": "Plugins/Daily Notes/2024/February/14.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -48,12 +48,12 @@
             }
           },
           {
-            "id": "684a5df1efd6d04b",
+            "id": "9ed5f85e5534ac80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/WIP/Shellcode.md",
+                "file": "» Notes/Atomic/001 Linux/NixOS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,12 +61,25 @@
             }
           },
           {
-            "id": "2c0c834510d248b0",
+            "id": "0f836d4a17e2176b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/WIP/Stack.md",
+                "file": "Plugins/Daily Notes/2024/February/14.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c0d65402b39fc664",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Daily Note.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -74,7 +87,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       },
       {
         "id": "761365365b49b23f",
@@ -91,7 +104,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "» Notes/WIP/Stack Smashing.md",
+                    "file": "Templates/Daily Note.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -132,7 +145,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Plugins/Daily Notes/2024-02-12.md",
+                    "file": "Plugins/Daily Notes/2024/March/01.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
@@ -171,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "p/x",
+                "query": "python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -200,8 +213,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5,
-    "collapsed": true
+    "width": 339.5
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -217,7 +229,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "» Notes/WIP/Stack Smashing.md",
+                "file": "Templates/Daily Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -234,7 +246,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "» Notes/WIP/Stack Smashing.md",
+                "file": "Templates/Daily Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -265,7 +277,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "» Notes/WIP/Stack Smashing.md"
+                "file": "Templates/Daily Note.md"
               }
             }
           },
@@ -295,7 +307,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "» Notes/WIP/Stack Smashing.md"
+                "file": "Templates/Daily Note.md"
               }
             }
           }
@@ -321,44 +333,44 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "a27059f73c840e4b",
+  "active": "c0d65402b39fc664",
   "lastOpenFiles": [
-    "» Notes/WIP/Shellcode.md",
-    "» Notes/WIP/Stack Smashing.md",
-    "Plugins/Daily Notes/2024-02-12.md",
-    "» Notes/Atomic/GNU Compiler Collection.md",
-    "» Notes/WIP/Call Stack.md",
-    "Plugins/Daily Notes/2024-02-10.md",
-    "» Notes/WIP/Stack.md",
-    "» Notes/Atomic/001 Linux/GNU Debugger.md",
-    "» Notes/Atomic/001 Linux/GNU Debugger — Command Hook.md",
-    "» Notes/__temporary/GNU Debugger — set.md",
-    "Plugins/Daily Notes/2024-02-11.md",
-    "» Notes/✦ Papers.md",
-    "Plugins/Daily Notes/2024-02-09.md",
-    "Plugins/Daily Notes/2024-02-01.md",
-    "Plugins/Daily Notes/2024-02-03.md",
-    "Plugins/Daily Notes/2024-02-04.md",
-    "Plugins/Daily Notes/2024-02-05.md",
-    "Plugins/Daily Notes/2024-02-06.md",
-    "Plugins/Daily Notes/2024-02-07.md",
-    "» Notes/Atomic/001 Linux/readelf.md",
-    "» Notes/Atomic/001 Linux/readelf — commands.md",
-    "Plugins/Daily Notes/2024-02-08.md",
-    "» Notes/PDFs/Smashing The Stack For Fun and Profit.pdf",
-    "» Notes/Writeups/(pwnable.kr) fd.md",
-    "» Notes/WIP/airmon-ng.md",
-    "Plugins/Excalidraw/Drawing 2023-09-29 15.29.54.excalidraw.md",
-    "» Notes/Atomic/001 Linux/iwconfig.md",
-    "Plugins/Notion/window manager checklist.loom",
-    "» Notes/PDFs/Smashing The Stack For Fun and Profit",
-    "» Notes/PDFs",
-    "» Notes/Archived",
-    "» Notes/✦ Papers/__documents/Kadena, Esmeralda & Gupi, Marsidi. Human factors in cybersecurity׃ risks and impacts. 2021.pdf",
-    "» Notes/✦ Papers/__documents/dick2005.pdf",
-    "» Notes/✦ Papers/__documents/D. Buckley, K. Chen and J. Knowles, \"Predicting skill from gameplay input to a first-person shooter,\" 2013 IEEE Conference on Computational Inteligence in Games (CIG), Niagara Falls, ON, Canada, 2013.pdf",
-    "» Notes/✦ Papers/__documents/mahlmann2010.pdf",
-    "» Notes/✦ Papers/__documents/Hagiwara, G., Akiyama, D., Furukado, R. & Takeshita, S. (2020). A study on psychological training of eSports using digital games׃ Focusing on rhythm game. Journal of Human Sport and Exercise, 15(3proc), S495-S503.pdf",
+    "Plugins/Daily Notes/2024/March/01.md",
+    "Plugins/Daily Notes/2024/February/25.md",
+    "Plugins/Daily Notes/2024/February/29.md",
+    "Templates/Daily Note.md",
+    "Plugins/Daily Notes/2024/March",
+    "Plugins/Daily Notes/2024/January/25.md",
+    "Plugins/Daily Notes/2024/January/26.md",
+    "Plugins/Daily Notes/2024/January/30.md",
+    "Plugins/Daily Notes/2024/January/23.md",
+    "Plugins/Daily Notes/2024/January/18.md",
+    "Plugins/Daily Notes/2024/January/17.md",
+    "Plugins/Daily Notes/2024/January/11.md",
+    "Plugins/Daily Notes/2024/January/08.md",
+    "Plugins/Daily Notes/2024/January/07.md",
+    "Plugins/Daily Notes/2024/January/04.md",
+    "Plugins/Daily Notes/2024/January/03.md",
+    "Plugins/Daily Notes/2024/January/02.md",
+    "Plugins/Daily Notes/2024/February/23.md",
+    "Plugins/Daily Notes/2024/February/22.md",
+    "Plugins/Daily Notes/2024/February/20.md",
+    "Plugins/Daily Notes/2024/February/16.md",
+    "Plugins/Daily Notes/2024/February/18.md",
+    "Plugins/Daily Notes/2024/February/17.md",
+    "Plugins/Daily Notes/2024/February/15.md",
+    "Plugins/Daily Notes/2024/February/14.md",
+    "Plugins/Daily Notes/2024/February/12.md",
+    "Plugins/Daily Notes/2024/February/11.md",
+    "Plugins/Daily Notes/2024/February",
+    "Plugins/Daily Notes/2024/January",
+    "Plugins/Daily Notes/2024",
+    "Plugins/Daily Notes/2023/December",
+    "Plugins/Daily Notes/2023/November",
+    "Plugins/Daily Notes/2023/October",
+    "Plugins/Daily Notes/2023/September",
+    "Plugins/Daily Notes/2023/August",
+    "Plugins/Daily Notes/2023",
     "Attachments/Memory_Layouts_—_C.2.png",
     "Attachments/Memory_Layouts_—_C.1.png",
     "Attachments/Pasted image 20240108173900.png",
