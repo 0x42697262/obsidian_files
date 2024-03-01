@@ -1,12 +1,12 @@
 ---
-title: Memory Layouts — C
+title: Memory Layout — C
 date: 2024-01-25
 tags:
   - memory-allocation
   - CMSC134
 ---
 
-# Memory Layouts — C
+# Memory Layout — C
 
 ---
 

@@ -1,16 +1,15 @@
 ---
-title: OSI Model
+title: Open Systems Interconnection Model
 date: 2023-09-26
 tags:
-  - data-communication/networking
-  - networking/osi-model
+  - computer-networking/models
 ---
 
-# OSI Model (Open Systems Interconnection Model)
+# Open Systems Interconnection Model
 
 ---
 
-OSI Model is a conceptual framework used to describe the functions of a [[Networking System|networking system]].
+OSI Model is a conceptual framework used to describe the functions of a [[Computer Networking|networking system]].
 
 The purpose of OSI model is to show how to facilitate communication between different systems without requiring changes to the logic of the underlying hardware and software. This allows communication between all types of computer systems.
 
