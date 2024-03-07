@@ -33,6 +33,6 @@ tags:
 
 ---
 
-- [[Networking System|Networking System]]
+- [[Computer Networking|Computer Networking]]
 - [[Signal Transmission|Signal Transmission]]
 - [[Bandwidth (Signal Processing)]]

@@ -9,7 +9,7 @@ tags:
 
 ---
 
-- Layer 2 in the [[OSI Model]]
+- Layer 2 in the [[Open Systems Interconnection Model]]
 - Transforms the physical layer, a raw transmission facility, to a link responsible for node-to-node (hop-to-hop) communication
 
 ---

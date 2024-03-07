@@ -9,7 +9,7 @@ tags:
 
 ---
 
-The lowest layer of the [[OSI Model]] is concerned with electrically or optically transmitting raw unstructured data data bits across the network from the physical layer of the sending device to the physical layer of the receiving device.
+The lowest layer of the [[Open Systems Interconnection Model]] is concerned with electrically or optically transmitting raw unstructured data data bits across the network from the physical layer of the sending device to the physical layer of the receiving device.
 
 It can include specifications such as voltages, pin layout, cabling, and radio frequencies. At the physical layer, one might find "physical" resources such as network hubs, cabling, repeaters, network adapters, or modems.
 
