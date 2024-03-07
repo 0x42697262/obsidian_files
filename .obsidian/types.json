@@ -3,7 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "date": "date",
+    "date": "text",
     "Pages": "text",
     "Month": "text",
     "Volume": "text"

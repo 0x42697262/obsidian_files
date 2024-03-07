@@ -6,7 +6,7 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
-        "dimension": 62.956989247311824,
+        "dimension": 46.11154752553025,
         "children": [
           {
             "id": "c7d1b4145205aa2d",
@@ -15,32 +15,6 @@
               "type": "markdown",
               "state": {
                 "file": "» Notes/✦ Papers.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "617faf4b912b8b4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plugins/Daily Notes/2024/February/14.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a27059f73c840e4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "» Notes/WIP/Stack Smashing.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -61,54 +35,69 @@
             }
           },
           {
-            "id": "0f836d4a17e2176b",
+            "id": "b1f580cbbc815d2f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Plugins/Daily Notes/2024/February/14.md",
+                "file": "» Notes/Atomic/Computer Security.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
+            },
+            "group": "c6c3e9e65ac89946"
           },
           {
-            "id": "c0d65402b39fc664",
+            "id": "58a9c750e01c6783",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Daily Note.md",
+                "file": "» Notes/Atomic/Certified Information Systems Security Professional.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
+            },
+            "group": "f3bd19f39112f850"
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       },
       {
-        "id": "761365365b49b23f",
+        "id": "bda53a30f7b8af32",
         "type": "split",
-        "dimension": 37.04301075268817,
+        "dimension": 53.888452474469766,
         "children": [
           {
-            "id": "93fa38e3b843bfd0",
+            "id": "df0b5406ab9bb46b",
             "type": "tabs",
             "children": [
               {
-                "id": "fc2d83905cc5fbf7",
+                "id": "f19a06c550808eda",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Plugins/Daily Notes/2024/February/25.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "49defa68cc2f284c",
                 "type": "leaf",
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Templates/Daily Note.md",
+                    "file": "» Notes/Atomic/Computer Security.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
-                      "localJumps": 1,
+                      "localJumps": 2,
                       "localBacklinks": true,
                       "localForelinks": true,
                       "localInterlinks": false,
@@ -127,25 +116,62 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.7795948495124775,
+                      "scale": 0.7503583012156309,
                       "close": true
                     }
                   }
-                }
+                },
+                "group": "c6c3e9e65ac89946"
+              },
+              {
+                "id": "6acfea051fc0a762",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "» Notes/Atomic/Certified Information Systems Security Professional.md",
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.6711870912854228,
+                      "close": true
+                    }
+                  }
+                },
+                "group": "f3bd19f39112f850"
               }
             ]
           },
           {
-            "id": "bbceaf71cd741b08",
+            "id": "304d168cb8cee6be",
             "type": "tabs",
             "children": [
               {
-                "id": "e291b1c5b02ce8cb",
+                "id": "e0ebc51db7f43516",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Plugins/Daily Notes/2024/March/01.md",
+                    "file": "Plugins/Daily Notes/2024/March/06.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
@@ -184,7 +210,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "python",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -209,11 +235,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 339.5,
+    "collapsed": true
   },
   "right": {
     "id": "68e330dec2c08a37",
@@ -229,7 +257,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Daily Note.md",
+                "file": "Plugins/Daily Notes/2024/March/06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -246,7 +274,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Daily Note.md",
+                "file": "Plugins/Daily Notes/2024/March/06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -277,7 +305,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Daily Note.md"
+                "file": "Plugins/Daily Notes/2024/March/06.md"
               }
             }
           },
@@ -307,12 +335,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Templates/Daily Note.md"
+                "file": "Plugins/Daily Notes/2024/March/06.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -333,35 +361,36 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "c0d65402b39fc664",
+  "active": "e0ebc51db7f43516",
   "lastOpenFiles": [
-    "Plugins/Daily Notes/2024/March/01.md",
     "Plugins/Daily Notes/2024/February/25.md",
-    "Plugins/Daily Notes/2024/February/29.md",
-    "Templates/Daily Note.md",
-    "Plugins/Daily Notes/2024/March",
-    "Plugins/Daily Notes/2024/January/25.md",
-    "Plugins/Daily Notes/2024/January/26.md",
-    "Plugins/Daily Notes/2024/January/30.md",
-    "Plugins/Daily Notes/2024/January/23.md",
-    "Plugins/Daily Notes/2024/January/18.md",
-    "Plugins/Daily Notes/2024/January/17.md",
-    "Plugins/Daily Notes/2024/January/11.md",
-    "Plugins/Daily Notes/2024/January/08.md",
-    "Plugins/Daily Notes/2024/January/07.md",
-    "Plugins/Daily Notes/2024/January/04.md",
-    "Plugins/Daily Notes/2024/January/03.md",
-    "Plugins/Daily Notes/2024/January/02.md",
-    "Plugins/Daily Notes/2024/February/23.md",
-    "Plugins/Daily Notes/2024/February/22.md",
-    "Plugins/Daily Notes/2024/February/20.md",
-    "Plugins/Daily Notes/2024/February/16.md",
-    "Plugins/Daily Notes/2024/February/18.md",
-    "Plugins/Daily Notes/2024/February/17.md",
+    "» Notes/Atomic/Certified Information Systems Security Professional.md",
+    "» Notes/Atomic/001 Linux/NixOS.md",
+    "» Notes/Atomic/Computer Security.md",
+    "Plugins/Daily Notes/2024/March/06.md",
+    "» Notes/WIP/Weakest Link.md",
+    "» Notes/__temporary/Untitled 2.md",
+    "» Notes/__temporary/Untitled 1.md",
+    "» Notes/Atomic/Social Engineering.md",
+    "» Notes/WIP/CIA Triad.md",
+    "» Notes/Atomic/Cyber Threat.md",
+    "» Notes/Atomic/Watering Hole Attack.md",
+    "» Notes/Atomic/Phishing.md",
+    "» Notes/Atomic/Smishing.md",
+    "» Notes/Atomic/CEO Fraud.md",
+    "» Notes/Atomic/Whaling.md",
+    "» Notes/Atomic/Vishing.md",
+    "» Notes/Atomic/Business Email Compromise.md",
+    "» Notes/Atomic/Spear Phishing.md",
+    "» Notes/Atomic/Information Technology Security.md",
+    "» Notes/__temporary/Computer Emergency Response Team.md",
+    "» Notes/✦ Papers/Kadena, Esmeralda & Gupi, Marsidi. Human factors in cybersecurity׃ risks and impacts. 2021..md",
+    "» Notes/Atomic/Threat Actor.md",
+    "» Notes/Atomic/Base64.md",
+    "» Notes/__temporary/old/Codes/README.md",
     "Plugins/Daily Notes/2024/February/15.md",
-    "Plugins/Daily Notes/2024/February/14.md",
-    "Plugins/Daily Notes/2024/February/12.md",
-    "Plugins/Daily Notes/2024/February/11.md",
+    "» Notes/PDFs/Smashing The Stack For Fun and Profit.pdf",
+    "Plugins/Daily Notes/2024/March",
     "Plugins/Daily Notes/2024/February",
     "Plugins/Daily Notes/2024/January",
     "Plugins/Daily Notes/2024",
@@ -370,7 +399,6 @@
     "Plugins/Daily Notes/2023/October",
     "Plugins/Daily Notes/2023/September",
     "Plugins/Daily Notes/2023/August",
-    "Plugins/Daily Notes/2023",
     "Attachments/Memory_Layouts_—_C.2.png",
     "Attachments/Memory_Layouts_—_C.1.png",
     "Attachments/Pasted image 20240108173900.png",
