@@ -8,4 +8,5 @@ terms:
 # [[Computer Security]]
 
 -  [[Certified Information Systems Security Professional]]
-- [[Security+]]
+- [[Microsoft Azure Security Technologies]]
+- [[CompTIA Security+]]
