@@ -1,10 +1,6 @@
 ---
 title: "{{title}}"
 date: "{{date}}"
-tags:
+tags: 
+terms:
 ---
-
-# {{title}}
-
----
-
