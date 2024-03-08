@@ -3,6 +3,10 @@ title: Computer Security
 date: 2024-03-01
 tags:
   - cybersecurity
+terms:
+  - "[[Cybersecurity]]"
+  - "[[Digital Security]]"
+  - "[[Information Technology Security]]"
 ---
 
 # Computer Security
@@ -11,6 +15,7 @@ tags:
 
 Protection of computer systems or networks from [[Cyberattack]]s by [[Threat Actor]]s.
 It is a practice of ensuring [[CIA Triad|confidentiality, integrity, and availability]] by protecting networks, devices, people, and data.
+Unlike [[Information Security]] that establish security measures to keep information safe.
 
 ## Concepts
 

@@ -11,6 +11,8 @@ tags:
 
 Malicious entities that poses security risks. ^d040bd
 
+Can utilize [[Cyberattack]]s since they are considered as [[Cyber Threat]]s in [[Computer Security]].
+
 ## Types of Threats
 
 ### Internal Threats

@@ -1,7 +1,9 @@
 ---
 title: Computer Networking
 date: 2023-10-03
-tags: []
+tags: 
+terms:
+  - "[[Networking System]]"
 ---
 
 # Computer Networking

@@ -4,6 +4,8 @@ date: 2024-03-07
 tags:
   - cybersecurity
   - social-engineering
+terms:
+  - "[[CEO Fraud]]"
 ---
 
 # Whaling

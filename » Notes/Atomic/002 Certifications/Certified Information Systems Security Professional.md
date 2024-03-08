@@ -5,10 +5,6 @@ tags:
   - certificate/cybersecurity
 ---
 
-# Certified Information Systems Security Professional
-
----
-
 ## Security Domains
 
 1. [[Security and Risk Management]]

@@ -12,4 +12,13 @@ tags:
 
 aka **InfoSec**
 
-Primary focus is [[CIA Triad]] while maintaining efficiency without hampering productivity
+Establish security measures to keep information safe.
+Unlike [[Computer Security]] that focuses on protecting information from [[Cyberattack]]s.
+
+Basic tenets:
+
+- Confidentiality
+- Integrity
+- Availability
+
+or also known as [[CIA Triad]] which is its primary focus while maintaining efficiency without hampering productivity.
