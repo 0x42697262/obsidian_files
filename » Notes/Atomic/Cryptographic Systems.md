@@ -15,6 +15,12 @@ terms:
 
 It must incorporate [[CIA Triad]] at all cost with *deniability*, to make sure that a published message does not come from a different entity.
 
+# Classification of Types
+
+- [[Symmetric Key Cryptography]]
+- [[Asymmetric Key Cryptography]]
+- [[Hashing]]
+
 # Algorithms
 
 - [[Advanced Encryption Standard]]

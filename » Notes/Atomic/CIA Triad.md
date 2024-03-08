@@ -25,11 +25,9 @@ These three principles should prevent [[Threat Actor]]s from unauthorized access
 A property where adversaries, or entities that are not authorized access or modify information, from reading our data.
 Information should not be disclosed without authorization.
 
-The goal is to prevent everyone except the intended entity from reading or tampering a message, known as [[Plaintext]], by transforming the message into an encrypted message, known as a [[Ciphertext]].
+The goal is to prevent everyone except the intended entity from reading or tampering a message, known as [[Plain Text]], by transforming the message into an encrypted message, known as a [[Cipher Text]].
 
 If the message is *confidential*, then the attacker does not know its contents.
-
-Similar to [[Privacy]].
 
 # [[Data Integrity|Integrity]]
 

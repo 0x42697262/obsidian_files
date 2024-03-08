@@ -5,8 +5,8 @@ tags:
   - computer-security
 ---
 
+A systematic method of encrypting and decrypting messages or data.
 It is used in [[Computer Security]] by protecting [[Data Communications]] and [[Computer Networking]].
-Implemented through [[Encryption]] with a **key** that acts as a secret value to secure messages.
 
 Fully integrates [[CIA Triad]], that must be achieved at all cost:
 
@@ -14,11 +14,7 @@ Fully integrates [[CIA Triad]], that must be achieved at all cost:
 - Integrity
 - Availability
 
-# Types
-
-- [[Symmetric Key Cryptography]]
-- [[Asymmetric Key Cryptography]]
-- [[Hash Function]]
+Cryptography is not limited to encrypting messages where [[Plain Text]] is converted into [[Cipher Text]], but instead a broader concept that involves other processes necessary for securing messages such as [[Encryption]], [[Hashing]], and [[Authentication]].
 
 # History
 
@@ -28,7 +24,7 @@ A "pen and ink" period.
 [[Code]]s in this era is relatively simple because messages had to be decoded by hand.
 Not very secure compared to modern standards.
 
-Because of [[Substitution Cipher]],  [[Caesar Cipher]] is well known.
+Because of common cipher types [[Substitution Cipher]] and [[Transposition Cipher]].
 
 ## Mechanical Era
 
