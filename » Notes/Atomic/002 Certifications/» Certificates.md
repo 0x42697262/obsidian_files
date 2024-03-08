@@ -5,7 +5,7 @@ tags:
 terms:
 ---
 
-## [[Computer Security]]
+# [[Computer Security]]
 
 -  [[Certified Information Systems Security Professional]]
 - [[Security+]]

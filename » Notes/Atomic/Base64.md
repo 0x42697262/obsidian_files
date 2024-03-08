@@ -6,11 +6,7 @@ tags:
   - encoding/base64
 ---
 
-# Base64
-
----
-
-## RFC 4648
+# RFC 4648
 
 > [!INFO]
 > A 65-character subset of US-ASCII is used, enabling 6 bits to be represented per printable character. (The extra 65th character, "=", is used to signify a special processing function.)
@@ -19,7 +15,7 @@ tags:
 >
 > Each 6-bit group is used as an index into an array of 64 printable characters. The character referenced by the index is placed in the output string.
 
-## Base64 Encoding Table
+# Encoding Table
 
 This is the Base64 alphabet defined in [RFC 4648 §4](https://datatracker.ietf.org/doc/html/rfc4648#section-4)
 
@@ -41,80 +37,4 @@ This is the Base64 alphabet defined in [RFC 4648 §4](https://datatracker.ietf.o
 | 13          | 001101 | N    |     | 29    | 011101 | d    |     | 45    | 101101 | t    |     | 61    | 111101 | 9    |
 | 14          | 001110 | O    |     | 30    | 011110 | e    |     | 46    | 101110 | u    |     | 62    | 111110 | +    |
 | 15          | 001111 | P    |     | 31    | 011111 | f    |     | 47    | 101111 | v    |     | 62    | 111111 | /    |
-| **Padding** | =      |
-
----
-
-## Implementation
-
-```python
-def encode_to_base64(padded_data: int, paddings: int = 0) -> str:
-    """
-    Assume that the input raw data is padded.
-    """
-
-    TABLE: str      = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-    PADDING: str    = '='
-    MASK: int       = (0b1 << 6) - 1
-
-    base64_encoded: str = PADDING * paddings
-
-
-    counter: int = padded_data
-    sextet: int = counter & MASK
-    i: int = 0
-    while counter > 0:
-        base64_encoded += TABLE[sextet]
-
-        i += 1
-        counter = (padded_data >> 6*i)
-        sextet = counter & MASK
-
-    return base64_encoded[::-1]
-
-
-def pad_bytes(string: str) -> tuple:
-    data: int       = int(string, 16)
-    n_bytes: int    = (data.bit_length() + 7) // 8
-    n_bits: int     = n_bytes * 8
-
-    n = n_bits % 6
-    bits_to_pad: int    = (6 - n) if n > 0 else 0
-    padded_data: int    = data << bits_to_pad
-    return (padded_data, bits_to_pad//2)
-```
-
-> [!INFO]
-> This Python implementation could have been better if it does not require counting the bits, copying data, and reversing the string.
-
-```rust
-fn encode_from_bytes(input: &[u8]) -> String {
-    let mut output: Vec<u8> = Vec::new();
-    let mut temp: u32 = 0;
-    let mut temp_len: u32 = 0;
-    for &byte in input {
-        temp = (temp << 8) | byte as u32;
-        temp_len += 8;
-        while temp_len >= 6 {
-            temp_len -= 6;
-            let chunk: u32 = temp >> temp_len;
-            let char_idx: u32 = chunk & 0x3F;
-            let character: u8 = CHARSET[char_idx as usize];
-            output.push(character);
-        }
-    }
-    if temp_len > 0 {
-        let idx: u32 = temp << (6 - temp_len) & 0x3F;
-        let character: u8 = CHARSET[idx as usize];
-        output.push(character);
-    }
-    while output.len() % 4 != 0 {
-        output.push(b'=');
-    }
-    String::from_utf8(output).unwrap()
-}
-```
-
-
-> [!INFO]
-> A better implementation than the python code above.
+| **Padding** | =      |      |     |       |        |      |     |       |        |      |     |       |        |      |

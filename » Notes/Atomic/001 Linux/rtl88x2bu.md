@@ -8,15 +8,11 @@ tags:
   - wifi
 ---
 
-# rtl88x2bu
-
----
-
 For versions of Linux 6.2 or greater, no need to manually install the driver since it's part of the kernel.
 
-## Issues
+# Issues
 
-### Direct firmware load for rtw88/rtw8822b_fw.bin failed with error -2
+## Direct firmware load for rtw88/rtw8822b_fw.bin failed with error -2
 
 ```bash
 $ dmesg | grep rtw 

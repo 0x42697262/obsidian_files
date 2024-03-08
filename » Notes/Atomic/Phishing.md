@@ -6,13 +6,9 @@ tags:
   - social-engineering
 ---
 
-# Phishing
-
----
-
 A form of [[Social Engineering]] and scam where [[Threat Actor]]s pretends as legitimate entity and deceives people into revealing sensitive information or installing [[Malware]].
 
-## Variations
+# Variations
 
 - [[Spear Phishing]]
 - [[Business Email Compromise]]

@@ -6,10 +6,6 @@ tags:
   - websites
 ---
 
-# Interesting Websites To Check
-
----
-
 - 東方 Project
 	- [Doujinshi Spotify List](https://www.thspotify.moe/)
 	- [Game Tools and Modification](https://en.touhouwiki.net/wiki/Game_Tools_and_Modifications)
@@ -49,7 +45,7 @@ tags:
 
 ---
 
-### Computer Science
+# Computer Science
 
 - https://missing.csail.mit.edu/
 - https://missing.csail.mit.edu/2020/version-control/
@@ -62,7 +58,7 @@ tags:
 - https://dbis-uibk.github.io/relax/calc/local/uibk/local/0
 - https://github.com/SkalskiP/courses
 
-### Pentesting
+# Pentesting
 
 - https://github.com/carpedm20/awesome-hacking
 - https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources
@@ -74,6 +70,6 @@ tags:
 - https://github.com/vavkamil/awesome-vulnerable-apps
 
 
-### Awesomes
+# Awesomes
 
 - [awesome-malware-analysys](https://github.com/rshipp/awesome-malware-analysis#Resources)

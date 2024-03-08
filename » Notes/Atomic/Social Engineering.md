@@ -5,13 +5,9 @@ tags:
   - cybersecurity
 ---
 
-# Social Engineering
-
----
-
 A manipulation technique that takes advantage of **human errors**.
 
-## Attacks
+# Attacks
 
 - [[Phishing]]
 - [[Watering Hole Attack]]

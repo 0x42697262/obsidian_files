@@ -5,10 +5,6 @@ tags:
   - cybersecurity
 ---
 
-# Cyberattack
-
----
-
 A deliberate and malicious attempt to breach the security of any digital information systems with an intent to cause harm.
 
 This is an specific instance or event where malicious actions are successfully executed.

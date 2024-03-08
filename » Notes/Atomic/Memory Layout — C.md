@@ -6,10 +6,6 @@ tags:
   - CMSC134
 ---
 
-# Memory Layout — C
-
----
-
 The memory layout is arranged in a long array the size of memory bytes as its elements. Each element is one byte.
 
 Left most element has the address `0x00000000` and the right most element has the address `0xFFFFFFFF`.

@@ -7,13 +7,9 @@ tags:
 terms:
 ---
 
-# Static Analysis
-
----
-
 A method of [[Debugging]] without executing the program.
 
-## Tools
+# Tools
 
 - [[xxd]]
 - [[objdump]]

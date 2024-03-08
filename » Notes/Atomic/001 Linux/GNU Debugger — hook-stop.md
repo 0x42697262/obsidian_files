@@ -7,13 +7,9 @@ tags:
   - debugger
 ---
 
-# [[GNU Debugger]] —  hook-stop
-
----
-
 Executes commands every time a breakpoint event occurs.
 
-## Usage
+# Usage
 
 Running `define hook-stop` allows to enter commands. To finish, enter `end`.
 

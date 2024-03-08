@@ -6,8 +6,4 @@ tags:
   - social-engineering
 ---
 
-# Smishing
-
----
-
 A variation of [[Phishing]] that takes form in text messages or SMS.

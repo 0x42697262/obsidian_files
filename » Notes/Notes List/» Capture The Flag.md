@@ -5,21 +5,17 @@ tags:
   - ctf
 ---
 
-# Capture The Flag
+# Writeups
 
----
-
-## Writeups
-
-### Vulnhub
+## Vulnhub
 
 - [[(VulnHub) Basic Pentesting — 1]]
 
-### PicoCTF
+## PicoCTF
 
 - [[(picoCTF 2023) Special]]
 
-### root-me.org
+## root-me.org
 
 - [[(root-me.org) FTP - authentication]]
 - [[(root-me.org) TELNET - authentication]]
@@ -28,6 +24,6 @@ tags:
 - [[(root-me.org) Bluetooth - Unknown file]]
 - [[(root-me.org) Encoding - UU]]
 
-### pwnable.kr
+## pwnable.kr
 
 - [[(pwnable.kr) fd]]

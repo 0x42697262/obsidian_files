@@ -6,9 +6,5 @@ tags:
   - systemd
 ---
 
-# systemd
-
----
-
 - [[systemctl]]
 - [[systemd-analyze]]

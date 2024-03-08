@@ -8,9 +8,5 @@ terms:
   - "[[CEO Fraud]]"
 ---
 
-# Whaling
-
----
-
 A variation of [[Phishing]] that highly targeted attack aimed at company executives.
 Also known as [[CEO Fraud]].

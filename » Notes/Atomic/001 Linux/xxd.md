@@ -7,16 +7,12 @@ tags:
 terms:
 ---
 
-# xxd
-
----
-
 Create a hex dump of a given file or standard input.
 Can also convert a hex dump back to its original binary form.
 
-## Options
+# Options
 
-### Group by bytes
+## Group by bytes
 
 ```sh
 -groupsize <bytes>
@@ -28,6 +24,6 @@ or
 -g <bytes>
 ```
 
-## Tricks
+# Tricks
 
  - [[Vim — Tricks#Using as a hex editor with xxd]]

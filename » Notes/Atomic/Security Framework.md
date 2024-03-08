@@ -5,16 +5,12 @@ tags:
   - cybersecurity
 ---
 
-# Security Framework
-
----
-
 Policies, procedures, or guidelines for establishing and maintaining [[Security Control]].
 Helps mitigate risks and threats to data and privacy. ^50b289
 
 This makes the organizations compliant and insulated from [[Cyber Threat]]s.
 
-## Frameworks
+# Frameworks
 
 - SOC 2
 - ISO 270012

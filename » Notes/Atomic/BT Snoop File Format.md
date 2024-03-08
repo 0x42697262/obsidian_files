@@ -4,11 +4,7 @@ date: 2023-11-21
 tags:
 ---
 
-# BT Snoop
-
----
-
-## Datalink Codes
+# Datalink Codes
 
 | Datalink Type            | Code              |
 | ------------------------ | ----------------- |

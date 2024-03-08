@@ -9,17 +9,13 @@ terms:
   - "[[Cryptosystem]]"
 ---
 
-# Cryptographic Systems
-
----
-
 > [!WARNING]
 >
 > **DO NOT IMPLEMENT YOUR OWN CRYPTOGRAPHIC SYSTEM!**
 
 It must incorporate [[CIA Triad]] at all cost with *deniability*, to make sure that a published message does not come from a different entity.
 
-## Algorithms
+# Algorithms
 
 - [[Advanced Encryption Standard]]
 - [[Data Encryption Standard]]

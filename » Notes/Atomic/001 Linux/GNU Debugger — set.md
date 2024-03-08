@@ -7,17 +7,13 @@ tags:
   - debugger
 ---
 
-# GNU Debugger — set
-
----
-
-## Disable [[Address Space Layout Randomization]] Inside [[GNU Debugger]]
+# Disable [[Address Space Layout Randomization]] Inside [[GNU Debugger]]
 
 ```
 (gdb) set disable-randomization <on/off>
 ```
 
-## Set Assembly Syntax To Intel
+# Set Assembly Syntax To Intel
 
 ```
 (gdb) set disassembly-flavor intel

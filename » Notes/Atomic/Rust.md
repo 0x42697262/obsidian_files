@@ -5,17 +5,7 @@ tags:
   - "#programming"
 ---
 
-# Rust
-
----
-
-## Table of Contents
-
-1. [[#Standard Input]]
-
----
-
-## Standard Input
+# Standard Input
 
 ```rust
 use std::io;

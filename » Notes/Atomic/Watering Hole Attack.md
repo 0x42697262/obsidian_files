@@ -6,9 +6,5 @@ tags:
   - cybersecurity
 ---
 
-# Watering Hole Attack
-
----
-
 A targeted attack designed by a [[Threat Actor]] to compromise users within specific organization or industry through frequently used services by the users.
 Usually uses websites.

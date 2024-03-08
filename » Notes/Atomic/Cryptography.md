@@ -5,10 +5,6 @@ tags:
   - computer-security
 ---
 
-# Cryptography
-
----
-
 It is used in [[Computer Security]] by protecting [[Data Communications]] and [[Computer Networking]].
 Implemented through [[Encryption]] with a **key** that acts as a secret value to secure messages.
 
@@ -18,15 +14,15 @@ Fully integrates [[CIA Triad]], that must be achieved at all cost:
 - Integrity
 - Availability
 
-## Types
+# Types
 
 - [[Symmetric Key Cryptography]]
 - [[Asymmetric Key Cryptography]]
 - [[Hash Function]]
 
-## History
+# History
 
-### Paper Era
+## Paper Era
 
 A "pen and ink" period.
 [[Code]]s in this era is relatively simple because messages had to be decoded by hand.
@@ -34,11 +30,11 @@ Not very secure compared to modern standards.
 
 Because of [[Substitution Cipher]],  [[Caesar Cipher]] is well known.
 
-### Mechanical Era
+## Mechanical Era
 
 - [[Enigma machine]]
 
-### Modern Era
+## Modern Era
 
 Heavy reliance on mathematics and electronic computers.
 

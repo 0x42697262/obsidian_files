@@ -6,7 +6,3 @@ tags:
   - systemd
 ---
 
-# systemctl
-
----
-

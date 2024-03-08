@@ -6,8 +6,4 @@ tags:
   - cybersecurity
 ---
 
-# Vishing
-
----
-
 A variation of [[Phishing]] that takes form in phone calls or voice messages.

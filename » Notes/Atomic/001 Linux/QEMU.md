@@ -6,13 +6,9 @@ tags:
   - virtual-machine
 ---
 
-# QEMU
+# Converting from different images
 
----
-
-## Converting from different images
-
-### .ova
+## .ova
 
 Unpack the .ova image format.
 

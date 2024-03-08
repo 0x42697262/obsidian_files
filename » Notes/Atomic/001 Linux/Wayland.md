@@ -6,10 +6,6 @@ tags:
   - linux
 ---
 
-# Wayland
-
----
-
-## Running in Wayland
+# Running in Wayland
 
 - [[Obsidian#Running in Wayland|Obsidian]]

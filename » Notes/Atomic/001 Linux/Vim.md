@@ -5,8 +5,4 @@ tags:
 terms:
 ---
 
-# Vim
-
----
-
 - [[Vim — Tricks]]

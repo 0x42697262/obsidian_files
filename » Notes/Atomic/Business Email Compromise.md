@@ -6,8 +6,4 @@ tags:
   - social-engineering
 ---
 
-# Business Email Compromise
-
----
-
 A variation of [[Phishing]] that targets a company.

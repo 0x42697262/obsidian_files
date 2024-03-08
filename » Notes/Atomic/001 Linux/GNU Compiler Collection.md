@@ -8,25 +8,24 @@ tags:
   - cpp
 ---
 
-# GNU Compiler Collection
-
----
-
 *aka GCC*
 
-### Disable [[Stack Smashing]]
+
+# Compilation
+
+## Disable [[Stack Smashing]]
 
 ```sh
 gcc -fno-stack-protector
 ```
 
-### Output Preprocessor
+## Output Preprocessor
 
 ```sh
 gcc -E -P <source code>
 ```
 
-### Assembly Code Generated from Compilation Phase
+## Assembly Code Generated from Compilation Phase
 
 ```sh
 gcc -S -masm=intel <source code>
@@ -34,7 +33,7 @@ gcc -S -masm=intel <source code>
 
 This should create an assembly file with `.s` as extension.
 
-### Generate Object File
+## Generate Object File
 
 ```sh
 gcc -c <source code>
@@ -48,4 +47,4 @@ This should create an assembly file with `.c` as extension. To confirm, run `fil
 
 ---
 
-For debugging, see [[GNU Debugger]].
+For [[Debugging]], see [[GNU Debugger]].

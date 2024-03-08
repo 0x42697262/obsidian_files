@@ -4,13 +4,8 @@ date: 2024-01-26
 tags:
   - computer-security
   - information-risk-management
+terms: []
 ---
-
-# Information Security
-
----
-
-aka **InfoSec**
 
 Establish security measures to keep information safe.
 Unlike [[Computer Security]] that focuses on protecting information from [[Cyberattack]]s.

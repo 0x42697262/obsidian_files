@@ -7,24 +7,20 @@ tags:
   - debugger
 ---
 
-# GNU Debugger
-
----
-
 - [[GNU Debugger — set|set]]
 - [[GNU Debugger — hook-stop|hook-stop]]
 
-## Usage
+# Usage
 
-### Debugging A Program
+## Debugging A Program
 
-#### From a File
+### From a File
 
 ```sh
 gdb <elf executable>
 ```
 
-#### From a Process
+### From a Process
 
 ```sh
 gdb -p <process id>
