@@ -11,6 +11,10 @@ Can utilize [[Cyberattack]]s since they are considered as [[Cyber Threat]]s in [
 
 # Types of Threats
 
+## [[Advanced Persistent Threats]]
+
+Have significant expertise accessing an organization's network and remain undetected for extended period of time.
+
 ## Internal Threats
 
 Entities that could be current or former employees, external vendors, or trusted partners.
@@ -19,6 +23,15 @@ The threats are usually an **accident** or can sometimes be **intentional**.
 ## External Threats
 
 Entities that originates outside from an organization.
+
+## Hacktivists
+
+Driven by political agenda.
+They commonly perform:
+
+- Fame
+- Propaganda
+- Social change campaigns
 
 ---
 

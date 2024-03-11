@@ -17,3 +17,5 @@ Basic tenets:
 - Availability
 
 or also known as [[CIA Triad]] which is its primary focus while maintaining efficiency without hampering productivity.
+
+It is important to satisfy the 8 domains of [[Security Domains (CISSP)]].

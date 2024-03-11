@@ -5,8 +5,18 @@ tags:
   - cybersecurity
 ---
 
-A deliberate and malicious attempt to breach the security of any digital information systems with an intent to cause harm.
+A deliberate and malicious attempt to **breach the security** of any digital information systems with an intent to cause harm.
 
 This is an specific instance or event where malicious actions are successfully executed.
-Cyberattacks often exploit [[Cyber Threat]]s but can involve techniques created by [[Threat Actor]]s.
+All of the attacks are considered as [[Cyber Threat]]s.
 
+# Common Attacks
+
+- [[Adversarial Machine Learning]]
+- [[Cryptanalysis]]
+- [[Distributed Denial of Service]]
+- [[Malware]]
+- [[Password Cracking]]
+- [[Cyber Physical Attack]]
+- [[Social Engineering]]
+- [[Supply Chain Attack]]
