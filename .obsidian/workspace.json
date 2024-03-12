@@ -6,7 +6,7 @@
       {
         "id": "7e6b492b79c0e433",
         "type": "tabs",
-        "dimension": 55.59139784946237,
+        "dimension": 48.064516129032256,
         "children": [
           {
             "id": "c7d1b4145205aa2d",
@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/Writeups/(pwnable.kr) fd.md",
+                "file": "» Notes/Atomic/Symmetric Key Cryptography.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -54,7 +54,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "» Notes/Atomic/Cryptography.md",
+                "file": "» Notes/Atomic/Security Control.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,38 +63,24 @@
             "group": "c6c3e9e65ac89946"
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
-        "id": "bda53a30f7b8af32",
+        "id": "25368225ff070aa4",
         "type": "split",
-        "dimension": 44.40860215053763,
+        "dimension": 51.935483870967744,
         "children": [
           {
             "id": "df0b5406ab9bb46b",
             "type": "tabs",
-            "dimension": 52.743902439024396,
             "children": [
-              {
-                "id": "f19a06c550808eda",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Plugins/Daily Notes/2024/February/25.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
               {
                 "id": "298c47b60ec2ba6f",
                 "type": "leaf",
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "» Notes/Writeups/(pwnable.kr) fd.md",
+                    "file": "» Notes/Atomic/Symmetric Key Cryptography.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -130,7 +116,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "» Notes/Atomic/Cryptography.md",
+                    "file": "» Notes/Atomic/Security Control.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -153,7 +139,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.7503583012156309,
+                      "scale": 0.608538707381831,
                       "close": true
                     }
                   }
@@ -164,9 +150,8 @@
             "currentTab": 1
           },
           {
-            "id": "304d168cb8cee6be",
+            "id": "cea7378f9b61ee1f",
             "type": "tabs",
-            "dimension": 47.256097560975604,
             "children": [
               {
                 "id": "e0ebc51db7f43516",
@@ -174,7 +159,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Plugins/Daily Notes/2024/March/08.md",
+                    "file": "Plugins/Daily Notes/2024/March/11.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
@@ -213,7 +198,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "refer",
+                "query": "morris",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -250,7 +235,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "» Notes/Writeups/(pwnable.kr) fd.md",
+                "file": "Plugins/Daily Notes/2024/March/11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -267,7 +252,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "» Notes/Writeups/(pwnable.kr) fd.md",
+                "file": "Plugins/Daily Notes/2024/March/11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -298,7 +283,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "» Notes/Writeups/(pwnable.kr) fd.md"
+                "file": "Plugins/Daily Notes/2024/March/11.md"
               }
             }
           },
@@ -328,7 +313,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "» Notes/Writeups/(pwnable.kr) fd.md"
+                "file": "Plugins/Daily Notes/2024/March/11.md"
               }
             }
           }
@@ -354,35 +339,38 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "b1f580cbbc815d2f",
+  "active": "e0ebc51db7f43516",
   "lastOpenFiles": [
-    "» Notes/Writeups/(picoCTF 2023) Special.md",
-    "» Notes/✦ Papers.md",
-    "» Notes/Notes List/» Interesting Websites To Check.md",
-    "» Notes/Notes List/» Capture The Flag.md",
-    "» Notes/Atomic/Whaling.md",
-    "» Notes/Atomic/Watering Hole Attack.md",
-    "» Notes/Atomic/Vishing.md",
-    "» Notes/Atomic/Threat Actor.md",
-    "» Notes/Atomic/TELNET.md",
-    "» Notes/Atomic/Static Analysis.md",
-    "» Notes/Atomic/Spear Phishing.md",
-    "» Notes/Atomic/Social Engineering.md",
+    "» Notes/__temporary/Untitled 1.md",
+    "Plugins/Daily Notes/2024/March/11.md",
     "» Notes/Atomic/Security Control.md",
+    "» Notes/Atomic/CIA Triad.md",
+    "» Notes/Atomic/Cryptography.md",
+    "» Notes/__temporary/National Institute for Standards in Technology.md",
+    "Attachments/CIA Triad.png",
     "» Notes/Atomic/Security Framework.md",
-    "» Notes/Atomic/Smishing.md",
-    "» Notes/Atomic/Rust.md",
-    "» Notes/Atomic/Phishing.md",
-    "» Notes/Atomic/Obsidian.md",
-    "» Notes/Atomic/Networking System.md",
-    "» Notes/Atomic/Network Security.md",
+    "» Notes/Atomic/Security Lifeycle.md",
     "» Notes/Atomic/Computer Security.md",
-    "» Notes/Atomic/Computer Networking.md",
-    "» Notes/Atomic/Memory Layout — C.md",
-    "» Notes/Atomic/Memory Layout.md",
-    "» Notes/Atomic/Information Theory.md",
-    "» Notes/Atomic/Information Technology Security.md",
-    "» Notes/Atomic/002 Certifications",
+    "» Notes/Atomic/Security Domains (CISSP).md",
+    "» Notes/Atomic/Threat Actor.md",
+    "» Notes/Atomic/Symmetric Key Cryptography.md",
+    "Plugins/Daily Notes/2024/February/25.md",
+    "» Notes/Atomic/Symmetric Key Encryption.md",
+    "» Notes/Atomic/Asset Security.md",
+    "» Notes/Atomic/Software Development Security.md",
+    "» Notes/Atomic/Security Operations.md",
+    "» Notes/Atomic/Security Assessment and Testing.md",
+    "» Notes/Atomic/Identity and Access Management.md",
+    "» Notes/Atomic/Communication and Network Security.md",
+    "» Notes/Atomic/Security Architecture and Engineering.md",
+    "» Notes/Atomic/Security and Risk Management.md",
+    "» Notes/Atomic/Supply Chain Attack.md",
+    "» Notes/Atomic/Cyberattack.md",
+    "» Notes/__temporary/Untitled.md",
+    "» Notes/__temporary/Security Information and Event Management.md",
+    "Attachments/Security Domains (CISSP), Eight Domains.png",
+    "Attachments/Security Domains (CISSP), Eight Domains.png",
+    "» Notes/Atomic/002 Certificates",
     "» Notes/PDFs/Smashing The Stack For Fun and Profit.pdf",
     "Plugins/Daily Notes/2024/March",
     "Plugins/Daily Notes/2024/February",
@@ -401,9 +389,6 @@
     "Attachments/Pasted Image 20231123155426_934.png",
     "Plugins/Canvas/DFA.canvas",
     "Attachments/Pasted Image 20231110190127_936.png",
-    "Attachments/Composition of the Universe.png",
-    "Attachments/Pasted image 20231108203658.png",
-    "Attachments/Pasted Image 20231108024832_292.png",
     "Plugins/Canvas/Internet of Things.canvas",
     "Plugins/Canvas/Untitled 1.canvas",
     "Plugins/Canvas/OpenSystemsInterconnectionModel.canvas",

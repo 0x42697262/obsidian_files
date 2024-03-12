@@ -6,6 +6,7 @@
     "date": "text",
     "Pages": "text",
     "Month": "text",
-    "Volume": "text"
+    "Volume": "text",
+    "terms": "multitext"
   }
 }

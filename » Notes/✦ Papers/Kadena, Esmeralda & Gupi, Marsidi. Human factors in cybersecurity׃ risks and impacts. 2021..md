@@ -27,7 +27,7 @@ To who? An issue for individuals and organizations
 For what? Monetary gains. Disrupt operations.
 Medium? Malware.
 
-[[Information Security]] which focuses on [[CIA Triad]]
+[[» Notes/Atomic/Information Security]] which focuses on [[CIA Triad]]
 
 
 
